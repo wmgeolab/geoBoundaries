@@ -10,6 +10,8 @@ import buildStage2
 importlib.reload(buildStage2)
 import buildStage3
 importlib.reload(buildStage3)
+import buildStage4
+importlib.reload(buildStage4)
 
 
 
@@ -45,6 +47,8 @@ def geoBoundaries_build(buildID):
   buildStage2.metaStandardization(buildID)
   
   buildStage3.buildFiles(buildID)
+  
+  buildStage4.uploadGB(buildID)
 
 
 

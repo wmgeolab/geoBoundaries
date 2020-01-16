@@ -136,11 +136,16 @@ def buildFiles(buildID):
   pdaISOs.parallel_apply(allISOzip, axis=1)
   print("++ ISO level 'all' zip files have been created (with all ADMs).")
   
-  #Final mega-zip
-  zipdir("./release/geoBoundaries-" + version +"/",
-         "./release/geoBoundaries-" + version + "/geoBoundaries-" + version + ".zip",
-        includeDirInZip=False,
-        citeUsePath = citeUsePath)
+  if(os.path.isfile("./release/geoBoundaries-" + version + "/geoBoundaries-" + version + ".zip")):
+    #print("Final rollup zip is complete for " + iso[0] + ". Skipping.")
+    pass
+  
+  else:
+    #Final mega-zip
+    zipdir("./release/geoBoundaries-" + version +"/",
+          "./release/geoBoundaries-" + version + "/geoBoundaries-" + version + ".zip",
+          includeDirInZip=False,
+          citeUsePath = citeUsePath)
   
 def allISOzip(iso):
   #check if this ISO is already done or not
@@ -266,7 +271,7 @@ def pBuild(row):
             continue
         zip_info.filename = os.path.basename(zip_info.filename)
   
-  
+  print("Zipping everything into a top-level zip.  This may take a while.")
   #Create the "all" zip
   allFilesToZip = [zipShpFl, geojson, jsonOut, csvOutpath, citeUsePath]
   

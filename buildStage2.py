@@ -63,8 +63,8 @@ def metaStandardization(buildID):
       metaData.at[i, "boundaryUpdate"] = str(pd.to_datetime('today', format='%Y-%m-%d', errors='ignore').date())
     
     #Download URL
-    fullURL = "https://geoboundaries.org/data/geoBoundariesRelease_" + buildID.split('_', 1)[1] + "/" + rowISO + "/" + rowADM + "/"
-    fullFile = "geoBoundariesRelease_" + buildID.split('_', 1)[1] + "-" + rowISO + "-" + rowADM + "-all.zip"
+    fullURL = "https://geoboundaries.org/data/geoBoundaries-" + buildID.split('_', 1)[1] + "/" + rowISO + "/" + rowADM + "/"
+    fullFile = "geoBoundaries-" + buildID.split('_', 1)[1] + "-" + rowISO + "-" + rowADM + "-all.zip"
     metaData.at[i, "downloadURL"] = fullURL + fullFile
     
     #Confirm there are no remaining errors.  There should not be at this stage, so this exits the build.  
