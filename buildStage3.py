@@ -11,11 +11,17 @@ import shapely.wkt
 import shapely.geometry as geom
 from shapely.geometry import shape
 
-def buildFiles(buildID):
+def buildFiles(buildID, minor):
+  if(minor == True):
+    version = buildID.split('_', 1)[1]
+    buildID = buildID[:-1] + "0"
+
+    
   metaData = pd.read_csv("./releaseCandidateInit/" + buildID + "/" + buildID + ".csv")
-  version = buildID.split('_', 1)[1]
   base_path = "./release/"
   release_base = "./release/geoBoundaries-" + version + "/"
+  
+  return 0
   
   
   #Create root, country and hierarchy folders if they do not exist:
@@ -287,8 +293,5 @@ def pBuild(row):
   print("++ Final overall release zip created. Dataset production complete.")
   
   
-if __name__ == "__main__": 
-  import buildMain
-  importlib.reload(buildMain)
-  buildMain.geoBoundaries_build("gbReleaseCandidate_2_0_0_0")
+
   

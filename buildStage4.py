@@ -63,8 +63,3 @@ def uploadGB(buildID):
 
     
 
-
-if __name__ == "__main__": 
-  import buildMain
-  importlib.reload(buildMain)
-  buildMain.geoBoundaries_build("gbReleaseCandidate_2_0_0")

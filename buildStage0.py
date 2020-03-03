@@ -359,8 +359,5 @@ def metaDataChecks(buildID, exceptions):
       print("All Metadata Checks Passed.")
       metaData.to_csv("./build_logs/success/" + buildID + "_metaData.csv")
   
-if __name__ == "__main__": 
-    import buildMain
-    importlib.reload(buildMain)
-    buildMain.geoBoundaries_build("gbReleaseCandidate_2_0_0_0")
+
     

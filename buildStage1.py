@@ -241,9 +241,5 @@ def boundaryAnalysis(bdDta):
       output.write(elem)
   
   print("Job Finished: " + ISO + "-" + groupCode)
-  
-if __name__ == "__main__": 
-  import buildMain
-  importlib.reload(buildMain)
-  buildMain.geoBoundaries_build("gbReleaseCandidate_2_0_0_0")
+
   

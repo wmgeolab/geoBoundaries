@@ -15,15 +15,15 @@ importlib.reload(buildStage4)
 
 
 
-def geoBoundaries_build(buildID):
+def geoBoundaries_build(buildID, minor=False):
   
   #In some cases, we may not be able to programmatically ping websites to confirm they exist.
   #In these cases, a manual exception can be defined if we can see the website ourselves.
   #These are included at the very beginning of the 'main', and are release-dependent.
   #I.e., any exceptions must be explicitly defined as belonging to a buildID.
   exceptions = {}
-  exceptions[buildID] = {}
-  exceptions[buildID]["URL"] = []
+  exceptions["gbReleaseCandidate_2_0_0"] = {}
+  exceptions["gbReleaseCandidate_2_0_0"]["URL"] = []
   exceptions["gbReleaseCandidate_2_0_0"]["URL"].append("http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/communes ")
   exceptions["gbReleaseCandidate_2_0_0"]["URL"].append("http://www.istat.it/it/archivio/124086")
   exceptions["gbReleaseCandidate_2_0_0"]["URL"].append("https://wambachers-osm.website/boundaries/")
@@ -32,23 +32,25 @@ def geoBoundaries_build(buildID):
   exceptions["gbReleaseCandidate_2_0_0"]["URL"].append("https://www.pdok.nl/nl/producten/pdok-downloads/basis-registratie-kadaster/bestuurlijke-grenzen-actueel")
   exceptions["gbReleaseCandidate_2_0_0"]["URL"].append("https://www.statcan.gc.ca/eng/reference/licence")
   
+  if(minor == True):
+    print("The minor build flag has been set - in this mode, only the build scripts will be re-run, using the data from the major version.")
+    print("No downloads, metadata checks, or shape checks will be updated.")
   
-  buildStage0.retrieveZip(buildID)
-  buildStage0.metaDataChecks(buildID, exceptions)
-  
-  buildStage1.shapeChecks(buildID)
+  else:
 
-  if(buildID == "current"):
-    print("Because this is being executed against the 'current' folder")
-    print("Only the QA/QC procedures will be implemented.  No full build will be")
-    print("produced.")
-    return(0)
-
-  buildStage2.metaStandardization(buildID)
+    if(buildID == "current"):
+      print("Because this is being executed against the 'current' folder")
+      print("Only the QA/QC procedures will be implemented.  No full build will be")
+      print("produced.")
+      return(0)
+    
+    buildStage0.retrieveZip(buildID)
+    buildStage0.metaDataChecks(buildID, exceptions)
+    buildStage1.shapeChecks(buildID)
+    buildStage2.metaStandardization(buildID)
   
-  buildStage3.buildFiles(buildID)
-  
-  buildStage4.uploadGB(buildID)
+  buildStage3.buildFiles(buildID, minor)
+  #buildStage4.uploadGB(buildID, minor)
 
 
 
@@ -56,4 +58,4 @@ def geoBoundaries_build(buildID):
 if __name__ == "__main__": 
     import buildMain
     importlib.reload(buildMain)
-    buildMain.geoBoundaries_build("gbReleaseCandidate_2_0_0")
+    buildMain.geoBoundaries_build("gbReleaseCandidate_2_0_1", minor=True)
