@@ -3,10 +3,11 @@
 #As it will update the front-end of the website.
 import json
 import os
+import pandas as pd
 
 def releaseDta(buildID, version):
   metaData = pd.read_csv("./release/" + buildID + "/" + buildID + ".csv")
-  metaZip = "./release/" + buildID + "/" + buildID + ".zip"
+  #metaZip = "./release/" + buildID + "/" + buildID + ".zip"
 
   
 
@@ -36,22 +37,22 @@ def releaseDta(buildID, version):
   adm2_prog = int(round((totalADM2 / totalCountries) * 100, 0))
   adm3_prog = int(round((totalADM3 / totalCountries) * 100, 0))
   
-  fullDLsize = round((os.path.getsize(metaZip) / 1000000000), 1)
+  #fullDLsize = round((os.path.getsize(metaZip) / 1000000000), 1)
   
   URL = "https://www.geoboundaries.org/data/" + buildID + "/" + buildID + ".zip"
   
-  rDest = "./tmp/release_dta.js"
-  rD = open(rDest, "w")
-  rD.write("var data = {\n")
-  rD.write('MRV: "' + version + '",\n')
-  rD.write('IS: "' + str(351819) + '",\n')
-  rD.write('ADM1PROG: "' + str(adm1_prog) + '%",\n')
-  rD.write('ADM2PROG: "' + str(adm2_prog) + '%",\n')
-  rD.write('ADM3PROG: "' + str(adm3_prog) + '%",\n')
-  rD.write('FULLDLSIZE: "' + str(fullDLsize) + '",\n')
-  rD.write('DLLINK: "' + str(URL) + '"\n')
-  rD.write('}')
-  rD.close()
+  #rDest = "./tmp/release_dta.js"
+  #rD = open(rDest, "w")
+  #rD.write("var data = {\n")
+  #rD.write('MRV: "' + version + '",\n')
+  #rD.write('IS: "' + str(351819) + '",\n')
+  #rD.write('ADM1PROG: "' + str(adm1_prog) + '%",\n')
+  #rD.write('ADM2PROG: "' + str(adm2_prog) + '%",\n')
+  #rD.write('ADM3PROG: "' + str(adm3_prog) + '%",\n')
+  #rD.write('FULLDLSIZE: "' + str(fullDLsize) + '",\n')
+  #rD.write('DLLINK: "' + str(URL) + '"\n')
+  #rD.write('}')
+  #rD.close()
   
   #Print to screen the license information
   print(metaData.groupby("boundaryLicense").count())

@@ -152,8 +152,25 @@ def buildFiles(buildID, minor):
   
   else:
     print("Done.")
-    #Final mega-zip
-    #print("Creating full zip.  This may take an hour or two.")
+    Final mega-zip
+    print("Creating full zip.  This may take an hour or two.")
+    
+    "./release/geoBoundaries-" + version + "/geoBoundaries-" + version
+    
+    shutil.make_archive(base_name = "./tmp/geoBoundaries-" + version,
+                          format="zip",
+                          root_dir = dir_name)
+    
+    print("Appending Citation and Use Document")
+    zipAppend = zipfile.ZipFile("./tmp/geoBoundaries-" + version + ".zip", 'a')
+    zipAppend.write(citeUsePath, os.path.basename(citeUsePath))
+    zipAppend.close()
+      
+    shutil.move("./tmp/geoBoundaries-" + version + ".zip", 
+                 "./release/geoBoundaries-" + version + "/geoBoundaries-" + version +  ".zip")
+      
+
+    
     #zipdir("./release/geoBoundaries-" + version +"/",
     #      "./release/geoBoundaries-" + version + "/geoBoundaries-" + version,
     #      includeDirInZip=False,
@@ -177,17 +194,18 @@ def allISOzip(iso):
       #print("Metadata CSV and similar files are not zipped into ADM top-level zips; skipping.")
       pass
     else:
-      zipdir(dir_name, isoZipPath, citeUsePath = citeUsePath)
+      shutil.make_archive(base_name = "./tmp/geoBoundaries-" + version + "-" + iso[0],
+                          format="zip",
+                          root_dir = dir_name)
+      
+      zipAppend = zipfile.ZipFile("./tmp/geoBoundaries-" + version + "-" + iso[0] + ".zip", 'a')
+      zipAppend.write(citeUsePath, os.path.basename(citeUsePath))
+      zipAppend.close()
+      
+      shutil.move("./tmp/geoBoundaries-" + version + "-" + iso[0] + ".zip", 
+                 "./release/geoBoundaries-" + version + "/" + iso[0] + "/geoBoundaries-" + version + "-" + iso[0] + ".zip")
+      
 
-    
-def zipdir(dirPath=None, zipFilePath=None, includeDirInZip=False, citeUsePath=False):
-    
-  shutil.make_archive(base_name = zipFilePath, format="zip", base_dir = dirPath, root_dir = dirPath)
-  
-  #Add the Cite and Use Text File
-  zipAppend = zipfile.ZipFile(zipFilePath, 'a')
-  zipAppend.write(citeUsePath, os.path.basename(citeUsePath))
-  zipAppend.close()
     
 def pBuild(row):  
   #identify root directory
