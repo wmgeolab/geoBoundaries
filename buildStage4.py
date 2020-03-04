@@ -26,12 +26,13 @@ def tracker(path, obj):
     else:
       return False
 
-def uploadGB(buildID):  
+def uploadGB(buildID, minor=False): 
   
+  if(minor == True):
+    version = buildID.split('_', 1)[1]
+    buildID = buildID[:-1] + "0"
   
   sf = ftputil.session.session_factory(use_passive_mode=True)
-  
-  version = buildID.split('_', 1)[1]
   
   with ftputil.FTPHost(host=os.getenv('ftp'), 
                        user=os.getenv('user'), 
@@ -51,14 +52,15 @@ def uploadGB(buildID):
           ftp_host.mkdir(remote)
 
       for f in dir_files:
-          local_f = os.path.join(local, f)
-          remote_f = ftp_host.path.join(remote, f)
-          if(tracker(remote_f, "check") == False):
-            print ('upload:' + local_f + '->' + remote_f)
-            ftp_host.upload(local_f, remote_f)
-            tracker(remote_f, "update")
-          else:
-            pass
+          if(f != ('geoBoundaries-' + version)):
+            local_f = os.path.join(local, f)
+            remote_f = ftp_host.path.join(remote, f)
+            if(tracker(remote_f, "check") == False):
+              print ('upload:' + local_f + '->' + remote_f)
+              ftp_host.upload(local_f, remote_f)
+              tracker(remote_f, "update")
+            else:
+              pass
           
 
     

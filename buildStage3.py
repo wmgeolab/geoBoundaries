@@ -21,9 +21,6 @@ def buildFiles(buildID, minor):
   base_path = "./release/"
   release_base = "./release/geoBoundaries-" + version + "/"
   
-  return 0
-  
-  
   #Create root, country and hierarchy folders if they do not exist:
   if(not os.path.isdir("./release/geoBoundaries-" + version + "/")):
     os.mkdir("./release/geoBoundaries-" + version + "/")
@@ -35,10 +32,17 @@ def buildFiles(buildID, minor):
     if(not os.path.isdir("./release/geoBoundaries-" + version + "/" + row["boundaryISO"] + "/" + row["boundaryType"])):
       os.mkdir("./release/geoBoundaries-" + version + "/" + row["boundaryISO"] + "/" + row["boundaryType"])
   
-  #Copy the final metaData file over to the release structure.
-  shutil.copyfile("./releaseCandidateInit/" + buildID + "/" + buildID + ".csv", 
-         "./release/geoBoundaries-" + version + "/geoBoundaries-" + version + ".csv")
+  #Confirm the metaData is correct for incremental builds
+  for i, row in metaData.iterrows():
+    if(row["downloadURL"].split("-")[1].split("/")[0] != version):
+      a = row["downloadURL"]
+      metaData.loc[i, "downloadURL"] = a.replace(row["downloadURL"].split("-")[1].split("/")[0], version)
+      metaData.loc[i, "boundaryID"] = row["boundaryID"].replace(row["downloadURL"].split("-")[1].split("/")[0], version)
+    
+  #Save the clean metaData file
+  metaData.to_csv("./release/geoBoundaries-" + version + "/geoBoundaries-" + version + ".csv", index=False)
   
+
   
   #Create CITATION_AND_USE.txt
   citeUsePath = "./tmp/CITATION-AND-USE-geoBoundaries-" + version + ".txt"
@@ -147,11 +151,13 @@ def buildFiles(buildID, minor):
     pass
   
   else:
+    print("Done.")
     #Final mega-zip
-    zipdir("./release/geoBoundaries-" + version +"/",
-          "./release/geoBoundaries-" + version + "/geoBoundaries-" + version + ".zip",
-          includeDirInZip=False,
-          citeUsePath = citeUsePath)
+    #print("Creating full zip.  This may take an hour or two.")
+    #zipdir("./release/geoBoundaries-" + version +"/",
+    #      "./release/geoBoundaries-" + version + "/geoBoundaries-" + version,
+    #      includeDirInZip=False,
+    #      citeUsePath = citeUsePath)
   
 def allISOzip(iso):
   #check if this ISO is already done or not
@@ -159,7 +165,7 @@ def allISOzip(iso):
   release_base = iso["release_base"]
   version = iso["version"]
   citeUsePath = "./tmp/CITATION-AND-USE-geoBoundaries-" + version + ".txt"
-  isoZipPath = "./release/geoBoundaries-" + version + "/" + iso[0] + "/geoBoundaries-" + version + "-" + iso[0] + ".zip"
+  isoZipPath = "./release/geoBoundaries-" + version + "/" + iso[0] + "/geoBoundaries-" + version + "-" + iso[0] 
   
   if(os.path.isfile(isoZipPath)):
     #print("Final rollup zip is complete for " + iso[0] + ". Skipping.")
@@ -175,30 +181,13 @@ def allISOzip(iso):
 
     
 def zipdir(dirPath=None, zipFilePath=None, includeDirInZip=False, citeUsePath=False):
-  if not zipFilePath:
-    zipFilePath = dirPath + ".zip"
-  if not os.path.isdir(dirPath):
-    raise OSError("dirPath argument must point to a directory. "
-            "'%s' does not." % dirPath)
-  parentDir, dirToZip = os.path.split(dirPath)
     
-  def trimPath(path):
-    archivePath = path.replace(parentDir, "", 1)
-    if parentDir:
-      archivePath = archivePath.replace(os.path.sep, "", 1)
-    if not includeDirInZip:
-      archivePath = archivePath.replace(dirToZip + os.path.sep, "", 1)
-    return os.path.normcase(archivePath)
-
-  outFile = zipfile.ZipFile(zipFilePath, "w",compression=zipfile.ZIP_DEFLATED)
-  for (archiveDirPath, dirNames, fileNames) in os.walk(dirPath):
-    for fileName in fileNames:
-      if(not fileName == zipFilePath.split("/")[-1]):
-        filePath = os.path.join(archiveDirPath, fileName)
-        outFile.write(filePath, trimPath(filePath))
+  shutil.make_archive(base_name = zipFilePath, format="zip", base_dir = dirPath, root_dir = dirPath)
   
-  outFile.write(citeUsePath, os.path.basename(citeUsePath))
-  outFile.close()
+  #Add the Cite and Use Text File
+  zipAppend = zipfile.ZipFile(zipFilePath, 'a')
+  zipAppend.write(citeUsePath, os.path.basename(citeUsePath))
+  zipAppend.close()
     
 def pBuild(row):  
   #identify root directory
@@ -263,32 +252,41 @@ def pBuild(row):
                      + "." + f.split(".")[2])
     fNames.append(fName)
     shutil.copyfile(f,fName)
-  
-  fNames.append(str("./tmp/CITATION-AND-USE-geoBoundaries-" + version + ".txt"))
   fNames.append(csvOutpath)
   
   #Create the shapefile zip, including a copy of the citation and use.
   zipShpFl = rowDir + "geoBoundaries-" + version + "-" + row["boundaryISO"] + "-" + row["boundaryType"] + "-shp.zip"
-  with zipfile.ZipFile(zipShpFl, 'w') as shpZip:
-    for f in fNames:
-      shpZip.write(f, compress_type=zipfile.ZIP_DEFLATED)
-    for zip_info in shpZip.infolist():
-        if zip_info.filename[-1] == '/':
-            continue
-        zip_info.filename = os.path.basename(zip_info.filename)
+  
+  #Add the Cite and Use Text File
+  #Hopefully this won't cause issues after the shutil archive...
+  citeUsePath = str("./tmp/CITATION-AND-USE-geoBoundaries-" + version + ".txt")
+  zipCreate = zipfile.ZipFile(zipShpFl, 'w')
+  zipCreate.write(citeUsePath, os.path.basename(citeUsePath))
+  zipCreate.close()
+  
+  #Add all the rest
+  zipAppend = zipfile.ZipFile(zipShpFl, 'a')
+  
+  for f in fNames:
+    zipAppend.write(f, os.path.basename(f))
+  
+  zipAppend.close()
   
   print("Zipping everything into a top-level zip.  This may take a while.")
   #Create the "all" zip
-  allFilesToZip = [zipShpFl, geojson, jsonOut, csvOutpath, citeUsePath]
+  allFilesToZip = [zipShpFl, geojson, jsonOut, csvOutpath]
   
-  with zipfile.ZipFile(allZipPath, 'w') as allZip:
-    for f in allFilesToZip:
-      allZip.write(f, compress_type=zipfile.ZIP_DEFLATED)
-    for zip_info in allZip.infolist():
-        if zip_info.filename[-1] == '/':
-            continue
-        zip_info.filename = os.path.basename(zip_info.filename)
- 
+  allZipCreate = zipfile.ZipFile(allZipPath, 'w')
+  allZipCreate.write(citeUsePath, os.path.basename(citeUsePath))
+  allZipCreate.close() 
+  
+  #Add all the rest
+  allZipAppend = zipfile.ZipFile(allZipPath, 'a')
+  
+  for f in allFilesToZip:
+    allZipAppend.write(f, os.path.basename(f))
+  
+  allZipAppend.close()
   
   print("++ Final overall release zip created. Dataset production complete.")
   
