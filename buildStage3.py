@@ -154,7 +154,7 @@ def buildFiles(buildID, minor):
     print("Done.")
     print("Creating full zip.  This may take an hour or two.")
     
-    dir_name = "./release/geoBoundaries-" + version + "/geoBoundaries-" + version
+    dir_name = "./release/geoBoundaries-" + version + "/"
     
     shutil.make_archive(base_name = "./tmp/geoBoundaries-" + version,
                           format="zip",

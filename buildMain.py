@@ -49,8 +49,8 @@ def geoBoundaries_build(buildID, minor=False):
     buildStage1.shapeChecks(buildID)
     buildStage2.metaStandardization(buildID)
   
-  buildStage3.buildFiles(buildID, minor)
-  #buildStage4.uploadGB(buildID, minor)
+  #buildStage3.buildFiles(buildID, minor)
+  buildStage4.uploadGB(buildID, minor)
 
 
 
