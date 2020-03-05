@@ -39,6 +39,14 @@ def releaseDta(buildID, version):
   
   #fullDLsize = round((os.path.getsize(metaZip) / 1000000000), 1)
   
+  #Calculate full size of all ADM1 for Publication
+  size = 0
+  for index, row in metaData.iterrows():
+    if(row["boundaryType"] == "ADM1"):
+      print(row)
+      size = size + os.path.getsize("./release/" + buildID + "/" + row["boundaryISO"] + "/ADM1/geoBoundaries-2_0_0-" + row["boundaryISO"] + "-ADM1-shp.zip")
+    
+  print(size)
   URL = "https://www.geoboundaries.org/data/" + buildID + "/" + buildID + ".zip"
   
   #rDest = "./tmp/release_dta.js"

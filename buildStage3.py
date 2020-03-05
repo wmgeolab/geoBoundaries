@@ -152,10 +152,9 @@ def buildFiles(buildID, minor):
   
   else:
     print("Done.")
-    Final mega-zip
     print("Creating full zip.  This may take an hour or two.")
     
-    "./release/geoBoundaries-" + version + "/geoBoundaries-" + version
+    dir_name = "./release/geoBoundaries-" + version + "/geoBoundaries-" + version
     
     shutil.make_archive(base_name = "./tmp/geoBoundaries-" + version,
                           format="zip",
