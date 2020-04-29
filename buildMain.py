@@ -40,6 +40,7 @@ def geoBoundaries_build(buildID, minor=False):
   exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("http://geo.stp.gov.py/user/dgeec/tables/paraguay_2012_departamentos/public")
   exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("https://www.pdok.nl/nl/producten/pdok-downloads/basis-registratie-kadaster/bestuurlijke-grenzen-actueel")
   exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("https://www.statcan.gc.ca/eng/reference/licence")
+  exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("http://data.gov.ro/dataset/unitati-administrative")
   
   if(minor == True):
     print("The minor build flag has been set - in this mode, only the build scripts will be re-run, using the data from the major version.")
