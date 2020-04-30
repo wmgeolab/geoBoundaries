@@ -150,8 +150,12 @@ def boundaryAnalysis(bdDta):
   
   fixed = []
   for feature in shpFile:
-    raw_shape = shapely.geometry.shape(feature['geometry'])
-    valid = raw_shape.is_valid
+    try:
+      raw_shape = shapely.geometry.shape(feature['geometry'])
+      valid = raw_shape.is_valid
+    except:
+      buildLogger(logID, "CRITICAL ERROR: An error in the geometry of the file " + shpPath + " exists that we could not automatically fix.  It looks like a geometry is missing?")
+      return("Failed")
     if valid:
       fixed.append(feature)
     if not valid:
