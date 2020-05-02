@@ -41,6 +41,8 @@ def geoBoundaries_build(buildID, minor=False):
   exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("https://www.pdok.nl/nl/producten/pdok-downloads/basis-registratie-kadaster/bestuurlijke-grenzen-actueel")
   exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("https://www.statcan.gc.ca/eng/reference/licence")
   exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("http://data.gov.ro/dataset/unitati-administrative")
+  exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("https://geo.gob.bo/geonetwork/srv/spa/catalog.search#/metadata/aeeb85a9-23df-48d4-a4e5-dd19e8b206db")
+  exceptions["gbReleaseCandidate_3_0_0"]["URL"].append("https://data.humdata.org/dataset/central-african-republic-administrative-boundaries")
   
   if(minor == True):
     print("The minor build flag has been set - in this mode, only the build scripts will be re-run, using the data from the major version.")
