@@ -15,6 +15,8 @@ def buildFiles(buildID, minor):
   if(minor == True):
     version = buildID.split('_', 1)[1]
     buildID = buildID[:-1] + "0"
+  else:
+    version = buildID.split('_', 1)[1]
 
     
   metaData = pd.read_csv("./releaseCandidateInit/" + buildID + "/" + buildID + ".csv")
