@@ -62,7 +62,7 @@ def geoBoundaries_build(buildID, minor=False):
     buildStage2.metaStandardization(buildID)
   
   buildStage3.buildFiles(buildID, minor)
-  #buildStage4.uploadGB(buildID, minor)
+  buildStage4.uploadGB(buildID, minor)
 
 
 

@@ -31,6 +31,8 @@ def uploadGB(buildID, minor=False):
   if(minor == True):
     version = buildID.split('_', 1)[1]
     buildID = buildID[:-1] + "0"
+  else:
+    version = buildID.split('_', 1)[1]
   
   sf = ftputil.session.session_factory(use_passive_mode=True)
   
