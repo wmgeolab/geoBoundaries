@@ -135,7 +135,8 @@ def metaDataChecks(buildID, exceptions):
                             "Other - Humanitarian",
                             "Other - Organization Specific",
                             "Public Domain",
-                            "Singapore Open Data License Version 1.0"]
+                            "Singapore Open Data License Version 1.0",
+                            "Creative Commons Attribution-ShareAlike 3.0 Germany"]
 
       
 
