@@ -55,14 +55,15 @@ def uploadGB(buildID, minor=False):
 
       for f in dir_files:
           if(f != ('geoBoundaries-' + version)):
-            local_f = os.path.join(local, f)
-            remote_f = ftp_host.path.join(remote, f)
-            if(tracker(remote_f, "check") == False):
-              print ('upload:' + local_f + '->' + remote_f)
-              ftp_host.upload(local_f, remote_f)
-              tracker(remote_f, "update")
-            else:
-              pass
+            if(f != ('geoBoundaries-' + version + ".zip")):
+              local_f = os.path.join(local, f)
+              remote_f = ftp_host.path.join(remote, f)
+              if(tracker(remote_f, "check") == False):
+                print ('upload:' + local_f + '->' + remote_f)
+                ftp_host.upload(local_f, remote_f)
+                tracker(remote_f, "update")
+              else:
+                pass
           
 
     
