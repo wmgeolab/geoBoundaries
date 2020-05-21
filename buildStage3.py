@@ -235,10 +235,11 @@ def pBuild(row):
   #even though it's unnecessary for many.
   srcShp.schema["geometry"] = "MultiPolygon"
 
+  kwargs = {"COORDINATE_PRECISION":7}
   with fiona.open(geojson, 'w', driver="GeoJSON", 
                   schema=srcShp.schema,
                  encoding='utf-8',
-                 crs=fiona.crs.from_epsg(4326)) as write_geojson:
+                 crs=fiona.crs.from_epsg(4326), **kwargs) as write_geojson:
 
     for feature in srcShp:
       if(feature["geometry"]["type"] == "MultiPolygon"):
