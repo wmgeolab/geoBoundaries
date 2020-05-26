@@ -1,0 +1,3 @@
+ISO ATA | ADM0 was not in the last release, so cannot be compared for changes.
+ISO AFG | ADM0 File already exists, skipping download.
+ISO AFG | ADM2 File already exists, skipping download.

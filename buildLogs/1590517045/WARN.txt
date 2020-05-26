@@ -1,0 +1,9 @@
+NEW OR REMOVED: 
+              0
+QAT_ADM0.zip  1
+ATA_ADM0.zip  1
+QAT_ADM0      1
+QAT_ADM2.zip  1
+VAT_ADM0.zip  1
+ISO AFG | ADM0 Metadata changed, but the file did not.
+ISO AFG | ADM2 Metadata changed, but the file did not.

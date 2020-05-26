@@ -1,0 +1,90 @@
+NEW OR REMOVED: 
+              0
+QAT_ADM0.zip  1
+ATA_ADM0.zip  1
+QAT_ADM0      1
+QAT_ADM2.zip  1
+VAT_ADM0.zip  1
+ISO AFG | ADM2 Metadata changed, but the file did not.
+ISO AFG | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/AFG/ADM2/AFG_ADM2.shp
+ISO ARM | ADM2 Metadata changed, but the file did not.
+ISO ARM | ADM2: At least one feature had a minor topological issue, fixed by shapely buffer=0.
+ISO ARM | ADM2: At least one feature had a minor topological issue, fixed by shapely buffer=0.
+ISO ARM | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/ARM/ADM2/ARM_ADM2.shp
+ISO ARG | ADM0 Metadata changed, but the file did not.
+ISO AUT | ADM3 Metadata changed, but the file did not.
+ISO AUT | ADM4 Metadata changed, but the file did not.
+ISO ALB | ADM3 Metadata changed, but the file did not.
+ISO ALB | ADM3: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/ALB/ADM3/ALB_ADM3.shp
+ISO AUT | ADM0 Metadata changed, but the file did not.
+ISO AUS | ADM2 Metadata changed, but the file did not.
+ISO AGO | ADM2 Metadata changed, but the file did not.
+ISO AFG | ADM1 Metadata changed, but the file did not.
+ISO AGO | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/AGO/ADM2/AGO_ADM2.shp
+ISO AUS | ADM1 Metadata changed, but the file did not.
+ISO AUT | ADM1 Metadata changed, but the file did not.
+ISO AGO | ADM1 Metadata changed, but the file did not.
+ISO DZA | ADM3 Metadata changed, but the file did not.
+ISO AGO | ADM0 Metadata changed, but the file did not.
+ISO ARM | ADM1 Metadata changed, but the file did not.
+ISO AZE | ADM0 Metadata changed, but the file did not.
+ISO DZA | ADM3: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/DZA/ADM3/DZA_ADM3.shp
+ISO AUT | ADM3: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/AUT/ADM3/AUT_ADM3.shp
+ISO AUS | ADM0 Metadata changed, but the file did not.
+ISO ATA | ADM0: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/ATA/ADM0/ATA_ADM0.shp
+ISO BGD | ADM1 Metadata changed, but the file did not.
+ISO BGD | ADM3 Metadata changed, but the file did not.
+ISO BGD | ADM2 Metadata changed, but the file did not.
+ISO ALB | ADM0 Metadata changed, but the file did not.
+ISO ALB | ADM1 Metadata changed, but the file did not.
+ISO BGD | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/BGD/ADM2/BGD_ADM2.shp
+ISO AGO | ADM3 Metadata changed, but the file did not.
+ISO AND | ADM1 Metadata changed, but the file did not.
+ISO AUT | ADM4: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/AUT/ADM4/AUT_ADM4.shp
+ISO DZA | ADM2 Metadata changed, but the file did not.
+ISO AZE | ADM1 Metadata changed, but the file did not.
+ISO AGO | ADM3: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/AGO/ADM3/AGO_ADM3.shp
+ISO DZA | ADM1 Metadata changed, but the file did not.
+ISO BLR | ADM0 Metadata changed, but the file did not.
+ISO ARG | ADM1 Metadata changed, but the file did not.
+ISO BLR | ADM1 Metadata changed, but the file did not.
+ISO ATG | ADM1 Metadata changed, but the file did not.
+ISO ATG | ADM0 Metadata changed, but the file did not.
+ISO ALB | ADM2 Metadata changed, but the file did not.
+ISO ARM | ADM0 Metadata changed, but the file did not.
+ISO BEL | ADM0 Metadata changed, but the file did not.
+ISO BGD | ADM3: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/BGD/ADM3/BGD_ADM3.shp
+ISO ALB | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/ALB/ADM2/ALB_ADM2.shp
+ISO DZA | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/DZA/ADM2/DZA_ADM2.shp
+ISO ARG | ADM2 Metadata changed, but the file did not.
+ISO BEL | ADM1 Metadata changed, but the file did not.
+ISO AND | ADM0 Metadata changed, but the file did not.
+ISO AUS | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/AUS/ADM2/AUS_ADM2.shp
+ISO BGD | ADM4 Metadata changed, but the file did not.
+ISO DZA | ADM0 Metadata changed, but the file did not.
+ISO BLR | ADM2 Metadata changed, but the file did not.
+ISO BLR | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/BLR/ADM2/BLR_ADM2.shp
+ISO BEN | ADM2 Metadata changed, but the file did not.
+ISO BEN | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/BEN/ADM2/BEN_ADM2.shp
+ISO AZE | ADM2 Metadata changed, but the file did not.
+ISO BHS | ADM0 Metadata changed, but the file did not.
+ISO BIH | ADM2 Metadata changed, but the file did not.
+ISO BIH | ADM0 Metadata changed, but the file did not.
+ISO BIH | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/BIH/ADM2/BIH_ADM2.shp
+ISO BIH | ADM1 Metadata changed, but the file did not.
+ISO BHR | ADM0 Metadata changed, but the file did not.
+ISO BRB | ADM0 Metadata changed, but the file did not.
+ISO BEL | ADM4 Metadata changed, but the file did not.
+ISO BEL | ADM2 Metadata changed, but the file did not.
+ISO BEL | ADM2: At least one feature had a minor topological issue, fixed by shapely buffer=0.
+ISO BEL | ADM4: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/BEL/ADM4/BEL_ADM4.shp
+ISO BRB | ADM1 Metadata changed, but the file did not.
+ISO BHR | ADM1 Metadata changed, but the file did not.
+ISO BLZ | ADM0 Metadata changed, but the file did not.
+ISO BOL | ADM2 Metadata changed, but the file did not.
+ISO BTN | ADM0 Metadata changed, but the file did not.
+ISO BOL | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/BOL/ADM2/BOL_ADM2.shp
+ISO BRN | ADM2 Metadata changed, but the file did not.
+ISO BRN | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/BRN/ADM2/BRN_ADM2.shp
+ISO BRN | ADM1 Metadata changed, but the file did not.
+ISO AFG | ADM0 Metadata changed, but the file did not.
