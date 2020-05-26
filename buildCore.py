@@ -516,7 +516,7 @@ def metaStandardization(metaData, version):
 
   
   #Generate the final CSV for the package.
-  cleanMeta.to_csv("./gbRawData/current/ geoBoundaries-" + version + ".csv", index=False)
+  cleanMeta.to_csv("./gbRawData/current/geoBoundaries-" + version + ".csv", index=False)
 
 try:
   metaStandardization(currentCSV, nightlyVersion)

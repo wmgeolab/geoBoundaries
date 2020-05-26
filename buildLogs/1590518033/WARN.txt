@@ -1210,3 +1210,6 @@ ISO CAN | ADM3: At least one feature had a minor topological issue, fixed by sha
 ISO CAN | ADM3: At least one feature had a minor topological issue, fixed by shapely buffer=0.
 ISO CAN | ADM3: At least one feature had a minor topological issue, fixed by shapely buffer=0.
 ISO CAN | ADM3: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/CAN/ADM3/CAN_ADM3.shp
+ISO CAN | ADM2: At least one feature had a minor topological issue, fixed by shapely buffer=0.
+ISO CAN | ADM2: No ISO information was found in a validly named column for: /home/cdsw/gbRelease/gbRawData/current/CAN/ADM2/CAN_ADM2.shp
+ISO GRL | ADM0: At least one feature had a minor topological issue, fixed by shapely buffer=0.
