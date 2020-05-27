@@ -1,7 +1,0 @@
-NEW OR REMOVED: 
-              0
-QAT_ADM0.zip  1
-ATA_ADM0.zip  1
-QAT_ADM0      1
-QAT_ADM2.zip  1
-VAT_ADM0.zip  1

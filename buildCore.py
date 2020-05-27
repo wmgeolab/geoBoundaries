@@ -187,8 +187,6 @@ class geoBoundary:
                     
       dlProcess = subprocess.Popen([rCloneCall], shell=True)
       dlProcess.wait()
-      self.geoLog("INFO", ("ISO " + self.iso + " | " + self.adm +
-                               rCloneCall))
       
       if((dlProcess.returncode != 0) or (not os.path.isfile(os.path.join(zipDir, (self.iso + "_" + self.adm + ".zip"))))):
         self.geoLog("CRITICAL",("ISO " + self.iso + " | " + self.adm +
@@ -516,7 +514,7 @@ def metaStandardization(metaData, version):
 
   
   #Generate the final CSV for the package.
-  cleanMeta.to_csv("./gbRawData/current/geoBoundaries-" + version + ".csv", index=False)
+  cleanMeta.to_csv(home + "/gbRelease/gbRawData/current/geoBoundaries-" + version + ".csv", index=False)
 
 try:
   metaStandardization(currentCSV, nightlyVersion)

@@ -1,32 +1,38 @@
-#Script to push new major / minor release of geoBoundaries
+#Script to build new major / minor release of geoBoundaries
 import pandas as pd
 from os.path import expanduser
 import glob
 import os
 import fiona
+import fiona.crs
+import shapely.geometry as geom
+from shapely.geometry import shape
+from joblib import Parallel, delayed, parallel_backend
+import shutil
+import zipfile
 home = expanduser("~")
 
 #Specify Version this release will be:
 geoBoundariesVersion = "3_0_0"
 
-#Can use this script to push core or ancillary products.
+#Can use this script to build core or ancillary products.
 #Accepts a list
 #HPSCU - High Precision Single Country Unstadardized (HPSCU)
 #HPSCGS - High Precision Single Country Globally Standardized (HPSCGS)
 #CGAZ - Contigious Global Administrative Zones
 #SSCU - Simplified Single Country Unstandardized 
 #SSCGS - Simplified Single Country Globally Standardized
-pushType = ["HPSCU", "HPSCGS", "SSCU", "SSCGS"]
+buildType = ["HPSCU", "HPSCGS", "SSCU", "SSCGS"]
 
 
 
 #Create CITATION_AND_USE.txt
-citeUsePath = (home + "/gbRelease/gbReleaseData/CITATION-AND-USE-geoBoundaries-" + version + ".txt")
+citeUsePath = (home + "/gbRelease/tmp/CITATION-AND-USE-geoBoundaries-" + geoBoundariesVersion + ".txt")
 citUse = open(citeUsePath, "w")
 citUse.write("====================================================\n")
 citUse.write("Citation of the geoBoundaries Data Product\n")
 citUse.write("====================================================\n")
-citUse.write("geoBoundaries Version " + version.replace("_",".") + "\n")
+citUse.write("geoBoundaries Version " + geoBoundariesVersion.replace("_",".") + "\n")
 citUse.write("www.geoboundaries.org \n")
 citUse.write("geolab.wm.edu \n")
 citUse.write("The geoBoundaries database is made available in a \n")
@@ -45,7 +51,7 @@ citUse.write("our academic citation, and the version of geoBoundaries used. \n")
 citUse.write("Example citations for the current version of GeoBoundaries are:  \n")
 citUse.write(" \n")
 citUse.write("+++++ General Use Citation +++++\n")
-citUse.write("Please include the term 'geoBoundaries v. "+ version.replace("_",".") +  "' with a link to")
+citUse.write("Please include the term 'geoBoundaries v. "+ geoBoundariesVersion.replace("_",".") +  "' with a link to")
 citUse.write("https://www.geoboundaries.org\n")
 citUse.write(" \n")
 citUse.write("+++++ Academic Use Citation +++++++++++\n")
@@ -87,11 +93,6 @@ citUse.write("Thank you for citing your use of geoBoundaries and reporting any i
 citUse.write("as a non-profit academic project, your citations are what keeps geoBoundaries alive.\n")
 citUse.write("-Dan Runfola (dan@danrunfola.com)")
 citUse.close()
-#HPSCU - High Precision Single Country Unstadardized (HPSCU)
-#HPSCGS - High Precision Single Country Globally Standardized (HPSCGS)
-#CGAZ - Contigious Global Administrative Zones
-#SSCU - Simplified Single Country Unstandardized 
-#SSCGS - Simplified Single Country Globally Standardized
 
 class releaseCandidateBoundary:
   def __init__(self,gbMeta, geoBoundariesVersion, home):
@@ -102,7 +103,7 @@ class releaseCandidateBoundary:
     self.allMeta = gbMeta
   
   def geoLog(self, errorType, errorMessage):
-    folderPath = self.home + "/gbRelease/gbRelease/buildLogs/" + self.version + "/"
+    folderPath = self.home + "/gbRelease/buildLogs/" + self.version + "/"
     if not os.path.exists(folderPath):
       os.makedirs(folderPath)
     filePath = folderPath + errorType + ".txt"
@@ -117,6 +118,20 @@ class releaseCandidateBoundary:
         return 0  
       
   def HPSCU(self):
+    #Check if a file already exists and if the current zip file was downloaded
+    #on a date *later than* our most recent build.
+    #If so, we need to rebuild everything.
+    #Otherwise, we can skip.
+    finalZipPath = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/" + "geoBoundaries-" + self.version + "-" + self.iso + "-" + self.adm + "-all.zip")
+    
+    if(os.path.isfile(finalZipPath)):
+      buildTimeStamp = os.path.getmtime(finalZipPath) 
+      zipDownloadTimeStamp = os.path.getmtime(self.home + "/gbRelease/gbRawData/currentZips/" + self.iso + "_" + self.adm + ".zip")
+      if(buildTimeStamp - zipDownloadTimeStamp < 0):
+        self.BuildComplete_HPSCU = True
+        self.geoLog("WARN", (self.iso + "|" + self.adm + " HPSCU build skipped - already had most recent version."))
+        
+    
     outDirectory = self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/"
     inShape = (self.home + "/gbRelease/gbRawData/current/" + self.iso + "/" + self.adm + 
                "/shapeFixes/" + self.iso + "_" + self.adm + "_" +
@@ -124,25 +139,19 @@ class releaseCandidateBoundary:
     try:
       shpFile = fiona.open(inShape)
     except:
-      geoLog("CRITICAL", (self.iso + "|" self.adm + "Shape failed to open."))
+      self.geoLog("CRITICAL", (self.iso + "|" + self.adm + "Shape failed to open."))
     
-    #Build the shapefile zip.
-    #Requires first editing shapefile attributes (updating version names)
-    #Then second creating the zip
-
-    fID = 0
-    for elem in shpFile:
-      fID = fID + 1
-      elem["properties"]["shapeID"] = (self.iso + "-" + self.adm + "-" + self.version + "-B" + str(fID))
-
+    #Build the geometry files...
+  
     #Create a geojson
     geojson = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/" +
                "geoBoundaries-" + self.version + "-" + self.iso + "-" + self.adm + ".geojson")
   
     #For uniformity, we'll store all our geoJSONs as multipolygons,
     #even though it's unnecessary for many.
+  
     shpFile.schema["geometry"] = "MultiPolygon"
-
+    fid = 0
     kwargs = {"COORDINATE_PRECISION":7}
     with fiona.open(geojson, 'w', driver="GeoJSON", 
                 schema=shpFile.schema,
@@ -150,6 +159,8 @@ class releaseCandidateBoundary:
                 crs=fiona.crs.from_epsg(4326), **kwargs) as write_geojson:
 
       for feature in shpFile:
+        fid = fid + 1
+        feature["properties"]["shapeID"] = (self.iso + "-" + self.adm + "-" + self.version + "-B" + str(fid)) 
         if(feature["geometry"]["type"] == "MultiPolygon"):
           write_geojson.write(feature)
         else:
@@ -167,8 +178,15 @@ class releaseCandidateBoundary:
                "geoBoundaries-" + self.version + "-" + self.iso + "-" + self.adm + "-metaData.txt")
     json_txt.to_csv(csvOutpath, index=True, header=False, sep=' ')
     
-    #Create a shapefile
-    shapefilePath = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/" +
+    #Create a temp folder to hold the shapefile
+    if(os.path.isdir((self.home + "/gbRelease/tmp/" + self.iso + self.adm + "/"))):
+      shutil.rmtree((self.home + "/gbRelease/tmp/" + self.iso + self.adm + "/")) 
+      os.mkdir((self.home + "/gbRelease/tmp/" + self.iso + self.adm + "/"))
+    else:
+      os.mkdir((self.home + "/gbRelease/tmp/" + self.iso + self.adm + "/"))
+    
+    fid = 0
+    shapefilePath = (self.home + "/gbRelease/tmp/" + self.iso + self.adm + "/" +
                "geoBoundaries-" + self.version + "-" + self.iso + "-" + self.adm + ".shp")
   
     with fiona.open(shapefilePath, 'w', driver="ESRI Shapefile", 
@@ -177,6 +195,9 @@ class releaseCandidateBoundary:
                  crs=fiona.crs.from_epsg(4326), **kwargs) as write_shp:
 
       for feature in shpFile:
+        fid = fid + 1
+        feature["properties"]["shapeID"] = (self.iso + "-" + self.adm + "-" + self.version + "-B" + str(fid)) 
+        
         if(feature["geometry"]["type"] == "MultiPolygon"):
           write_shp.write(feature)
         else:
@@ -184,40 +205,84 @@ class releaseCandidateBoundary:
           multiFeature['geometry'] = geom.mapping(geom.MultiPolygon([shape(feature["geometry"])]))
           write_shp.write(multiFeature)
    
+    #Zip the shapefile and output it to the final folder
+    shutil.make_archive(
+      base_name = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/" +
+               "geoBoundaries-" + self.version + "-" + self.iso + "-" + self.adm + "-shp"),
+      format="zip",
+      root_dir = (self.home + "/gbRelease/tmp/" + self.iso + self.adm + "/")
+  )
+                    
+    
     
     dirToZip = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/")
-    
-    shutil.make_archive(base_name = self.home + "/gbRelease/tmp/geoBoundaries-" + version,
+    zipTarget = (self.home + "/gbRelease/tmp/geoBoundaries-" + self.version + "-" + self.iso + "-" + self.adm + "-all")
+    shutil.make_archive(base_name = zipTarget,
                           format="zip",
-                          root_dir = dirToZip)    
+                          root_dir = dirToZip)
+    
+    #Append citation and use doc
+    citePath = (self.home + "/gbRelease/tmp/CITATION-AND-USE-geoBoundaries-" + self.version + ".txt")
+    zipAppend = zipfile.ZipFile(zipTarget + ".zip", 'a')
+    zipAppend.write(citePath, os.path.basename(citePath))
+    zipAppend.close()
       
-def pushRelease(pushType, geoBoundariesVersion, metaDataRow, home):
+    shutil.move(zipTarget + ".zip", 
+                 dirToZip)
+  def SSCU(self):
+    #Simplified single country release
+    finalZipPath = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/" + "geoBoundaries-" + self.version + "-" + self.iso + "-" + self.adm + "-all.zip")
+    
+    if(os.path.isfile(finalZipPath)):
+      buildTimeStamp = os.path.getmtime(finalZipPath) 
+      zipDownloadTimeStamp = os.path.getmtime(self.home + "/gbRelease/gbRawData/currentZips/" + self.iso + "_" + self.adm + ".zip")
+      if(buildTimeStamp - zipDownloadTimeStamp < 0):
+        self.BuildComplete_HPSCU = True
+        self.geoLog("WARN", (self.iso + "|" + self.adm + " HPSCU build skipped - already had most recent version."))
+        
+    
+    outDirectory = self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/"
+    inShape = (self.home + "/gbRelease/gbRawData/current/" + self.iso + "/" + self.adm + 
+               "/shapeFixes/" + self.iso + "_" + self.adm + "_" +
+               "fixedInternalTopology.shp")
+      
+      
+def buildRelease(buildType, geoBoundariesVersion, metaDataRow, home):
   #Let's not talk about this.
-  while True:              
-    try:
-      if (not os.path.isdir((home + '/gbRelease/gbReleaseData/' + releaseType + '/' + 
-                             row["boundaryISO"] + "/"))):
-        os.mkdir((home + '/gbRelease/gbReleaseData/' + releaseType + '/' + 
-                             row["boundaryISO"] + "/"))
-        if not os.path.isdir((home + '/gbRelease/gbReleaseData/' + releaseType + '/' + 
-                             row["boundaryISO"] + "/")):
+  for releaseType in buildType:
+    while True:
+      try:
+        if (not os.path.isdir((home + '/gbRelease/gbReleaseData/' + releaseType + '/' + 
+                             metaDataRow["boundaryISO"] + "/"))):
           os.mkdir((home + '/gbRelease/gbReleaseData/' + releaseType + '/' + 
-                             row["boundaryISO"] + "/" + row["boundaryType"] + '/'))
+                             metaDataRow["boundaryISO"] + "/"))
+        if (not os.path.isdir((home + '/gbRelease/gbReleaseData/' + releaseType + '/' + 
+                             metaDataRow["boundaryISO"] + "/" + metaDataRow["boundaryType"] + '/'))):
+            os.mkdir((home + '/gbRelease/gbReleaseData/' + releaseType + '/' + 
+                             metaDataRow["boundaryISO"] + "/" + metaDataRow["boundaryType"] + '/'))
+      except:
+        pass
+      else:
+        break
+        
+  #Initialize the boundary object
+  boundary = releaseCandidateBoundary(metaDataRow, geoBoundariesVersion, home)
+  if("HPSCU" in buildType):
+    try:
+      boundary.HPSCU()
     except:
-      pass
-    else:
-      break
-
+      boundary.geoLog("CRITICAL", (boundary.iso + "|" + boundary.adm + " - HPSCU build failed."))
       
+   ##REMEMBER AT THE END: GO BACK AND BUILD THE ISO LEVEL ZIPS!!!   
       
 
-allMeta = glob.glob((home + "/gbRelease/gbRawData/metadata/"))
+allMeta = glob.glob((home + "/gbRelease/gbRawData/metadata/*"))
 latestMeta = max(allMeta, key=os.path.getctime)
-nightlyVersion = str(latestMeta).split(".")[0]
-metaData = pd.read_csv(("./gbRawData/current/geoBoundaries-" + nightlyVersion + ".csv"))
+nightlyVersion = str(latestMeta).split("/")[-1].split(".")[0]
+metaData = pd.read_csv((home + "/gbRelease/gbRawData/current/geoBoundaries-" + nightlyVersion + ".csv"))
 
 
-#Confirm the release we're using for the push doesn't have any
+#Confirm the release we're using for the build doesn't have any
 #Critical errors remaining.  If so, kill this job.
 if(not os.path.isfile(os.path.join((home + "/gbRelease/buildLogs/" + 
                                     nightlyVersion + "/"), "CRITICAL.txt"))):
@@ -225,35 +290,30 @@ if(not os.path.isfile(os.path.join((home + "/gbRelease/buildLogs/" +
   bndCnt = 0
   for i, row in metaData.iterrows():
     bndCnt = bndCnt + 1
-    metaData.at[i,'boundaryID'] = (metaData["boundaryISO"] + "-" + 
-                                 metaData["boundaryADM"] + "-" 
+    metaData.at[i,'boundaryID'] = (metaData["boundaryISO"][i] + "-" + 
+                                 metaData["boundaryType"][i] + "-" 
                                  + geoBoundariesVersion + "-G" + str(bndCnt))
     
-  metaData.to_csv((home + "/gbReleaseData/geoBoundaries-" + geoBoundariesVersion + ".csv"), index=False)
+  metaData.to_csv((home + "/gbRelease/gbReleaseData/geoBoundaries-" + geoBoundariesVersion + ".csv"), index=False)
 
   #Create root, country and hierarchy folders if they do not exist.
   #Copy metadata into the root of each, as it is identical across
   #ancillary releases.
   
-  for releaseType in pushType:
-    if(not os.path.isdir(home + "/gbReleaseData/" + releaseType + "/")):
-      os.mkdir(home + "/gbReleaseData/" + releaseType + "/")
-      shutil.copyfile((home + "/gbReleaseData/geoBoundaries-" + geoBoundariesVersion + ".csv"),
-                      (home + "/gbReleaseData/" + releaseType + "/geoBoundaries-" + geoBoundariesVersion + ".csv"))
+  for releaseType in buildType:
+    if(not os.path.isdir(home + "/gbRelease/gbReleaseData/" + releaseType + "/")):
+      os.mkdir(home + "/gbRelease/gbReleaseData/" + releaseType + "/")
+      shutil.copyfile((home + "/gbRelease/gbReleaseData/geoBoundaries-" + geoBoundariesVersion + ".csv"),
+                      (home + "/gbRelease/gbReleaseData/" + releaseType + "/geoBoundaries-" + geoBoundariesVersion + ".csv"))
   
   #Launch the ships:
   with parallel_backend("loky", inner_max_num_threads=1):
-  (Parallel(n_jobs=-2, verbose=100)
-   (delayed(pushRelease)
-    (pushType, geoBoundariesVersion, metaData.iloc[i], home) 
-    for i in range(len(metaData))))
-      
-
-
-
-
-      
+    (Parallel(n_jobs=-2, verbose=100)
+     (delayed(buildRelease)
+      (buildType, geoBoundariesVersion, metaData.iloc[i], home) 
+      for i in range(len(metaData))))
+  
 
       
 else:
-  print("You cannot push this build, as it still has critical errors.")
+  print("You cannot create this build, as it still has critical errors.")
