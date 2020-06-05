@@ -9,9 +9,13 @@ Produced and maintained by the William & Mary [geoLab](http://geolab.wm.edu/) si
 We provide three different mechanisms to download geoBoundaries data: a web-based GUI, HTML file access (for archival versions), and an API. Releases come in five different flavors:
 
 _HPSCU_  - High Precision Single Country Unstadardized. The premier geoBoundaries release, representing the highest precision files available for every country in the world. No standardization is performed on these files, so (for example) two countries may overlap in the case of contested boundaries.
+
 _HPSCGS_  - High Precision Single Country Globally Standardized. A version of geoBoundaries high percision data that has been clipped to the U.S. Department of State boundary file, ensuring no contested boundaries or overlap in the dataset. This globally standardized product may have gaps between countries. If you need a product with no gaps, we recommend our simplified global product.
+
 _SSCU_  - Simplified Single Country Unstandardized. A simplified version of every file available for every country in the world. No standardization is performed on these files, so (for example) two countries may overlap in the case of contested boundaries.
+
 _SSCGS_  - Simplified Single Country Globally Standardized. A version of geoBoundaries simplified data that has been clipped to the U.S. Department of State boundary file, ensuring no contested boundaries or overlap in the dataset. This globally standardized product may have gaps between countries.
+
 _CGAZ_  - Comprehensive Global Administrative Zones. A global composite of the SSCGS ADM0, ADM1 and ADM2, with gaps filled between borders.  Also available at higher levels of simplification.
 
 ## Manual Data Retrieval
