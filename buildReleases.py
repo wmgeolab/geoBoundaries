@@ -9,6 +9,7 @@ import shapely.geometry as geom
 from shapely.geometry import shape, mapping, MultiPolygon
 from joblib import Parallel, delayed, parallel_backend
 import shutil
+import subprocess
 import zipfile
 import json
 import sys
@@ -32,7 +33,7 @@ geoBoundariesVersion = "3_0_0"
 #GSB does both  Simplified Single Country Globally Standardized (SSCGS )
 #and High Precision Single Country Globally Standardized (HPSCGS)
 #SSCU - Simplified Single Country Unstandardized 
-builds = ["HPSCU", "SSCU"]
+builds = ["HPSCU", "SSCU", "GSB", "CGAZ"]
 
 
 if (not os.path.isdir(home + '/gbRelease/tmp/')):
@@ -250,7 +251,7 @@ class releaseCandidateBoundary:
       inputTitle = "High Precision Unstd."
       outputTitle = "High Precision Std."
     if(release == "SSCGS"):
-      inputTitle = "High Precision Unstd"
+      inputTitle = "Simplified Unstd"
       outputTitle = "Simplified Std"
     
     prefix = "geoBoundariesPreview" + release + "-"
@@ -339,11 +340,11 @@ class releaseCandidateBoundary:
     if(os.path.isfile(finalZipPath)):
       buildTimeStamp = os.path.getmtime(finalZipPath) 
       zipDownloadTimeStamp = os.path.getmtime(self.home + "/gbRelease/gbRawData/currentZips/" + self.iso + "_" + self.adm + ".zip")
-      if(buildTimeStamp - zipDownloadTimeStamp > 0):
+      if((buildTimeStamp - zipDownloadTimeStamp) > 0):
         self.BuildComplete_HPSCU = True
-        self.geoLog("WARN", (self.iso + "|" + self.adm + " HPSCU build skipped - already had most recent version."))
         return 0
       else:
+        self.geoLog("INFO", (self.iso + "|" + self.adm + " HPSCU build starting."))
         shutil.rmtree((self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/"))
         os.mkdir((self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + self.adm + "/"))
     
@@ -386,7 +387,7 @@ class releaseCandidateBoundary:
       os.mkdir(shpOUT)
     
     try:
-      mapShaperWriteShape = (self.home + "/node_modules/mapshaper/bin/mapshaper " + inShape +
+      mapShaperWriteShape = (self.home + "/node_modules/mapshaper/bin/mapshaper-xl " + inShape +
                              " -o format=shapefile " + shpOUT +
                              " -o format=topojson " + topoOUT) 
       os.system(mapShaperWriteShape)
@@ -443,7 +444,7 @@ class releaseCandidateBoundary:
   def SSCU(self):
     #Simplified single country release
     self.BuildComplete_SSCU = False
-    finalZipPath = (self.home + "/gbRelease/gbReleaseData/SSCU/" + self.iso + "/" + self.adm + "/" + "geoBoundariesSimplified-" + self.version + "-" + self.iso + "-" + self.adm + "-all.zip")
+    finalZipPath = (self.home + "/gbRelease/gbReleaseData/SSCU/" + self.iso + "/" + self.adm + "/" + "geoBoundariesSSCU-" + self.version + "-" + self.iso + "-" + self.adm + "-all.zip")
     toposimp = "25%"
   
     if(os.path.isfile(finalZipPath)):
@@ -451,9 +452,9 @@ class releaseCandidateBoundary:
       zipDownloadTimeStamp = os.path.getmtime(self.home + "/gbRelease/gbRawData/currentZips/" + self.iso + "_" + self.adm + ".zip")
       if(buildTimeStamp - zipDownloadTimeStamp > 0):
         self.BuildComplete_SSCU = True
-        self.geoLog("WARN", (self.iso + "|" + self.adm + " SSCU build skipped - already had most recent version."))
         return 0
       else:
+        self.geoLog("INFO", (self.iso + "|" + self.adm + " SSCU build starting."))
         shutil.rmtree((self.home + "/gbRelease/gbReleaseData/SSCU/" + self.iso + "/" + self.adm + "/"))
         os.mkdir((self.home + "/gbRelease/gbReleaseData/SSCU/" + self.iso + "/" + self.adm + "/"))
     
@@ -463,10 +464,10 @@ class releaseCandidateBoundary:
     inShape = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + 
                self.adm + "/" + "geoBoundaries-" + self.version + "-" + 
                self.iso + "-" + self.adm + ".geojson")
-    outJSON = outDirectory + "geoBoundariesSimplified-" + self.version + "-" + self.iso + "-" + self.adm + ".geojson"
-    outTOPO = outDirectory + "geoBoundariesSimplified-" + self.version + "-" + self.iso + "-" + self.adm + ".topojson"
+    outJSON = outDirectory + "geoBoundariesSSCU-" + self.version + "-" + self.iso + "-" + self.adm + ".geojson"
+    outTOPO = outDirectory + "geoBoundariesSSCU-" + self.version + "-" + self.iso + "-" + self.adm + ".topojson"
     outSHP = (self.home + "/gbRelease/tmp/simp_" + self.iso + self.adm + "/" +
-               "geoBoundariesSimplified-" + self.version + "-" + self.iso + "-" + self.adm + ".shp")
+               "geoBoundariesSSCU-" + self.version + "-" + self.iso + "-" + self.adm + ".shp")
 
     if(os.path.isdir((self.home + "/gbRelease/tmp/simp_" + self.iso + self.adm + "/"))):
       shutil.rmtree((self.home + "/gbRelease/tmp/simp_" + self.iso + self.adm + "/")) 
@@ -475,7 +476,7 @@ class releaseCandidateBoundary:
       os.mkdir((self.home + "/gbRelease/tmp/simp_" + self.iso + self.adm + "/"))
       
     try:
-      mapShaperSimplify = (self.home + "/node_modules/mapshaper/bin/mapshaper " + inShape +
+      mapShaperSimplify = (self.home + "/node_modules/mapshaper/bin/mapshaper-xl " + inShape +
                              " -simplify keep-shapes percentage=" + toposimp + 
                              " -o format=geojson " + outJSON + 
                              " -o format=topojson " + outTOPO +
@@ -487,7 +488,7 @@ class releaseCandidateBoundary:
     try:
       shutil.make_archive(
         base_name = (self.home + "/gbRelease/gbReleaseData/SSCU/" + self.iso + "/" + self.adm + "/" +
-                     "geoBoundariesSimplified-" + self.version + "-" + self.iso + "-" + self.adm + "-shp"),
+                     "geoBoundariesSSCU" + self.version + "-" + self.iso + "-" + self.adm + "-shp"),
         format="zip",
         root_dir = (self.home + "/gbRelease/tmp/simp_" + self.iso + self.adm + "/"))
     except:
@@ -511,215 +512,112 @@ class releaseCandidateBoundary:
 #################################
 ################################# 
   def GSB(self):
-    #Simplified single country release
-    self.BuildComplete_GSB = False
-    finalPickleFile = self.home + "/gbRelease/gbRawData/ISO_0_Standards/countryISOMatchesGeoms_usDoSLSIBMarch2020.pickle"
-    OBPath_SSCGS = self.home + "/gbRelease/tmp/USMAR2020_LISB_" + self.ID + ".geojson" 
-    OBTPath = self.home + "/gbRelease/tmp/HIGHRES_USMAR2020_LISB_" + self.ID + ".geojson"
-    OBTopoPath = self.home + "/gbRelease/tmp/USMAR2020_LISB_" + self.ID + ".topojson"
-    OBSimTopoPath = self.home + "/gbRelease/tmp/SIM_USMAR2020_LISB_" + self.ID + ".topojson"
-    
-    officialBoundary = pickle.load(open(finalPickleFile, "rb"))[self.iso]
-    
-  
-    cnt = 0
-   
-    if((os.path.isfile(OBPath_SSCGS) and os.path.isfile(OBTPath))):
-      pass
-    else:
-      schema = {'geometry': 'Polygon',
-                  'properties': {'id': 'int'}}
-      
-      with fiona.open(OBTPath, 'w', 'GeoJSON', schema) as oshp:
-        if(str(type(officialBoundary)) == "<class 'shapely.geometry.polygon.Polygon'>"):
-          oshp.write({
-            'geometry': mapping(officialBoundary),
-            'properties': {'id': 0}})
-        else:
-          id = 0
-          for geom in officialBoundary:
-            oshp.write({
-              'geometry': mapping(geom),
-              'properties': {'id': id}})
-            id = id + 1
-
-      nodeConvertCommand = (self.home + "/node_modules/topojson-server/bin/geo2topo data=" + 
-                                OBTPath + " > " + OBTopoPath)
-      os.system(nodeConvertCommand)
-        
-      simplifyTests = 0
-      simplifyBoundary = False
-      while (simplifyTests < 10):
-        simplifyTests = simplifyTests + 1
-        try:
-          S = str(simplifyTests * 0.1)
-          nodeSimplifyCommand = (self.home + "/node_modules/topojson-simplify/bin/toposimplify" + 
-                        " -S " + S + " -o " + OBSimTopoPath + " " + OBTopoPath)
-          os.system(nodeSimplifyCommand)
-          geoJSON = topo2geojson(OBSimTopoPath, OBPath_SSCGS)
-          simplifyBoundary = True
-        except:
-          self.geoLog("WARN", (self.iso + "|" + self.adm + " | " + "standardization ISO0 failed to simplify at S " + S + ".  Moving up."))
-        else:
-          self.geoLog("INFO", (self.iso + "|" + self.adm + " | "  + " standardization ISO0 succeded in simplification at S " + S + ". "))
-          break
-          
-      if(simplifyBoundary == False):
-        self.geoLog("CRITICAL", (self.iso + "|" + self.adm + " | "  + " standardization ISO0 failed to simplify - no suitable S parameter."))
-          
-
-        
     count = 0
-    for buildType in ["HPSCGS", "SSCGS"]:
-      if(buildType == "HPSCGS"):
-        productName = "geoBoundariesPreciseStandardized-"
-        sourcePath = self.home + "/gbRelease/gbReleaseData/HPSCU/"
-        sourceProductName = ""
-        
-      if(buildType == "SSCGS"):
-        productName = "geoBoundariesSimpStd-"
-        sourcePath = self.home + "/gbRelease/gbReleaseData/SSCU/"
-        sourceProductName = "Simplified"
-        
-      finalZipPath = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/" + productName + self.version + "-" + self.iso + "-" + self.adm + "-all.zip")
+    notIncludedGSB = ["NIU", "PSE"]
+    if(not self.iso in notIncludedGSB):
     
-      if(os.path.isfile(finalZipPath)):
-        buildTimeStamp = os.path.getmtime(finalZipPath) 
-        zipDownloadTimeStamp = os.path.getmtime(self.home + "/gbRelease/gbRawData/currentZips/" + self.iso + "_" + self.adm + ".zip")
-        if(buildTimeStamp - zipDownloadTimeStamp > 0):
-          count = count + 1
-          if(count == 2):
-            self.BuildComplete_GSB = True
-            self.geoLog("WARN", (self.iso + "|" + self.adm + " " + buildType + " build skipped - already had most recent version."))
-            return 0
+      for buildType in ["HPSCGS", "SSCGS"]:
+        finalZipPath = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/geoBoundaries" + buildType + "-" + self.version + "-" + self.iso + "-" + self.adm + "-all.zip")
+        outDirectory = self.home + "/gbRelease/gbReleaseData/"+ buildType + "/" + self.iso + "/" + self.adm + "/"
+        outJSON = outDirectory + "geoBoundaries" + buildType + "-" + self.version + "-" + self.iso + "-" + self.adm + ".geojson"
+        outTOPO = outDirectory + "geoBoundaries" + buildType + "-" + self.version + "-" + self.iso + "-" + self.adm + ".topojson"
+        outSHPTemp = (self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/" +
+                 "geoboundaries" + buildType + "-" + self.version + "-" + self.iso + "-" + self.adm + ".shp")
+        outSHP = outDirectory + "geoBoundaries" + buildType + "-" + self.version + "-" + self.iso + "-" + self.adm + "-shp"
+        clipPath = self.home + "/gbRelease/gbRawData/ISO_0_Standards/USDoS/" + self.iso + ".topojson"
+        cleanClipPath = self.home + "/gbRelease/gbRawData/ISO_0_Standards/USDoS/" + self.iso + self.adm + "_clean.topojson"
+        
+        
+        
+        if(buildType == "HPSCGS"):
+          inGeom = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + 
+                 self.adm + "/" + "geoBoundaries-" + self.version + "-" + 
+                 self.iso + "-" + self.adm + ".topojson") 
+          inGeoJson = (self.home + "/gbRelease/gbReleaseData/HPSCU/" + self.iso + "/" + 
+                 self.adm + "/" + "geoBoundaries-" + self.version + "-" + 
+                 self.iso + "-" + self.adm + ".geojson") 
+
+        if(buildType == "SSCGS"):
+          inGeom = (self.home + "/gbRelease/gbReleaseData/SSCU/" + self.iso + "/" + 
+                 self.adm + "/" + "geoBoundariesSSCU-" + self.version + "-" + 
+                 self.iso + "-" + self.adm + ".topojson") 
+          inGeoJson = (self.home + "/gbRelease/gbReleaseData/SSCU/" + self.iso + "/" + 
+                 self.adm + "/" + "geoBoundariesSSCU-" + self.version + "-" + 
+                 self.iso + "-" + self.adm + ".geojson") 
+
+        if(not os.path.isdir((self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/" ))):
+           os.mkdir((self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/" ))
+
+        if not os.path.isdir((self.home + "/gbRelease/gbReleaseData/SSCGS/" + self.iso + "/" + self.adm + "/")):
+          os.mkdir((self.home + "/gbRelease/gbReleaseData/SSCGS/" + self.iso + "/" + self.adm + "/"))
+            
+        if(os.path.isfile(finalZipPath)):
+          buildTimeStamp = os.path.getmtime(finalZipPath) 
+          zipDownloadTimeStamp = os.path.getmtime(self.home + "/gbRelease/gbRawData/currentZips/" + self.iso + "_" + self.adm + ".zip")
+          if(buildTimeStamp - zipDownloadTimeStamp > 0):
+            count = count + 1
+            if(count == 2):
+              self.BuildComplete_GSB = True
+              return 0
+            else:
+              continue
+          else:
+            self.geoLog("INFO", (self.iso + "|" + self.adm + " " + buildType + " build started.")) 
+            shutil.rmtree((self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/"))
+            os.mkdir((self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/"))
+        
+        #Need to simplify ISO0 to same standard as other
+        #Simplified products in simplify case.
+        if(buildType == "SSCGS"):
+          mapShaperClip = (self.home + "/node_modules/mapshaper/bin/mapshaper-xl" +
+                                 " -i name=data " + clipPath  + 
+                                 " -simplify keep-shapes percentage=25%" +
+                                 " -dissolve2 " +
+                                 " -o format=topojson " + cleanClipPath)
+          process = subprocess.Popen([mapShaperClip], shell=True, 
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+          process.wait()
+          output, error = process.communicate()
+        
         else:
-          shutil.rmtree((self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/"))
-          os.mkdir((self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/"))
-    
-      try:
-        pathToBoundary = sourcePath + self.iso + "/" + self.adm + "/" + "geoBoundaries" + sourceProductName + "-" + self.version + "-" + self.iso + "-" + self.adm + ".geojson"
-        with open(pathToBoundary, "rb") as f:
-          gbGJ = json.load(f)
-      except:
-        self.geoLog("CRITICAL", (self.iso + "|" + self.adm + "|" + buildType  + " geoBoundary failed to load for global standardization."))
-          
-      if(buildType == "HPSCGS"):
+          mapShaperClip = (self.home + "/node_modules/mapshaper/bin/mapshaper-xl" +
+                                 " -i name=data " + clipPath  +  
+                                 " -dissolve2 " +
+                                 " -o format=topojson " + cleanClipPath)
+          process = subprocess.Popen([mapShaperClip], shell=True, 
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+          process.wait()
+          output, error = process.communicate()
+
+                     
+        mapShaperErase = (home + "/node_modules/mapshaper/bin/mapshaper-xl" +
+                               " -i " + inGeom + 
+                               " -clip " + cleanClipPath +
+                               " -o format=geojson " + outJSON + 
+                               " -o format=topojson " + outTOPO +
+                               " -o format=shapefile " + outSHPTemp) 
+        process = subprocess.Popen([mapShaperErase], shell=True, 
+                                     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        
+        
+        
+        process.wait()
+        output, error = process.communicate()
+
         try:
-          geoJSONpath = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/" + productName + self.version + "-" + self.iso + "-" + self.adm + ".geojson")
-          ogrClipCommand = "ogr2ogr -progress -f geojson -lco COORDINATE_PRECISION=7 -clipsrc " + OBTPath + " " + geoJSONpath + " " + pathToBoundary
-          os.system(ogrClipCommand)      
+          shutil.make_archive(
+            base_name = (outSHP),
+            format="zip",
+            root_dir = (self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/"))
         except:
-          self.geoLog("CRITICAL", (self.iso + "|" + self.adm + "|" + buildType  + " geoBoundary failed to save after clip."))
-      else:
-        try:
-          geoJSONpath = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/" + productName + self.version + "-" + self.iso + "-" + self.adm + ".geojson")
-          ogrClipCommand = "ogr2ogr -progress -f geojson -lco COORDINATE_PRECISION=7 -clipsrc " + OBPath_SSCGS + " " + geoJSONpath + " " + pathToBoundary
-          os.system(ogrClipCommand)      
-        except:
-          self.geoLog("CRITICAL", (self.iso + "|" + self.adm + "|" + buildType  + " geoBoundary failed to save after clip."))
+          self.geoLog("CRITICAL", (self.iso + "|" + self.adm + " Clip SHP zip build failed."))
 
-      sB = self.allMeta.copy()
-      
-      #Build shapefile:
-      shapefilePath = (self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/" +
-               productName + self.version + "-" + self.iso + "-" + self.adm + ".shp")
-  
 
-      if(os.path.isdir((self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/"))):
-        shutil.rmtree((self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/")) 
-        os.mkdir((self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/"))
-      else:
-        os.mkdir((self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/"))
-    
-      ogrString = ("python3 " + self.home + "/libs/ogr2ogr.py -progress -f 'ESRI Shapefile' '" + 
-                shapefilePath + "' '" + geoJSONpath + "'")
-      try:
-        os.system(ogrString)
-      except:
-        self.geoLog("CRITICAL", (self.iso + "|" + self.adm + "|" + buildType  + " Shapefile build failed, command: " + ogrString))
-      
-      shutil.make_archive(
-        base_name = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/" +
-                     productName + self.version + "-" + self.iso + "-" + self.adm + "-shp"),
-        format="zip",
-        root_dir = (self.home + "/gbRelease/tmp/" + buildType + self.iso + self.adm + "/"))
-      
-      #Build metadata
-      json_txt = sB
-      jsonOut = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/" +
-               productName + self.version + "-" + self.iso + "-" + self.adm + "-metaData.json")
-      json_txt.to_json(jsonOut)
-  
-      csvOutpath = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/" +
-               productName + self.version + "-" + self.iso + "-" + self.adm + "-metaData.txt")
-      json_txt.to_csv(csvOutpath, index=True, header=False, sep=' ')
-      
-      #Make visualization
-      #geoBoundary - pre
-      #geoJSON - post
-    
-      with open(geoJSONpath, "r") as f:
-        stdgeoBoundary = json.load(f)
-      
-      #Matplotlib Visualization
-      fig = plt.clf()
-      fig = plt.figure(1, figsize=(10,5), dpi=300)
-      axs = fig.add_subplot(121)
+        self.geoMeta(buildType)
 
-      mbpost = round(sys.getsizeof(str(stdgeoBoundary)) / 1000000,3)
+        self.geoViz(inGeoJson, outJSON, buildType)
 
-      axs.set_title(productName + " " + self.version.replace("_",".") + "\n" + self.iso + " " + self.adm + " " + '\nPost Standardization ' + str(mbpost) + "MB")
-
-      #Accounting for Multipolygon Boundaries
-      for boundary in stdgeoBoundary["features"]:
-        if(boundary["geometry"]['type'] == "MultiPolygon"):
-          polys = list(shape(boundary["geometry"]))
-          for poly in polys:
-            xs, ys = poly.exterior.xy    
-            axs.fill(xs, ys, alpha=0.5, fc='red', ec='black')
-        else:
-          xs, ys = shape(boundary["geometry"]).exterior.xy    
-          axs.fill(xs, ys, alpha=0.5, fc='red', ec='black')
-
-      axsb = fig.add_subplot(122)
-      pathToBoundary = sourcePath + self.iso + "/" + self.adm + "/" + "geoBoundaries" + sourceProductName + "-" + self.version + "-" + self.iso + "-" + self.adm + ".geojson"
-      with open(pathToBoundary, "rb") as f:
-        geoBoundary = json.load(f)
-        
-      mbpre = round(sys.getsizeof(str(geoBoundary)) / 1000000,3)
-
-      axsb.set_title("geoBoundaries " + self.version.replace("_",".") + "\n" + self.iso + " " + self.adm + " " + '\nOriginal '  + str(mbpre) + "MB")
-
-      #Accounting for Multipolygon Boundaries
-      for boundary in geoBoundary["features"]:
-        if(boundary["geometry"]['type'] == "MultiPolygon"):
-          polys = list(shape(boundary["geometry"]))
-          for poly in polys:
-            xs, ys = poly.exterior.xy    
-            axsb.fill(xs, ys, alpha=0.5, fc='red', ec='black')
-        else:
-          xs, ys = shape(boundary["geometry"]).exterior.xy    
-          axsb.fill(xs, ys, alpha=0.5, fc='red', ec='black')
-
-      outgeoPNG = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/" +
-             productName + self.version + "-" + self.iso + "-" + self.adm + ".png")
-      fig.savefig(outgeoPNG, bbox_inches='tight')
-
-      #Build final zip
-      dirToZip = (self.home + "/gbRelease/gbReleaseData/" + buildType + "/" + self.iso + "/" + self.adm + "/")
-      zipTarget = (self.home + "/gbRelease/tmp/" + productName + self.version + "-" + self.iso + "-" + self.adm + "-all")
-      shutil.make_archive(base_name = zipTarget,
-                        format="zip",
-                        root_dir = dirToZip)
-
-      #Append citation and use doc
-      citePath = (self.home + "/gbRelease/tmp/CITATION-AND-USE-geoBoundaries-" + self.version + ".txt")
-      zipAppend = zipfile.ZipFile(zipTarget + ".zip", 'a')
-      zipAppend.write(citePath, os.path.basename(citePath))
-      zipAppend.close()
-
-      shutil.move(zipTarget + ".zip", 
-               dirToZip)
+        self.buildFullZip(buildType)
         
 def buildRelease(builds, geoBoundariesVersion, metaDataRow, home):
   #Let's not talk about this.
@@ -770,11 +668,7 @@ def buildRelease(builds, geoBoundariesVersion, metaDataRow, home):
     boundary.geoLog("CRITICAL", (boundary.iso + "|" + boundary.adm + " Cannot build GSB product without HPSCU completion."))
     
     
-                    
-               
-               ##REMEMBER AT THE END: GO BACK AND BUILD THE ISO LEVEL ZIPS!!!   
-      
-
+  
 allMeta = glob.glob((home + "/gbRelease/gbRawData/metadata/*"))
 latestMeta = max(allMeta, key=os.path.getctime)
 nightlyVersion = str(latestMeta).split("/")[-1].split(".")[0]
@@ -819,27 +713,28 @@ if(not os.path.isfile(os.path.join((home + "/gbRelease/buildLogs/" +
   #We intend to standardize with.  For now, this is just US DoS, retrieved from:
   #http://geonode.state.gov/geoserver/wfs?srsName=EPSG%3A4326&typename=geonode%3AGlobal_LSIB_Polygons_Detailed&outputFormat=json&version=1.0.0&service=WFS&request=GetFeature
   #Filename local: usDoSLSIB_Mar2020.geojson
-  
-  isoStdDir = home + "/gbRelease/gbRawData/ISO_0_Standards/USDoS/"
-  isoStdData = home + "/gbRelease/gbRawData/ISO_0_Standards/usDoSLSIB_Mar2020.geojson"
-  if(not os.path.isdir(isoStdDir)):
-    os.mkdir(isoStdDir)
-  
-  if(not os.path.isfile(isoStdDir + "checkComplete.txt")):
+  if("CGAZ" in builds):
+    isoStdDir = home + "/gbRelease/gbRawData/ISO_0_Standards/USDoS/"
+    isoStdData = home + "/gbRelease/gbRawData/ISO_0_Standards/usDoSLSIB_Mar2020.geojson"
+    isoJSONOUT = isoStdDir + "USDoS_ISOstd.geojson"
+    if(not os.path.isdir(isoStdDir)):
+      os.mkdir(isoStdDir)
+
+
 
     with open(isoStdData) as f:
       globalDta = json.load(f)
 
-    isoCSV = pd.read_csv("./rawData/ISO_3166_1_Alpha_3.csv")
-    isoCSV["matchCountryCSV"] = isoCSV["Country"].str.upper().replace(" ","",regex=True)
+    isoCSV = pd.read_csv(home + "/gbRelease/gbRawData/ISO_0_Standards/ISO_3166_1_Alpha_3.csv")
+    isoCSV["matchCountryCSV"] = isoCSV["Country"].str.upper().replace(" ","")
     allSourceISOs = []
     #Messy cleanup of the DoS Boundary.
     #Will eventually move this pipeline elsewhere.
-    for i in range(0, len(dta['features'])):
+    for i in range(0, len(globalDta['features'])):
       #Country name cleanup
       if("(disp)" in globalDta['features'][i]['properties']['COUNTRY_NA']):
-        globalDta['features'][i]['properties']['COUNTRY_NA'] = globalDta['features'][i]['properties']['COUNTRY_NA'].replace("(disp)", "")
-
+        pass
+        #These are contested areas, for display only in the US DoS LISB. 
       if("(UK)" in globalDta['features'][i]['properties']['COUNTRY_NA']):
         globalDta['features'][i]['properties']['COUNTRY_NA'] = "United Kingdom"
 
@@ -880,70 +775,84 @@ if(not os.path.isfile(os.path.join((home + "/gbRelease/buildLogs/" +
         globalDta['features'][i]['properties']['COUNTRY_NA'] = "Spain"
 
       #Match ISO    
-      dta['features'][i]['properties']['COUNTRY_ISO'] = "No ISO Match"
-      country = dta['features'][i]['properties']['COUNTRY_NA'].str.upper().replace(" ","", regex=True)
+
+      country = globalDta['features'][i]['properties']['COUNTRY_NA'].upper().replace(" ","")
       easyMatches = isoCSV[isoCSV["matchCountryCSV"] == country]
       if(len(easyMatches) == 1):
-        dta['features'][i]['properties']['COUNTRY_ISO'] = easyMatches.reset_index()["Alpha-3code"][0]
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = easyMatches.reset_index()["Alpha-3code"][0]
+        allSourceISOs.append(globalDta['features'][i]['properties']['COUNTRY_NA'])
       else:
+        country = globalDta['features'][i]['properties']['COUNTRY_NA']
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = (country + " No ISO Match")
         #Manual adjustments:
         if(country == "Antigua & Barbuda"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "ATG"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "ATG"
         if(country == "Bahamas, The"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "BHS"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "BHS"
         if(country == "Bosnia & Herzegovina"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "BIH"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "BIH"
         if(country == "Congo, Dem Rep of the"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "COD"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "COD"
         if(country == "Congo, Rep of the"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "COG"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "COG"
         if(country == "Cabo Verde"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "CPV"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "CPV"
         if(country == "Cote d'Ivoire"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "CIV"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "CIV"
         if(country == "Central African Rep"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "CAF"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "CAF"
         if(country == "Czechia"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "CZE"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "CZE"
         if(country == "Gambia, The"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "GMB"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "GMB"
         if(country == "Iran"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "IRN"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "IRN"
         if(country == "Korea, North"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "PRK"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "PRK"
         if(country == "Korea, South"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "KOR"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "KOR"
         if(country == "Laos"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "LAO"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "LAO"
         if(country == "Macedonia"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "MKD"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "MKD"
         if(country == "Marshall Is"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "MHL"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "MHL"
         if(country == "Micronesia, Fed States of"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "FSM"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "FSM"
         if(country == "Moldova"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "MDA"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "MDA"
         if(country == "Sao Tome & Principe"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "STP"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "STP"
         if(country == "Solomon Is"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "SLB"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "SLB"
         if(country == "St Kitts & Nevis"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "KNA"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "KNA"
         if(country == "St Lucia"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "LCA"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "LCA"
         if(country == "St Vincent & the Grenadines"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "VCT"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "VCT"
         if(country == "Syria"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "SYR"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "SYR"
         if(country == "Tanzania"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "TZA"
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "TZA"
         if(country == "Vatican City"):
-          dta['features'][i]['properties']['COUNTRY_ISO'] = "VAT"
-        allSourceISOs.append(dta['features'][i]['properties']['COUNTRY_ISO'])
-
+          globalDta['features'][i]['properties']['COUNTRY_NA'] = "VAT"
+        if(not ('(disp)' in globalDta['features'][i]['properties']['COUNTRY_NA'])):
+          allSourceISOs.append(globalDta['features'][i]['properties']['COUNTRY_NA'])
+    if(not os.path.isfile(isoJSONOUT)):
+      with open(isoJSONOUT, 'w') as f:
+        json.dump(globalDta, f)
     for iso in allSourceISOs:
-      print(iso)  
-      
+      #Skip the display
+      if(not ('(disp)' in iso)):
+        outTOPO = isoStdDir + iso + ".topojson"
+        if(not os.path.isfile(outTOPO)):
+
+          mapShaperISO = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + isoJSONOUT +
+                             " -filter '" + '"' + iso + '"' +
+                             ".indexOf(COUNTRY_NA) > -1' -o " + outTOPO)
+          os.system(mapShaperISO)
+       
   
   #Launch the ships:
   with parallel_backend("loky", inner_max_num_threads=1):
@@ -951,8 +860,160 @@ if(not os.path.isfile(os.path.join((home + "/gbRelease/buildLogs/" +
      (delayed(buildRelease)
       (builds, geoBoundariesVersion, metaData.iloc[i], home) 
       for i in range(len(metaData))))
-  
-
-      
 else:
   print("You cannot create this build, as it still has critical errors.")
+  sys.exit()
+  
+#CGAZ
+def buildCGAZ_ADM(iso):
+  if(not os.path.isdir(home + "/gbRelease/gbReleaseData/CGAZ/")):
+      os.mkdir(home + "/gbRelease/gbReleaseData/CGAZ/")
+      os.mkdir(home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/")
+      os.mkdir(home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM1/")
+      os.mkdir(home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM2/") 
+      
+  inTOPOADM2 = (home + "/gbRelease/gbReleaseData/SSCGS/" + iso +
+            "/ADM2/geoBoundariesSSCGS-" + geoBoundariesVersion +
+            "-" + iso + "-" + "ADM2.topojson")
+  inTOPOADM1 = (home + "/gbRelease/gbReleaseData/SSCGS/" + iso +
+            "/ADM1/geoBoundariesSSCGS-" + geoBoundariesVersion +
+            "-" + iso + "-" + "ADM1.topojson")
+  inTOPOADM0 = (home + "/gbRelease/gbReleaseData/SSCGS/" + iso +
+            "/ADM0/geoBoundariesSSCGS-" + geoBoundariesVersion +
+            "-" + iso + "-" + "ADM0.topojson")
+  
+  outTMPTopoA = (home + "/gbRelease/tmp/CGAZ_" + iso + "adm2Temp.topojson")
+  outTMPTopoB = (home + "/gbRelease/tmp/CGAZ_" + iso + "adm2TempB.topojson")
+  outTMPTopoC = (home + "/gbRelease/tmp/CGAZ_" + iso + "adm2TempC.topojson")
+  ADM2OUT = home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM2/" + iso + "_ADM2.topojson"
+  ADM1OUT = home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM1/" + iso + "_ADM1.topojson"
+  ADM0OUT = home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM0/" + iso + "_ADM0.topojson"
+
+  if(os.path.isfile(inTOPOADM2)):
+    mapShaperJoinADM1 = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + inTOPOADM2 +
+                                 " -join "+ inTOPOADM1 +
+                                 " fields=shapeID" + 
+                                 " prefix=ADM1_" + 
+                                 " point-method" +
+                                 " -o format=topojson " + outTMPTopoA)
+    os.system(mapShaperJoinADM1)
+
+    mapShaperJoinADM0 = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + outTMPTopoA +
+                               " -join "+ inTOPOADM0 +
+                               " fields=shapeID" + 
+                               " prefix=ADM0_" + 
+                               " point-method" +
+                               " -o format=topojson " + outTMPTopoB)
+    os.system(mapShaperJoinADM0)
+
+    mapShaperFullHierarcy = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + outTMPTopoB +
+                               " -each 'ADMHIERARCHY=shapeID.concat(" + '"|"' +").concat(ADM1_shapeID).concat(" + '"|"' +").concat(ADM0_shapeID)'"
+                               " -o format=topojson " + ADM2OUT)
+    os.system(mapShaperFullHierarcy)
+  if(os.path.isfile(inTOPOADM1)):
+    #Repeat for ADM1
+    mapShaperJoinADM1_ADM0 = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + inTOPOADM1 +
+                                 " -join "+ inTOPOADM0 +
+                                 " fields=shapeID" + 
+                                 " prefix=ADM0_" + 
+                                 " point-method" +
+                                 " -o format=topojson " + outTMPTopoA)
+    os.system(mapShaperJoinADM1_ADM0)
+
+    mapShaperFullHierarcy = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + outTMPTopoA +
+                                 " -each 'ADMHIERARCHY=shapeID.concat(" + '"|"' +").concat(ADM0_shapeID)'"
+                                 " -o format=topojson " + ADM1OUT)
+    os.system(mapShaperFullHierarcy)
+    
+  #Copy the ADM0s over
+  if(os.path.isfile(inTOPOADM0)):
+    mapShaperCopyADM0 = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + inTOPOADM0 +
+                           " -o format=topojson " + ADM0OUT)
+    os.system(mapShaperCopyADM0)
+  
+  
+if("CGAZ" in builds):
+  with parallel_backend("loky", inner_max_num_threads=1):
+    (Parallel(n_jobs=-2, verbose=100)
+     (delayed(buildCGAZ_ADM)
+      (list(set(allSourceISOs))[i]) 
+      for i in range(len(metaData))))
+  
+  adm1str = (home + "/node_modules/mapshaper/bin/mapshaper-xl 40gb " +
+             "-i ")
+  adm2str = (home + "/node_modules/mapshaper/bin/mapshaper-xl 40gb " +
+             "-i ")
+  adm0str = (home + "/node_modules/mapshaper/bin/mapshaper-xl 40gb " +
+             "-i ")
+  adm1renameLayers = "id1"
+  adm2renameLayers = "id1"
+  adm0renameLayers = "id1"
+  count = 1
+  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"))):
+     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"))
+  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"))):
+     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"))
+  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"))):
+     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"))     
+
+  for iso in list(set(allSourceISOs)):
+    count = count + 1
+    if(os.path.isfile((home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM1/" + iso + "_ADM1.topojson"))):
+      adm1str = adm1str + (home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM1/" + iso + "_ADM1.topojson ")
+    if(os.path.isfile((home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM2/" + iso + "_ADM2.topojson"))):
+      adm2str = adm2str + (home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM2/" + iso + "_ADM2.topojson ")
+    if(os.path.isfile((home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM0/" + iso + "_ADM0.topojson"))):
+      adm0str = adm0str + (home + "/gbRelease/gbReleaseData/CGAZ/" + iso + "/ADM0/" + iso + "_ADM0.topojson ")
+  
+  #Here we go! Loop this for four different simplification levels.
+  simplify = ["100", "75", "50", "25", "10"]
+  
+  for ratio in simplify:
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simRatio_" + ratio)) 
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simRatio_" + ratio + "/shp/"))  
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simRatio_" + ratio))  
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simRatio_" + ratio + "/shp/"))  
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simRatio_" + ratio))  
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simRatio_" + ratio + "/shp/"))  
+  
+    mapShaperFullADM1 = (adm1str + 
+                       " combine-files -merge-layers force" +
+                       " name=globalADM1" +
+                       " -simplify weighted " + ratio + "% keep-shapes" +
+                       " -clean gap-fill-area=10000km2 keep-shapes" +
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"+ratio+"/geoBoundariesCGAZ_ADM1.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"+ratio+"/geoBoundariesCGAZ_ADM1.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"+ratio+"/shp/geoBoundariesCGAZ_ADM1.shp")       
+                      )
+  
+    os.system(mapShaperFullADM1)
+  
+    mapShaperFullADM0 = (adm0str + 
+                       " combine-files -merge-layers force" +
+                       " name=globalADM0" +
+                       " -simplify weighted " + ratio + "% keep-shapes" +
+                       " -clean gap-fill-area=10000km2 keep-shapes" +
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"+ratio+"/geoBoundariesCGAZ_ADM0.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"+ratio+"/geoBoundariesCGAZ_ADM0.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"+ratio+"/shp/geoBoundariesCGAZ_ADM0.shp")       
+                      )
+  
+    os.system(mapShaperFullADM0)
+  
+    mapShaperFullADM2 = (adm2str + 
+                       " combine-files -merge-layers force" +
+                       " name=globalADM2" +
+                       " -simplify weighted " + ratio + "% keep-shapes" +
+                       " -clean gap-fill-area=10000km2 keep-shapes" +
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"+ratio+"/geoBoundariesCGAZ_ADM2.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"+ratio+"/geoBoundariesCGAZ_ADM2.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"+ratio+"/shp/geoBoundariesCGAZ_ADM2.shp")       
+                      )
+  
+    os.system(mapShaperFullADM2)
+  
+shutil.rmtree(home + "/gbRelease/tmp/") 
+      

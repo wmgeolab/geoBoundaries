@@ -1,11 +1,6 @@
 # gbRelease
-geoBoundaries : A Political Administrative Boundaries Dataset (www.geoboundaries.org)
+Details and downloads can be found at geoBoundaries.org.
 
-Please visit www.geoboundaries.org for more details.
+Produced and maintained by the William & Mary geoLab since 2017, the geoBoundaries Global Database of Political Administrative Boundaries Database is an online, open license resource of boundaries (i.e., state, county) for every country in the world. We currently track 199 total entities, including all 195 UN member states, Greenland, Taiwan, Niue, and Kosovo. All boundaries are available to view or download in common file formats, including shapefiles; the only requirement for use is acknowledgement.
 
-#Note: As per https://github.com/mattijn/topojson/issues/84,
-#The build of geoBoundaries relies on a slightly modified version
-#of topojson, which will be formally incorporated in later builds.
-#For the build of geoBoundaries to succeed, until that fix is pushed,
-#within toposimplify the default for shapely is changed from
-#False to True on line 569: simple_ls = simple_ls.simplify(epsilon, preserve_topology=True) 
+ 

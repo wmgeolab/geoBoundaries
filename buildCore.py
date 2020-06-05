@@ -89,7 +89,7 @@ class geoBoundary:
   def metaCheck(self):
     self.metaFail = False
     #ISO Valid Check
-    validISOList = pd.read_csv(self.home + "/gbRelease/gbRawData/ISO_3166_1_Alpha_3.csv", encoding="ISO-8859-1")  
+    validISOList = pd.read_csv(self.home + "/gbRelease/gbRawData/ISO_0_Standards/ISO_3166_1_Alpha_3.csv", encoding="ISO-8859-1")  
     if(not self.iso in validISOList["Alpha-3code"].values):
       self.geoLog("CRITICAL", ("ISO " +
                                self.iso + " is invalid."))
@@ -162,15 +162,15 @@ class geoBoundary:
                     "gbReleaseCandidate_current/" + self.adm + "/" +
                     self.iso + "_" + self.adm + ".zip " + zipDir)
                     
-      process = subprocess.Popen([rCloneCall], shell=True)
+      process = subprocess.Popen([rCloneCall], shell=True, 
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
       process.wait()
+      output, error = process.communicate()
 
-      if((process.returncode == 0) and os.path.isfile(os.path.join(zipDir, (self.iso + "_" + self.adm + ".zip")))):
+      if(("0 differences found" in str(error)) and os.path.isfile(os.path.join(zipDir, (self.iso + "_" + self.adm + ".zip")))):
         #We already have a matching file, so we can skip this download.
         self.remoteFileDiff = False
-        self.geoLog("INFO",("ISO " + self.iso + " | " + self.adm +
-                               " File already exists, skipping download."))
-    
+        
     if((self.metaChange == True) and (self.remoteFileDiff == False)):
       self.geoLog("WARN",("ISO " + self.iso + " | " + self.adm +
                                " Metadata changed, but the file did not."))
@@ -180,6 +180,9 @@ class geoBoundary:
                                " File changed, but the metadata did not."))
       
     if(self.remoteFileDiff == True):
+      self.geoLog("INFO",("ISO " + self.iso + " | " + self.adm +
+                               " Downloading new copy from remote."))
+    
       rCloneCall = (home + "/libs/rclone -v --drive-impersonate " +
                     userKey + " copy remote:releaseCandidates/"+
                     "gbReleaseCandidate_current/" + self.adm + "/" +
@@ -402,7 +405,7 @@ currentCSV = pd.read_csv(csv)
 
 #Grab the last pushed build to create delta
 #Identify the most recent version of geoBoundaries
-r = requests.get("https://www.geoboundaries.org/gb30/gbRequest.html?ISO=USA&ADM=ADM0")
+r = requests.get("https://www.geoboundaries.org/gbRequest.html?ISO=USA&ADM=ADM0")
 lastVersion = (re.search("[0-9]_[0-9]_[0-9]", r.json()[0]
                      ['boundaryID'])[0])
 previousCSV = pd.read_csv("https://www.geoboundaries.org/data/geoBoundaries-" +
