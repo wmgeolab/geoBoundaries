@@ -731,10 +731,97 @@ if(not os.path.isfile(os.path.join((home + "/gbRelease/buildLogs/" +
     #Messy cleanup of the DoS Boundary.
     #Will eventually move this pipeline elsewhere.
     for i in range(0, len(globalDta['features'])):
-      #Country name cleanup
+      #Country name cleanup & Contested Areas
+      #Goal here is to reconstruct US political worldview
+      #as closely as is possible.
+      #In cases where the US has no official stance,
+      #We base attribution on country population (i.e,)
+      #The country that is contesting that has the larger pop
+      #gets the territory.
+      #This is obviously not a perfect system, and discussion is welcomed.
+      #Over time, we hope to add additional "World View" products.
+      disp = 0
       if("(disp)" in globalDta['features'][i]['properties']['COUNTRY_NA']):
-        pass
-        #These are contested areas, for display only in the US DoS LISB. 
+        print("DISP")
+        print(globalDta['features'][i]['properties']['COUNTRY_NA'])
+        disp = 1
+      #Abyei - Status unclear; US view appears to be it is a part of Sudan
+      #Pending ratification of UNIFA changes?
+      if("Abyei" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Sudan"
+      
+      #No official US stance found on Aksai Chin; India pop is estimated
+      #to be slightly higher as of this writing.
+      if("Aksai" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "India"
+      if("CH-IN" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "India"
+      if("Demchok" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "India"
+      
+      #No evidence of US taking a stance, going with Croatia.
+      if("Dragonja" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Croatia"
+      
+      #China is bigger than Bhutan, no evidence of a US stance
+      if("Dramana" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "China"
+      
+      #Adding Gaza to Israel to replicate US view
+      if("Gaza" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Israel"  
+      if("West Bank" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Israel"  
+
+        
+      #Brazil larger; no sign of US stance
+      if("Brasilera" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Brazil"
+      
+      #India bigger than Nepal; no sign of US stance
+      if("Kalapani" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "India"
+  
+      #No sign of US stance
+      if("Koualou" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Burkina Faso"
+      
+      #No sign of US stance Japan / South Korea
+      if("Liancourt" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Japan"
+      
+      #No Man's Land - ascribing to Israel, as US put Israel embassy here.
+      #Unclear if this should count as official stance or not, open for discussion.
+      if("No Man's Land" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Israel"
+        print("NOMAN")
+      #Chinese Island Dispute - China is occupying, US has no formal 
+      if("Paracel" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "China"
+      #Chinese Island Dispute - China is occupying, US has no formal 
+      if("Senkakus" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "China"
+      if("Spratly" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "China"
+   
+      #Looks like Saudi Arabia owns this now, but a bit unclear.
+      if("Sanafir & Tiran" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Saudi Arabia"     
+        print("SANAFIR")
+      #Morocco / West Sahara
+      if("Western Sahara" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "Morocco"
+
+      
+      #Kashmir
+      if("Siachen-Saltoro" in globalDta['features'][i]['properties']['COUNTRY_NA']):
+        globalDta['features'][i]['properties']['COUNTRY_NA'] = "India"
+
+      if(disp == 1):
+        
+        print(globalDta['features'][i]['properties']['COUNTRY_NA'])
+        print("DISPEND")
+        
       if("(UK)" in globalDta['features'][i]['properties']['COUNTRY_NA']):
         globalDta['features'][i]['properties']['COUNTRY_NA'] = "United Kingdom"
 
@@ -837,13 +924,20 @@ if(not os.path.isfile(os.path.join((home + "/gbRelease/buildLogs/" +
           globalDta['features'][i]['properties']['COUNTRY_NA'] = "TZA"
         if(country == "Vatican City"):
           globalDta['features'][i]['properties']['COUNTRY_NA'] = "VAT"
-        if(not ('(disp)' in globalDta['features'][i]['properties']['COUNTRY_NA'])):
-          allSourceISOs.append(globalDta['features'][i]['properties']['COUNTRY_NA'])
+        
+        allSourceISOs.append(globalDta['features'][i]['properties']['COUNTRY_NA'])
+    
+    
     if(not os.path.isfile(isoJSONOUT)):
       with open(isoJSONOUT, 'w') as f:
         json.dump(globalDta, f)
+    print(allSourceISOs)
+    #sys.exit()
+
     for iso in allSourceISOs:
-      #Skip the display
+      ##NEED TO UPDATE AND PARALLELIZE THIS
+      #CURRENTLY WILL NOT AUTO-UPDATE ADM0 BOUNDARIES
+      #IF CHANGES ARE MADE OR NEW PRODUCTS BUILT
       if(not ('(disp)' in iso)):
         outTOPO = isoStdDir + iso + ".topojson"
         if(not os.path.isfile(outTOPO)):
@@ -896,7 +990,13 @@ def buildCGAZ_ADM(iso):
                                  " prefix=ADM1_" + 
                                  " point-method" +
                                  " -o format=topojson " + outTMPTopoA)
-    os.system(mapShaperJoinADM1)
+    
+    
+    process = subprocess.Popen([mapShaperJoinADM1], shell=True, 
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process.wait()
+    output, error = process.communicate()
+    print(str(error) + mapShaperJoinADM1)
 
     mapShaperJoinADM0 = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + outTMPTopoA +
                                " -join "+ inTOPOADM0 +
@@ -904,12 +1004,23 @@ def buildCGAZ_ADM(iso):
                                " prefix=ADM0_" + 
                                " point-method" +
                                " -o format=topojson " + outTMPTopoB)
-    os.system(mapShaperJoinADM0)
+
+    process = subprocess.Popen([mapShaperJoinADM0], shell=True, 
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process.wait()
+    output, error = process.communicate()
+    print(str(error) + mapShaperJoinADM0)
 
     mapShaperFullHierarcy = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + outTMPTopoB +
                                " -each 'ADMHIERARCHY=shapeID.concat(" + '"|"' +").concat(ADM1_shapeID).concat(" + '"|"' +").concat(ADM0_shapeID)'"
                                " -o format=topojson " + ADM2OUT)
-    os.system(mapShaperFullHierarcy)
+    
+    process = subprocess.Popen([mapShaperFullHierarcy], shell=True, 
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process.wait()
+    output, error = process.communicate()
+    print(str(error) + mapShaperFullHierarcy)
+    
   if(os.path.isfile(inTOPOADM1)):
     #Repeat for ADM1
     mapShaperJoinADM1_ADM0 = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + inTOPOADM1 +
@@ -918,18 +1029,33 @@ def buildCGAZ_ADM(iso):
                                  " prefix=ADM0_" + 
                                  " point-method" +
                                  " -o format=topojson " + outTMPTopoA)
-    os.system(mapShaperJoinADM1_ADM0)
 
+    process = subprocess.Popen([mapShaperJoinADM1_ADM0], shell=True, 
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process.wait()
+    output, error = process.communicate()
+    print(str(error) + str(mapShaperJoinADM1_ADM0))
+    
     mapShaperFullHierarcy = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + outTMPTopoA +
                                  " -each 'ADMHIERARCHY=shapeID.concat(" + '"|"' +").concat(ADM0_shapeID)'"
                                  " -o format=topojson " + ADM1OUT)
-    os.system(mapShaperFullHierarcy)
+    
+    process = subprocess.Popen([mapShaperFullHierarcy], shell=True, 
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process.wait()
+    output, error = process.communicate()
+    print(str(error) + str(mapShaperFullHierarcy))
     
   #Copy the ADM0s over
   if(os.path.isfile(inTOPOADM0)):
     mapShaperCopyADM0 = (home + "/node_modules/mapshaper/bin/mapshaper-xl " + inTOPOADM0 +
                            " -o format=topojson " + ADM0OUT)
-    os.system(mapShaperCopyADM0)
+
+    process = subprocess.Popen([mapShaperCopyADM0], shell=True, 
+                                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    process.wait()
+    output, error = process.communicate()
+    print(str(error) + str(mapShaperCopyADM0))
   
   
 if("CGAZ" in builds):
@@ -937,7 +1063,7 @@ if("CGAZ" in builds):
     (Parallel(n_jobs=-2, verbose=100)
      (delayed(buildCGAZ_ADM)
       (list(set(allSourceISOs))[i]) 
-      for i in range(len(metaData))))
+      for i in range(len(list(set(allSourceISOs))))))
   
   adm1str = (home + "/node_modules/mapshaper/bin/mapshaper-xl 40gb " +
              "-i ")
@@ -969,24 +1095,24 @@ if("CGAZ" in builds):
   simplify = ["100", "75", "50", "25", "10"]
   
   for ratio in simplify:
-    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simRatio_" + ratio))):
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simRatio_" + ratio)) 
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simRatio_" + ratio + "/shp/"))  
-    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simRatio_" + ratio))):
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simRatio_" + ratio))  
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simRatio_" + ratio + "/shp/"))  
-    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simRatio_" + ratio))):
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simRatio_" + ratio))  
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simRatio_" + ratio + "/shp/"))  
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_" + ratio)) 
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_" + ratio + "/shp/"))  
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_" + ratio))  
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_" + ratio + "/shp/"))  
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_" + ratio))  
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_" + ratio + "/shp/"))  
   
     mapShaperFullADM1 = (adm1str + 
                        " combine-files -merge-layers force" +
                        " name=globalADM1" +
                        " -simplify weighted " + ratio + "% keep-shapes" +
                        " -clean gap-fill-area=10000km2 keep-shapes" +
-                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"+ratio+"/geoBoundariesCGAZ_ADM1.topojson") +
-                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"+ratio+"/geoBoundariesCGAZ_ADM1.geojson") +
-                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"+ratio+"/shp/geoBoundariesCGAZ_ADM1.shp")       
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM1.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM1.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM1.shp")       
                       )
   
     os.system(mapShaperFullADM1)
@@ -996,9 +1122,9 @@ if("CGAZ" in builds):
                        " name=globalADM0" +
                        " -simplify weighted " + ratio + "% keep-shapes" +
                        " -clean gap-fill-area=10000km2 keep-shapes" +
-                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"+ratio+"/geoBoundariesCGAZ_ADM0.topojson") +
-                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"+ratio+"/geoBoundariesCGAZ_ADM0.geojson") +
-                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"+ratio+"/shp/geoBoundariesCGAZ_ADM0.shp")       
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM0.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM0.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM0.shp")       
                       )
   
     os.system(mapShaperFullADM0)
@@ -1008,9 +1134,9 @@ if("CGAZ" in builds):
                        " name=globalADM2" +
                        " -simplify weighted " + ratio + "% keep-shapes" +
                        " -clean gap-fill-area=10000km2 keep-shapes" +
-                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"+ratio+"/geoBoundariesCGAZ_ADM2.topojson") +
-                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"+ratio+"/geoBoundariesCGAZ_ADM2.geojson") +
-                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"+ratio+"/shp/geoBoundariesCGAZ_ADM2.shp")       
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM2.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM2.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM2.shp")       
                       )
   
     os.system(mapShaperFullADM2)
