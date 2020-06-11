@@ -304,76 +304,83 @@ class geoBoundary:
               self.geoLog("CRITICAL", ("ISO " + self.iso + " | " + self.adm + "CRITICAL ERROR: A really bad error in the geometry of the file" + shpPath + "exists that we could not automatically fix."))
               self.shapeFail = True
               return 0
+      try:
+        #Attribute schema checks and fixes
+        #Only doing these in case of a file update.
+        schema = shpFile.schema.copy()
 
-      #Attribute schema checks and fixes
-      #Only doing these in case of a file update.
-      schema = shpFile.schema.copy()
+        #First, identify which of the existing columns represent:
+        validNameColumns = ['Name', 'name', 'NAME']
+        validISOcolumns = ['ISO', 'ISO_code', 'ISO_Code', 'iso']
+        dictName = None
+        dictISO = None
 
-      #First, identify which of the existing columns represent:
-      validNameColumns = ['Name', 'name', 'NAME']
-      validISOcolumns = ['ISO', 'ISO_code', 'ISO_Code', 'iso']
-      dictName = None
-      dictISO = None
+        for attribute in list(schema['properties'].items()):
+          if(attribute[0] in validNameColumns):
+            dictName = attribute[0]
+          if(attribute[0] in validISOcolumns):
+            dictISO = attribute[0]
 
-      for attribute in list(schema['properties'].items()):
-        if(attribute[0] in validNameColumns):
-          dictName = attribute[0]
-        if(attribute[0] in validISOcolumns):
-          dictISO = attribute[0]
-
-      if(dictName == None):
-        self.geoLog("WARN", ("ISO " + self.iso + " | " + self.adm + ": No name information was found in a validly named column for: " + shpPath))
-        schema["properties"]["shapeName"] = 'str:254'
-      else:
-        #Rename our name field to the schema field.
-        schema["properties"] = OrderedDict([('shapeName', v) if k==dictName else (k,v) for k,v in schema["properties"].items()])
-
-
-      if(dictISO == None):
-        self.geoLog("WARN", ("ISO " + self.iso + " | " + self.adm + ": No ISO information was found in a validly named column for: " + shpPath))
-        schema["properties"]["shapeISO"] = 'str:10'
-      else:
-        schema["properties"] = OrderedDict([('shapeISO', v) if k==dictISO else (k,v) for k,v in schema["properties"].items()])
-
-      #remove invalid elements
-      for attribute in list (schema['properties'].items()):
-        if(attribute[0] not in ["shapeISO", "shapeName"]):
-          schema['properties'].pop(attribute[0])
-
-      #Add additional schema elements 
-      schema["properties"]["shapeID"] = 'str:10'
-      schema["properties"]["shapeGroup"] = 'str:50'
-      schema["properties"]["shapeType"] = 'str:10'
-
-      #Repeat for ordered dicts representing each feature.
-      year = self.year
-      featureID = 0
-      for elem in fixed:
-        featureID = featureID + 1
         if(dictName == None):
-          elem["properties"]["shapeName"] = 'None'
+          self.geoLog("WARN", ("ISO " + self.iso + " | " + self.adm + ": No name information was found in a validly named column for: " + shpPath))
+          schema["properties"]["shapeName"] = 'str:254'
         else:
-          elem["properties"] = OrderedDict([('shapeName', v) if k==dictName else (k,v) for k,v in elem["properties"].items()])
+          #Rename our name field to the schema field.
+          schema["properties"] = OrderedDict([('shapeName', v) if k==dictName else (k,v) for k,v in schema["properties"].items()])
+
 
         if(dictISO == None):
-          elem["properties"]["shapeISO"] = 'None'
+          self.geoLog("WARN", ("ISO " + self.iso + " | " + self.adm + ": No ISO information was found in a validly named column for: " + shpPath))
+          schema["properties"]["shapeISO"] = 'str:10'
         else:
-          elem["properties"] = OrderedDict([('shapeISO', v) if k==dictISO else (k,v) for k,v in elem["properties"].items()])
+          schema["properties"] = OrderedDict([('shapeISO', v) if k==dictISO else (k,v) for k,v in schema["properties"].items()])
 
-          #remove invalid elements
-        for attribute in list (elem['properties'].items()):
+        #remove invalid elements
+        for attribute in list (schema['properties'].items()):
           if(attribute[0] not in ["shapeISO", "shapeName"]):
-            elem['properties'].pop(attribute[0])  
+            schema['properties'].pop(attribute[0])
 
-        elem["properties"]["shapeID"] = (self.iso + "-" + self.adm + "-" + self.version + '-B' + str(featureID))
-        elem["properties"]["shapeGroup"] = self.iso
-        elem["properties"]["shapeType"] = self.adm
+        #Add additional schema elements 
+        schema["properties"]["shapeID"] = 'str:10'
+        schema["properties"]["shapeGroup"] = 'str:50'
+        schema["properties"]["shapeType"] = 'str:10'
+
+        #Repeat for ordered dicts representing each feature.
+        year = self.year
+        featureID = 0
+        for elem in fixed:
+          featureID = featureID + 1
+          if(dictName == None):
+            elem["properties"]["shapeName"] = 'None'
+          else:
+            elem["properties"] = OrderedDict([('shapeName', v) if k==dictName else (k,v) for k,v in elem["properties"].items()])
+
+          if(dictISO == None):
+            elem["properties"]["shapeISO"] = 'None'
+          else:
+            elem["properties"] = OrderedDict([('shapeISO', v) if k==dictISO else (k,v) for k,v in elem["properties"].items()])
+
+            #remove invalid elements
+          for attribute in list (elem['properties'].items()):
+            if(attribute[0] not in ["shapeISO", "shapeName"]):
+              elem['properties'].pop(attribute[0])  
+
+          elem["properties"]["shapeID"] = (self.iso + "-" + self.adm + "-" + self.version + '-B' + str(featureID))
+          elem["properties"]["shapeGroup"] = self.iso
+          elem["properties"]["shapeType"] = self.adm
+      except:
+        self.geoLog("CRITICAL", ("ISO " + self.iso + " | " + self.adm + ": schema could not be corrected."))
+        self.shapeFail = True
+        return 0
 
       #Update the original file with a corrected version:
-
-      with fiona.open(corrected_shp, 'w', 'ESRI Shapefile', schema, shpFile.crs) as output:
-        for elem in fixed:
-          output.write(elem)
+      try:
+        with fiona.open(corrected_shp, 'w', 'ESRI Shapefile', schema, shpFile.crs) as output:
+          for elem in fixed:
+            output.write(elem)
+      except:
+        self.geoLog("CRITICAL", ("ISO " + self.iso + " | " + self.adm + ": update did not write correctly."))
+        self.shapeFail = True
         
 def gbBuild (nightlyVersion, gbMeta, home, previousCSV):
   try:

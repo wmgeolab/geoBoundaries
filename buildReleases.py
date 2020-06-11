@@ -24,7 +24,7 @@ from geojson import Feature, Point, FeatureCollection, Polygon
 home = expanduser("~")
 
 #Specify Version this release will be:
-geoBoundariesVersion = "3_0_0"
+geoBoundariesVersion = "development"
 
 #Can use this script to build core or ancillary products.
 #Accepts a list
@@ -571,7 +571,6 @@ class releaseCandidateBoundary:
         if(buildType == "SSCGS"):
           mapShaperClip = (self.home + "/node_modules/mapshaper/bin/mapshaper-xl" +
                                  " -i name=data " + clipPath  + 
-                                 " -simplify keep-shapes percentage=25%" +
                                  " -dissolve2 " +
                                  " -o format=topojson " + cleanClipPath)
           process = subprocess.Popen([mapShaperClip], shell=True, 
@@ -673,6 +672,16 @@ allMeta = glob.glob((home + "/gbRelease/gbRawData/metadata/*"))
 latestMeta = max(allMeta, key=os.path.getctime)
 nightlyVersion = str(latestMeta).split("/")[-1].split(".")[0]
 metaData = pd.read_csv((home + "/gbRelease/gbRawData/current/geoBoundaries-" + nightlyVersion + ".csv"))
+
+#Wipe the old version, init dev log
+if(os.path.isdir(os.path.join((home + "/gbRelease/buildLogs/" + nightlyVersion + "/")))):
+  shutil.rmtree((os.path.join((home + "/gbRelease/buildLogs/" + nightlyVersion + "/"))))
+  os.mkdir((home + "/gbRelease/buildLogs/" + nightlyVersion + "/"))
+  
+if(os.path.isdir(os.path.join(home + "/gbRelease/gbReleaseData/"))):
+  shutil.rmtree(os.path.join(home + "/gbRelease/gbReleaseData/"))
+  os.mkdir(os.path.join(home + "/gbRelease/gbReleaseData/"))
+  
 
 
 #Confirm the release we're using for the build doesn't have any
@@ -1075,12 +1084,14 @@ if("CGAZ" in builds):
   adm2renameLayers = "id1"
   adm0renameLayers = "id1"
   count = 1
-  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"))):
-     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/"))
-  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"))):
-     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/"))
-  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"))):
-     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/"))     
+  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/"))):
+     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/"))
+  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM0/"))):
+     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM0/"))
+  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM1/"))):
+     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM1/"))
+  if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM2/"))):
+     os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM2/"))     
 
   for iso in list(set(allSourceISOs)):
     count = count + 1
@@ -1095,24 +1106,24 @@ if("CGAZ" in builds):
   simplify = ["100", "75", "50", "25", "10"]
   
   for ratio in simplify:
-    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_" + ratio))):
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_" + ratio)) 
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_" + ratio + "/shp/"))  
-    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_" + ratio))):
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_" + ratio))  
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_" + ratio + "/shp/"))  
-    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_" + ratio))):
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_" + ratio))  
-      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_" + ratio + "/shp/"))  
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM1/simplifyRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM1/simplifyRatio_" + ratio)) 
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM1/simplifyRatio_" + ratio + "/shp/"))  
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM2/simplifyRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM2/simplifyRatio_" + ratio))  
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM2/simplifyRatio_" + ratio + "/shp/"))  
+    if(not os.path.isdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM0/simplifyRatio_" + ratio))):
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM0/simplifyRatio_" + ratio))  
+      os.mkdir((home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM0/simplifyRatio_" + ratio + "/shp/"))  
   
     mapShaperFullADM1 = (adm1str + 
                        " combine-files -merge-layers force" +
                        " name=globalADM1" +
-                       " -simplify weighted " + ratio + "% keep-shapes" +
                        " -clean gap-fill-area=10000km2 keep-shapes" +
-                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM1.topojson") +
-                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM1.geojson") +
-                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM1/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM1.shp")       
+                       " -simplify weighted " + ratio + "% keep-shapes" +
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM1/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM1.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM1/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM1.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM1/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM1.shp")       
                       )
   
     os.system(mapShaperFullADM1)
@@ -1120,11 +1131,11 @@ if("CGAZ" in builds):
     mapShaperFullADM0 = (adm0str + 
                        " combine-files -merge-layers force" +
                        " name=globalADM0" +
-                       " -simplify weighted " + ratio + "% keep-shapes" +
                        " -clean gap-fill-area=10000km2 keep-shapes" +
-                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM0.topojson") +
-                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM0.geojson") +
-                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM0/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM0.shp")       
+                       " -simplify weighted " + ratio + "% keep-shapes" +
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM0/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM0.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM0/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM0.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM0/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM0.shp")       
                       )
   
     os.system(mapShaperFullADM0)
@@ -1132,11 +1143,11 @@ if("CGAZ" in builds):
     mapShaperFullADM2 = (adm2str + 
                        " combine-files -merge-layers force" +
                        " name=globalADM2" +
-                       " -simplify weighted " + ratio + "% keep-shapes" +
                        " -clean gap-fill-area=10000km2 keep-shapes" +
-                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM2.topojson") +
-                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM2.geojson") +
-                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!ADM2/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM2.shp")       
+                       " -simplify weighted " + ratio + "% keep-shapes" +
+                       " -o format=topojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM2/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM2.topojson") +
+                       " -o format=geojson " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM2/simplifyRatio_"+ratio+"/geoBoundariesCGAZ_ADM2.geojson") +
+                       " -o format=shapefile " + (home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ADM2/simplifyRatio_"+ratio+"/shp/geoBoundariesCGAZ_ADM2.shp")       
                       )
   
     os.system(mapShaperFullADM2)
