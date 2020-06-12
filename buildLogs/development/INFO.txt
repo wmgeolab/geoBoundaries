@@ -1,3 +1,0 @@
-HUN|ADM3 HPSCU build starting.
-MUS|ADM1 HPSCU build starting.
-MUS|ADM1 SSCU build starting.

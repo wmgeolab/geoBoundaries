@@ -402,7 +402,10 @@ def gbBuild (nightlyVersion, gbMeta, home, previousCSV):
   
   
   
-  
+#Remove the last iteration to ensure a full file check
+if(os.path.isdir(home + "/gbRelease/gbRawData/current/")):
+  shutil.rmtree(home + "/gbRelease/gbRawData/current/")
+  os.mkdir(home + "/gbRelease/gbRawData/current/")
 
 
 #Grab the most recent geoBoundaries metadata

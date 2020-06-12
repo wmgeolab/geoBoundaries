@@ -1,3 +1,0 @@
-HUN|ADM3 - SSCU build failed.
-HUN|ADM3 - GSB build failed.
-MUS|ADM1 - GSB build failed.

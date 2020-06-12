@@ -1,7 +1,10 @@
 import subprocess
 from os.path import expanduser
 home = expanduser("~")
-version = "development"
+if(os.environ["manualRun"] == "True"):
+  version = "manual"
+else:
+  version = os.environ["manualRun"]
 
 if(version != "development"):
 

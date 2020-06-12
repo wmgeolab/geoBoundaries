@@ -2,6 +2,7 @@ import geojson
 from os.path import expanduser
 
 home = expanduser("~")
+version = "development"
 
 ratio = ["10", "25", "50", "75", "100"]
 level = ["ADM0", "ADM1", "ADM2"]
@@ -25,10 +26,10 @@ for l in level:
 #Compare ADM2 Ireland 2 for differences between products as a check
 I = {}
 I['CGAZ'] = home + "/gbRelease/gbReleaseData/CGAZ/IRL/ADM2/IRL_ADM2.topojson"
-I['SSCU'] = home + "/gbRelease/gbReleaseData/SSCU/IRL/ADM2/geoBoundariesSSCU-development-IRL-ADM2.geojson"
-I['SSCGS'] = home + "/gbRelease/gbReleaseData/SSCGS/IRL/ADM2/geoBoundariesSSCGS-development-IRL-ADM2.geojson"
-I['HPSCU'] = home + "/gbRelease/gbReleaseData/HPSCU/IRL/ADM2/geoBoundaries-development-IRL-ADM2.geojson"
-I['HPSCGS'] = home + "/gbRelease/gbReleaseData/HPSCGS/IRL/ADM2/geoBoundariesHPSCGS-development-IRL-ADM2.geojson"
+I['SSCU'] = home + "/gbRelease/gbReleaseData/SSCU/IRL/ADM2/geoBoundariesSSCU-"+version+"-IRL-ADM2.geojson"
+I['SSCGS'] = home + "/gbRelease/gbReleaseData/SSCGS/IRL/ADM2/geoBoundariesSSCGS-"+version+"-IRL-ADM2.geojson"
+I['HPSCU'] = home + "/gbRelease/gbReleaseData/HPSCU/IRL/ADM2/geoBoundaries-"+version+"-IRL-ADM2.geojson"
+I['HPSCGS'] = home + "/gbRelease/gbReleaseData/HPSCGS/IRL/ADM2/geoBoundariesHPSCGS-"+version+"-IRL-ADM2.geojson"
 
 productCounts = []
 

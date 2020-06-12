@@ -24,7 +24,10 @@ from geojson import Feature, Point, FeatureCollection, Polygon
 home = expanduser("~")
 
 #Specify Version this release will be:
-geoBoundariesVersion = "development"
+if(os.environ["manualRun"] == "True"):
+  geoBoundariesVersion = "manual"
+else:
+  geoBoundariesVersion = os.environ["manualRun"]
 
 #Can use this script to build core or ancillary products.
 #Accepts a list
