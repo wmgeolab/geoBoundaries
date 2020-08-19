@@ -1,0 +1,4 @@
+ISO ARM | ADM0 Downloading new copy from remote.
+ISO ARG | ADM0 Downloading new copy from remote.
+ISO KEN | ADM3 Downloading new copy from remote.
+ISO SOM | ADM2 Downloading new copy from remote.

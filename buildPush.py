@@ -56,7 +56,8 @@ else:
   dlProcessSSCU = subprocess.Popen([rcloneCallSSCU], shell=True)
   dlProcessSSCU.wait()
 
-  rcloneCallSSCU = "rclone sync " + home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ web:/geoboundaries.org/data/dev/geoBoundariesCGAZ-" + version + "/"
+  rcloneCallCGAZ = "rclone sync " + home + "/gbRelease/gbReleaseData/CGAZ/!CGAZ/ web:/geoboundaries.org/data/dev/geoBoundariesCGAZ-" + version + "/"
 
-  dlProcessSSCU = subprocess.Popen([rcloneCallSSCU], shell=True)
-  dlProcessSSCU.wait()
+  dlProcessCGAZ = subprocess.Popen([rcloneCallCGAZ], shell=True)
+  dlProcessCGAZ.wait()
+  

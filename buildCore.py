@@ -413,6 +413,9 @@ sheet = "https://docs.google.com/spreadsheets/d/1SJSpZxgM4rKw9Qb8tj7qtL2G6E3GKLr
 csv = sheet.replace('/edit?usp=sharing', '/export?format=csv')
 currentCSV = pd.read_csv(csv)
 
+#for now, remove OCHA cases
+currentCSV = currentCSV[currentCSV["geoBoundaryType"] != "OCHA"]
+
 #Grab the last pushed build to create delta
 #Identify the most recent version of geoBoundaries
 r = requests.get("https://www.geoboundaries.org/gbRequest.html?ISO=USA&ADM=ADM0")
@@ -426,6 +429,8 @@ nightlyVersion = str(round(datetime.timestamp(datetime.now()),0))[:-2]
 
 #Save the current version
 currentCSV.to_csv("./gbRelease/gbRawData/metadata/" + nightlyVersion + ".csv")
+
+
 
 #Critical error if there are any duplicates (same ISO and ADM level)
 criticalDuplicate = currentCSV["Processed File Name"].value_counts() > 1
