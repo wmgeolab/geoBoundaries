@@ -14,5 +14,4 @@ jobs:
         ftp-server: ftp://ftp.geoboundaries.org/
         ftp-username: geologs
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        git-ftp-args: --dry-run  
         local-dir: website/
