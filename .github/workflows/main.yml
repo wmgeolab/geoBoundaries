@@ -15,4 +15,4 @@ jobs:
         ftp-username: geologs
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: website/
-        git-ftp-args: --dry-run:  
+        git-ftp-args: --dry-run
