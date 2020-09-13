@@ -1,4 +1,7 @@
-on: push
+on:
+  push:
+    paths:    
+    - 'website/**'
 name: Publish Website
 jobs:
   FTP-Deploy-Action:
