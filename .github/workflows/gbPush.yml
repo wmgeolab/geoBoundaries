@@ -1,0 +1,15 @@
+on:
+  push:
+    paths:    
+    - 'sourceData/**'
+name: Publish Website
+jobs:
+  gb-Automated-Checks:
+    name: gb-Automated-Checks
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.1.0
+      with:
+        fetch-depth: 2
+    - name: gb-Automated-Checks
+      uses: wmgeolab/gbAutomatedCheck
