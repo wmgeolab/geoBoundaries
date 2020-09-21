@@ -1,1 +1,0 @@
-INFO: No ISO information was found in a validly named column for: ./releaseCandidateInit/gbReleaseCandidate_3_0_0/KNA/ADM1/KNA_ADM1.shp

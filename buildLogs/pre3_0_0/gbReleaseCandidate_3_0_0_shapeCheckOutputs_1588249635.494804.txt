@@ -1,4 +1,0 @@
-CRITICAL ERROR: Bounds appear to be in another castle for shape:./releaseCandidateInit/gbReleaseCandidate_3_0_0/SWE/ADM3/SWE_ADM3.shp
-CRITICAL ERROR: An error in the geometry of the file ./releaseCandidateInit/gbReleaseCandidate_3_0_0/MMR/ADM4/MMR_ADM4.shp exists that we could not automatically fix.  It looks like a geometry is missing?
-INFO: The shapefile ./releaseCandidateInit/gbReleaseCandidate_3_0_0/PHL/ADM2/PHL_ADM2.shp has a minor topology error, which was corrected with a shapely buffer = 0.
-INFO: No ISO information was found in a validly named column for: ./releaseCandidateInit/gbReleaseCandidate_3_0_0/PHL/ADM2/PHL_ADM2.shp

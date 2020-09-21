@@ -1,1 +1,0 @@
-CRITICAL ERROR: Zipfile ./releaseCandidateInit/gbReleaseCandidate_3_0_0/MMR/ADM4/ failed to extract.
