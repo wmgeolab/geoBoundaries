@@ -12,4 +12,4 @@ jobs:
       with:
         fetch-depth: 2
     - name: gb-Automated-Checks
-      uses: wmgeolab/gbAutomatedCheck
+      uses: wmgeolab/gbAutomatedCheck@master
