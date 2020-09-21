@@ -1,2 +1,0 @@
-INFO: No ISO information was found in a validly named column for: ./releaseCandidateInit/gbReleaseCandidate_2_0_0_0/AFG/ADM2/AFG_ADM2.shp
-INFO: No ISO information was found in a validly named column for: ./releaseCandidateInit/gbReleaseCandidate_2_0_0_0/AFG/ADM2/AFG_ADM2.shp
