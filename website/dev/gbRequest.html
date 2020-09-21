@@ -1,0 +1,152 @@
+<?php
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
+header('Content-type: application/json');
+
+function console_log($output, $with_script_tags = true) {
+    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . ');';
+    if ($with_script_tags) {
+        $js_code = '<script>' . $js_code . '</script>';
+    }
+    echo $js_code;
+}
+
+$ISO = $_GET['ISO'];
+$ADM = $_GET['ADM'];
+$VER = $_GET['VER'];
+$TYP = $_GET['TYP'];
+
+if(strlen($TYP) == 0){
+    $TYP = "HPSCU";
+}
+
+if (in_array($TYP,array('HPSCGS', 'HPSCU', 'SSCU', 'SSCGS', ''))) {
+
+}
+else{
+    echo "Invalid type (TYP) specified.  Must specify one of HPSCGS, HPSCU, SSCU, or SSCGS.  See https://www.geoboundaries.org/api.html for definitions.";
+    exit();
+}
+
+if($TYP == "HPSCU"){
+    $TYP = "";
+}
+
+
+function str_replace_n($search, $replace, $subject, $occurrence)
+{
+	$search = preg_quote($search);
+    return preg_replace("/^((?:(?:.*?$search){".--$occurrence."}.*?))$search/", "$1$replace", $subject);
+}
+
+
+
+if(strlen($ISO) == 0) {
+    $ISO = 'ALL';
+}
+
+if(strlen($ADM) == 0){
+    $ADM = 'ALL';
+}
+
+if(strlen($VER) == 0)
+{
+    $dir = "/home/geologs/geoboundaries.org/data/";
+    $scan = array_diff(scandir($dir), array('..', '.'));
+    $i = sizeof($scan) + 1;
+    $VER = "VER_ERROR";
+    $numeric_largest = 0;
+    for ($x = 2; $x <= $i; $x++) 
+    {
+        $matches = array();
+        preg_match('([0-9]_[0-9]_[0-9])', $scan[$x], $matches);
+        if(count($matches) > 0)
+        {
+            $numeric_ver = str_replace("_", "", $matches[0]);
+            if($numeric_ver > $numeric_largest)
+            {
+                $numeric_largest = $numeric_ver;
+            }
+        }
+    }
+    $VER = preg_replace('/\B([0-9])/', '_$1', $numeric_largest);
+}
+
+
+
+function csvtojson($file,$delimiter, $ISO, $ADM, $TYP)
+{
+    if (($handle = fopen($file, "r")) === false)
+    {
+            die("No such release exists - check your version.");
+    }
+
+    $csv_headers = fgetcsv($handle, 4000, $delimiter);
+    $csv_json = array();
+    $csv_headers[] = 'gjDownloadURL';
+    $csv_headers[] = 'imagePreview';
+    while ($row = fgetcsv($handle, 4000, $delimiter))
+    {
+        $row[] = str_replace("-all.zip", ".geojson", $row[11]);
+        $temp = str_replace_n(("geoBoundaries-"), ("geoBoundariesPreview" . $TYP . "-"), $row[11], 2);
+        $row[] = str_replace("-all.zip", ".png", $temp);
+        if(($ISO == "ALL") && ($ADM=="ALL"))
+        {
+            $csv_json[] = array_combine($csv_headers, $row);
+        } elseif (($ADM == "ALL") && ($row[1] == $ISO)) {
+            $csv_json[] = array_combine($csv_headers, $row);
+        } elseif (($row[3] == $ADM) && ($ISO == "ALL")){
+            $csv_json[] = array_combine($csv_headers, $row);
+        } elseif (($row[3] == $ADM) && ($row[1] == $ISO)) {
+            $csv_json[] = array_combine($csv_headers, $row);
+        }
+        
+        #var_dump($row);
+
+    }
+
+    fclose($handle);
+    return json_encode($csv_json, JSON_PRETTY_PRINT);
+}
+
+$verPath = "https://www.geoboundaries.org/data/geoBoundaries-" . $VER . "/geoBoundaries-" . $VER . ".csv";
+$jsonresult = csvtojson($verPath, ",", $ISO, $ADM, $TYP);
+
+function replace(&$array, $replaces) {
+    foreach ($array as $k => $v) {
+        $new_k = replace_word($k, $replaces);
+        if (is_array($v)) {
+            replace($v, $replaces);
+        }
+        else {
+            $v = replace_word($v, $replaces);
+        }
+        $array[$new_k] = $v;
+        if ($new_k != $k) {
+            unset($array[$k]);
+        }
+    }
+}
+
+function replace_word($word, $replaces) {
+    if (array_key_exists($word, $replaces)) {
+        $word = str_replace($word, $replaces[$word], $word);
+    }
+    return $word;
+}
+
+
+
+$jsonresult = str_replace ( "geoBoundaries-", "geoBoundaries" . $TYP . "-", $jsonresult);
+echo $jsonresult;
+return $jsonresult; 
+
+
+
+
+
+
+//Finally, encode our array into a JSON string format so that we can print it out.
+#echo json_encode($csvData, );
+?>
