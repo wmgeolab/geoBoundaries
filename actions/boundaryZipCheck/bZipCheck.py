@@ -7,16 +7,11 @@ working = os.environ['GITHUB_WORKSPACE']
 #working = "/home/dan/git/gbRelease"
 print("Python WD: " + working)  
 
-with open(working + "/proposedChanges") as f:
-  c = f.read()
+changedFiles = os.environ['steps.files.outputs.added_modified']
 
 #c = ("sourceData/VAT_ADM0.zip\n" +
 #    "sourceData/YEM_ADM0.zip")
 
-print(c)
-
-changedFiles = c.splitlines()
-print(changedFiles)
 #Check that zip files exist in the request
 zips = list(filter(lambda x: x[-4:] == '.zip', changedFiles))
 
