@@ -5,7 +5,7 @@ on:
     paths:    
       - 'sourceData/**'
 jobs:
-  bCheck:
+  geoBoundaryAutomatedChecks:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
