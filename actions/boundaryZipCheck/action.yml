@@ -1,0 +1,9 @@
+name: 'geoBoundaries Boundary File Automated Checks'
+author: 'DanRunfola'
+description: 'This action will conduct checks on zip files for the geoBoundaries repository.'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+branding:
+    icon: 'map'
+    color: 'purple'
