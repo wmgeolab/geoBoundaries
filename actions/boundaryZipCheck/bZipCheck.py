@@ -1,15 +1,16 @@
 import os
 import sys
 import zipfile
+import subprocess
 
 working = os.environ['GITHUB_WORKSPACE']
-
+working = "/home/dan/git/gbRelease"
       
 with open(working + "/proposedChanges") as f:
   c = f.read()
 
-c = ("sourceData/VAT_ADM0.zip\n" +
-    "sourceData/YEM_ADM0.zip")
+#c = ("sourceData/VAT_ADM0.zip\n" +
+#    "sourceData/YEM_ADM0.zip")
 
 changedFiles = c.splitlines()
 
@@ -21,12 +22,19 @@ zipSuccess = 0
 zipTotal = 0
 
 if(len(zips) > 0):
-    print("Modified zip files found.  Checking validity.")
+    print("Modified zip files found.  Downloading and checking validity.")
     print("")
     zipTotal = zipTotal + 1
     for z in zips:
         checkFail = 0
         print("")
+        print("Downloading " + z)
+        fileNames = z.split("/")
+        fN = fileNames[-1]
+        subprocess.check_output(
+            'git lfs pull --exclude= --include="' + fN +'"',
+            stderr=subprocess.STDOUT,
+            shell=True)
         print("File Check (" + str(zipTotal) + " of " + str(len(zips)) + "): " + z)
         bZip = zipfile.ZipFile(working + "/" + z)
         if("meta.txt" in bZip.namelist()):
