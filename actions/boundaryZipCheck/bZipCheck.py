@@ -3,14 +3,14 @@ import sys
 import zipfile
 import subprocess
 
-#working = os.environ['GITHUB_WORKSPACE']
+working = os.environ['GITHUB_WORKSPACE']
 working = "/home/dan/git/gbRelease"
       
-#with open(working + "/proposedChanges") as f:
-#  c = f.read()
+with open(working + "/proposedChanges") as f:
+  c = f.read()
 
-c = ("sourceData/VAT_ADM0.zip\n" +
-    "sourceData/YEM_ADM0.zip")
+#c = ("sourceData/VAT_ADM0.zip\n" +
+#    "sourceData/YEM_ADM0.zip")
 
 changedFiles = c.splitlines()
 
