@@ -8,6 +8,9 @@ jobs:
     container: osgeo/gdal:ubuntu-full-latest
     steps:
         - uses: actions/checkout@v2.1.0
+          with:
+            fetch-depth: 2
+            lfs: False
         
         - name: Initialize Linux Environment
           run: python --version
