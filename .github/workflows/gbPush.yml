@@ -24,9 +24,7 @@ jobs:
     - name: Check for valid files
       run: |
            echo ${GITHUB_SHA}
-           git diff-tree --no-commit-id -r ${{github.sha}}
-           echo $(git diff-tree --no-commit-id -r ${{github.sha}})
            echo "==============================================="
            git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
            cat proposedChanges
-           pwd
+           python ./gbRelease/actions/boundaryZipCheck/bZipCheck.py
