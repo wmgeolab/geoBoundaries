@@ -14,6 +14,14 @@ jobs:
            add-apt-repository ppa:git-core/ppa
            apt-get update
            apt-get install -y git
-    - uses: actions/checkout@v2.3.2
+    
+    - name: Download Proposed Changes
+      uses: actions/checkout@v2.3.2
       with:
         lfs: False
+
+    - name: Check for valid files
+      run: |
+           git diff-tree --no-commit-id --name-only -r ${{ github.sha }} > proposedChanges
+           cat proposedChanges
+           pwd
