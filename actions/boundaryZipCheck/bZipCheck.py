@@ -14,8 +14,10 @@ print("Python WD: " + working)
 try:
     changedFiles = os.environ['changes'].strip('][').split(',')
 except:
-    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/ARE_ADM1.zip', 'sourceData/ARM_ADM0.zip']
-print("Python changedFiles: " + changedFiles)
+    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/ARE_ADM1.zip']
+
+print("Python changedFiles: " + str(changedFiles))
+
 
 #Check that zip files exist in the request
 zips = list(filter(lambda x: x[-4:] == '.zip', changedFiles))
@@ -32,12 +34,11 @@ if(len(zips) > 0):
         checkFail = 0
         print("")
         print("Downloading: " + z)
-        fileNames = z.split("/")
-        fN = fileNames[-1]
-        print(fN)
-        subprocess.check_output(
-            'git lfs pull -I "gbRelease/' + z +'"',
-            shell=True)
+        try:
+            os.remove(working + "/" + z)
+        except:
+            pass
+        dl = os.system('git lfs pull --include=\"' + z +'\"')
         print("File Check (" + str(zipTotal) + " of " + str(len(zips)) + "): " + z)
         bZip = zipfile.ZipFile(working + "/" + z)
         if("meta.txt" in bZip.namelist()):
