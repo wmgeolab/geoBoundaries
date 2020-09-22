@@ -27,7 +27,7 @@ jobs:
         fetch-depth: 0
 
     - id: changes
-      name: List Proposed Changes
+      name: Detect Proposed Changes
       uses: jitterbit/get-changed-files@v1
       with:
         format: 'json'
