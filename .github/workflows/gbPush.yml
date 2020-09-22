@@ -31,7 +31,7 @@ jobs:
       
     - name: Check for valid files in submission
       run: |
-           echo ${{ steps.changes.outputs.added_modified }}
+           export changes=${{ steps.changes.outputs.added_modified }}
            echo ${GITHUB_SHA}
            echo ${GITHUB_WORKSPACE}
            echo "==============================================="
