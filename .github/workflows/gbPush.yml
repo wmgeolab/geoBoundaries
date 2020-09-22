@@ -8,7 +8,10 @@ jobs:
     container: osgeo/gdal:ubuntu-full-latest
     steps:
     - name: Initialize Linux Environment
-      run: apt-get install git
+      run: |
+           sudo add-apt-repository ppa:git-core/ppa
+           sudo apt-get update
+           sudo apt-get install git
     #- uses: actions/checkout@v2.3.2
     #  with:
     #    lfs: False
