@@ -1,7 +1,7 @@
 on:
   pull_request:
     types: 
-      [opened, synchronize, reopened, edited, review_requested]
+      [opened, synchronize, reopened, edited, review_requested, labeled]
     paths:    
       - 'sourceData/**'
 jobs:
