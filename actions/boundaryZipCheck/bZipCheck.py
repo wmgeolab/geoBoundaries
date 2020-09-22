@@ -2,13 +2,12 @@ import os
 import sys
 import zipfile
 import subprocess
-import ast
 
 working = os.environ['GITHUB_WORKSPACE']
 #working = "/home/dan/git/gbRelease"
 print("Python WD: " + working)  
 
-changedFiles = ast.literal_eval(os.environ['changes'])
+changedFiles = os.environ['changes'].strip('][').split(',')
 
 print(changedFiles)
 #c = ("sourceData/VAT_ADM0.zip\n" +
