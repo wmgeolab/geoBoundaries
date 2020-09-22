@@ -4,7 +4,8 @@ on:
     - 'sourceData/**'
 jobs:
   bCheck:
-    runs-on: osgeo/gdal:ubuntu-full-latest
+    runs-on: ubuntu-latest
+    container: osgeo/gdal:ubuntu-full-latest
     steps:
         - uses: actions/checkout@v2.1.0
         
