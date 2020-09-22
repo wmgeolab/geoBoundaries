@@ -20,13 +20,14 @@ jobs:
            apt-get install git-lfs
 
     
-    - name: Download Proposed Changes
+    - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
         lfs: False
         fetch-depth: 0
 
     - id: changes
+      name: List Proposed Changes
       uses: jitterbit/get-changed-files@v1
       with:
         format: 'json'
