@@ -24,7 +24,7 @@ jobs:
         lfs: False
         fetch-depth: 0
 
-    - name: Enumerate changes proposed
+    - id: changes
       uses: jitterbit/get-changed-files@v1
       with:
         format: 'json'
@@ -32,7 +32,7 @@ jobs:
       
     - name: Check for valid files in submission
       run: |
-           echo ${{ steps.files.outputs.added_modified }}
+           echo ${{ steps.changes.outputs.added_modified }}
            echo ${GITHUB_SHA}
            echo ${GITHUB_WORKSPACE}
            echo "==============================================="
