@@ -12,4 +12,4 @@ jobs:
       with:
         fetch-depth: 2
     - name: gb-Automated-Checks-3
-      uses: wmgeolab/gbRelease/actions/boundaryZipCheck@master
+      uses: ./actions/boundaryZipCheck
