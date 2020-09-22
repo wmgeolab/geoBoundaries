@@ -23,8 +23,15 @@ jobs:
         lfs: False
         fetch-depth: 0
 
-    - name: Check for valid files
+    - id: changes
+      uses: jitterbit/get-changed-files@v1
+      with:
+        format: 'json'
+      
+      
+    - name: Check for valid files in submission
       run: |
+           echo ${{ steps.changes.outputs.added_modified }}
            echo ${GITHUB_SHA}
            echo ${GITHUB_WORKSPACE}
            echo "==============================================="
