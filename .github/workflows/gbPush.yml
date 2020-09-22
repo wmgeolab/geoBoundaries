@@ -9,9 +9,9 @@ jobs:
     steps:
     - name: Initialize Linux Environment
       run: |
-           sudo add-apt-repository ppa:git-core/ppa
-           sudo apt-get update
-           sudo apt-get install git
+           add-apt-repository ppa:git-core/ppa
+           apt-get update
+           apt-get install git
     #- uses: actions/checkout@v2.3.2
     #  with:
     #    lfs: False
