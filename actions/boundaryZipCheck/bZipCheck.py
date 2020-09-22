@@ -85,6 +85,7 @@ if(len(zips) > 0):
         if(checkFail == 1):
             zipFailures = zipFailures + 1
             print("CRITICAL ERROR: Zipfile validity checks failed for " + z + ".  Check the log to see what is wrong.")
+            sys.exit("There was a critical error in at least one of the submitted files.  Check the log to see what happened.")
         else:
             zipSuccess = zipSuccess + 1
             print("Zipfile validity checks passed for " + z)
