@@ -15,7 +15,9 @@ try:
     changedFiles = os.environ['changes'].strip('][').split(',')
 except:
     changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/ARE_ADM1.zip', 'sourceData/ARM_ADM0.zip']
+
 print("Python changedFiles: " + str(changedFiles))
+
 
 #Check that zip files exist in the request
 zips = list(filter(lambda x: x[-4:] == '.zip', changedFiles))
