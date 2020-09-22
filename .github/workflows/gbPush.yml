@@ -5,7 +5,7 @@ on:
 jobs:
   bCheck:
     runs-on: ubuntu-latest
-    container: osgeo/gdal:ubuntu-full-latest
+    container: osgeo/gdal:alpine-ultrasmall-latest
     steps:
     - name: Initialize Linux Environment
       run: |
