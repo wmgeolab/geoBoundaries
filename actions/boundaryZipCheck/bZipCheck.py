@@ -4,8 +4,9 @@ import zipfile
 import subprocess
 
 working = os.environ['GITHUB_WORKSPACE']
-working = "/home/dan/git/gbRelease"
-      
+#working = "/home/dan/git/gbRelease"
+print("Python WD: " + working)  
+
 with open(working + "/proposedChanges") as f:
   c = f.read()
 
