@@ -16,6 +16,8 @@ jobs:
            add-apt-repository ppa:git-core/ppa
            apt-get update
            apt-get install -y git
+           curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+           apt-get install git-lfs
     
     - name: Download Proposed Changes
       uses: actions/checkout@v2.3.2
