@@ -7,10 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-full-latest
     steps:
-        - uses: actions/checkout@v2.1.0
-          with:
-            fetch-depth: 2
-            lfs: False
-        
-        - name: Initialize Linux Environment
-          run: python --version
+    - name: Initialize Linux Environment
+      run: apt-get install git
+    #- uses: actions/checkout@v2.3.2
+    #  with:
+    #    lfs: False
