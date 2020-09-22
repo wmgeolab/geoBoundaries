@@ -10,10 +10,10 @@ jobs:
     - name: Initialize Linux Environment
       run: |
            apt-get update
-           apt-get install software-properties-common
+           apt-get install -y software-properties-common
            add-apt-repository ppa:git-core/ppa
            apt-get update
-           apt-get install git
+           apt-get install -y git
     #- uses: actions/checkout@v2.3.2
     #  with:
     #    lfs: False
