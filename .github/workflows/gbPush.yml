@@ -27,4 +27,7 @@ jobs:
            echo "==============================================="
            git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
            cat proposedChanges
-           python ./gbRelease/actions/boundaryZipCheck/bZipCheck.py
+           echo ${GITHUB_WORKSPACE}
+           ls
+           echo (ls)
+           #python ./gbRelease/actions/boundaryZipCheck/bZipCheck.py
