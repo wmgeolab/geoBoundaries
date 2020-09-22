@@ -23,8 +23,8 @@ jobs:
     - name: Check for valid files
       run: |
            echo ${GITHUB_SHA}
-           git diff-tree --no-commit-id -r ${{GITHUB_SHA}}
+           git diff-tree --no-commit-id -r ${{github.sha}}
            echo "==============================================="
-           git diff-tree --no-commit-id --name-only -r ${{GITHUB_SHA}} > proposedChanges
+           git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
            cat proposedChanges
            pwd
