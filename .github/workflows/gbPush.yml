@@ -1,7 +1,9 @@
 on:
   pull_request:
+    types: 
+      [opened, synchronize, reopened, edited, review_requested]
     paths:    
-    - 'sourceData/**'
+      - 'sourceData/**'
 jobs:
   bCheck:
     runs-on: ubuntu-latest
