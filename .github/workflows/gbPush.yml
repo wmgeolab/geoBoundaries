@@ -24,5 +24,7 @@ jobs:
       run: |
            git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
            git diff-tree --no-commit-id --name-only -r ${{ github.sha }} > proposedChanges
+           git show --name-only --pretty=format:
+           git show --name-only --pretty=format: > proposedChanges
            cat proposedChanges
            pwd
