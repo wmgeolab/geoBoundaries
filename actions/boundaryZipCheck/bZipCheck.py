@@ -12,9 +12,9 @@ with open(working + "/proposedChanges") as f:
 
 #c = ("sourceData/VAT_ADM0.zip\n" +
 #    "sourceData/YEM_ADM0.zip")
-
+print(c)
 changedFiles = c.splitlines()
-
+print(changedFiles)
 #Check that zip files exist in the request
 zips = list(filter(lambda x: x[-4:] == '.zip', changedFiles))
 
