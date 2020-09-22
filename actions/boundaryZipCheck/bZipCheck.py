@@ -3,15 +3,18 @@ import sys
 import zipfile
 import subprocess
 
-working = os.environ['GITHUB_WORKSPACE']
-#working = "/home/dan/git/gbRelease"
+#For testing
+try:
+    working = os.environ['GITHUB_WORKSPACE']
+except:
+    working = "/home/dan/git/gbRelease"
 print("Python WD: " + working)  
 
-changedFiles = os.environ['changes'].strip('][').split(',')
-
-print(changedFiles)
-#c = ("sourceData/VAT_ADM0.zip\n" +
-#    "sourceData/YEM_ADM0.zip")
+#For testing
+try:
+    changedFiles = os.environ['changes']
+except:
+    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/ARE_ADM1.zip', 'sourceData/ARM_ADM0.zip']
 
 #Check that zip files exist in the request
 zips = list(filter(lambda x: x[-4:] == '.zip', changedFiles))
@@ -27,12 +30,12 @@ if(len(zips) > 0):
     for z in zips:
         checkFail = 0
         print("")
-        print("Downloading " + z)
+        print("Downloading: " + z)
         fileNames = z.split("/")
         fN = fileNames[-1]
+        print(fN)
         subprocess.check_output(
-            'git lfs pull --exclude= --include="' + fN +'"',
-            stderr=subprocess.STDOUT,
+            'git lfs pull -I "gbRelease/' + z +'"',
             shell=True)
         print("File Check (" + str(zipTotal) + " of " + str(len(zips)) + "): " + z)
         bZip = zipfile.ZipFile(working + "/" + z)
