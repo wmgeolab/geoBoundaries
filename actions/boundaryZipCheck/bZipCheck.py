@@ -7,7 +7,7 @@ working = os.environ['GITHUB_WORKSPACE']
 #working = "/home/dan/git/gbRelease"
 print("Python WD: " + working)  
 
-changedFiles = os.environ['steps.files.outputs.added_modified']
+changedFiles = os.environ['steps.files.changes.added_modified']
 
 #c = ("sourceData/VAT_ADM0.zip\n" +
 #    "sourceData/YEM_ADM0.zip")
