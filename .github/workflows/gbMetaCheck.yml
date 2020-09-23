@@ -5,7 +5,7 @@ on:
       paths:    
         - 'sourceData/**'
   jobs:
-    geoBoundaryAutomatedChecks:
+    geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
       container: osgeo/gdal:ubuntu-small-latest
       steps:
@@ -41,5 +41,5 @@ on:
              git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
              cat proposedChanges
              echo "==============================================="
-             python actions/gbZipCheck.py
+             python actions/gbMetaCheck.py
   
