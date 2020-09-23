@@ -94,7 +94,8 @@ jobs:
               apt-get install -y git
               curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
               apt-get install git-lfs
-              pip install geopandas
+              apt-get install python3-pip
+              pip3 install geopandas
       
       - name: Download Repository Code
         uses: actions/checkout@v2.3.2
