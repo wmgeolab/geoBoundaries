@@ -14,7 +14,7 @@ print("Python WD: " + working)
 try:
     changedFiles = os.environ['changes'].strip('][').split(',')
 except:
-    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/ARE_ADM1.zip']
+    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/gbOpen/ARE_ADM1.zip', 'sourceData/gbOpen/QAT_ADM0.zip']
 
 print("Python changedFiles: " + str(changedFiles))
 
@@ -49,8 +49,7 @@ if(len(zips) > 0):
         
         geojson = list(filter(lambda x: x[-4:] == '.geojson', bZip.namelist()))
         shp = list(filter(lambda x: x[-4:] == '.shp', bZip.namelist()))
-        topojson = list(filter(lambda x: x[-4:] == '.topojson', bZip.namelist()))
-        allShps = geojson + shp + topojson
+        allShps = geojson + shp 
         if(len(allShps) == 1):
             if(len(shp) == 1):
                 print("Shapefile (*.shp) found. Checking if all required files are present.")
@@ -70,16 +69,14 @@ if(len(zips) > 0):
                 else:
                     print(".prj found.")
 
-                len(list(filter(lambda x: x[-4:] == '.prj', bZip.namelist())))
             if(len(geojson) == 1):
                 print("geoJSON found.")
-            if(len(topojson) == 1):
-                print("topoJSON found")
+
         if(len(allShps) == 0):
-            print("CRITICAL ERROR: No *.shp, *.geojson, or *.topojson found for " + z)
+            print("CRITICAL ERROR: No *.shp or *.geojson found for " + z)
             checkFail = 1
         if(len(allShps) > 1):
-            print("CRITICAL ERROR: More than one geometry file (*.shp, *.geojson, *.topojson) was found for " + z)
+            print("CRITICAL ERROR: More than one geometry file (*.shp, *.geojson) was found for " + z)
             checkFail = 1
         
         if(checkFail == 1):
