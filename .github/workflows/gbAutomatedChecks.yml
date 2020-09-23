@@ -42,3 +42,41 @@ jobs:
            cat proposedChanges
            echo "==============================================="
            python actions/gbZipCheck.py
+  
+  geoBoundaryMetaDataCheck:
+      runs-on: ubuntu-latest
+      container: osgeo/gdal:ubuntu-small-latest
+      steps:
+      - name: Initialize Linux Environment
+        run: |
+             apt-get update
+             apt-get install -y software-properties-common
+             add-apt-repository ppa:git-core/ppa
+             apt-get update
+             apt-get install -y git
+             curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+             apt-get install git-lfs
+      
+      - name: Download Repository Code
+        uses: actions/checkout@v2.3.2
+        with:
+          lfs: False
+          fetch-depth: 0
+  
+      - id: changes
+        name: Detect Proposed Changes
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'json'
+        
+        
+      - name: Check for valid metadata in submission files
+        run: |
+             export changes=${{ steps.changes.outputs.added_modified }}
+             echo ${GITHUB_SHA}
+             echo ${GITHUB_WORKSPACE}
+             echo "==============================================="
+             git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
+             cat proposedChanges
+             echo "==============================================="
+             python actions/gbMetaCheck.py
