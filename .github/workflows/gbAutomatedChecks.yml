@@ -110,7 +110,7 @@ jobs:
           format: 'json'
         
         
-      - name: Check for valid metadata in submission files
+      - name: Check for valid data in submission files
         run: |
               export changes=${{ steps.changes.outputs.added_modified }}
               echo ${GITHUB_SHA}

@@ -1,0 +1,12 @@
+Boundary Representative of Year: 2017.0
+ISO-3166-1 (Alpha-3): ARE
+Boundary Type: ADM1
+Canonical Boundary Type Name: 
+Source 1: OpenStreetMap
+Source 2: Wambacher
+Release Type: gbOpen
+License: Open Data Commons Open Database License 1.0
+License Notes: Open Data Commons Open Database License 1.0
+License Source: https://www.openstreetmap.org/copyright
+Link to Source Data: https://wambachers-osm.website/boundaries/
+Other Notes: 

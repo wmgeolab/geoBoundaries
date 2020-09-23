@@ -46,6 +46,7 @@ if(len(zips) > 0):
         opt["isoCount"] = 0
         
         req["topology"] = 0
+        req["proj"] = 0
 
 
         checkFail = 0
@@ -159,9 +160,17 @@ if(len(zips) > 0):
 
             if(warnBuffer == 1):
                 print("")
-                print("WARN: At least one polygon was invalid, but could be cleared by shapely buffer(0).  It needs to be visually examined when possible.")
+                checkFail = 1
+                print("CRITICAL ERROR: At least one polygon was invalid, but could be cleared by shapely buffer(0).  It needs to be visually examined when possible.")
 
 
+            if(dta.crs == "epsg:4326"):
+                print("Projection confirmed as " + str(data.crs))
+                checkFail = 1
+                req["proj"] = 1
+            else:
+                print("The projection must be EPSG 4326.  The file proposed has a projection of: " + str(data.crs))
+                
 
         if(len(allShps) == 0):
             print("CRITICAL ERROR: No *.shp or *.geojson found for " + z)
