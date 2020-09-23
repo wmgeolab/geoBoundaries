@@ -20,3 +20,4 @@ license_name, licenseText, gbOpen, gbAuthoritative, gbHumanitarian, lMustAttribu
 "Open Government Licence v1.0", "OGL1.pdf", Yes, Yes, Yes, Yes, No, Yes, No, No
 "Other - Humanitarian", "Details must be provided in notes and screenshot.", No, Yes, Yes, Yes, Yes, Yes, Yes, Yes
 "Singapore Open Data License Version 1.0", "singaporeOpen1.pdf", Yes, Yes, Yes, Yes, No, Yes, No, No
+"National Institute of Statistics (INE) Data License", "INE.pdf", Yes, Yes, Yes, Yes, Yes, Yes, Yes, No
