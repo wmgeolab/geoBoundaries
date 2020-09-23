@@ -5,7 +5,7 @@ on:
     paths:    
       - 'sourceData/**'
 jobs:
-  geoBoundaryAutomatedChecks:
+  geoBoundaryZipfileChecks:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
