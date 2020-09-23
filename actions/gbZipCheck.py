@@ -44,7 +44,7 @@ if(len(zips) > 0):
         if("meta.txt" in bZip.namelist()):
             print("Metadata file exists in " + z)
         else:
-            print("Metadata file does not exist in " + z)
+            print("CRITICAL ERROR: Metadata file does not exist in " + z)
             checkFail = 1
         
         geojson = list(filter(lambda x: x[-4:] == '.geojson', bZip.namelist()))
@@ -85,7 +85,6 @@ if(len(zips) > 0):
         if(checkFail == 1):
             zipFailures = zipFailures + 1
             print("CRITICAL ERROR: Zipfile validity checks failed for " + z + ".  Check the log to see what is wrong.")
-            sys.exit("There was a critical error in at least one of the submitted files.  Check the log to see what happened.")
         else:
             zipSuccess = zipSuccess + 1
             print("Zipfile validity checks passed for " + z)
@@ -95,6 +94,8 @@ if(len(zips) > 0):
     print("All zip validity checks complete.")
     print("Successes: " + str(zipSuccess))
     print("Failures: " + str(zipFailures))
+    if(zipFailures > 0):
+        sys.exit("CRITICAL ERROR: At least one Metadata check failed; check the log to see what's wrong.")
 
 else:
     print("No modified zip files found.")
