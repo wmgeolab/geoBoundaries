@@ -41,4 +41,4 @@ jobs:
            git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
            cat proposedChanges
            echo "==============================================="
-           python actions/gbMetaCheck.py
+           python actions/gbZipCheck.py
