@@ -50,7 +50,7 @@ for line in lines:
     validLicense.append(data[0].lower().strip())
     if(str(data[2]).strip() == "Yes"):
         validOpenLicense.append(data[0].lower().strip())
-    if(str(data[3].strip() == "Yes"):
+    if(str(data[3]).strip() == "Yes"):
         validAuthLicense.append(data[0].lower().strip())
     if(str(data[4]).strip() == "Yes"):
         validHumLicense.append(data[0].lower().strip())
