@@ -165,7 +165,7 @@ if(len(zips) > 0):
 
 
             if(dta.crs == "epsg:4326"):
-                print("Projection confirmed as " + str(data.crs))
+                print("Projection confirmed as " + str(dta.crs))
                 checkFail = 1
                 req["proj"] = 1
             else:
