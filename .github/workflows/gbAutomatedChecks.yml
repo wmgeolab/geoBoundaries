@@ -47,7 +47,7 @@ jobs:
            python actions/gbZipCheck.py
       
     - name: Push logs to Preview Repository
-      uses: cpina/github-action-push-to-another-repository@master
+      uses: wmgeolab/github-action-push-to-another-repository@master
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
@@ -99,7 +99,7 @@ jobs:
              python actions/gbMetaCheck.py
         
       - name: Push logs to Preview Repository
-        uses: cpina/github-action-push-to-another-repository@master
+        uses: wmgeolab/github-action-push-to-another-repository@master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
@@ -153,7 +153,7 @@ jobs:
               python actions/gbDataCheck.py
       
       - name: Push logs to Preview Repository
-        uses: cpina/github-action-push-to-another-repository@master
+        uses: wmgeolab/github-action-push-to-another-repository@master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
