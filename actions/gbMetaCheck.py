@@ -10,7 +10,7 @@ try:
     changedFiles = os.environ['changes'].strip('][').split(',')
     logDir = working + "/tmp/" + os.environ['gitsha']
 except:
-    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/ARE_ADM1.zip', 'sourceData/QAT_ADM0.zip']
+    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/gbOpen/ARE_ADM1.zip', 'sourceData/gbOpen/QAT_ADM0.zip']
     working = "/home/dan/git/gbRelease"
     logDir = working + "/tmp/sha"
 print("Python WD: " + working)  
@@ -19,7 +19,7 @@ print("Python WD: " + working)
 def logWrite(line):
     print(line)
     with open(logDir + "/" + "metaCheckLog.txt", "a") as f:
-        f.write(line)
+        f.write(line + "\n")
 
 logWrite("Python changedFiles: " + str(changedFiles))
 
@@ -330,9 +330,14 @@ if(len(zips) > 0):
     logWrite("Successes: " + str(zipSuccess))
     logWrite("Failures: " + str(zipFailures))
     
+    if(zipFailures == 0):
+        os.replace(logDir + "/" + "metaCheckLog.txt", logDir + "/" + "PASSED_metaCheckLog.txt")
+
     if(zipFailures > 0):
+        os.replace(logDir + "/" + "metaCheckLog.txt", logDir + "/" + "FAILED_metaCheckLog.txt")
         sys.exit("CRITICAL ERROR: At least one Metadata check failed; check the log to see what's wrong.")
 
 else:
     logWrite("No modified zip files found.")
+    os.rename(logDir + "/" + "metaCheckLog.txt", logDir + "/" + "FAILED_metaCheckLog.txt")
     sys.exit("Error: No zip files found!")
