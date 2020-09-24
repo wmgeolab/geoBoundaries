@@ -168,7 +168,7 @@ if(len(zips) > 0):
                 print("Projection confirmed as " + str(dta.crs))
                 req["proj"] = 1
             else:
-                print("The projection must be EPSG 4326.  The file proposed has a projection of: " + str(data.crs))
+                print("The projection must be EPSG 4326.  The file proposed has a projection of: " + str(dta.crs))
                 checkFail = 1
                 
 
