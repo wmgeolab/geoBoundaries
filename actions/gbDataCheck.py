@@ -133,9 +133,9 @@ if(len(zips) > 0):
                 if not valid:
                     checkFail = 1
                     validBounds = 0
-                    print("")
-                    print("CRITICAL ERROR: The bounds of the shapefile appear to be in another castle (i.e., not on the planet earth).  This is frequently indicative of a projection error (we expect EPSG 4326).")
-                    print("Here are the bounds we found: " + str(row["geometry"].bounds))
+                    #print("")
+                    #print("CRITICAL ERROR: The bounds of the shapefile appear to be in another castle (i.e., not on the planet earth).  This is frequently indicative of a projection error (we expect EPSG 4326).")
+                    #print("Here are the bounds we found: " + str(row["geometry"].bounds))
                 if(not row["geometry"].is_valid):
                     if(not row["geometry"].buffer(0).is_valid):
                         checkFail = 1
@@ -153,6 +153,9 @@ if(len(zips) > 0):
             if(validBounds == 1):
                 print("")
                 print("All shape geometries are within valid bounds.")
+            else:
+                print("")
+                print("CRITICAL ERROR: At least one geometry had bounds indicating it existed off the planet earth.  This is generally indicative of a projection error.")
             
             if(validGeom == 1):
                 print("")
