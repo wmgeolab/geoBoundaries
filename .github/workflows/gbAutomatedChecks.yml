@@ -104,7 +104,7 @@ jobs:
           destination-github-username: "DanRunfola"
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
-          token: ${{ secrets.API_TOKEN_GITHUB }} :  
+          token: ${{ secrets.API_TOKEN_GITHUB }}
           user-email: dan@danrunfola.com
     
   geoBoundaryDataCheck:
@@ -158,5 +158,5 @@ jobs:
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
           user-email: dan@danrunfola.com
-          token: ${{ secrets.API_TOKEN_GITHUB }} :  
+          token: ${{ secrets.API_TOKEN_GITHUB }}
 
