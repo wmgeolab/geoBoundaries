@@ -55,7 +55,7 @@ jobs:
         destination-github-username: "DanRunfola"
         destination-repository-name: "gbReleasePreviews"
         destination-repository-username: "wmgeolab"
-        user-email: "dan@danrunfola.com"
+        user-email: dan@danrunfola.com
   
   geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
@@ -107,7 +107,7 @@ jobs:
           destination-github-username: "DanRunfola"
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
-          user-email: "dan@danrunfola.com"
+          user-email: dan@danrunfola.com
     
   geoBoundaryDataCheck:
       runs-on: ubuntu-latest
@@ -161,5 +161,5 @@ jobs:
           destination-github-username: "DanRunfola"
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
-          user-email: "dan@danrunfola.com"
+          user-email: dan@danrunfola.com
 
