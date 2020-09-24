@@ -113,10 +113,13 @@ jobs:
       - name: Check for valid data in submission files
         run: |
               export changes=${{ steps.changes.outputs.added_modified }}
+              export gitsha=${{github.sha}}
               echo ${GITHUB_SHA}
               echo ${GITHUB_WORKSPACE}
               echo "==============================================="
               git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
               cat proposedChanges
               echo "==============================================="
+              mkdir tmp
+              mkdir tmp/${{github.sha}}
               python actions/gbDataCheck.py
