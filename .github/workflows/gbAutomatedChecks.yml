@@ -27,7 +27,7 @@ jobs:
 
     - id: changes
       name: Detect Proposed Changes
-      uses: jitterbit/get-changed-files@v1
+      uses: wmgeolab/get-changed-files@master
       with:
         format: 'json'
       
@@ -65,7 +65,7 @@ jobs:
   
       - id: changes
         name: Detect Proposed Changes
-        uses: jitterbit/get-changed-files@v1
+        uses: wmgeolab/get-changed-files@master
         with:
           format: 'json'
         
@@ -105,7 +105,7 @@ jobs:
   
       - id: changes
         name: Detect Proposed Changes
-        uses: jitterbit/get-changed-files@v1
+        uses: wmgeolab/get-changed-files@master
         with:
           format: 'json'
         
