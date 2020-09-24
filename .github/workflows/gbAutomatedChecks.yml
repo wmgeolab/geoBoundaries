@@ -48,13 +48,12 @@ jobs:
       
     - name: Push logs to Preview Repository
       uses: wmgeolab/github-action-push-to-another-repository@master
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source-directory: "tmp"
         destination-github-username: "DanRunfola"
         destination-repository-name: "gbReleasePreviews"
         destination-repository-username: "wmgeolab"
+        token: ${{ secrets.API_TOKEN_GITHUB }} 
         user-email: dan@danrunfola.com
   
   geoBoundaryMetaDataCheck:
@@ -100,13 +99,12 @@ jobs:
         
       - name: Push logs to Preview Repository
         uses: wmgeolab/github-action-push-to-another-repository@master
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: "tmp"
           destination-github-username: "DanRunfola"
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
+          token: ${{ secrets.API_TOKEN_GITHUB }} :  
           user-email: dan@danrunfola.com
     
   geoBoundaryDataCheck:
@@ -154,12 +152,11 @@ jobs:
       
       - name: Push logs to Preview Repository
         uses: wmgeolab/github-action-push-to-another-repository@master
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source-directory: "tmp"
           destination-github-username: "DanRunfola"
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
           user-email: dan@danrunfola.com
+          token: ${{ secrets.API_TOKEN_GITHUB }} :  
 
