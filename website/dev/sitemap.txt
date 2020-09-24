@@ -1,0 +1,7 @@
+http://www.geoboundaries.org/
+http://www.geoboundaries.org/issues.html
+http://www.geoboundaries.org/index.html
+http://www.geoboundaries.org/downloadFull.html
+http://www.geoboundaries.org/api.html
+http://www.geoboundaries.org/downloadSimple.html
+http://www.geoboundaries.org/downloadCGAZ.html

@@ -1,7 +1,0 @@
-ISO AZE | ADM1 Downloading new copy from remote.
-ISO AZE | ADM2 Downloading new copy from remote.
-ISO AUS | ADM1 Downloading new copy from remote.
-ISO COL | ADM2 Downloading new copy from remote.
-ISO BRA | ADM2 Downloading new copy from remote.
-ISO CHN | ADM3 Downloading new copy from remote.
-ISO CYP | ADM2 Downloading new copy from remote.
