@@ -7,17 +7,21 @@ import datetime
 #For testing
 try:
     working = os.environ['GITHUB_WORKSPACE']
+    changedFiles = os.environ['changes'].strip('][').split(',')
+    logDir = working + "/tmp/" + os.environ['gitsha']
 except:
+    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/gbOpen/ARE_ADM1.zip', 'sourceData/gbOpen/QAT_ADM0.zip']
     working = "/home/dan/git/gbRelease"
+    logDir = working + "/tmp/sha"
 print("Python WD: " + working)  
 
-#For testing
-try:
-    changedFiles = os.environ['changes'].strip('][').split(',')
-except:
-    changedFiles = ['.github/workflows/gbPush.yml', 'sourceData/ARE_ADM1.zip', 'sourceData/QAT_ADM0.zip']
+   
+def logWrite(line):
+    print(line)
+    with open(logDir + "/" + "metaCheckLog.txt", "a") as f:
+        f.write(line + "\n")
 
-print("Python changedFiles: " + str(changedFiles))
+logWrite("Python changedFiles: " + str(changedFiles))
 
 
 #Check that zip files exist in the request
@@ -56,8 +60,8 @@ for line in lines:
         validHumLicense.append(data[0].lower().strip())
 
 if(len(zips) > 0):
-    print("Modified zip files found.  Checking meta.txt validity.")
-    print("")
+    logWrite("Modified zip files found.  Checking meta.txt validity.")
+    logWrite("")
     zipTotal = zipTotal + 1
     for z in zips:
         req = {}
@@ -81,89 +85,89 @@ if(len(zips) > 0):
 
 
         checkFail = 0
-        print("")
-        print("Downloading: " + z)
+        logWrite("")
+        logWrite("Downloading: " + z)
         try:
             os.remove(working + "/" + z)
         except:
             pass
         dl = os.system('git lfs pull --include=\"' + z +'\"')
-        print("Metadata Check (" + str(zipTotal) + " of " + str(len(zips)) + "): " + z)
+        logWrite("Metadata Check (" + str(zipTotal) + " of " + str(len(zips)) + "): " + z)
         bZip = zipfile.ZipFile(working + "/" + z)
         if("meta.txt" in bZip.namelist()):
-            print("")
-            print("============================")
-            print("Metadata file exists in " + z)
+            logWrite("")
+            logWrite("============================")
+            logWrite("Metadata file exists in " + z)
 
             with zipfile.ZipFile(working + "/" + z) as zF:
                 meta = zF.read('meta.txt')
             
             for m in meta.splitlines():
-                print("")
+                logWrite("")
                 e = m.decode("latin1").split(":")
                 if(len(e) > 2):
                     e[1] = e[1] + e[2]
                 key = e[0].strip()
                 val = e[1].strip()
                 
-                print("Detected Key / Value: " + key + " / " + val)
+                logWrite("Detected Key / Value: " + key + " / " + val)
                 if(("Year" in key) or "year" in key):
                     year = int(float(val))
                     if( (year > 1990) and (year <= datetime.datetime.now().year)):
-                        print("Valid year " + str(year) + " detected.")
+                        logWrite("Valid year " + str(year) + " detected.")
                         req["year"] = 1
                     else:
-                        print("CRITICAL ERROR: The year in the meta.txt file is invalid: " + str(year))
-                        print("We expect a value between 1990 and " + str(datetime.datetime.now().year))
+                        logWrite("CRITICAL ERROR: The year in the meta.txt file is invalid: " + str(year))
+                        logWrite("We expect a value between 1990 and " + str(datetime.datetime.now().year))
                         checkFail = 1
                 
                 if("boundary type" in key.lower() and "name" not in key.lower()):
                     #May add other valid types in the future, but for now ADMs only.
                     validTypes = ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
                     if(val.upper().replace(" ","") in validTypes):
-                        print("Valid Boundary Type detected: " + val +".")
+                        logWrite("Valid Boundary Type detected: " + val +".")
                         req["bType"] = 1
                     else:
-                        print("CRITICAL ERROR: The boundary type in the meta.txt file is invalid: " + val)
-                        print("We expect one of: " + str(validTypes))
+                        logWrite("CRITICAL ERROR: The boundary type in the meta.txt file is invalid: " + val)
+                        logWrite("We expect one of: " + str(validTypes))
                         checkFail = 1
                 
                 if("iso" in key.lower()):
                     if(len(val) != 3):
-                        print("CRITICAL ERROR: ISO is invalid - we expect a 3-character ISO code following ISO-3166-1 (Alpha 3).")
+                        logWrite("CRITICAL ERROR: ISO is invalid - we expect a 3-character ISO code following ISO-3166-1 (Alpha 3).")
                         checkFail = 1
                     if(val not in validISO):
-                        print("CRITICAL ERROR: ISO is not on our list of valid ISO-3 codes.  See /actions/dta/iso_3166_1_alpha_3.csv for all valid codes this script checks against.")
+                        logWrite("CRITICAL ERROR: ISO is not on our list of valid ISO-3 codes.  See /actions/dta/iso_3166_1_alpha_3.csv for all valid codes this script checks against.")
                         checkFail = 1
                     else:
-                        print("Valid ISO detected: " + val)
+                        logWrite("Valid ISO detected: " + val)
                         req["iso"] = 1
                 
                 if("canonical" in key.lower()):
                     if(len(val.replace(" ","")) > 0):
                         if(val.lower() not in ["na", "nan", "null"]):
-                            print("Canonical name detected: " + val)
+                            logWrite("Canonical name detected: " + val)
                             opt["canonical"] = 1
                     else:
-                        print("WARN: No canonical name detected.  This field is optional.")
+                        logWrite("WARN: No canonical name detected.  This field is optional.")
                     
                 if("source" in key.lower() and "license" not in key.lower() and "data" not in key.lower()):
                     if(len(val.replace(" ","")) > 0):
                         if(val.lower() not in ["na", "nan", "null"]):
-                            print("Source detected: " + val)
+                            logWrite("Source detected: " + val)
                             req["source"] = 1
 
                 if("release type" in key.lower()):
                     if (val.lower() not in ["gbopen", "gbauthoritative", "gbhumanitarian"]):
-                        print("Invalid release type detected: " + val)
-                        print("We expect one of three values: gbOpen, gbAuthoritative, and gbHumanitarian")
+                        logWrite("Invalid release type detected: " + val)
+                        logWrite("We expect one of three values: gbOpen, gbAuthoritative, and gbHumanitarian")
                         checkFail = 1
                     else:
                         if(val.lower() not in z.lower()):
                             req["releaseTypeName"] = val.lower().strip()
                             req["releaseType"] = 1
                             req["releaseTypeFolder"] = 0
-                            print("CRITICAL ERROR: The zip file is in the incorrect subdirectory - according to meta.txt you are submitting a " + val + " boundary, but have the zip file in the folder " + z + ".")
+                            logWrite("CRITICAL ERROR: The zip file is in the incorrect subdirectory - according to meta.txt you are submitting a " + val + " boundary, but have the zip file in the folder " + z + ".")
                             checkFail = 1
                         else:
                             req["releaseType"] = 1
@@ -172,27 +176,27 @@ if(len(zips) > 0):
 
                 if("license" == key.lower()):
                     if(('"' + val.lower().strip() + '"') not in validLicense):
-                        print("CRITICAL ERROR: Invalid license detected: " + val)
-                        print("We expect one of the licenses in /actions/dta/gbLicenses.csv.  If you believe your license should be included, please open a ticket.")
+                        logWrite("CRITICAL ERROR: Invalid license detected: " + val)
+                        logWrite("We expect one of the licenses in /actions/dta/gbLicenses.csv.  If you believe your license should be included, please open a ticket.")
                         checkFail = 1
                     else:
                         req["license"] = 1
                         req["licenseName"] = val.lower().strip()
-                        print("Valid license type detected: " + val)
+                        logWrite("Valid license type detected: " + val)
                         
 
                 if("license notes" in key.lower()):
                     if(len(val.replace(" ","")) > 0):
                         if(val.lower() not in ["na", "nan", "null"]):
-                            print("License notes detected: " + val)
+                            logWrite("License notes detected: " + val)
                             opt["licenseNotes"] = 1
                     else:
-                        print("WARN: No license notes detected.  This field is optional.")
+                        logWrite("WARN: No license notes detected.  This field is optional.")
 
                 if("license source" in key.lower()):
                     if(len(val.replace(" ","")) > 0):
                         if(val.lower() not in ["na", "nan", "null"]):
-                            print("License source detected: " + val)
+                            logWrite("License source detected: " + val)
                             req["licenseSource"] = 1
                             #Check for a png image of the license source.
                             #Any png or jpg with the name "license" is accepted.
@@ -210,66 +214,66 @@ if(len(zips) > 0):
                                 pass
 
                             if(licPic != 0):
-                                print("License image found.")
+                                logWrite("License image found.")
                                 opt["licenseImage"] = 1
                             else:
-                                print("WARN: No license image found.  This is not required.  We check for license.png and license.jpg.")
+                                logWrite("WARN: No license image found.  This is not required.  We check for license.png and license.jpg.")
                         
                         else:
-                            print("CRITICAL ERROR: No license source detected.")
+                            logWrite("CRITICAL ERROR: No license source detected.")
                             checkFail = 1
 
 
                     else:
-                        print("CRITICAL ERROR: No license source detected.")
+                        logWrite("CRITICAL ERROR: No license source detected.")
                         checkFail = 1
 
                 if("link to source data" in key.lower()):
                     if(len(val.replace(" ","")) > 0):
                         if(val.lower() not in ["na", "nan", "null"]):
                             req["dataSource"] = 1
-                            print("Data Source Found: " + val)
+                            logWrite("Data Source Found: " + val)
                                             
                         else:
-                            print("CRITICAL ERROR: No license source detected.")
+                            logWrite("CRITICAL ERROR: No license source detected.")
                             checkFail = 1
 
 
                     else:
-                        print("CRITICAL ERROR: No license source detected.")
+                        logWrite("CRITICAL ERROR: No license source detected.")
                         checkFail = 1
 
                 if("other notes" in key.lower()):
                     if(len(val.replace(" ","")) > 0):
                         if(val.lower() not in ["na", "nan", "null"]):
-                            print("Other notes detected: " + val)
+                            logWrite("Other notes detected: " + val)
                             opt["otherNotes"] = 1
                     else:
-                        print("WARN: No other notes detected.  This field is optional.")
+                        logWrite("WARN: No other notes detected.  This field is optional.")
 
 
             if((req["license"] == 1) and (req["releaseType"] == 1)):
-                print("")
-                print("Both a license and release type are defined.  Checking for compatability.")
+                logWrite("")
+                logWrite("Both a license and release type are defined.  Checking for compatability.")
                 if(req["releaseTypeName"] == "gbopen"):
                     if(('"' + req["licenseName"] + '"') in validOpenLicense):
-                        print("License type is a valid license for the gbOpen product.")
+                        logWrite("License type is a valid license for the gbOpen product.")
                     else:
-                        print("CRITICAL ERROR: The license you have specified is not valid for the gbOpen product.")
+                        logWrite("CRITICAL ERROR: The license you have specified is not valid for the gbOpen product.")
                         checkFail = 1
                 
                 if(req["releaseTypeName"] == "gbauthoritative"):
                     if(('"' + req["licenseName"] + '"') in validAuthLicense): 
-                        print("License type is a valid license for the gbAuthoritative product.")
+                        logWrite("License type is a valid license for the gbAuthoritative product.")
                     else:
-                        print("CRITICAL ERROR: The license you have specified is not valid for the gbAuthoritative product.")
+                        logWrite("CRITICAL ERROR: The license you have specified is not valid for the gbAuthoritative product.")
                         checkFail = 1
 
                 if(req["releaseTypeName"] == "gbhumanitarian"):
                     if(('"' + req["licenseName"] + '"') in validHumLicense): 
-                        print("License type is a valid license for the gbHumanitarian product.")
+                        logWrite("License type is a valid license for the gbHumanitarian product.")
                     else:
-                        print("CRITICAL ERROR: The license you have specified is not valid for the gbHumanitarian product.")
+                        logWrite("CRITICAL ERROR: The license you have specified is not valid for the gbHumanitarian product.")
                         checkFail = 1
 
 
@@ -277,37 +281,37 @@ if(len(zips) > 0):
 
 
             if(req["source"] == 0):
-                print("CRITICAL ERROR: No data source was provided in the metadata.")
+                logWrite("CRITICAL ERROR: No data source was provided in the metadata.")
                 checkFail = 1
 
-                    
+      
 
-            print("")
-            print("Metadata checks complete for " + z)
-            print("")
-            print("----------------------------")
-            print("      OPTIONAL TESTS        ")
-            print("----------------------------")
+            logWrite("")
+            logWrite("Metadata checks complete for " + z)
+            logWrite("")
+            logWrite("----------------------------")
+            logWrite("      OPTIONAL TESTS        ")
+            logWrite("----------------------------")
             for i in opt:
                 if(opt[i] == 1 or len(str(opt[i]))>1):
-                    print('%-20s%-12s' % (i, "PASSED"))
+                    logWrite('%-20s%-12s' % (i, "PASSED"))
                 else:
-                    print('%-20s%-12s' % (i, "FAILED"))
-            print("")
-            print("----------------------------")
-            print("      REQUIRED TESTS        ")
-            print("----------------------------")
+                    logWrite('%-20s%-12s' % (i, "FAILED"))
+            logWrite("")
+            logWrite("----------------------------")
+            logWrite("      REQUIRED TESTS        ")
+            logWrite("----------------------------")
             for i in req:
                 if(req[i] == 1 or len(str(req[i]))>1):
-                    print('%-20s%-12s' % (i, "PASSED"))
+                    logWrite('%-20s%-12s' % (i, "PASSED"))
                 else:
-                    print('%-20s%-12s' % (i, "FAILED"))
-            print("==========================")
+                    logWrite('%-20s%-12s' % (i, "FAILED"))
+            logWrite("==========================")
             
             
 
         else:
-            print("CRITICAL ERROR: Metadata file does not exist in " + z)
+            logWrite("CRITICAL ERROR: Metadata file does not exist in " + z)
             checkFail = 1
         
         
@@ -318,17 +322,22 @@ if(len(zips) > 0):
             
         else:
             zipSuccess = zipSuccess + 1
-            print("Metadata checks passed for " + z)
+            logWrite("Metadata checks passed for " + z)
 
-    print("")
-    print("====================")
-    print("All metadata checks complete.")
-    print("Successes: " + str(zipSuccess))
-    print("Failures: " + str(zipFailures))
+    logWrite("")
+    logWrite("====================")
+    logWrite("All metadata checks complete.")
+    logWrite("Successes: " + str(zipSuccess))
+    logWrite("Failures: " + str(zipFailures))
     
+    if(zipFailures == 0):
+        os.replace(logDir + "/" + "metaCheckLog.txt", logDir + "/" + "PASSED_metaCheckLog.txt")
+
     if(zipFailures > 0):
+        os.replace(logDir + "/" + "metaCheckLog.txt", logDir + "/" + "FAILED_metaCheckLog.txt")
         sys.exit("CRITICAL ERROR: At least one Metadata check failed; check the log to see what's wrong.")
 
 else:
-    print("No modified zip files found.")
+    logWrite("No modified zip files found.")
+    os.rename(logDir + "/" + "metaCheckLog.txt", logDir + "/" + "FAILED_metaCheckLog.txt")
     sys.exit("Error: No zip files found!")

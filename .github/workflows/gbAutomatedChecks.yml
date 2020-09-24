@@ -113,10 +113,26 @@ jobs:
       - name: Check for valid data in submission files
         run: |
               export changes=${{ steps.changes.outputs.added_modified }}
+              export gitsha=${{github.sha}}
               echo ${GITHUB_SHA}
               echo ${GITHUB_WORKSPACE}
               echo "==============================================="
               git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
               cat proposedChanges
               echo "==============================================="
+              mkdir tmp
+              mkdir tmp/${{github.sha}}
               python actions/gbDataCheck.py
+      
+      - name: Push logs to Preview Repository
+        uses: cpina/github-action-push-to-another-repository@v1.1
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: "tmp"
+          destination-github-username: "DanRunfola"
+          destination-repository-name: "gbReleasePreviews"
+          destination-repository-username: "wmgeolab"
+          user-email: "dan@danrunfola.com"
+          target-branch: ${{ github.sha }}
+
