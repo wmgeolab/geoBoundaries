@@ -1,5 +1,5 @@
 on:
-  pull_request:
+  pull_request_target:
     types: 
       [opened, synchronize, reopened, edited, review_requested, labeled]
     paths:    
@@ -51,11 +51,11 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source-directory: "tmp"
-        destination-github-username: "DanRunfola"
-        destination-repository-name: "gbReleasePreviews"
-        destination-repository-username: "wmgeolab"
-        user-email: dan@danrunfola.com
+          source-directory: "tmp"
+          destination-github-username: "DanRunfola"
+          destination-repository-name: "gbReleasePreviews"
+          destination-repository-username: "wmgeolab"
+          user-email: dan@danrunfola.com
   
   geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
@@ -108,7 +108,7 @@ jobs:
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
           user-email: dan@danrunfola.com
-
+    
   geoBoundaryDataCheck:
       runs-on: ubuntu-latest
       container: osgeo/gdal:ubuntu-small-latest
