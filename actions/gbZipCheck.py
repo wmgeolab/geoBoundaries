@@ -38,7 +38,10 @@ if(len(zips) > 0):
             os.remove(working + "/" + z)
         except:
             pass
-        dl = os.system('git lfs pull --include=\"' + z +'\"')
+        try:
+            dl = os.system('git lfs pull --include=\"' + z +'\"')
+        except:
+            print("No file on LFS to retrieve.  Continuing.")
         print("File Check (" + str(zipTotal) + " of " + str(len(zips)) + "): " + z)
         bZip = zipfile.ZipFile(working + "/" + z)
         if("meta.txt" in bZip.namelist()):
