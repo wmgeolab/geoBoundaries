@@ -47,7 +47,7 @@ jobs:
            python actions/gbZipCheck.py
       
     - name: Push logs to Preview Repository
-      uses: cpina/github-action-push-to-another-repository@v1.1
+      uses: cpina/github-action-push-to-another-repository@master
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
@@ -55,8 +55,7 @@ jobs:
         destination-github-username: "DanRunfola"
         destination-repository-name: "gbReleasePreviews"
         destination-repository-username: "wmgeolab"
-        user-email: "dan@danrunfola.com"
-        target-branch: ${{ github.sha }}
+        user-email: dan@danrunfola.com
   
   geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
@@ -100,7 +99,7 @@ jobs:
              python actions/gbMetaCheck.py
         
       - name: Push logs to Preview Repository
-        uses: cpina/github-action-push-to-another-repository@v1.1
+        uses: cpina/github-action-push-to-another-repository@master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
@@ -108,9 +107,8 @@ jobs:
           destination-github-username: "DanRunfola"
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
-          user-email: "dan@danrunfola.com"
-          target-branch: ${{ github.sha }}
-    
+          user-email: dan@danrunfola.com
+
   geoBoundaryDataCheck:
       runs-on: ubuntu-latest
       container: osgeo/gdal:ubuntu-small-latest
@@ -155,7 +153,7 @@ jobs:
               python actions/gbDataCheck.py
       
       - name: Push logs to Preview Repository
-        uses: cpina/github-action-push-to-another-repository@v1.1
+        uses: cpina/github-action-push-to-another-repository@master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
@@ -163,6 +161,4 @@ jobs:
           destination-github-username: "DanRunfola"
           destination-repository-name: "gbReleasePreviews"
           destination-repository-username: "wmgeolab"
-          user-email: "dan@danrunfola.com"
-          target-branch: ${{ github.sha }}
-
+          user-email: dan@danrunfola.com
