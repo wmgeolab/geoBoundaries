@@ -1,5 +1,5 @@
 on:
-  pull_request:
+  pull_request_target:
     types: 
       [opened, synchronize, reopened, edited, review_requested, labeled]
     paths:    
@@ -45,6 +45,16 @@ jobs:
            mkdir tmp
            mkdir tmp/${{github.sha}}
            python actions/gbZipCheck.py
+      
+    - name: Push logs to Preview Repository
+      uses: wmgeolab/github-action-push-to-another-repository@master
+      with:
+        source-directory: "tmp"
+        destination-github-username: "DanRunfola"
+        destination-repository-name: "gbReleasePreviews"
+        destination-repository-username: "wmgeolab"
+        token: ${{ secrets.API_TOKEN_GITHUB }} 
+        user-email: dan@danrunfola.com
   
   geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
@@ -86,6 +96,16 @@ jobs:
              mkdir tmp
              mkdir tmp/${{github.sha}}
              python actions/gbMetaCheck.py
+        
+      - name: Push logs to Preview Repository
+        uses: wmgeolab/github-action-push-to-another-repository@master
+        with:
+          source-directory: "tmp"
+          destination-github-username: "DanRunfola"
+          destination-repository-name: "gbReleasePreviews"
+          destination-repository-username: "wmgeolab"
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          user-email: dan@danrunfola.com
     
   geoBoundaryDataCheck:
       runs-on: ubuntu-latest
@@ -130,4 +150,12 @@ jobs:
               mkdir tmp/${{github.sha}}
               python actions/gbDataCheck.py
       
-
+      - name: Push logs to Preview Repository
+        uses: wmgeolab/github-action-push-to-another-repository@master
+        with:
+          source-directory: "tmp"
+          destination-github-username: "DanRunfola"
+          destination-repository-name: "gbReleasePreviews"
+          destination-repository-username: "wmgeolab"
+          user-email: dan@danrunfola.com
+          token: ${{ secrets.API_TOKEN_GITHUB }}
