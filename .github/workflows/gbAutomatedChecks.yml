@@ -46,6 +46,7 @@ jobs:
            mkdir tmp/${{github.sha}}
            python actions/gbZipCheck.py
       
+    - name: Push Logs
     - uses: actions/upload-artifact@v2
       with:
           name: zipLogs
@@ -91,7 +92,8 @@ jobs:
              mkdir tmp
              mkdir tmp/${{github.sha}}
              python actions/gbMetaCheck.py
-        
+     
+      - name: Push Logs 
       - uses: actions/upload-artifact@v2
         with:
           name: metaLogs
@@ -139,7 +141,7 @@ jobs:
               mkdir tmp
               mkdir tmp/${{github.sha}}
               python actions/gbDataCheck.py
-      
+      - name: Push Logs
       - uses: actions/upload-artifact@v2
         with:
           name: dataLogs
