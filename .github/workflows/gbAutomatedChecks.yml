@@ -22,9 +22,7 @@ jobs:
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
-        lfs: False
-        fetch-depth: 0
-        ref: ${{ github.event.pull_request.head.sha }}  
+        ref: ${{ github.event.pull_request_target.head.sha }}  
 
     - id: changes
       name: Detect Proposed Changes
@@ -70,9 +68,7 @@ jobs:
       - name: Download Repository Code
         uses: actions/checkout@v2.3.2
         with:
-          lfs: False
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.event.pull_request_target.head.sha }}  
   
       - id: changes
         name: Detect Proposed Changes
@@ -120,9 +116,7 @@ jobs:
       - name: Download Repository Code
         uses: actions/checkout@v2.3.2
         with:
-          lfs: False
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.event.pull_request_target.head.sha }}  
   
       - id: changes
         name: Detect Proposed Changes
