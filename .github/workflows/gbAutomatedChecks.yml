@@ -46,16 +46,10 @@ jobs:
            mkdir tmp/${{github.sha}}
            python actions/gbZipCheck.py
       
-    - name: Push logs to Preview Repository
-      uses: cpina/github-action-push-to-another-repository@master
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    - uses: actions/upload-artifact@v2
       with:
-          source-directory: "tmp"
-          destination-github-username: "DanRunfola"
-          destination-repository-name: "gbReleasePreviews"
-          destination-repository-username: "wmgeolab"
-          user-email: dan@danrunfola.com
+          name: zipLogs
+          path: tmp/
   
   geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
@@ -98,16 +92,10 @@ jobs:
              mkdir tmp/${{github.sha}}
              python actions/gbMetaCheck.py
         
-      - name: Push logs to Preview Repository
-        uses: cpina/github-action-push-to-another-repository@master
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - uses: actions/upload-artifact@v2
         with:
-          source-directory: "tmp"
-          destination-github-username: "DanRunfola"
-          destination-repository-name: "gbReleasePreviews"
-          destination-repository-username: "wmgeolab"
-          user-email: dan@danrunfola.com
+          name: metaLogs
+          path: tmp/
     
   geoBoundaryDataCheck:
       runs-on: ubuntu-latest
@@ -152,13 +140,7 @@ jobs:
               mkdir tmp/${{github.sha}}
               python actions/gbDataCheck.py
       
-      - name: Push logs to Preview Repository
-        uses: cpina/github-action-push-to-another-repository@master
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - uses: actions/upload-artifact@v2
         with:
-          source-directory: "tmp"
-          destination-github-username: "DanRunfola"
-          destination-repository-name: "gbReleasePreviews"
-          destination-repository-username: "wmgeolab"
-          user-email: dan@danrunfola.com
+          name: dataLogs
+          path: tmp/
