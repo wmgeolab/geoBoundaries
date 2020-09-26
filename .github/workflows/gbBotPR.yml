@@ -1,0 +1,34 @@
+on:
+  pull_request_target:
+    types: 
+      [opened, synchronize, reopened, edited, review_requested, labeled]
+    paths:    
+      - 'sourceData/**'
+jobs:
+  gbBotFileChecks:
+    runs-on: ubuntu-latest
+    name: geoBoundary Bot File Checks
+    steps:
+      - name: Summoning the geoBoundary Bot
+        uses: wmgeolab/geoBoundaryBot@master
+        with:
+          check: "file"
+
+  gbBotMetaChecks:
+    runs-on: ubuntu-latest
+    name: geoBoundary Bot Metadata Checks
+    steps:
+      - name: Summoning the geoBoundary Bot
+        uses: wmgeolab/geoBoundaryBot@master
+        with:
+          check: "meta"
+  
+  gbBotGeometryChecks:
+     runs-on: ubuntu-latest
+     name: geoBoundary Bot Geometry Checks
+     steps:
+       - name: Summoning the geoBoundary Bot
+         uses: wmgeolab/geoBoundaryBot@master
+         with:
+           check: "geom"  
+    
