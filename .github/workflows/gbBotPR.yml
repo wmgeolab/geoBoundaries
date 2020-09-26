@@ -7,6 +7,7 @@ on:
 jobs:
   gbBotFileChecks:
     runs-on: ubuntu-latest
+    container: osgeo/gdal:ubuntu-small-latest
     name: geoBoundary Bot File Checks
     steps:
       - name: Summoning the geoBoundary Bot
@@ -16,6 +17,7 @@ jobs:
 
   gbBotMetaChecks:
     runs-on: ubuntu-latest
+    container: osgeo/gdal:ubuntu-small-latest
     name: geoBoundary Bot Metadata Checks
     steps:
       - name: Summoning the geoBoundary Bot
@@ -25,6 +27,7 @@ jobs:
   
   gbBotGeometryChecks:
      runs-on: ubuntu-latest
+     container: osgeo/gdal:ubuntu-small-latest
      name: geoBoundary Bot Geometry Checks
      steps:
        - name: Summoning the geoBoundary Bot
