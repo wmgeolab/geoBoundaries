@@ -10,7 +10,7 @@ jobs:
     container: osgeo/gdal:ubuntu-small-latest
     name: geoBoundary Bot File Checks
     steps:
-      - name: Summoning the geoBoundary Bot
+      - name: Checking File Validity
         uses: wmgeolab/geoBoundaryBot@master
         with:
           check: "file"
@@ -18,9 +18,9 @@ jobs:
   gbBotMetaChecks:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
-    name: geoBoundary Bot Metadata Checks
+    name: geoBoundary Bot Metadata Validity Checks
     steps:
-      - name: Summoning the geoBoundary Bot
+      - name: Checking Metadata Validity
         uses: wmgeolab/geoBoundaryBot@master
         with:
           check: "meta"
@@ -28,9 +28,9 @@ jobs:
   gbBotGeometryChecks:
      runs-on: ubuntu-latest
      container: osgeo/gdal:ubuntu-small-latest
-     name: geoBoundary Bot Geometry Checks
+     name: geoBoundary Bot Data Technical Validity Checks
      steps:
-       - name: Summoning the geoBoundary Bot
+       - name: Checking Data Technical Validity
          uses: wmgeolab/geoBoundaryBot@master
          with:
            check: "geom"  
