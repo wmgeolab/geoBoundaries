@@ -18,7 +18,7 @@ jobs:
            apt-get install -y git
            curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
            apt-get install git-lfs
-           git clone https://github.com/wmgeolab/geoBoundaryBot ${GITHUB_WORKSPACE}
+           git clone https://github.com/wmgeolab/geoBoundaryBot ~
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
@@ -46,7 +46,7 @@ jobs:
            echo "==============================================="
            mkdir tmp
            mkdir tmp/${{github.sha}}
-           python ../geoBoundaryBot/gbZipCheck.py
+           python ~/gbZipCheck.py
       
     - name: Build Artifacts
       uses: actions/upload-artifact@v2
