@@ -46,7 +46,7 @@ jobs:
            echo "==============================================="
            mkdir tmp
            mkdir tmp/${{github.sha}}
-           python geoBoundaryBot/gbZipCheck.py
+           python ../geoBoundaryBot/gbZipCheck.py
       
     - name: Build Artifacts
       uses: actions/upload-artifact@v2
@@ -93,7 +93,7 @@ jobs:
              echo "==============================================="
              mkdir tmp
              mkdir tmp/${{github.sha}}
-             python geoBoundaryBot/gbMetaCheck.py
+             python ~/geoBoundaryBot/gbMetaCheck.py
      
       - name: Build Artifacts 
         uses: actions/upload-artifact@v2
@@ -142,7 +142,8 @@ jobs:
               echo "==============================================="
               mkdir tmp
               mkdir tmp/${{github.sha}}
-              python geoBoundaryBot/gbDataCheck.py
+              ls ../
+              python ./geoBoundaryBot/gbDataCheck.py
               
       - name: Build Artifacts
         uses: actions/upload-artifact@v2
