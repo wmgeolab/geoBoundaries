@@ -38,6 +38,8 @@ jobs:
            export gitsha=${{github.sha}}
            echo ${GITHUB_SHA}
            echo ${GITHUB_WORKSPACE}
+           ls
+           echo $(ls)
            echo "==============================================="
            git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
            cat proposedChanges
