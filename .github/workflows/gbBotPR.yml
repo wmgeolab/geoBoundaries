@@ -21,9 +21,12 @@ jobs:
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
         
     - name: Post-Download Initialization Steps
-      run: git clone https://github.com/wmgeolab/geoBoundaryBot
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
      
     - id: changes
       name: Detect Proposed Changes
