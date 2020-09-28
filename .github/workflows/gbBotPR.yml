@@ -38,18 +38,13 @@ jobs:
     - name: Check for valid files in submission
       run: |
            export changes=${{ steps.changes.outputs.added_modified }}
-           export gitsha=${{github.sha}}
-           echo ${GITHUB_SHA}
+           export gitsha=${{ github.event.pull_request.head.sha }}
+           echo ${{ github.event.pull_request.head.sha }}
            echo ${GITHUB_WORKSPACE}
            ls
-           echo $(ls)
-           echo "==============================================="
-           git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
-           cat proposedChanges
            echo "==============================================="
            mkdir tmp
-           mkdir tmp/${{github.sha}}
-           ls ~
+           mkdir tmp/${{ github.event.pull_request.head.sha }}
            python geoBoundaryBot/gbZipCheck.py
       
     - name: Build Artifacts
@@ -74,6 +69,8 @@ jobs:
       
       - name: Download Repository Code
         uses: actions/checkout@v2.3.2
+        with:
+         ref: ${{ github.event.pull_request.head.sha }}
   
       - name: Post-Download Initialization Steps
         run: git clone https://github.com/wmgeolab/geoBoundaryBot
@@ -88,15 +85,13 @@ jobs:
       - name: Check for valid metadata in submission files
         run: |
              export changes=${{ steps.changes.outputs.added_modified }}
-             export gitsha=${{github.sha}}
-             echo ${GITHUB_SHA}
+             export gitsha=${{ github.event.pull_request.head.sha }}
+             echo ${{ github.event.pull_request.head.sha }}
              echo ${GITHUB_WORKSPACE}
-             echo "==============================================="
-             git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
-             cat proposedChanges
+             ls
              echo "==============================================="
              mkdir tmp
-             mkdir tmp/${{github.sha}}
+             mkdir tmp/${{ github.event.pull_request.head.sha }}
              python geoBoundaryBot/gbMetaCheck.py
      
       - name: Build Artifacts 
@@ -123,6 +118,8 @@ jobs:
       
       - name: Download Repository Code
         uses: actions/checkout@v2.3.2
+        with:
+         ref: ${{ github.event.pull_request.head.sha }}
           
       - name: Post-Download Initialization Steps
         run: git clone https://github.com/wmgeolab/geoBoundaryBot
@@ -136,18 +133,15 @@ jobs:
         
       - name: Check for valid data in submission files
         run: |
-              export changes=${{ steps.changes.outputs.added_modified }}
-              export gitsha=${{github.sha}}
-              echo ${GITHUB_SHA}
-              echo ${GITHUB_WORKSPACE}
-              echo "==============================================="
-              git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
-              cat proposedChanges
-              echo "==============================================="
-              mkdir tmp
-              mkdir tmp/${{github.sha}}
-              ls ../
-              python geoBoundaryBot/gbDataCheck.py
+             export changes=${{ steps.changes.outputs.added_modified }}
+             export gitsha=${{ github.event.pull_request.head.sha }}
+             echo ${{ github.event.pull_request.head.sha }}
+             echo ${GITHUB_WORKSPACE}
+             ls
+             echo "==============================================="
+             mkdir tmp
+             mkdir tmp/${{ github.event.pull_request.head.sha }}
+             python geoBoundaryBot/gbDataCheck.py
               
       - name: Build Artifacts
         uses: actions/upload-artifact@v2
