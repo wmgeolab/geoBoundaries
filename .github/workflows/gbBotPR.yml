@@ -10,10 +10,29 @@ jobs:
     container: osgeo/gdal:ubuntu-small-latest
     name: geoBoundary Bot File Checks
     steps:
-      - name: Checking File Validity
-        uses: wmgeolab/geoBoundaryBot@master
-        with:
-          check: "file"
+    - name: Download Repository Code
+      uses: actions/checkout@v2.3.2
+      with:
+        ref: ${{ github.event.pull_request_target.head.sha }}  
+    
+    - id: changes
+      name: Detect Proposed Changes
+      uses: wmgeolab/get-changed-files@master
+      with:
+        format: 'json'
+      
+      
+    - name: Checking File Validity
+      uses: wmgeolab/geoBoundaryBot@master
+      with:
+        check: "file"
+        
+    - name: Build Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+          name: zipLogs
+          path: tmp/
+  
 
   gbBotMetaChecks:
     runs-on: ubuntu-latest
