@@ -5,16 +5,25 @@ on:
     paths:    
       - 'sourceData/**'
 jobs:
-  gbBotFileChecks:
+  geoBoundaryZipfileChecks:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
-    name: geoBoundary Bot File Checks
     steps:
+    - name: Initialize Linux Environment
+      run: |
+           apt-get update
+           apt-get install -y software-properties-common
+           add-apt-repository ppa:git-core/ppa
+           apt-get update
+           apt-get install -y git
+           curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+           apt-get install git-lfs
+    
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
         ref: ${{ github.event.pull_request_target.head.sha }}  
-    
+
     - id: changes
       name: Detect Proposed Changes
       uses: wmgeolab/get-changed-files@master
@@ -22,35 +31,116 @@ jobs:
         format: 'json'
       
       
-    - name: Checking File Validity
-      uses: wmgeolab/geoBoundaryBot@master
-      with:
-        check: "file"
-        
+    - name: Check for valid files in submission
+      run: |
+           export changes=${{ steps.changes.outputs.added_modified }}
+           export gitsha=${{github.sha}}
+           echo ${GITHUB_SHA}
+           echo ${GITHUB_WORKSPACE}
+           echo "==============================================="
+           git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
+           cat proposedChanges
+           echo "==============================================="
+           mkdir tmp
+           mkdir tmp/${{github.sha}}
+           python actions/gbZipCheck.py
+      
     - name: Build Artifacts
       uses: actions/upload-artifact@v2
       with:
           name: zipLogs
           path: tmp/
   
-
-  gbBotMetaChecks:
-    runs-on: ubuntu-latest
-    container: osgeo/gdal:ubuntu-small-latest
-    name: geoBoundary Bot Metadata Validity Checks
-    steps:
-      - name: Checking Metadata Validity
-        uses: wmgeolab/geoBoundaryBot@master
+  geoBoundaryMetaDataCheck:
+      runs-on: ubuntu-latest
+      container: osgeo/gdal:ubuntu-small-latest
+      steps:
+      - name: Initialize Linux Environment
+        run: |
+             apt-get update
+             apt-get install -y software-properties-common
+             add-apt-repository ppa:git-core/ppa
+             apt-get update
+             apt-get install -y git
+             curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+             apt-get install git-lfs
+      
+      - name: Download Repository Code
+        uses: actions/checkout@v2.3.2
         with:
-          check: "meta"
+          ref: ${{ github.event.pull_request_target.head.sha }}  
   
-  gbBotGeometryChecks:
-     runs-on: ubuntu-latest
-     container: osgeo/gdal:ubuntu-small-latest
-     name: geoBoundary Bot Data Technical Validity Checks
-     steps:
-       - name: Checking Data Technical Validity
-         uses: wmgeolab/geoBoundaryBot@master
-         with:
-           check: "geom"  
+      - id: changes
+        name: Detect Proposed Changes
+        uses: wmgeolab/get-changed-files@master
+        with:
+          format: 'json'
+        
+        
+      - name: Check for valid metadata in submission files
+        run: |
+             export changes=${{ steps.changes.outputs.added_modified }}
+             export gitsha=${{github.sha}}
+             echo ${GITHUB_SHA}
+             echo ${GITHUB_WORKSPACE}
+             echo "==============================================="
+             git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
+             cat proposedChanges
+             echo "==============================================="
+             mkdir tmp
+             mkdir tmp/${{github.sha}}
+             python actions/gbMetaCheck.py
+     
+      - name: Build Artifacts 
+        uses: actions/upload-artifact@v2
+        with:
+          name: metaLogs
+          path: tmp/
     
+  geoBoundaryDataCheck:
+      runs-on: ubuntu-latest
+      container: osgeo/gdal:ubuntu-small-latest
+      steps:
+      - name: Initialize Linux Environment
+        run: |
+              apt-get update
+              apt-get install -y software-properties-common
+              add-apt-repository ppa:git-core/ppa
+              apt-get update
+              apt-get install -y git
+              curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+              apt-get install -y git-lfs
+              apt-get install -y python3-pip
+              pip3 install geopandas
+      
+      - name: Download Repository Code
+        uses: actions/checkout@v2.3.2
+        with:
+          ref: ${{ github.event.pull_request_target.head.sha }}  
+  
+      - id: changes
+        name: Detect Proposed Changes
+        uses: wmgeolab/get-changed-files@master
+        with:
+          format: 'json'
+        
+        
+      - name: Check for valid data in submission files
+        run: |
+              export changes=${{ steps.changes.outputs.added_modified }}
+              export gitsha=${{github.sha}}
+              echo ${GITHUB_SHA}
+              echo ${GITHUB_WORKSPACE}
+              echo "==============================================="
+              git diff-tree --no-commit-id --name-only -r ${{github.sha}} > proposedChanges
+              cat proposedChanges
+              echo "==============================================="
+              mkdir tmp
+              mkdir tmp/${{github.sha}}
+              python actions/gbDataCheck.py
+              
+      - name: Build Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dataLogs
+          path: tmp/
