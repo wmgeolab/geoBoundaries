@@ -51,7 +51,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
           name: zipLogs
-          path: tmp/
+          path: ~/tmp/
   
   geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
