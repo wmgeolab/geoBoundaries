@@ -43,8 +43,7 @@ jobs:
            echo ${GITHUB_WORKSPACE}
            ls
            echo "==============================================="
-           mkdir tmp
-           mkdir tmp/${{ github.event.pull_request.head.sha }}
+           mkdir ~/tmp
            python geoBoundaryBot/gbZipCheck.py
       
     - name: Build Artifacts
@@ -90,15 +89,14 @@ jobs:
              echo ${GITHUB_WORKSPACE}
              ls
              echo "==============================================="
-             mkdir tmp
-             mkdir tmp/${{ github.event.pull_request.head.sha }}
+             mkdir ~/tmp
              python geoBoundaryBot/gbMetaCheck.py
      
       - name: Build Artifacts 
         uses: actions/upload-artifact@v2
         with:
           name: metaLogs
-          path: tmp/
+          path: ~/tmp/
     
   geoBoundaryDataCheck:
       runs-on: ubuntu-latest
@@ -139,12 +137,11 @@ jobs:
              echo ${GITHUB_WORKSPACE}
              ls
              echo "==============================================="
-             mkdir tmp
-             mkdir tmp/${{ github.event.pull_request.head.sha }}
+             mkdir ~/tmp
              python geoBoundaryBot/gbDataCheck.py
               
       - name: Build Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: dataLogs
-          path: tmp/
+          path: ~/tmp/
