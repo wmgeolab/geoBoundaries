@@ -161,8 +161,14 @@ jobs:
           
   prResponse:
       runs-on: ubuntu-latest
-      container: osgeo/gdal:ubuntu-small-latest
+      needs: [geoBoundaryDataCheck, geoBoundaryMetaDataCheck, geoBoundaryZipfileChecks]
+      
       steps:
+      - uses: actions/download-artifact@v2
+        with:
+          path: ~/tmp/
       - name: Initialize Linux Environment
         run: |
              echo "==="
+             ls -R ~/tmp/
+             
