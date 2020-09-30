@@ -54,7 +54,7 @@ jobs:
           path: ~/tmp/
     
     - name: checkFail
-      if: env.PASS != "PASSED"
+      if: env.PASS != PASSED
       run: |
            exit 1
   
