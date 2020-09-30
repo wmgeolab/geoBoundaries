@@ -36,6 +36,7 @@ jobs:
       
       
     - name: Check for valid files in submission
+      id: checks
       run: |
            export changes=${{ steps.changes.outputs.added_modified }}
            export gitsha=${{ github.event.pull_request.head.sha }}
@@ -51,6 +52,12 @@ jobs:
       with:
           name: zipLogs
           path: ~/tmp/
+    
+    - name: checkFail
+      if: jobs.geoBoundaryZipfileChecks.steps.env.PASS != "PASSED"
+      run: |
+           echo ${{ jobs.geoBoundaryZipfileChecks.steps.env.PASS }}
+           exit 1
   
   geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
@@ -145,3 +152,11 @@ jobs:
         with:
           name: dataLogs
           path: ~/tmp/
+          
+  prResponse:
+      runs-on: ubuntu-latest
+      container: osgeo/gdal:ubuntu-small-latest
+      steps:
+      - name: Initialize Linux Environment
+        run: |
+             echo "==="
