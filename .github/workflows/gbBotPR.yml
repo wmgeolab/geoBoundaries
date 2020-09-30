@@ -54,7 +54,7 @@ jobs:
           path: ~/tmp/
     
     - name: checkFail
-      if: jobs.geoBoundaryZipfileChecks.steps.env.PASS != "PASSED"
+      if: $PASS != "PASSED"
       run: |
            echo ${{ jobs.geoBoundaryZipfileChecks.steps.env.PASS }}
            exit 1
