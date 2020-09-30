@@ -102,6 +102,10 @@ jobs:
         with:
           name: metaLogs
           path: ~/tmp/
+          
+      - name: checkFail
+        run: |
+             python geoBoundaryBot/gbCheckFail.py
     
   geoBoundaryDataCheck:
       runs-on: ubuntu-latest
@@ -150,6 +154,10 @@ jobs:
         with:
           name: dataLogs
           path: ~/tmp/
+          
+      - name: checkFail
+        run: |
+             python geoBoundaryBot/gbCheckFail.py
           
   prResponse:
       runs-on: ubuntu-latest
