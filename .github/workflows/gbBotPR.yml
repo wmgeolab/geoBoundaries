@@ -225,7 +225,7 @@ jobs:
              ls -l
              python geoBoundaryBot/gbResponse.py
              echo "==="
-             cat ~/tmp/responseTxt
+             cat ~/tmp/response.txt
              
       - uses: pCYSl5EDgo/cat@master
         id: gatherResponse
