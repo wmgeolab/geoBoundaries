@@ -1,0 +1,253 @@
+on:
+  pull_request_target:
+    types: 
+      [opened, synchronize, reopened, edited, review_requested, labeled]
+    paths:    
+      - 'sourceData/**'
+jobs:
+  geoBoundaryZipfileChecks:
+    runs-on: ubuntu-latest
+    container: osgeo/gdal:ubuntu-small-latest
+    steps:
+    - name: Initialize Linux Environment
+      run: |
+           apt-get update
+           apt-get install -y software-properties-common
+           add-apt-repository ppa:git-core/ppa
+           apt-get update
+           apt-get install -y git
+           curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+           apt-get install git-lfs
+    
+    - name: Download Repository Code
+      uses: actions/checkout@v2.3.2
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+        
+    - name: Post-Download Initialization Steps
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+     
+    - id: changes
+      name: Detect Proposed Changes
+      uses: wmgeolab/get-changed-files@master
+      with:
+        format: 'json'
+      
+      
+    - name: Check for valid files in submission
+      id: checks
+      run: |
+           export changes=${{ steps.changes.outputs.added_modified }}
+           export gitsha=${{ github.event.pull_request.head.sha }}
+           echo ${{ github.event.pull_request.head.sha }}
+           echo ${GITHUB_WORKSPACE}
+           ls
+           echo "==============================================="
+           mkdir ~/tmp 
+           python geoBoundaryBot/gbZipCheck.py
+           
+    - name: Setup Artifact Upload 
+      run: |
+           cp -r ~/tmp ${GITHUB_WORKSPACE}/fileChecks
+           ls -l ${GITHUB_WORKSPACE}/
+           ls -l ${GITHUB_WORKSPACE}/fileChecks
+           echo ==
+           cd ${GITHUB_WORKSPACE}
+           git config --global user.email "dummy@gmail.com"
+           git config --global user.name "DummyUser"
+           git add -A .
+           git commit -m "Artifact commit"
+      
+    - name: Upload Artifacts
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+        ftp-username: ${{ secrets.GBUSER }}
+        ftp-password: ${{ secrets.GBPASS }}
+        local-dir: ${{ github.workspace }}/fileChecks
+    
+    - name: checkFail
+      run: |
+           python geoBoundaryBot/gbCheckFail.py
+  
+  geoBoundaryMetaDataCheck:
+      runs-on: ubuntu-latest
+      container: osgeo/gdal:ubuntu-small-latest
+      steps:
+      - name: Initialize Linux Environment
+        run: |
+             apt-get update
+             apt-get install -y software-properties-common
+             add-apt-repository ppa:git-core/ppa
+             apt-get update
+             apt-get install -y git
+             curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+             apt-get install git-lfs
+      
+      - name: Download Repository Code
+        uses: actions/checkout@v2.3.2
+        with:
+         ref: ${{ github.event.pull_request.head.sha }}
+  
+      - name: Post-Download Initialization Steps
+        run: git clone https://github.com/wmgeolab/geoBoundaryBot
+  
+      - id: changes
+        name: Detect Proposed Changes
+        uses: wmgeolab/get-changed-files@master
+        with:
+          format: 'json'
+        
+        
+      - name: Check for valid metadata in submission files
+        run: |
+             export changes=${{ steps.changes.outputs.added_modified }}
+             export gitsha=${{ github.event.pull_request.head.sha }}
+             echo ${{ github.event.pull_request.head.sha }}
+             echo ${GITHUB_WORKSPACE}
+             ls
+             echo "==============================================="
+             mkdir ~/tmp
+             python geoBoundaryBot/gbMetaCheck.py
+     
+      - name: Setup Artifact Upload 
+        run: |
+             cp -r ~/tmp ${GITHUB_WORKSPACE}/metaChecks
+             ls -l ${GITHUB_WORKSPACE}/
+             ls -l ${GITHUB_WORKSPACE}/metaChecks
+             echo ==
+             cd ${GITHUB_WORKSPACE}
+             git config --global user.email "dummy@gmail.com"
+             git config --global user.name "DummyUser"
+             git add -A .
+             git commit -m "Artifact commit"
+      
+      - name: Upload Artifacts
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+          ftp-username: ${{ secrets.GBUSER }}
+          ftp-password: ${{ secrets.GBPASS }}
+          local-dir: ${{ github.workspace }}/metaChecks
+          
+      - name: checkFail
+        run: |
+             python geoBoundaryBot/gbCheckFail.py
+    
+  geoBoundaryDataCheck:
+      runs-on: ubuntu-latest
+      container: osgeo/gdal:ubuntu-small-latest
+      steps:
+      - name: Initialize Linux Environment
+        run: |
+              apt-get update
+              apt-get install -y software-properties-common
+              add-apt-repository ppa:git-core/ppa
+              apt-get update
+              apt-get install -y git
+              curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+              apt-get install -y git-lfs
+              apt-get install -y python3-pip
+              pip3 install geopandas
+              pip3 install matplotlib
+      
+      - name: Download Repository Code
+        uses: actions/checkout@v2.3.2
+        with:
+         ref: ${{ github.event.pull_request.head.sha }}
+          
+      - name: Post-Download Initialization Steps
+        run: git clone https://github.com/wmgeolab/geoBoundaryBot
+  
+      - id: changes
+        name: Detect Proposed Changes
+        uses: wmgeolab/get-changed-files@master
+        with:
+          format: 'json'
+        
+        
+      - name: Check for valid data in submission files
+        run: |
+             export changes=${{ steps.changes.outputs.added_modified }}
+             export gitsha=${{ github.event.pull_request.head.sha }}
+             echo ${{ github.event.pull_request.head.sha }}
+             echo ${GITHUB_WORKSPACE}
+             ls
+             echo "==============================================="
+             mkdir ~/tmp
+             python geoBoundaryBot/gbDataCheck.py
+              
+      - name: Setup Artifact Upload 
+        run: |
+             cp -r ~/tmp ${GITHUB_WORKSPACE}/geometryDataChecks
+             ls -l ${GITHUB_WORKSPACE}/
+             ls -l ${GITHUB_WORKSPACE}/geometryDataChecks
+             echo ==
+             cd ${GITHUB_WORKSPACE}
+             git config --global user.email "dummy@gmail.com"
+             git config --global user.name "DummyUser"
+             git add -A .
+             git commit -m "Artifact commit"
+      
+      - name: Upload Artifacts
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+          ftp-username: ${{ secrets.GBUSER }}
+          ftp-password: ${{ secrets.GBPASS }}
+          local-dir: ${{ github.workspace }}/geometryDataChecks
+          
+      - name: checkFail
+        run: |
+             python geoBoundaryBot/gbCheckFail.py
+          
+  prResponse:
+      runs-on: ubuntu-latest
+      needs: [geoBoundaryDataCheck, geoBoundaryMetaDataCheck, geoBoundaryZipfileChecks]
+      if: always()
+      steps:
+      - name: Deploy geoBoundaryBot
+        run: git clone https://github.com/wmgeolab/geoBoundaryBot
+        
+      - name: Build Response
+        id: buildReponse
+        run: |
+             export gitsha=${{ github.event.pull_request.head.sha }}
+             cd ~
+             mkdir tmp
+             cd tmp
+             wget -m --wait=1 --no-parent http://www.logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}/
+             echo "==="
+             ls -l ~/tmp/www.logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+             echo "---"
+             cd ${GITHUB_WORKSPACE}
+             ls -l
+             python geoBoundaryBot/gbResponse.py
+             echo "==="
+             cat ~/tmp/response.txt
+             
+      - uses: pCYSl5EDgo/cat@master
+        id: gatherResponse
+        with:
+          path: ~tmp/response.txt
+        
+      -  run: echo $RESPONSE
+         env:
+          RESPONSE: ${{ steps.gatherResponse.outputs.text }}
+
+
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: ${{github.event.number}},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "${{ steps.gatherResponse.outputs.text }}"
+            })
+             
+
+      
+             
