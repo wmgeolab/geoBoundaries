@@ -49,8 +49,9 @@ jobs:
            
     - name: Setup Artifact Upload 
       run: |
-           cp -r ~/tmp ${GITHUB_WORKSPACE}/artifact
-           ls -l ${GITHUB_WORKSPACE}/artifact
+           cp -r ~/tmp ${GITHUB_WORKSPACE}/gbRelease/artifact
+           ls -l ${GITHUB_WORKSPACE}/
+           ls -l ${GITHUB_WORKSPACE}/gbRelease/artifact
            echo ==
       
     - name: Upload Artifacts
@@ -59,7 +60,7 @@ jobs:
         ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
         ftp-username: ${{ secrets.GBUSER }}
         ftp-password: ${{ secrets.GBPASS }}
-        local-dir: ${{ github.workspace }}/artifact
+        local-dir: ${{ github.workspace }}/gbRelease/artifact
     
     - name: checkFail
       run: |
