@@ -213,7 +213,7 @@ jobs:
              cd ~
              mkdir tmp
              cd tmp
-             wget --recursive --no-parent http://logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+             wget --recursive --no-parent http://logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}/
              echo "==="
              ls -l ~/tmp/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
       
