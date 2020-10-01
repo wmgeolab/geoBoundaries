@@ -9,20 +9,5 @@
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 - [ ] My submission is either a shapefile (with all the relevant files) or a geojson.
-- [ ] I have included a file named "meta.txt", and it follows the below format.
+- [ ] I have included a file named "meta.txt", with all required metadata (see an example at https://github.com/wmgeolab/gbRelease/blob/master/sourceData/gbOpen/AGO_ADM1.zip).
 - [ ] I have included a file named "license.png" or "license.jpg", which includes a screenshot of the loaded website (or other source) with the licensure information.
-
-
-``Example meta.txt
-Boundary Representative of Year: 2012
-ISO-3166-1 (Alpha-3): NER
-Boundary Type: ADM1
-Canonical Boundary Type Name: 
-Source 1: IPUMS DHS
-Source 2: 
-Release Type: gbOpen
-License: "Open Data Commons Open Database License 1.0"
-License Notes: 
-License Source: https://spatialdata.dhsprogram.com/references/subnational_data_schema.pdf
-Other Notes: 
-``
