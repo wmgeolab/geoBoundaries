@@ -56,7 +56,7 @@ jobs:
         host: ${{ secrets.SERVER }}
         user: ${{ secrets.GBUSER }}
         password: ${{ secrets.GBPASS }}
-        localDir: "tmp"
+        localDir: "~/tmp"
         remoteDir: ${{ env.REMOTEDIR }}
     
     - name: checkFail
