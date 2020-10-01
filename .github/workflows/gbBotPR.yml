@@ -172,4 +172,18 @@ jobs:
         run: |
              echo "==="
              ls -R ~/tmp/
+      
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: ${{github.event.number}},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '👋 Thanks for reporting!'
+            })
+             
+
+      
              
