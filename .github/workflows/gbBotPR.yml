@@ -52,9 +52,6 @@ jobs:
            cp -r ~/tmp ${GITHUB_WORKSPACE}/artifact
            ls -l ${GITHUB_WORKSPACE}/artifact
            echo ==
-           ls tmp/
-           echo ==
-           pwd
       
     - name: Upload Artifacts
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
