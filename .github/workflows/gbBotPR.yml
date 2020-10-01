@@ -207,15 +207,23 @@ jobs:
       needs: [geoBoundaryDataCheck, geoBoundaryMetaDataCheck, geoBoundaryZipfileChecks]
       if: always()
       steps:
-          
+      - name: Deploy geoBoundaryBot
+        run: git clone https://github.com/wmgeolab/geoBoundaryBot
+        
       - name: Initialize Linux Environment
         run: |
+             export gitsha=${{ github.event.pull_request.head.sha }}
              cd ~
              mkdir tmp
              cd tmp
              wget -m --wait=1 --no-parent http://www.logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}/
              echo "==="
              ls -l ~/tmp/www.logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+             echo "---"
+             cd ${GITHUB_WORKSPACE}
+             ls -l
+             python geoBoundaryBot/gbResponse.py
+             
       
       - uses: actions/github-script@v3
         with:
@@ -225,7 +233,7 @@ jobs:
               issue_number: ${{github.event.number}},
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '👋 Thanks for reporting!'
+              body: ${{ RESPONSE }}
             })
              
 
