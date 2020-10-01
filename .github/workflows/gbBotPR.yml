@@ -210,7 +210,7 @@ jobs:
       - name: Deploy geoBoundaryBot
         run: git clone https://github.com/wmgeolab/geoBoundaryBot
         
-      - name: Initialize Linux Environment
+      - name: Build Response
         run: |
              export gitsha=${{ github.event.pull_request.head.sha }}
              cd ~
