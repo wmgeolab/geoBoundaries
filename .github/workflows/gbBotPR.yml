@@ -54,6 +54,8 @@ jobs:
            ls -l ${GITHUB_WORKSPACE}/artifact
            echo ==
            cd ${GITHUB_WORKSPACE}
+           git config --global user.email "dummy@gmail.com"
+           git config --global user.name "DummyUser"
            git add -A .
            git commit -m "Artifact commit"
       
