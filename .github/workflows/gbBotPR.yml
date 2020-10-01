@@ -57,6 +57,7 @@ jobs:
         ftp-username: ${{ secrets.GBUSER }}
         ftp-password: ${{ secrets.GBPASS }}
         local-dir: tmp/
+        git-ftp-args: --insecure
     
     - name: checkFail
       run: |
