@@ -54,7 +54,7 @@ jobs:
            echo ==
            ls tmp/
            echo ==
-           ls ./tmp/
+           pwd
       
     - name: Upload Artifacts
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
@@ -62,7 +62,7 @@ jobs:
         ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
         ftp-username: ${{ secrets.GBUSER }}
         ftp-password: ${{ secrets.GBPASS }}
-        local-dir: tmp/
+        local-dir: ${GITHUB_WORKSPACE}/tmp
     
     - name: checkFail
       run: |
