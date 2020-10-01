@@ -50,14 +50,13 @@ jobs:
     - name: Setup Artifact Upload Destinations
       run: echo ::set-env name=REMOTEDIR::/home/geoBoundaryBot/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
       
-    - name: Build Artifacts
-      uses: sebastianpopp/ftp-action@releases/v2
+    - name: Upload Artifacts
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        host: ${{ secrets.SERVER }}
-        user: ${{ secrets.GBUSER }}
-        password: ${{ secrets.GBPASS }}
-        localDir: "~/tmp"
-        remoteDir: ${{ env.REMOTEDIR }}
+        ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+        ftp-username: ${{ secrets.GBUSER }}
+        ftp-password: ${{ secrets.GBPASS }}
+        local-dir: ~/tmp/
     
     - name: checkFail
       run: |
