@@ -62,7 +62,7 @@ jobs:
         ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
         ftp-username: ${{ secrets.GBUSER }}
         ftp-password: ${{ secrets.GBPASS }}
-        local-dir: ${{ GITHUB_WORKSPACE }}/tmp
+        local-dir: ${{ env.GITHUB_WORKSPACE }}/tmp
     
     - name: checkFail
       run: |
