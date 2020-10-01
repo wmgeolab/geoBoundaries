@@ -44,11 +44,11 @@ jobs:
            echo ${GITHUB_WORKSPACE}
            ls
            echo "==============================================="
-           mkdir ~/tmp
+           mkdir ~/tmp 
            python geoBoundaryBot/gbZipCheck.py
            
-    - name: Setup Artifact Upload Destinations
-      run: echo ::set-env name=REMOTEDIR::/home/geoBoundaryBot/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+    - name: Setup Artifact Upload 
+      run: cp -r ~/tmp ${GITHUB_WORKSPACE}/tmp
       
     - name: Upload Artifacts
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
@@ -56,7 +56,7 @@ jobs:
         ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
         ftp-username: ${{ secrets.GBUSER }}
         ftp-password: ${{ secrets.GBPASS }}
-        local-dir: ./tmp/
+        local-dir: tmp/
     
     - name: checkFail
       run: |
