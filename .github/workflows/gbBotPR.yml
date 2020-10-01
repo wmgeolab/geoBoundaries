@@ -211,6 +211,7 @@ jobs:
         run: git clone https://github.com/wmgeolab/geoBoundaryBot
         
       - name: Build Response
+        id: reponse
         run: |
              export gitsha=${{ github.event.pull_request.head.sha }}
              cd ~
@@ -223,6 +224,7 @@ jobs:
              cd ${GITHUB_WORKSPACE}
              ls -l
              python geoBoundaryBot/gbResponse.py
+             echo "::set-output name=responsetext::$RESPONSE"
              
       
       - uses: actions/github-script@v3
@@ -233,7 +235,7 @@ jobs:
               issue_number: ${{github.event.number}},
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: ${{ env.RESPONSE }}
+              body: ${{ steps.response.outputs.responsetext }}
             })
              
 
