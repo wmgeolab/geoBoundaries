@@ -224,7 +224,10 @@ jobs:
              cd ${GITHUB_WORKSPACE}
              ls -l
              python geoBoundaryBot/gbResponse.py
-             echo "::set-output name=responsetext::$RESPONSE"
+             echo "==="
+             echo $RESPONSE
+             echo "---"
+             echo $($RESPONSE)
              
       
       - uses: actions/github-script@v3
