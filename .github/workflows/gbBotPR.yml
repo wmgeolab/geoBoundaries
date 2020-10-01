@@ -215,7 +215,7 @@ jobs:
              cd tmp
              wget -m --wait=1 --no-parent http://www.logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}/
              echo "==="
-             ls -l ~/tmp/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+             ls -l ~/tmp/www.logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
       
       - uses: actions/github-script@v3
         with:
