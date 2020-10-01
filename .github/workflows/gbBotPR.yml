@@ -48,7 +48,13 @@ jobs:
            python geoBoundaryBot/gbZipCheck.py
            
     - name: Setup Artifact Upload 
-      run: cp -r ~/tmp ${GITHUB_WORKSPACE}/tmp
+      run: |
+           cp -r ~/tmp ${GITHUB_WORKSPACE}/tmp
+           ls -l ${GITHUB_WORKSPACE}/tmp
+           echo ==
+           ls tmp/
+           echo ==
+           ls ./tmp/
       
     - name: Upload Artifacts
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
