@@ -49,9 +49,9 @@ jobs:
            
     - name: Setup Artifact Upload 
       run: |
-           cp -r ~/tmp ${GITHUB_WORKSPACE}/artifact
+           cp -r ~/tmp ${GITHUB_WORKSPACE}/fileChecks
            ls -l ${GITHUB_WORKSPACE}/
-           ls -l ${GITHUB_WORKSPACE}/artifact
+           ls -l ${GITHUB_WORKSPACE}/fileChecks
            echo ==
            cd ${GITHUB_WORKSPACE}
            git config --global user.email "dummy@gmail.com"
@@ -65,7 +65,7 @@ jobs:
         ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
         ftp-username: ${{ secrets.GBUSER }}
         ftp-password: ${{ secrets.GBPASS }}
-        local-dir: ${{ github.workspace }}/artifact
+        local-dir: ${{ github.workspace }}/fileChecks
     
     - name: checkFail
       run: |
@@ -111,11 +111,25 @@ jobs:
              mkdir ~/tmp
              python geoBoundaryBot/gbMetaCheck.py
      
-      - name: Build Artifacts 
-        uses: actions/upload-artifact@v2
+      - name: Setup Artifact Upload 
+        run: |
+             cp -r ~/tmp ${GITHUB_WORKSPACE}/metaChecks
+             ls -l ${GITHUB_WORKSPACE}/
+             ls -l ${GITHUB_WORKSPACE}/metaChecks
+             echo ==
+             cd ${GITHUB_WORKSPACE}
+             git config --global user.email "dummy@gmail.com"
+             git config --global user.name "DummyUser"
+             git add -A .
+             git commit -m "Artifact commit"
+      
+      - name: Upload Artifacts
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          name: metaLogs
-          path: ~/tmp/
+          ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+          ftp-username: ${{ secrets.GBUSER }}
+          ftp-password: ${{ secrets.GBPASS }}
+          local-dir: ${{ github.workspace }}/metaChecks
           
       - name: checkFail
         run: |
@@ -164,11 +178,25 @@ jobs:
              mkdir ~/tmp
              python geoBoundaryBot/gbDataCheck.py
               
-      - name: Build Artifacts
-        uses: actions/upload-artifact@v2
+      - name: Setup Artifact Upload 
+        run: |
+             cp -r ~/tmp ${GITHUB_WORKSPACE}/geometryDataChecks
+             ls -l ${GITHUB_WORKSPACE}/
+             ls -l ${GITHUB_WORKSPACE}/geometryDataChecks
+             echo ==
+             cd ${GITHUB_WORKSPACE}
+             git config --global user.email "dummy@gmail.com"
+             git config --global user.name "DummyUser"
+             git add -A .
+             git commit -m "Artifact commit"
+      
+      - name: Upload Artifacts
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          name: dataLogs
-          path: ~/tmp/
+          ftp-server: ftp://ftp.geoboundaries.org/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
+          ftp-username: ${{ secrets.GBUSER }}
+          ftp-password: ${{ secrets.GBPASS }}
+          local-dir: ${{ github.workspace }}/geometryDataChecks
           
       - name: checkFail
         run: |
