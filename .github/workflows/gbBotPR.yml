@@ -46,12 +46,18 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp
            python geoBoundaryBot/gbZipCheck.py
+           
+    - name: Setup Artifact Upload Destinations
+      run: echo ::set-env name=REMOTEDIR::/home/geoBoundaryBot/logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
       
     - name: Build Artifacts
-      uses: actions/upload-artifact@v2
+      uses: sebastianpopp/ftp-action@releases/v2
       with:
-          name: zipLogs
-          path: ~/tmp/
+        host: ${{ secrets.SERVER }}
+        user: ${{ secrets.GBUSER }}
+        password: ${{ secrets.GBPASS }}
+        localDir: "tmp"
+        remoteDir: ${{ env.REMOTEDIR }}
     
     - name: checkFail
       run: |
