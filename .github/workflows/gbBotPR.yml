@@ -207,11 +207,13 @@ jobs:
       needs: [geoBoundaryDataCheck, geoBoundaryMetaDataCheck, geoBoundaryZipfileChecks]
       if: always()
       steps:
-      - uses: actions/download-artifact@v2
-        with:
-          path: ~/tmp/
+          
       - name: Initialize Linux Environment
         run: |
+             cd ~
+             mkdir tmp
+             cd tmp
+             wget --recursive --no-parent http://logs.geoboundaries.org/artifacts/${{ github.event.pull_request.head.sha }}
              echo "==="
              ls -R ~/tmp/
       
