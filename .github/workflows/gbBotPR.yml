@@ -211,7 +211,7 @@ jobs:
         run: git clone https://github.com/wmgeolab/geoBoundaryBot
         
       - name: Build Response
-        id: reponse
+        id: buildReponse
         run: |
              export gitsha=${{ github.event.pull_request.head.sha }}
              cd ~
@@ -225,11 +225,18 @@ jobs:
              ls -l
              python geoBoundaryBot/gbResponse.py
              echo "==="
-             echo $RESPONSE
-             echo "---"
-             echo $($RESPONSE)
+             cat ~/tmp/responseTxt
              
-      
+      - uses: pCYSl5EDgo/cat@master
+        id: gatherResponse
+        with:
+          path: ~tmp/response.txt
+        
+      -  run: echo $RESPONSE
+         env:
+          RESPONSE: ${{ steps.gatherResponse.outputs.text }}
+
+
       - uses: actions/github-script@v3
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
@@ -238,7 +245,7 @@ jobs:
               issue_number: ${{github.event.number}},
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: ${{ steps.response.outputs.responsetext }}
+              body: ${{ steps.gatherResponse.outputs.text }}
             })
              
 
