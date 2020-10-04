@@ -1,2 +1,0 @@
-CRITICAL ERROR: An error in the geometry of the file ./releaseCandidateInit/gbReleaseCandidate_3_0_0/MMR/ADM4/MMR_ADM4.shp exists that we could not automatically fix.  It looks like a geometry is missing?
-INFO: No ISO information was found in a validly named column for: ./releaseCandidateInit/gbReleaseCandidate_3_0_0/SWE/ADM3/SWE_ADM3.shp

@@ -1,0 +1,23 @@
+license_name, licenseText, gbOpen, gbAuthoritative, gbHumanitarian, lMustAttribute, lMustShareAlike, lRedistributionAllowed, lMustIndicateChanges, lSpecialUseRestrictions
+"Attribuzione 3.0 Italia (CC BY 3.0 IT)", "cc_by_30_it.pdf", Yes, Yes, Yes, Yes, No, Yes, Yes, No
+"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication", "cc0_10.pdf", Yes, Yes, Yes, No, No, Yes, No, No
+"Creative Commons Attribution - NonCommercial 4.0 International (CC BY-NC 4.0)", "CCBY-NC40.pdf", No, Yes, Yes, Yes, No, Yes, Yes, Yes
+"Creative Commons Attribution 2.5 India (CC BY 2.5 IN)", "CCBY_25_IN.pdf", Yes, Yes, Yes, Yes, No, Yes, Yes, No
+"Creative Commons Attribution 3.0 License", "cc_by_30.pdf", Yes, Yes, Yes, Yes, No, Yes, Yes, No
+"Public Domain", NA, Yes, Yes, Yes, No, No, Yes, No, No
+"Other - Direct Permission", "Screenshot of direct permission must be in provided zip file.", No, Yes, Yes, Yes, Yes, Yes, Yes, Yes, Yes
+"Creative Commons Attribution 4.0 International (CC BY 4.0)", "CCBY-NC40.pdf", Yes, Yes, Yes, Yes, No, Yes, Yes, No
+"Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)", "ccby_30_IGO.pdf", Yes, Yes, Yes, Yes, No, Yes, Yes, No
+"Creative Commons Attribution-ShareAlike 3.0 Unported", "cc_bysa_30.pdf", Yes, Yes, Yes, Yes, Yes, Yes, Yes, No
+"Creative Commons Attribution-ShareAlike 2.0", "ccbysa_20.pdf", Yes, Yes, Yes, Yes, Yes, Yes, Yes, No
+"Creative Commons Attribution-ShareAlike 4.0 International License", "CCBY-SA40.pdf", Yes, Yes, Yes, Yes, Yes, Yes, Yes, No
+"Data license Germany - Attribution - Version 2.0", "OGE.pdf", Yes, Yes, Yes, Yes, No, Yes, Yes, No
+"MIMU Data License (MIMU)", "MIMU.pdf", No, Yes, Yes, Yes, No, Yes, No, Yes
+"Non-Commercial Use Only", "Details must be provided in notes and screenshot.", No, Yes, Yes, Yes, Yes, Yes, Yes, Yes
+"Open Data Commons Attribution License 1.0", "ODC_Attribution.pdf", Yes, Yes, Yes, Yes, No, Yes, No, No
+"Open Data Commons Open Database License 1.0", "ODbl.pdf", Yes, Yes, Yes, Yes, Yes, Yes, Yes, Yes
+"Open Government Licence v3.0", "OGL3.pdf", Yes, Yes, Yes, Yes, No, Yes, No, No
+"Open Government Licence v1.0", "OGL1.pdf", Yes, Yes, Yes, Yes, No, Yes, No, No
+"Other - Humanitarian", "Details must be provided in notes and screenshot.", No, Yes, Yes, Yes, Yes, Yes, Yes, Yes
+"Singapore Open Data License Version 1.0", "singaporeOpen1.pdf", Yes, Yes, Yes, Yes, No, Yes, No, No
+"National Institute of Statistics (INE) Data License", "INE.pdf", Yes, Yes, Yes, Yes, Yes, Yes, Yes, No

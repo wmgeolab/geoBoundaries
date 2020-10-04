@@ -1,4 +1,0 @@
-INFO: No ISO information was found in a validly named column for: ./releaseCandidateInit/gbReleaseCandidate_3_0_0/SYC/ADM1/SYC_ADM1.shp
-INFO: The shapefile ./releaseCandidateInit/gbReleaseCandidate_3_0_0/CAN/ADM0/CAN_ADM0.shp has a minor topology error, which was corrected with a shapely buffer = 0.
-INFO: The shapefile ./releaseCandidateInit/gbReleaseCandidate_3_0_0/CAN/ADM2/CAN_ADM2.shp has a minor topology error, which was corrected with a shapely buffer = 0.
-INFO: No ISO information was found in a validly named column for: ./releaseCandidateInit/gbReleaseCandidate_3_0_0/CAN/ADM2/CAN_ADM2.shp

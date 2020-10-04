@@ -1,2 +1,0 @@
-CRITICAL ERROR: Zipfile ./releaseCandidateInit/gbReleaseCandidate_2_0_0_0/AFG/Afghanistan/ failed to extract.
-CRITICAL ERROR: Zipfile ./releaseCandidateInit/gbReleaseCandidate_2_0_0_0/AFG/Afghanistan/ failed to extract.

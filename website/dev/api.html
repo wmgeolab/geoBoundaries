@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>geoBoundaries</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!-- Scripts -->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9276981-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-9276981-3');
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Ads: 984002936 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-984002936"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-984002936');
+</script>
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+	gtag('event', 'conversion', {'send_to': 'AW-984002936/BycZCJ_8kdMBEPjimtUD'});
+  </script>
+  
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<span class="logo"><a href="index.html"><strong>geoBoundaries</strong></a> by the <a
+							href="http://geolab.wm.edu">William & Mary geoLab</a></span>
+					<ul class="icons">
+						<li><a href="https://twitter.com/wmgeolab?lang=en" class="icon brands fa-twitter"><span
+									class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/company/51598643/"
+								class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Banner -->
+				<section>
+					<header class="main">
+						<h1>API & Archival Access</h1>
+					</header>
+					<hr class="major" />
+
+					<h2>Web-based Archival Access</h2>
+					<p>All versions of geoBoundaries can be accessed using a simple online file browser located at
+						https://www.geoboundaries.org/data/. Further, since 2.0 all versions can also be accessed
+						through our API, as detailed below. Versions prior to 2.0 are made available through the online
+						file browser only; these files are not standardized to the same standard of our contemporary
+						releases. </p>
+					<p>Archival data for any boundary can also be accessed by adjusting any single boundaries URL. For
+						example, if you are looking at the files for Norway in version 2.0.0 of geoBoundaries, the URL
+						you would use is https://www.geoboundaries.org/data/geoBoundaries-2_0_0/NOR/. To see version
+						2.0.1, you can simply adjust the URL to
+						https://www.geoboundaries.org/data/geoBoundaries-2_0_1/NOR/.</p>
+
+					<hr class="major" />
+
+					<h2>API Access to geoBoundaries</h2>
+					Information on every geoBoundary - current and past - can be retrieved through a simple query; a
+					JSON object is returned:
+					<pre><code>https://www.geoboundaries.org/gbRequest.html?ISO=[3-LETTER-ISO-CODE]&ADM=[ADM-LEVEL]</code></pre>
+					<p>Users can also enter special phrases "ALL" for either "ADM" or "ISO" to get a multi-boundary
+						return (within the element 'geoBoundaries'). A full list of parameters users can include are:
+					</p>
+					<ul>
+						<li><b>ISO</b> - Optional; defaults to 'ALL'. The three-letter ISO code representing the country
+							of interest. The special phrase 'ALL' can be entered to return all ISO codes in the
+							database.</li>
+						<li><b>ADM</b> - Optional; defaults to 'ALL'. One of ADM0, ADM1, ADM2, ADM3, ADM4 or ADM5,
+							representing each level of administrative hierarchy. The special phrase 'ALL' can be entered
+							to return all levels available.</li>
+						<li><b>VER</b> - Optional; defaults to the most recent version of geoBoundaries available. The
+							geoboundaries version requested, with underscores. For example, 3_0_0 would return data from
+							version 3.0.0 of geoBoundaries.</li>
+						<li><b>TYP</b> - Optional; defaults to HPSCU. One of HPSCU, HPSCGS, SSCGS, or SSCU. Determines
+							the type of boundary link you receive. </li>
+						<ul>
+							<li><i>HPSCU</i> - High Precision Single Country Unstadardized. The premier geoBoundaries
+								release, representing the highest precision files available for every country in the
+								world. No standardization is performed on these files, so (for example) two countries
+								may overlap in the case of contested boundaries.</li>
+							<li><i>HPSCGS</i> - High Precision Single Country Globally Standardized. A version of
+								geoBoundaries high percision data that has been clipped to the U.S. Department of State
+								boundary file, ensuring no contested boundaries or overlap in the dataset. This globally
+								standardized product may have gaps between countries. If you need a product with no
+								gaps, we recommend our simplified global product.</li>
+							<li><i>SSCU</i> - Simplified Single Country Unstandardized. A simplified version of every
+								file available for every country in the world. No standardization is performed on these
+								files, so (for example) two countries may overlap in the case of contested boundaries.
+							</li>
+							<li><i>SSCGS</i> - Simplified Single Country Globally Standardized. A version of
+								geoBoundaries simplified data that has been clipped to the U.S. Department of State
+								boundary file, ensuring no contested boundaries or overlap in the dataset. This globally
+								standardized product may have gaps between countries.</li>
+						</ul>
+					</ul>
+					<p>
+
+
+					</p>
+					<div id="tab-container" class="tab-container">
+						<ul class='etabs'>
+							<li class='tab'><a href="#tabs1-html">Loading with Python</a></li>
+							<li class='tab'><a href="#tabs1-js">Visualizing with Python</a></li>
+							<li class='tab'><a href="#tabs1-css">Generic Example</a></li>
+						</ul>
+
+						<div id="tabs1-html" class="box">
+							<!-- HTML generated using hilite.me -->
+							<div
+								style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+								<pre style="margin: 0; line-height: 125%">	<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">json</span>
+	<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">requests</span>
+	r <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(<span style="color: #BA2121">&quot;https://www.geoboundaries.org/gbRequest.html?ISO=EGY&amp;ADM=ADM1&quot;</span>)
+	dlPath <span style="color: #666666">=</span> r<span style="color: #666666">.</span>json()[<span style="color: #666666">0</span>][<span style="color: #BA2121">&#39;gjDownloadURL&#39;</span>]
+	geoBoundary <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(dlPath)<span style="color: #666666">.</span>json()
+	<span style="color: #008000">print</span>(geoBoundary[<span style="color: #BA2121">&quot;features&quot;</span>][<span style="color: #666666">1</span>][<span style="color: #BA2121">&quot;geometry&quot;</span>])
+</pre>
+							</div>
+
+
+							<b>Returns the shape(s) representing one of the administrative boundaries:</b>
+							<!-- HTML generated using hilite.me -->
+							<div
+								style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+								<pre style="margin: 0; line-height: 125%">{<span style="color: #aa5500">&#39;coordinates&#39;</span>: [[[
+    [<span style="color: #009999">34.52329565</span>, <span style="color: #009999">27.966960461223056</span>],
+    [<span style="color: #009999">34.5237859</span>, <span style="color: #009999">27.9668325</span>],
+    ...
+   ]]],
+ <span style="color: #aa5500">&#39;type&#39;</span>: <span style="color: #aa5500">&#39;MultiPolygon&#39;</span>}
+</pre>
+							</div>
+
+						</div>
+
+						<div id="tabs1-js" class="box">
+							<!-- HTML generated using hilite.me -->
+							<div
+								style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+								<pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold"></span> <span style="color: #0000FF; font-weight: bold"></span>
+	<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">json</span>
+	<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">requests</span>
+	<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
+	<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">shapely.geometry</span> <span style="color: #008000; font-weight: bold">import</span> shape
+	
+	r <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(<span style="color: #BA2121">&quot;https://www.geoboundaries.org/gbRequest.html?ISO=EGY&amp;ADM=ADM1&quot;</span>)
+	dlPath <span style="color: #666666">=</span> r<span style="color: #666666">.</span>json()[<span style="color: #666666">0</span>][<span style="color: #BA2121">&#39;gjDownloadURL&#39;</span>]
+	geoBoundary <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(dlPath)<span style="color: #666666">.</span>json()
+	
+	<span style="color: #408080; font-style: italic">#Matplotlib Visualization</span>
+	fig <span style="color: #666666">=</span> plt<span style="color: #666666">.</span>figure(<span style="color: #666666">1</span>, figsize<span style="color: #666666">=</span>(<span style="color: #666666">5</span>,<span style="color: #666666">5</span>), dpi<span style="color: #666666">=90</span>)
+	axs <span style="color: #666666">=</span> fig<span style="color: #666666">.</span>add_subplot(<span style="color: #666666">111</span>)
+	axs<span style="color: #666666">.</span>set_title(<span style="color: #BA2121">&#39;Example Visualization&#39;</span>)
+	
+	<span style="color: #408080; font-style: italic">#Accounting for Multipolygon Boundaries</span>
+	<span style="color: #008000; font-weight: bold">for</span> boundary <span style="color: #AA22FF; font-weight: bold">in</span> geoBoundary[<span style="color: #BA2121">&quot;features&quot;</span>]:
+	  <span style="color: #008000; font-weight: bold">if</span>(boundary[<span style="color: #BA2121">&quot;geometry&quot;</span>][<span style="color: #BA2121">&#39;type&#39;</span>] <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;MultiPolygon&quot;</span>):
+		polys <span style="color: #666666">=</span> <span style="color: #008000">list</span>(shape(boundary[<span style="color: #BA2121">&quot;geometry&quot;</span>]))
+		<span style="color: #008000; font-weight: bold">for</span> poly <span style="color: #AA22FF; font-weight: bold">in</span> polys:
+		  xs, ys <span style="color: #666666">=</span> poly<span style="color: #666666">.</span>exterior<span style="color: #666666">.</span>xy    
+		  axs<span style="color: #666666">.</span>fill(xs, ys, alpha<span style="color: #666666">=0.5</span>, fc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;red&#39;</span>, ec<span style="color: #666666">=</span><span style="color: #BA2121">&#39;black&#39;</span>)
+	  <span style="color: #008000; font-weight: bold">else</span>:
+		xs, ys <span style="color: #666666">=</span> shape(boundary[<span style="color: #BA2121">&quot;geometry&quot;</span>])<span style="color: #666666">.</span>exterior<span style="color: #666666">.</span>xy    
+		axs<span style="color: #666666">.</span>fill(xs, ys, alpha<span style="color: #666666">=0.5</span>, fc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;red&#39;</span>, ec<span style="color: #666666">=</span><span style="color: #BA2121">&#39;black&#39;</span>)
+	
+	fig<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&quot;example.png&quot;</span>)
+	</pre>
+							</div>
+
+							<b>Creates this figure (named example.png):</b>
+							<img src="images/example.png">
+
+							<!-- content -->
+						</div>
+						<div id="tabs1-css" class="box">
+							All requests to our API will return either an error (i.e., no file exists for the parameters
+							passed to us) or a valid JSON object. A valid call and example are included here.<br />
+							<b>Generic Query Example:</b>
+							<pre><code>https://www.geoboundaries.org/gbRequest.html?ISO=USA&ADM=ADM1&TYP=SSCU&VER=3_0_0</code></pre>
+							<b>Response Example:</b>
+							<!-- HTML generated using hilite.me -->
+							<div
+								style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+								<pre style="margin: 0; line-height: 125%">[
+    {
+        &quot;boundaryID&quot;: <span style="color: #0000FF">&quot;USA-ADM1-3_0_0-G618&quot;</span>,
+        &quot;boundaryISO&quot;: <span style="color: #0000FF">&quot;USA&quot;</span>,
+        &quot;boundaryYear&quot;: <span style="color: #0000FF">&quot;2017.0&quot;</span>,
+        &quot;boundaryType&quot;: <span style="color: #0000FF">&quot;ADM1&quot;</span>,
+        &quot;boundarySource-1&quot;: <span style="color: #0000FF">&quot;US Census&quot;</span>,
+        &quot;boundarySource-2&quot;: <span style="color: #0000FF">&quot;&quot;</span>,
+        &quot;boundaryLicense&quot;: <span style="color: #0000FF">&quot;Open Data Commons Open Database License 1.0&quot;</span>,
+        &quot;licenseDetail&quot;: <span style="color: #0000FF">&quot;&quot;</span>,
+        &quot;licenseSource&quot;: <span style="color: #0000FF">&quot;https:\/\/www.census.gov\/about\/policies\/open-gov\/open-data.html&quot;</span>,
+        &quot;boundarySourceURL&quot;: <span style="color: #0000FF">&quot;https:\/\/www.census.gov\/geographies\/mapping-files\/time-series\/geo\/carto-boundary-file.html&quot;</span>,
+        &quot;boundaryUpdate&quot;: <span style="color: #0000FF">&quot;2020-05-25&quot;</span>,
+        &quot;downloadURL&quot;: <span style="color: #0000FF">&quot;https:\/\/geoboundaries.org\/data\/geoBoundariesSSCU-3_0_0\/USA\/ADM1\/geoBoundariesSSCU-3_0_0-USA-ADM1-all.zip&quot;</span>,
+        &quot;gjDownloadURL&quot;: <span style="color: #0000FF">&quot;https:\/\/geoboundaries.org\/data\/geoBoundariesSSCU-3_0_0\/USA\/ADM1\/geoBoundariesSSCU-3_0_0-USA-ADM1.geojson&quot;</span>,
+        &quot;imagePreview&quot;: <span style="color: #0000FF">&quot;https:\/\/geoboundaries.org\/data\/geoBoundariesSSCU-3_0_0\/USA\/ADM1\/geoBoundariesPreviewSSCU-3_0_0-USA-ADM1.png&quot;</span>
+    }
+]
+</pre>
+							</div>
+
+
+						</div>
+					</div>
+				</section>
+
+
+			</div>
+		</div>
+
+
+		<!-- Sidebar -->
+		<div id="sidebar" , class="inactive">
+			<div class="inner">
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#getdata">Get Data</a></li>
+						<li><a href="api.html">API & Archive</a></li>
+						<li><a href="index.html#citation">Citation and Use</a></li>
+						<li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231866">Technical
+								Paper</a></li>
+						<li><a href="issues.html">Caveats & Roadmap</a></li>
+						<li>
+							<span class="opener">Get Involved</span>
+							<ul>
+								<li><a href="https://github.com/wmgeolab/gbRelease">GitHub Repository</a></li>
+								<li><a href="issues.html#contribute">Contribute Boundaries</a></li>
+								<li><a href="https://github.com/wmgeolab/gbRelease/issues">Report Issues</a></li>
+								<li><a href="https://giving.wm.edu/give-now/#allocation=4674">Buy us a Pizza</a></li>
+							</ul>
+						</li>
+
+
+					</ul>
+				</nav>
+
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Get in touch</h2>
+					</header>
+					<p>Want to contribute, identified an error, or otherwise want to chat? Please reach out!</p>
+					<ul class="contact">
+						<li class="icon solid fa-envelope"><a href="#">team@geoboundaries.org</a></li>
+						<li class="icon solid fa-phone">(757) 221-1970</li>
+						<li class="icon solid fa-home">geoLab, Applied Science<br />
+							540 Landrum Drive<br />
+							Williamsburg, VA 23185</li>
+					</ul>
+				</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>. <tiny>With respect to works
+							on or made available through download from the this website, we make no representations or
+							warranties—express, implied, or statutory—as to the validity, accuracy, completeness, or
+							fitness for a particular purpose; nor represent that use of such works would not infringe
+							privately owned rights; nor assume any liability resulting from use of such works; and shall
+							in no way be liable for any costs, expenses, claims, or demands arising out of use of such
+							works.</tiny>
+					</p>
+				</footer>
+
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.easytabs.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () { $('#tab-container').easytabs(); });
+	</script>
+</body>
+
+</html>

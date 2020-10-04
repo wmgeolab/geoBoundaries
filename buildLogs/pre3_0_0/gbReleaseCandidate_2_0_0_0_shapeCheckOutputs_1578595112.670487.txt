@@ -1,2 +1,0 @@
-CRITICAL ERROR: Shapefile ./releaseCandidateInit/gbReleaseCandidate_2_0_0_0/ECU/ADM3/ECU_ADM3.shp has an incorrect projection.
-CRITICAL ERROR: Shapefile ./releaseCandidateInit/gbReleaseCandidate_2_0_0_0/GBR/ADM3/GBR_ADM3.shp has an incorrect projection.

@@ -1,4 +1,0 @@
-CRITICAL ERROR: Zipfile ./releaseCandidateInit/gbReleaseCandidate_3_0_0/WSM/ADM1/ failed to extract.
-CRITICAL ERROR: Zipfile ./releaseCandidateInit/gbReleaseCandidate_3_0_0/PHL/ADM2/ failed to extract.
-CRITICAL ERROR: An error in the geometry of the file ./releaseCandidateInit/gbReleaseCandidate_3_0_0/MMR/ADM4/MMR_ADM4.shp exists that we could not automatically fix.  It looks like a geometry is missing?
-CRITICAL ERROR: Zipfile ./releaseCandidateInit/gbReleaseCandidate_3_0_0/SWE/ADM3/ failed to extract.

@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>geoBoundaries</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="assets/js/slick/slick.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/BeerSlider.css" />
+	<!-- Scripts -->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9276981-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-9276981-3');
+	</script>
+
+  
+	<!-- Global site tag (gtag.js) - Google Ads: 984002936 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-984002936"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-984002936');
+</script>
+
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+	gtag('event', 'conversion', {'send_to': 'AW-984002936/BycZCJ_8kdMBEPjimtUD'});
+  </script>
+  
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<span class="logo"><a href="index.html"><strong>geoBoundaries</strong></a> by the <a
+							href="http://geolab.wm.edu">William & Mary geoLab</a></span>
+					<ul class="icons">
+						<li><a href="https://twitter.com/wmgeolab?lang=en" class="icon brands fa-twitter"><span
+									class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/company/51598643/"
+								class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Banner -->
+				<section>
+					<header class="main">
+						<h1>Comprehensive Global Administrative Zones (CGAZ)</h1>
+					</header>
+
+					<span class="image main"><img src="images/cgaz.jpg" alt="" /></span>
+					<p>The CGAZ dataset provides single-file concatantions of boundaries for every country in the world,
+						alongside hierarchical information about what administrative zones each boundary falls in (i.e.,
+						what county a state is in). We provide three downloads for this product, for ADM levels 2, 1 and
+						0, respectively; extensive efforts are made to ensure that file sizes are small enough to be
+						used in most traditional desktop software. Both polygon simplification and gap filling along the
+						edges of polygons are used in this product; this will result in imprecision that may be
+						undesireable for some use cases. If you are working with a single or small number of countries,
+						we recommend you use one of our <a
+							href="https://www.geoboundaries.org/index.html#getdata">single-country products</a>. If you
+						need our highest level of precision for your
+						application, we recommend you view our <a href="downloadFull.html">High Precision single country
+							downloads</a>.</p>
+					<p>Unlike our other products, by its nature CGAZ must define contested areas as belonging to a given
+						country. To do this, we (a) attempt to establish the official ruling of the standardization
+						we're using (currently the U.S. Department of State), and (b) If no official ruling, policy, or
+						other statement exists, attribute the contested area to the country with the largest population.
+						We recognize that this strategy will not be optimal for all use cases, and intend to produce
+						additional world views with different boundary sets in the near future. Further, if you prefer
+						to construct your own world view using our data, you can do so using our <a
+							href="https://www.geoboundaries.org/downloadSimple.html">unstandardized simplified</a> or <a
+							href="https://www.geoboundaries.org/downloadFull.html">unstandardized high precision</a>
+						datasets, which seek to provide boundaries as they are defined by local authorities.</p>
+
+						<hr class="major" />
+						<h2>Selecting the best Global Product - Simplification Examples</h2>
+					<div class="row gtr-200">
+						<div class="col-6 col-12-medium">
+							<div class="image object" id="imageRotate" style="max-height:250px;max-width:500px;height:auto;width:auto;">
+								<div id="slider3" class="beer-slider" data-beer-label="High Resolution">
+									<img src="images/ADM0_sim25.jpg" alt="">
+									<div class="beer-reveal" data-beer-label="Low Resolution">
+									  <img src="images/ADM0_sim10.jpg" alt="">
+									</div>
+								  </div>
+							
+							
+							
+								<div id="slider" class="beer-slider" data-beer-label="High Resolution">
+								<img src="images/ADM2_sim25.jpg" alt="">
+								<div class="beer-reveal" data-beer-label="Low Resolution">
+								  <img src="images/ADM2_sim10.jpg" alt="">
+								</div>
+							  </div>
+
+
+							  <div id="slider2" class="beer-slider" data-beer-label="High Resolution">
+								<img src="images/ADM1_sim25.jpg" alt="">
+								<div class="beer-reveal" data-beer-label="Low Resolution">
+								  <img src="images/ADM1_sim10.jpg" alt="">
+								</div>
+							  </div>
+
+							  
+
+
+							</div>
+
+						</div>
+						<div class="col-6 col-12-medium">
+							<blockquote>Our global products each come in two versions, which represent a tradeoff
+								between file size and geographic precision. Today, we focus on two global products: (a)
+								'low resolution', which are simplified to only 10% of points, and (b) 'high resolution',
+								which use the same files as our <a href="downloadSimple.html">SSCGS</a> single country
+								release. Examples of the differences can be seen to the right to help you choose the
+								best product for your use. Of note, the 25% threshold was chosen as a generally
+								effective breakpoint balancing precision with file size; values beyond 25% appear to
+								have rapidly diminishing returns in terms of precision gained.  </blockquote>
+								<span id="arrowHold"></span>
+						</div>
+
+					</div>
+
+					<hr class="major" />
+					<h2>Download CGAZ</h2>
+<p>As usual, the only requirement for use is <a href="index.html#citation">acknowledgement</a></p>
+
+
+
+						<div id="ADM0" class="box">
+									<table>
+										<tbody>
+											<tr>
+												<td><b>ADM Level</b></td>
+												<td><b>Simplification Level</b></td>
+												<td><b>GeoJSON</b></td>
+												<td><b>TopoJSON</b></td>
+												<td><b>Shapefile</b></td>
+											</tr>
+											<tr>
+												<td>ADM0</td>
+												<td>25% (High Resolution Product)</td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM0/simplifyRatio_25/geoBoundariesCGAZ_ADM0.geojson"><i class='fa fa-download'></i>70MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM0/simplifyRatio_25/geoBoundariesCGAZ_ADM0.topojson"><i class='fa fa-download'></i>12MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM0/simplifyRatio_25/shp/"><i class='fa fa-download'></i>29MB</a></td>
+											</tr>
+											<tr>
+												<td>ADM0</td>
+												<td>10% (Low Resolution Product)</td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM0/simplifyRatio_10/geoBoundariesCGAZ_ADM0.geojson"><i class='fa fa-download'></i>38MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM0/simplifyRatio_10/geoBoundariesCGAZ_ADM0.topojson"><i class='fa fa-download'></i>6MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM0/simplifyRatio_10/shp/"><i class='fa fa-download'></i>16MB</a></td>
+											</tr>
+											<tr>
+												<td>ADM1</td>
+												<td>25% (High Resolution Product)</td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM1/simplifyRatio_25/geoBoundariesCGAZ_ADM1.geojson"><i class='fa fa-download'></i>130MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM1/simplifyRatio_25/geoBoundariesCGAZ_ADM1.topojson"><i class='fa fa-download'></i>20MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM1/simplifyRatio_25/shp/"><i class='fa fa-download'></i>54MB</a></td>
+											</tr>
+											
+											
+											
+											<tr>
+												<td>ADM1</td>
+												<td>10% (Low Resolution Product)</td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM1/simplifyRatio_10/geoBoundariesCGAZ_ADM1.geojson"><i class='fa fa-download'></i>65MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM1/simplifyRatio_10/geoBoundariesCGAZ_ADM1.topojson"><i class='fa fa-download'></i>10MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM1/simplifyRatio_10/shp/"><i class='fa fa-download'></i>27MB</a></td>
+											</tr>
+
+											<tr>
+												<td>ADM2</td>
+												<td>25% (High Resolution Product)</td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM2/simplifyRatio_25/geoBoundariesCGAZ_ADM2.geojson"><i class='fa fa-download'></i>264MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM2/simplifyRatio_25/geoBoundariesCGAZ_ADM2.topojson"><i class='fa fa-download'></i>73MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM2/simplifyRatio_25/shp/"><i class='fa fa-download'></i>122MB</a></td>
+											</tr>
+											
+											
+											
+											<tr>
+												<td>ADM2</td>
+												<td>10% (Low Resolution Product)</td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM2/simplifyRatio_10/geoBoundariesCGAZ_ADM2.geojson"><i class='fa fa-download'></i>160MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM2/simplifyRatio_10/geoBoundariesCGAZ_ADM2.topojson"><i class='fa fa-download'></i>59MB</a></td>
+												<td><a href="https://www.geoboundaries.org/data/geoBoundariesCGAZ-3_0_0/ADM2/simplifyRatio_10/shp/"><i class='fa fa-download'></i>80MB</a></td>
+											</tr>
+										</tbody>
+									</table>
+									
+
+
+						</div>
+
+
+
+
+
+				</section>
+
+
+			</div>
+		</div>
+
+		<script>
+
+		</script>
+		<!-- Sidebar -->
+		<div id="sidebar" , class="inactive">
+			<div class="inner">
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#getdata">Get Data</a></li>
+						<li><a href="api.html">API & Archive</a></li>
+						<li><a href="index.html#citation">Citation and Use</a></li>
+						<li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231866">Technical
+								Paper</a></li>
+						<li><a href="issues.html">Caveats & Roadmap</a></li>
+						<li>
+							<span class="opener">Get Involved</span>
+							<ul>
+								<li><a href="https://github.com/wmgeolab/gbRelease">GitHub Repository</a></li>
+								<li><a href="issues.html#contribute">Contribute Boundaries</a></li>
+								<li><a href="https://github.com/wmgeolab/gbRelease/issues">Report Issues</a></li>
+								<li><a href="https://giving.wm.edu/give-now/#allocation=4674">Buy us a Pizza</a></li>
+							</ul>
+						</li>
+
+
+					</ul>
+				</nav>
+
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Get in touch</h2>
+					</header>
+					<p>Want to contribute, identified an error, or otherwise want to chat? Please reach out!</p>
+					<ul class="contact">
+						<li class="icon solid fa-envelope"><a href="#">team@geoboundaries.org</a></li>
+						<li class="icon solid fa-phone">(757) 221-1970</li>
+						<li class="icon solid fa-home">geoLab, Applied Science<br />
+							540 Landrum Drive<br />
+							Williamsburg, VA 23185</li>
+					</ul>
+				</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>. <tiny>With respect to works
+							on or made available through download from the this website, we make no representations or
+							warranties—express, implied, or statutory—as to the validity, accuracy, completeness, or
+							fitness for a particular purpose; nor represent that use of such works would not infringe
+							privately owned rights; nor assume any liability resulting from use of such works; and shall
+							in no way be liable for any costs, expenses, claims, or demands arising out of use of such
+							works.</tiny>
+					</p>
+				</footer>
+
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.easytabs.js" type="text/javascript"></script>
+	<script src="assets/js/BeerSlider.js" type="text/javascript"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/slick/slick.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#tab-container').easytabs();
+			$('#imageRotate').slick({
+			appendArrows:"#arrowHold",
+			dots: false,
+			draggable: false,
+			infinite: true,
+			slidesToShow: 1,
+			centerMode: false,
+			centerPadding: '40px',
+			autoplay: false,
+			variableWidth: false,
+			accessibility: false,
+			arrows: true,
+			prevArrow:'<button type="button" class="slick-prev">Previous Example</button>',
+			nextArrow:'<button type="button" class="slick-next">Next Example</button>'
+		});
+		});
+		new BeerSlider(document.getElementById('slider'));
+		new BeerSlider(document.getElementById('slider2'));
+		new BeerSlider(document.getElementById('slider3'));
+
+	</script>
+</body>
+
+</html>
