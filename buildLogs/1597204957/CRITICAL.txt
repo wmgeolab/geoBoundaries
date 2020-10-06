@@ -1,9 +1,0 @@
-ISO AFG | ADM0 does not have a valid license.
-ISO AFG | ADM1 does not have a valid license.
-ISO AFG | ADM2 does not have a valid license.
-ISO AGO | ADM0 does not have a valid license.
-ISO AGO | ADM1 does not have a valid license.
-ISO AGO | ADM3 does not have a valid license.
-ISO AGO | ADM2 does not have a valid license.
-ISO ARG | ADM2 does not have a valid license.
-ISO ARM | ADM2 does not have a valid license.
