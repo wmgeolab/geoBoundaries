@@ -26,7 +26,7 @@ jobs:
         
     - name: Post-Download Initialization Steps
       run: |
-           git pull origin dev
+           git checkout dev
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
     - name: Checking gbAuthoritative Files
@@ -74,7 +74,7 @@ jobs:
         
     - name: Post-Download Initialization Steps
       run: |
-           git pull origin dev
+           git checkout dev
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
     - name: Checking gbHumanitarian Files
@@ -121,7 +121,7 @@ jobs:
         
     - name: Post-Download Initialization Steps
       run: |
-           git pull origin dev
+           git checkout dev
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
     - name: Checking gbOpen Files
