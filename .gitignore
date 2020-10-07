@@ -5,6 +5,11 @@ tmp
 git-lfs
 **/.DS_Store
 
+#For action pulls
+geoBoundaryBot
+dta
+RESULT.txt
+
 #Generic bits
 # Folder view configuration files
 .DS_Store
