@@ -2,7 +2,7 @@ on:
     workflow_dispatch
 
 jobs:
-  geoBoundaryZipfileChecks:
+  gbAuthoritativeChecks:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
@@ -24,3 +24,22 @@ jobs:
     - name: Post-Download Initialization Steps
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
+
+    - name: Checking gbAuthoritative Files
+      id: checks
+      run: |
+           echo "==============================================="
+           mkdir ~/tmp 
+           python geoBoundaryBot/gbBuild.py gbAuthoritative dev False
+      
+    - name: Commit Files
+      run: |
+           git config --local user.email "danr@wm.edu"
+           git config --local user.name "DanRunfola"
+           git commit -m "Add changes" -a
+    
+    - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: 'dev'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
