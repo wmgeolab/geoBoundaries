@@ -38,7 +38,8 @@ jobs:
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
-           git commit -m "Add changes" -a
+           git add -A .
+           git commit -m "geoBoundary Status Check Script"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
