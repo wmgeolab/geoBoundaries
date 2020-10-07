@@ -26,6 +26,7 @@ jobs:
         
     - name: Post-Download Initialization Steps
       run: |
+           git fetch
            git checkout dev
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
@@ -74,6 +75,7 @@ jobs:
         
     - name: Post-Download Initialization Steps
       run: |
+           git fetch
            git checkout dev
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
@@ -121,6 +123,7 @@ jobs:
         
     - name: Post-Download Initialization Steps
       run: |
+           git fetch
            git checkout dev
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
