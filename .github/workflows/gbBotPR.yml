@@ -4,6 +4,7 @@ on:
       [opened, synchronize, reopened, edited]
     paths:    
       - 'sourceData/**'
+name: Boundary PR geoBoundary Bot Checks
 jobs:
   geoBoundaryZipfileChecks:
     runs-on: ubuntu-latest
