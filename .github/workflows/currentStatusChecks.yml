@@ -1,6 +1,7 @@
 on:
     workflow_dispatch
 
+name: Current Accepted PR Data Status Checks
 jobs:
   gbAuthoritativeChecks:
     runs-on: ubuntu-latest
