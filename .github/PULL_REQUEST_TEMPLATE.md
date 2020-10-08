@@ -1,6 +1,9 @@
 <!--- If you are submitting a boundary, Please include your ISO code and ADM level in the title -->
 <!--- This PR template is for boundary submissions; if you are submitting code please give us as much detail as possible. -->
 
+## Why do we need this boundary?  
+<!--- If this is in response to a github issue, just link it here. -->
+
 ## Anything Unusual?
 <!--- Please describe any known complications with your submission. -->
 <!--- You can also include anything else we need to know while assessing this data. -->
