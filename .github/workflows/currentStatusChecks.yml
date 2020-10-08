@@ -29,7 +29,7 @@ jobs:
     - name: Post-Download Initialization Steps
       run: |
            git fetch
-           git checkout dev
+           git push origin --delete devAuth
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
     - name: Checking gbAuthoritative Files
@@ -79,7 +79,7 @@ jobs:
     - name: Post-Download Initialization Steps
       run: |
            git fetch
-           git checkout dev
+           git push origin --delete devHum
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
     - name: Checking gbHumanitarian Files
@@ -128,7 +128,7 @@ jobs:
     - name: Post-Download Initialization Steps
       run: |
            git fetch
-           git checkout dev
+           git push origin --delete devOpen
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
     - name: Checking gbOpen Files
