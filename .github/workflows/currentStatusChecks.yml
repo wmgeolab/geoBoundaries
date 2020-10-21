@@ -7,6 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
+    - name: Create automated check branch
+      uses: peterjgrainger/action-create-branch@v2.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: 'devAuth'
+
     - name: Initialize Linux Environment
       run: |
            apt-get update
@@ -58,6 +65,13 @@ jobs:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
+    - name: Create automated check branch
+      uses: peterjgrainger/action-create-branch@v2.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: 'devHum'
+        
     - name: Initialize Linux Environment
       run: |
            apt-get update
@@ -107,6 +121,13 @@ jobs:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
+    - name: Create automated check branch
+      uses: peterjgrainger/action-create-branch@v2.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: 'devOpen'
+    
     - name: Initialize Linux Environment
       run: |
            apt-get update
