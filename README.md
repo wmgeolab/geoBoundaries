@@ -41,12 +41,3 @@ Users can also enter special phrases "ALL" for either "ADM" or "ISO" to get a mu
 -   **TYP**  - Optional; defaults to HPSCU. One of HPSCU, HPSCGS, SSCGS, or SSCU. Determines the type of boundary link you receive.
 
 
-
-## Contributing
-We welcome new submissions to geoBoundaries, and will openly assess any submissions you might want to make that would improve our data. Right now, we accept submissions that are:
-
--   Compatible with the Open Data Commons Open Database License.
--   Of higher quality (either spatial or temporal) than our existing data.
--   Provisioned with clear and full metadata about the source of the file.
-
-If you have a boundary (or set of boundaries) that you believe meets the above qualifications and you would like us to include, please either send us an email (team@geoboundaries.org) with the boundary data, or submit a new issue on our Github repository (https://github.com/wmgeolab/gbRelease/issues/new) that contains the country, source, and license of the boundary (all information must be verifiable). Once we receive your request, we will publish it on GitHub as an Issue (unless you created it already), and accept comments on the boundary until the next major point release of geoBoundaries.
