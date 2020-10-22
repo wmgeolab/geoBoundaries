@@ -19,6 +19,7 @@ jobs:
            apt-get install -y python3-pip
            pip3 install geopandas
            pip3 install matplotlib
+           pip3 install PyGithub
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
@@ -72,6 +73,7 @@ jobs:
            apt-get install -y python3-pip
            pip3 install geopandas
            pip3 install matplotlib
+           pip3 install PyGithub
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
@@ -124,6 +126,7 @@ jobs:
            apt-get install -y python3-pip
            pip3 install geopandas
            pip3 install matplotlib
+           pip3 install PyGithub
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
