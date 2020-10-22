@@ -163,36 +163,34 @@
 
 						<div id="tabs1-js" class="box">
 							<!-- HTML generated using hilite.me -->
-							<div
-								style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
-								<pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold"></span> <span style="color: #0000FF; font-weight: bold"></span>
-	<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">json</span>
-	<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">requests</span>
-	<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">matplotlib</span> <span style="color: #008000; font-weight: bold">import</span> pyplot <span style="color: #008000; font-weight: bold">as</span> plt
-	<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">shapely.geometry</span> <span style="color: #008000; font-weight: bold">import</span> shape
-	
-	r <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(<span style="color: #BA2121">&quot;https://www.geoboundaries.org/gbRequest.html?ISO=EGY&amp;ADM=ADM1&quot;</span>)
-	dlPath <span style="color: #666666">=</span> r<span style="color: #666666">.</span>json()[<span style="color: #666666">0</span>][<span style="color: #BA2121">&#39;gjDownloadURL&#39;</span>]
-	geoBoundary <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(dlPath)<span style="color: #666666">.</span>json()
-	
-	<span style="color: #408080; font-style: italic">#Matplotlib Visualization</span>
-	fig <span style="color: #666666">=</span> plt<span style="color: #666666">.</span>figure(<span style="color: #666666">1</span>, figsize<span style="color: #666666">=</span>(<span style="color: #666666">5</span>,<span style="color: #666666">5</span>), dpi<span style="color: #666666">=90</span>)
-	axs <span style="color: #666666">=</span> fig<span style="color: #666666">.</span>add_subplot(<span style="color: #666666">111</span>)
-	axs<span style="color: #666666">.</span>set_title(<span style="color: #BA2121">&#39;Example Visualization&#39;</span>)
-	
-	<span style="color: #408080; font-style: italic">#Accounting for Multipolygon Boundaries</span>
-	<span style="color: #008000; font-weight: bold">for</span> boundary <span style="color: #AA22FF; font-weight: bold">in</span> geoBoundary[<span style="color: #BA2121">&quot;features&quot;</span>]:
-	  <span style="color: #008000; font-weight: bold">if</span>(boundary[<span style="color: #BA2121">&quot;geometry&quot;</span>][<span style="color: #BA2121">&#39;type&#39;</span>] <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;MultiPolygon&quot;</span>):
-		polys <span style="color: #666666">=</span> <span style="color: #008000">list</span>(shape(boundary[<span style="color: #BA2121">&quot;geometry&quot;</span>]))
-		<span style="color: #008000; font-weight: bold">for</span> poly <span style="color: #AA22FF; font-weight: bold">in</span> polys:
-		  xs, ys <span style="color: #666666">=</span> poly<span style="color: #666666">.</span>exterior<span style="color: #666666">.</span>xy    
-		  axs<span style="color: #666666">.</span>fill(xs, ys, alpha<span style="color: #666666">=0.5</span>, fc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;red&#39;</span>, ec<span style="color: #666666">=</span><span style="color: #BA2121">&#39;black&#39;</span>)
-	  <span style="color: #008000; font-weight: bold">else</span>:
-		xs, ys <span style="color: #666666">=</span> shape(boundary[<span style="color: #BA2121">&quot;geometry&quot;</span>])<span style="color: #666666">.</span>exterior<span style="color: #666666">.</span>xy    
-		axs<span style="color: #666666">.</span>fill(xs, ys, alpha<span style="color: #666666">=0.5</span>, fc<span style="color: #666666">=</span><span style="color: #BA2121">&#39;red&#39;</span>, ec<span style="color: #666666">=</span><span style="color: #BA2121">&#39;black&#39;</span>)
-	
-	fig<span style="color: #666666">.</span>savefig(<span style="color: #BA2121">&quot;example.png&quot;</span>)
-	</pre>
+							<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">json</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">requests</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">matplotlib</span> <span style="color: #008800; font-weight: bold">import</span> pyplot <span style="color: #008800; font-weight: bold">as</span> plt
+
+r <span style="color: #333333">=</span> requests<span style="color: #333333">.</span>get(<span style="background-color: #fff0f0">&quot;https://www.geoboundaries.org/gbRequest.html?ISO=EGY&amp;ADM=ADM1&quot;</span>)
+dlPath <span style="color: #333333">=</span> r<span style="color: #333333">.</span>json()[<span style="color: #0000DD; font-weight: bold">0</span>][<span style="background-color: #fff0f0">&#39;gjDownloadURL&#39;</span>]
+geoBoundary <span style="color: #333333">=</span> requests<span style="color: #333333">.</span>get(dlPath)<span style="color: #333333">.</span>json()
+
+<span style="color: #888888">#Matplotlib Visualization</span>
+fig <span style="color: #333333">=</span> plt<span style="color: #333333">.</span>figure(<span style="color: #0000DD; font-weight: bold">1</span>, figsize<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">5</span>,<span style="color: #0000DD; font-weight: bold">5</span>), dpi<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">90</span>)
+axs <span style="color: #333333">=</span> fig<span style="color: #333333">.</span>add_subplot(<span style="color: #0000DD; font-weight: bold">111</span>)
+axs<span style="color: #333333">.</span>set_title(<span style="background-color: #fff0f0">&#39;Example Visualization&#39;</span>)
+
+<span style="color: #888888">#Accounting for Multipolygon Boundaries</span>
+<span style="color: #008800; font-weight: bold">for</span> boundary <span style="color: #000000; font-weight: bold">in</span> geoBoundary[<span style="background-color: #fff0f0">&quot;features&quot;</span>]:
+    <span style="color: #008800; font-weight: bold">if</span> boundary[<span style="background-color: #fff0f0">&quot;geometry&quot;</span>][<span style="background-color: #fff0f0">&#39;type&#39;</span>] <span style="color: #333333">==</span> <span style="background-color: #fff0f0">&quot;MultiPolygon&quot;</span>:
+        polys <span style="color: #333333">=</span> boundary[<span style="background-color: #fff0f0">&quot;geometry&quot;</span>][<span style="background-color: #fff0f0">&quot;coordinates&quot;</span>]
+        <span style="color: #008800; font-weight: bold">for</span> poly <span style="color: #000000; font-weight: bold">in</span> polys:
+            exterior <span style="color: #333333">=</span> poly[<span style="color: #0000DD; font-weight: bold">0</span>]
+            xs, ys <span style="color: #333333">=</span> <span style="color: #007020">zip</span>(<span style="color: #333333">*</span>exterior)
+            axs<span style="color: #333333">.</span>fill(xs, ys, alpha<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">0.5</span>, fc<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;red&#39;</span>, ec<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;black&#39;</span>)
+    <span style="color: #008800; font-weight: bold">else</span>:
+        exterior <span style="color: #333333">=</span> boundary[<span style="background-color: #fff0f0">&quot;geometry&quot;</span>][<span style="background-color: #fff0f0">&quot;coordinates&quot;</span>][<span style="color: #0000DD; font-weight: bold">0</span>]
+        xs, ys <span style="color: #333333">=</span> <span style="color: #007020">zip</span>(<span style="color: #333333">*</span>exterior)
+        axs<span style="color: #333333">.</span>fill(xs, ys, alpha<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">0.5</span>, fc<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;red&#39;</span>, ec<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;black&#39;</span>)
+
+fig<span style="color: #333333">.</span>savefig(<span style="background-color: #fff0f0">&quot;example.png&quot;</span>)
+</pre>
 							</div>
 
 							<b>Creates this figure (named example.png):</b>

@@ -19,6 +19,7 @@ jobs:
            apt-get install -y python3-pip
            pip3 install geopandas
            pip3 install matplotlib
+           pip3 install PyGithub
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
@@ -29,7 +30,6 @@ jobs:
     - name: Post-Download Initialization Steps
       run: |
            git fetch
-           git push origin --delete devAuth
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
     - name: Checking gbAuthoritative Files
@@ -38,6 +38,8 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            python geoBoundaryBot/gbBuild.py gbAuthoritative dev False
+      env:
+           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
     - name: Commit Files
       run: |
@@ -58,6 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
+        
     - name: Initialize Linux Environment
       run: |
            apt-get update
@@ -70,6 +73,7 @@ jobs:
            apt-get install -y python3-pip
            pip3 install geopandas
            pip3 install matplotlib
+           pip3 install PyGithub
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
@@ -88,6 +92,8 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            python geoBoundaryBot/gbBuild.py gbHumanitarian dev False
+      env:
+           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
     - name: Commit Files
       run: |
@@ -107,6 +113,7 @@ jobs:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
+    
     - name: Initialize Linux Environment
       run: |
            apt-get update
@@ -119,6 +126,7 @@ jobs:
            apt-get install -y python3-pip
            pip3 install geopandas
            pip3 install matplotlib
+           pip3 install PyGithub
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
@@ -137,6 +145,8 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            python geoBoundaryBot/gbBuild.py gbOpen dev False
+      env:
+           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
     - name: Commit Files
       run: |
