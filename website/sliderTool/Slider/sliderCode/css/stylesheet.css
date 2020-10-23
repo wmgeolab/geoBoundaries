@@ -1,0 +1,40 @@
+
+#map1 { height: 500px; width: 900px; }
+#map2 { height: 500px; width: 900px; }
+* {box-sizing: border-box;}
+
+.img-comp-container {
+    position: relative;
+    height: 500px; /*should be the same height as the images*/
+}
+
+/* needed to add z-index to image as well, not just slider */
+.img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow:hidden;
+    display: relative;
+    vertical-align: bottom;
+    z-index: 5;
+    
+}
+
+.img-comp-slider {
+    position: absolute;
+    z-index: 10;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 35px;
+    height: 35px;
+    background-color: #2196F3;
+    opacity: 6.0;
+    border-radius: 50%;
+}
+
+.img-comp-overlay{
+    position: absolute;
+    border-right: 5px solid #5f656d; /* Border on the left */
+    width: 2px; /* Width instead of height */
+    
+}
