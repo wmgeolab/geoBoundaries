@@ -1,11 +1,11 @@
 
-#map1 { height: 500px; width: 900px; }
-#map2 { height: 500px; width: 900px; }
+#map1 { height: 700px; width: 1500px; }
+#map2 { height: 700px; width: 1500px; }
 * {box-sizing: border-box;}
 
 .img-comp-container {
     position: relative;
-    height: 500px; /*should be the same height as the images*/
+    height: 700px; /*should be the same height as the images*/
 }
 
 /* needed to add z-index to image as well, not just slider */
