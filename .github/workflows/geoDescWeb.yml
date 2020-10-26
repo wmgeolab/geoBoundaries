@@ -16,7 +16,8 @@ jobs:
          password: ${{ secrets.SSH_PASSWORD }}
          script: |
                cd geodesc.org
-               git clone https://github.com/DanRunfola/gbRelease@gD
+               git clone https://github.com/DanRunfola/gbRelease.git
+               git checkout gD
                cd gbRelease
                cd website
                cd geoDesc
