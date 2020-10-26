@@ -17,8 +17,8 @@ jobs:
          script: |
                cd geodesc.org
                git clone https://github.com/DanRunfola/gbRelease.git
-               git checkout gD
                cd gbRelease
+               git checkout gD
                cd website
                cd geoDesc
                mv * ~/geodesc.org
