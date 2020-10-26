@@ -23,4 +23,5 @@ jobs:
                mv * ~/geodesc.org
                cd ~/geodesc.org
                npm install
+               export MapboxAccessToken=${{ secrets.MAPBOX }}
                npm start
