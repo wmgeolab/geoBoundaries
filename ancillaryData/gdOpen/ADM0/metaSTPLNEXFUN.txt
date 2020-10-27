@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: STPLNEXFUN
+Full Variable Name: Countries with national statistics plans with funding from others
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2018-2018
+Each row in the dataset is representative of: ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: PARIS21
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-17-18-3-countries-with-national-statistical-plans-with-funding-from-others-1-yes-0-no
+Tag(s): nan
+Other Notes: 

@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: PROBIODIVR
+Full Variable Name: The mean percentage of each important site for biodiversity that is covered by protected area designations
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2018-2018
+Each row in the dataset is representative of: ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: United Nations Statistics Division
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://ourworldindata.org/grapher/coverage-by-protected-areas-of-important-sites-for-mountain-biodiversity
+Tag(s): Environment
+Other Notes: 

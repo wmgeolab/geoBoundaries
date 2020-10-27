@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: TODAHEALTH
+Full Variable Name: Total net official development assistance to medical research and basic health sectors
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2017-2017
+Each row in the dataset is representative of: ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: Creditor Reporting System (CRS) database, 2018, The Organisation for Economic Co-operation and Development (OECD)
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-3-b-2-total-official-development-assistance-to-medical-research-and-basic-heath-sectors-net-disbursement-by-recipient-countries-millions-of-constant-2016-united-states-dollars
+Tag(s): nan
+Other Notes: 

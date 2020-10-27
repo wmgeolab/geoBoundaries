@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: CELLOWNERS
+Full Variable Name: Proportion of individuals who own a mobile telephone
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2017-2017
+Each row in the dataset is representative of: ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: ITU World Telecommunication/ICT Indicators database.
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-5-b-1-proportion-of-individuals-who-own-a-mobile-telephone-by-sex-percent
+Tag(s): nan
+Other Notes: 

@@ -21,8 +21,8 @@ jobs:
                git checkout gD
                cd website
                cd geoDesc
-               cp ~/geodesc.org/gbRelease/website/geoDesc/* ~/geodesc.org
-               cd ~/geodesc.org
+               #cp ~/geodesc.org/gbRelease/website/geoDesc/* ~/geodesc.org
+               #cd ~/geodesc.org
                npm install
                export MapboxAccessToken=${{ secrets.MAPBOX }}
                npm start

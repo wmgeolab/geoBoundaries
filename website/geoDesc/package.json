@@ -42,6 +42,10 @@
     "webpack-dev-server": "^3.1.14",
     "webpack-hot-middleware": "^2.24.3"
   },
+  "devServer": {
+  "host": "45.79.129.138",
+  "port": "8000"
+  },
   "babel": {
     "presets": [
       "@babel/preset-react",

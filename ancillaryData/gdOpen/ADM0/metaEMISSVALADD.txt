@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: EMISSVALADD
+Full Variable Name: CO2 emissions per unit of value added
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2014-2014
+Each row in the dataset is representative of: ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: Human Development Reports
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: http://hdr.undp.org/en/data
+Tag(s): Pollution
+Other Notes: 

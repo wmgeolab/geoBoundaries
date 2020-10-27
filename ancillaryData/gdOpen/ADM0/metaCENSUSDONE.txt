@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: CENSUSDONE
+Full Variable Name: Has the country conducted at least one population and housing census in the last 10 years
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2017-2017
+Each row in the dataset is representative of: ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: Demographic and Social Statistics Branch, United Nations Statistics Division (UNSD), Department of Economic and Social Affairs, United Nations.
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-17-19-2-countries-that-have-conducted-at-least-one-population-and-housing-census-in-the-last-10-years-1-yes-0-no
+Tag(s): nan
+Other Notes: 
