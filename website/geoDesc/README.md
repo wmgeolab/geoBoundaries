@@ -27,3 +27,10 @@ export MapboxAccessToken=<your_mapbox_token>
 ```sh
 npm start
 ```
+
+Notes
+-> apt install nodejs
+-> apt install build-essentials
+-> npm install --save-dev @babel/preset-react
+-> npm install --save-dev @babel/preset-env
+

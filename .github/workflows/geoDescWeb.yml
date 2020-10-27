@@ -15,11 +15,7 @@ jobs:
          username: ${{ secrets.SSH_USERNAME }}
          password: ${{ secrets.SSH_PASSWORD }}
          script: |
-               export NVM_DIR="$HOME/.nvm"
-               [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-               [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-               nvm use v12.18.3
-               cd geodesc.org
+               cd www
                git clone https://github.com/DanRunfola/gbRelease.git
                cd gbRelease
                git checkout gD
