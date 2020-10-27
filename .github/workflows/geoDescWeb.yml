@@ -15,13 +15,17 @@ jobs:
          username: ${{ secrets.SSH_USERNAME }}
          password: ${{ secrets.SSH_PASSWORD }}
          script: |
+               export NVM_DIR="$HOME/.nvm"
+               [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+               [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+               nvm use v12.18.3
                cd geodesc.org
                git clone https://github.com/DanRunfola/gbRelease.git
                cd gbRelease
                git checkout gD
                cd website
                cd geoDesc
-               mv * ~/geodesc.org
+               cp ~/geodesc.org/gbRelease/website/geoDesc/* ~/geodesc.org
                cd ~/geodesc.org
                npm install
                export MapboxAccessToken=${{ secrets.MAPBOX }}

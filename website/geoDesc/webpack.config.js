@@ -45,7 +45,7 @@ const CONFIG = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [join(__dirname, 'src')],
-        exclude: [/node_modules/]
+        exclude: [/node_modules/,/gbRelease/,/archive/]
       }
     ]
   },
