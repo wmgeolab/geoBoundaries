@@ -29,13 +29,32 @@ npm start
 ```
 
 Notes
--> apt install nodejs
--> apt install build-essentials
--> npm install --save-dev @babel/preset-react
--> npm install --save-dev @babel/preset-env
 
+sudo apt-get update
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm install 14.15.0
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-NODE_OPTIONS="--max-old-space-size=8192"
-export NODE_OPTIONS
-npm install typescript@3.7.2
-export DEBUG='express:*'
+apt-get install git
+git clone https://github.com/wmgeolab/gbRelease.git
+cd gbRelease
+
+#=========================
+For Dev:
+git clone https://github.com/DanRunfola/gbRelease.git
+git fetch --all
+git checkout gD
+#=========================
+
+cd website
+cd geoDesc
+npm install
+
+
+
+
+#NODE_OPTIONS="--max-old-space-size=8192"
+#export NODE_OPTIONS
+
