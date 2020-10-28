@@ -35,5 +35,7 @@ Notes
 -> npm install --save-dev @babel/preset-env
 
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-NODE_OPTIONS="--max-old-space-size=4096"
+NODE_OPTIONS="--max-old-space-size=8192"
 export NODE_OPTIONS
+npm install typescript@3.7.2
+export DEBUG='express:*'
