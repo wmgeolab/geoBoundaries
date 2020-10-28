@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --mode development --progress --hot",
+    "start": "webpack-dev-server --mode development --progress --hot --open",
     "start-prod": "webpack-dev-server -p --progress --hot --open",
     "start-local": "webpack-dev-server --mode development --env.es6 --progress --hot --open",
     "start-local-e2e": "webpack-dev-server --mode development --env.es6",
@@ -41,19 +41,5 @@
     "webpack-dev-middleware": "^3.5.1",
     "webpack-dev-server": "^3.1.14",
     "webpack-hot-middleware": "^2.24.3"
-  },
-  "devServer": {
-  "host": "45.79.129.138",
-  "port": "8000"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "@babel/plugin-transform-react-jsx",
-      "@babel/plugin-proposal-class-properties"
-    ]
   }
 }
