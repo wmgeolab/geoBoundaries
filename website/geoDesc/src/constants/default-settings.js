@@ -22,9 +22,10 @@
 and segments both use queryRunner */
 import keyMirror from 'keymirror';
 
-export const ASSETS_URL = 'https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/';
-export const DATA_URL = 'https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/';
-export const MAP_URI = 'demo/map?mapUrl=';
+//export const ASSETS_URL = 'https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/';
+//export const DATA_URL = ''//'https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/';
+export const DATA_URL = ''//'https://raw.githubusercontent.com/DanRunfola/gbRelease/dev/website/geoDesc/examples/';
+export const MAP_URI = '/map?mapUrl=';
 /*
  * If you want to add more samples, feel free to edit the json file on github kepler.gl data repo
  */
@@ -35,7 +36,7 @@ export const MAP_CONFIG_URL = `${DATA_URL}samples.json?nocache=${new Date().getT
  * because it belongs to the demo app
  * @type {string}
  */
-export const KEPLER_GL_WEBSITE = 'http://kepler.gl/';
+export const KEPLER_GL_WEBSITE = 'http://www.geodesc.org/';
 
 export const QUERY_TYPES = keyMirror({
   file: null,

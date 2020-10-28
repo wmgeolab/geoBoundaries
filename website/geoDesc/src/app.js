@@ -157,7 +157,7 @@ class App extends Component {
 
   _loadMockNotifications = () => {
     const notifications = [
-      [{message: 'Welcome to Kepler.gl'}, 3000],
+      [{message: 'Welcome to geoDesc'}, 3000],
       [{message: 'Something is wrong', type: 'error'}, 1000],
       [{message: 'I am getting better', type: 'warning'}, 1000],
       [{message: 'Everything is fine', type: 'success'}, 1000]

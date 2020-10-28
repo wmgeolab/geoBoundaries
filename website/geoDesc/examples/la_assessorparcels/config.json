@@ -1,0 +1,240 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [
+        {
+          "dataId": "la_assessorparcels",
+          "id": "u2yisgjv",
+          "name": "yearbuiltTS",
+          "type": "timeRange",
+          "value": [
+            1136073600000,
+            1451606400000
+          ],
+          "enlarged": false,
+          "plotType": "histogram",
+          "yAxis": null
+        },
+        {
+          "dataId": "la_assessorparcels",
+          "id": "xagpk5xes",
+          "name": "roll_totalvalue",
+          "type": "range",
+          "value": [
+            2000000,
+            40000000
+          ],
+          "enlarged": false,
+          "plotType": "histogram",
+          "yAxis": null
+        },
+        {
+          "dataId": "la_assessorparcels",
+          "id": "6jf04kin",
+          "name": "bedrooms",
+          "type": "range",
+          "value": [
+            1,
+            17
+          ],
+          "enlarged": false,
+          "plotType": "histogram",
+          "yAxis": null
+        }
+      ],
+      "layers": [
+        {
+          "id": "122g90r",
+          "type": "point",
+          "config": {
+            "dataId": "la_assessorparcels",
+            "label": "$2M+ By Value",
+            "color": [
+              119,
+              110,
+              87
+            ],
+            "columns": {
+              "lat": "center_lat",
+              "lng": "center_lon",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 10,
+              "fixedRadius": false,
+              "opacity": 0.4,
+              "outline": false,
+              "thickness": 2,
+              "colorRange": {
+                "name": "Sunrise 8",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#194266",
+                  "#355C7D",
+                  "#63617F",
+                  "#916681",
+                  "#C06C84",
+                  "#D28389",
+                  "#E59A8F",
+                  "#F8B195"
+                ],
+                "reversed": false
+              },
+              "radiusRange": [
+                3,
+                38
+              ],
+              "hi-precision": false
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "roll_totalvalue",
+              "type": "integer"
+            },
+            "colorScale": "quantize",
+            "sizeField": {
+              "name": "roll_totalvalue",
+              "type": "integer"
+            },
+            "sizeScale": "sqrt"
+          }
+        },
+        {
+          "id": "a9ppr5",
+          "type": "hexagon",
+          "config": {
+            "dataId": "la_assessorparcels",
+            "label": "$2M+ By Year Built",
+            "color": [
+              255,
+              153,
+              31
+            ],
+            "columns": {
+              "lat": "center_lat",
+              "lng": "center_lon"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.5,
+              "worldUnitSize": 0.6,
+              "resolution": 8,
+              "colorRange": {
+                "name": "ColorBrewer BuPu-6",
+                "type": "sequential",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#edf8fb",
+                  "#bfd3e6",
+                  "#9ebcda",
+                  "#8c96c6",
+                  "#8856a7",
+                  "#810f7c"
+                ],
+                "reversed": false
+              },
+              "coverage": 0.95,
+              "sizeRange": [
+                0,
+                500
+              ],
+              "percentile": [
+                0,
+                100
+              ],
+              "elevationPercentile": [
+                0,
+                100
+              ],
+              "elevationScale": 5,
+              "hi-precision": false,
+              "colorAggregation": "average",
+              "sizeAggregation": "average",
+              "enable3d": false
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "yearbuilt",
+              "type": "integer"
+            },
+            "colorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "sqrt"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "la_assessorparcels": [
+              "bedrooms",
+              "bathrooms",
+              "propertylocation",
+              "roll_totalvalue"
+            ]
+          },
+          "enabled": true
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": [
+        {
+          "layers": {
+            "122g90r": {
+              "isAvailable": true,
+              "isVisible": false
+            },
+            "a9ppr5": {
+              "isAvailable": true,
+              "isVisible": true
+            }
+          }
+        },
+        {
+          "layers": {
+            "122g90r": {
+              "isAvailable": true,
+              "isVisible": true
+            },
+            "a9ppr5": {
+              "isAvailable": true,
+              "isVisible": false
+            }
+          }
+        }
+      ]
+    },
+    "mapState": {
+      "bearing": 0,
+      "dragRotate": false,
+      "latitude": 34.12718165983079,
+      "longitude": -118.42772500278433,
+      "pitch": 0,
+      "zoom": 9.430366638593801,
+      "isSplit": true
+    },
+    "mapStyle": {
+      "styleType": "light",
+      "topLayerGroups": {
+        "label": true
+      },
+      "visibleLayerGroups": {
+        "label": true,
+        "road": true,
+        "border": false,
+        "building": true,
+        "water": true,
+        "land": true
+      }
+    }
+  }
+}

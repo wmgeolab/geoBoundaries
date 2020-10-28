@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --mode development --progress --hot",
+    "start": "webpack-dev-server --host 0.0.0.0 --mode development --progress --hot --open",
     "start-prod": "webpack-dev-server -p --progress --hot",
     "start-local": "webpack-dev-server --mode development --env.es6 --progress --hot --open",
     "start-local-e2e": "webpack-dev-server --mode development --env.es6",
