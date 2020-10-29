@@ -21,10 +21,12 @@
 import {LoadDataModalFactory, withState} from 'kepler.gl/components';
 import {LOADING_METHODS} from '../constants/default-settings';
 
+import geoBoundariesAtlas from '../components/load-data-modal/load-gb-atlas';
 import SampleMapGallery from '../components/load-data-modal/sample-data-viewer';
 import LoadRemoteMap from '../components/load-data-modal/load-remote-map';
-//import SampleMapsTab from '../components/load-data-modal/sample-maps-tab';
-import {loadRemoteMap, loadSample, loadSampleConfigurations} from '../actions';
+import LoadCuratedMap from '../components/load-data-modal/load-curated';
+import SampleMapsTab from '../components/load-data-modal/sample-maps-tab';
+import {loadRemoteMap, loadCuratedMap, loadSample, loadSampleConfigurations} from '../actions';
 
 const CustomLoadDataModalFactory = (...deps) => {
   const LoadDataModal = LoadDataModalFactory(...deps);
@@ -40,6 +42,17 @@ const CustomLoadDataModalFactory = (...deps) => {
       label: 'Example Projects',
       elementType: SampleMapGallery,
       //tabElementType: SampleMapsTab
+    },
+    atlas: {
+      id: LOADING_METHODS.atlas,
+      label: 'geoBoundaries Atlas',
+      elementType: geoBoundariesAtlas,
+      tabElementType: SampleMapsTab
+    },
+    curated: {
+      id: LOADING_METHODS.curated,
+      label: 'Analysis-Ready Datasets',
+      elementType: LoadCuratedMap
     }
   };
 
@@ -48,7 +61,9 @@ const CustomLoadDataModalFactory = (...deps) => {
     ...LoadDataModal.defaultProps,
     loadingMethods: [
       additionalMethods.sample,
+      additionalMethods.curated,
       defaultLoadingMethods.find(lm => lm.id === 'upload'),
+      additionalMethods.atlas
       //additionalMethods.remote
       //defaultLoadingMethods.find(lm => lm.id === 'storage'),
     ]
@@ -57,6 +72,7 @@ const CustomLoadDataModalFactory = (...deps) => {
   return withState([], state => ({...state.demo.app, ...state.demo.keplerGl.map.uiState}), {
     onLoadSample: loadSample,
     onLoadRemoteMap: loadRemoteMap,
+    onLoadCuratedMap: loadCuratedMap,
     loadSampleConfigurations
   })(LoadDataModal);
 };

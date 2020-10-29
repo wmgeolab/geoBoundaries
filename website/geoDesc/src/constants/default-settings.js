@@ -64,7 +64,9 @@ export const QUERY_OPTIONS = keyMirror({
 
 export const LOADING_METHODS = keyMirror({
   remote: null,
-  sample: null
+  sample: null,
+  atlas: null,
+  curated: null
 });
 
 export const LOADING_SAMPLE_LIST_ERROR_MESSAGE = 'Not able to load sample gallery';

@@ -151,6 +151,28 @@ export function loadRemoteMap(options) {
   };
 }
 
+export function loadCuratedMap(options) {
+  return dispatch => {
+    dispatch(setLoadingMapStatus(true));
+    // breakdown url into url+query params
+    loadRemoteRawData(options.dataUrl).then(
+      // In this part we turn the response into a FileBlob
+      // so we can use it to call loadFiles
+      ([file, url]) => {
+        const {file: filename} = parseUri(url);
+        dispatch(loadFiles([new File([file], filename)])).then(() =>
+          dispatch(setLoadingMapStatus(false))
+        );
+      },
+      error => {
+        const {target = {}} = error;
+        const {status, responseText} = target;
+        dispatch(loadRemoteResourceError({status, message: responseText}, options.dataUrl));
+      }
+    );
+  };
+}
+
 /**
  * Load a file from a remote URL
  * @param url

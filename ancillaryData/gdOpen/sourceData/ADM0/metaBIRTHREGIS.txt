@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: BIRTHREGIS
+Full Variable Name: Has the country achieved birth registration data that are at least 90 percent complete
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2016-2016
+geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: Demographic and Social Statistics Branch, United Nations Statistics Division (UNSD), Department of Economic and Social Affairs, United Nations
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-17-19-2-countries-with-birth-registration-data-that-are-at-least-90-percent-complete-1-yes-0-no?geometry=-178.768%2C-88.553%2C181.232%2C88.313
+Tag(s): nan
+Other Notes: 

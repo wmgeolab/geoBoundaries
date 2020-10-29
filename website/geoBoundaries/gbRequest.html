@@ -17,6 +17,8 @@ $ADM = $_GET['ADM'];
 $VER = $_GET['VER'];
 $TYP = $_GET['TYP'];
 
+
+
 if(strlen($TYP) == 0){
     $TYP = "HPSCU";
 }
@@ -73,7 +75,31 @@ if(strlen($VER) == 0)
     $VER = preg_replace('/\B([0-9])/', '_$1', $numeric_largest);
 }
 
+if($ISO == "GLB"){
+    if($ADM == "ALL"){
+        $ADM = "ADM0";
+    }
+    $json = array(
+        array(
+                "boundaryID" => "CGAZ-GLOBAL-" . $VER . "-" . $ADM,
+                "boundaryISO" => "GLB",
+                "boundaryYear" => "Variable",
+                "boundaryType" => $ADM,
+                "boundarySource1" => "geoBoundaries.org",
+                "boundarySource2" => "Variable",
+                "boundaryLicense" => "With Attribution (some boundary files may be more permissive)",
+                "licenseDetail" => "Represents a combination of gbOpen dataset.  Component datasets may require attribution.  geoBoundaries requires attribution; see https://www.geoboundaries.org/index.html#citation .",
+                "licenseSource" => "https://www.geoboundaries.org/index.html#citation",
+                "boundarySourceURL" => "https://www.geoboundaries.org/",
+                "boundaryUpdate" => "Variable",
+                "gjDownloadURL" => "https://www.geoboundaries.org/data/geoBoundariesCGAZ-" . $VER . "/" . $ADM . "/simplifyRatio_10/geoBoundariesCGAZ_" . $ADM . ".geojson",
+                "imagePreview" => "Not available for global products at this time."
+             )
+    );
 
+    echo json_encode($json);
+    return json_encode($json); 
+}
 
 function csvtojson($file,$delimiter, $ISO, $ADM, $TYP)
 {

@@ -93,10 +93,10 @@ const SampleMapsTab = ({onClick}) => {
       <StyledMapIcon className="demo-map-icon" />
       <div className="demo-map-title">
         <div className="demo-map-label">
-          <FormattedMessage id={'sampleMapsTab.noData'} defaultMessage="No Data" />
+          <FormattedMessage id={'sampleMapsTab.noData'} defaultMessage="Just the Boundaries" />
         </div>
         <div className="demo-map-action" onClick={onClick}>
-          <FormattedMessage id={'sampleMapsTab.trySampleData'} defaultMessage="Sample Maps" />
+          <FormattedMessage id={'sampleMapsTab.trySampleData'} defaultMessage="geoBoundaries Atlas" />
           <Icons.ArrowRight height="16px" />
         </div>
       </div>

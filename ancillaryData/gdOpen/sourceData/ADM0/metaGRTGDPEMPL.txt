@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: GRTGDPEMPL
+Full Variable Name: Annual Growth Rate of GDP per employed person
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2018-2018
+geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: ILOSTAT
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-8-2-1-annual-growth-rate-of-real-gdp-per-employed-person-percent
+Tag(s): Economics
+Other Notes: 

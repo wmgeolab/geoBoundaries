@@ -32,6 +32,7 @@ import {replaceMapControl} from './factories/map-control';
 import {replacePanelHeader} from './factories/panel-header';
 import {AUTH_TOKENS} from './constants/default-settings';
 
+
 //Note - current implementation has localization errors.
 //This is to preclude those from being raised for now, until
 //we get corrected.
@@ -53,6 +54,7 @@ console.error = (message, ...args) => {
 import {
   loadRemoteMap,
   loadSampleConfigurations,
+  loadCuratedMap,
   onExportFileSuccess
 } from './actions';
 
