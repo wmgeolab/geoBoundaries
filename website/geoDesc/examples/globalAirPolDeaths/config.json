@@ -5,28 +5,28 @@
         "filters": [],
         "layers": [
           {
-            "id": "tbqfkdc",
+            "id": "4tvpjvr",
             "type": "geojson",
             "config": {
-              "dataId": "k6lsmpl05",
-              "label": "gB_CGAZ3_gD_AIRPOLDTHS",
+              "dataId": "AIRPOLDTHS",
+              "label": "Air Pollution Deaths",
               "color": [
-                34,
-                63,
-                154
+                130,
+                154,
+                227
               ],
               "columns": {
                 "geojson": "_geojson"
               },
               "isVisible": true,
               "visConfig": {
-                "opacity": 0.57,
+                "opacity": 0.8,
                 "strokeOpacity": 0.8,
                 "thickness": 0.5,
                 "strokeColor": [
-                  53,
-                  106,
-                  54
+                  40,
+                  38,
+                  35
                 ],
                 "colorRange": {
                   "name": "Uber Viz Diverging 1.5",
@@ -71,7 +71,7 @@
                 "stroked": true,
                 "filled": true,
                 "enable3d": false,
-                "wireframe": true
+                "wireframe": false
               },
               "hidden": false,
               "textLabel": [
@@ -102,11 +102,8 @@
               "sizeScale": "linear",
               "strokeColorField": null,
               "strokeColorScale": "quantile",
-              "heightField": {
-                "name": "AIRPOLDTHS",
-                "type": "real"
-              },
-              "heightScale": "log",
+              "heightField": null,
+              "heightScale": "linear",
               "radiusField": null,
               "radiusScale": "linear"
             }
@@ -115,7 +112,7 @@
         "interactionConfig": {
           "tooltip": {
             "fieldsToShow": {
-              "k6lsmpl05": [
+              "gc7yaojz": [
                 {
                   "name": "shapeName",
                   "format": null
@@ -134,8 +131,8 @@
                 }
               ]
             },
-            "compareMode": true,
-            "compareType": "relative",
+            "compareMode": false,
+            "compareType": "absolute",
             "enabled": true
           },
           "brush": {
@@ -159,10 +156,10 @@
       "mapState": {
         "bearing": 0,
         "dragRotate": false,
-        "latitude": 41.81937608262882,
-        "longitude": -26.095671824827633,
+        "latitude": 42.72180556077833,
+        "longitude": -20.1334657440952,
         "pitch": 0,
-        "zoom": 1.7208259156564194,
+        "zoom": 2,
         "isSplit": false
       },
       "mapStyle": {

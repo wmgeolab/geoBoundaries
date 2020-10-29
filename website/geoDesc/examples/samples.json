@@ -29,7 +29,7 @@
     "queryType": "sample",
     "imageUrl": "https://s3.amazonaws.com/uber-static/kepler.gl/sample/earthquakes.png",
     "description": "Mortality rate attributed to household and ambient air pollution, age-standardized (per 100,000 population).",
-    "detail": "Information was generated using the World Bank Data Portal, and was originally collected by the World Health Organization (via the Global Health Observatory Data Repository). Data source: [World Bank](https://data.worldbank.org/indicator/SH.STA.AIRP.P5)",
+    "detail": "Mortality rate attributed to household and ambient air pollution, age-standardized (per 100,000 population). Information was generated using the World Bank Data Portal, and was originally collected by the World Health Organization (via the Global Health Observatory Data Repository). Data source: [World Bank](https://data.worldbank.org/indicator/SH.STA.AIRP.P5)",
     "size": 54936,
     "visible": true,
     "dataUrl": "https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/examples/globalAirPolDeaths/data.json",
