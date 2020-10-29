@@ -23,7 +23,7 @@ import {LOADING_METHODS} from '../constants/default-settings';
 
 import SampleMapGallery from '../components/load-data-modal/sample-data-viewer';
 import LoadRemoteMap from '../components/load-data-modal/load-remote-map';
-import SampleMapsTab from '../components/load-data-modal/sample-maps-tab';
+//import SampleMapsTab from '../components/load-data-modal/sample-maps-tab';
 import {loadRemoteMap, loadSample, loadSampleConfigurations} from '../actions';
 
 const CustomLoadDataModalFactory = (...deps) => {
@@ -32,14 +32,14 @@ const CustomLoadDataModalFactory = (...deps) => {
   const additionalMethods = {
     remote: {
       id: LOADING_METHODS.remote,
-      label: 'modal.loadData.remote',
+      label: 'Load from Web',
       elementType: LoadRemoteMap
     },
     sample: {
       id: LOADING_METHODS.sample,
-      label: 'modal.loadData.sample',
+      label: 'Example Projects',
       elementType: SampleMapGallery,
-      tabElementType: SampleMapsTab
+      //tabElementType: SampleMapsTab
     }
   };
 
@@ -47,10 +47,10 @@ const CustomLoadDataModalFactory = (...deps) => {
   LoadDataModal.defaultProps = {
     ...LoadDataModal.defaultProps,
     loadingMethods: [
+      additionalMethods.sample,
       defaultLoadingMethods.find(lm => lm.id === 'upload'),
-      additionalMethods.remote,
-      defaultLoadingMethods.find(lm => lm.id === 'storage'),
-      additionalMethods.sample
+      //additionalMethods.remote
+      //defaultLoadingMethods.find(lm => lm.id === 'storage'),
     ]
   };
 

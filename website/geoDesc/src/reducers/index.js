@@ -39,8 +39,8 @@ import {generateHashId} from '../utils/strings';
 
 // INITIAL_APP_STATE
 const initialAppState = {
-  appName: 'example',
-  loaded: false,
+  appName: 'geoDesc',
+  loaded: true,
   sampleMaps: [], // this is used to store sample maps fetch from a remote json file
   isMapLoading: false, // determine whether we are loading a sample map,
   error: null, // contains error when loading/retrieving data/configuration

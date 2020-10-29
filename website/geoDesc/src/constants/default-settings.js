@@ -22,10 +22,24 @@
 and segments both use queryRunner */
 import keyMirror from 'keymirror';
 
-//export const ASSETS_URL = 'https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/';
-//export const DATA_URL = ''//'https://raw.githubusercontent.com/uber-web/kepler.gl-data/master/';
-export const DATA_URL = ''//'https://raw.githubusercontent.com/DanRunfola/gbRelease/dev/website/geoDesc/examples/';
+export const ASSETS_URL = 'https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/assets/';
+export const DATA_URL = 'https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/examples/';
 export const MAP_URI = '/map?mapUrl=';
+export const KEPLER_GL_NAME = "geoDesc";
+export const KEPLER_GL_WEBSITE = 'http://www.geodesc.org/';
+
+export const INITIAL_MAP_STATE = {
+  pitch: 0,
+  bearing: 0,
+  latitude: 37.2707,
+  longitude: 79.7075,
+  zoom: 4,
+  dragRotate: false,
+  width: 800,
+  height: 800,
+  isSplit: false
+};
+
 /*
  * If you want to add more samples, feel free to edit the json file on github kepler.gl data repo
  */
@@ -36,7 +50,7 @@ export const MAP_CONFIG_URL = `${DATA_URL}samples.json?nocache=${new Date().getT
  * because it belongs to the demo app
  * @type {string}
  */
-export const KEPLER_GL_WEBSITE = 'http://www.geodesc.org/';
+
 
 export const QUERY_TYPES = keyMirror({
   file: null,
@@ -58,7 +72,7 @@ export const LOADING_SAMPLE_ERROR_MESSAGE = 'Not able to load sample';
 export const CORS_LINK = 'https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS';
 
 export const DEFAULT_FEATURE_FLAGS = {
-  cloudStorage: true
+  cloudStorage: false
 };
 
 export const AUTH_TOKENS = {

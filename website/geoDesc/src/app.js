@@ -31,17 +31,32 @@ import {replaceLoadDataModal} from './factories/load-data-modal';
 import {replaceMapControl} from './factories/map-control';
 import {replacePanelHeader} from './factories/panel-header';
 import {AUTH_TOKENS} from './constants/default-settings';
-import {messages} from './constants/localization';
+
+//Note - current implementation has localization errors.
+//This is to preclude those from being raised for now, until
+//we get corrected.
+
+// eslint-disable-next-line
+const consoleError = console.error.bind(console);
+// eslint-disable-next-line
+console.error = (message, ...args) => {
+  if (
+    typeof message === 'string' &&
+    message.startsWith('[React Intl]')
+  ) {
+    return;
+  }
+  consoleError(message, ...args);
+};
+
 
 import {
   loadRemoteMap,
   loadSampleConfigurations,
-  onExportFileSuccess,
-  onLoadCloudMapSuccess
+  onExportFileSuccess
 } from './actions';
 
-import {loadCloudMap} from 'kepler.gl/actions';
-import {CLOUD_PROVIDERS} from './cloud-providers';
+
 
 const KeplerGl = require('kepler.gl/components').injectComponents([
   replaceLoadDataModal(),
@@ -51,14 +66,6 @@ const KeplerGl = require('kepler.gl/components').injectComponents([
 
 // Sample data
 /* eslint-disable no-unused-vars */
-import sampleTripData, {testCsvData, sampleTripDataConfig} from './data/sample-trip-data';
-import sampleGeojson from './data/sample-small-geojson';
-import sampleGeojsonPoints from './data/sample-geojson-points';
-import sampleGeojsonConfig from './data/sample-geojson-config';
-import sampleH3Data, {config as h3MapConfig} from './data/sample-hex-id-csv';
-import sampleS2Data, {config as s2MapConfig, dataId as s2DataId} from './data/sample-s2-data';
-import sampleAnimateTrip from './data/sample-animate-trip-data';
-import sampleIconCsv, {config as savedMapConfig} from './data/sample-icon-csv';
 import {addDataToMap, addNotification} from 'kepler.gl/actions';
 import {processCsvData, processGeojson} from 'kepler.gl/processors';
 /* eslint-enable no-unused-vars */
@@ -101,24 +108,15 @@ class App extends Component {
     showBanner: false,
     width: window.innerWidth,
     height: window.innerHeight
-  };
+    };
+  
 
   componentDidMount() {
     // if we pass an id as part of the url
     // we ry to fetch along map configurations
     const {params: {id, provider} = {}, location: {query = {}} = {}} = this.props;
 
-    const cloudProvider = CLOUD_PROVIDERS.find(c => c.name === provider);
-    if (cloudProvider) {
-      this.props.dispatch(
-        loadCloudMap({
-          loadParams: query,
-          provider: cloudProvider,
-          onSuccess: onLoadCloudMapSuccess
-        })
-      );
-      return;
-    }
+
 
     // Load sample using its id
     if (id) {
@@ -334,13 +332,7 @@ class App extends Component {
     );
   }
 
-  _toggleCloudModal = () => {
-    // TODO: this lives only in the demo hence we use the state for now
-    // REFCOTOR using redux
-    this.setState({
-      cloudModalOpen: !this.state.cloudModalOpen
-    });
-  };
+
 
   _getMapboxRef = (mapbox, index) => {
     if (!mapbox) {
@@ -397,10 +389,11 @@ class App extends Component {
                   getState={keplerGlGetState}
                   width={width}
                   height={height}
-                  cloudProviders={CLOUD_PROVIDERS}
-                  localeMessages={messages}
-                  onExportToCloudSuccess={onExportFileSuccess}
-                  onLoadCloudMapSuccess={onLoadCloudMapSuccess}
+                  //cloudProviders={CLOUD_PROVIDERS}
+                  //localeMessages={messages}
+                  //onExportToCloudSuccess={onExportFileSuccess}
+                  //onLoadCloudMapSuccess={onLoadCloudMapSuccess}
+                  theme="light"
                 />
               )}
             </AutoSizer>
@@ -413,5 +406,7 @@ class App extends Component {
 
 const mapStateToProps = state => state;
 const dispatchToProps = dispatch => ({dispatch});
+
+
 
 export default connect(mapStateToProps, dispatchToProps)(App);

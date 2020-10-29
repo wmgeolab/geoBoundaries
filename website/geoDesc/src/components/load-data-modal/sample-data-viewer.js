@@ -98,7 +98,7 @@ const SampleMap = ({id, sample, onClick, locale}) => (
       <div className="sample-map__title">{sample.label}</div>
       <div className="sample-map__size">
         <FormattedMessage
-          id={'sampleDataViewer.rowCount'}
+          id={' '}
           values={{rowCount: numFormat(sample.size)}}
         />
       </div>
