@@ -187,7 +187,7 @@ class LoadCuratedMap extends Component {
           {this.props.error && <Error error={this.props.error}/>}
         </InputForm>
         <DataTable
-        title="Arnold Movies"
+        title="Datasets (UNDER DEVELOPMENT)"
         columns={columns}
         data={data}
       />
