@@ -25,6 +25,7 @@ jobs:
       uses: actions/checkout@v2.3.2
       with:
         lfs: true
+        persist-credentials: false
         
     - name: Post-Download Initialization Steps
       run: |
@@ -52,7 +53,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         branch: 'master'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.DRTOKEN }}
         
 
   gbHumanitarianChecks:
@@ -78,6 +79,7 @@ jobs:
       uses: actions/checkout@v2.3.2
       with:
         lfs: true
+        persist-credentials: false
         
     - name: Post-Download Initialization Steps
       run: |
@@ -105,7 +107,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         branch: 'master'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.DRTOKEN }}
 
   gbOpenChecks:
     runs-on: ubuntu-latest
@@ -130,6 +132,7 @@ jobs:
       uses: actions/checkout@v2.3.2
       with:
         lfs: true
+        persist-credentials: false
         
     - name: Post-Download Initialization Steps
       run: |
@@ -158,4 +161,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         branch: 'master'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.DRTOKEN }}
