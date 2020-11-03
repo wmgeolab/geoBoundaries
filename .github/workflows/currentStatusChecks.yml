@@ -24,8 +24,8 @@ jobs:
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
         lfs: true
+        persist-credentials: false
         
     - name: Post-Download Initialization Steps
       run: |
@@ -43,17 +43,18 @@ jobs:
       
     - name: Commit Files
       run: |
-           git push origin --delete devAuth
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           rm RESULT.txt
            git add -A .
+           git status
            git commit -m "geoBoundary Status Check Script"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        branch: 'devAuth'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: 'master'
+        github_token: ${{ secrets.DRTOKEN }}
         
 
   gbHumanitarianChecks:
@@ -78,8 +79,8 @@ jobs:
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
         lfs: true
+        persist-credentials: false
         
     - name: Post-Download Initialization Steps
       run: |
@@ -97,17 +98,18 @@ jobs:
       
     - name: Commit Files
       run: |
-           git push origin --delete devHum
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           rm RESULT.txt
            git add -A .
+           git status
            git commit -m "geoBoundary Status Check Script"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        branch: 'devHum'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: 'master'
+        github_token: ${{ secrets.DRTOKEN }}
 
   gbOpenChecks:
     runs-on: ubuntu-latest
@@ -131,8 +133,8 @@ jobs:
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
         lfs: true
+        persist-credentials: false
         
     - name: Post-Download Initialization Steps
       run: |
@@ -153,11 +155,13 @@ jobs:
            git push origin --delete devOpen
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           rm RESULT.txt
            git add -A .
+           git status
            git commit -m "geoBoundary Status Check Script"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        branch: 'devOpen'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: 'master'
+        github_token: ${{ secrets.DRTOKEN }}
