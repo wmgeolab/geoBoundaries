@@ -1,0 +1,133 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "layers": [
+        {
+          "id": "lluahhf",
+          "type": "trip",
+          "config": {
+            "dataId": "world_flights",
+            "label": "Flights",
+            "columns": {
+              "geojson": "_geojson"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.8,
+              "thickness": 1.5,
+              "colorRange": {
+                "name": "UberPool",
+                "type": "diverging",
+                "category": "Uber",
+                "colors": [
+                  "#FAE300",
+                  "#FAC200",
+                  "#FD7900",
+                  "#E31A1A",
+                  "#CF1750",
+                  "#AE0E7F",
+                  "#7A0DA6",
+                  "#482BBD",
+                  "#2C51BE",
+                  "#223F9A"
+                ],
+                "reversed": true
+              },
+              "trailLength": 336
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "origin_country",
+              "type": "string"
+            },
+            "colorScale": "ordinal"
+          }
+        },
+        {
+          "id": "jrj4wei",
+          "type": "geojson",
+          "config": {
+            "dataId": "world_flights",
+            "label": "Paths",
+            "columns": {
+              "geojson": "_geojson"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.6,
+              "thickness": 0.1,
+              "strokeColor": null,
+              "strokeColorRange": {
+                "name": "UberPool",
+                "type": "diverging",
+                "category": "Uber",
+                "colors": [
+                  "#FAE300",
+                  "#FAC200",
+                  "#FD7900",
+                  "#E31A1A",
+                  "#CF1750",
+                  "#AE0E7F",
+                  "#7A0DA6",
+                  "#482BBD",
+                  "#2C51BE",
+                  "#223F9A"
+                ],
+                "reversed": true
+              },
+              "stroked": true,
+              "filled": false
+            }
+          },
+          "visualChannels": {
+            "strokeColorField": {
+              "name": "origin_country",
+              "type": "string"
+            },
+            "strokeColorScale": "ordinal"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "enabled": false
+        }
+      },
+      "layerBlending": "additive",
+      "animationConfig": {
+        "currentTime": 1567555200000
+      }
+    },
+    "mapState": {
+      "bearing": 0,
+      "dragRotate": false,
+      "latitude": 38.68846207950431,
+      "longitude": -1.7613078220859786,
+      "pitch": 0,
+      "zoom": 2.6164909312745217,
+      "isSplit": false
+    },
+    "mapStyle": {
+      "styleType": "vw22uhl",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "label": false,
+        "road": false,
+        "building": true,
+        "water": true
+      },
+      "mapStyles": {
+        "vw22uhl": {
+          "accessToken": "pk.eyJ1IjoidWJlcmRhdGEiLCJhIjoidGllX1gxUSJ9.gElUooDF7u51guCQREmAhg",
+          "custom": true,
+          "icon": "https://api.mapbox.com/styles/v1/uberdata/ck14353fm0vml1dqttzcnzgm7/static/-122.3391,37.7922,9,0,0/400x300?access_token=pk.eyJ1IjoidWJlcmRhdGEiLCJhIjoidGllX1gxUSJ9.gElUooDF7u51guCQREmAhg&logo=false&attribution=false",
+          "id": "vw22uhl",
+          "label": "Kepler.gl Flight Map",
+          "url": "mapbox://styles/uberdata/ck14353fm0vml1dqttzcnzgm7"
+        }
+      }
+    }
+  }
+}

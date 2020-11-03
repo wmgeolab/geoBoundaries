@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: INDPMGMTFR
+Full Variable Name: Forest area under an independently verified forest management certification scheme
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2018-2018
+geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: United Nations Statistics Division
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://ourworldindata.org/grapher/proportion-of-forest-area-certified-under-an-independently-verified-certification-scheme
+Tag(s): Environment
+Other Notes: 

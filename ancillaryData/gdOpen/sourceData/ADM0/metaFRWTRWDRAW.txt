@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: FRWTRWDRAW
+Full Variable Name: Level of water stress: freshwater withdrawal as a proportion of available freshwater resources
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2014-2014
+geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: World Bank
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://data.worldbank.org/indicator/ER.H2O.FWST.ZS
+Tag(s): Environment
+Other Notes: 

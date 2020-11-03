@@ -1,0 +1,114 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [],
+      "layers": [
+        {
+          "id": "mzprg2",
+          "type": "hexagon",
+          "config": {
+            "dataId": "sftrees",
+            "label": "Point",
+            "color": [
+              119,
+              110,
+              87
+            ],
+            "columns": {
+              "lat": "latitude",
+              "lng": "longitude"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.8,
+              "worldUnitSize": 0.05,
+              "resolution": 8,
+              "colorRange": {
+                "name": "Purple Blue Yellow",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#2B1E3E",
+                  "#383C65",
+                  "#3E5F7E",
+                  "#49838A",
+                  "#5EA28D",
+                  "#82BB92",
+                  "#AECEA1",
+                  "#D6DEBF"
+                ],
+                "reversed": false
+              },
+              "coverage": 1,
+              "sizeRange": [
+                0,
+                500
+              ],
+              "percentile": [
+                0,
+                99.94
+              ],
+              "elevationPercentile": [
+                0,
+                100
+              ],
+              "elevationScale": 5,
+              "hi-precision": false,
+              "colorAggregation": "average",
+              "sizeAggregation": "average",
+              "enable3d": true
+            }
+          },
+          "visualChannels": {
+            "colorField": null,
+            "colorScale": "quantize",
+            "sizeField": null,
+            "sizeScale": "linear"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "sftrees": [
+              "TreeID",
+              "qSpecies",
+              "qAddress",
+              "SiteOrder",
+              "qSiteInfo"
+            ]
+          },
+          "enabled": true
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": []
+    },
+    "mapState": {
+      "bearing": -0.6067415730337057,
+      "dragRotate": true,
+      "latitude": 37.75898064019907,
+      "longitude": -122.44780065592347,
+      "pitch": 1.7944134937952951,
+      "zoom": 12.509585911862231,
+      "isSplit": false
+    },
+    "mapStyle": {
+      "styleType": "muted_night",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "label": false,
+        "road": false,
+        "border": false,
+        "building": true,
+        "water": true,
+        "land": true
+      }
+    }
+  }
+}

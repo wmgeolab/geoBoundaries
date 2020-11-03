@@ -15,13 +15,14 @@ jobs:
          username: ${{ secrets.SSH_USERNAME }}
          password: ${{ secrets.SSH_PASSWORD }}
          script: |
-               cd geodesc.org
-               git clone https://github.com/wmgeolab/gbRelease@master
+               cd www
+               git clone https://github.com/DanRunfola/gbRelease.git
                cd gbRelease
+               git checkout gD
                cd website
                cd geoDesc
-               mv * ~/geodesc.org
-               cd ~/geodesc.org
+               #cp ~/geodesc.org/gbRelease/website/geoDesc/* ~/geodesc.org
+               #cd ~/geodesc.org
                npm install
                export MapboxAccessToken=${{ secrets.MAPBOX }}
                npm start
