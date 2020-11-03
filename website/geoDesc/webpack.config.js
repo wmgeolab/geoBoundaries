@@ -56,7 +56,8 @@ const CONFIG = {
 
   // to support browser history api and remove the '#' sign
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    disableHostCheck: true
   },
 
   // Optional: Enables reading mapbox and dropbox client token from environment variable

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --mode development --progress --hot",
+    "start": "webpack-dev-server --host 0.0.0.0 --port 80 --mode development --progress --hot",
     "start-prod": "webpack-dev-server -p --progress --hot",
     "start-local": "webpack-dev-server --mode development --env.es6 --progress --hot --open",
     "start-local-e2e": "webpack-dev-server --mode development --env.es6",
@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@carto/toolkit": "0.0.1-rc.18",
+    "@material-ui/lab":"4.0.0",
+    "@material-ui/core":"4.11.0",
+    "@react-data-table-component":"6.11.5",
     "d3-request": "^1.0.6",
     "dropbox": "^4.0.12",
     "global": "^4.3.0",

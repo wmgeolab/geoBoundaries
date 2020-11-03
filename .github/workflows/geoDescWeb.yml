@@ -5,7 +5,7 @@ on:
 name: geoDesc Website Update
 
 jobs:
-  deploy:
+  deployGeoDesc:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy geoDesc Node
@@ -15,14 +15,17 @@ jobs:
          username: ${{ secrets.SSH_USERNAME }}
          password: ${{ secrets.SSH_PASSWORD }}
          script: |
-               cd www
-               git clone https://github.com/DanRunfola/gbRelease.git
                cd gbRelease
-               git checkout gD
-               cd website
-               cd geoDesc
-               #cp ~/geodesc.org/gbRelease/website/geoDesc/* ~/geodesc.org
-               #cd ~/geodesc.org
+               git fetch --all
+               git checkout -b bB
+               git reset --hard origin/master
+               git pull https://github.com/wmgeolab/gbRelease.git
+               cd website/geoDesc
                npm install
+               npm install @material-ui/core
+               npm install @material-ui/lab
+               npm install react-data-table-component
                export MapboxAccessToken=${{ secrets.MAPBOX }}
-               npm start
+               PORT=80
+               kill $(sudo netstat -anp | awk '/ LISTEN / {if($4 ~ ":80$") { gsub("/.*","",$7); print $7; exit } }')
+               nohup npm start >> nohup.out 2>&1 &

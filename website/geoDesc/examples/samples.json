@@ -3,24 +3,24 @@
     "id": "AIRPOLDTHS",
     "label": "Global Air Pollution Deaths",
     "queryType": "sample",
-    "imageUrl": "https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/examples/globalAirPolDeaths/sample.png",
+    "imageUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/globalAirPolDeaths/sample.png",
     "description": "Mortality rate attributed to household and ambient air pollution, age-standardized (per 100,000 population).",
     "detail": "Mortality rate attributed to household and ambient air pollution, age-standardized (per 100,000 population). Information was generated using the World Bank Data Portal, and was originally collected by the World Health Organization (via the Global Health Observatory Data Repository). Data source: [World Bank](https://data.worldbank.org/indicator/SH.STA.AIRP.P5)",
     "size": 54936,
     "visible": true,
-    "dataUrl": "https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/examples/globalAirPolDeaths/data.json",
-    "configUrl": "https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/examples/globalAirPolDeaths/config.json"
+    "dataUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/globalAirPolDeaths/data.json",
+    "configUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/globalAirPolDeaths/config.json"
   },
   {
     "id": "MXMIG",
     "label": "Domestic Migration, Mexico, 2010-2015",
     "queryType": "sample",
-    "imageUrl": "https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/examples/mexicoMigration/sample.png",
+    "imageUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/mexicoMigration/sample.png",
     "description": "Number of individuals migrating to a new municipality within Mexico between 2010 and 2015.",
     "detail": "Estimated count of individuals migrating between municipalities within Mexico between 2010 and 2015. Information was generated using a roughly 10% sample of the Mexican microcensus, based on the question 'What municiaplity did you live in 5 years ago' on the Mexican 2015 Census. Data source: [IPUMS-International](https://international.ipums.org/international/)",
-    "size": 100,
+    "size": 12938,
     "visible": true,
-    "dataUrl": "https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/examples/mexicoMigration/data.csv",
-    "configUrl": "https://raw.githubusercontent.com/DanRunfola/gbRelease/gD/website/geoDesc/examples/mexicoMigration/config.json"
+    "dataUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/mexicoMigration/data.csv",
+    "configUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/mexicoMigration/config.json"
   }
 ]
