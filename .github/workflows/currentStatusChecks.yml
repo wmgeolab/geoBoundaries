@@ -45,6 +45,7 @@ jobs:
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           rm RESULT.txt
            git add -A .
            git status
            git commit -m "geoBoundary Status Check Script"
@@ -99,6 +100,7 @@ jobs:
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           rm RESULT.txt
            git add -A .
            git status
            git commit -m "geoBoundary Status Check Script"
@@ -153,6 +155,7 @@ jobs:
            git push origin --delete devOpen
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           rm RESULT.txt
            git add -A .
            git status
            git commit -m "geoBoundary Status Check Script"
