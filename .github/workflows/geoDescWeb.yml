@@ -15,14 +15,11 @@ jobs:
          username: ${{ secrets.SSH_USERNAME }}
          password: ${{ secrets.SSH_PASSWORD }}
          script: |
-               cd www
-               git clone https://github.com/DanRunfola/gbRelease.git
                cd gbRelease
-               git checkout gD
-               cd website
-               cd geoDesc
-               #cp ~/geodesc.org/gbRelease/website/geoDesc/* ~/geodesc.org
-               #cd ~/geodesc.org
+               git pull https://github.com/wmgeolab/gbRelease.git
+               cd website/geoDesc
                npm install
                export MapboxAccessToken=${{ secrets.MAPBOX }}
+               PORT=80
+               kill $(sudo netstat -anp | awk '/ LISTEN / {if($4 ~ ":80$") { gsub("/.*","",$7); print $7; exit } }')
                npm start
