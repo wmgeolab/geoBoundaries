@@ -163,7 +163,7 @@ class LoadCuratedMap extends Component {
       <div>
         <InputForm>
           <StyledDescription>
-            <FormattedMessage id="Choose one of our curated datasets to load.  All of our data is provided freely, and only require acknowledgement to use.  Acknowledgements should include a link to this (www.geodesc.org) website." />
+            <FormattedMessage id="Choose one or more of our curated datasets to load.  Data will be aggregated to the region and spatial granularity you choose. All of our data is provided freely, and only require acknowledgement to use.  Acknowledgements should include a link to this (www.geodesc.org) website." />
           </StyledDescription>
           <StyledFromGroup>
 
