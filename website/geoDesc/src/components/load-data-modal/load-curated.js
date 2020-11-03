@@ -28,21 +28,18 @@ import {Button} from 'kepler.gl/components';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import DataTable from 'react-data-table-component';
-
-const regionOptions = [
-    { code: 'GLBADM0', label: 'Global / ADM0 (Countries)'},
-    { code: 'GLBADM0', label: 'Global / ADM1 (States)'},
-    { code: 'GLBADM0', label: 'Global / ADM2 (Variable)'},
-    { code: 'AFG-ADM1', label: 'Afghanistan / ADM1 (Province)'},
-    { code: 'AFG-ADM2', label: 'Afghanistan / ADM2 (District)'},
-    { code: 'ITA-ADM1', label: 'Italy / ADM1 (Region)'},
-    { code: 'ITA-ADM2', label: 'Italy / ADM2 (Provinces)'}
-];
+import {regionOptions} from '../../../dynamicAssets/regionOptions'
+import {data} from '../../../dynamicAssets/regionData'
 
 
-const data = [{ id: 1, title: 'DatasetA', year: 'Test' },
-            {id:2, title:"DatasetB", year:'test2'}
-];
+
+
+
+const propTypes = {
+  onLoadCuratedMap: PropTypes.func.isRequired
+};
+
+
 const columns = [
   {
     name: 'Title',
@@ -56,14 +53,6 @@ const columns = [
     right: true,
   },
 ];
-
-
-const propTypes = {
-  onLoadCuratedMap: PropTypes.func.isRequired
-};
-
-
-
 
 
 const StyledDescription = styled.div`
@@ -186,11 +175,13 @@ class LoadCuratedMap extends Component {
           </StyledFromGroup>
           {this.props.error && <Error error={this.props.error}/>}
         </InputForm>
+        <StyledFromGroup>
         <DataTable
-        title="Datasets (UNDER DEVELOPMENT)"
+        title="Datasets Available"
         columns={columns}
         data={data}
       />
+      </StyledFromGroup>
       </div>
     );
   }
