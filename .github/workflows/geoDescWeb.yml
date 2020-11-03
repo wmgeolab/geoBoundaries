@@ -16,7 +16,7 @@ jobs:
          password: ${{ secrets.SSH_PASSWORD }}
          script: |
                cd gbRelease
-               git pull https://github.com/wmgeolab/gbRelease.git
+               git pull https://github.com/DanRunfola/gbRelease.git
                cd website/geoDesc
                npm install
                export MapboxAccessToken=${{ secrets.MAPBOX }}
