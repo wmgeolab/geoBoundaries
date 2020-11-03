@@ -24,7 +24,6 @@ jobs:
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
         lfs: true
         
     - name: Post-Download Initialization Steps
@@ -43,16 +42,16 @@ jobs:
       
     - name: Commit Files
       run: |
-           git push origin --delete devAuth
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git add -A .
+           git status
            git commit -m "geoBoundary Status Check Script"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        branch: 'devAuth'
+        branch: 'master'
         github_token: ${{ secrets.GITHUB_TOKEN }}
         
 
@@ -78,7 +77,6 @@ jobs:
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
         lfs: true
         
     - name: Post-Download Initialization Steps
@@ -97,16 +95,16 @@ jobs:
       
     - name: Commit Files
       run: |
-           git push origin --delete devHum
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git add -A .
+           git status
            git commit -m "geoBoundary Status Check Script"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        branch: 'devHum'
+        branch: 'master'
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
   gbOpenChecks:
@@ -131,7 +129,6 @@ jobs:
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
-        ref: ${{ github.event.pull_request.head.sha }}
         lfs: true
         
     - name: Post-Download Initialization Steps
@@ -154,10 +151,11 @@ jobs:
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git add -A .
+           git status
            git commit -m "geoBoundary Status Check Script"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        branch: 'devOpen'
+        branch: 'master'
         github_token: ${{ secrets.GITHUB_TOKEN }}
