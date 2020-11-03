@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: GRHHEXPDPC
+Full Variable Name: Growth rates of household expenditure or income per capita among the total population
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2016-2016
+geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: World Bank
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://www.sdg.org/datasets/12473f2a42cd4c8796904445f781e2e9_0
+Tag(s): Economics
+Other Notes: 

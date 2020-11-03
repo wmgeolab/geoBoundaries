@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: NFUNSTPLAN
+Full Variable Name: Number of countries with a national statistical plan that is fully funded and under implementation, by source of funding
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2017-2017
+geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
+Each row ID is defined by: ISO 3166-1 alpha-3
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: PARIS21
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-17-18-3-countries-with-national-statistical-plans-that-are-fully-funded-1-yes-0-no
+Tag(s): nan
+Other Notes: 

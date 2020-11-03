@@ -13,6 +13,7 @@ dta
 # Folder view configuration files
 .DS_Store
 Desktop.ini
+*.log
 
 # Thumbnail cache files
 ._*

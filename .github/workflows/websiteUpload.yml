@@ -1,7 +1,7 @@
 on:
   push:
     paths:    
-    - 'website/**'
+    - 'website/geoBoundaries/**'
 name: Publish Website
 jobs:
   FTP-Deploy-Action:
@@ -19,5 +19,6 @@ jobs:
         ftp-server: ftp://ftp.geoboundaries.org/geoboundaries.org/
         ftp-username: geologs
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: website/
+        local-dir: website/geoBoundaries
         #git-ftp-args: --dry-run
+

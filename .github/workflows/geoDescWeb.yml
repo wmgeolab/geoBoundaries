@@ -1,0 +1,25 @@
+on:
+  push:
+    paths:    
+    - 'website/geoDesc/**'
+name: geoDesc Website Update
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy geoDesc Node
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+         host: ${{ secrets.SSH_HOST }}
+         username: ${{ secrets.SSH_USERNAME }}
+         password: ${{ secrets.SSH_PASSWORD }}
+         script: |
+               cd gbRelease
+               git pull https://github.com/wmgeolab/gbRelease.git
+               cd website/geoDesc
+               npm install
+               export MapboxAccessToken=${{ secrets.MAPBOX }}
+               PORT=80
+               kill $(sudo netstat -anp | awk '/ LISTEN / {if($4 ~ ":80$") { gsub("/.*","",$7); print $7; exit } }')
+               npm start

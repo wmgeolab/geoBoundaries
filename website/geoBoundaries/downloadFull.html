@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>geoBoundaries</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/tabulator.css">
+	<script type="text/javascript" src="assets/js/tabulator.js"></script>
+	<style>
+		.tabulator-row .tabulator-cell {
+			padding: 8px 6px;
+		}
+	</style>
+	<!-- Scripts -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9276981-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-9276981-3');
+	</script>
+
+  
+	<!-- Global site tag (gtag.js) - Google Ads: 984002936 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-984002936"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-984002936');
+</script>
+
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+	gtag('event', 'conversion', {'send_to': 'AW-984002936/BycZCJ_8kdMBEPjimtUD'});
+  </script>
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<span class="logo"><a href="index.html"><strong>geoBoundaries</strong></a> by the <a
+							href="http://geolab.wm.edu">William & Mary geoLab</a></span>
+					<ul class="icons">
+						<li><a href="https://twitter.com/wmgeolab?lang=en" class="icon brands fa-twitter"><span
+									class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/company/51598643/"
+								class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Banner -->
+				<section>
+					<header class="main">
+						<h1>Get geoBoundaries: Full Precision</h1>
+					</header>
+
+					<span class="image main"><img src="images/highPrec.jpg" style="width:100%" alt="" /></span>
+
+					<p> This page allows you to download our highest precision data products. Full precision boundaries
+						are very large (generally an order of magnitude or more bigger than our <a
+							href="downloadSimple.html">simplified boundaries</a>), and thus are not well suited to
+						online visualization. Because IDs are identical across our simplified and high precision
+						products, it is feasible to conduct an analysis using the full precision products contained on
+						this page, and then link the results with our simplified products for easy visualization. </p>
+					<p> We offer two types of full precision boundary downloads: "single country unstandardized" and
+						"globally standardized". Both can be downloaded for a single country at a time, though you can
+						automate the process through our <a href="api.html">API</a> to retrieve full global products; we
+						recommend most users of traditional GIS desktop software (i.e., ArcGIS or QGIS) that need every
+						country use our <a href="downloadSimple.html">simplified global product</a>, as it is small
+						enough to open on most computers with relatively little loss in precision for most (though not
+						all) countries.</p>
+					The products on this page include:
+					<ls>
+						<li><b>High Precision Single Country Unstadardized (HPSCU)</b> - The premier geoBoundaries
+							release, representing the highest precision files available for every country in the world.
+							No standardization is performed on these files, so (for example) two countries may overlap
+							in the case of contested boundaries.</li>
+						<li><b>High Precision Single Country Globally Standardized (HPSCGS)</b> - A version of
+							geoBoundaries high percision data that has been clipped to the U.S. Department of State
+							boundary file, ensuring no contested boundaries or overlap in the dataset. This globally
+							standardized product may have gaps between countries. If you need a product with no gaps, we
+							recommend our <a href="downloadSimple.html">simplified global product</a>.</li>
+					</ls>
+
+
+					<hr class="major" />
+					<h2>geoBoundaries High Precision Manual Download</h2>
+					<blockquote>We recommend most users of this full precision data use our <a href="api.html">API</a>.
+						Standardized products are clipped to U.S. Department of State country boundaries. ISO codes can
+						be referenced <a href="https://unstats.un.org/unsd/tradekb/knowledgebase/country-code">here</a> The only requirement for use is <a
+						href="index.html#citation">acknowledgement</a>.
+					</blockquote>
+
+					<div id="tab-container" class="tab-container">
+						<ul class='etabs'>
+							<li class='tab'><a href="#singleCountry">High Precision Unstadardized</a></li>
+							<li class='tab'><a href="#StandardizedCountry">High Precision Globally Standardized</a></li>
+						</ul>
+
+						<div id="singleCountry" class="box">
+							<div class="row" id="dataTable" style="max-width: 100%;">
+
+								<div class="col-twelve tab-full" id="dataTableReplace">
+
+									Loading...
+
+								</div>
+							</div>
+
+						</div>
+
+						<div id="StandardizedCountry" class="box">
+							<div class="row" id="dataTable" style="max-width: 100%;">
+
+								<div class="col-twelve tab-full" id="dataTableReplaceStd">
+
+									Loading...
+
+								</div>
+							</div>
+
+						</div>
+
+
+
+						<script>
+							var downloadSingleIcon = function (cell, formatterParams) {
+								return "<i class='fa fa-download'></i>";
+							}
+							var iconFormatter = function (cell, row, formatterParams) { //plain text value
+								return "<a href='" + cell.getValue() + "' target='_blank'><img width=50px src='" + cell.getValue() + "'></a>";
+
+							};
+							var tableA = new Tabulator("#dataTableReplace", {
+								ajaxURL: "https://www.geoboundaries.org/gbRequest.html", //ajax URL
+								height: screen.height * 0.60,
+								layout: "fitDataFill",
+								resizableColumns: false,
+								responsiveLayout: false,
+								//autoColumns:true,
+								columns: [                 //define the table columns
+									{ formatter: downloadSingleIcon, title: "", align: "center", responsive: 0, cellClick: function (e, cell) { window.open(encodeURI(cell.getRow().getData()["downloadURL"].replace("https://g", "https://www.g"))) } },
+									{ title: "View", field: "imagePreview", formatter: iconFormatter, visible: true, variableHeight: true },
+									{ title: "ISO3", field: "boundaryISO", visible: true, responsive: 0, headerFilter: "input" },
+									{ title: "Level", field: "boundaryType", visible: true, responsive: 0, headerFilter: "select" },
+									{ title: "License", field: "boundaryLicense", headerFilter: "select", headerFilterParams: { values: true }, visible: true, formatter: "textarea", width: "37%" },
+									//{title:"ID", field:"boundaryID", visible:true},
+									{ title: "Primary Source", field: "boundarySource-1", visible: true, formatter: "textarea", width: "37%" },
+									{ title: "ShapefileURL", field: "downloadURL", visible: false },
+
+								]
+							});
+						</script>
+
+						<script>
+							var tableB = new Tabulator("#dataTableReplaceStd", {
+								ajaxURL: "https://www.geoboundaries.org/gbRequest.html?TYP=HPSCGS", //ajax URL
+								height: screen.height * 0.60,
+								layout: "fitDataFill",
+								resizableColumns: false,
+								responsiveLayout: false,
+								//autoColumns:true,
+								columns: [                 //define the table columns
+									{ formatter: downloadSingleIcon, title: "", align: "center", responsive: 0, cellClick: function (e, cell) { window.open(encodeURI(cell.getRow().getData()["downloadURL"].replace("https://g", "https://www.g"))) } },
+									{ title: "View", field: "imagePreview", formatter: iconFormatter, visible: true, variableHeight: true },
+									{ title: "ISO3", field: "boundaryISO", visible: true, responsive: 0, headerFilter: "input" },
+									{ title: "Level", field: "boundaryType", visible: true, responsive: 0, headerFilter: "select" },
+									{ title: "License", field: "boundaryLicense", headerFilter: "select", headerFilterParams: { values: true }, visible: true, formatter: "textarea", width: "37%" },
+									//{title:"ID", field:"boundaryID", visible:true},
+									{ title: "Primary Source", field: "boundarySource-1", visible: true, formatter: "textarea", width: "37%" },
+									{ title: "ShapefileURL", field: "downloadURL", visible: false },
+								]
+							});
+						</script>
+
+				</section>
+
+
+			</div>
+		</div>
+
+
+		<!-- Sidebar -->
+		<div id="sidebar" , class="inactive">
+			<div class="inner">
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#getdata">Get Data</a></li>
+						<li><a href="api.html">API & Archive</a></li>
+						<li><a href="index.html#citation">Citation and Use</a></li>
+						<li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231866">Technical
+								Paper</a></li>
+						<li><a href="issues.html">Caveats & Roadmap</a></li>
+						<li>
+							<span class="opener">Get Involved</span>
+							<ul>
+								<li><a href="https://github.com/wmgeolab/gbRelease">GitHub Repository</a></li>
+								<li><a href="issues.html#contribute">Contribute Boundaries</a></li>
+								<li><a href="https://github.com/wmgeolab/gbRelease/issues">Report Issues</a></li>
+								<li><a href="https://giving.wm.edu/give-now/#allocation=4674">Buy us a Pizza</a></li>
+							</ul>
+						</li>
+
+
+					</ul>
+				</nav>
+
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Get in touch</h2>
+					</header>
+					<p>Want to contribute, identified an error, or otherwise want to chat? Please reach out!</p>
+					<ul class="contact">
+						<li class="icon solid fa-envelope"><a href="#">team@geoboundaries.org</a></li>
+						<li class="icon solid fa-phone">(757) 221-1970</li>
+						<li class="icon solid fa-home">geoLab, Applied Science<br />
+							540 Landrum Drive<br />
+							Williamsburg, VA 23185</li>
+					</ul>
+					<!-- Begin Mailchimp Signup Form -->
+					<div id="mc_embed_signup">
+						<form
+							action="https://geoboundaries.us18.list-manage.com/subscribe/post?u=fa7c8b27d1a61c13a67dc3f25&amp;id=1415921471"
+							method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+							class="validate" target="_blank" novalidate>
+							<div id="mc_embed_signup_scroll">
+								<div class="mc-field-group">
+									<label>Subscribe to our Announcement List:</label>
+									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+								</div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>
+								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+										name="b_fa7c8b27d1a61c13a67dc3f25_1415921471" tabindex="-1" value=""></div>
+								<div class="clear"><input type="submit" value="Submit Email" name="subscribe"
+										id="mc-embedded-subscribe" class="button"></div>
+							</div>
+						</form>
+					</div>
+
+					<!--End mc_embed_signup-->
+				</section>
+
+				<!-- Footer -->
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>. <tiny>With respect to works
+							on or made available through download from the this website, we make no representations or
+							warranties—express, implied, or statutory—as to the validity, accuracy, completeness, or
+							fitness for a particular purpose; nor represent that use of such works would not infringe
+							privately owned rights; nor assume any liability resulting from use of such works; and shall
+							in no way be liable for any costs, expenses, claims, or demands arising out of use of such
+							works.</tiny>
+					</p>
+				</footer>
+
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.easytabs.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () { $('#tab-container').easytabs(); });
+	</script>
+</body>
+
+</html>
