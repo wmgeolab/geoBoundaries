@@ -1,3 +1,3 @@
-export const data = [{ id: 1, title: 'DatasetA', year: 'Test' },
-            {id:2, title:"DatasetB", year:'test2'}
+export const data = [
+{ boundID:"GLB_ADM0", varID:"POISONMORT", title:"Mortality rate attributed to unintentional poisoning", units:"Deaths per 100,000 population", source:"World Develpment Indicators, The World Bank"}
 ];
