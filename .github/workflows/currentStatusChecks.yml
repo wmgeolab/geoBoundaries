@@ -45,6 +45,7 @@ jobs:
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           git pull
            rm RESULT.txt
            git add -A .
            git status
@@ -100,6 +101,7 @@ jobs:
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           git pull
            rm RESULT.txt
            git add -A .
            git status
@@ -152,9 +154,9 @@ jobs:
       
     - name: Commit Files
       run: |
-           git push origin --delete devOpen
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           git pull
            rm RESULT.txt
            git add -A .
            git status
