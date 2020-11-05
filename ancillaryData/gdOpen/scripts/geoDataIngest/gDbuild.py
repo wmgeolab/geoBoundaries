@@ -102,10 +102,12 @@ for filename in os.listdir(directory):
             fD["geoBoundary"] = "ERROR"
             fD["GROUP"] = ""
             fD["REGION"] = ""
+            fd["VER"] = ""
         else:
             fD["geoBoundary"] = vD["geoBoundary Shapefile Dataset API Link"]
             fD["REGION"] = [i for i in fD["geoBoundary"].split("?")[1].split("&") if i.startswith("ISO")][0].split("=")[1]
             fD["GROUP"] = [i for i in fD["geoBoundary"].split("?")[1].split("&") if i.startswith("ADM")][0].split("=")[1]
+            fD["VER"] = [i for i in fD["geoBoundary"].split("?")[1].split("&") if i.startswith("VER")][0].split("=")[1]
         
         if(not len(str(vD["Data Processing Methodology"])) > 3):
             errors.append("Please provide at least one sentence describing any data processing you conducted on this data (even if it was simply retrieval).\n\r")

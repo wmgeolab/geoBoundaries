@@ -22,5 +22,17 @@
     "visible": true,
     "dataUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/mexicoMigration/data.csv",
     "configUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/mexicoMigration/config.json"
+  },
+  {
+    "id": "SAMPLE",
+    "label": "Sample Project",
+    "queryType": "sample",
+    "imageUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/Sample/sample.png",
+    "description": "Example prebuilt project.  Will be removed before launch.",
+    "detail": "Estimated count of individuals migrating between municipalities within Mexico between 2010 and 2015. Information was generated using a roughly 10% sample of the Mexican microcensus, based on the question 'What municiaplity did you live in 5 years ago' on the Mexican 2015 Census. Data source: [IPUMS-International](https://international.ipums.org/international/)",
+    "size": 12938,
+    "visible": true,
+    "dataUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/Sample/data.csv",
+    "configUrl": "https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/Sample/config.json"
   }
 ]

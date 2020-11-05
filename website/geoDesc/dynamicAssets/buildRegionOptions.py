@@ -34,11 +34,8 @@ for index, row in b.iterrows():
                 rowLabel = "Global / ADM2 (Districts or Equivalent)"
         else:
             #NEED TO ADD CANONICAL LOOKUP HERE.  
-            print(cL["boundaryISO"])
-            print(row["REGION"])
-            print(cL.loc[cL["boundaryISO"] == row["REGION"]])
-
-            canon = cL.loc[(cL["boundaryISO"] == row["REGION"]) & (cL["boundaryType"] == row["GROUP"])]["boundaryCanonical"].values[0].strip()
+            canon = str(cL.loc[(cL["boundaryISO"].str.contains(row["REGION"])) & (cL["boundaryType"] == row["GROUP"])]["boundaryCanonical"].values[0])
+            print(canon)
             rowLabel = str(iso.loc[iso["Alpha-3code"] == row["REGION"]]["Country"].values[0]).strip() + " / " + str(row["GROUP"]).strip() + " (" + canon + ")"
 
         buildData.append('{ boundID:"' + row["REGION"] + "_" + row["GROUP"] + '", varID:"' + row["VARNAME"].strip() + '", title:"' + row["fullName"].strip() + '", units:"' + row["Units"].strip() + '", source:"' + row["Source_1"].strip()  + '"},')
