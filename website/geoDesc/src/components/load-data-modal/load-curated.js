@@ -28,34 +28,11 @@ import {Button} from 'kepler.gl/components';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import DataTable from 'react-data-table-component';
-
-const regionOptions = [
-    { code: 'GLBADM0', label: 'Global / ADM0 (Countries)'},
-    { code: 'GLBADM0', label: 'Global / ADM1 (States)'},
-    { code: 'GLBADM0', label: 'Global / ADM2 (Variable)'},
-    { code: 'AFG-ADM1', label: 'Afghanistan / ADM1 (Province)'},
-    { code: 'AFG-ADM2', label: 'Afghanistan / ADM2 (District)'},
-    { code: 'ITA-ADM1', label: 'Italy / ADM1 (Region)'},
-    { code: 'ITA-ADM2', label: 'Italy / ADM2 (Provinces)'}
-];
+import {regionOptions} from '../../../dynamicAssets/regionOptions'
+import {data} from '../../../dynamicAssets/regionData'
 
 
-const data = [{ id: 1, title: 'DatasetA', year: 'Test' },
-            {id:2, title:"DatasetB", year:'test2'}
-];
-const columns = [
-  {
-    name: 'Title',
-    selector: 'title',
-    sortable: true,
-  },
-  {
-    name: 'Test',
-    selector: 'year',
-    sortable: true,
-    right: true,
-  },
-];
+
 
 
 const propTypes = {
@@ -63,7 +40,35 @@ const propTypes = {
 };
 
 
-
+const columns = [
+  {
+    name: 'Variable',
+    selector: 'title',
+    sortable: true,
+    grow:2,
+    maxWidth:30,
+    wrap:true
+  },
+  {
+    name: 'Units',
+    selector: 'units',
+    sortable: false,
+    maxWidth:20,
+    wrap:true,
+    grow:1
+  },
+  {
+    name: 'Source',
+    selector: 'source',
+    wrap:true,
+    sortable: true
+  },
+  {
+    name: 'boundID',
+    selector: 'boundID',
+    omit:true,
+  }
+];
 
 
 const StyledDescription = styled.div`
@@ -132,7 +137,8 @@ class LoadCuratedMap extends Component {
   state = {
     dataUrl: '',
     tVar: 'No Selection',
-    cVar: 'No Selection'
+    cVar: 'GLB_ADM0',
+    filteredData: data.filter(item => item.boundID && item.boundID == ("GLB_ADM0"))
   };
 
   onMapUrlChange = e => {
@@ -151,12 +157,11 @@ class LoadCuratedMap extends Component {
     this.props.onLoadCuratedMap({dataUrl});
   };
 
-  onSelectCountry = () => {
-    this.setState({cVar: this.state.tVar.code})
-    console.log(this.state.tVar)
-    console.log(this.state.tVar.code)
-    console.log(this.state.tVar.label)
-  };
+
+onFormChange = (event, value) => {
+  console.log(value.code);
+  this.setState({filteredData: data.filter(item => item.boundID && item.boundID == (value.code))})
+}
 
   render() {
     return (
@@ -171,26 +176,34 @@ class LoadCuratedMap extends Component {
                 id="choose-a-region"
                 options={regionOptions}
                 getOptionLabel={(option) => option.label}
-                onChange={(event, value) => this.setState({tVar: value})}
+                //onChange={"(event, value) => this.setState({tVar: value})"}
+                onChange={(event, value) => this.onFormChange(event, value)}
+                
+                
                 style={{ width: "100%" }}
-                renderInput={(params) => <TextField {...params} label="Choose a Region" variant="outlined" />}
+                renderInput={(params) => <TextField {...params} label="Choose a Region (Showing Data Available for Global ADM0 - Countries)" variant="outlined" />}
             />
 
-            <Button type="submit" cta size="small" onClick={this.onSelectCountry}>
-              <FormattedMessage id="Explore Datasets" />
-            </Button>
-            
-            <StyledDescription>
-                <FormattedMessage id={this.state.cVar}></FormattedMessage>
-            </StyledDescription>
           </StyledFromGroup>
           {this.props.error && <Error error={this.props.error}/>}
         </InputForm>
         <DataTable
-        title="Datasets (UNDER DEVELOPMENT)"
+        noHeader={true}
         columns={columns}
-        data={data}
+        data={this.state.filteredData}
+        defaultSortField="title"
+        selectableRows={true}
+        selectableRowsNoSelectAll={true}
+        selectableRowsHighlight={true}
+        selectableRowsVisibleOnly={false}
+        highlightOnHover={true}
+        striped={true}
+        persistTableHead={true}
+        pagination={true}
       />
+      <StyledFromGroup>
+      <Button>Add Selected Data</Button>
+      </StyledFromGroup>
       </div>
     );
   }
