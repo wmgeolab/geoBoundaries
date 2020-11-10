@@ -1,8 +1,8 @@
 geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
-==============================================================
+=============================================================
 Metadata for: MFPTOTALPC
 Full Variable Name: The material footprint, the attribution of global material extraction to domestic final demand of a country, for biomass, fossil fuels, metal ores, and non-metal ores per capita
-==============================================================
+=============================================================
 
 Data Definition: 
 Units: 
