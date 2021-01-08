@@ -1,9 +1,7 @@
 name: "Close stale PRs"
 on:
-  workflow_dispatch
-#on:
-  #schedule:
-  #- cron: "30 1 * * *"
+  schedule:
+    - cron: "30 1 * * *"
 
 jobs:
   stale:
