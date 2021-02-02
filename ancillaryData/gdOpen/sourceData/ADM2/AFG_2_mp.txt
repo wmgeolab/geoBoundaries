@@ -1,0 +1,14 @@
+Data Representative of Years: 2010 - 2100
+ISO-3166-1 (Alpha-3): AFG
+Boundary Type: ADM 2
+Canonical Boundary Type Name: Districts
+Source 1: SSP2 (Middle of the road) Population Dynamics, SEDAC
+Source 2: GeoBoundaries 
+Source 1 License: Open Database License (ODbL)
+Source 2 License: Open Database License (ODbL)
+License Notes:
+Source 1 License Link: https://sedac.ciesin.columbia.edu/data/set/popdynamics-1-km-downscaled-pop-base-year-projection-ssp-2000-2100-rev01/metadata
+Source 2 License Link: https://www.geoboundaries.org
+Link to Source 1 Data: https://sedac.ciesin.columbia.edu//data/set/popdynamics-1-km-downscaled-pop-base-year-projection-ssp-2000-2100-rev01/data-download
+Link to Source 2 Data: https://www.geoboundaries.org/data/geoBoundaries-3_0_0/AFG/ADM2/
+Other Notes:
