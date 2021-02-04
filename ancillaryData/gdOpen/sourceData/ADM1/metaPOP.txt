@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: ISOcode_adm1_POP
+Full Variable Name:  Mean zonal statistics of population by administrative level 1 
+==============================================================
+
+Data Definition: 
+Units: 
+Data Representative Of Year(s): 2010-2100
+geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?VER=3_0_0
+Each row ID is defined by: shapeID
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: SSP2 (Middle of the road) Population Dynamics, SEDAC
+Source 2: 
+License: 
+License Source: 
+Link to Source Data: https://sedac.ciesin.columbia.edu//data/set/popdynamics-1-km-downscaled-pop-base-year-projection-ssp-2000-2100-rev01/data-download
+Tag(s): population
+Other Notes: 
