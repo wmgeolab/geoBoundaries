@@ -176,8 +176,8 @@ $.getJSON("https://www.geoboundaries.org/data/geoBoundaries-3_0_0/"+qs.ISO+"/"+ 
   mymap1.fitBounds(datalayer.getBounds());
 });
 
-$.getJSON("Natty_Earth_GeoJson_From_GitHub/natty_earth_countries_geojson/"
-        +qs.ISO+"/"+qs.ADM+"/"+qs.ISO+".geojson",
+$.getJSON("naturalEarthGeoJson/"
+        +qs.ISO+"/"+qs.ADM+"/"+"naturalEarth"+qs.ISO+".geojson",
         function(data){
   // add GeoJSON layer to the map once the file is loaded
   var datalayer = L.geoJson(data).addTo(mymap2);
