@@ -1,0 +1,12 @@
+Boundary Representative of Year: 2021
+ISO-3166-1 (Alpha-3): GMB
+Boundary Type: ADM level 3
+Canonical Boundary Type Name: country
+Source 1: Open Street Map Boundaries
+Source 2: 
+Release Type: gbOpen
+License: ccbysa_20.pdf
+License Notes: Open use but must provide source
+License Source: https://www.openstreetmap.org/copyright
+Link to Source Data: https://osm-boundaries.com/Download/Submit?apiKey=36a29ab41d14dc5b10e2c00e9607dbe6&db=osm20210104&osmIds=-192774
+Other Notes: Source data needs to be extracted into a geojson file to be used 
