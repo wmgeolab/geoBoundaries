@@ -1,11 +1,12 @@
 
-#map1 { height: 700px; width: 1500px; }
-#map2 { height: 700px; width: 1500px; }
+#map1 { height: 500px; width: 1330px; }
+#map2 { height: 500px; width: 1330px; }
 * {box-sizing: border-box;}
 
 .img-comp-container {
     position: relative;
-    height: 700px; /*should be the same height as the images*/
+    height: 500px; /*should be the same height as the images*/
+    margin-top:70px;
 }
 
 /* needed to add z-index to image as well, not just slider */
@@ -44,10 +45,12 @@
 
 .Orgs{
     clear: both;
+    
 }
 
 #other{
     float: left;
+    
 }
 
 #gb{
