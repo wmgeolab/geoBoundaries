@@ -36,5 +36,20 @@
     position: absolute;
     border-right: 5px solid #5f656d; /* Border on the left */
     width: 2px; /* Width instead of height */
-    
+}
+
+.header{
+    text-align: center;
+}
+
+.Orgs{
+    clear: both;
+}
+
+#other{
+    float: left;
+}
+
+#gb{
+    float: right;
 }
