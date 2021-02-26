@@ -20,9 +20,18 @@ crossorigin=""></script>
 </head>
 <body>
 
-<h1>Comparing Geoboundaries ADMs to Other Organizations ADMS</h1>
+<h1 class= "header"> Comparing Geoboundaries ADMs to Other Organizations ADMs</h1>
 
-<p>Click and slide the blue slider to compare two maps:</p>
+<h2 class= "header">Click and slide the blue slider to compare two maps:</h2>
+
+<div class = "Orgs">
+  <h3 id= "other">Natural Earth</h3>
+  <h3 id= "gb">Geoboundaries</h3>
+</div>
+
+
+<!--insert either a header or paragraph or something here that shows what organizations boundaries are being compared
+by grabbing it from the dropdown menus-->
 
 <div class="img-comp-container" id="parent">
   <div class="img-comp-img" id="map1"></div>
@@ -259,6 +268,7 @@ crossorigin=""></script>
   <input type="button" id="compare" value="Compare" />
 </div>
 
+<!--Get rid of line below?? Redundant?-->
 <script src="js/app.js"></script>
 
 </body>
