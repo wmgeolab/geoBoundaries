@@ -50,7 +50,7 @@ jobs:
            rm RESULT.txt
            git add -A .
            git status
-           git commit -m "geoBoundary Status Check Script"
+           git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
     
     - name: Push changes
       uses: ad-m/github-push-action@master
