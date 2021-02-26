@@ -221,12 +221,11 @@ $(document).ready(function(){
 
   document.getElementById("ADM").value=qs.ADM;
   $("#compare").click(function(){
-      //add code that changes what org we are comparing geoboundaries to
-      
       // replace url in address bar
       const stateObj = { id: 'geo' };
       window.history.replaceState(stateObj, '', "?"+adm+"&"+iso); 
       location.reload();
   });
+
 });
 
