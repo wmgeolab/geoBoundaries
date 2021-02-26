@@ -37,7 +37,7 @@ jobs:
       run: |
            echo "==============================================="
            mkdir ~/tmp 
-           python geoBoundaryBot/gbBuild.py gbAuthoritative dev False
+           python geoBoundaryBot/gbBuild.py gbAuthoritative dev False NPL
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
@@ -56,6 +56,12 @@ jobs:
       with:
         branch: 'master'
         github_token: ${{ secrets.DRTOKEN }}
+        
+    - name: Create Artifact
+    - uses: actions/upload-artifact@v2
+      with:
+        name: results
+        path: ~/artifacts/results.csv
         
 
   gbHumanitarianChecks:
@@ -93,7 +99,7 @@ jobs:
       run: |
            echo "==============================================="
            mkdir ~/tmp 
-           python geoBoundaryBot/gbBuild.py gbHumanitarian dev False
+           python geoBoundaryBot/gbBuild.py gbHumanitarian dev False NPL
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
@@ -148,7 +154,7 @@ jobs:
       run: |
            echo "==============================================="
            mkdir ~/tmp 
-           python geoBoundaryBot/gbBuild.py gbOpen dev False
+           python geoBoundaryBot/gbBuild.py gbOpen dev False NPL
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
