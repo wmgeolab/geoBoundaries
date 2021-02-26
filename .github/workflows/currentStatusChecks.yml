@@ -37,6 +37,7 @@ jobs:
       run: |
            echo "==============================================="
            mkdir ~/tmp 
+           mkdir ~/artifacts
            python geoBoundaryBot/gbBuild.py gbAuthoritative dev False NPL
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
