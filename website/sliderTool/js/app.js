@@ -116,10 +116,13 @@ function initComparisons() {
 var mymap1 = L.map('map1').setView([0, 0], 1);
 var mymap2 = L.map('map2').setView([0, 0], 1);
 
+//retrieve selected organization
+selectedOrg = $("#Comparison").val();
+
 //retrieve key for selected map in drop down menu
 selectedTile = $("#Maps").val();
 
-//dictionar for various maps and their tile map url
+//dictionary for various maps and their tile map url
 var dict = {
 "Stamen WaterColor" : ['https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', 
 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'],
@@ -191,38 +194,39 @@ mymap2.sync(mymap1);
 
 const arr = [null, null];
 
-//fix
 $(document).ready(function(){
-var adm;
-var iso;
-var selectedTile;
-$('select[name="ISO"]').change(function(){
-    iso = "ISO="+$("#ISO").val();
+  var adm;
+  var iso;
+  var selectedTile;
+  $('select[name="ISO"]').change(function(){
+      iso = "ISO="+$("#ISO").val();
+      adm = "ADM="+$("#ADM").val();
+      selectedTile = $("#Maps").val();
+
+  });
+
+  $('select[name="ADM"]').change(function(){
+      adm = "ADM="+$("#ADM").val();
+      iso = "ISO="+$("#ISO").val();
+      selectedTile = $("#Maps").val(); 
+  });
+
+  $('select[name="MapTiles"]').change(function(){
     adm = "ADM="+$("#ADM").val();
+    iso = "ISO="+$("#ISO").val();
     selectedTile = $("#Maps").val();
 
-});
-
-$('select[name="ADM"]').change(function(){
-    adm = "ADM="+$("#ADM").val();
-    iso = "ISO="+$("#ISO").val();
-    selectedTile = $("#Maps").val(); 
-});
-
-$('select[name="MapTiles"]').change(function(){
-  adm = "ADM="+$("#ADM").val();
-  iso = "ISO="+$("#ISO").val();
-  selectedTile = $("#Maps").val();
-
-});
+  });
 
 
-document.getElementById("ADM").value=qs.ADM;
-$("#compare").click(function(){
-    // replace url in address bar
-    const stateObj = { id: 'geo' };
-    window.history.replaceState(stateObj, '', "?"+adm+"&"+iso); 
-    location.reload();
-});
+  document.getElementById("ADM").value=qs.ADM;
+  $("#compare").click(function(){
+      //add code that changes what org we are comparing geoboundaries to
+      
+      // replace url in address bar
+      const stateObj = { id: 'geo' };
+      window.history.replaceState(stateObj, '', "?"+adm+"&"+iso); 
+      location.reload();
+  });
 });
 
