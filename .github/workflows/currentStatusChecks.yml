@@ -58,7 +58,7 @@ jobs:
         github_token: ${{ secrets.DRTOKEN }}
         
     - name: Create Artifact
-    - uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: results
         path: ~/artifacts/results.csv
