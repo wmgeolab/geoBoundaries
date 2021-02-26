@@ -1,0 +1,354 @@
+Modified zip files found.  Checking meta.txt validity.
+
+Metadata Check: /sourceData/gbAuthoritative/NPL_ADM2.zip
+
+============================
+Metadata file exists in /sourceData/gbAuthoritative/NPL_ADM2.zip
+
+Detected Key / Value: Boundary Representative of Year / 2017
+Valid year 2017 detected.
+
+Detected Key / Value: ISO-3166-1 (Alpha-3) / NPL
+Valid ISO detected: NPL
+
+Detected Key / Value: Boundary Type / ADM2
+Valid Boundary Type detected: ADM2.
+
+Detected Key / Value: Canonical Boundary Type Name / 
+WARN: No canonical name detected.  This field is optional.
+
+Detected Key / Value: Source 1 / Nepal Survey Department
+Source detected: Nepal Survey Department
+
+Detected Key / Value: Source 2 / United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+Source detected: United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+
+Detected Key / Value: Release Type / gbAuthoritative
+
+Detected Key / Value: License / Other - Humanitarian
+Valid license type detected: Other - Humanitarian
+
+Detected Key / Value: License Notes / Humanitarian use only
+License notes detected: Humanitarian use only
+
+Detected Key / Value: License Source / https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+License source detected: https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+WARN: No license image found.  This is not required.  We check for license.png and license.jpg.
+
+Detected Key / Value: Link to Source Data / https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+Data Source Found: https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+
+Detected Key / Value: Other Notes / 
+WARN: No other notes detected.  This field is optional.
+
+Both a license and release type are defined.  Checking for compatability.
+License type is a valid license for the gbAuthoritative product.
+
+Metadata checks complete for /sourceData/gbAuthoritative/NPL_ADM2.zip
+
+----------------------------
+      OPTIONAL TESTS        
+----------------------------
+canonical           FAILED      
+licenseImage        FAILED      
+licenseNotes        PASSED      
+otherNotes          FAILED      
+
+----------------------------
+      REQUIRED TESTS        
+----------------------------
+year                PASSED      
+iso                 PASSED      
+bType               PASSED      
+source              PASSED      
+releaseType         PASSED      
+releaseTypeName     PASSED      
+license             PASSED      
+licenseName         PASSED      
+licenseSource       PASSED      
+dataSource          PASSED      
+releaseTypeFolder   PASSED      
+==========================
+Metadata checks passed for /sourceData/gbAuthoritative/NPL_ADM2.zip
+
+====================
+All metadata checks complete.
+Successes: 1
+Failures: 0
+Modified zip files found.  Checking shape data validity.
+
+Data Check: /sourceData/gbAuthoritative/NPL_ADM2.zip
+Shapefile (*.shp) found. Attempting to load.
+
+Column for name detected: Name
+Total number of names detected: 77
+Example of first name detected: Achham
+WARN: No column for boundary ISOs found.  This is not required.
+
+All shape geometries are within valid bounds.
+
+All shape geometries have valid topology.
+Projection confirmed as epsg:4326
+
+Data checks complete for /sourceData/gbAuthoritative/NPL_ADM2.zip
+
+----------------------------
+      OPTIONAL TESTS        
+----------------------------
+bndName             PASSED      
+nameExample         PASSED      
+nameCount           PASSED      
+bndISO              FAILED      
+isoExample          PASSED      
+isoCount            FAILED      
+topology            PASSED      
+
+----------------------------
+      REQUIRED TESTS        
+----------------------------
+proj                PASSED      
+==========================
+Data checks passed for /sourceData/gbAuthoritative/NPL_ADM2.zip
+
+====================
+All data checks complete.
+Successes: 2
+Failures: 0
+All tests passed.
+Modified zip files found.  Checking meta.txt validity.
+
+Metadata Check: /sourceData/gbAuthoritative/NPL_ADM0.zip
+
+============================
+Metadata file exists in /sourceData/gbAuthoritative/NPL_ADM0.zip
+
+Detected Key / Value: Boundary Representative of Year / 2017
+Valid year 2017 detected.
+
+Detected Key / Value: ISO-3166-1 (Alpha-3) / NPL
+Valid ISO detected: NPL
+
+Detected Key / Value: Boundary Type / ADM0
+Valid Boundary Type detected: ADM0.
+
+Detected Key / Value: Canonical Boundary Type Name / Country
+Canonical name detected: Country
+
+Detected Key / Value: Source 1 / Nepal Survey Department
+Source detected: Nepal Survey Department
+
+Detected Key / Value: Source 2 / United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+Source detected: United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+
+Detected Key / Value: Release Type / gbAuthoritative
+
+Detected Key / Value: License / Other - Humanitarian
+Valid license type detected: Other - Humanitarian
+
+Detected Key / Value: License Notes / Humanitarian use only - Noted in metadata tab
+License notes detected: Humanitarian use only - Noted in metadata tab
+
+Detected Key / Value: License Source / https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+License source detected: https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+WARN: No license image found.  This is not required.  We check for license.png and license.jpg.
+
+Detected Key / Value: Link to Source Data / https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+Data Source Found: https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+
+Detected Key / Value: Other Notes / 
+WARN: No other notes detected.  This field is optional.
+
+Both a license and release type are defined.  Checking for compatability.
+License type is a valid license for the gbAuthoritative product.
+
+Metadata checks complete for /sourceData/gbAuthoritative/NPL_ADM0.zip
+
+----------------------------
+      OPTIONAL TESTS        
+----------------------------
+canonical           PASSED      
+licenseImage        FAILED      
+licenseNotes        PASSED      
+otherNotes          FAILED      
+
+----------------------------
+      REQUIRED TESTS        
+----------------------------
+year                PASSED      
+iso                 PASSED      
+bType               PASSED      
+source              PASSED      
+releaseType         PASSED      
+releaseTypeName     PASSED      
+license             PASSED      
+licenseName         PASSED      
+licenseSource       PASSED      
+dataSource          PASSED      
+releaseTypeFolder   PASSED      
+==========================
+Metadata checks passed for /sourceData/gbAuthoritative/NPL_ADM0.zip
+
+====================
+All metadata checks complete.
+Successes: 1
+Failures: 0
+Modified zip files found.  Checking shape data validity.
+
+Data Check: /sourceData/gbAuthoritative/NPL_ADM0.zip
+Shapefile (*.shp) found. Attempting to load.
+
+Column for name detected: Name
+Total number of names detected: 1
+Example of first name detected: Federal Democratic Republic of Nepal
+
+Column for boundary ISO detected: ISO_Code
+Total number of boundary ISOs detected: 1
+Example of first boundary ISO detected: NPL
+
+All shape geometries are within valid bounds.
+
+All shape geometries have valid topology.
+Projection confirmed as epsg:4326
+
+Data checks complete for /sourceData/gbAuthoritative/NPL_ADM0.zip
+
+----------------------------
+      OPTIONAL TESTS        
+----------------------------
+bndName             PASSED      
+nameExample         PASSED      
+nameCount           PASSED      
+bndISO              PASSED      
+isoExample          PASSED      
+isoCount            PASSED      
+topology            PASSED      
+
+----------------------------
+      REQUIRED TESTS        
+----------------------------
+proj                PASSED      
+==========================
+Data checks passed for /sourceData/gbAuthoritative/NPL_ADM0.zip
+
+====================
+All data checks complete.
+Successes: 2
+Failures: 0
+All tests passed.
+Modified zip files found.  Checking meta.txt validity.
+
+Metadata Check: /sourceData/gbAuthoritative/NPL_ADM1.zip
+
+============================
+Metadata file exists in /sourceData/gbAuthoritative/NPL_ADM1.zip
+
+Detected Key / Value: Boundary Representative of Year / 2017
+Valid year 2017 detected.
+
+Detected Key / Value: ISO-3166-1 (Alpha-3) / NPL
+Valid ISO detected: NPL
+
+Detected Key / Value: Boundary Type / ADM1
+Valid Boundary Type detected: ADM1.
+
+Detected Key / Value: Canonical Boundary Type Name / Province
+Canonical name detected: Province
+
+Detected Key / Value: Source 1 / Nepal Survey Department
+Source detected: Nepal Survey Department
+
+Detected Key / Value: Source 2 / United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+Source detected: United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+
+Detected Key / Value: Release Type / gbAuthoritative
+
+Detected Key / Value: License / Other - Humanitarian
+Valid license type detected: Other - Humanitarian
+
+Detected Key / Value: License Notes / Humanitarian use only - Noted in metadata tab
+License notes detected: Humanitarian use only - Noted in metadata tab
+
+Detected Key / Value: License Source / https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+License source detected: https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+WARN: No license image found.  This is not required.  We check for license.png and license.jpg.
+
+Detected Key / Value: Link to Source Data / https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+Data Source Found: https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+
+Detected Key / Value: Other Notes / 
+WARN: No other notes detected.  This field is optional.
+
+Both a license and release type are defined.  Checking for compatability.
+License type is a valid license for the gbAuthoritative product.
+
+Metadata checks complete for /sourceData/gbAuthoritative/NPL_ADM1.zip
+
+----------------------------
+      OPTIONAL TESTS        
+----------------------------
+canonical           PASSED      
+licenseImage        FAILED      
+licenseNotes        PASSED      
+otherNotes          FAILED      
+
+----------------------------
+      REQUIRED TESTS        
+----------------------------
+year                PASSED      
+iso                 PASSED      
+bType               PASSED      
+source              PASSED      
+releaseType         PASSED      
+releaseTypeName     PASSED      
+license             PASSED      
+licenseName         PASSED      
+licenseSource       PASSED      
+dataSource          PASSED      
+releaseTypeFolder   PASSED      
+==========================
+Metadata checks passed for /sourceData/gbAuthoritative/NPL_ADM1.zip
+
+====================
+All metadata checks complete.
+Successes: 1
+Failures: 0
+Modified zip files found.  Checking shape data validity.
+
+Data Check: /sourceData/gbAuthoritative/NPL_ADM1.zip
+Shapefile (*.shp) found. Attempting to load.
+
+Column for name detected: Name
+Total number of names detected: 7
+Example of first name detected: Pradesh 1
+WARN: No column for boundary ISOs found.  This is not required.
+
+All shape geometries are within valid bounds.
+
+All shape geometries have valid topology.
+Projection confirmed as epsg:4326
+
+Data checks complete for /sourceData/gbAuthoritative/NPL_ADM1.zip
+
+----------------------------
+      OPTIONAL TESTS        
+----------------------------
+bndName             PASSED      
+nameExample         PASSED      
+nameCount           PASSED      
+bndISO              FAILED      
+isoExample          PASSED      
+isoCount            FAILED      
+topology            PASSED      
+
+----------------------------
+      REQUIRED TESTS        
+----------------------------
+proj                PASSED      
+==========================
+Data checks passed for /sourceData/gbAuthoritative/NPL_ADM1.zip
+
+====================
+All data checks complete.
+Successes: 2
+Failures: 0
+All tests passed.
