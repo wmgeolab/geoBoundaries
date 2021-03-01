@@ -3,7 +3,7 @@ on:
 
 name: Nightly - N
 jobs:
-  gbAuthoritativeChecks:
+  gbBuild:
     runs-on: ubuntu-latest
     container: osgeo/gdal:ubuntu-small-latest
     steps:
@@ -32,13 +32,15 @@ jobs:
            git fetch
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
-    - name: Checking gbAuthoritative Files
+    - name: Checking Files
       id: checks
       run: |
            echo "==============================================="
            mkdir ~/tmp 
            mkdir ~/artifacts
-           python geoBoundaryBot/gbBuild.py gbAuthoritative dev True N
+           python geoBoundaryBot/gbBuild.py gbAuthoritative nightly N
+           python geoBoundaryBot/gbBuild.py gbOpen nightly N
+           python geoBoundaryBot/gbBuild.py gbHumanitarian nightly N
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
@@ -71,112 +73,4 @@ jobs:
         path: ~/artifacts/log.txt
         
 
-  gbHumanitarianChecks:
-    runs-on: ubuntu-latest
-    container: osgeo/gdal:ubuntu-small-latest
-    steps:
-        
-    - name: Initialize Linux Environment
-      run: |
-           apt-get update
-           apt-get install -y software-properties-common
-           add-apt-repository ppa:git-core/ppa
-           apt-get update
-           apt-get install -y git
-           curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-           apt-get install git-lfs
-           apt-get install -y python3-pip
-           pip3 install geopandas
-           pip3 install matplotlib
-           pip3 install PyGithub
-    
-    - name: Download Repository Code
-      uses: actions/checkout@v2.3.2
-      with:
-        lfs: true
-        persist-credentials: false
-        
-    - name: Post-Download Initialization Steps
-      run: |
-           git fetch
-           git clone https://github.com/wmgeolab/geoBoundaryBot
-           
-    - name: Checking gbHumanitarian Files
-      id: checks
-      run: |
-           echo "==============================================="
-           mkdir ~/tmp 
-           python geoBoundaryBot/gbBuild.py gbHumanitarian dev False NPL
-      env:
-           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      
-    - name: Commit Files
-      run: |
-           git config --local user.email "danr@wm.edu"
-           git config --local user.name "DanRunfola"
-           git pull
-           rm RESULT.txt
-           git add -A .
-           git status
-           git commit -m "geoBoundary Status Check Script"
-    
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        branch: 'master'
-        github_token: ${{ secrets.DRTOKEN }}
-
-  gbOpenChecks:
-    runs-on: ubuntu-latest
-    container: osgeo/gdal:ubuntu-small-latest
-    steps:
-    
-    - name: Initialize Linux Environment
-      run: |
-           apt-get update
-           apt-get install -y software-properties-common
-           add-apt-repository ppa:git-core/ppa
-           apt-get update
-           apt-get install -y git
-           curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-           apt-get install git-lfs
-           apt-get install -y python3-pip
-           pip3 install geopandas
-           pip3 install matplotlib
-           pip3 install PyGithub
-    
-    - name: Download Repository Code
-      uses: actions/checkout@v2.3.2
-      with:
-        lfs: true
-        persist-credentials: false
-        
-    - name: Post-Download Initialization Steps
-      run: |
-           git fetch
-           git clone https://github.com/wmgeolab/geoBoundaryBot
-           
-    - name: Checking gbOpen Files
-      id: checks
-      run: |
-           echo "==============================================="
-           mkdir ~/tmp 
-           python geoBoundaryBot/gbBuild.py gbOpen dev False NPL
-      env:
-           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      
-    - name: Commit Files
-      run: |
-           git config --local user.email "danr@wm.edu"
-           git config --local user.name "DanRunfola"
-           git pull
-           rm RESULT.txt
-           git add -A .
-           git status
-           git commit -m "geoBoundary Status Check Script"
-    
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        branch: 'master'
-        github_token: ${{ secrets.DRTOKEN }}
+  
