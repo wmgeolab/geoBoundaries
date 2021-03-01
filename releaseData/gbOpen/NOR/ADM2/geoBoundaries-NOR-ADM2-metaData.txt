@@ -1,32 +1,13 @@
-status:PASS
-META_requiredChecksPassing:True
-GEOM_requiredChecksPassing:True
-META_canonicalNameInMeta:False
-META_licenseImageInZip:False
-META_yearValid:True
-META_isoValid:True
-META_boundaryTypeValid:True
-META_sourceExists:True
-META_releaseTypeValid:True
-META_releaseTypeCorrectFolder:True
-META_licenseValid:True
-META_licenseSourceExists:True
-META_dataSourceExists:True
-GEOM_boundaryNamesColumnExists:True
-GEOM_boundaryNamesFilledIn:True
-GEOM_boundaryISOColumnExists:False
-GEOM_boundaryISOsFilledIn:False
-GEOM_Topology:False
-GEOM_Projection:True
-boundaryID:NOR-ADM2-nightly
-boundaryISO:NOR
-boundaryType:ADM2
-boundaryYear:2013.0
-boundarySource-1:Geonorge
-boundarySource-2:Mapping Authority of Norway
-boundaryCanonical:
-boundaryLicense:Creative Commons Attribution 4.0 International (CC BY 4.0)
-licenseDetail:nan
-licenseSource:https//kartkatalog.geonorge.no/metadata/kartverket/administrative-enheter/041f1e6e-bdbc-4091-b48f-8a5990f3cc5b
-boundarySourceURL:https//kartkatalog.geonorge.no/metadata/kartverket/administrative-enheter/041f1e6e-bdbc-4091-b48f-8a5990f3cc5b
-downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NOR_ADM2.zip
+boundaryID : NOR-ADM2-nightly
+boundaryISO : NOR
+boundaryType : ADM2
+boundaryYear : 2013.0
+boundarySource-1 : Geonorge
+boundarySource-2 : Mapping Authority of Norway
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : nan
+licenseSource : https//kartkatalog.geonorge.no/metadata/kartverket/administrative-enheter/041f1e6e-bdbc-4091-b48f-8a5990f3cc5b
+boundarySourceURL : https//kartkatalog.geonorge.no/metadata/kartverket/administrative-enheter/041f1e6e-bdbc-4091-b48f-8a5990f3cc5b
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NOR_ADM2.zip
+updateDate : 10:09PM +0000 on Mar 01, 2021

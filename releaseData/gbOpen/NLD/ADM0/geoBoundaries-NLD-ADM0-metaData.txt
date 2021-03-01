@@ -1,32 +1,13 @@
-status:PASS
-META_requiredChecksPassing:True
-GEOM_requiredChecksPassing:True
-META_canonicalNameInMeta:True
-META_licenseImageInZip:True
-META_yearValid:True
-META_isoValid:True
-META_boundaryTypeValid:True
-META_sourceExists:True
-META_releaseTypeValid:True
-META_releaseTypeCorrectFolder:True
-META_licenseValid:True
-META_licenseSourceExists:True
-META_dataSourceExists:True
-GEOM_boundaryNamesColumnExists:True
-GEOM_boundaryNamesFilledIn:True
-GEOM_boundaryISOColumnExists:True
-GEOM_boundaryISOsFilledIn:True
-GEOM_Topology:False
-GEOM_Projection:True
-boundaryID:NLD-ADM0-nightly
-boundaryISO:NLD
-boundaryType:ADM0
-boundaryYear:2017
-boundarySource-1:Publieke Dienstverlening op de Kaart
-boundarySource-2:nan
-boundaryCanonical:Nederland
-boundaryLicense:Creative Commons Attribution-ShareAlike 3.0 Unported
-licenseDetail:nan
-licenseSource:https//www.pdok.nl/nl/over-pdok/uw-speciale-aandacht/open-data
-boundarySourceURL:https//www.pdok.nl/nl/producten/pdok-downloads/basis-registratie-kadaster/bestuurlijke-grenzen-actueel
-downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NLD_ADM0.zip
+boundaryID : NLD-ADM0-nightly
+boundaryISO : NLD
+boundaryType : ADM0
+boundaryYear : 2017
+boundarySource-1 : Publieke Dienstverlening op de Kaart
+boundarySource-2 : nan
+boundaryCanonical : Nederland
+boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
+licenseDetail : nan
+licenseSource : https//www.pdok.nl/nl/over-pdok/uw-speciale-aandacht/open-data
+boundarySourceURL : https//www.pdok.nl/nl/producten/pdok-downloads/basis-registratie-kadaster/bestuurlijke-grenzen-actueel
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NLD_ADM0.zip
+updateDate : 10:09PM +0000 on Mar 01, 2021

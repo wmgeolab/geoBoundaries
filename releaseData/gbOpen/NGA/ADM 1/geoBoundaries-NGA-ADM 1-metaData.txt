@@ -1,32 +1,13 @@
-status:PASS
-META_requiredChecksPassing:True
-GEOM_requiredChecksPassing:True
-META_canonicalNameInMeta:True
-META_licenseImageInZip:False
-META_yearValid:True
-META_isoValid:True
-META_boundaryTypeValid:True
-META_sourceExists:True
-META_releaseTypeValid:True
-META_releaseTypeCorrectFolder:True
-META_licenseValid:True
-META_licenseSourceExists:True
-META_dataSourceExists:True
-GEOM_boundaryNamesColumnExists:True
-GEOM_boundaryNamesFilledIn:True
-GEOM_boundaryISOColumnExists:True
-GEOM_boundaryISOsFilledIn:True
-GEOM_Topology:True
-GEOM_Projection:True
-boundaryID:NGA-ADM 1-nightly
-boundaryISO:NGA
-boundaryType:ADM 1
-boundaryYear:2017
-boundarySource-1:The World Bank Data Catalog
-boundarySource-2:
-boundaryCanonical:State
-boundaryLicense:Creative Commons Attribution 4.0 (CC BY 4.0)
-licenseDetail:
-licenseSource:https//datacatalog.worldbank.org/public-licenses#cc-by
-boundarySourceURL:https//datacatalog.worldbank.org/dataset/nigeria-administrative-boundaries-2017
-downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NGA_ADM1.zip
+boundaryID : NGA-ADM 1-nightly
+boundaryISO : NGA
+boundaryType : ADM 1
+boundaryYear : 2017
+boundarySource-1 : The World Bank Data Catalog
+boundarySource-2 : 
+boundaryCanonical : State
+boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
+boundarySourceURL : https//datacatalog.worldbank.org/dataset/nigeria-administrative-boundaries-2017
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NGA_ADM1.zip
+updateDate : 10:07PM +0000 on Mar 01, 2021

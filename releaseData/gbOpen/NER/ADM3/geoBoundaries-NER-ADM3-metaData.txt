@@ -1,32 +1,13 @@
-status:PASS
-META_requiredChecksPassing:True
-GEOM_requiredChecksPassing:True
-META_canonicalNameInMeta:False
-META_licenseImageInZip:False
-META_yearValid:True
-META_isoValid:True
-META_boundaryTypeValid:True
-META_sourceExists:True
-META_releaseTypeValid:True
-META_releaseTypeCorrectFolder:True
-META_licenseValid:True
-META_licenseSourceExists:True
-META_dataSourceExists:True
-GEOM_boundaryNamesColumnExists:True
-GEOM_boundaryNamesFilledIn:True
-GEOM_boundaryISOColumnExists:False
-GEOM_boundaryISOsFilledIn:False
-GEOM_Topology:True
-GEOM_Projection:True
-boundaryID:NER-ADM3-nightly
-boundaryISO:NER
-boundaryType:ADM3
-boundaryYear:2012.0
-boundarySource-1:FEWS NET
-boundarySource-2:nan
-boundaryCanonical:
-boundaryLicense:Other - Direct Permission
-licenseDetail:Granted to redistribute in email
-licenseSource:https//twitter.com/WMgeoLab/status/1196508772291743746/photo/1
-boundarySourceURL:http//www.fews.net/fews-data/334?tid=19&field_data_portal_date_start%5Bvalue%5D%5Byear%5D=&field_data_portal_date_start%5Bvalue%5D%5Bmonth%5D=&field_data_portal_date_end%5Bvalue%5D%5Byear%5D=&field_data_portal_date_end%5Bvalue%5D%5Bmonth%5D=
-downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NER_ADM3.zip
+boundaryID : NER-ADM3-nightly
+boundaryISO : NER
+boundaryType : ADM3
+boundaryYear : 2012.0
+boundarySource-1 : FEWS NET
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Other - Direct Permission
+licenseDetail : Granted to redistribute in email
+licenseSource : https//twitter.com/WMgeoLab/status/1196508772291743746/photo/1
+boundarySourceURL : http//www.fews.net/fews-data/334?tid=19&field_data_portal_date_start%5Bvalue%5D%5Byear%5D=&field_data_portal_date_start%5Bvalue%5D%5Bmonth%5D=&field_data_portal_date_end%5Bvalue%5D%5Byear%5D=&field_data_portal_date_end%5Bvalue%5D%5Bmonth%5D=
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NER_ADM3.zip
+updateDate : 10:08PM +0000 on Mar 01, 2021

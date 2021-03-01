@@ -1,32 +1,13 @@
-status:PASS
-META_requiredChecksPassing:True
-GEOM_requiredChecksPassing:True
-META_canonicalNameInMeta:True
-META_licenseImageInZip:True
-META_yearValid:True
-META_isoValid:True
-META_boundaryTypeValid:True
-META_sourceExists:True
-META_releaseTypeValid:True
-META_releaseTypeCorrectFolder:True
-META_licenseValid:True
-META_licenseSourceExists:True
-META_dataSourceExists:True
-GEOM_boundaryNamesColumnExists:True
-GEOM_boundaryNamesFilledIn:True
-GEOM_boundaryISOColumnExists:True
-GEOM_boundaryISOsFilledIn:True
-GEOM_Topology:True
-GEOM_Projection:True
-boundaryID:NIC-ADM1-nightly
-boundaryISO:NIC
-boundaryType:ADM1
-boundaryYear:2017
-boundarySource-1:OpenStreetMap
-boundarySource-2:Wambacher
-boundaryCanonical:Departamentos
-boundaryLicense:Open Data Commons Open Database License 1.0
-licenseDetail:Open Data Commons Open Database License 1.0
-licenseSource:https//osm-boundaries.com/
-boundarySourceURL:https//wambachers-osm.website/boundaries/
-downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NIC_ADM1.zip
+boundaryID : NIC-ADM1-nightly
+boundaryISO : NIC
+boundaryType : ADM1
+boundaryYear : 2017
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : Departamentos
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//osm-boundaries.com/
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NIC_ADM1.zip
+updateDate : 10:09PM +0000 on Mar 01, 2021

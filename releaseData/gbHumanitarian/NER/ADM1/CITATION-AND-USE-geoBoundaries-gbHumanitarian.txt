@@ -22,7 +22,8 @@ our academic citation, and the version of geoBoundaries used.
 Example citations for GeoBoundaries are:  
  
 +++++ General Use Citation +++++
-Please include the term 'geoBoundaries' with a link tohttps://www.geoboundaries.org
+Please include the term 'geoBoundaries' with a link to 
+https://www.geoboundaries.org
  
 +++++ Academic Use Citation +++++++++++
 Runfola D, Anderson A, Baier H, Crittenden M, Dowker E, Fuhrig S, et al. (2020) 

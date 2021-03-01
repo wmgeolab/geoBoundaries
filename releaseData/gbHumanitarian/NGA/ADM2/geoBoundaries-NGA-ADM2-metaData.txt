@@ -1,32 +1,13 @@
-status:PASS
-META_requiredChecksPassing:True
-GEOM_requiredChecksPassing:True
-META_canonicalNameInMeta:True
-META_licenseImageInZip:True
-META_yearValid:True
-META_isoValid:True
-META_boundaryTypeValid:True
-META_sourceExists:True
-META_releaseTypeValid:True
-META_releaseTypeCorrectFolder:True
-META_licenseValid:True
-META_licenseSourceExists:True
-META_dataSourceExists:True
-GEOM_boundaryNamesColumnExists:True
-GEOM_boundaryNamesFilledIn:True
-GEOM_boundaryISOColumnExists:False
-GEOM_boundaryISOsFilledIn:False
-GEOM_Topology:True
-GEOM_Projection:True
-boundaryID:NGA-ADM2-nightly
-boundaryISO:NGA
-boundaryType:ADM2
-boundaryYear:2016
-boundarySource-1:Second Administrative Level Boundaries (SALB)
-boundarySource-2:United Nations Office for the Coordination of Humanitarian Affairs Nigeria
-boundaryCanonical:Local Government Areas
-boundaryLicense:Other - Direct Permission
-licenseDetail:Free to copy and redistribute for operational purpose only - Noted in metadata tab
-licenseSource:https//data.humdata.org/dataset/nigeria-admin-level-0-1-and-2-administrative-boundaries
-boundarySourceURL:https//data.humdata.org/dataset/nigeria-admin-level-0-1-and-2-administrative-boundaries
-downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbHumanitarian/NGA_ADM2.zip
+boundaryID : NGA-ADM2-nightly
+boundaryISO : NGA
+boundaryType : ADM2
+boundaryYear : 2016
+boundarySource-1 : Second Administrative Level Boundaries (SALB)
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs Nigeria
+boundaryCanonical : Local Government Areas
+boundaryLicense : Other - Direct Permission
+licenseDetail : Free to copy and redistribute for operational purpose only - Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/nigeria-admin-level-0-1-and-2-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/nigeria-admin-level-0-1-and-2-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbHumanitarian/NGA_ADM2.zip
+updateDate : 10:10PM +0000 on Mar 01, 2021

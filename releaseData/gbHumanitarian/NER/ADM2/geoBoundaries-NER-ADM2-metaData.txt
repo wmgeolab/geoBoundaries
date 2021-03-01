@@ -1,32 +1,13 @@
-status:PASS
-META_requiredChecksPassing:True
-GEOM_requiredChecksPassing:True
-META_canonicalNameInMeta:True
-META_licenseImageInZip:False
-META_yearValid:True
-META_isoValid:True
-META_boundaryTypeValid:True
-META_sourceExists:True
-META_releaseTypeValid:True
-META_releaseTypeCorrectFolder:True
-META_licenseValid:True
-META_licenseSourceExists:True
-META_dataSourceExists:True
-GEOM_boundaryNamesColumnExists:True
-GEOM_boundaryNamesFilledIn:True
-GEOM_boundaryISOColumnExists:False
-GEOM_boundaryISOsFilledIn:False
-GEOM_Topology:True
-GEOM_Projection:True
-boundaryID:NER-ADM2-nightly
-boundaryISO:NER
-boundaryType:ADM2
-boundaryYear:2019
-boundarySource-1:IGNN
-boundarySource-2:United Nations Office for the Coordination of Humanitarian Affairs Niger
-boundaryCanonical:Department
-boundaryLicense:Other - Humanitarian
-licenseDetail:Humanitarian use only
-licenseSource:https//data.humdata.org/dataset/niger-administrative-boundaries
-boundarySourceURL:https//data.humdata.org/dataset/niger-administrative-boundaries
-downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbHumanitarian/NER_ADM2.zip
+boundaryID : NER-ADM2-nightly
+boundaryISO : NER
+boundaryType : ADM2
+boundaryYear : 2019
+boundarySource-1 : IGNN
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs Niger
+boundaryCanonical : Department
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only
+licenseSource : https//data.humdata.org/dataset/niger-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/niger-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbHumanitarian/NER_ADM2.zip
+updateDate : 10:10PM +0000 on Mar 01, 2021
