@@ -1,7 +1,7 @@
 on:
     workflow_dispatch
 
-name: Data Status Checks
+name: Nightly - N
 jobs:
   gbAuthoritativeChecks:
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            mkdir ~/artifacts
-           python geoBoundaryBot/gbBuild.py gbAuthoritative dev False NPL
+           python geoBoundaryBot/gbBuild.py gbAuthoritative dev True N
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
