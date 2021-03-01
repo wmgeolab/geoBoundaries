@@ -1,0 +1,32 @@
+status:PASS
+META_requiredChecksPassing:True
+GEOM_requiredChecksPassing:True
+META_canonicalNameInMeta:True
+META_licenseImageInZip:True
+META_yearValid:True
+META_isoValid:True
+META_boundaryTypeValid:True
+META_sourceExists:True
+META_releaseTypeValid:True
+META_releaseTypeCorrectFolder:True
+META_licenseValid:True
+META_licenseSourceExists:True
+META_dataSourceExists:True
+GEOM_boundaryNamesColumnExists:False
+GEOM_boundaryNamesFilledIn:False
+GEOM_boundaryISOColumnExists:False
+GEOM_boundaryISOsFilledIn:False
+GEOM_Topology:True
+GEOM_Projection:True
+boundaryID:NPL-ADM2-nightly
+boundaryISO:NPL
+boundaryType:ADM2
+boundaryYear:2019
+boundarySource-1:Geoboundaries
+boundarySource-2:Open Data Nepal
+boundaryCanonical:Districts
+boundaryLicense:Creative Commons Attribution-ShareAlike 4.0 International License
+licenseDetail:
+licenseSource:https//opendatanepal.com/dataset/new-political-and-administrative-boundaries-shapefile-of-nepal
+boundarySourceURL:https//opendatanepal.com/dataset/new-political-and-administrative-boundaries-shapefile-of-nepal
+downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NPL_ADM2.zip

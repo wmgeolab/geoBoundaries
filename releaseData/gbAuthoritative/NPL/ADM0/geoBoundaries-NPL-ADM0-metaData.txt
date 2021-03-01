@@ -1,0 +1,32 @@
+status:PASS
+META_requiredChecksPassing:True
+GEOM_requiredChecksPassing:True
+META_canonicalNameInMeta:True
+META_licenseImageInZip:False
+META_yearValid:True
+META_isoValid:True
+META_boundaryTypeValid:True
+META_sourceExists:True
+META_releaseTypeValid:True
+META_releaseTypeCorrectFolder:True
+META_licenseValid:True
+META_licenseSourceExists:True
+META_dataSourceExists:True
+GEOM_boundaryNamesColumnExists:True
+GEOM_boundaryNamesFilledIn:True
+GEOM_boundaryISOColumnExists:True
+GEOM_boundaryISOsFilledIn:True
+GEOM_Topology:True
+GEOM_Projection:True
+boundaryID:NPL-ADM0-nightly
+boundaryISO:NPL
+boundaryType:ADM0
+boundaryYear:2017
+boundarySource-1:Nepal Survey Department
+boundarySource-2:United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+boundaryCanonical:Country
+boundaryLicense:Other - Humanitarian
+licenseDetail:Humanitarian use only - Noted in metadata tab
+licenseSource:https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+boundarySourceURL:https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbAuthoritative/NPL_ADM0.zip

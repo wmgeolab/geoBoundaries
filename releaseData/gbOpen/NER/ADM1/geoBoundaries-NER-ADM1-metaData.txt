@@ -1,0 +1,32 @@
+status:PASS
+META_requiredChecksPassing:True
+GEOM_requiredChecksPassing:True
+META_canonicalNameInMeta:True
+META_licenseImageInZip:True
+META_yearValid:True
+META_isoValid:True
+META_boundaryTypeValid:True
+META_sourceExists:True
+META_releaseTypeValid:True
+META_releaseTypeCorrectFolder:True
+META_licenseValid:True
+META_licenseSourceExists:True
+META_dataSourceExists:True
+GEOM_boundaryNamesColumnExists:True
+GEOM_boundaryNamesFilledIn:True
+GEOM_boundaryISOColumnExists:True
+GEOM_boundaryISOsFilledIn:True
+GEOM_Topology:True
+GEOM_Projection:True
+boundaryID:NER-ADM1-nightly
+boundaryISO:NER
+boundaryType:ADM1
+boundaryYear:2012
+boundarySource-1:IPUMS DHS
+boundarySource-2:
+boundaryCanonical:Regions
+boundaryLicense:Open Data Commons Open Database License 1.0
+licenseDetail:
+licenseSource:https//spatialdata.dhsprogram.com/references/subnational_data_schema.pdf
+boundarySourceURL:https//www.idhsdata.org/idhs/gis.shtml
+downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NER_ADM1.zip

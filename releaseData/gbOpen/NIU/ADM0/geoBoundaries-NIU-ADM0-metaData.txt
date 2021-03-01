@@ -1,0 +1,32 @@
+status:PASS
+META_requiredChecksPassing:True
+GEOM_requiredChecksPassing:True
+META_canonicalNameInMeta:True
+META_licenseImageInZip:True
+META_yearValid:True
+META_isoValid:True
+META_boundaryTypeValid:True
+META_sourceExists:True
+META_releaseTypeValid:True
+META_releaseTypeCorrectFolder:True
+META_licenseValid:True
+META_licenseSourceExists:True
+META_dataSourceExists:True
+GEOM_boundaryNamesColumnExists:True
+GEOM_boundaryNamesFilledIn:True
+GEOM_boundaryISOColumnExists:True
+GEOM_boundaryISOsFilledIn:True
+GEOM_Topology:True
+GEOM_Projection:True
+boundaryID:NIU-ADM0-nightly
+boundaryISO:NIU
+boundaryType:ADM0
+boundaryYear:2020
+boundarySource-1:geoBoundaries
+boundarySource-2:Pacific Data Hub
+boundaryCanonical:Niue
+boundaryLicense:Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail:nan
+licenseSource:https//pacificdata.org/data/dataset/2011_niu_phc_admin_boundaries
+boundarySourceURL:https//pacificdata.org/data/dataset/2011_niu_phc_admin_boundaries
+downloadURL:https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NIU_ADM0.zip

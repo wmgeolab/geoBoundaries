@@ -47,7 +47,7 @@ shapeName - The identified name for a given shape.  'None' if not identified.
 shapeGroup - The country or similar organizational group that a shape belongs to, in ISO 3166-1 where relevant.
 shapeType - The type of boundary represented by the shape.
 shapeISO - ISO codes for individual administrative districts, where available.  Where possible, these conform to ISO 3166-2, but this is not guaranteed in all cases. 'None' if not identified.
- 
+boundaryCanonical - Canonical name(s) for the administrative hierarchy represented.  Present where available. 
 ====================================================
 Reporting Issues or Errors
 ====================================================
