@@ -64,13 +64,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: results
-        path: ~/artifacts/results.csv
-        
-    - name: Create Artifact B
-      uses: actions/upload-artifact@v2
-      with:
-        name: results_log
-        path: ~/artifacts/log.txt
+        path: ~/artifacts/
         
 
   
