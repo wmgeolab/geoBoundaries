@@ -10,4 +10,4 @@ licenseDetail :
 licenseSource : https//spatialdata.dhsprogram.com/references/subnational_data_schema.pdf
 boundarySourceURL : https//www.idhsdata.org/idhs/gis.shtml
 downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NER_ADM1.zip
-updateDate : 10:08PM +0000 on Mar 01, 2021
+updateDate :  2:30PM +0000 on Mar 02, 2021

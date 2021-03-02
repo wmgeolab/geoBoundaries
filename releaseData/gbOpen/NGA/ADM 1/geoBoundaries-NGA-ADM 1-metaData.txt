@@ -10,4 +10,4 @@ licenseDetail :
 licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
 boundarySourceURL : https//datacatalog.worldbank.org/dataset/nigeria-administrative-boundaries-2017
 downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NGA_ADM1.zip
-updateDate : 10:07PM +0000 on Mar 01, 2021
+updateDate :  2:29PM +0000 on Mar 02, 2021

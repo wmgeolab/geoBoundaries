@@ -10,4 +10,4 @@ licenseDetail : Free to copy and redistribute for operational purpose only - Not
 licenseSource : https//data.humdata.org/dataset/nigeria-admin-level-0-1-and-2-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/nigeria-admin-level-0-1-and-2-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbHumanitarian/NGA_ADM2.zip
-updateDate : 10:10PM +0000 on Mar 01, 2021
+updateDate :  2:32PM +0000 on Mar 02, 2021

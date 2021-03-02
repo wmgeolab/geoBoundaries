@@ -10,4 +10,4 @@ licenseDetail : Open Data Commons Open Database License 1.0
 licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/NAM_ADM0.zip
-updateDate : 10:07PM +0000 on Mar 01, 2021
+updateDate :  2:29PM +0000 on Mar 02, 2021
