@@ -1,4 +1,4 @@
-boundaryID : NPL-ADM1-nightly
+boundaryID : NPL-ADM1-22785230
 boundaryISO : NPL
 boundaryType : ADM1
 boundaryYear : 2017
@@ -10,4 +10,4 @@ licenseDetail : Humanitarian use only - Noted in metadata tab
 licenseSource : https//data.humdata.org/dataset/administrative-bounadries-of-nepal
 boundarySourceURL : https//data.humdata.org/dataset/administrative-bounadries-of-nepal
 downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbAuthoritative/NPL_ADM1.zip
-updateDate :  2:29PM +0000 on Mar 02, 2021
+updateDate : Mar 03, 2021
