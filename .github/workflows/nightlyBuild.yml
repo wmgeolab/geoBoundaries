@@ -54,8 +54,12 @@ jobs:
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git status
-           git remote set-url origin https://x-access-token:${secrets.DRTOKEN}@github.com/$GITHUB_REPOSITORY.git
+           git remote set-url origin https://x-access-token:$DRTOKEN@github.com/$REP.git
            git push origin master
+      env:
+            DRTOKEN: ${{secrets.DRTOKEN}}
+            REP: ${{GITHUB_REPOSITORY}}
+       
         
     - name: Create Artifact
       uses: actions/upload-artifact@v2
