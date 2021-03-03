@@ -52,8 +52,8 @@ jobs:
            git config --local user.name "DanRunfola"
            rm RESULT.txt
            git add -A .
-           git status
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
+           git status
            git remote set-url origin https://x-access-token:${secrets.DRTOKEN}@github.com/$GITHUB_REPOSITORY.git
            git push origin master
         
