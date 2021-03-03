@@ -47,6 +47,9 @@ jobs:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
     - name: Commit Files
+      env:
+            DRTOKEN: ${{secrets.DRTOKEN}}
+            REP: ${{GITHUB_REPOSITORY}}
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
@@ -54,11 +57,9 @@ jobs:
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git status
-           git remote set-url origin https://x-access-token:$DRTOKEN@github.com/$REP.git
+           git remote set-url origin https://x-access-token:{{env.DRTOKEN}}@github.com/{{env.REP}}.git
            git push origin master
-      env:
-            DRTOKEN: ${{secrets.DRTOKEN}}
-            REP: ${{GITHUB_REPOSITORY}}
+
        
         
     - name: Create Artifact
