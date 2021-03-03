@@ -40,9 +40,9 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            mkdir ~/artifacts
-           python geoBoundaryBot/gbBuild.py gbAuthoritative nightly N
-           # python geoBoundaryBot/gbBuild.py gbOpen nightly N
-           # python geoBoundaryBot/gbBuild.py gbHumanitarian nightly N
+           python geoBoundaryBot/gbBuild.py gbAuthoritative nightly A,B,C,D,E,F,G,H
+           python geoBoundaryBot/gbBuild.py gbOpen nightly A,B,C,D,E,F,G,H
+           python geoBoundaryBot/gbBuild.py gbHumanitarian nightly A,B,C,D,E,F,G,H
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
