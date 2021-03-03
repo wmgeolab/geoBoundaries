@@ -49,7 +49,7 @@ jobs:
     - name: Commit Files
       env:
             DRTOKEN: ${{secrets.DRTOKEN}}
-            REP: ${{GITHUB_REPOSITORY}}
+            REP: ${{env.GITHUB_REPOSITORY}}
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
