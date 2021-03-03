@@ -1,7 +1,7 @@
 on:
     workflow_dispatch
 
-name: Nightly A to H
+name: Nightly Run - A,B
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
