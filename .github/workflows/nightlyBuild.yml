@@ -54,12 +54,8 @@ jobs:
            git add -A .
            git status
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
-    
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        branch: 'master'
-        github_token: ${{ secrets.DRTOKEN }}
+           git remote set-url origin https://x-access-token:${secrets.DRTOKEN}@github.com/${GITHUB_REPOSITORY}.git
+           git push origin master
         
     - name: Create Artifact
       uses: actions/upload-artifact@v2
