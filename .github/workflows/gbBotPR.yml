@@ -219,12 +219,6 @@ jobs:
       steps:
       - name: Initialize Linux Environment
         run: |
-              apt-get install -y software-properties-common
-              add-apt-repository ppa:git-core/ppa
-              apt-get update
-              apt-get install -y git
-
-              apt-get install -y python3-pip
               pip3 install geopandas
               pip3 install matplotlib
               pip3 install PyGithub
