@@ -219,6 +219,7 @@ jobs:
       steps:
       - name: Initialize Linux Environment
         run: |
+              pip3 install -U pip setuptools 
               pip3 install geopandas
               pip3 install matplotlib
               pip3 install PyGithub
