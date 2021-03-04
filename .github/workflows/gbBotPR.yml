@@ -240,6 +240,8 @@ jobs:
              echo "---"
              cd ${GITHUB_WORKSPACE}
              ls -l
+             pip install geopandas
+             pip3 install geopandas
              python geoBoundaryBot/gbResponse.py
              echo "==="
              cat ~/tmp/response.txt
