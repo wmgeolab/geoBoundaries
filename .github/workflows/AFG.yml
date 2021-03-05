@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch
+  
+name: AFG Nightly
+jobs:
+  AFG:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create Build Call
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: NightlyBuild
+        repo: wmgeolab/gbRelease
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "gbAuthoritative", "ISO": "AFG" }'
