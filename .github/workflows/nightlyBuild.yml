@@ -1,5 +1,12 @@
 on:
-    workflow_dispatch
+    workflow_dispatch:
+        inputs:
+            bType:
+                description: Boundary Type (Required)
+                required: true
+            ISO:
+                description: Boundary ISO (Required)
+                required: true
 
 name: NightlyBuild
 jobs:
@@ -40,7 +47,7 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            mkdir ~/artifacts
-           python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${github.event.inputs.ISO}}
+           python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
