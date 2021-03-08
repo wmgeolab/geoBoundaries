@@ -3,7 +3,7 @@ on:
   
 name: Nightly Spinups
 jobs:
-  AFG:
+  Build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
