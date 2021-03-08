@@ -1,0 +1,13 @@
+boundaryID : CIV-ADM0-2848817
+boundaryISO : CIV
+boundaryType : ADM0
+boundaryYear : 2018
+boundarySource-1 : Natural Earth
+boundarySource-2 : 
+boundaryCanonical : 
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//www.naturalearthdata.com/about/terms-of-use/
+boundarySourceURL : https//www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/CIV_ADM0.zip
+updateDate : Mar 08, 2021
