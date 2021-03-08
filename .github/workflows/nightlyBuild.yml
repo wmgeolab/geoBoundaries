@@ -7,6 +7,9 @@ on:
             ISO:
                 description: Boundary ISO (Required)
                 required: true
+            ADM:
+                description: Boundary ADM Level
+                required: true
 
 name: NightlyBuild
 jobs:
@@ -29,17 +32,18 @@ jobs:
            pip3 install geopandas
            pip3 install matplotlib
            pip3 install PyGithub
+   
+    - name: Check if build needed
+      run: |
+           git fetch
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{github.event.inputs.bType}}
     
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
         lfs: true
         persist-credentials: false
-        
-    - name: Post-Download Initialization Steps
-      run: |
-           git fetch
-           git clone https://github.com/wmgeolab/geoBoundaryBot
            
     - name: Checking Files
       id: checks
