@@ -1,0 +1,13 @@
+boundaryID : CIV-ADM2-98640826
+boundaryISO : CIV
+boundaryType : ADM2
+boundaryYear : 2016
+boundarySource-1 : World Bank
+boundarySource-2 : Â
+boundaryCanonical : rÃ©gions de CÃ´te d'Ivoire
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
+boundarySourceURL : https//datacatalog.worldbank.org/dataset/cote-divoire-administrative-boundaries-2016
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/CIV_ADM2.zip
+updateDate : Mar 08, 2021
