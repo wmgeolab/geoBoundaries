@@ -4,7 +4,7 @@ boundaryType : ADM1
 boundaryYear : 2016
 boundarySource-1 : https//datacatalog.worldbank.org/dataset/cote-divoire-administrative-boundaries-2016
 boundarySource-2 : 
-boundaryCanonical : districts de CÃ´te dâIvoire
+boundaryCanonical : districts de Côte d’Ivoire
 boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
 licenseDetail : 
 licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
