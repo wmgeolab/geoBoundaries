@@ -16,4 +16,4 @@ jobs:
         workflow: NightlyBuild
         repo: wmgeolab/gbRelease
         token: ${{ secrets.DRTOKEN }}
-        inputs: '{ "bType": "gbOpen", "ISO": ${{matrix.ISO}}, "ADM":${{matrix.ADM}}}'
+        inputs: '{ "bType": "gbOpen", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}}"'
