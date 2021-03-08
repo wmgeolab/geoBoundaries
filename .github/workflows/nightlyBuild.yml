@@ -29,6 +29,10 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{github.event.inputs.bType}}
+   
+    - name: Exit if no build needed
+      if: ${{ failure() }}
+      
     
     - name: Finish Linux Environment Build
       run: |
@@ -46,7 +50,12 @@ jobs:
       with:
         lfs: true
         persist-credentials: false
-           
+   
+    - name: Install File Check Scripts into Repository
+      run: |
+            git fetch
+            git clone https://github.com/wmgeolab/geoBoundaryBot
+   
     - name: Checking Files
       id: checks
       run: |
