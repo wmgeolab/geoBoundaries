@@ -24,6 +24,14 @@ jobs:
            add-apt-repository ppa:git-core/ppa
            apt-get update
            apt-get install -y git
+           
+    - name: Check if build needed
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{github.event.inputs.bType}}
+    
+    - name: Finish Linux Environment Build
+      run: |
            curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
            apt-get install git-lfs
            apt-get install -y python3-pip
@@ -32,12 +40,7 @@ jobs:
            pip3 install geopandas
            pip3 install matplotlib
            pip3 install PyGithub
-   
-    - name: Check if build needed
-      run: |
-           git clone https://github.com/wmgeolab/geoBoundaryBot
-           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{github.event.inputs.bType}}
-    
+
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
