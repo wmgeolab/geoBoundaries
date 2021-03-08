@@ -5,6 +5,10 @@ name: Nightly Spinups
 jobs:
   AFG:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ISO: ["BFA"]
+        ADM: ["ADM0", "ADM1"]
     steps:
     - name: Create Build Call
       uses: benc-uk/workflow-dispatch@v1
@@ -12,4 +16,4 @@ jobs:
         workflow: NightlyBuild
         repo: wmgeolab/gbRelease
         token: ${{ secrets.DRTOKEN }}
-        inputs: '{ "bType": "gbOpen", "ISO": "BFA", "ADM":"ADM0" }'
+        inputs: '{ "bType": "gbOpen", "ISO": ${{matrix.ISO}}, "ADM":${{matrix.ADM}}}'
