@@ -35,7 +35,6 @@ jobs:
    
     - name: Check if build needed
       run: |
-           git fetch
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{github.event.inputs.bType}}
     
