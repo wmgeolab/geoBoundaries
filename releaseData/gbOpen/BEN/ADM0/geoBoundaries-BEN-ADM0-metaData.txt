@@ -1,0 +1,13 @@
+boundaryID : BEN-ADM0-90739888
+boundaryISO : BEN
+boundaryType : ADM0
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/gbRelease/raw/master/releaseData/gbOpen/BEN_ADM0.zip
+updateDate : Mar 08, 2021
