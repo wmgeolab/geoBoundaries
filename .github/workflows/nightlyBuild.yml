@@ -83,8 +83,7 @@ jobs:
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git status
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
-           git pull --rebase
-           git push origin master
+           git push origin master -f
 
        
         
