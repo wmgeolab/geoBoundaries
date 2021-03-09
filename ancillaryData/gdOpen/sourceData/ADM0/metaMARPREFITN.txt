@@ -4,17 +4,17 @@ Metadata for: MARPREFITN
 Full Variable Name: Proportion of women ages 20-24 who were married before age 15
 ==============================================================
 
-Data Definition: 
-Units: 
-Data Representative Of Year(s): 2016-2016
+Data Definition: Proportion of women ages 20-24 who were married before age 15
+Units: Percent of women ages 20-24
+Data Representative Of Year(s): 2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://databank.worldbank.org/reports.aspx?source=2&type=metadata&series=SP.M15.2024.FE.ZS
 Source 1: World Development Indicators
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: Open with attribution
+License Source: https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets
 Link to Source Data: https://data.worldbank.org/indicator/SP.M15.2024.FE.ZS
-Tag(s): ?
-Other Notes: 
+Tag(s): Gender
+Other Notes: N/A
