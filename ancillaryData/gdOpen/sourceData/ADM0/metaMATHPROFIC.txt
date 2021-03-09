@@ -4,17 +4,17 @@ Metadata for: MATHPROFIC
 Full Variable Name: Proportion of children and young people (a) in grades 2/3; (b) at the end of primary; and (c) at the end of lower secondary achieving at least a minimum proficiency level in mathematics
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Proportion of children and young people (a) in grades 2/3; (b) at the end of primary; and (c) at the end of lower secondary achieving at least a minimum proficiency level in mathematics
+Units: %
 Data Representative Of Year(s): 2015-2015
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
-Source 1: ArcGIS
-Source 2: 
-License: 
-License Source: 
+Data Processing Methodology:N/A 
+Data Collection Methodology (or link to documentation): https://hub.arcgis.com/datasets/undesa::indicator-4-1-1-minimum-proficiency-in-mathematics-by-education-level-and-sex-percent
+Source 1: Programme for International Student Assessment (OECD)
+Source 2: Trends in International Mathematics and Science Study (IEA)
+License: creative commons
+License Source: creative commons
 Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-4-1-1-minimum-proficiency-in-mathematics-by-education-level-and-sex-percent
 Tag(s): nan
-Other Notes: 
+Other Notes: N/A
