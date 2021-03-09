@@ -66,7 +66,7 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            mkdir ~/artifacts
-           python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}}
+           python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
@@ -79,11 +79,13 @@ jobs:
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            rm RESULT.txt
+           git fetch
+           git merge --ff-only origin/master
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git status
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
-           git push origin master -f
+           git push origin master
 
        
         
