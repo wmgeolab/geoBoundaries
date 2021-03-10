@@ -78,7 +78,6 @@ jobs:
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
-           rm RESULT.txt
            git fetch
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
