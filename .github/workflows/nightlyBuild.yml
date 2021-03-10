@@ -53,17 +53,20 @@ jobs:
         lfs: true
         persist-credentials: false
    
-    - name: Install File Check Scripts into Repository
-      if: steps.buildCheck.outcome == 'success'
-      run: |
-            git fetch
-            git clone https://github.com/wmgeolab/geoBoundaryBot
+    #- name: Install File Check Scripts into Repository
+    #  if: steps.buildCheck.outcome == 'success'
+    #  run: |
+    #        git fetch
+    #        git clone https://github.com/wmgeolab/geoBoundaryBot
    
     - name: Checking Files
       if: steps.buildCheck.outcome == 'success'
       id: checks
       run: |
            echo "==============================================="
+           ls
+           ls geoBoundaryBot
+           cat geoBoundaryBot/gbBuild.py
            mkdir ~/tmp 
            mkdir ~/artifacts
            python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
