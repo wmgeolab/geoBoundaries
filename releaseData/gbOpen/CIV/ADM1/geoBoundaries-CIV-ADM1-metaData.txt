@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
 boundarySourceURL : https//datacatalog.worldbank.org/dataset/cote-divoire-administrative-boundaries-2016
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CIV_ADM1.zip
-sourceDataUpdateDate : 2020-10-14T12:01:17Z
+sourceDataUpdateDate : Oct 14, 2020
 buildUpdateDate : Mar 10, 2021
