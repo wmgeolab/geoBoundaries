@@ -64,9 +64,6 @@ jobs:
       id: checks
       run: |
            echo "==============================================="
-           ls
-           ls geoBoundaryBot
-           cat geoBoundaryBot/gbBuild.py
            mkdir ~/tmp 
            mkdir ~/artifacts
            python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
