@@ -79,7 +79,7 @@ jobs:
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git fetch
-           git pull --rebace -X theirs
+           git pull --rebase -X theirs
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git status
