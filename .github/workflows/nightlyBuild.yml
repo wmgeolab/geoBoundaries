@@ -80,6 +80,7 @@ jobs:
            git config --local user.name "DanRunfola"
            git fetch
            git pull --rebase -X theirs
+           rm RESULT.txt
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git status
