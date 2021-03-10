@@ -105,7 +105,7 @@ export function CustomPanelHeaderFactory(...deps) {
       {
         id: 'bug',
         iconComponent: Icons.Bug,
-        href: "https://github.com/wmgeolab/gbRelease/issues/new?template=geoDesc_bug.md",
+        href: "https://github.com/wmgeolab/geoBoundaries/issues/new?template=geoDesc_bug.md",
         blank: true,
         tooltip: 'Bug Report',
         onClick: () => {}

@@ -9,7 +9,7 @@ b = pd.read_csv(os.path.realpath("../../../ancillaryData/gdOpen/scripts/geoDataI
 
 cL = pd.read_csv(os.path.realpath("../../../releaseData/gbOpen/gbOpen_metaData.csv"))
 
-iso = pd.read_csv("https://raw.githubusercontent.com/wmgeolab/geoBoundaryBot/master/dta/iso_3166_1_alpha_3.csv", encoding="latin1")
+iso = pd.read_csv("https://raw.githubusercontent.com/wmgeolab/geoBoundaryBot/main/dta/iso_3166_1_alpha_3.csv", encoding="latin1")
 
 #export const data = [{ id: 1, title: 'DatasetA', year: 'Test' },
 #            {id:2, title:"DatasetB", year:'test2'}

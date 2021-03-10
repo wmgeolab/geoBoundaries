@@ -8,12 +8,12 @@ export NVM_DIR="$HOME/.nvm"
 nvm install 14.15.0
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 apt-get install git
-git clone https://github.com/wmgeolab/gbRelease.git
-cd gbRelease
+git clone https://github.com/wmgeolab/geoBoundaries.git
+cd geoBoundaries
 
 #=========================
 For Dev:
-git clone https://github.com/DanRunfola/gbRelease.git
+git clone https://github.com/DanRunfola/geoBoundaries.git
 git fetch --all
 git checkout gD
 #=========================

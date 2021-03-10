@@ -18,7 +18,7 @@ jobs:
                cd geoBoundaries
                git fetch --all
                git checkout -b bB
-               git reset --hard origin/master
+               git reset --hard origin/main
                git pull https://github.com/wmgeolab/geoBoundaries.git
                cd website/geoDesc
                npm install

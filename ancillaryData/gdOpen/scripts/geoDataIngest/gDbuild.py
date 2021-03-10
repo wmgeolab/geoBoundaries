@@ -189,7 +189,7 @@ for filename in os.listdir(directory):
             #print(gdf.head())
             joined = gdf.merge(df, left_on="shapeISO", right_on="ID")
             joined = joined.rename(columns={"Value" : fD["VARNAME"].strip()})
-            joined.to_file(os.path.expanduser("~") + "/git/gbRelease/ancillaryData/gdOpen/buildData/" + fD["VARNAME"] + ".geojson", driver="GeoJSON")
+            joined.to_file(os.path.expanduser("~") + "/git/geoBoundaries/ancillaryData/gdOpen/buildData/" + fD["VARNAME"] + ".geojson", driver="GeoJSON")
 
         dd.append(fD)
     else:

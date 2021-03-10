@@ -61,14 +61,14 @@
 						<h1>Caveats & Roadmap</h1>
 					</header>
 					<ul class="actions">
-						<li><a href="https://github.com/wmgeolab/gbRelease/issues/new" class="button big">Report an
+						<li><a href="https://github.com/wmgeolab/geoBoundaries/issues/new" class="button big">Report an
 								Issue</a></li>
 						<li><a href="issues.html#contribute" class="button big">Contribute a Boundary</a></li>
 					</ul>
 
 					<h2>Known Issues</h2>
 					<p><span class="image right"><img src="images/brokenData.png" alt="" /></span>Known issues are the
-						bugs or errors that have been reported, and that we intend to fix as soon as possible. You can view a list of all known issues (past and present) on <a href="https://github.com/wmgeolab/gbRelease/issues?q=+label%3Abug+">our issue tracker</a>.</p>
+						bugs or errors that have been reported, and that we intend to fix as soon as possible. You can view a list of all known issues (past and present) on <a href="https://github.com/wmgeolab/geoBoundaries/issues?q=+label%3Abug+">our issue tracker</a>.</p>
 
 					<div class="table-wrapper">
 						<table id=knownTable>
@@ -92,7 +92,7 @@
 			<h2>Known Oddities</h2>
 			Known oddities are issues that we or others have identified, but either don't require a fix or we don't
 			intend to fix. You can click on any of these to get more information, or contribute to the conversation.
-			Some of these may eventually be promoted to issues if there is significant community demand. You can view a list of all known oddities on <a href="https://github.com/wmgeolab/gbRelease/issues?q=is%3Aissue+is%3Aclosed+label%3Aoddity">our issue tracker</a>.
+			Some of these may eventually be promoted to issues if there is significant community demand. You can view a list of all known oddities on <a href="https://github.com/wmgeolab/geoBoundaries/issues?q=is%3Aissue+is%3Aclosed+label%3Aoddity">our issue tracker</a>.
 			<div class="table-wrapper">
 				<table id=oddityTable>
 					<thead>
@@ -110,7 +110,7 @@
 		</div>
 
 		<h2>Roadmap</h2>
-		The below items are enhancements that we intend to apply to geoBoundaries in the future. You can also view our <a href="https://github.com/wmgeolab/gbRelease/milestones">entire roadmap</a> in our repository.
+		The below items are enhancements that we intend to apply to geoBoundaries in the future. You can also view our <a href="https://github.com/wmgeolab/geoBoundaries/milestones">entire roadmap</a> in our repository.
 		<div class="table-wrapper">
 			<table id=roadmapTable>
 				<thead>
@@ -139,7 +139,7 @@
 	</ul>
 	<p>If you have a boundary (or set of boundaries) that you believe meets the above qualifications and you would like
 		us to include, please either send us an email (team@geoboundaries.org) with the boundary data, or submit a new
-		issue on our Git repository (https://github.com/wmgeolab/gbRelease/issues/new) that contains the country,
+		issue on our Git repository (https://github.com/wmgeolab/geoBoundaries/issues/new) that contains the country,
 		source, and license of the boundary (all information must be verifiable). Once we receive your request, we will
 		publish it on GitHub as an Issue (unless you created it already), and accept comments on the boundary until the
 		next major point release of geoBoundaries.</p>
@@ -172,9 +172,9 @@
 					<li>
 						<span class="opener">Get Involved</span>
 						<ul>
-							<li><a href="https://github.com/wmgeolab/gbRelease">GitHub Repository</a></li>
+							<li><a href="https://github.com/wmgeolab/geoBoundaries">GitHub Repository</a></li>
 							<li><a href="issues.html#contribute">Contribute Boundaries</a></li>
-							<li><a href="https://github.com/wmgeolab/gbRelease/issues">Report Issues</a></li>
+							<li><a href="https://github.com/wmgeolab/geoBoundaries/issues">Report Issues</a></li>
 							<li><a href="https://giving.wm.edu/give-now/#allocation=4674">Buy us a Pizza</a></li>
 						</ul>
 					</li>
@@ -258,7 +258,7 @@
 
 
 	<script>
-		var urlToGetAllOpenBugs = "https://api.github.com/repos/wmgeolab/gbRelease/issues?labels=bug&state=open&access_token=384bea1164117b6d25f194a8c6e2d7ab34a1e091"
+		var urlToGetAllOpenBugs = "https://api.github.com/repos/wmgeolab/geoBoundaries/issues?labels=bug&state=open&access_token=384bea1164117b6d25f194a8c6e2d7ab34a1e091"
 
 
 
@@ -272,7 +272,7 @@
 						msTitle = issue.milestone.title
 					}
 					$("#issueTracker")
-						.append("<tr><td>" + issue.number + "</td><td><a href='https://github.com/wmgeolab/gbRelease/issues/" + issue.number + "'>" + issue.title + "</a></td><td>" + msTitle + "</td></tr>")
+						.append("<tr><td>" + issue.number + "</td><td><a href='https://github.com/wmgeolab/geoBoundaries/issues/" + issue.number + "'>" + issue.title + "</a></td><td>" + msTitle + "</td></tr>")
 				});
 			})
 			.done(function() {
@@ -282,14 +282,14 @@
 	</script>
 
 	<script>
-		var url2 = "https://api.github.com/repos/wmgeolab/gbRelease/issues?labels=oddity&state=all&access_token=384bea1164117b6d25f194a8c6e2d7ab34a1e091"
+		var url2 = "https://api.github.com/repos/wmgeolab/geoBoundaries/issues?labels=oddity&state=all&access_token=384bea1164117b6d25f194a8c6e2d7ab34a1e091"
 
 		$(document).ready(function () {
 			$.getJSON(url2, function (oddity) {
 				$.each(oddity, function (i, issues) {
 
 					$("#oddityTracker")
-						.append("<tr><td>" + issues.number + "</td><td><a href='https://github.com/wmgeolab/gbRelease/issues/" + issues.number + "'>" + issues.title + "</a>")
+						.append("<tr><td>" + issues.number + "</td><td><a href='https://github.com/wmgeolab/geoBoundaries/issues/" + issues.number + "'>" + issues.title + "</a>")
 				});
 			})
 			.done(function() {
@@ -300,7 +300,7 @@
 
 
 	<script>
-		var url3 = "https://api.github.com/repos/wmgeolab/gbRelease/issues?labels=enhancement&state=open&access_token=384bea1164117b6d25f194a8c6e2d7ab34a1e091"
+		var url3 = "https://api.github.com/repos/wmgeolab/geoBoundaries/issues?labels=enhancement&state=open&access_token=384bea1164117b6d25f194a8c6e2d7ab34a1e091"
 
 		$(document).ready(function () {
 			$.getJSON(url3, function (upgrade) {
@@ -312,7 +312,7 @@
 						msTitle = issues2.milestone.title
 					}
 					$("#upgradeTracker")
-						.append("<tr><td>" + issues2.number + "</td><td><a href='https://github.com/wmgeolab/gbRelease/issues/" + issues2.number + "'>" + issues2.title + "</a></td><td>" + msTitle + "</td></tr>")
+						.append("<tr><td>" + issues2.number + "</td><td><a href='https://github.com/wmgeolab/geoBoundaries/issues/" + issues2.number + "'>" + issues2.title + "</a></td><td>" + msTitle + "</td></tr>")
 				});
 			})
 			.done(function() {

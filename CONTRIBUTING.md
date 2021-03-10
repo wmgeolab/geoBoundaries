@@ -8,4 +8,4 @@ If you have a boundary (or set of boundaries) that you believe meets the above q
 A) Automated checks are conducted on the validity of the data, and recommended changes are made.
 B) A human review team will assess the data to ensure it's validity and improvement over our existing capabilities.
 C) We will open the boundary for comment.
-D) If A-C look good, we'll accept it into the master!
+D) If A-C look good, we'll accept it into the main!

@@ -22,8 +22,8 @@
 and segments both use queryRunner */
 import keyMirror from 'keymirror';
 
-export const ASSETS_URL = 'https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/assets/';
-export const DATA_URL = 'https://raw.githubusercontent.com/wmgeolab/gbRelease/master/website/geoDesc/examples/';
+export const ASSETS_URL = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/website/geoDesc/assets/';
+export const DATA_URL = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/website/geoDesc/examples/';
 export const MAP_URI = '/map?mapUrl=';
 export const KEPLER_GL_NAME = "geoDesc";
 export const KEPLER_GL_WEBSITE = 'http://www.geodesc.org/';
