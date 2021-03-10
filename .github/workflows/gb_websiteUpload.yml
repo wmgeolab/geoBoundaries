@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2.1.0
       with:
         fetch-depth: 2
-        repository: wmgeolab/gbRelease
+        repository: wmgeolab/geoBoundaries
         ref: master
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1

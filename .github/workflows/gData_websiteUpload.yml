@@ -15,11 +15,11 @@ jobs:
          username: ${{ secrets.SSH_USERNAME }}
          password: ${{ secrets.SSH_PASSWORD }}
          script: |
-               cd gbRelease
+               cd geoBoundaries
                git fetch --all
                git checkout -b bB
                git reset --hard origin/master
-               git pull https://github.com/wmgeolab/gbRelease.git
+               git pull https://github.com/wmgeolab/geoBoundaries.git
                cd website/geoDesc
                npm install
                npm install @material-ui/core

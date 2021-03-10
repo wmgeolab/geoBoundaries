@@ -9,7 +9,7 @@ import io
 requests_cache.install_cache(os.path.expanduser("~") + "/tmp/cache")
 
 #Build ADM0 datasets
-directory = os.path.expanduser("~") + "/git/gbRelease/ancillaryData/gdOpen/sourceData/ADM0/"
+directory = os.path.expanduser("~") + "/git/geoBoundaries/ancillaryData/gdOpen/sourceData/ADM0/"
 dd = []
 for filename in os.listdir(directory):
     if filename.endswith(".txt"):

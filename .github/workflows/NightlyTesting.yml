@@ -15,6 +15,6 @@ jobs:
       uses: benc-uk/workflow-dispatch@v1
       with:
         workflow: NightlyBuild
-        repo: wmgeolab/gbRelease
+        repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
