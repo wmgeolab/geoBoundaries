@@ -83,12 +83,10 @@ jobs:
            
            #This is an ugly patch to try and avoid collisions from multiple boundaries
            #being pushed at once.  Better suggestions welcome.
-           END=10
-           C=END
-           while [ $C -gt 0 ]; 
+           i="0"
+           while [ $i -lt 4 ]
            do 
-           echo Attempt C
-           C=$(($C-1))
+           i=$[$i+1]
            sleep $[ ( $RANDOM % 60 )  + 1 ]s
            git fetch
            git add -A .
