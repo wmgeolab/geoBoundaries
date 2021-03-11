@@ -83,9 +83,12 @@ jobs:
            
            #This is an ugly patch to try and avoid collisions from multiple boundaries
            #being pushed at once.  Better suggestions welcome.
-           for ((n=0;n<10;n++))
-           do
-           echo "Attempting to commit, will retry up to 10 times to mitigate collision risks...."
+           END=10
+           C=END
+           while [ $C -gt 0 ]; 
+           do 
+           echo Attempt C; 
+           C=$(($C-1));
            sleep $[ ( $RANDOM % 60 )  + 1 ]s
            git fetch
            git add -A .
