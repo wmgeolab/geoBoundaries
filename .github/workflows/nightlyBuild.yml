@@ -87,8 +87,8 @@ jobs:
            C=END
            while [ $C -gt 0 ]; 
            do 
-           echo Attempt C; 
-           C=$(($C-1));
+           echo Attempt C
+           C=$(($C-1))
            sleep $[ ( $RANDOM % 60 )  + 1 ]s
            git fetch
            git add -A .
