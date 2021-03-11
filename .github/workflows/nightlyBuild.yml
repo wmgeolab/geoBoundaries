@@ -80,7 +80,7 @@ jobs:
            git config --local user.name "DanRunfola"
            #This is an ugly patch to try and avoid collisions from multiple boundaries
            #being pushed at once.  Better suggestions welcome.
-           sleep $[ ( $RANDOM % 600 )  + 1 ]s
+           sleep $((RANDOM % 300))
            git fetch
            rm RESULT.txt
            git fetch
