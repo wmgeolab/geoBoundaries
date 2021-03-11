@@ -84,9 +84,9 @@ jobs:
            #This is an ugly patch to try and avoid collisions from multiple boundaries
            #being pushed at once.  Better suggestions welcome.
            for ((n=0;n<10;n++))
+           do
            echo "Attempting to commit, will retry up to 10 times to mitigate collision risks...."
            sleep $[ ( $RANDOM % 60 )  + 1 ]s
-           do
            git fetch
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
