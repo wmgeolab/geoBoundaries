@@ -69,7 +69,12 @@ jobs:
            python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      
+        
+    - name: Wait On Commit
+      uses: softprops/turnstyle@v1
+      env:
+           GITHUB_TOKEN: ${{secrests.GITHUB.TOKEN}}
+           
     - name: Commit Files
       if: steps.buildCheck.outcome == 'success'
       env:
@@ -78,17 +83,13 @@ jobs:
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
-           #This is an ugly patch to try and avoid collisions from multiple boundaries
-           #being pushed at once.  Better suggestions welcome.
-           sleep $((RANDOM % 300))
-           git fetch
            rm RESULT.txt
            git fetch
            git add -A .
+           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git pull --rebase -X theirs
            git status
-           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git push origin main 
 
        
