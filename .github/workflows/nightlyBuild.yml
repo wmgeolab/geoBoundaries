@@ -73,7 +73,7 @@ jobs:
     - name: Wait On Commit
       uses: softprops/turnstyle@v1
       env:
-           GITHUB_TOKEN: ${{secrests.GITHUB.TOKEN}}
+           GITHUB_TOKEN: ${{secrets.GITHUB.TOKEN}}
            
     - name: Commit Files
       if: steps.buildCheck.outcome == 'success'
