@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ISO: ["ALB","AGO"]
+        ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
         ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
         TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
     steps:
