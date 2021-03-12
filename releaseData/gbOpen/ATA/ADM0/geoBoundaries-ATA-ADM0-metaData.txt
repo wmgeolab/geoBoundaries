@@ -1,0 +1,14 @@
+boundaryID : ATA-ADM0-39004313
+boundaryISO : ATA
+boundaryType : ADM0
+boundaryYear : 2020.0
+boundarySource-1 : Natural Earth
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Public Domain
+licenseDetail : nan
+licenseSource : https//www.naturalearthdata.com/about/terms-of-use/
+boundarySourceURL : https//www.naturalearthdata.com/downloads/10m-physical-vectors/10m-antarctic-ice-shelves/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ATA_ADM0.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Mar 12, 2021
