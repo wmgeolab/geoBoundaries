@@ -15,8 +15,10 @@ jobs:
     - name: Create nightly builds
       uses: wmgeolab/geoBoundariesBuildAction@main
       with:
-       token: ${{secrets.DRTOKEN}}
-       inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+       DRTOKEN: ${{secrets.DRTOKEN}}
+       bType: ${{matrix.TYPE}}
+       ISO: ${{matrix.ISO}}
+       ADM: ${{matrix.ADM}}
     #- name: Create Build Call
     #  uses: benc-uk/workflow-dispatch@v1
     #  with:
