@@ -7,14 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
+        ISO: ["AFG"]#["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
         ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
         TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
     steps:
-    - name: Create Build Call
-      uses: benc-uk/workflow-dispatch@v1
+    - name: Create nightly builds
+      uses: geoBoundaries/.github/workflows/gbBuild@master
       with:
-        workflow: NightlyBuild
-        repo: wmgeolab/geoBoundaries
-        token: ${{ secrets.DRTOKEN }}
-        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+       token: ${{secrets.DRTOKEN}}
+       inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+    #- name: Create Build Call
+    #  uses: benc-uk/workflow-dispatch@v1
+    #  with:
+    #    workflow: NightlyBuild
+    #    repo: wmgeolab/geoBoundaries
+    #    token: ${{ secrets.DRTOKEN }}
+    #    inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
