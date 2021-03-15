@@ -1,4 +1,4 @@
-name: gbBuild
+name: Nightly AFG to AZE
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
