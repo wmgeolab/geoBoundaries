@@ -1,7 +1,7 @@
 on:
   workflow_dispatch
   
-name: Nightly AFG to AZE
+name: Nightly BDI to BOL
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
