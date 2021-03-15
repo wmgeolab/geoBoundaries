@@ -1,3 +1,6 @@
+on:
+  workflow_dispatch
+  
 name: Nightly AFG to AZE
 jobs:
   gbBuild:
