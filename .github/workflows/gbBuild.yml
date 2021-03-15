@@ -11,7 +11,7 @@ on:
                 description: Boundary ADM Level
                 required: true
 
-name: NightlyBuild
+name: gbBuild
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
