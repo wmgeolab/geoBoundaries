@@ -12,7 +12,7 @@ jobs:
         TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
     steps:
     - name: Create nightly builds
-      uses: geoBoundaries/gbBuild@master
+      uses: wmgeolab/geoBoundaries/gbBuild@master
       with:
        token: ${{secrets.DRTOKEN}}
        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
