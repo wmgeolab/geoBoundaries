@@ -26,7 +26,7 @@ jobs:
       continue-on-error: true
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
-           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{github.event.inputs.bType}}
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.bType}}
            
         
     
@@ -61,7 +61,7 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            mkdir ~/artifacts
-           python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
+           python geoBoundaryBot/gbBuild.py ${{matrix.bType}} nightly ${{matrix.ISO}} ${{matrix.ADM}} ${{secrets.DRTOKEN}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         
