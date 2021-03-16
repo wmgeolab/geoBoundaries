@@ -57,6 +57,9 @@ jobs:
       run: |
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
+           git config --global http.postBuffer 500M
+           git config --global http.maxRequestBuffer 100M
+           git config --global core.compression 0
            rm RESULT.txt
            git fetch
            git add -A .
