@@ -1,17 +1,11 @@
-<!--- If you are submitting a boundary, Please include your ISO code and ADM level in the title -->
-<!--- This PR template is for boundary submissions; if you are submitting code please give us as much detail as possible. -->
+<!--- Thank you for your submission to geoBoundaries! -->
+<!--- If you are submitting a boundary, please make sure to include the ISO code and ADM level -->
+<!--- We require full data lineage for all products, but give us your source and we'll do the legwork to hunt down everything we can! -->
 
 ## Why do we need this boundary?  
 <!--- If this is in response to a github issue, just link it here. -->
+<!--- Otherwise, let us know why this boundary is better than what's in the current database. -->
 
 ## Anything Unusual?
 <!--- Please describe any known complications with your submission. -->
 <!--- You can also include anything else we need to know while assessing this data. -->
-
-## Checklist:
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
-<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
-- [ ] My submission is either a shapefile (with all the relevant files) or a geojson.
-- [ ] I have included a file named "meta.txt", with all required metadata (see an example in https://bit.ly/2GtQ01i).
-- [ ] I have included a file named "license.png" or "license.jpg", which includes a screenshot of the loaded website (or other source) with the licensure information.
-- [ ] Everything is zipped up in a single file following the naming convention "ISO_ADMN.zip", and I am requesting it be added to the correct folder (i.e., gbOpen).
