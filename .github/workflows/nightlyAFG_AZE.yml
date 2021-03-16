@@ -10,7 +10,7 @@ jobs:
         max-parallel: 1
         fail-fast: false
         matrix:
-          ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
+          ISO: ["AUS"]#["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
           ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
           TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
     steps:        
@@ -58,11 +58,15 @@ jobs:
            git config --global core.compression 0
            rm RESULT.txt
            git fetch
+
+           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
+           
+           git stash
+           git pull
+           git stash apply
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git add -A .
-           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
-           git pull --rebase -X theirs
            git status
            git push origin main 
        
