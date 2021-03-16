@@ -5,20 +5,20 @@ name: Nightly AFG to AZE
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
-    container: osgeo/gdal:ubuntu-small-latest
+    container: geogdan/geoboundaries
     strategy:
         matrix:
           ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
           ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
           TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
     steps:
-    - name: Initialize Linux Environment
-      run: |
-           apt-get update
-           apt-get install -y software-properties-common
-           add-apt-repository ppa:git-core/ppa
-           apt-get update
-           apt-get install -y git
+    #- name: Initialize Linux Environment
+    #  run: |
+    #       apt-get update
+    #       apt-get install -y software-properties-common
+    #       add-apt-repository ppa:git-core/ppa
+    #       apt-get update
+    #       apt-get install -y git
            
     - name: Check if build needed
       id: buildCheck
@@ -29,17 +29,17 @@ jobs:
            
         
     
-    - name: Finish Linux Environment Build
-      if: steps.buildCheck.outcome == 'success'
-      run: |
-           curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-           apt-get install git-lfs
-           apt-get install -y python3-pip
-           apt-get install -y npm
-           npm install -g mapshaper
-           pip3 install geopandas
-           pip3 install matplotlib
-           pip3 install PyGithub
+    #- name: Finish Linux Environment Build
+    #  if: steps.buildCheck.outcome == 'success'
+    #  run: |
+    #       curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+    #       apt-get install git-lfs
+    #       apt-get install -y python3-pip
+    #       apt-get install -y npm
+    #       npm install -g mapshaper
+    #       pip3 install geopandas
+    #       pip3 install matplotlib
+    #       pip3 install PyGithub
     - name: Download Repository Code
       if: steps.buildCheck.outcome == 'success'
       uses: actions/checkout@v2.3.2
