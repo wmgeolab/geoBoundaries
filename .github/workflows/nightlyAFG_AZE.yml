@@ -5,7 +5,7 @@ name: Nightly AFG to AZE
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
-    container: geogdan/geoboundaries
+    container: docker://geogdan/geoboundaries
     strategy:
         matrix:
           ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
