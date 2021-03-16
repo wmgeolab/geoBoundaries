@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://geogdan/geoboundaries:A
     strategy:
+        max-parallel: 1
         fail-fast: false
         matrix:
           ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
@@ -43,11 +44,6 @@ jobs:
            python geoBoundaryBot/gbBuild.py ${{matrix.TYPE}} nightly ${{matrix.ISO}} ${{matrix.ADM}} ${{secrets.DRTOKEN}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        
-    - name: Wait On Commit
-      uses: softprops/turnstyle@v1
-      env:
-           GITHUB_TOKEN: ${{secrets.GITHUB.TOKEN}}
            
     - name: Commit Files
       if: steps.buildCheck.outcome == 'success'
