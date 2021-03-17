@@ -23,7 +23,7 @@ jobs:
    
     - name: Annotate Build Outputs
       if: steps.buildCheck.outcome != 'success'
-      uses: yuzutech/annotations-action@v0.1.0
+      uses: yuzutech/annotations-action@v0.3.0
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         title: 'gbBuildOut'
