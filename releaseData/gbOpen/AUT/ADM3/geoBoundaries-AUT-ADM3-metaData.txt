@@ -11,4 +11,4 @@ licenseSource : https//twitter.com/WMgeoLab/status/1253487894313959424
 boundarySourceURL : https//www.bev.gv.at/portal/page?_pageid=713,2639317&_dad=portal&_schema=PORTAL
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AUT_ADM3.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Mar 16, 2021
+buildUpdateDate : Mar 17, 2021
