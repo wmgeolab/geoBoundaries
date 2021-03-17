@@ -20,14 +20,6 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
-   
-    - name: Annotate Build Outputs
-      if: steps.buildCheck.outcome != 'success'
-      uses: yuzutech/annotations-action@v0.3.0
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        title: 'gbBuildOut'
-        input: '/__w/geoBoundaries/geoBoundaries/annotation.json'
         
     - name: Download Repository Code
       if: steps.buildCheck.outcome == 'success'
