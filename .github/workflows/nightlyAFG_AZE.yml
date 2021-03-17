@@ -27,7 +27,7 @@ jobs:
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         title: 'gbBuildOut'
-        input: '~/annotation.json'
+        input: '/__w/geoBoundaries/geoBoundaries/annotation.json'
         
     - name: Download Repository Code
       if: steps.buildCheck.outcome == 'success'
