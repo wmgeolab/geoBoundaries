@@ -68,7 +68,8 @@ jobs:
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git status
-           git push origin main 
+           git pull origin main --rebase
+           git push origin main:main
        
         
     - name: Create Artifact
