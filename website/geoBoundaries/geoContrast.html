@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>geoBoundaries</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/ol.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="assets/js/slick/slick.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/BeerSlider.css" />
+	
+
+	<style>
+		.tooltip {
+  position:relative; /* making the .tooltip span a container for the tooltip text */
+  border-bottom:1px dashed #000; /* little indicater to indicate it's hoverable */
+}
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position:absolute;
+  
+  /* vertically center */
+  top:-50%;
+  transform:translateX(-100%);
+  
+  /* move to right */
+  left:100%;
+  margin-left:15px; /* and add a small left margin */
+  
+  /* basic styles */
+  width:200px;
+  padding:10px;
+  border-radius:10px;
+  background:#000;
+  color: #fff;
+  text-align:center;
+  font-size:12px;
+
+  display:none; /* hide by default */
+}
+.tooltip:hover:before {
+  display:block;
+}
+
+.map {
+        width: 100%;
+        height:600px;
+        padding:0;
+        margin:0;
+      }
+      .map:-webkit-full-screen {
+        height: 100%;
+        margin: 0;
+        padding:0;
+      }
+      .map:-ms-fullscreen {
+        height: 100%;
+      }
+      .map:fullscreen {
+        height: 100%;
+      }
+      .sidepanel{
+          height:400px;
+          width:20%;
+          padding:0;
+          margin:0;
+      }
+.toolbox {
+padding-left: 2px;
+margin-top: 0px;
+margin-left: 2px;
+height:600px;
+}
+
+.box {
+	border-left:1px solid rgb(240, 179, 35);
+	border-right:1px solid rgb(240, 179, 35);
+	border-bottom:1px solid rgb(240, 179, 35);
+	border-top: 1px solid rgb(240, 179, 35);
+	border-radius:0;
+	
+}
+
+li.tab{
+	top:0px;
+	padding-top:0px;
+	border-bottom:0;
+	border-left: 1px solid rgb(240, 179, 35);
+	border-right: 1px solid rgb(240, 179, 35);
+	border-top: 1px solid rgb(240, 179, 35);
+	border-bottom: 0px;
+}
+
+a{
+	border-bottom:0;
+}
+
+li.tab.active{
+	padding-top:0px;
+	border-bottom:0;
+	border-left: 1px solid rgb(240, 179, 35);
+	border-right: 1px solid rgb(240, 179, 35);
+	border-top: 1px solid rgb(240, 179, 35);
+}
+
+ul li{
+	padding-left: 0;
+}
+
+
+	</style>
+	
+	<!-- Scripts -->
+	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9276981-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-9276981-3');
+	</script>
+
+  
+	<!-- Global site tag (gtag.js) - Google Ads: 984002936 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-984002936"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-984002936');
+</script>
+
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+	gtag('event', 'conversion', {'send_to': 'AW-984002936/BycZCJ_8kdMBEPjimtUD'});
+  </script>
+  
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<span class="logo"><a href="index.html"><strong>geoBoundaries</strong></a> by the <a
+							href="http://geolab.wm.edu">William & Mary geoLab</a></span>
+					<ul class="icons">
+						<li><a href="https://twitter.com/wmgeolab?lang=en" class="icon brands fa-twitter"><span
+									class="label">Twitter</span></a></li>
+						<li><a href="https://www.linkedin.com/company/51598643/"
+								class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Banner -->
+				<section>
+					<header class="main">
+						<span><h1>Compare, Contribute, and <span 
+							data-text="Build Your Own Boundaries" 
+							class="tooltip"> BYOB</span></h1></span>
+						
+					</header>
+
+					<div class="row gtr-200">
+						<div class="col-9 col-12-medium">
+							<div id="fullscreen" class="fullscreen">
+								<div id="map" class="map"></div>
+								</div>
+
+						</div>
+						<div class="col-3 col-12-medium" style="padding:0; ">
+							<div id="toolbox" class="toolbox">
+								
+								<div id="tab-container" class="tab-container">
+									<ul class='etabs'>
+										<li class='tab'><a href="#compare">Compare & Contribute</a></li>
+										<li class='tab'><a href="#BYOB">Build Your Own</a></li>
+									</ul>
+
+									<div id="compare" class="box">
+										Compare this geoBoundary:
+										<select><option>Test</option><option>Test2</option></select>
+										To: <br />
+										<div>
+										<span class="fas fa-file" style="padding:8px;"></span>Your Own Boundary <span 
+										data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects a projection of WGS84 (EPSG 4326)." 
+										class="tooltip">(?)</span></div>
+										
+
+										
+									</div>
+
+									<div id="BYOB" class="box">
+										asdf
+									</div>
+
+
+							</div>
+								
+						</div>
+
+					</div>
+
+				
+
+
+
+
+
+				</section>
+
+
+			</div>
+		</div>
+
+		<script>
+
+		</script>
+		<!-- Sidebar -->
+		<div id="sidebar" , class="inactive">
+			<div class="inner">
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#getdata">Get Data</a></li>
+						<li><a href="api.html">API & Archive</a></li>
+						<li><a href="index.html#citation">Citation and Use</a></li>
+						<li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231866">Technical
+								Paper</a></li>
+						<li><a href="issues.html">Caveats & Roadmap</a></li>
+						<li>
+							<span class="opener">Get Involved</span>
+							<ul>
+								<li><a href="https://github.com/wmgeolab/geoBoundaries">GitHub Repository</a></li>
+								<li><a href="issues.html#contribute">Contribute Boundaries</a></li>
+								<li><a href="https://github.com/wmgeolab/geoBoundaries/issues">Report Issues</a></li>
+								<li><a href="https://giving.wm.edu/give-now/#allocation=4674">Buy us a Pizza</a></li>
+							</ul>
+						</li>
+
+
+					</ul>
+				</nav>
+
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Get in touch</h2>
+					</header>
+					<p>Want to contribute, identified an error, or otherwise want to chat? Please reach out!</p>
+					<ul class="contact">
+						<li class="icon solid fa-envelope"><a href="#">team@geoboundaries.org</a></li>
+						<li class="icon solid fa-phone">(757) 221-1970</li>
+						<li class="icon solid fa-home">geoLab, Applied Science<br />
+							540 Landrum Drive<br />
+							Williamsburg, VA 23185</li>
+					</ul>
+				</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>. <tiny>With respect to works
+							on or made available through download from the this website, we make no representations or
+							warranties—express, implied, or statutory—as to the validity, accuracy, completeness, or
+							fitness for a particular purpose; nor represent that use of such works would not infringe
+							privately owned rights; nor assume any liability resulting from use of such works; and shall
+							in no way be liable for any costs, expenses, claims, or demands arising out of use of such
+							works.</tiny>
+					</p>
+				</footer>
+
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.easytabs.js" type="text/javascript"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () { $('#tab-container').easytabs({animate:false}); });
+	</script>
+	<script src="assets/js/ol.js"></script>
+	<script type="text/javascript">
+
+		var style = new ol.style.Style({
+		fill: new ol.style.Fill({
+			color: 'rgba(255, 255, 255, 0.6)',
+		}),
+		stroke: new ol.style.Stroke({
+			color: '#319FD3',
+			width: 1,
+		}),
+		});
+	
+		var vector = new ol.layer.Vector({
+		source: new ol.source.Vector({
+			url: 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/AUS/ADM0/geoBoundaries-AUS-ADM0.topojson',
+			//url: 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/AGO/ADM0/geoBoundaries-AGO-ADM0.topojson',
+			format: new ol.format.TopoJSON({}),
+			overlaps: false,
+		}),
+		style: style,
+		});
+	
+		  var map = new ol.Map({
+			target: 'map',
+			controls: ol.control.defaults().extend([new ol.control.FullScreen()]),
+			layers: [
+			new ol.layer.Tile({
+				source: new ol.source.XYZ({
+					attributions: 'Satellite Imagery <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> ',
+					url:
+					'https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=' + 'aknzJQRnZg32XVVPrcYH',
+					maxZoom: 20,
+				})}),
+			  vector
+			],
+			view: new ol.View({
+			  center: ol.proj.fromLonLat([37.41, 8.82]),
+			  zoom: 4
+			})
+		  });
+		</script>
+</body>
+
+</html>

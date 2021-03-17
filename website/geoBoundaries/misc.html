@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/ol.css" type="text/css">
+    <style>
+    .map {
+        width: 80%;
+        height:400px;
+        padding:0;
+        margin:0;
+      }
+      .map:-webkit-full-screen {
+        height: 100%;
+        margin: 0;
+        padding:0;
+      }
+      .map:-ms-fullscreen {
+        height: 100%;
+      }
+      .map:fullscreen {
+        height: 100%;
+      }
+      .sidepanel{
+          height:400px;
+          width:20%;
+          padding:0;
+          margin:0;
+      }
+    </style>
+    <script src="assets/js/ol.js"></script>
+    <title>geoBoundaries Contrast & Export</title>
+  </head>
+  <body>
+
+    <div id="fullscreen" class="fullscreen">
+        <div id="map" class="map"></div>
+        <span id="sidepanel">
+            Side Panel
+        </span>
+    </div>
+
+
+    
+
+    <script type="text/javascript">
+
+    var style = new ol.style.Style({
+    fill: new ol.style.Fill({
+        color: 'rgba(255, 255, 255, 0.6)',
+    }),
+    stroke: new ol.style.Stroke({
+        color: '#319FD3',
+        width: 1,
+    }),
+    });
+
+    var vector = new ol.layer.Vector({
+    source: new ol.source.Vector({
+        url: 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/AGO/ADM0/geoBoundaries-AGO-ADM0.topojson',
+        format: new ol.format.TopoJSON({}),
+        overlaps: false,
+    }),
+    style: style,
+    });
+
+      var map = new ol.Map({
+        target: 'map',
+        controls: ol.control.defaults().extend([new ol.control.FullScreen()]),
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          }),
+          vector
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
+    </script>
+  </body>
+</html>
