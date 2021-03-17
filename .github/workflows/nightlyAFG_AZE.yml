@@ -63,7 +63,7 @@ jobs:
            
            git diff-index --quiet HEAD || git stash
            git pull
-           git diff-index --quiet --name-only stash@{0} main || git stash apply
+           git diff-index --quiet --name-only stash@{0} || git stash apply
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
