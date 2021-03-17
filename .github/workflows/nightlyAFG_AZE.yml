@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://geogdan/geoboundaries:A
     strategy:
-        max-parallel: 10
+        max-parallel: 30
         fail-fast: false
         matrix:
           ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
