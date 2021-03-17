@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/armenia-administrative-boundarie
 boundarySourceURL : https//data.humdata.org/dataset/armenia-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ARM_ADM2.zip
 sourceDataUpdateDate : Mar 06, 2021
-buildUpdateDate : Mar 12, 2021
+buildUpdateDate : Mar 17, 2021
