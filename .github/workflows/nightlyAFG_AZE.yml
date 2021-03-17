@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://geogdan/geoboundaries:A
     strategy:
+        max-parallel: 10
         fail-fast: false
         matrix:
           ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
@@ -43,11 +44,6 @@ jobs:
            python geoBoundaryBot/gbBuild.py ${{matrix.TYPE}} nightly ${{matrix.ISO}} ${{matrix.ADM}} ${{secrets.DRTOKEN}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        
-    - name: Wait On Commit
-      uses: softprops/turnstyle@v1
-      env:
-           GITHUB_TOKEN: ${{secrets.GITHUB.TOKEN}}
            
     - name: Commit Files
       if: steps.buildCheck.outcome == 'success'
@@ -62,13 +58,18 @@ jobs:
            git config --global core.compression 0
            rm RESULT.txt
            git fetch
+
+           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
+           
+           git diff-index --quiet HEAD || git stash
+           git pull
+           git diff-index --quiet --name-only stash@{0} main || git stash apply
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git add -A .
-           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
-           git pull --rebase -X theirs
            git status
-           git push origin main 
+           git pull origin main --rebase
+           git push origin main:main
        
         
     - name: Create Artifact
