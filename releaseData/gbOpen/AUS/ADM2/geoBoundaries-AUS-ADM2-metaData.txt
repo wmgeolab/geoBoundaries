@@ -11,4 +11,4 @@ licenseSource : https//data.gov.au/dataset/ds-dga-bdcf5b09-89bc-47ec-9281-6b8e9e
 boundarySourceURL : https//data.gov.au/dataset/psma-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AUS_ADM2.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Mar 17, 2021
+buildUpdateDate : Mar 18, 2021
