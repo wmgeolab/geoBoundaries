@@ -1,7 +1,7 @@
 on:
   workflow_dispatch
   
-name: zzNightlyMeta
+name: zNightlyMeta
 jobs:
   csvBuild:
     runs-on: ubuntu-latest
