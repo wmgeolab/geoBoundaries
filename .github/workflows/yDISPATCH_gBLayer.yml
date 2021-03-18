@@ -54,12 +54,16 @@ jobs:
            git config --global http.maxRequestBuffer 100M
            git config --global core.compression 0
            rm RESULT.txt
+           git status
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git fetch
            git checkout .gitattributes
+           git status
            find * -type f -size +99M -exec git lfs track --filename '{}' +
+           git status
            git add -A .
-           git diff-index --quiet HEAD || git commit -m "gB Nightly `date`"
+           git commit -m "gB Nightly `date`"
+           git status
            git pull
            git status
            git push origin main
