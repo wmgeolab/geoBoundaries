@@ -11,7 +11,7 @@ on:
                 description: Boundary ADM Level
                 required: true
                 
-name: yDISPATCH gB Layer Build
+name: yDISPATCH_gBLayer
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
