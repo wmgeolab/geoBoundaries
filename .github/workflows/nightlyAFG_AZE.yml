@@ -5,77 +5,33 @@ name: Nightly AFG to AZE
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
-    container: docker://geogdan/geoboundaries:A
     strategy:
-        max-parallel: 1
         fail-fast: false
         matrix:
-          ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
+          ISO: ["AUS"] #["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
           ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
           TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
-    steps:        
+    steps:
+    - name: Install Python 3
+      uses: actions/setup-python@v1
+      with:
+          python-version: 3.6
+          
     - name: Check if build needed
       id: buildCheck
       continue-on-error: true
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
-        
-    - name: Download Repository Code
+    
+    - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
-      uses: actions/checkout@v2.3.2
+      uses: benc-uk/workflow-dispatch@v1
       with:
-        lfs: true
-        persist-credentials: false
-   
-    - name: Install File Check Scripts into Repository
-      if: steps.buildCheck.outcome == 'success'
-      run: |
-            git fetch
-            git clone https://github.com/wmgeolab/geoBoundaryBot
-   
-    - name: Checking Files
-      if: steps.buildCheck.outcome == 'success'
-      id: checks
-      run: |
-           echo "==============================================="
-           mkdir ~/tmp 
-           mkdir ~/artifacts
-           python geoBoundaryBot/gbBuild.py ${{matrix.TYPE}} nightly ${{matrix.ISO}} ${{matrix.ADM}} ${{secrets.DRTOKEN}}
-      env:
-           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-           
-    - name: Commit Files
-      if: steps.buildCheck.outcome == 'success'
-      env:
-            DRTOKEN: ${{secrets.DRTOKEN}}
-            REP: ${{env.GITHUB_REPOSITORY}}
-      run: |
-           git config --local user.email "danr@wm.edu"
-           git config --local user.name "DanRunfola"
-           git config --global http.postBuffer 500M
-           git config --global http.maxRequestBuffer 100M
-           git config --global core.compression 0
-           rm RESULT.txt
-           git fetch
+        workflow: NightlyBuild
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
 
-           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
-           
-           git diff-index --quiet HEAD || git stash
-           git pull
-           git diff-index --quiet --name-only stash@{0} || git stash apply
-           find * -type f -size +99M -exec git lfs track --filename '{}' +
-           git add -A .
-           git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
-           git status
-           git pull origin main --rebase
-           git push origin main:main
-       
-        
-    - name: Create Artifact
-      if: steps.buildCheck.outcome == 'success'
-      uses: actions/upload-artifact@v2
-      with:
-        name: results
-        path: ~/artifacts/
+    
         
