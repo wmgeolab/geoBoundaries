@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://geogdan/geoboundaries:A
     strategy:
-        max-parallel: 10
+        max-parallel: 1
         fail-fast: false
         matrix:
-          ISO: ["AFG"] #["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
+          ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
           ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
           TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
     steps:        
@@ -20,14 +20,6 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
-   
-    - name: Annotate Build Outputs
-      if: steps.buildCheck.outcome != 'success'
-      uses: yuzutech/annotations-action@v0.1.0
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        title: 'gbBuildOut'
-        input: '/__w/geoBoundaries/geoBoundaries/annotation.json'
         
     - name: Download Repository Code
       if: steps.buildCheck.outcome == 'success'
