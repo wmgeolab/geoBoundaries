@@ -27,6 +27,7 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        
   gbBuild_BDI_BOL:
     needs: gbBuild_AFG_AZE
     runs-on: ubuntu-latest
@@ -52,9 +53,82 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        
+  gbBuild_BRA_CMR:
+    needs: gbBuild_BDI_BOL
+    runs-on: ubuntu-latest
+    strategy:
+        fail-fast: false
+        matrix:
+          ISO: ["BRA", "BRB", "BRN", "BTN", "BWA", "CAF", "CAN", "CHE", "CHL", "CHN", "CIV", "CMR"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
     
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
     
+  gbBuild_COD_DMA:
+    needs: gbBuild_BRA_CMR
+    runs-on: ubuntu-latest
+    strategy:
+        fail-fast: false
+        matrix:
+          ISO: ["COD", "COG", "COL", "COM", "CPV", "CRI", "CUB", "CYP", "CZE", "DEU", "DJI", "DMA"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
     
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
 
+  gbBuild_DNK_FRA:
+    needs: gbBuild_COD_DMA
+    runs-on: ubuntu-latest
+    strategy:
+        fail-fast: false
+        matrix:
+          ISO: ["DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESP", "EST", "ETH", "FIN", "FJI", "FRA"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
     
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
         
