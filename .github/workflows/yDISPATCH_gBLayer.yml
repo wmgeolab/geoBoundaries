@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://geogdan/geoboundaries:A
     steps:
+    - name: Git LFS Ignore Paths
+      run: |
+           git config --global lfs.fetchinclude 'sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip'
     - name: Download Repository Code
       uses: actions/checkout@v2.3.2
       with:
@@ -55,13 +58,13 @@ jobs:
            git config --global core.compression 0
            rm RESULT.txt
            git status
-           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git fetch
            git checkout .gitattributes
            git status
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git status
            git add -A .
+           git status
            git commit -m "gB Nightly `date`"
            git status
            git pull
