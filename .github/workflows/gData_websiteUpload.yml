@@ -2,7 +2,7 @@ on:
   push:
     paths:    
     - 'website/geoDesc/**'
-name: zWEB UP geoDesc
+name: zWEB geoDesc
 
 jobs:
   deployGeoDesc:
