@@ -56,6 +56,7 @@ jobs:
            rm RESULT.txt
            git fetch
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY           
+           git pull
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
