@@ -1,7 +1,7 @@
 on:
   workflow_dispatch
   
-name: xxNIGHTLY_AFG_AZE
+name: xxNIGHTLY_gB
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
@@ -27,6 +27,9 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+    
+    
+    #["BDI", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLR", "BLZ", "BOL"]
 
     
         
