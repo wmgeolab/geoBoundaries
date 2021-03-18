@@ -1,7 +1,7 @@
 on:
   workflow_dispatch
   
-name: Nightly AFG to AZE
+name: xxNIGHTLY_AFG_AZE
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
       if: steps.buildCheck.outcome == 'success'
       uses: benc-uk/workflow-dispatch@v1
       with:
-        workflow: NightlyBuild
+        workflow: yDISPATCH_gBLayer
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
