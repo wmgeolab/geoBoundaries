@@ -11,4 +11,4 @@ licenseSource : https//osm-boundaries.com/
 boundarySourceURL : https//osm-boundaries.com/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AFG_ADM1.zip
 sourceDataUpdateDate : Mar 06, 2021
-buildUpdateDate : Mar 17, 2021
+buildUpdateDate : Mar 18, 2021
