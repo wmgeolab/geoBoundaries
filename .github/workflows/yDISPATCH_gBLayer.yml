@@ -55,17 +55,13 @@ jobs:
            git config --global core.compression 0
            rm RESULT.txt
            git fetch
-           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
-           
-           git diff-index --quiet HEAD || git stash
-           git pull
-           git diff-index --quiet --name-only stash@{0} || git stash apply
+           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY           
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git add -A .
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
+           git pull
            git status
-           git pull origin main --rebase
-           git push origin main:main
+           git push origin main
         
     - name: Create Artifact
       uses: actions/upload-artifact@v2
