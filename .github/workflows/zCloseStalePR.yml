@@ -1,4 +1,4 @@
-name: "Close stale PRs"
+name: zCloseStalePR
 on:
   schedule:
     - cron: "30 1 * * *"
