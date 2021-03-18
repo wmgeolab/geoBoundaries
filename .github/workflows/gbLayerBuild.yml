@@ -1,1 +1,69 @@
-Init
+on:
+    workflow_dispatch:
+        inputs:
+            bType:
+                description: Boundary Type (Required)
+                required: true
+            ISO:
+                description: Boundary ISO (Required)
+                required: true
+            ADM:
+                description: Boundary ADM Level
+                required: true
+                
+name: gB Layer Build
+jobs:
+  gbBuild:
+    runs-on: ubuntu-latest
+    container: docker://geogdan/geoboundaries:A
+    steps:
+    - name: Download Repository Code
+      uses: actions/checkout@v2.3.2
+      with:
+        lfs: true
+        persist-credentials: false
+   
+    - name: Install File Check Scripts into Repository
+      run: |
+            git fetch
+            git clone https://github.com/wmgeolab/geoBoundaryBot
+   
+    - name: Checking Files
+      id: checks
+      run: |
+           echo "==============================================="
+           mkdir ~/tmp 
+           mkdir ~/artifacts
+           python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
+      env:
+           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+           
+    - name: Commit Files
+      env:
+            DRTOKEN: ${{secrets.DRTOKEN}}
+            REP: ${{env.GITHUB_REPOSITORY}}
+      run: |
+           git config --local user.email "danr@wm.edu"
+           git config --local user.name "DanRunfola"
+           git config --global http.postBuffer 500M
+           git config --global http.maxRequestBuffer 100M
+           git config --global core.compression 0
+           rm RESULT.txt
+           git fetch
+           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
+           
+           git diff-index --quiet HEAD || git stash
+           git pull
+           git diff-index --quiet --name-only stash@{0} || git stash apply
+           find * -type f -size +99M -exec git lfs track --filename '{}' +
+           git add -A .
+           git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
+           git status
+           git pull origin main --rebase
+           git push origin main:main
+        
+    - name: Create Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: results
+        path: ~/artifacts/
