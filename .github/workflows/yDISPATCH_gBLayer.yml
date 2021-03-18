@@ -54,12 +54,12 @@ jobs:
            git config --global http.maxRequestBuffer 100M
            git config --global core.compression 0
            rm RESULT.txt
+           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git fetch
-           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY           
-           git pull
+           git checkout .gitattributes
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git add -A .
-           git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
+           git diff-index --quiet HEAD || git commit -m "gB Nightly `date`"
            git pull
            git status
            git push origin main
