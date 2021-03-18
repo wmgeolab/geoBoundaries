@@ -2,7 +2,7 @@ on:
   push:
     paths:    
     - 'website/geoBoundaries/**'
-name: zzWEB gB
+name: zWEB gB
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
