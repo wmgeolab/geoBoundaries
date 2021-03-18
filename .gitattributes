@@ -48,3 +48,4 @@ releaseData/gbOpen/AUT/ADM4/geoBoundaries-AUT-ADM4.geojson filter=lfs diff=lfs m
 releaseData/gbOpen/AUS/ADM2/geoBoundaries-AUS-ADM2.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/AUS/ADM2/geoBoundaries-AUS-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/AUT/ADM3/geoBoundaries-AUT-ADM3.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbHumanitarian/BGD/ADM3/geoBoundaries-BGD-ADM3.geojson filter=lfs diff=lfs merge=lfs -text

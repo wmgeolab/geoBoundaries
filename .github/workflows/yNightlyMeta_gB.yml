@@ -1,0 +1,45 @@
+on:
+  workflow_dispatch
+  
+name: yNightlyMeta_gB
+jobs:
+  csvBuild:
+    runs-on: ubuntu-latest
+    container: docker://geogdan/geoboundaries:A
+    steps:        
+    - name: Download Repository Code
+      uses: actions/checkout@v2.3.2
+      with:
+        lfs: true
+        persist-credentials: false
+   
+    - name: Install CSV Build Script
+      run: |
+            git fetch
+            git clone https://github.com/wmgeolab/geoBoundaryBot
+   
+    - name: Build CSV
+      id: checks
+      run: |
+           echo "==============================================="
+           mkdir ~/tmp 
+           mkdir ~/artifacts
+           python geoBoundaryBot/gbBuildCSV.py
+      env:
+           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+           
+    - name: Commit Files
+      env:
+            DRTOKEN: ${{secrets.DRTOKEN}}
+            REP: ${{env.GITHUB_REPOSITORY}}
+      run: |
+           git config --local user.email "danr@wm.edu"
+           git config --local user.name "DanRunfola"
+           git fetch
+           git add -A .
+           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
+           git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
+           git pull --rebase -X theirs
+           git status
+           git push origin main 
+        
