@@ -22,7 +22,7 @@ jobs:
            echo $GITHUB_WORKSPACE
            cd $GITHUB_WORKSPACE
            cd ..
-           rm geoBoundaries
+           rm -r geoBoundaries
            GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://github.com/wmgeolab/geoBoundaries
            cd geoBoundaries
            git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
