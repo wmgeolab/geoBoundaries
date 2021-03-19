@@ -24,11 +24,7 @@ jobs:
            GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/wmgeolab/geoBoundaries
            cd geoBoundaries
            git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
-   
-    - name: Install File Check Scripts into Repository
-      run: |
-            git fetch
-            git clone https://github.com/wmgeolab/geoBoundaryBot
+           git clone https://github.com/wmgeolab/geoBoundaryBot
    
     - name: Checking Files
       id: checks
@@ -57,7 +53,6 @@ jobs:
            git config --global core.compression 0
            rm RESULT.txt
            git status
-           git fetch
            git checkout .gitattributes
            git status
            find * -type f -size +99M -exec git lfs track --filename '{}' +
