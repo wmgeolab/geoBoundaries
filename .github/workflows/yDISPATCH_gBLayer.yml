@@ -17,14 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://geogdan/geoboundaries:A
     steps:
-    - name: Download Repository Code
-      uses: actions/checkout@v2.3.2
-      with:
-        lfs: false
-        persist-credentials: false
-        
-    - name: Git LFS Pull Relevant File
+    - name: Git Clone
       run: |
+           git clone https://github.com/wmgeolab/geoBoundaries
            git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
    
     - name: Install File Check Scripts into Repository
