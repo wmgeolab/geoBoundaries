@@ -53,7 +53,6 @@ jobs:
            git config --global http.postBuffer 500M
            git config --global http.maxRequestBuffer 100M
            git config --global core.compression 0
-           rm RESULT.txt
            git status
            git checkout .gitattributes
            git status
