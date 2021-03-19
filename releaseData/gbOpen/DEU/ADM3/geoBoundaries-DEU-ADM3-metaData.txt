@@ -1,0 +1,14 @@
+boundaryID : DEU-ADM3-59448661
+boundaryISO : DEU
+boundaryType : ADM3
+boundaryYear : 2017
+boundarySource-1 : GeoBasis-DE
+boundarySource-2 : Statistical offices of the federation and the lander
+boundaryCanonical : Districts
+boundaryLicense : Data license Germany - Attribution - Version 2.0
+licenseDetail : 
+licenseSource : https//www.govdata.de/dl-de/by-2-0
+boundarySourceURL : https//gdz.bkg.bund.de/index.php/default/digitale-geodaten/verwaltungsgebiete/verwaltungsgebiete-1-250-000-ebenen-stand-01-01-vg250-ebenen-01-01.html
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/DEU_ADM3.zip
+sourceDataUpdateDate : Nov 02, 2020
+buildUpdateDate : Mar 19, 2021
