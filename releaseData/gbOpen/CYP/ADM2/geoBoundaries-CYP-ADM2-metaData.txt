@@ -1,0 +1,14 @@
+boundaryID : CYP-ADM2-72923802
+boundaryISO : CYP
+boundaryType : ADM2
+boundaryYear : 2009.0
+boundarySource-1 : Wikipedia
+boundarySource-2 : Cyprus Department of Land Registry and Geometry
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
+licenseDetail : nan
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CYP_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Mar 19, 2021
