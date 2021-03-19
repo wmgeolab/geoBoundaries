@@ -19,7 +19,10 @@ jobs:
     steps:
     - name: Git Clone
       run: |
-           git clone https://github.com/wmgeolab/geoBoundaries
+           echo $GITHUB_WORKSPACE
+           cd $GITHUB_WORKSPACE
+           GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/wmgeolab/geoBoundaries
+           cd geoBoundaries
            git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
    
     - name: Install File Check Scripts into Repository
