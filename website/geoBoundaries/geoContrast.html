@@ -193,13 +193,25 @@ ul li{
 										<li class='tab'><a href="#BYOB">Build Your Own</a></li>
 									</ul>
 
-									<div id="compare" class="box">
+									<div id="compare" class="box" style="font-size:14pt;">
 										Compare this geoBoundary:
-										<select><option>Test</option><option>Test2</option></select>
+										<div style="display:block;">
+											<select style="width:55%;display:inline;font-size:10pt;">
+												<option>Afghanistan</option><option>Test2</option>
+											</select>
+											<select style="width:40%;display:inline;font-size:10pt;">
+												<option>ADM0</option><option>ADM1</option>
+											</select>
+										</div>
+										<select style="width:95%;display:inline;font-size:10pt;">
+											<option value="gbOpen">Open (Fully Open Licenses)</option>
+											<option value="gbHumanitarian" selected>Humanitarian (Most Up-To-Date)</option>
+											<option value="gbAuthoritative">Authoritative (UN Recognized)</option>
+										</select><br />
 										To: <br />
 										<div>
 										<span class="fas fa-file" style="padding:8px;"></span>Your Own Boundary <span 
-										data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects a projection of WGS84 (EPSG 4326)." 
+										data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." 
 										class="tooltip">(?)</span></div>
 										
 
