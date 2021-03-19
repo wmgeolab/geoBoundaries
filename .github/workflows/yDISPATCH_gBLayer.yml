@@ -21,18 +21,20 @@ jobs:
       run: |
            echo $GITHUB_WORKSPACE
            cd $GITHUB_WORKSPACE
+           cd ..
+           rm geoBoundaries
            GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://github.com/wmgeolab/geoBoundaries
            cd geoBoundaries
            git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
            git clone https://github.com/wmgeolab/geoBoundaryBot
-   
+           ls -l
     - name: Checking Files
       id: checks
       run: |
            echo "==============================================="
            mkdir ~/tmp 
            mkdir ~/artifacts
-           python geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
+           python $GITHUB_WORKSPACE/geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
