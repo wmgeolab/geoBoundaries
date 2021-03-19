@@ -1,0 +1,14 @@
+boundaryID : BRN-ADM2-24891596
+boundaryISO : BRN
+boundaryType : ADM2
+boundaryYear : 2006.0
+boundarySource-1 : IFAD
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : nan
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BRN_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Mar 19, 2021
