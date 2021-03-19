@@ -23,6 +23,7 @@ jobs:
            cd $GITHUB_WORKSPACE
            cd ..
            rm -r geoBoundaries
+           git config --global pack.window "0"
            GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 --single-branch --branch main --filter=blob:none https://github.com/wmgeolab/geoBoundaries
            cd geoBoundaries
            git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
