@@ -48,14 +48,20 @@ jobs:
             DRTOKEN: ${{secrets.DRTOKEN}}
             REP: ${{env.GITHUB_REPOSITORY}}
       run: |
+           cd $GITHUB_WORKSPACE
+           ls
+           git status
+           echo "=============="
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git config --global http.postBuffer 500M
            git config --global http.maxRequestBuffer 100M
            git config --global core.compression 0
            git status
+           echo "================="
            git checkout .gitattributes
            git status
+           echo "-----------------------"
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git status
            git add -A .
