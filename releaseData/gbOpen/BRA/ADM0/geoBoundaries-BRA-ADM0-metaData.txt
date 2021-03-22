@@ -1,0 +1,14 @@
+boundaryID : BRA-ADM0-88855331
+boundaryISO : BRA
+boundaryType : ADM0
+boundaryYear : 2020
+boundarySource-1 : Instituto Brasileiro de Geografia e Estatística (IBGE)
+boundarySource-2 : 
+boundaryCanonical : Brasil
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/brazil-administrative-level-0-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/brazil-administrative-level-0-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BRA_ADM0.zip
+sourceDataUpdateDate : Mar 01, 2021
+buildUpdateDate : Mar 22, 2021
