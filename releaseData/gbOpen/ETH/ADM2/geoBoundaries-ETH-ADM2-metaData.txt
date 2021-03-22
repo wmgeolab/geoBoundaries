@@ -1,0 +1,14 @@
+boundaryID : ETH-ADM2-57463737
+boundaryISO : ETH
+boundaryType : ADM2
+boundaryYear : 2016.0
+boundarySource-1 : Open Africa
+boundarySource-2 : Code for Ethiopia
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : http//opendefinition.org/licenses/cc-by/
+licenseSource : https//africaopendata.org/dataset/ethiopia-shapefiles
+boundarySourceURL : https//africaopendata.org/dataset/ethiopia-shapefiles
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ETH_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Mar 22, 2021
