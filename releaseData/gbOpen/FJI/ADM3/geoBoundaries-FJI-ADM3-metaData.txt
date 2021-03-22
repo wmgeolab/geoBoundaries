@@ -1,0 +1,14 @@
+boundaryID : FJI-ADM3-44075104
+boundaryISO : FJI
+boundaryType : ADM3
+boundaryYear : 2014.0
+boundarySource-1 : POPGIS
+boundarySource-2 : 
+boundaryCanonical : Provinces
+boundaryLicense : Other - Direct Permission
+licenseDetail : Granted to redistribute in email
+licenseSource : https//twitter.com/WMgeoLab/status/1195463723642585088/photo/1
+boundarySourceURL : http//prism.spc.int/regional-data-and-tools/popgis2
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FJI_ADM3.zip
+sourceDataUpdateDate : Nov 03, 2020
+buildUpdateDate : Mar 22, 2021
