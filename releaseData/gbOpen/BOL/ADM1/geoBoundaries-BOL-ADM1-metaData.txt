@@ -1,0 +1,14 @@
+boundaryID : BOL-ADM1-26024454
+boundaryISO : BOL
+boundaryType : ADM1
+boundaryYear : 2015.0
+boundarySource-1 : GeoBolivia
+boundarySource-2 : Derived from ADM3 layer
+boundaryCanonical : 
+boundaryLicense : Public Domain
+licenseDetail : Public Domain; "free use and access to information"
+licenseSource : https//geo.gob.bo/geonetwork/srv/spa/catalog.search#/metadata/aeeb85a9-23df-48d4-a4e5-dd19e8b206db
+boundarySourceURL : https//geo.gob.bo/geonetwork/srv/spa/catalog.search#/metadata/aeeb85a9-23df-48d4-a4e5-dd19e8b206db
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BOL_ADM1.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Mar 26, 2021

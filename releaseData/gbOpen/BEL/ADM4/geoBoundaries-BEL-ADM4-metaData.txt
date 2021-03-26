@@ -1,0 +1,14 @@
+boundaryID : BEL-ADM4-65624883
+boundaryISO : BEL
+boundaryType : ADM4
+boundaryYear : 2018.0
+boundarySource-1 : Namur Capitale
+boundarySource-2 : Statistics Belgium
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseSource : https//data.namur.be/pages/licence/
+boundarySourceURL : https//data.namur.be/explore/dataset/communes-belges/information/?location=8,50.5124,4.4752&basemap=jawg.streets
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BEL_ADM4.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Mar 26, 2021
