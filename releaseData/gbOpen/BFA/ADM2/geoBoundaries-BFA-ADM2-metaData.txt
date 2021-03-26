@@ -1,0 +1,14 @@
+boundaryID : BFA-ADM2-67063806
+boundaryISO : BFA
+boundaryType : ADM2
+boundaryYear : 2017
+boundarySource-1 : World Bank
+boundarySource-2 : 
+boundaryCanonical : Province
+boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
+boundarySourceURL : https//datacatalog.worldbank.org/dataset/burkina-faso-administrative-boundaries-2017
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BFA_ADM2.zip
+sourceDataUpdateDate : Nov 02, 2020
+buildUpdateDate : Mar 26, 2021
