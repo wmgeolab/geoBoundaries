@@ -11,4 +11,4 @@ licenseSource : https//commons.wikimedia.org/wiki/File
 boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ATG_ADM1.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 17, 2021
+buildUpdateDate : Mar 26, 2021
