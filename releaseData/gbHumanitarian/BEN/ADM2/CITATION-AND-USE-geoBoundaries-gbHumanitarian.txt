@@ -5,10 +5,14 @@ www.geoboundaries.org
 geolab.wm.edu 
 The geoBoundaries database is made available in a 
 variety of software formats to support GIS software programs.
-This file is a part of the geoBoundaries Open Database 
-(gbOpen).  All boundaries in this database are open and 
+This file is a part of a geoBoundaries Mixed Database. 
+All boundaries in this database are 
 redistributable, and are released alongside extensive metadata 
 and licence information to help inform end users. 
+Unlike data provided in the geoBoundaries Open Database, 
+information in this database may have restrictions on (for example) 
+commercial use.  Users should carefully read each license to ensure they are 
+not violating the terms of an individual layer for any non-private uses. 
 We update geoBoundaries on a yearly cycle, 
 with new versions in or around August of each calendar 
 year; old versions remain accessible at www.geoboundaries.org. 

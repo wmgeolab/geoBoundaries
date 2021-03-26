@@ -1,0 +1,14 @@
+boundaryID : BEN-ADM2-48965219
+boundaryISO : BEN
+boundaryType : ADM2
+boundaryYear : 2015
+boundarySource-1 : Secondary Administrative Level Boundary (SALB) Project
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs Regional Office for West and Central Africa (ROWCA)
+boundaryCanonical : Communes
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only - Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/benin-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/benin-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/BEN_ADM2.zip
+sourceDataUpdateDate : Nov 16, 2020
+buildUpdateDate : Mar 26, 2021
