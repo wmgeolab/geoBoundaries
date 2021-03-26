@@ -1,0 +1,14 @@
+boundaryID : COG-ADM0-69207274
+boundaryISO : COG
+boundaryType : ADM0
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/COG_ADM0.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Mar 26, 2021
