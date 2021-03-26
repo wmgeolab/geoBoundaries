@@ -1,0 +1,14 @@
+boundaryID : BDI-ADM3-37066493
+boundaryISO : BDI
+boundaryType : ADM3
+boundaryYear : 2015
+boundarySource-1 : Regional Centre For Mapping Of Resources For Development (RCMRD)
+boundarySource-2 : 
+boundaryCanonical : Collines
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : http//geoportal.rcmrd.org/layers/servir%3Aburundi_admin4#more
+boundarySourceURL : http//geoportal.rcmrd.org/layers/servir%3Aburundi_admin4#more
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BDI_ADM3.zip
+sourceDataUpdateDate : Mar 01, 2021
+buildUpdateDate : Mar 26, 2021
