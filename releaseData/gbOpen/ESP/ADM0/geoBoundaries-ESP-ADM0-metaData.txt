@@ -1,0 +1,14 @@
+boundaryID : ESP-ADM0-43220588
+boundaryISO : ESP
+boundaryType : ADM0
+boundaryYear : 2017.0
+boundarySource-1 : Instituto de Geografico Nacional
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : CC-BY 4.0
+licenseSource : http//centrodedescargas.cnig.es/CentroDescargas/index.jsp#
+boundarySourceURL : http//centrodedescargas.cnig.es/CentroDescargas/index.jsp
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ESP_ADM0.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Mar 19, 2021
