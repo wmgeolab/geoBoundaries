@@ -4,17 +4,17 @@ Metadata for: TODAHEALTH
 Full Variable Name: Total net official development assistance to medical research and basic health sectors
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Total net official development assistance to medical research and basic health sectors
+Units: N/A
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=b19d5757ac8f430ab07c0dfa0472fd04
 Source 1: Creditor Reporting System (CRS) database, 2018, The Organisation for Economic Co-operation and Development (OECD)
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: N/A
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
 Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-3-b-2-total-official-development-assistance-to-medical-research-and-basic-heath-sectors-net-disbursement-by-recipient-countries-millions-of-constant-2016-united-states-dollars
-Tag(s): nan
+Tag(s): Health
 Other Notes: 
