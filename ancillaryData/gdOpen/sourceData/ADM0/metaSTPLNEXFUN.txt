@@ -4,17 +4,17 @@ Metadata for: STPLNEXFUN
 Full Variable Name: Countries with national statistics plans with funding from others
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Countries with national statistics plans with funding from others
+Units: 1=YES,0=NO
 Data Representative Of Year(s): 2018-2018
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=91fdf06efab14b55924c5b41331f6b20
 Source 1: PARIS21
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-17-18-3-countries-with-national-statistical-plans-with-funding-from-others-1-yes-0-no
-Tag(s): nan
-Other Notes: 
+Source 2: N/A
+License: N/A
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-17-18-3-countries-with-national-statistical-plans-that-are-fully-funded-1-yes-0-no-5?geometry=96.956%2C-39.570%2C-101.677%2C62.146
+Tag(s): Sustainability
+Other Notes: N/A
