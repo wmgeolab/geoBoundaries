@@ -4,17 +4,17 @@ Metadata for: PREMALNUTR
 Full Variable Name: Prevalence of malnutrition
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Prevalence of malnutrition
+Units: Percent of children ages 0 to 5 years with wasting (very low weight-for-length/height) in the US
 Data Representative Of Year(s): 2000-2000
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.XGs0BzNKiUl
 Source 1: FAO
 Source 2: 
-License: 
-License Source: 
+License: no licensed specified
+License Source: N/A
 Link to Source Data: http://www.fao.org/economic/ess/ess-fs/ess-fadata/en/#.XGs0BzNKiUl
 Tag(s): Health
-Other Notes: 
+Other Notes: N/A
