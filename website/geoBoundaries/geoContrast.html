@@ -178,13 +178,13 @@ ul li{
 					</header>
 
 					<div class="row gtr-200">
-						<div class="col-9 col-12-medium">
+						<div class="col-7 col-12-medium">
 							<div id="fullscreen" class="fullscreen">
 								<div id="map" class="map"></div>
 								</div>
 
 						</div>
-						<div class="col-3 col-12-medium" style="padding:0; ">
+						<div class="col-5 col-12-medium" style="padding:0; ">
 							<div id="toolbox" class="toolbox">
 								
 								<div id="tab-container" class="tab-container">
@@ -196,16 +196,23 @@ ul li{
 									<div id="compare" class="box" style="font-size:14pt;">
 										Compare this geoBoundary:
 										<div style="display:block;">
-											<select style="width:55%;display:inline;font-size:10pt;">
-												<option>Afghanistan</option><option>Test2</option>
+											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
+												<option value="ARM">Armenia</option>
+												<option value="AFG">Afghanistan</option>
+												<option value="ARG">Argentina</option>
+												<option value="BEN">Benin</option>
+												<option value="BRA">Brazil</option>
+												<option value="BFA">Burkina Faso</option>
 											</select>
-											<select style="width:40%;display:inline;font-size:10pt;">
-												<option>ADM0</option><option>ADM1</option>
+											<select id="admin-level-select" style="width:40%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
+												<option value="ADM0">ADM0</option>
+												<option value="ADM1">ADM1</option>
+												<option value="ADM2">ADM2</option>
 											</select>
 										</div>
-										<select style="width:95%;display:inline;font-size:10pt;">
-											<option value="gbOpen">Open (Fully Open Licenses)</option>
-											<option value="gbHumanitarian" selected>Humanitarian (Most Up-To-Date)</option>
+										<select id="license-select" style="width:95%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
+											<option value="gbOpen" selected>Open (Fully Open Licenses)</option>
+											<option value="gbHumanitarian">Humanitarian (Most Up-To-Date)</option>
 											<option value="gbAuthoritative">Authoritative (UN Recognized)</option>
 										</select><br />
 										To: <br />
@@ -333,18 +340,41 @@ ul li{
 			width: 1,
 		}),
 		});
+		
+		function updateGbLayer() {
+			// get user-selected params
+			iso3 = document.getElementById('country-select').value;
+			level = document.getElementById('admin-level-select').value;
+			license = document.getElementById('license-select').value;
+			// construct data url from params
+			url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/'+license+'/'+iso3+'/'+level+'/geoBoundaries-'+iso3+'-'+level+'.topojson';
+			//alert(url);
+			// get the source
+			source = new ol.source.Vector({
+				url: url,
+				format: new ol.format.TopoJSON({}),
+				overlaps: false,
+			});
+			gbLayer.setSource(source);
+			// zoom to new source after source has finished loading
+			source.on('change', function() {
+				//alert('new bbox: '+source.getExtent());
+				// zoom to extent
+				map.getView().fit(source.getExtent());
+				// zoom out a little
+				map.getView().setZoom(map.getView().getZoom()-1);
+			});
+			// notify if failed to load source
+			source.on(['error','featuresloaderror'], function() {
+				alert('Failed to load source, please choose another source.');
+			});
+		};
 	
-		var vector = new ol.layer.Vector({
-		source: new ol.source.Vector({
-			url: 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/AUS/ADM0/geoBoundaries-AUS-ADM0.topojson',
-			//url: 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/AGO/ADM0/geoBoundaries-AGO-ADM0.topojson',
-			format: new ol.format.TopoJSON({}),
-			overlaps: false,
-		}),
-		style: style,
+		var gbLayer = new ol.layer.Vector({
+			style: style,
 		});
 	
-		  var map = new ol.Map({
+		var map = new ol.Map({
 			target: 'map',
 			controls: ol.control.defaults().extend([new ol.control.FullScreen()]),
 			layers: [
@@ -355,13 +385,16 @@ ul li{
 					'https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=' + 'aknzJQRnZg32XVVPrcYH',
 					maxZoom: 20,
 				})}),
-			  vector
+			  gbLayer
 			],
 			view: new ol.View({
 			  center: ol.proj.fromLonLat([37.41, 8.82]),
 			  zoom: 4
 			})
-		  });
+		});
+		
+		updateGbLayer();
+		
 		</script>
 </body>
 
