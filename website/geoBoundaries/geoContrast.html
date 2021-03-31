@@ -114,6 +114,29 @@ ul li{
 }
 
 
+
+#uploaded-file-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#uploaded-file-table td, #uploaded-file-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#uploaded-file-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#uploaded-file-table tr:hover {background-color: #ddd;}
+
+#uploaded-file-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(240, 179, 35);
+  color: white;
+}
+
 	</style>
 	
 	<!-- Scripts -->
@@ -196,7 +219,7 @@ ul li{
 									<div id="compare" class="box" style="font-size:14pt;">
 										Compare this geoBoundary:
 										<div style="display:block;">
-											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
+											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="updateGbLayer(zoomToExtent=true)">
 												<option value="ARM">Armenia</option>
 												<option value="AFG">Afghanistan</option>
 												<option value="ARG">Argentina</option>
@@ -217,9 +240,16 @@ ul li{
 										</select><br />
 										To: <br />
 										<div>
-										<span class="fas fa-file" style="padding:8px;"></span>Your Own Boundary <span 
-										data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." 
-										class="tooltip">(?)</span></div>
+											<span class="fas fa-file" style="padding:8px;"></span>Your Own Boundary <span 
+											data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." 
+											class="tooltip">(?)</span>
+											
+											<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles//-->
+											<input type="file" id="file-input" accept=".geojson">
+											<output id="file-output" style="overflow:scroll">
+											</output>
+											
+										</div>
 										
 
 										
@@ -330,18 +360,142 @@ ul li{
 	</script>
 	<script src="assets/js/ol.js"></script>
 	<script type="text/javascript">
+	
+		<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles/ -->
+		<!--https://web.dev/read-files/ -->
+		<!--https://gis.stackexchange.com/questions/138155/allow-client-to-upload-layers-to-openlayers-3 -->
+		<!--https://gis.stackexchange.com/questions/368033/how-to-display-shapefiles-on-an-openlayers-web-mapping-application-that-are-prov
+		-->
+		function handleFileSelect(evt) {
+			var files = evt.target.files; 
+			
+			// get file contents as a base64 encoded url string
+			file = files[0];
+			fileExtension = file.name.split('.').pop();
+			//alert('local file selected: '+file.name+' - '+fileExtension);
+			
+			if (fileExtension == 'geojson' | fileExtension == 'json') {
+				reader = new FileReader();
+				reader.onload = function(e) {
+					// use reader results to create new source
+					var dataURL = reader.result;
+					source = new ol.source.Vector({
+						url: dataURL,
+						format: new ol.format.GeoJSON({}),
+						overlaps: false,
+					});
+					// update the uploadLayer
+					updateUploadFileLayerFromGeoJSON(source, zoomToExtent=true);
+					// and also populate a table
+					source.on('change', function() {
+						//////////////
+						// info div
+						// remove old div if exists
+						var div = document.getElementById('uploaded-file-info');
+						if (div) {
+							div.remove();
+						};
+						// create info div
+						var div = document.createElement("div");
+						div.id = 'uploaded-file-info';
+						document.getElementById('file-output').appendChild(div);
+						// create basic file info
+						var features = source.getFeatures();
+						var info = document.createElement("div");
+						info.innerHTML = '<br>'
+						info.innerHTML += '<b>File Size: </b>'+Math.round(file.size/1000000.0, 3)+' MB<br>';
+						info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
+						info.innerHTML += '<b>Columns: </b>'+(features[0].getKeys().length-1)+'<br>';
+						info.innerHTML += '<br>';
+						div.appendChild(info);
+						////////////////////
+						// table div
+						// remove old div if exists
+						var div = document.getElementById('uploaded-file-preview');
+						if (div) {
+							div.remove();
+						};
+						// create table div
+						var div = document.createElement("div");
+						div.id = 'uploaded-file-preview';
+						div.style = 'overflow:scroll; margin-top:10px';
+						document.getElementById('fullscreen').appendChild(div);
+						// create table
+						var tableTitle = document.createElement("h3");
+						tableTitle.textContent = 'Uploaded File:';
+						div.appendChild(tableTitle);
+						var table = document.createElement("table");
+						table.id = 'uploaded-file-table';
+						table.style = 'margin-left:10px';
+						div.appendChild(table);
+						// first headers
+						for (feature of features) {
+							var row = document.createElement("tr");
+							// empty header for feature number
+							var cell = document.createElement("th");
+							cell.style = 'width:20px';
+							row.appendChild(cell);
+							// field headers
+							var props = feature.getProperties();
+							for (key in props) {
+								if (key == 'geometry') {continue};
+								var cell = document.createElement("th");
+								cell.innerHTML = key;
+								row.appendChild(cell);
+							};
+							table.appendChild(row);
+							break;
+						};
+						// then rows
+						i = 1;
+						for (feature of features) {
+							var row = document.createElement("tr");
+							// feature number
+							var cell = document.createElement("td");
+							cell.style = 'width:20px';
+							cell.innerHTML = i;
+							row.appendChild(cell);
+							i++;
+							// feature properties
+							var props = feature.getProperties();
+							for (key in props) {
+								if (key == 'geometry') {continue};
+								var cell = document.createElement("td");
+								var val = props[key];
+								cell.innerHTML = val;
+								row.appendChild(cell);
+							};
+							table.appendChild(row);
+						};
+					});
+				};
+				// read as data url
+				reader.readAsDataURL(file);
+			};
+		};
 
-		var style = new ol.style.Style({
-		fill: new ol.style.Fill({
-			color: 'rgba(255, 255, 255, 0.6)',
-		}),
-		stroke: new ol.style.Stroke({
-			color: '#319FD3',
-			width: 1,
-		}),
-		});
+		document.getElementById('file-input').addEventListener('change', handleFileSelect, false);
 		
-		function updateGbLayer() {
+		function updateUploadFileLayerFromGeoJSON(source, zoomToExtent=false) {
+			// set the new source
+			uploadLayer.setSource(source);
+			// zoom to new source after source has finished loading
+			if (zoomToExtent) {
+				source.on('change', function() {
+					//alert('new bbox: '+source.getExtent());
+					// zoom to extent
+					map.getView().fit(source.getExtent());
+					// zoom out a little
+					map.getView().setZoom(map.getView().getZoom()-1);
+				});
+			};
+			// notify if failed to load source
+			source.on(['error','featuresloaderror'], function() {
+				alert('Failed to load source, please choose another source.');
+			});
+		};
+		
+		function updateGbLayer(zoomToExtent=false) {
 			// get user-selected params
 			iso3 = document.getElementById('country-select').value;
 			level = document.getElementById('admin-level-select').value;
@@ -357,21 +511,45 @@ ul li{
 			});
 			gbLayer.setSource(source);
 			// zoom to new source after source has finished loading
-			source.on('change', function() {
-				//alert('new bbox: '+source.getExtent());
-				// zoom to extent
-				map.getView().fit(source.getExtent());
-				// zoom out a little
-				map.getView().setZoom(map.getView().getZoom()-1);
-			});
+			if (zoomToExtent) {
+				source.on('change', function() {
+					//alert('new bbox: '+source.getExtent());
+					// zoom to extent
+					map.getView().fit(source.getExtent());
+					// zoom out a little
+					map.getView().setZoom(map.getView().getZoom()-1);
+				});
+			};
 			// notify if failed to load source
 			source.on(['error','featuresloaderror'], function() {
 				alert('Failed to load source, please choose another source.');
 			});
 		};
 	
+		var gbStyle = new ol.style.Style({
+			fill: new ol.style.Fill({
+				color: 'rgba(255, 255, 255, 0.6)',
+			}),
+			stroke: new ol.style.Stroke({
+				color: '#319FD3',
+				width: 1,
+			}),
+		});
 		var gbLayer = new ol.layer.Vector({
-			style: style,
+			style: gbStyle,
+		});
+		
+		var uploadStyle = new ol.style.Style({
+			fill: new ol.style.Fill({
+				color: 'rgba(255, 0, 0, 0.6)',
+			}),
+			stroke: new ol.style.Stroke({
+				color: 'rgb(255, 0, 0)',
+				width: 1,
+			}),
+		});
+		var uploadLayer = new ol.layer.Vector({
+			style: uploadStyle,
 		});
 	
 		var map = new ol.Map({
@@ -385,7 +563,8 @@ ul li{
 					'https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=' + 'aknzJQRnZg32XVVPrcYH',
 					maxZoom: 20,
 				})}),
-			  gbLayer
+			  gbLayer,
+			  uploadLayer
 			],
 			view: new ol.View({
 			  center: ol.proj.fromLonLat([37.41, 8.82]),
@@ -393,7 +572,7 @@ ul li{
 			})
 		});
 		
-		updateGbLayer();
+		updateGbLayer(zoomToExtent=true);
 		
 		</script>
 </body>
