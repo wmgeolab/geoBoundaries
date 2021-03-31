@@ -121,6 +121,8 @@ ul li{
 }
 
 #uploaded-file-table td, #uploaded-file-table th {
+  max-width: 150px;
+  word-wrap: break-word;
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -217,7 +219,10 @@ ul li{
 									</ul>
 
 									<div id="compare" class="box" style="font-size:14pt;">
+										<hr style="border-color:#319FD3; background-color:#319FD3; margin:3px; height:3px">
+									
 										Compare this geoBoundary:
+										
 										<div style="display:block;">
 											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="updateGbLayer(zoomToExtent=true)">
 												<option value="ARM">Armenia</option>
@@ -237,16 +242,25 @@ ul li{
 											<option value="gbOpen" selected>Open (Fully Open Licenses)</option>
 											<option value="gbHumanitarian">Humanitarian (Most Up-To-Date)</option>
 											<option value="gbAuthoritative">Authoritative (UN Recognized)</option>
-										</select><br />
-										To: <br />
+										</select>
+										<br>
+										<br>
 										<div>
-											<span class="fas fa-file" style="padding:8px;"></span>Your Own Boundary <span 
+											<hr style="border-color:rgb(255,0,0); background-color:rgb(255,0,0); margin:3px; height:3px">
+										
+											<span>
+											To Your Own Boundary <span 
 											data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." 
-											class="tooltip">(?)</span>
+											class="tooltip">(?)</span>:
+											</span>
 											
 											<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles//-->
-											<input type="file" id="file-input" accept=".geojson">
-											<output id="file-output" style="overflow:scroll">
+											
+											<span class="fas fa-file" style="padding:0px 3px important!">
+											<input class="fas" type="file" id="file-input" accept=".geojson">
+											</span>
+											
+											<output id="file-output">
 											</output>
 											
 										</div>
@@ -389,6 +403,14 @@ ul li{
 					// and also populate a table
 					source.on('change', function() {
 						//////////////
+						// first make sure the source contains polygon types
+						var features = source.getFeatures();
+						var geotype = features[0].getGeometry().getType();
+						if (!(['Polygon','MultiPolygon'].includes( geotype ))) {
+							alert('File must contain Polygon or MultiPolygon types, not "'+geotype+'" type');
+							return // exit early
+						};
+						//////////////
 						// info div
 						// remove old div if exists
 						var div = document.getElementById('uploaded-file-info');
@@ -400,13 +422,12 @@ ul li{
 						div.id = 'uploaded-file-info';
 						document.getElementById('file-output').appendChild(div);
 						// create basic file info
-						var features = source.getFeatures();
 						var info = document.createElement("div");
-						info.innerHTML = '<br>'
-						info.innerHTML += '<b>File Size: </b>'+Math.round(file.size/1000000.0, 3)+' MB<br>';
+						info.style = "margin-left:20px; margin-top:15px";
+						info.innerHTML = ''
+						info.innerHTML += '<b>File Size: </b>'+(file.size/1000000.0).toFixed(1)+' MB<br>';
 						info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
-						info.innerHTML += '<b>Columns: </b>'+(features[0].getKeys().length-1)+'<br>';
-						info.innerHTML += '<br>';
+						info.innerHTML += '<b>Columns: </b>'+(features[0].getKeys().length - 1);
 						div.appendChild(info);
 						////////////////////
 						// table div
@@ -418,7 +439,7 @@ ul li{
 						// create table div
 						var div = document.createElement("div");
 						div.id = 'uploaded-file-preview';
-						div.style = 'overflow:scroll; margin-top:10px';
+						div.style = 'overflow:scroll; margin-top:10px; max-height:500px;';
 						document.getElementById('fullscreen').appendChild(div);
 						// create table
 						var tableTitle = document.createElement("h3");
@@ -483,8 +504,12 @@ ul li{
 			if (zoomToExtent) {
 				source.on('change', function() {
 					//alert('new bbox: '+source.getExtent());
+					// get combined extent of gb and uploaded file
+					extent = ol.extent.createEmpty();
+					ol.extent.extend(extent, source.getExtent());
+					ol.extent.extend(extent, gbLayer.getSource().getExtent());
 					// zoom to extent
-					map.getView().fit(source.getExtent());
+					map.getView().fit(extent);
 					// zoom out a little
 					map.getView().setZoom(map.getView().getZoom()-1);
 				});
@@ -541,7 +566,7 @@ ul li{
 		
 		var uploadStyle = new ol.style.Style({
 			fill: new ol.style.Fill({
-				color: 'rgba(255, 0, 0, 0.6)',
+				color: 'rgba(255, 255, 255, 0.6)',
 			}),
 			stroke: new ol.style.Stroke({
 				color: 'rgb(255, 0, 0)',
