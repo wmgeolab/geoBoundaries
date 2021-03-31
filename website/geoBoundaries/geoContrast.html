@@ -225,12 +225,7 @@ ul li{
 										
 										<div style="display:block;">
 											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="updateGbLayer(zoomToExtent=true)">
-												<option value="ARM">Armenia</option>
-												<option value="AFG">Afghanistan</option>
-												<option value="ARG">Argentina</option>
-												<option value="BEN">Benin</option>
-												<option value="BRA">Brazil</option>
-												<option value="BFA">Burkina Faso</option>
+												<!--options should get dynamically populated here-->
 											</select>
 											<select id="admin-level-select" style="width:40%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
 												<option value="ADM0">ADM0</option>
@@ -239,9 +234,9 @@ ul li{
 											</select>
 										</div>
 										<select id="license-select" style="width:95%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
-											<option value="gbOpen" selected>Open (Fully Open Licenses)</option>
-											<option value="gbHumanitarian">Humanitarian (Most Up-To-Date)</option>
-											<option value="gbAuthoritative">Authoritative (UN Recognized)</option>
+											<option value="Open" selected>Open (Fully Open Licenses)</option>
+											<option value="Humanitarian">Humanitarian (Most Up-To-Date)</option>
+											<option value="Authoritative">Authoritative (UN Recognized)</option>
 										</select>
 										<br>
 										<br>
@@ -368,6 +363,7 @@ ul li{
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/jquery.easytabs.js" type="text/javascript"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/papaparse.min.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () { $('#tab-container').easytabs({animate:false}); });
@@ -424,7 +420,7 @@ ul li{
 						// create basic file info
 						var info = document.createElement("div");
 						info.style = "margin-left:20px; margin-top:15px";
-						info.innerHTML = ''
+						info.innerHTML = '';
 						info.innerHTML += '<b>File Size: </b>'+(file.size/1000000.0).toFixed(1)+' MB<br>';
 						info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
 						info.innerHTML += '<b>Columns: </b>'+(features[0].getKeys().length - 1);
@@ -497,6 +493,91 @@ ul li{
 
 		document.getElementById('file-input').addEventListener('change', handleFileSelect, false);
 		
+		// gb metadata stuff
+		
+		var gbMetadata = {};
+		
+		function updateGbCountryDropdown() {
+			// NOTE: requires that gbMetadata has already been populated
+			// get country dropdown
+			var select = document.getElementById('country-select')
+			// clear all existing dropdown options
+			select.innerHTML = '';
+			// get gb metadata
+			var license = document.getElementById('license-select').value;
+			var metadata = gbMetadata[license];
+			// get list of unique countries
+			var countriesSeen = [];
+			var countries = [];
+			for (var i = 1; i < metadata.length; i++) {
+				var row = metadata[i];
+				if (row.length <= 1) {
+					// ignore empty rows
+					i++;
+					continue;
+				};
+				var name = row[1];
+				var iso = row[2];
+				var country = {'name':name, 'iso':iso};
+				if (!(countriesSeen.includes(country.iso))) {
+					// only add if hasn't already been added
+					countries.push(country);
+					countriesSeen.push(country.iso);
+				};
+			};
+			// sort
+			countries.sort(function( a,b ){ if (a.name > b.name) {return 1} else {return -1} })
+			// add new options from gbMetadata
+			for (country of countries) {
+				var opt = document.createElement("option");
+				opt.value = country.iso;
+				opt.textContent = country.name;
+				select.appendChild(opt);
+			};
+		};
+		
+		function updateGbCountries(event=null, license=null) {
+			// determine license dynamically from the dropdown if not specified
+			if (license == null) {
+				license = document.getElementById('license-select').value;
+			};
+			// fetch metadata from the specified license if doesn't already in gbMetadata
+			if (!(license in gbMetadata)) {
+				// determine url of metadata csv
+				if (license == 'Authoritative') {
+					// temporary correction for metadata file misspelling Author"a"tative
+					url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/geoBoundariesAuthoratative-meta.csv';
+				} else {
+					// normal
+					url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/geoBoundaries'+license+'-meta.csv';
+				};
+				// define error and success
+				function error (err, file, inputElem, reason) {
+					alert('geoBoundaries metadata csv failed to load: '+url);
+				};
+				function success (result) {
+					// add the downloaded metadata to gbMetadata
+					gbMetadata[license] = result['data'];
+					// update the dropdown
+					updateGbCountryDropdown();
+				};
+				// parse
+				Papa.parse(url,
+							{'download':true,
+							'complete':success,
+							'error':error,
+							}
+				);
+			} else {
+				// metadata already exists, just update the dropdown
+				updateGbCountryDropdown();
+			};
+		};
+		
+		document.getElementById('license-select').addEventListener('change', updateGbCountries, false);
+		
+		// update layer stuff
+		
 		function updateUploadFileLayerFromGeoJSON(source, zoomToExtent=false) {
 			// set the new source
 			uploadLayer.setSource(source);
@@ -526,7 +607,7 @@ ul li{
 			level = document.getElementById('admin-level-select').value;
 			license = document.getElementById('license-select').value;
 			// construct data url from params
-			url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/'+license+'/'+iso3+'/'+level+'/geoBoundaries-'+iso3+'-'+level+'.topojson';
+			url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gb'+license+'/'+iso3+'/'+level+'/geoBoundaries-'+iso3+'-'+level+'.topojson';
 			//alert(url);
 			// get the source
 			source = new ol.source.Vector({
@@ -550,6 +631,8 @@ ul li{
 				alert('Failed to load source, please choose another source.');
 			});
 		};
+		
+		// layer definitions
 	
 		var gbStyle = new ol.style.Style({
 			fill: new ol.style.Fill({
@@ -576,6 +659,8 @@ ul li{
 		var uploadLayer = new ol.layer.Vector({
 			style: uploadStyle,
 		});
+		
+		// map
 	
 		var map = new ol.Map({
 			target: 'map',
@@ -598,6 +683,7 @@ ul li{
 		});
 		
 		updateGbLayer(zoomToExtent=true);
+		updateGbCountries();
 		
 		</script>
 </body>
