@@ -34,6 +34,7 @@ jobs:
            cd geoBoundaries
            echo "=============="
            git checkout origin/main "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           git clone https://github.com/wmgeolab/geoBoundaryBot
            ls -l
     - name: Checking Files
       id: checks
