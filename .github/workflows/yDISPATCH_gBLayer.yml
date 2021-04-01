@@ -23,9 +23,12 @@ jobs:
            cd $GITHUB_WORKSPACE
            cd ..
            rm -r geoBoundaries
+           git config --local uploadpack.allowfilter 1
+           git config --local uploadpack.allowanysha1inwant 1
            git config --global pack.window "0"
-           GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/wmgeolab/geoBoundaries --depth 1 --single-branch --branch main --filter=blob:none 
+           GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 --single-branch --branch main --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
            cd geoBoundaries
+           git checkout origin/main "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
            git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
            ls -l
     - name: Checking Files
