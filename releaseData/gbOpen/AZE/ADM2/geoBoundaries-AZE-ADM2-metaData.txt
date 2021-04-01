@@ -11,4 +11,4 @@ licenseSource : https//en.wikipedia.org/wiki/Administrative_divisions_of_Azerbai
 boundarySourceURL : https//en.wikipedia.org/wiki/Administrative_divisions_of_Azerbaijan#/media/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AZE_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 18, 2021
+buildUpdateDate : Apr 01, 2021
