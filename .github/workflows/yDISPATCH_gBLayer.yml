@@ -24,10 +24,15 @@ jobs:
            cd ..
            rm -r geoBoundaries
            git config --global pack.window "0"
-           GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 --single-branch --branch main --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+           echo "=============="
+           git clone --depth 1 --branch main --no-checkout https://github.com/wmgeolab/geoBoundaries
+           echo "=============="
            cd geoBoundaries
+           echo "=============="
            git checkout origin/main "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           echo "=============="
            git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           echo "=============="
            ls -l
     - name: Checking Files
       id: checks
