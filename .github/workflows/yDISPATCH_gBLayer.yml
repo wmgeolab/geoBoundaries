@@ -61,23 +61,20 @@ jobs:
       run: |
            cd $GITHUB_WORKSPACE
            ls
-           git status
            echo "=============="
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git config --global http.postBuffer 500M
            git config --global http.maxRequestBuffer 100M
            git config --global core.compression 0
-           git status
+           git reset
            echo "================="
-           find * -type f -size +99M -exec git lfs track --filename '{}' +
-           git status
-           sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           find * -type f -size +99M -exec git lfs track --filename '{}' +           
            git add "${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
+           git add .gitattributes
            git status
            git commit -m "gB Nightly `date`"
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
-           git push origin main
         
     - name: Create Artifact
       uses: actions/upload-artifact@v2
