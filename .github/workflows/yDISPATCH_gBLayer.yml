@@ -34,6 +34,7 @@ jobs:
            cd geoBoundaries
            echo "=============="
            git checkout origin/main "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           git checkout origin/main .gitattributes
            git clone https://github.com/wmgeolab/geoBoundaryBot
            ls -l
     - name: Checking Files
@@ -69,7 +70,6 @@ jobs:
            git config --global core.compression 0
            git status
            echo "================="
-           git checkout origin/main .gitattributes
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git status
            sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
