@@ -61,9 +61,6 @@ jobs:
            git config --global core.compression 0
            git status
            echo "================="
-           git checkout .gitattributes
-           git status
-           echo "-----------------------"
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git status
            git add -A .
