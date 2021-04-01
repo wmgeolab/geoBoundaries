@@ -71,7 +71,7 @@ jobs:
            echo "================="
            find * -type f -size +99M -exec git lfs track --filename '{}' +       
            echo "================="
-           git add "${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
+           git add "releaseData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
            echo "================="
            git add .gitattributes
            echo "================="
