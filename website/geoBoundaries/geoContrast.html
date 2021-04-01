@@ -304,8 +304,8 @@ ul li{
 					
 					</div>
 					
-					<div id="table-comparison" class="row box" style="width:98%; margin:10px 0px">
-						<div id="left-table-div" style="width:48%">
+					<div id="table-comparison" class="row box" style="width:100%; margin:10px 0px">
+						<div id="left-table-div" style="width:49%">
 							<hr style="border-color:#319FD3; background-color:#319FD3; margin:3px; height:3px">
 							<h3>geoBoundaries:</h3>
 						</div>
@@ -417,7 +417,7 @@ ul li{
 		<!--https://gis.stackexchange.com/questions/138155/allow-client-to-upload-layers-to-openlayers-3 -->
 		<!--https://gis.stackexchange.com/questions/368033/how-to-display-shapefiles-on-an-openlayers-web-mapping-application-that-are-prov
 		-->
-		function handleFileSelect(evt) {
+		function handleFileUpload(evt) {
 			var files = evt.target.files; 
 			
 			// get file contents as a base64 encoded url string
@@ -460,11 +460,12 @@ ul li{
 						document.getElementById('file-output').appendChild(div);
 						// create basic file info
 						var info = document.createElement("div");
-						info.style = "margin-left:20px; margin-top:15px";
+						info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 						info.innerHTML = '';
+						info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
 						info.innerHTML += '<b>File Name: </b>'+file.name+'<br>';
 						info.innerHTML += '<b>File Size: </b>'+(file.size/1000000.0).toFixed(1)+' MB<br>';
-						info.innerHTML += '<b>Features: </b>'+features.length;
+						info.innerHTML += '<b>Last Modified: </b>'+file.lastModifiedDate.toISOString().substring(0,10);
 						div.appendChild(info);
 						////////////////////
 						// table div
@@ -476,7 +477,7 @@ ul li{
 						// create table div
 						var div = document.createElement("div");
 						div.id = 'uploaded-file-preview';
-						div.style = 'overflow:scroll; margin-top:10px; max-height:500px;';
+						div.style = 'max-height:500px; overflow:scroll; margin-top:10px';
 						document.getElementById('right-table-div').appendChild(div);
 						// create table
 						var table = document.createElement("table");
@@ -529,7 +530,7 @@ ul li{
 			};
 		};
 
-		document.getElementById('file-input').addEventListener('change', handleFileSelect, false);
+		document.getElementById('file-input').addEventListener('change', handleFileUpload, false);
 		
 		
 		function updateGbInfo(features) {
@@ -560,7 +561,7 @@ ul li{
 			};
 			// populate info
 			var info = document.createElement("div");
-			info.style = "margin-left:20px; margin-top:15px";
+			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 			info.innerHTML = '';
 			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
 			info.innerHTML += '<b>Source: </b>'+gbSource+'<br>';
@@ -580,7 +581,7 @@ ul li{
 			// create table div
 			var div = document.createElement("div");
 			div.id = 'gb-file-preview';
-			div.style = 'overflow:scroll; margin-top:10px; max-height:500px;';
+			div.style = 'max-height:500px; overflow:scroll; margin-top:10px';
 			document.getElementById('left-table-div').appendChild(div);
 			// create table
 			var table = document.createElement("table");
@@ -732,7 +733,7 @@ ul li{
 			};
 			// notify if failed to load source
 			source.on(['error','featuresloaderror'], function() {
-				alert('Failed to load source, please choose another source.');
+				alert('Failed to load uploaded file.');
 			});
 		};
 		
@@ -769,7 +770,7 @@ ul li{
 			});
 			// notify if failed to load source
 			source.on(['error','featuresloaderror'], function() {
-				alert('Failed to load source, please choose another source.');
+				alert('Failed to load source from '+source.getUrl()+'. Please choose another source.');
 			});
 		};
 		
@@ -777,10 +778,10 @@ ul li{
 	
 		var gbStyle = new ol.style.Style({
 			fill: new ol.style.Fill({
-				color: 'rgba(255, 255, 255, 0.6)',
+				color: 'rgba(255, 255, 255, 0.4)',
 			}),
 			stroke: new ol.style.Stroke({
-				color: '#319FD3',
+				color: 'rgb(49, 127, 211)',
 				width: 1,
 			}),
 		});
