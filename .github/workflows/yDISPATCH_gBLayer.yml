@@ -25,7 +25,7 @@ jobs:
            rm -r geoBoundaries
            git config --global pack.window "0"
            echo "=============="
-           git clone --depth 1 --branch main --no-checkout --progress --verbose https://github.com/wmgeolab/geoBoundaries
+           git clone --no-checkout --depth 1 --branch main --progress --verbose https://github.com/wmgeolab/geoBoundaries
            echo "=============="
            cd geoBoundaries
            echo "=============="
