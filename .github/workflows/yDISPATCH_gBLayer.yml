@@ -69,12 +69,18 @@ jobs:
            git config --global core.compression 0
            git reset
            echo "================="
-           find * -type f -size +99M -exec git lfs track --filename '{}' +           
+           find * -type f -size +99M -exec git lfs track --filename '{}' +       
+           echo "================="
            git add "${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
+           echo "================="
            git add .gitattributes
+           echo "================="
            git status
+           echo "================="
            git commit -m "gB Nightly `date`"
+           echo "================="
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
+           echo "================="
         
     - name: Create Artifact
       uses: actions/upload-artifact@v2
