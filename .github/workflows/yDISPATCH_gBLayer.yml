@@ -25,14 +25,15 @@ jobs:
            rm -r geoBoundaries
            git config --global pack.window "0"
            echo "=============="
-           git clone --no-checkout --depth 1 --branch main --progress --verbose https://github.com/wmgeolab/geoBoundaries
+           add-apt-repository -y ppa:git-core/ppa
+           apt-get -y update
+           apt-get install -y git
+           git --version
+           git clone --depth 1 --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
            echo "=============="
            cd geoBoundaries
            echo "=============="
            git checkout origin/main "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
-           echo "=============="
-           git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
-           echo "=============="
            ls -l
     - name: Checking Files
       id: checks
@@ -67,16 +68,15 @@ jobs:
            git config --global core.compression 0
            git status
            echo "================="
+           git checkout origin/main .gitattributes
            find * -type f -size +99M -exec git lfs track --filename '{}' +
            git status
-           git add -A .
+           sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           git add "${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
            git status
            git commit -m "gB Nightly `date`"
-           git status
-           git pull
-           git status
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
-           git push origin main -f
+           git push origin main
         
     - name: Create Artifact
       uses: actions/upload-artifact@v2
