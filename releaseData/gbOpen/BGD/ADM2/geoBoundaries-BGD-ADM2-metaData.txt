@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//osm-boundaries.com/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BGD_ADM2.zip
 sourceDataUpdateDate : Mar 09, 2021
-buildUpdateDate : Mar 26, 2021
+buildUpdateDate : Apr 02, 2021
