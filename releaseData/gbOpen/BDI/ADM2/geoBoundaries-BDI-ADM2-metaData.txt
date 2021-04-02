@@ -11,4 +11,4 @@ licenseSource : https//geo.nyu.edu/catalog/stanford-th822mn7301#iso-metadata-ref
 boundarySourceURL : https//geo.nyu.edu/catalog/stanford-th822mn7301
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BDI_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 19, 2021
+buildUpdateDate : Apr 02, 2021
