@@ -29,12 +29,15 @@ jobs:
            apt-get -y update
            apt-get install -y git
            git --version
-           git clone --depth 1 --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+           git clone --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
            echo "=============="
            cd geoBoundaries
            echo "=============="
-           git checkout origin/main "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
-           git checkout origin/main .gitattributes
+           git sparse-checkout set "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           git sparse-checkout add ".gitattrbutes"
+           git sparse-checkout add ".gitignore"
+           git sparse-checkout add "releaseData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
+           git checkout
            git clone https://github.com/wmgeolab/geoBoundaryBot
            ls -l
     - name: Checking Files
@@ -81,6 +84,7 @@ jobs:
            echo "================="
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            echo "================="
+           git push
         
     - name: Create Artifact
       uses: actions/upload-artifact@v2
