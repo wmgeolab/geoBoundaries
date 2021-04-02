@@ -11,4 +11,4 @@ licenseSource : https//geo.gob.bo/geonetwork/srv/spa/catalog.search#/metadata/ae
 boundarySourceURL : https//geo.gob.bo/geonetwork/srv/spa/catalog.search#/metadata/aeeb85a9-23df-48d4-a4e5-dd19e8b206db
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BOL_ADM3.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 22, 2021
+buildUpdateDate : Apr 02, 2021
