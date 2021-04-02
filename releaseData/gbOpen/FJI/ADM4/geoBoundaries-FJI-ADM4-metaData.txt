@@ -1,0 +1,14 @@
+boundaryID : FJI-ADM4-49741210
+boundaryISO : FJI
+boundaryType : ADM4
+boundaryYear : 2007
+boundarySource-1 : Pacific Data Hub
+boundarySource-2 : 
+boundaryCanonical : Enumeration Areas
+boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//pacificdata.org/data/dataset/2007_fji_phc_admin_boundaries
+boundarySourceURL : https//pacificdata.org/data/dataset/2007_fji_phc_admin_boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FJI_ADM4.zip
+sourceDataUpdateDate : Jan 02, 2021
+buildUpdateDate : Apr 02, 2021
