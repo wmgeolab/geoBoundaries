@@ -11,4 +11,4 @@ licenseSource : http//geoportal.rcmrd.org/layers/servir%3Aburundi_admin4#more
 boundarySourceURL : http//geoportal.rcmrd.org/layers/servir%3Aburundi_admin4#more
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BDI_ADM3.zip
 sourceDataUpdateDate : Mar 01, 2021
-buildUpdateDate : Mar 26, 2021
+buildUpdateDate : Apr 02, 2021
