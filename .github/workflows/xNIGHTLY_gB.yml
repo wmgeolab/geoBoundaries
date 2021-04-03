@@ -26,6 +26,7 @@ jobs:
             poll-interval-seconds: 5
       env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           GITHUB_WORKFLOW: yDISPATCH_gBLayer
     
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
