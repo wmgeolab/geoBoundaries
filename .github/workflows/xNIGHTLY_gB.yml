@@ -20,17 +20,9 @@ jobs:
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
     
-    - name: Turnstyle
-      uses: softprops/turnstyle@v1
-      with:
-            poll-interval-seconds: 5
-      env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           GITHUB_WORKFLOW: yDISPATCH_gBLayer
-    
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
-      uses: benc-uk/workflow-dispatch@v1
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
       with:
         workflow: yDISPATCH_gBLayer
         repo: wmgeolab/geoBoundaries
@@ -55,16 +47,9 @@ jobs:
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
     
-    - name: Turnstyle
-      uses: softprops/turnstyle@v1
-      with:
-            poll-interval-seconds: 5
-      env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
-      uses: benc-uk/workflow-dispatch@v1
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
       with:
         workflow: yDISPATCH_gBLayer
         repo: wmgeolab/geoBoundaries
@@ -89,16 +74,9 @@ jobs:
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
     
-    - name: Turnstyle
-      uses: softprops/turnstyle@v1
-      with:
-            poll-interval-seconds: 5
-      env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
-      uses: benc-uk/workflow-dispatch@v1
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
       with:
         workflow: yDISPATCH_gBLayer
         repo: wmgeolab/geoBoundaries
@@ -123,16 +101,9 @@ jobs:
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
     
-    - name: Turnstyle
-      uses: softprops/turnstyle@v1
-      with:
-            poll-interval-seconds: 5
-      env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
-      uses: benc-uk/workflow-dispatch@v1
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
       with:
         workflow: yDISPATCH_gBLayer
         repo: wmgeolab/geoBoundaries
@@ -156,17 +127,10 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
-    
-    - name: Turnstyle
-      uses: softprops/turnstyle@v1
-      with:
-            poll-interval-seconds: 5
-      env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
-      uses: benc-uk/workflow-dispatch@v1
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
       with:
         workflow: yDISPATCH_gBLayer
         repo: wmgeolab/geoBoundaries
@@ -190,17 +154,10 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
-    
-    - name: Turnstyle
-      uses: softprops/turnstyle@v1
-      with:
-            poll-interval-seconds: 5
-      env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
-      uses: benc-uk/workflow-dispatch@v1
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
       with:
         workflow: yDISPATCH_gBLayer
         repo: wmgeolab/geoBoundaries
