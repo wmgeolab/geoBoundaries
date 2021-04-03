@@ -50,13 +50,6 @@ jobs:
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
-    - name: Turnstyle
-      uses: softprops/turnstyle@v1
-      with:
-            poll-interval-seconds: 360
-      env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
     - name: Commit Files
       env:
             DRTOKEN: ${{secrets.DRTOKEN}}
