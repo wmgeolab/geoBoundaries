@@ -49,13 +49,6 @@ jobs:
            python $GITHUB_WORKSPACE/geoBoundaryBot/gbBuild.py ${{github.event.inputs.bType}} nightly ${{github.event.inputs.ISO}} ${{github.event.inputs.ADM}} ${{secrets.DRTOKEN}}
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    
-    - name: Turnstyle
-      uses: softprops/turnstyle@v1
-      with:
-            poll-interval-seconds: 120
-      env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
     - name: Commit Files
       env:
