@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
         fail-fast: false
+        max-parallel: 1
         matrix:
           ISO: ["AFG","AGO","ALB","AND","ARE","ARG","ARM","ATA","ATG","AUS","AUT","AZE"]
           ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
@@ -18,6 +19,13 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Turnstyle
+      uses: softprops/turnstyle@v1
+      with:
+            poll-interval-seconds: 60
+      env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
@@ -32,6 +40,7 @@ jobs:
     needs: gbBuild_AFG_AZE
     runs-on: ubuntu-latest
     strategy:
+        max-parallel: 1
         fail-fast: false
         matrix:
           ISO: ["BDI", "BEL", "BEN", "BFA", "BGD", "BGR", "BHR", "BHS", "BIH", "BLR", "BLZ", "BOL"]
@@ -44,6 +53,13 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Turnstyle
+      uses: softprops/turnstyle@v1
+      with:
+            poll-interval-seconds: 60
+      env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
@@ -58,6 +74,7 @@ jobs:
     needs: gbBuild_BDI_BOL
     runs-on: ubuntu-latest
     strategy:
+        max-parallel: 1
         fail-fast: false
         matrix:
           ISO: ["BRA", "BRB", "BRN", "BTN", "BWA", "CAF", "CAN", "CHE", "CHL", "CHN", "CIV", "CMR"]
@@ -70,6 +87,13 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Turnstyle
+      uses: softprops/turnstyle@v1
+      with:
+            poll-interval-seconds: 60
+      env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
@@ -84,6 +108,7 @@ jobs:
     needs: gbBuild_BRA_CMR
     runs-on: ubuntu-latest
     strategy:
+        max-parallel: 1
         fail-fast: false
         matrix:
           ISO: ["COD", "COG", "COL", "COM", "CPV", "CRI", "CUB", "CYP", "CZE", "DEU", "DJI", "DMA"]
@@ -97,6 +122,13 @@ jobs:
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
     
+    - name: Turnstyle
+      uses: softprops/turnstyle@v1
+      with:
+            poll-interval-seconds: 60
+      env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
       uses: benc-uk/workflow-dispatch@v1
@@ -110,6 +142,7 @@ jobs:
     needs: gbBuild_COD_DMA
     runs-on: ubuntu-latest
     strategy:
+        max-parallel: 1
         fail-fast: false
         matrix:
           ISO: ["DNK", "DOM", "DZA", "ECU", "EGY", "ERI", "ESP", "EST", "ETH", "FIN", "FJI", "FRA"]
@@ -122,6 +155,13 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Turnstyle
+      uses: softprops/turnstyle@v1
+      with:
+            poll-interval-seconds: 60
+      env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
@@ -136,6 +176,7 @@ jobs:
     needs: gbBuild_DNK_FRA
     runs-on: ubuntu-latest
     strategy:
+        max-parallel: 1
         fail-fast: false
         matrix:
           ISO: ["FSM", "GAB", "GBR", "GEO", "GHA", "GIN", "GMB", "GNB", "GNQ", "GRC", "GRD", "GRL"]
@@ -148,6 +189,13 @@ jobs:
       run: |
            git clone https://github.com/wmgeolab/geoBoundaryBot
            python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Turnstyle
+      uses: softprops/turnstyle@v1
+      with:
+            poll-interval-seconds: 60
+      env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Create Build Call
       if: steps.buildCheck.outcome == 'success'
