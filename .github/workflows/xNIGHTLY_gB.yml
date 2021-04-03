@@ -23,7 +23,7 @@ jobs:
     - name: Turnstyle
       uses: softprops/turnstyle@v1
       with:
-            poll-interval-seconds: 60
+            poll-interval-seconds: 5
       env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
@@ -57,7 +57,7 @@ jobs:
     - name: Turnstyle
       uses: softprops/turnstyle@v1
       with:
-            poll-interval-seconds: 60
+            poll-interval-seconds: 5
       env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
@@ -91,7 +91,7 @@ jobs:
     - name: Turnstyle
       uses: softprops/turnstyle@v1
       with:
-            poll-interval-seconds: 60
+            poll-interval-seconds: 5
       env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
@@ -125,7 +125,7 @@ jobs:
     - name: Turnstyle
       uses: softprops/turnstyle@v1
       with:
-            poll-interval-seconds: 60
+            poll-interval-seconds: 5
       env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
            
@@ -159,7 +159,7 @@ jobs:
     - name: Turnstyle
       uses: softprops/turnstyle@v1
       with:
-            poll-interval-seconds: 60
+            poll-interval-seconds: 5
       env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
@@ -193,7 +193,7 @@ jobs:
     - name: Turnstyle
       uses: softprops/turnstyle@v1
       with:
-            poll-interval-seconds: 60
+            poll-interval-seconds: 5
       env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
