@@ -4,17 +4,17 @@ Metadata for: NOPARISPRI
 Full Variable Name: Countries with National Human Rights Institutions and no status with the Paris Principles
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Countries with National Human Rights Institutions and no status with the Paris Principles
+Units: Number
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): Downloaded from source link (https://www.sdg.org/datasets/ffb1aed0ad0c44c78c1a99cc8e8b78e5_0/data?geometry=109.637%2C-41.999%2C-104.114%2C60.609)
 Source 1: Source: The Office of the United Nations High Commissioner for Human Rights (OHCHR) in collaboration with Global Alliance of National Human Rights Institutions (GANHRI).
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-16-a-1-countries-with-national-human-rights-institutions-and-no-status-with-the-paris-principles-1-yes-0-no
-Tag(s): nan
-Other Notes: 
+Source 2: N/A
+License: No license specified 
+License Source: https://www.un.org/en/sections/about-website/terms-use/index.html
+Link to Source Data: https://www.sdg.org/datasets/ffb1aed0ad0c44c78c1a99cc8e8b78e5_0/data?geometry=109.637%2C-41.999%2C-104.114%2C60.609
+Tag(s): Government
+Other Notes: N/A
