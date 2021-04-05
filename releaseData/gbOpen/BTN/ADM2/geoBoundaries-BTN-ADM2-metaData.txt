@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/bhutan-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/bhutan-administrative-boundaries-levels-0-2
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BTN_ADM2.zip
 sourceDataUpdateDate : Mar 06, 2021
-buildUpdateDate : Apr 02, 2021
+buildUpdateDate : Apr 05, 2021
