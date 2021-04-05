@@ -28,6 +28,8 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
         
   gbBuild_BDI_BOL:
     if: always()
@@ -56,6 +58,8 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
         
   gbBuild_BRA_CMR:
     if: always()
@@ -84,6 +88,8 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
     
   gbBuild_COD_DMA:
     if: always()
@@ -112,6 +118,8 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
 
   gbBuild_DNK_FRA:
     if: always()
@@ -140,6 +148,8 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
         
   gbBuild_FSM_GRL:
     if: always()
@@ -168,4 +178,6 @@ jobs:
         repo: wmgeolab/geoBoundaries
         token: ${{ secrets.DRTOKEN }}
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
         
