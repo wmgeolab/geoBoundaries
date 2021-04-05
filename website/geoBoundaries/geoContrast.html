@@ -164,6 +164,57 @@ ul li{
   color: white;
 }
 
+
+
+.popup {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.5s;
+  overflow: auto;
+  transition: all 0.3s linear;
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 5vh;
+  padding: 20px;
+  border-radius: 4px;
+  width: 80vw;
+  height: 90vh;
+  overflow: auto;
+}
+
+.popup-open { overflow: hidden; }
+
+.is-hidden { display: none; }
+
+.is-visually-hidden { opacity: 0; }
+
+.popup-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 16px;
+}
+
+.popup-close:hover, .popup-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.is-blurred {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
 	</style>
 	
 	<!-- Scripts -->
@@ -315,7 +366,68 @@ ul li{
 							<h3>Uploaded File:</h3>
 						</div>
 					</div>
-
+					
+					
+					<div id="contribute-popup" class="popup is-hidden is-visually-hidden">
+					  <!-- popup content -->
+					  <div class="popup-content">
+						<div style="text-align:right">
+							<a id="close-contribute-popup" class="close-popup" onclick="closeContributePopup()">&times;</a>
+						</div>
+						<h3>Contribute your boundary file:</h3>
+						<form>
+							<table style="width:97%; margin:10px">
+								<tr>
+									<td>Source*:</td>
+									<td>
+										<input name="source" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td>License*:</td>
+									<td>
+										<input name="license" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td>Administrative level*:</td>
+									<td>
+										<input name="admin-level" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td>Year of boundaries*:</td>
+									<td>
+										<input name="year" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td>Organization*:</td>
+									<td>
+										<input name="organization" type="text">
+									</td>
+								</tr>
+								<tr>
+									<td>Contact email*:</td>
+									<td>
+										<input name="email" type="email">
+									</td>
+								</tr>
+								<tr>
+									<td>Notes/comment:</td>
+									<td>
+										<input name="notes" type="text">
+									</td>
+								</tr>
+							</table>
+							
+							<div style="text-align:right">
+								<button type="submit">Submit!</button>
+							</div>
+							
+						</form>
+					  </div>
+					</div>
 				
 
 
@@ -412,6 +524,24 @@ ul li{
 	<script src="assets/js/ol.js"></script>
 	<script type="text/javascript">
 	
+		function openContributePopup() {
+			var popup = document.getElementById('contribute-popup');
+			popup.className = "popup"; // is-visually-hidden";
+			//setTimeout(function() {
+			  //container.className = "MainContainer is-blurred";
+			  //popup.className = "popup";
+			//}, 100);
+			//container.parentElement.className = "ModalOpen";
+		};
+	
+		function closeContributePopup() {
+			var popup = document.getElementById('contribute-popup');
+			popup.className = "popup is-hidden is-visually-hidden";
+			//body.className = "";
+			//container.className = "MainContainer";
+			//container.parentElement.className = "";
+		};
+	
 		<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles/ -->
 		<!--https://web.dev/read-files/ -->
 		<!--https://gis.stackexchange.com/questions/138155/allow-client-to-upload-layers-to-openlayers-3 -->
@@ -466,7 +596,15 @@ ul li{
 						info.innerHTML += '<b>File Name: </b>'+file.name+'<br>';
 						info.innerHTML += '<b>File Size: </b>'+(file.size/1000000.0).toFixed(1)+' MB<br>';
 						info.innerHTML += '<b>Last Modified: </b>'+file.lastModifiedDate.toISOString().substring(0,10);
+						info.innerHTML += '<br><br>';
 						div.appendChild(info);
+						// and upload button
+						var uploadbut = document.createElement("button");
+						uploadbut.id = "open-contribute-popup";
+						uploadbut.style = "font-size:0.7em";
+						uploadbut.textContent = "My Boundary is Better!";
+						div.appendChild(uploadbut);
+						uploadbut.addEventListener('click', openContributePopup);
 						////////////////////
 						// table div
 						// remove old div if exists
