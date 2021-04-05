@@ -1,0 +1,14 @@
+boundaryID : CPV-ADM2-590077
+boundaryISO : CPV
+boundaryType : ADM2
+boundaryYear : 2017
+boundarySource-1 : Second Administrative Level Boundaries (SALB) Project
+boundarySource-2 : OCHA ROWCA
+boundaryCanonical : parishe/reguesia
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only - Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/cape-verde-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/cape-verde-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/CPV_ADM2.zip
+sourceDataUpdateDate : Oct 28, 2020
+buildUpdateDate : Apr 05, 2021
