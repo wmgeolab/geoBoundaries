@@ -30,6 +30,7 @@ jobs:
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
         
   gbBuild_BDI_BOL:
+    if: always()
     needs: gbBuild_AFG_AZE
     runs-on: ubuntu-latest
     strategy:
@@ -57,6 +58,7 @@ jobs:
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
         
   gbBuild_BRA_CMR:
+    if: always()
     needs: gbBuild_BDI_BOL
     runs-on: ubuntu-latest
     strategy:
@@ -84,6 +86,7 @@ jobs:
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
     
   gbBuild_COD_DMA:
+    if: always()
     needs: gbBuild_BRA_CMR
     runs-on: ubuntu-latest
     strategy:
@@ -111,6 +114,7 @@ jobs:
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
 
   gbBuild_DNK_FRA:
+    if: always()
     needs: gbBuild_COD_DMA
     runs-on: ubuntu-latest
     strategy:
@@ -138,6 +142,7 @@ jobs:
         inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
         
   gbBuild_FSM_GRL:
+    if: always()
     needs: gbBuild_DNK_FRA
     runs-on: ubuntu-latest
     strategy:
