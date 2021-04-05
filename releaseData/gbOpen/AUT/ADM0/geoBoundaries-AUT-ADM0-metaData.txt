@@ -11,4 +11,4 @@ licenseSource : https//www.data.gv.at/katalog/dataset/987d6260-1e87-4314-9039-cc
 boundarySourceURL : https//www.data.gv.at/katalog/dataset/987d6260-1e87-4314-9039-ccae502819b6
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AUT_ADM0.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 18, 2021
+buildUpdateDate : Apr 02, 2021
