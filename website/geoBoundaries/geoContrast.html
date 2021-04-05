@@ -300,16 +300,14 @@ ul li{
 										Compare this geoBoundary:
 										
 										<div style="display:block;">
-											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="updateGbLayer(zoomToExtent=true)">
+											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="gbCountryChanged()">
 												<!--options should get dynamically populated here-->
 											</select>
-											<select id="admin-level-select" style="width:40%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
-												<option value="ADM0">ADM0</option>
-												<option value="ADM1">ADM1</option>
-												<option value="ADM2">ADM2</option>
+											<select id="admin-level-select" style="width:40%;display:inline;font-size:10pt;" onchange="gbAdminLevelChanged()">
+												<!--options should get dynamically populated here-->
 											</select>
 										</div>
-										<select id="license-select" style="width:95%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
+										<select id="license-select" style="width:95%;display:inline;font-size:10pt;" onchange="gbLicenseChanged();">
 											<option value="Open" selected>Open (Fully Open Licenses)</option>
 											<option value="Humanitarian">Humanitarian (Most Up-To-Date)</option>
 											<option value="Authoritative">Authoritative (UN Recognized)</option>
@@ -670,7 +668,6 @@ ul li{
 
 		document.getElementById('file-input').addEventListener('change', handleFileUpload, false);
 		
-		
 		function updateGbInfo(features) {
 			// remove old div if exists
 			var div = document.getElementById('gb-file-info');
@@ -810,7 +807,7 @@ ul li{
 			};
 		};
 		
-		function updateGbCountries(event=null, license=null) {
+		function updateGbCountries(license=null) {
 			// determine license dynamically from the dropdown if not specified
 			if (license == null) {
 				license = document.getElementById('license-select').value;
@@ -818,13 +815,7 @@ ul li{
 			// fetch metadata from the specified license if doesn't already in gbMetadata
 			if (!(license in gbMetadata)) {
 				// determine url of metadata csv
-				if (license == 'Authoritative') {
-					// temporary correction for metadata file misspelling Author"a"tative
-					url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/geoBoundariesAuthoratative-meta.csv';
-				} else {
-					// normal
-					url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/geoBoundaries'+license+'-meta.csv';
-				};
+				url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/geoBoundaries'+license+'-meta.csv';
 				// define error and success
 				function error (err, file, inputElem, reason) {
 					alert('geoBoundaries metadata csv failed to load: '+url);
@@ -834,6 +825,8 @@ ul li{
 					gbMetadata[license] = result['data'];
 					// update the dropdown
 					updateGbCountryDropdown();
+					updateGbAdminLevelDropdown();
+					updateGbLayer(zoomToExtent=true);
 				};
 				// parse
 				Papa.parse(url,
@@ -845,10 +838,71 @@ ul li{
 			} else {
 				// metadata already exists, just update the dropdown
 				updateGbCountryDropdown();
+				updateGbAdminLevelDropdown();
+				updateGbLayer(zoomToExtent=true);
 			};
 		};
 		
-		document.getElementById('license-select').addEventListener('change', updateGbCountries, false);
+		function updateGbAdminLevelDropdown() {
+			// NOTE: requires that gbMetadata has already been populated
+			// get admin-level dropdown
+			var select = document.getElementById('admin-level-select');
+			// clear all existing dropdown options
+			select.innerHTML = '';
+			// get gb metadata
+			var license = document.getElementById('license-select').value;
+			var metadata = gbMetadata[license];
+			// get current country
+			var currentIso = document.getElementById('country-select').value;
+			// find available admin-levels for country
+			var adminLevelsSeen = [];
+			var adminLevels = [];
+			for (var i = 1; i < metadata.length; i++) {
+				var row = metadata[i];
+				if (row.length <= 1) {
+					// ignore empty rows
+					i++;
+					continue;
+				};
+				var iso = row[2];
+				var lvl = row[4];
+				if (iso == currentIso) {
+					if (!(adminLevelsSeen.includes(lvl))) {
+						// only add if hasn't already been added
+						adminLevels.push(lvl);
+						adminLevelsSeen.push(lvl);
+					};
+				};
+			};
+			// sort
+			adminLevels.sort()
+			// add new options from gbMetadata
+			for (lvl of adminLevels) {
+				var opt = document.createElement("option");
+				opt.value = lvl;
+				opt.textContent = lvl;
+				select.appendChild(opt);
+			};
+		};
+		
+		function gbLicenseChanged() {
+			//alert('license changed');
+			updateGbCountries();
+		};
+		
+		function gbCountryChanged() {
+			// this might run updateGbLayer twice, once on updateGbAdminLevelDropdown() since admin-level dropdown changes triggers updateGbLayers, and once on call to updateGbLayer(zoomToExtent=true)...
+			// maybe updateGbAdminLevelDropdown() would be sufficient, but if the admin stays the same maybe it doesn't get triggered...
+			//alert('country changed');
+			updateGbAdminLevelDropdown();
+			updateGbLayer(zoomToExtent=true);
+		};
+		
+		function gbAdminLevelChanged() {
+			//alert('admin-level changed');
+			updateGbLayer(zoomToExtent=true);
+		};
+		
 		
 		// update layer stuff
 		
@@ -962,7 +1016,6 @@ ul li{
 			})
 		});
 		
-		updateGbLayer(zoomToExtent=true);
 		updateGbCountries();
 		
 		</script>
