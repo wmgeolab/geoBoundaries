@@ -114,6 +114,56 @@ ul li{
 }
 
 
+
+#uploaded-file-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#uploaded-file-table td, #uploaded-file-table th {
+  max-width: 150px;
+  word-wrap: break-word;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#uploaded-file-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#uploaded-file-table tr:hover {background-color: #ddd;}
+
+#uploaded-file-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(255,0,0);
+  color: white;
+}
+
+
+#gb-file-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#gb-file-table td, #gb-file-table th {
+  max-width: 150px;
+  word-wrap: break-word;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#gb-file-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#gb-file-table tr:hover {background-color: #ddd;}
+
+#gb-file-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #319FD3;
+  color: white;
+}
+
 	</style>
 	
 	<!-- Scripts -->
@@ -178,13 +228,13 @@ ul li{
 					</header>
 
 					<div class="row gtr-200">
-						<div class="col-9 col-12-medium">
+						<div class="col-7 col-12-medium">
 							<div id="fullscreen" class="fullscreen">
-								<div id="map" class="map"></div>
+								<div id="map" class="map">
 								</div>
-
+							</div>
 						</div>
-						<div class="col-3 col-12-medium" style="padding:0; ">
+						<div class="col-5 col-12-medium" style="padding:0; ">
 							<div id="toolbox" class="toolbox">
 								
 								<div id="tab-container" class="tab-container">
@@ -193,40 +243,77 @@ ul li{
 										<li class='tab'><a href="#BYOB">Build Your Own</a></li>
 									</ul>
 
-									<div id="compare" class="box" style="font-size:14pt;">
+									<div id="compare" class="box" style="font-size:14pt; height:575px">
+										<hr style="border-color:#319FD3; background-color:#319FD3; margin:3px; height:3px">
+									
 										Compare this geoBoundary:
+										
 										<div style="display:block;">
-											<select style="width:55%;display:inline;font-size:10pt;">
-												<option>Afghanistan</option><option>Test2</option>
+											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="updateGbLayer(zoomToExtent=true)">
+												<!--options should get dynamically populated here-->
 											</select>
-											<select style="width:40%;display:inline;font-size:10pt;">
-												<option>ADM0</option><option>ADM1</option>
+											<select id="admin-level-select" style="width:40%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
+												<option value="ADM0">ADM0</option>
+												<option value="ADM1">ADM1</option>
+												<option value="ADM2">ADM2</option>
 											</select>
 										</div>
-										<select style="width:95%;display:inline;font-size:10pt;">
-											<option value="gbOpen">Open (Fully Open Licenses)</option>
-											<option value="gbHumanitarian" selected>Humanitarian (Most Up-To-Date)</option>
-											<option value="gbAuthoritative">Authoritative (UN Recognized)</option>
-										</select><br />
-										To: <br />
+										<select id="license-select" style="width:95%;display:inline;font-size:10pt;" onchange="updateGbLayer()">
+											<option value="Open" selected>Open (Fully Open Licenses)</option>
+											<option value="Humanitarian">Humanitarian (Most Up-To-Date)</option>
+											<option value="Authoritative">Authoritative (UN Recognized)</option>
+										</select>
+										<div id="gb-info-div">
+										</div>
+										<br>
+										<br>
 										<div>
-										<span class="fas fa-file" style="padding:8px;"></span>Your Own Boundary <span 
-										data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." 
-										class="tooltip">(?)</span></div>
+											<hr style="border-color:rgb(255,0,0); background-color:rgb(255,0,0); margin:3px; height:3px">
+										
+											<span>
+											To Your Own Boundary <span 
+											data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." 
+											class="tooltip">(?)</span>:
+											</span>
+											
+											<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles//-->
+											
+											<span class="fas fa-file" style="padding:0px 3px important!">
+											<input class="fas" type="file" id="file-input" accept=".geojson">
+											</span>
+											
+											<output id="file-output">
+											</output>
+											
+										</div>
 										
 
 										
 									</div>
 
-									<div id="BYOB" class="box">
+									<div id="BYOB" class="box" style="height:575px">
 										asdf
 									</div>
 
 
-							</div>
+								</div>
 								
-						</div>
+							</div>
 
+						</div>
+					
+					</div>
+					
+					<div id="table-comparison" class="row box" style="width:100%; margin:10px 0px">
+						<div id="left-table-div" style="width:49%">
+							<hr style="border-color:#319FD3; background-color:#319FD3; margin:3px; height:3px">
+							<h3>geoBoundaries:</h3>
+						</div>
+						
+						<div id="right-table-div" style="width:48%">
+							<hr style="border-color:rgb(255,0,0); background-color:rgb(255,0,0); margin:3px; height:3px">
+							<h3>Uploaded File:</h3>
+						</div>
 					</div>
 
 				
@@ -317,34 +404,408 @@ ul li{
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/jquery.easytabs.js" type="text/javascript"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/papaparse.min.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () { $('#tab-container').easytabs({animate:false}); });
 	</script>
 	<script src="assets/js/ol.js"></script>
 	<script type="text/javascript">
+	
 
-		var style = new ol.style.Style({
-		fill: new ol.style.Fill({
-			color: 'rgba(255, 255, 255, 0.6)',
-		}),
-		stroke: new ol.style.Stroke({
-			color: '#319FD3',
-			width: 1,
-		}),
-		});
+		<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles/ -->
+		<!--https://web.dev/read-files/ -->
+		<!--https://gis.stackexchange.com/questions/138155/allow-client-to-upload-layers-to-openlayers-3 -->
+		<!--https://gis.stackexchange.com/questions/368033/how-to-display-shapefiles-on-an-openlayers-web-mapping-application-that-are-prov
+		-->
+		function handleFileUpload(evt) {
+			var files = evt.target.files; 
+			
+			// get file contents as a base64 encoded url string
+			file = files[0];
+			fileExtension = file.name.split('.').pop();
+			//alert('local file selected: '+file.name+' - '+fileExtension);
+			
+			if (fileExtension == 'geojson' | fileExtension == 'json') {
+				reader = new FileReader();
+				reader.onload = function(e) {
+					// use reader results to create new source
+					var dataURL = reader.result;
+					source = new ol.source.Vector({
+						url: dataURL,
+						format: new ol.format.GeoJSON({}),
+						overlaps: false,
+					});
+					// update the uploadLayer
+					updateUploadFileLayerFromGeoJSON(source, zoomToExtent=true);
+					// and also populate a table
+					source.on('change', function() {
+						//////////////
+						// first make sure the source contains polygon types
+						var features = source.getFeatures();
+						var geotype = features[0].getGeometry().getType();
+						if (!(['Polygon','MultiPolygon'].includes( geotype ))) {
+							alert('File must contain Polygon or MultiPolygon types, not "'+geotype+'" type');
+							return // exit early
+						};
+						//////////////
+						// info div
+						// remove old div if exists
+						var div = document.getElementById('uploaded-file-info');
+						if (div) {
+							div.remove();
+						};
+						// create info div
+						var div = document.createElement("div");
+						div.id = 'uploaded-file-info';
+						document.getElementById('file-output').appendChild(div);
+						// create basic file info
+						var info = document.createElement("div");
+						info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
+						info.innerHTML = '';
+						info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
+						info.innerHTML += '<b>File Name: </b>'+file.name+'<br>';
+						info.innerHTML += '<b>File Size: </b>'+(file.size/1000000.0).toFixed(1)+' MB<br>';
+						info.innerHTML += '<b>Last Modified: </b>'+file.lastModifiedDate.toISOString().substring(0,10);
+						div.appendChild(info);
+						////////////////////
+						// table div
+						// remove old div if exists
+						var div = document.getElementById('uploaded-file-preview');
+						if (div) {
+							div.remove();
+						};
+						// create table div
+						var div = document.createElement("div");
+						div.id = 'uploaded-file-preview';
+						div.style = 'max-height:500px; overflow:scroll; margin-top:10px';
+						document.getElementById('right-table-div').appendChild(div);
+						// create table
+						var table = document.createElement("table");
+						table.id = 'uploaded-file-table';
+						table.style = 'margin-left:10px';
+						div.appendChild(table);
+						// first headers
+						for (feature of features) {
+							var row = document.createElement("tr");
+							// empty header for feature number
+							var cell = document.createElement("th");
+							cell.style = 'width:20px';
+							row.appendChild(cell);
+							// field headers
+							var props = feature.getProperties();
+							for (key in props) {
+								if (key == 'geometry') {continue};
+								var cell = document.createElement("th");
+								cell.innerHTML = key;
+								row.appendChild(cell);
+							};
+							table.appendChild(row);
+							break;
+						};
+						// then rows
+						i = 1;
+						for (feature of features) {
+							var row = document.createElement("tr");
+							// feature number
+							var cell = document.createElement("td");
+							cell.style = 'width:20px';
+							cell.innerHTML = i;
+							row.appendChild(cell);
+							i++;
+							// feature properties
+							var props = feature.getProperties();
+							for (key in props) {
+								if (key == 'geometry') {continue};
+								var cell = document.createElement("td");
+								var val = props[key];
+								cell.innerHTML = val;
+								row.appendChild(cell);
+							};
+							table.appendChild(row);
+						};
+					});
+				};
+				// read as data url
+				reader.readAsDataURL(file);
+			};
+		};
+
+		document.getElementById('file-input').addEventListener('change', handleFileUpload, false);
+		
+		
+		function updateGbInfo(features) {
+			// remove old div if exists
+			var div = document.getElementById('gb-file-info');
+			if (div) {
+				div.remove();
+			};
+			// info div
+			var div = document.createElement("div");
+			div.id = 'gb-file-info';
+			document.getElementById('gb-info-div').appendChild(div);
+			// get gb metadata
+			var iso = document.getElementById('country-select').value;
+			var level = document.getElementById('admin-level-select').value;
+			var license = document.getElementById('license-select').value;
+			var metadata = gbMetadata[license];
+			// loop metadata table until reach row matching current iso and level
+			for (row of metadata) {
+				var rowIso = row[2];
+				var rowLevel = row[4];
+				if (rowIso == iso & rowLevel == level) {
+					var gbSource = row[6] + ', ' + row[7];
+					var gbYear = row[3];
+					var gbUpdated = row[12];
+					break;
+				};
+			};
+			// populate info
+			var info = document.createElement("div");
+			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
+			info.innerHTML = '';
+			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
+			info.innerHTML += '<b>Source: </b>'+gbSource+'<br>';
+			info.innerHTML += '<b>Year: </b>'+gbYear+'<br>';
+			info.innerHTML += '<b>Last Update: </b>'+gbUpdated;
+			div.appendChild(info);
+		};
+		
+		function updateGbTable(features) {
+			////////////////////
+			// table div
+			// remove old div if exists
+			var div = document.getElementById('gb-file-preview');
+			if (div) {
+				div.remove();
+			};
+			// create table div
+			var div = document.createElement("div");
+			div.id = 'gb-file-preview';
+			div.style = 'max-height:500px; overflow:scroll; margin-top:10px';
+			document.getElementById('left-table-div').appendChild(div);
+			// create table
+			var table = document.createElement("table");
+			table.id = 'gb-file-table';
+			table.style = 'margin-left:10px';
+			div.appendChild(table);
+			// first headers
+			for (feature of features) {
+				var row = document.createElement("tr");
+				// empty header for feature number
+				var cell = document.createElement("th");
+				cell.style = 'width:20px';
+				row.appendChild(cell);
+				// field headers
+				var props = feature.getProperties();
+				for (key in props) {
+					if (key == 'geometry') {continue};
+					var cell = document.createElement("th");
+					cell.innerHTML = key;
+					row.appendChild(cell);
+				};
+				table.appendChild(row);
+				break;
+			};
+			// then rows
+			i = 1;
+			for (feature of features) {
+				var row = document.createElement("tr");
+				// feature number
+				var cell = document.createElement("td");
+				cell.style = 'width:20px';
+				cell.innerHTML = i;
+				row.appendChild(cell);
+				i++;
+				// feature properties
+				var props = feature.getProperties();
+				for (key in props) {
+					if (key == 'geometry') {continue};
+					var cell = document.createElement("td");
+					var val = props[key];
+					cell.innerHTML = val;
+					row.appendChild(cell);
+				};
+				table.appendChild(row);
+			};
+		}
+		
+		// gb metadata stuff
+		
+		var gbMetadata = {};
+		
+		function updateGbCountryDropdown() {
+			// NOTE: requires that gbMetadata has already been populated
+			// get country dropdown
+			var select = document.getElementById('country-select')
+			// clear all existing dropdown options
+			select.innerHTML = '';
+			// get gb metadata
+			var license = document.getElementById('license-select').value;
+			var metadata = gbMetadata[license];
+			// get list of unique countries
+			var countriesSeen = [];
+			var countries = [];
+			for (var i = 1; i < metadata.length; i++) {
+				var row = metadata[i];
+				if (row.length <= 1) {
+					// ignore empty rows
+					i++;
+					continue;
+				};
+				var name = row[1];
+				var iso = row[2];
+				var country = {'name':name, 'iso':iso};
+				if (!(countriesSeen.includes(country.iso))) {
+					// only add if hasn't already been added
+					countries.push(country);
+					countriesSeen.push(country.iso);
+				};
+			};
+			// sort
+			countries.sort(function( a,b ){ if (a.name > b.name) {return 1} else {return -1} })
+			// add new options from gbMetadata
+			for (country of countries) {
+				var opt = document.createElement("option");
+				opt.value = country.iso;
+				opt.textContent = country.name;
+				select.appendChild(opt);
+			};
+		};
+		
+		function updateGbCountries(event=null, license=null) {
+			// determine license dynamically from the dropdown if not specified
+			if (license == null) {
+				license = document.getElementById('license-select').value;
+			};
+			// fetch metadata from the specified license if doesn't already in gbMetadata
+			if (!(license in gbMetadata)) {
+				// determine url of metadata csv
+				if (license == 'Authoritative') {
+					// temporary correction for metadata file misspelling Author"a"tative
+					url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/geoBoundariesAuthoratative-meta.csv';
+				} else {
+					// normal
+					url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/geoBoundaries'+license+'-meta.csv';
+				};
+				// define error and success
+				function error (err, file, inputElem, reason) {
+					alert('geoBoundaries metadata csv failed to load: '+url);
+				};
+				function success (result) {
+					// add the downloaded metadata to gbMetadata
+					gbMetadata[license] = result['data'];
+					// update the dropdown
+					updateGbCountryDropdown();
+				};
+				// parse
+				Papa.parse(url,
+							{'download':true,
+							'complete':success,
+							'error':error,
+							}
+				);
+			} else {
+				// metadata already exists, just update the dropdown
+				updateGbCountryDropdown();
+			};
+		};
+		
+		document.getElementById('license-select').addEventListener('change', updateGbCountries, false);
+		
+		// update layer stuff
+		
+		function updateUploadFileLayerFromGeoJSON(source, zoomToExtent=false) {
+			// set the new source
+			uploadLayer.setSource(source);
+			// zoom to new source after source has finished loading
+			if (zoomToExtent) {
+				source.on('change', function() {
+					//alert('new bbox: '+source.getExtent());
+					// get combined extent of gb and uploaded file
+					extent = ol.extent.createEmpty();
+					ol.extent.extend(extent, source.getExtent());
+					ol.extent.extend(extent, gbLayer.getSource().getExtent());
+					// zoom to extent
+					map.getView().fit(extent);
+					// zoom out a little
+					map.getView().setZoom(map.getView().getZoom()-1);
+				});
+			};
+			// notify if failed to load source
+			source.on(['error','featuresloaderror'], function() {
+				alert('Failed to load uploaded file.');
+			});
+		};
+		
+		function updateGbLayer(zoomToExtent=false) {
+			// get user-selected params
+			iso3 = document.getElementById('country-select').value;
+			level = document.getElementById('admin-level-select').value;
+			license = document.getElementById('license-select').value;
+			// construct data url from params
+			url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gb'+license+'/'+iso3+'/'+level+'/geoBoundaries-'+iso3+'-'+level+'.topojson';
+			//alert(url);
+			// get the source
+			source = new ol.source.Vector({
+				url: url,
+				format: new ol.format.TopoJSON({}),
+				overlaps: false,
+			});
+			gbLayer.setSource(source);
+			// zoom to new source after source has finished loading
+			if (zoomToExtent) {
+				source.on('change', function() {
+					//alert('new bbox: '+source.getExtent());
+					// zoom to extent
+					map.getView().fit(source.getExtent());
+					// zoom out a little
+					map.getView().setZoom(map.getView().getZoom()-1);
+				});
+			};
+			// update the table after source has finished loading
+			source.on('change', function() {
+				features = source.getFeatures();
+				updateGbTable(features);
+				updateGbInfo(features);
+			});
+			// notify if failed to load source
+			source.on(['error','featuresloaderror'], function() {
+				alert('Failed to load source from '+source.getUrl()+'. Please choose another source.');
+			});
+		};
+		
+		// layer definitions
 	
-		var vector = new ol.layer.Vector({
-		source: new ol.source.Vector({
-			//url: 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/AUS/ADM0/geoBoundaries-AUS-ADM0.topojson',
-			url: 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/AGO/ADM0/geoBoundaries-AGO-ADM0.topojson',
-			format: new ol.format.TopoJSON({}),
-			overlaps: false,
-		}),
-		style: style,
+		var gbStyle = new ol.style.Style({
+			fill: new ol.style.Fill({
+				color: 'rgba(255, 255, 255, 0.4)',
+			}),
+			stroke: new ol.style.Stroke({
+				color: 'rgb(49, 127, 211)',
+				width: 1,
+			}),
 		});
+		var gbLayer = new ol.layer.Vector({
+			style: gbStyle,
+		});
+		
+		var uploadStyle = new ol.style.Style({
+			fill: new ol.style.Fill({
+				color: 'rgba(255, 255, 255, 0)', // fully transparent
+			}),
+			stroke: new ol.style.Stroke({
+				color: 'rgb(255, 0, 0)',
+				width: 1,
+			}),
+		});
+		var uploadLayer = new ol.layer.Vector({
+			style: uploadStyle,
+		});
+		
+		// map
 	
-		  var map = new ol.Map({
+		var map = new ol.Map({
 			target: 'map',
 			controls: ol.control.defaults().extend([new ol.control.FullScreen()]),
 			layers: [
@@ -355,13 +816,18 @@ ul li{
 					'https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=' + 'aknzJQRnZg32XVVPrcYH',
 					maxZoom: 20,
 				})}),
-			  vector
+			  gbLayer,
+			  uploadLayer
 			],
 			view: new ol.View({
 			  center: ol.proj.fromLonLat([37.41, 8.82]),
 			  zoom: 4
 			})
-		  });
+		});
+		
+		updateGbLayer(zoomToExtent=true);
+		updateGbCountries();
+		
 		</script>
 </body>
 
