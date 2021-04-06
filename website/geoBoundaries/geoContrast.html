@@ -115,23 +115,23 @@ ul li{
 
 
 
-#uploaded-file-table {
+#comparison-file-table {
   border-collapse: collapse;
   width: 100%;
 }
 
-#uploaded-file-table td, #uploaded-file-table th {
+#comparison-file-table td, #comparison-file-table th {
   max-width: 150px;
   word-wrap: break-word;
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#uploaded-file-table tr:nth-child(even){background-color: #f2f2f2;}
+#comparison-file-table tr:nth-child(even){background-color: #f2f2f2;}
 
-#uploaded-file-table tr:hover {background-color: #ddd;}
+#comparison-file-table tr:hover {background-color: #ddd;}
 
-#uploaded-file-table th {
+#comparison-file-table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -314,25 +314,22 @@ ul li{
 										</select>
 										<div id="gb-info-div">
 										</div>
+										
 										<br>
 										<br>
+										
 										<div>
 											<hr style="border-color:rgb(255,0,0); background-color:rgb(255,0,0); margin:3px; height:3px">
 										
 											<span>
-											To Your Own Boundary <span 
-											data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." 
-											class="tooltip">(?)</span>:
+											<span style="display:inline-block">To:</span>
+											<select id="comparison-boundary-select" style="display:inline-block; width:90%" onchange="comparisonBoundaryChanged()">
+												<!--options should get dynamically populated here-->
+											</select>
 											</span>
 											
-											<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles//-->
-											
-											<span class="fas fa-file" style="padding:0px 3px important!">
-											<input class="fas" type="file" id="file-input" accept=".geojson">
-											</span>
-											
-											<output id="file-output">
-											</output>
+											<div id="comparison-info-div" style="padding:5px">
+											</div>
 											
 										</div>
 										
@@ -353,7 +350,7 @@ ul li{
 					
 					</div>
 					
-					<div id="table-comparison" class="row box" style="width:100%; margin:10px 0px">
+					<div id="table-comparison" class="row box" style="width:100%; margin:15px 0px">
 						<div id="left-table-div" style="width:49%">
 							<hr style="border-color:#319FD3; background-color:#319FD3; margin:3px; height:3px">
 							<h3>geoBoundaries:</h3>
@@ -361,7 +358,7 @@ ul li{
 						
 						<div id="right-table-div" style="width:48%">
 							<hr style="border-color:rgb(255,0,0); background-color:rgb(255,0,0); margin:3px; height:3px">
-							<h3>Uploaded File:</h3>
+							<h3>Comparison Boundary:</h3>
 						</div>
 					</div>
 					
@@ -522,6 +519,8 @@ ul li{
 	<script src="assets/js/ol.js"></script>
 	<script type="text/javascript">
 	
+		// contribute form popup actions
+	
 		function openContributePopup() {
 			var popup = document.getElementById('contribute-popup');
 			popup.className = "popup"; // is-visually-hidden";
@@ -539,6 +538,8 @@ ul li{
 			//container.className = "MainContainer";
 			//container.parentElement.className = "";
 		};
+		
+		// file upload stuff
 	
 		<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles/ -->
 		<!--https://web.dev/read-files/ -->
@@ -563,12 +564,15 @@ ul li{
 						format: new ol.format.GeoJSON({}),
 						overlaps: false,
 					});
-					// update the uploadLayer
-					updateUploadFileLayerFromGeoJSON(source, zoomToExtent=true);
+					// update the comparisonLayer
+					updateComparisonLayerFromGeoJSON(source, zoomToExtent=true);
 					// and also populate a table
 					source.on('change', function() {
+						<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles//-->
+						var div = document.getElementById('comparison-info-div');
+						
 						//////////////
-						// first make sure the source contains polygon types
+						// make sure the source contains polygon types
 						var features = source.getFeatures();
 						var geotype = features[0].getGeometry().getType();
 						if (!(['Polygon','MultiPolygon'].includes( geotype ))) {
@@ -577,15 +581,6 @@ ul li{
 						};
 						//////////////
 						// info div
-						// remove old div if exists
-						var div = document.getElementById('uploaded-file-info');
-						if (div) {
-							div.remove();
-						};
-						// create info div
-						var div = document.createElement("div");
-						div.id = 'uploaded-file-info';
-						document.getElementById('file-output').appendChild(div);
 						// create basic file info
 						var info = document.createElement("div");
 						info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
@@ -606,18 +601,18 @@ ul li{
 						////////////////////
 						// table div
 						// remove old div if exists
-						var div = document.getElementById('uploaded-file-preview');
+						var div = document.getElementById('comparison-file-preview');
 						if (div) {
 							div.remove();
 						};
 						// create table div
 						var div = document.createElement("div");
-						div.id = 'uploaded-file-preview';
+						div.id = 'comparison-file-preview';
 						div.style = 'max-height:500px; overflow:scroll; margin-top:10px';
 						document.getElementById('right-table-div').appendChild(div);
 						// create table
 						var table = document.createElement("table");
-						table.id = 'uploaded-file-table';
+						table.id = 'comparison-file-table';
 						table.style = 'margin-left:10px';
 						div.appendChild(table);
 						// first headers
@@ -665,8 +660,27 @@ ul li{
 				reader.readAsDataURL(file);
 			};
 		};
-
-		document.getElementById('file-input').addEventListener('change', handleFileUpload, false);
+		
+		function initFileUploadComparisonInfo() {
+			var div = document.getElementById('comparison-info-div');
+			
+			// set basic layout
+			div.innerHTML = '\
+				<span class="fas fa-file" style="padding:0px 3px important! width:auto"> \
+				<input class="fas" type="file" id="file-input" accept=".geojson"> \
+				</span> \
+				\
+				<span data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." class="tooltip"> \
+				(?) \
+				</span> \
+			';
+			
+			// bind file input action
+			document.getElementById('file-input').addEventListener('change', handleFileUpload, false);
+		};
+		
+		
+		// gb display stuff
 		
 		function updateGbInfo(features) {
 			// remove old div if exists
@@ -762,7 +776,8 @@ ul li{
 				};
 				table.appendChild(row);
 			};
-		}
+		};
+		
 		
 		// gb metadata stuff
 		
@@ -771,7 +786,7 @@ ul li{
 		function updateGbCountryDropdown() {
 			// NOTE: requires that gbMetadata has already been populated
 			// get country dropdown
-			var select = document.getElementById('country-select')
+			var select = document.getElementById('country-select');
 			// clear all existing dropdown options
 			select.innerHTML = '';
 			// get gb metadata
@@ -826,7 +841,9 @@ ul li{
 					// update the dropdown
 					updateGbCountryDropdown();
 					updateGbAdminLevelDropdown();
+					//gbAdminLevelChanged();
 					updateGbLayer(zoomToExtent=true);
+					updateComparisonBoundaries();
 				};
 				// parse
 				Papa.parse(url,
@@ -839,7 +856,9 @@ ul li{
 				// metadata already exists, just update the dropdown
 				updateGbCountryDropdown();
 				updateGbAdminLevelDropdown();
+				//gbAdminLevelChanged();
 				updateGbLayer(zoomToExtent=true);
+				updateComparisonBoundaries();
 			};
 		};
 		
@@ -847,6 +866,7 @@ ul li{
 			// NOTE: requires that gbMetadata has already been populated
 			// get admin-level dropdown
 			var select = document.getElementById('admin-level-select');
+			var selectVal = select.value;
 			// clear all existing dropdown options
 			select.innerHTML = '';
 			// get gb metadata
@@ -883,7 +903,215 @@ ul li{
 				opt.textContent = lvl;
 				select.appendChild(opt);
 			};
+			// keep the select on the same value (if still available)
+			if (adminLevels.includes(selectVal)) {
+				select.value = selectVal; 
+			};
+			// force dropdown change
+			gbAdminLevelChanged();
 		};
+		
+		
+		// comparison display stuff
+		
+		function clearComparisonInfo() {
+			// clear old div contents if exists
+			var div = document.getElementById('comparison-info-div');
+			div.innerHTML = '';
+		};
+		
+		function updateComparisonInfo(features) {
+			//alert('update comparison info');
+			// info div
+			var div = document.getElementById('comparison-info-div');
+			// clear
+			div.innerHTML = '';
+			// get geoContrast metadata
+			var iso = document.getElementById('country-select').value;
+			var level = document.getElementById('admin-level-select').value;
+			var sourceName = document.getElementById('comparison-boundary-select').value;
+			var metadata = geoContrastMetadata;
+			// loop metadata table until reach row matching current iso and level
+			for (row of metadata) {
+				var rowIso = row[2];
+				var rowLevel = row[4];
+				if (rowIso == iso & rowLevel == level) {
+					var comparisonSource = row[6] + ', ' + row[7];
+					var comparisonYear = row[3];
+					var comparisonUpdated = row[12];
+					break;
+				};
+			};
+			// populate info
+			var info = document.createElement("div");
+			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
+			info.innerHTML = '';
+			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
+			info.innerHTML += '<b>Source: </b>'+comparisonSource+'<br>';
+			info.innerHTML += '<b>Year: </b>'+comparisonYear+'<br>';
+			info.innerHTML += '<b>Last Update: </b>'+comparisonUpdated;
+			div.appendChild(info);
+		};
+		
+		function clearComparisonTable() {
+			// remove old div if exists
+			var div = document.getElementById('comparison-file-preview');
+			if (div) {
+				div.remove();
+			};
+		};
+		
+		function updateComparisonTable(features) {
+			////////////////////
+			// table div
+			// remove old div if exists
+			var div = document.getElementById('comparison-file-preview');
+			if (div) {
+				div.remove();
+			};
+			// create table div
+			var div = document.createElement("div");
+			div.id = 'comparison-file-preview';
+			div.style = 'max-height:500px; overflow:scroll; margin-top:10px';
+			document.getElementById('right-table-div').appendChild(div);
+			// create table
+			var table = document.createElement("table");
+			table.id = 'comparison-file-table';
+			table.style = 'margin-left:10px';
+			div.appendChild(table);
+			// first headers
+			for (feature of features) {
+				var row = document.createElement("tr");
+				// empty header for feature number
+				var cell = document.createElement("th");
+				cell.style = 'width:20px';
+				row.appendChild(cell);
+				// field headers
+				var props = feature.getProperties();
+				for (key in props) {
+					if (key == 'geometry') {continue};
+					var cell = document.createElement("th");
+					cell.innerHTML = key;
+					row.appendChild(cell);
+				};
+				table.appendChild(row);
+				break;
+			};
+			// then rows
+			i = 1;
+			for (feature of features) {
+				var row = document.createElement("tr");
+				// feature number
+				var cell = document.createElement("td");
+				cell.style = 'width:20px';
+				cell.innerHTML = i;
+				row.appendChild(cell);
+				i++;
+				// feature properties
+				var props = feature.getProperties();
+				for (key in props) {
+					if (key == 'geometry') {continue};
+					var cell = document.createElement("td");
+					var val = props[key];
+					cell.innerHTML = val;
+					row.appendChild(cell);
+				};
+				table.appendChild(row);
+			};
+		};
+		
+		
+		// comparison metadata stuff
+		
+		var geoContrastMetadata = null;
+		
+		function updateComparisonBoundaries() {
+			// fetch metadata if doesn't already exist in geoContrastMetadata
+			if (geoContrastMetadata == null) {
+				// determine url of metadata csv
+				url = 'https://raw.githubusercontent.com/wmgeolab/geoContrast/main/releaseData/geoContrast-meta.csv';
+				// define error and success
+				function error (err, file, inputElem, reason) {
+					alert('geoContrast metadata csv failed to load: '+url);
+				};
+				function success (result) {
+					// add the downloaded metadata to gbMetadata
+					geoContrastMetadata = result['data'];
+					// update the dropdown
+					// ???
+					updateComparisonBoundaryDropdown();
+				};
+				// parse
+				Papa.parse(url,
+							{'download':true,
+							'complete':success,
+							'error':error,
+							}
+				);
+			} else {
+				// metadata already exists, just update the dropdown
+				// ???
+				updateComparisonBoundaryDropdown();
+			};
+		};
+		
+		function updateComparisonBoundaryDropdown() {
+			//alert('update comparison boundary dropdown');
+			// get admin-level dropdown
+			var select = document.getElementById('comparison-boundary-select');
+			var selectVal = select.value;
+			// clear all existing dropdown options
+			select.innerHTML = '';
+			// get current country
+			var currentIso = document.getElementById('country-select').value;
+			var currentLevel = document.getElementById('admin-level-select').value;
+			// get geoContrast metadata
+			var metadata = geoContrastMetadata;
+			// get list of sources that match the specified country and admin-level
+			var sources = [];
+			for (var i = 1; i < metadata.length; i++) {
+				var row = metadata[i];
+				if (row.length <= 1) {
+					// ignore empty rows
+					i++;
+					continue;
+				};
+				var source = row[6];
+				var iso = row[2];
+				var level = row[4];
+				if (iso==currentIso & level==currentLevel) {
+					sources.push(source);
+				};
+			};
+			// sort
+			sources.sort()
+			// first add empty choice
+			opt = document.createElement('option');
+			opt.value = 'none';
+			opt.textContent = '(Choose Comparison Boundary)';
+			select.appendChild(opt);
+			// add new options from geoContrastMetadata
+			for (source of sources) {
+				var opt = document.createElement("option");
+				opt.value = source;
+				opt.textContent = 'Dataset: ' + source;
+				select.appendChild(opt);
+			};
+			// finally add custom upload boundary choice
+			opt = document.createElement('option');
+			opt.value = 'upload';
+			opt.textContent = 'Custom: Your Own Boundary';
+			select.appendChild(opt);
+			// keep the select on the same value (if still available)
+			if (sources.includes(selectVal)) {
+				select.value = selectVal; 
+			};
+			// force dropdown change
+			comparisonBoundaryChanged();
+		};
+		
+		
+		// dropdown change behavior
 		
 		function gbLicenseChanged() {
 			//alert('license changed');
@@ -896,19 +1124,134 @@ ul li{
 			//alert('country changed');
 			updateGbAdminLevelDropdown();
 			updateGbLayer(zoomToExtent=true);
+			updateComparisonBoundaries();
 		};
 		
 		function gbAdminLevelChanged() {
 			//alert('admin-level changed');
 			updateGbLayer(zoomToExtent=true);
+			updateComparisonBoundaries();
+		};
+
+		function comparisonBoundaryChanged() {
+			//alert('comparison-boundary changed');
+			// get user-selected params
+			iso3 = document.getElementById('country-select').value;
+			level = document.getElementById('admin-level-select').value;
+			comparison = document.getElementById('comparison-boundary-select').value;
+			// check which comparison source was selected
+			if (comparison == 'none') {
+				// empty choice selection, clear elements
+				clearComparisonInfo();
+				clearComparisonTable();
+				// clear comparison layer
+				clearComparisonLayer();
+			} else if (comparison == 'upload') {
+				// clear previous elements
+				clearComparisonInfo();
+				clearComparisonTable();
+				// setup the file input elements
+				initFileUploadComparisonInfo();
+				// clear comparison layer
+				clearComparisonLayer();
+			} else {
+				// update comparison layer with external geoContrast topojson
+				updateComparisonLayerWithGeoContrast(zoomToExtent=true);
+			};
 		};
 		
 		
 		// update layer stuff
 		
-		function updateUploadFileLayerFromGeoJSON(source, zoomToExtent=false) {
+		function updateGbLayer(zoomToExtent=false) {
+			// get user-selected params
+			iso3 = document.getElementById('country-select').value;
+			level = document.getElementById('admin-level-select').value;
+			license = document.getElementById('license-select').value;
+			// construct data url from params
+			url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gb'+license+'/'+iso3+'/'+level+'/geoBoundaries-'+iso3+'-'+level+'.topojson';
+			//alert(url);
+			// get the source
+			var source = new ol.source.Vector({
+				url: url,
+				format: new ol.format.TopoJSON({}),
+				overlaps: false,
+			});
+			gbLayer.setSource(source);
+			// zoom to new source after source has finished loading
+			if (zoomToExtent) {
+				source.on('change', function() {
+					//alert('gb loaded, zoom to bbox: '+source.getExtent());
+					// zoom to extent
+					map.getView().fit(source.getExtent());
+					// zoom out a little
+					map.getView().setZoom(map.getView().getZoom()-1);
+				});
+			};
+			// update the table after source has finished loading
+			source.on('change', function() {
+				//alert('gb loaded, update info');
+				var features = source.getFeatures();
+				updateGbTable(features);
+				updateGbInfo(features);
+			});
+			// notify if failed to load source
+			source.on(['error','featuresloaderror'], function() {
+				alert('Failed to load source from '+source.getUrl()+'. Please choose another source.');
+			});
+		};
+		
+		function clearComparisonLayer() {
+			source = new ol.source.Vector({
+				url: null,
+				format: new ol.format.TopoJSON({}),
+				overlaps: false,
+			});
+			comparisonLayer.setSource(source);
+		};
+		
+		function updateComparisonLayerWithGeoContrast(zoomToExtent=false) {
+			// get selected source
+			sourceName = document.getElementById('comparison-boundary-select').value;
+			if (sourceName == null) {
+				return
+			};
+			// construct data url from params
+			url = 'https://raw.githubusercontent.com/wmgeolab/geoContrast/main/releaseData/'+sourceName+'/'+iso3+'/'+level+'/'+sourceName+'_'+iso3+'_'+level+'.topojson';
+			//alert(url);
+			// get the source
+			var source = new ol.source.Vector({
+				url: url,
+				format: new ol.format.TopoJSON({}),
+				overlaps: false,
+			});
+			comparisonLayer.setSource(source);
+			// update the table after source has finished loading
+			if (zoomToExtent) {
+				source.on('change', function() {
+					//alert('comparison loaded, zoom to bbox: '+source.getExtent());
+					// zoom to extent
+					map.getView().fit(source.getExtent());
+					// zoom out a little
+					map.getView().setZoom(map.getView().getZoom()-1);
+				});
+			};
+			// update the table after source has finished loading
+			source.on('change', function() {
+				//alert('comparison loaded, update info');
+				features = source.getFeatures();
+				updateComparisonTable(features);
+				updateComparisonInfo(features);
+			});
+			// notify if failed to load source
+			source.on(['error','featuresloaderror'], function() {
+				alert('Failed to load source from '+source.getUrl()+'. Please choose another source.');
+			});
+		};
+		
+		function updateComparisonLayerFromGeoJSON(source, zoomToExtent=false) {
 			// set the new source
-			uploadLayer.setSource(source);
+			comparisonLayer.setSource(source);
 			// zoom to new source after source has finished loading
 			if (zoomToExtent) {
 				source.on('change', function() {
@@ -929,43 +1272,6 @@ ul li{
 			});
 		};
 		
-		function updateGbLayer(zoomToExtent=false) {
-			// get user-selected params
-			iso3 = document.getElementById('country-select').value;
-			level = document.getElementById('admin-level-select').value;
-			license = document.getElementById('license-select').value;
-			// construct data url from params
-			url = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gb'+license+'/'+iso3+'/'+level+'/geoBoundaries-'+iso3+'-'+level+'.topojson';
-			//alert(url);
-			// get the source
-			source = new ol.source.Vector({
-				url: url,
-				format: new ol.format.TopoJSON({}),
-				overlaps: false,
-			});
-			gbLayer.setSource(source);
-			// zoom to new source after source has finished loading
-			if (zoomToExtent) {
-				source.on('change', function() {
-					//alert('new bbox: '+source.getExtent());
-					// zoom to extent
-					map.getView().fit(source.getExtent());
-					// zoom out a little
-					map.getView().setZoom(map.getView().getZoom()-1);
-				});
-			};
-			// update the table after source has finished loading
-			source.on('change', function() {
-				features = source.getFeatures();
-				updateGbTable(features);
-				updateGbInfo(features);
-			});
-			// notify if failed to load source
-			source.on(['error','featuresloaderror'], function() {
-				alert('Failed to load source from '+source.getUrl()+'. Please choose another source.');
-			});
-		};
-		
 		// layer definitions
 	
 		var gbStyle = new ol.style.Style({
@@ -981,7 +1287,7 @@ ul li{
 			style: gbStyle,
 		});
 		
-		var uploadStyle = new ol.style.Style({
+		var comparisonStyle = new ol.style.Style({
 			fill: new ol.style.Fill({
 				color: 'rgba(255, 255, 255, 0)', // fully transparent
 			}),
@@ -990,8 +1296,8 @@ ul li{
 				width: 1,
 			}),
 		});
-		var uploadLayer = new ol.layer.Vector({
-			style: uploadStyle,
+		var comparisonLayer = new ol.layer.Vector({
+			style: comparisonStyle,
 		});
 		
 		// map
@@ -1008,7 +1314,7 @@ ul li{
 					maxZoom: 20,
 				})}),
 			  gbLayer,
-			  uploadLayer
+			  comparisonLayer
 			],
 			view: new ol.View({
 			  center: ol.proj.fromLonLat([37.41, 8.82]),
