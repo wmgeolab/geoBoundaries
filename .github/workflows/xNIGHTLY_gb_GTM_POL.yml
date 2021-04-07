@@ -1,7 +1,7 @@
 on:
   workflow_dispatch
   
-name: xNIGHTLY_gB
+name: xNIGHTLY_gB_GTM_POL
 jobs:
   gbBuild_GTM_ISL:
     runs-on: ubuntu-latest
