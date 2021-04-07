@@ -1,0 +1,14 @@
+boundaryID : KHM-ADM2-14789045
+boundaryISO : KHM
+boundaryType : ADM2
+boundaryYear : 2014.0
+boundarySource-1 : Open Development Mekong
+boundarySource-2 : Open Development Cambodia
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : Creative Commons
+licenseSource : https//opendevelopmentcambodia.net/dataset/?id=administrative-boundaries-of-cambodia-2014
+boundarySourceURL : https//opendevelopmentcambodia.net/dataset/?id=administrative-boundaries-of-cambodia-2014
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KHM_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 07, 2021

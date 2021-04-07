@@ -1,0 +1,14 @@
+boundaryID : CIV-ADM2-77406652
+boundaryISO : CIV
+boundaryType : ADM2
+boundaryYear : 2019
+boundarySource-1 : ComitÃÂ© National de TÃÂ©lÃÂ©dÃÂ©tection et d'Information GÃÂ©ographique (CNTIG)
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs Cote d'Ivoire
+boundaryCanonical : Region
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only
+licenseSource : https//data.humdata.org/dataset/cote-d-ivoire-administrative-level-0-3-boundaries-and-points
+boundarySourceURL : https//data.humdata.org/dataset/cote-d-ivoire-administrative-level-0-3-boundaries-and-points
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/CIV_ADM2.zip
+sourceDataUpdateDate : Oct 23, 2020
+buildUpdateDate : Apr 05, 2021

@@ -1,0 +1,14 @@
+boundaryID : ERI-ADM2-59038191
+boundaryISO : ERI
+boundaryType : ADM2
+boundaryYear : 2020
+boundarySource-1 : HumData
+boundarySource-2 : 
+boundaryCanonical : districts
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/eritrea-admin-level-1-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/eritrea-admin-level-1-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ERI_ADM2.zip
+sourceDataUpdateDate : Mar 20, 2021
+buildUpdateDate : Apr 02, 2021

@@ -1,0 +1,14 @@
+boundaryID : ITA-ADM1-99219370
+boundaryISO : ITA
+boundaryType : ADM1
+boundaryYear : 2016.0
+boundarySource-1 : ISTAT
+boundarySource-2 : National Institute of Statistics
+boundaryCanonical : 
+boundaryLicense : Attribuzione 3.0 Italia (CC BY 3.0 IT)
+licenseDetail : nan
+licenseSource : https//www.istat.it/it/note-legali
+boundarySourceURL : http//www.istat.it/it/archivio/124086
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ITA_ADM1.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 07, 2021

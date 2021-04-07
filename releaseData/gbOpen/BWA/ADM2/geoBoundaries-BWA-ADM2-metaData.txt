@@ -1,0 +1,14 @@
+boundaryID : BWA-ADM2-55941954
+boundaryISO : BWA
+boundaryType : ADM2
+boundaryYear : 2015.0
+boundarySource-1 : RCMRD
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Public Domain
+licenseDetail : PD
+licenseSource : http//geoportal.rcmrd.org/layers/servir%3Abotswana_adm2#license-more-above
+boundarySourceURL : http//geoportal.rcmrd.org/layers/servir%3Abotswana_adm2#more
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BWA_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 05, 2021
