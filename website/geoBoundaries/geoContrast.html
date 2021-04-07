@@ -708,6 +708,7 @@ ul li{
 					var gbLicenseUrl = row[10].replace('https//', 'https://'); // fix url typos
 					var gbYear = row[3];
 					var gbUpdated = row[12];
+					var gbDownloadUrl = 'https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/sourceData/gb'+license+'/'+iso+'_'+level+'.zip'; // maybe use csv apiUrl once that's fixed? 
 					break;
 				};
 			};
@@ -715,11 +716,13 @@ ul li{
 			var info = document.createElement("div");
 			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 			info.innerHTML = '';
+			info.innerHTML += '<div><b style="vertical-align:middle">Actions: </b><a href="'+gbDownloadUrl+'" download><img src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png" height="20px" style="vertical-align:middle"></a></div>';
 			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
 			info.innerHTML += '<b>Source: </b><a href="'+gbSourceUrl+'" target="_blank">'+gbSource+'</a><br>';
 			info.innerHTML += '<b>License: </b><a href="'+gbLicenseUrl+'" target="_blank">'+gbLicense+'</a><br>';
 			info.innerHTML += '<b>Year the Boundary Represents: </b>'+gbYear+'<br>';
 			info.innerHTML += '<b>Last Update: </b>'+gbUpdated;
+			
 			div.appendChild(info);
 		};
 		
@@ -946,6 +949,7 @@ ul li{
 					var comparisonLicenseUrl = row[10];
 					var comparisonYear = row[3];
 					var comparisonUpdated = row[12];
+					var comparisonDownloadUrl = 'https://raw.githubusercontent.com/wmgeolab/geoContrast/main/releaseData/'+sourceName+'/'+iso+'/'+level+'/'+sourceName+'_'+iso+'_'+level+'.topojson'; // should point to zipfile? also maybe use csv apiUrl once that's fixed? 
 					break;
 				};
 			};
@@ -953,11 +957,13 @@ ul li{
 			var info = document.createElement("div");
 			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 			info.innerHTML = '';
+			info.innerHTML += '<div><b style="vertical-align:middle">Actions: </b><a href="'+comparisonDownloadUrl+'" download><img src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png" height="20px" style="vertical-align:middle"></a></div>';
 			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
 			info.innerHTML += '<b>Source: </b><a href="'+comparisonSourceUrl+'" target="_blank">'+comparisonSource+'</a><br>';
 			info.innerHTML += '<b>License: </b><a href="'+comparisonLicenseUrl+'" target="_blank">'+comparisonLicense+'</a><br>';
 			info.innerHTML += '<b>Year the Boundary Represents: </b>'+comparisonYear+'<br>';
 			info.innerHTML += '<b>Last Update: </b>'+comparisonUpdated;
+			
 			div.appendChild(info);
 		};
 		
