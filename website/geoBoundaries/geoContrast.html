@@ -338,7 +338,7 @@ ul li{
 									</div>
 
 									<div id="BYOB" class="box" style="height:575px">
-										asdf
+										Coming soon! 
 									</div>
 
 
@@ -703,6 +703,9 @@ ul li{
 				var rowLevel = row[4];
 				if (rowIso == iso & rowLevel == level) {
 					var gbSource = row[6] + ', ' + row[7];
+					var gbSourceUrl = row[11].replace('https//', 'https://'); // fix url typos
+					var gbLicense = row[8];
+					var gbLicenseUrl = row[10].replace('https//', 'https://'); // fix url typos
 					var gbYear = row[3];
 					var gbUpdated = row[12];
 					break;
@@ -713,8 +716,9 @@ ul li{
 			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 			info.innerHTML = '';
 			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
-			info.innerHTML += '<b>Source: </b>'+gbSource+'<br>';
-			info.innerHTML += '<b>Year: </b>'+gbYear+'<br>';
+			info.innerHTML += '<b>Source: </b><a href="'+gbSourceUrl+'" target="_blank">'+gbSource+'</a><br>';
+			info.innerHTML += '<b>License: </b><a href="'+gbLicenseUrl+'" target="_blank">'+gbLicense+'</a><br>';
+			info.innerHTML += '<b>Year the Boundary Represents: </b>'+gbYear+'<br>';
 			info.innerHTML += '<b>Last Update: </b>'+gbUpdated;
 			div.appendChild(info);
 		};
@@ -937,6 +941,9 @@ ul li{
 				var rowLevel = row[4];
 				if (rowIso == iso & rowLevel == level) {
 					var comparisonSource = row[6] + ', ' + row[7];
+					var comparisonSourceUrl = row[11];
+					var comparisonLicense = row[8];
+					var comparisonLicenseUrl = row[10];
 					var comparisonYear = row[3];
 					var comparisonUpdated = row[12];
 					break;
@@ -947,8 +954,9 @@ ul li{
 			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 			info.innerHTML = '';
 			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
-			info.innerHTML += '<b>Source: </b>'+comparisonSource+'<br>';
-			info.innerHTML += '<b>Year: </b>'+comparisonYear+'<br>';
+			info.innerHTML += '<b>Source: </b><a href="'+comparisonSourceUrl+'" target="_blank">'+comparisonSource+'</a><br>';
+			info.innerHTML += '<b>License: </b><a href="'+comparisonLicenseUrl+'" target="_blank">'+comparisonLicense+'</a><br>';
+			info.innerHTML += '<b>Year the Boundary Represents: </b>'+comparisonYear+'<br>';
 			info.innerHTML += '<b>Last Update: </b>'+comparisonUpdated;
 			div.appendChild(info);
 		};
@@ -1088,7 +1096,7 @@ ul li{
 			// first add empty choice
 			opt = document.createElement('option');
 			opt.value = 'none';
-			opt.textContent = '(Choose Comparison Boundary)';
+			opt.textContent = '<None>';
 			select.appendChild(opt);
 			// add new options from geoContrastMetadata
 			for (source of sources) {
