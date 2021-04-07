@@ -1,0 +1,14 @@
+boundaryID : KEN-ADM3-73289541
+boundaryISO : KEN
+boundaryType : ADM3
+boundaryYear : 2019
+boundarySource-1 : Humdata
+boundarySource-2 : American Red Cross
+boundaryCanonical : wards
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/administrative-wards-in-kenya-1450
+boundarySourceURL : https//data.humdata.org/dataset/administrative-wards-in-kenya-1450
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KEN_ADM3.zip
+sourceDataUpdateDate : Jan 11, 2021
+buildUpdateDate : Apr 07, 2021
