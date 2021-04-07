@@ -1,0 +1,14 @@
+boundaryID : LKA-ADM4-16625809
+boundaryISO : LKA
+boundaryType : ADM4
+boundaryYear : 2017
+boundarySource-1 : The Survey Department of Sri Lanka, National Building Research Organisation (NBRO), Disaster Management Centre (DMC)
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+boundaryCanonical : Grama Niladhari
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only - Noted in metadata tab
+licenseSource : https//data.humdata.org/about/license
+boundarySourceURL : https//data.humdata.org/dataset/sri-lanka-administrative-levels-0-4-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/LKA_ADM4.zip
+sourceDataUpdateDate : Nov 11, 2020
+buildUpdateDate : Apr 07, 2021
