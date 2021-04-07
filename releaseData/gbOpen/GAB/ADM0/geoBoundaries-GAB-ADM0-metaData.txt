@@ -1,0 +1,14 @@
+boundaryID : GAB-ADM0-20333010
+boundaryISO : GAB
+boundaryType : ADM0
+boundaryYear : 2020
+boundarySource-1 : geoBoundaries
+boundarySource-2 : OSM Boundaries
+boundaryCanonical : Gabonese Republic
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : 
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//osm-boundaries.com
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GAB_ADM0.zip
+sourceDataUpdateDate : Nov 05, 2020
+buildUpdateDate : Apr 02, 2021

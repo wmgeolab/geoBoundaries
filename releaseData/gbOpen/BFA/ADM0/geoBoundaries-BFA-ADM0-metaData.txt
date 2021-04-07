@@ -11,4 +11,4 @@ licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
 boundarySourceURL : https//datacatalog.worldbank.org/dataset/burkina-faso-administrative-boundaries-2017
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BFA_ADM0.zip
 sourceDataUpdateDate : Nov 08, 2020
-buildUpdateDate : Mar 19, 2021
+buildUpdateDate : Apr 05, 2021

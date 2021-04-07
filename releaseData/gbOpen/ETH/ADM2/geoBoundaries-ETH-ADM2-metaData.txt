@@ -11,4 +11,4 @@ licenseSource : https//africaopendata.org/dataset/ethiopia-shapefiles
 boundarySourceURL : https//africaopendata.org/dataset/ethiopia-shapefiles
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ETH_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 22, 2021
+buildUpdateDate : Apr 05, 2021
