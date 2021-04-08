@@ -7,11 +7,20 @@ jobs:
     runs-on: ubuntu-latest
     container: docker://geogdan/geoboundaries:A
     steps:        
-    - name: Download Repository Code
-      uses: actions/checkout@v2.3.2
-      with:
-        lfs: true
-        persist-credentials: false
+    - name: Download Metadata
+      run: |
+           cd $GITHUB_WORKSPACE
+           cd ..
+           rm -r geoBoundaries
+           git clone --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+           echo "=============="
+           cd geoBoundaries
+           echo "=============="
+           git sparse-checkout set "*.json"
+           git sparse-checkout add ".gitattrbutes"
+           git sparse-checkout add ".gitignore"
+           git sparse-checkout add ".csv"
+           git checkout 
    
     - name: Install CSV Build Script
       run: |
