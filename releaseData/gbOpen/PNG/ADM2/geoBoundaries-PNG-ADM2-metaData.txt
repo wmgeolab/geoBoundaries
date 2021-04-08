@@ -1,0 +1,14 @@
+boundaryID : PNG-ADM2-46776312
+boundaryISO : PNG
+boundaryType : ADM2
+boundaryYear : 2019
+boundarySource-1 : Papua New Guinea National Statistics Office
+boundarySource-2 : OCHA ROAP
+boundaryCanonical : District
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/papua-new-guinea-admin-level-0-international-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/papua-new-guinea-admin-level-0-international-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PNG_ADM2.zip
+sourceDataUpdateDate : Mar 01, 2021
+buildUpdateDate : Apr 08, 2021
