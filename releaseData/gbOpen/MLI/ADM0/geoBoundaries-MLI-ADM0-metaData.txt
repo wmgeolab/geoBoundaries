@@ -1,0 +1,14 @@
+boundaryID : MLI-ADM0-42491065
+boundaryISO : MLI
+boundaryType : ADM0
+boundaryYear : 2015.0
+boundarySource-1 : DNCT - Direction Nationale des ColelctivitÃÂ©s Territorielles, DNP - Direction Nationale de la Population
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs, Mali
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/mali-admin-boundaries-level-1-2-and-3-including-2017-population-desagregated-by-sexe
+boundarySourceURL : https//data.humdata.org/dataset/mali-admin-boundaries-level-1-2-and-3-including-2017-population-desagregated-by-sexe
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MLI_ADM0.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 08, 2021
