@@ -106,13 +106,20 @@ jobs:
              pip3 install matplotlib
              pip3 install PyGithub
       
-      - name: Download Repository Code
-        uses: actions/checkout@v2.3.2
-        with:
-         ref: ${{ github.event.pull_request.head.sha }}
-  
-      - name: Post-Download Initialization Steps
-        run: git clone https://github.com/wmgeolab/geoBoundaryBot
+      - name: Checkout Source Directory
+        run: |
+             cd $GITHUB_WORKSPACE
+             cd ..
+             rm -r geoBoundaries
+             git clone --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+             echo "=============="
+             cd geoBoundaries
+             echo "=============="
+             git sparse-checkout set "sourceData/"
+             git sparse-checkout add ".gitattrbutes"
+             git sparse-checkout add ".gitignore"
+             git checkout ${{ github.event.pull_request.head.sha }}
+             git clone https://github.com/wmgeolab/geoBoundaryBot
   
       - id: changes
         name: Detect Proposed Changes
@@ -174,13 +181,20 @@ jobs:
               pip3 install matplotlib
               pip3 install PyGithub
       
-      - name: Download Repository Code
-        uses: actions/checkout@v2.3.2
-        with:
-         ref: ${{ github.event.pull_request.head.sha }}
-          
-      - name: Post-Download Initialization Steps
-        run: git clone https://github.com/wmgeolab/geoBoundaryBot
+      - name: Checkout Source Directory
+        run: |
+             cd $GITHUB_WORKSPACE
+             cd ..
+             rm -r geoBoundaries
+             git clone --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+             echo "=============="
+             cd geoBoundaries
+             echo "=============="
+             git sparse-checkout set "sourceData/"
+             git sparse-checkout add ".gitattrbutes"
+             git sparse-checkout add ".gitignore"
+             git checkout ${{ github.event.pull_request.head.sha }}
+             git clone https://github.com/wmgeolab/geoBoundaryBot
   
       - id: changes
         name: Detect Proposed Changes
