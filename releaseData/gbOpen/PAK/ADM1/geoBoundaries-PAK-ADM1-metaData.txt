@@ -1,0 +1,14 @@
+boundaryID : PAK-ADM1-72330702
+boundaryISO : PAK
+boundaryType : ADM1
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : OSM-Boundaries
+boundaryCanonical : Provinces (with one federally-administrative territory)
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PAK_ADM1.zip
+sourceDataUpdateDate : Nov 09, 2020
+buildUpdateDate : Apr 08, 2021
