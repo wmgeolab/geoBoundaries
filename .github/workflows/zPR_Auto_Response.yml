@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: Initialize Linux Environment
       run: |
+           echo ${{ github.event.pull_request.head.sha }}
            apt-get update
            apt-get install -y software-properties-common
            add-apt-repository ppa:git-core/ppa
@@ -36,7 +37,7 @@ jobs:
            git sparse-checkout set "sourceData/"
            git sparse-checkout add ".gitattrbutes"
            git sparse-checkout add ".gitignore"
-           git checkout
+           git checkout ${{ github.event.pull_request.head.sha }}
            git clone https://github.com/wmgeolab/geoBoundaryBot
            
     #- name: Download Repository Code
