@@ -4,17 +4,17 @@ Metadata for: RORGPREEDUF
 Full Variable Name:  Female participation rate in organized learning (one year before the official primary entry age)
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Female participation rate in organized learning (one year before the official primary entry age)
+Units: Percent of female population
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://unstats.un.org/sdgs/metadata/
 Source 1: UIS Statistics
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-4-2-2-participation-rate-in-organized-learning-one-year-before-the-official-primary-entry-age-by-sex-percent
+Source 2: N/A
+License: Public Domain
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-4-2-2-participation-rate-in-organized-learning-one-year-before-the-official-primary-entry-age-by-sex-percent-5?geometry=102.429%2C-39.570%2C-96.204%2C62.146
 Tag(s): Education
-Other Notes: 
+Other Notes: N/A
