@@ -4,7 +4,7 @@ Metadata for: HLTHEXPTFP
 Full Variable Name: Proportion of the population with household expenditures on health representing greater than 25% of total household expenditure or income 
 ==============================================================
 
-Data Definition: Proportion of the population with household expenditures on health representing greater than 25% of total household expenditure or in
+Data Definition: Proportion of the population with household expenditures on health representing greater than 25% of total household expenditure or income
 Units: Percent of population with health expenditures greater than 25% of total income
 Data Representative Of Year(s): 2015-2015
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
