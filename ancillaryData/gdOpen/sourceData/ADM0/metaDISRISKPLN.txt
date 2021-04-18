@@ -4,17 +4,17 @@ Metadata for: DISRISKPLN
 Full Variable Name: Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies
+Units: Percent of local governments
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=77ad561608f04acfa65494c0e8767a04
 Source 1: Sendai Framework Monitoring System as provided by designated national focal points (2019)
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: No License Specified
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
 Link to Source Data: https://www.sdg.org/datasets/indicator-1-5-4-number-of-local-governments-number-2/data?page=10
-Tag(s): nan
+Tag(s): Sustainability
 Other Notes: 
