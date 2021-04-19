@@ -1,0 +1,14 @@
+boundaryID : QAT-ADM2-91078587
+boundaryISO : QAT
+boundaryType : ADM2
+boundaryYear : 2015.0
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Qatar Open Data Portal
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : nan
+licenseSource : https//www.data.gov.qa/pages/license/annexes
+boundarySourceURL : https//www.data.gov.qa/explore/dataset/gis-statistics/export/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/QAT_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 19, 2021
