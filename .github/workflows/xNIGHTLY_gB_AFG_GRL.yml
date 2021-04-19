@@ -1,7 +1,7 @@
 on:
   workflow_dispatch
   
-name: xNIGHTLY_gB
+name: xNightly_AFG_GRL
 jobs:
   gbBuild_AFG_AZE:
     runs-on: ubuntu-latest
