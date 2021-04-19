@@ -1,7 +1,7 @@
 on:
   workflow_dispatch
   
-name: xNIGHTLY_gB_GTM_POL
+name: xNightly_PRK_ZWE
 jobs:
   gbBuild_PRK_SGP:
     runs-on: ubuntu-latest
