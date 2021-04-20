@@ -12,7 +12,7 @@ Each row ID is defined by: ISO 3166-1 alpha-3
 Data Processing Methodology: N/A
 Data Collection Methodology (or link to documentation): Downloaded from source link (https://unstats.un.org/sdgs/indicators/database/)
 Source 1: United Nations
-Source 2: 
+Source 2: N/A
 License: No license specified
 License Source: https://www.un.org/en/sections/about-website/terms-use/index.html
 Link to Source Data: https://unstats.un.org/sdgs/indicators/database/
