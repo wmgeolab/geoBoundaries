@@ -4,17 +4,17 @@ Metadata for: MTGREENIDX
 Full Variable Name: Mountain Green Cover Index
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition:  Mountain Green Cover Index
+Units: Index
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): Downloaded from source link (https://www.sdg.org/datasets/indicator-15-4-2-mountain-green-cover-area-square-kilometres-5?geometry=-29.224%2C-66.041%2C98.042%2C82.647)
 Source 1: FAO
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-15-4-2-mountain-green-cover-index
+Source 2: N/A
+License: No license provided 
+License Source: https://www.sdg.org/datasets/indicator-15-4-2-mountain-green-cover-area-square-kilometres-5?geometry=-29.224%2C-66.041%2C98.042%2C82.647
+Link to Source Data: https://www.sdg.org/datasets/indicator-15-4-2-mountain-green-cover-area-square-kilometres-5?geometry=-29.224%2C-66.041%2C98.042%2C82.647
 Tag(s): Sustainability
-Other Notes: 
+Other Notes: N/A
