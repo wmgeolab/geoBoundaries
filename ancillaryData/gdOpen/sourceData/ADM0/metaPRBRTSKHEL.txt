@@ -4,17 +4,17 @@ Metadata for: PRBRTSKHEL
 Full Variable Name: Proportion of births attended by skilled health care personnel
 ==============================================================
 
-Data Definition: 
-Units: 
-Data Representative Of Year(s): 20-20
+Data Definition: 3.1.2
+Units: %
+Data Representative Of Year(s): 16-16
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): http://hdr.undp.org/en/data
 Source 1: Human Development Reports
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: public domain
+License Source: n/a
 Link to Source Data: http://hdr.undp.org/en/data
 Tag(s): Health
-Other Notes: 
+Other Notes: n/a
