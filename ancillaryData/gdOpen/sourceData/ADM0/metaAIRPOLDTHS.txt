@@ -16,5 +16,5 @@ Source 2: N/A
 License: Public Domain
 License Source: https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets
 Link to Source Data: https://data.worldbank.org/indicator/SH.STA.AIRP.P5
-Tag(s): Health, Polution
+Tag(s): Health, Pollution
 Other Notes: N/A
