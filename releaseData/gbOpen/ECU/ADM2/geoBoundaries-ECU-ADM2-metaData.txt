@@ -1,14 +1,14 @@
-boundaryID : ECU-ADM2-42138244
+boundaryID : ECU-ADM2-48306253
 boundaryISO : ECU
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2019
+boundarySource-1 : INEC - Instituto Nacional de Estadística y Censos
+boundarySource-2 : OCHA ROLAC
+boundaryCanonical : Cantons
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/ecuador-admin-level-2-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/ecuador-admin-level-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ECU_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 26, 2021
+sourceDataUpdateDate : Apr 10, 2021
+buildUpdateDate : Apr 16, 2021

@@ -1,0 +1,14 @@
+boundaryID : MDG-ADM2-25024240
+boundaryISO : MDG
+boundaryType : ADM2
+boundaryYear : 2017
+boundarySource-1 : United Nations Office for the Coordination of Humanitarian Affairs ROSA
+boundarySource-2 : nan
+boundaryCanonical : District
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only - Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/madagascar-administrative-level-0-4-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/madagascar-administrative-level-0-4-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/MDG_ADM2.zip
+sourceDataUpdateDate : Nov 02, 2020
+buildUpdateDate : Apr 07, 2021

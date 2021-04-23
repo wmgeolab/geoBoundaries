@@ -11,4 +11,4 @@ licenseSource : https//www.data.gouv.fr/en/datasets/contours-osm-des-cantons-ele
 boundarySourceURL : https//www.data.gouv.fr/en/datasets/contours-osm-des-cantons-electoraux-departementaux-2015/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FRA_ADM4.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Mar 26, 2021
+buildUpdateDate : Apr 05, 2021
