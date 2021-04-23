@@ -1,0 +1,14 @@
+boundaryID : GHA-ADM1-69750345
+boundaryISO : GHA
+boundaryType : ADM1
+boundaryYear : 2021
+boundarySource-1 : Open Street Map
+boundarySource-2 : 
+boundaryCanonical : Region
+boundaryLicense : Creative Commons Attribution-ShareAlike 2.0
+licenseDetail : 
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//osm-boundaries.com/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GHA_ADM1.zip
+sourceDataUpdateDate : Feb 21, 2021
+buildUpdateDate : Apr 05, 2021

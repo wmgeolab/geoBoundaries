@@ -4,17 +4,17 @@ Metadata for: LRPLTRECON
 Full Variable Name: Number of local plant species with sufficient genetic information secured in either medium- or long-term conservation facilities to reconstitute the breed in the case of an extinction
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Number of local plant species with sufficient genetic information secured in either medium- or long-term conservation facilities to reconstitute the breed in the case of an extinction
+Units: Number of local plant species
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=802b621a46bf40eb9a2c8f6e4790b372
 Source 1: FAO
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-2-5-1-plant-breeds-for-which-sufficient-genetic-resources-are-stored-number
+Source 2: N/A
+License: No License Specified
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-2-5-1-plant-breeds-for-which-sufficient-genetic-resources-are-stored-number-5
 Tag(s): Agriculture
-Other Notes: 
+Other Notes: N/A

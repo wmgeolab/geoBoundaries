@@ -4,17 +4,17 @@ Metadata for: SEXVIOLENC
 Full Variable Name: Proportion of young women and men aged 18–29 years who experienced sexual violence by age 18
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Proportion of young women and men aged 18–29 years who experienced sexual violence by age 18
+Units: Percent
 Data Representative Of Year(s): 2016-2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
-Source 1: DHS
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-16-2-3-proportion-of-population-aged-18-29-years-who-experienced-sexual-violence-by-age-18-by-sex-percent-of-population-aged-18-29
-Tag(s): nan
-Other Notes: 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): Downloaded from source link (https://ourworldindata.org/grapher/women-who-experienced-sexual-violence-by-age-18?tab=table)
+Source 1: World Bank
+Source 2: N/A
+License: CC by 4.0
+License Source: https://sdg-tracker.org/about
+Link to Source Data: https://ourworldindata.org/grapher/women-who-experienced-sexual-violence-by-age-18?tab=table
+Tag(s): Health
+Other Notes: N/A

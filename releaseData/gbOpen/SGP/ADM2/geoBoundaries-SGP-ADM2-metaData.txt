@@ -1,0 +1,14 @@
+boundaryID : SGP-ADM2-91842731
+boundaryISO : SGP
+boundaryType : ADM2
+boundaryYear : 2016
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Urban Redevelopment Authority
+boundaryCanonical : Divisions
+boundaryLicense : Singapore Open Data License Version 1.0
+licenseDetail : 
+licenseSource : https//data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea
+boundarySourceURL : https//data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SGP_ADM2.zip
+sourceDataUpdateDate : Jan 12, 2021
+buildUpdateDate : Apr 19, 2021

@@ -4,17 +4,17 @@ Metadata for: FFUELFPTON
 Full Variable Name: Material footprint of fossil fuels (tonnes)
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Material footprint of fossil fuels (tonnes)
+Units: Tonnes of raw material
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=5e5a42c2959e47adad7c0b298d903d6e
 Source 1: Environment Live / Global Material Flows Database
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-8-4-1-material-footprint-by-type-of-raw-material-tonnes
-Tag(s): nan
-Other Notes: 
+Source 2: N/A
+License: National
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-8-4-1-material-footprint-by-type-of-raw-material-tonnes-2?geometry=-161.367%2C-76.680%2C161.367%2C76.680
+Tag(s): Environment
+Other Notes: N/A

@@ -1,0 +1,14 @@
+boundaryID : PRT-ADM2-39676363
+boundaryISO : PRT
+boundaryType : ADM2
+boundaryYear : 2016.0
+boundarySource-1 : DG Territory
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open data noted on source page
+licenseSource : https//snig.dgterritorio.gov.pt/rndg/srv/por/catalog.search#/metadata/5e3debf1-6cde-4ff2-8301-a86799231908
+boundarySourceURL : https//snig.dgterritorio.gov.pt/rndg/srv/por/catalog.search#/metadata/5e3debf1-6cde-4ff2-8301-a86799231908
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PRT_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 19, 2021

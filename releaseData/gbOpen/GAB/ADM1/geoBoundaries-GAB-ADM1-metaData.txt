@@ -1,0 +1,14 @@
+boundaryID : GAB-ADM1-68666066
+boundaryISO : GAB
+boundaryType : ADM1
+boundaryYear : 2020
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : OSM Boundaries
+boundaryCanonical : Provinces
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : 
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//osm-boundaries.com
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GAB_ADM1.zip
+sourceDataUpdateDate : Nov 02, 2020
+buildUpdateDate : Apr 05, 2021

@@ -1,0 +1,14 @@
+boundaryID : LUX-ADM3-36161258
+boundaryISO : LUX
+boundaryType : ADM3
+boundaryYear : 2018.0
+boundarySource-1 : Le Gouvernement du Grande Duche de Luxembourg
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Public Domain
+licenseDetail : Public Domain
+licenseSource : https//data.public.lu/en/datasets/limites-administratives-du-grand-duche-de-luxembourg/
+boundarySourceURL : https//data.public.lu/en/datasets/limites-administratives-du-grand-duche-de-luxembourg/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LUX_ADM3.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 07, 2021
