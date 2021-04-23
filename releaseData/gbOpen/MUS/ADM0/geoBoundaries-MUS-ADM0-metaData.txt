@@ -1,0 +1,14 @@
+boundaryID : MUS-ADM0-6221475
+boundaryISO : MUS
+boundaryType : ADM0
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambachers
+boundaryCanonical : Republic of Mauritius
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MUS_ADM0.zip
+sourceDataUpdateDate : Dec 02, 2020
+buildUpdateDate : Apr 08, 2021

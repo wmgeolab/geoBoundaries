@@ -1,0 +1,14 @@
+boundaryID : JAM-ADM3-20457510
+boundaryISO : JAM
+boundaryType : ADM3
+boundaryYear : 2017.0
+boundarySource-1 : Justin Meyers
+boundarySource-2 : Planning Office of Jamaica
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons
+licenseSource : https//github.com/justinelliotmeyers/official_jamaica_administrative_boundary_shapefile/blob/master/Source_License.txt
+boundarySourceURL : https//github.com/justinelliotmeyers/official_jamaica_administrative_boundary_shapefile
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/JAM_ADM3.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 07, 2021

@@ -1,0 +1,14 @@
+boundaryID : GRC-ADM1-93993887
+boundaryISO : GRC
+boundaryType : ADM1
+boundaryYear : 2016
+boundarySource-1 : EuroGeoGraphics
+boundarySource-2 : Regional IM Working Group - Europe
+boundaryCanonical : Decentralized administration
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/gree
+boundarySourceURL : https//data.humdata.org/dataset/gree
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GRC_ADM1.zip
+sourceDataUpdateDate : Jan 16, 2021
+buildUpdateDate : Apr 05, 2021

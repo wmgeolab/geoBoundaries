@@ -1,0 +1,14 @@
+boundaryID : MWI-ADM2-58685613
+boundaryISO : MWI
+boundaryType : ADM2
+boundaryYear : 2002
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : Districts
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : 
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MWI_ADM2.zip
+sourceDataUpdateDate : Dec 18, 2020
+buildUpdateDate : Apr 08, 2021

@@ -1,0 +1,14 @@
+boundaryID : MDV-ADM2-70690204
+boundaryISO : MDV
+boundaryType : ADM2
+boundaryYear : 2017
+boundarySource-1 : Government of the Republic of Maldives
+boundarySource-2 : OCHA ROAP
+boundaryCanonical : Administrative Atolls
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/maldives-administrative-boundaries-polygon-polyline
+boundarySourceURL : https//data.humdata.org/dataset/maldives-administrative-boundaries-polygon-polyline
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MDV_ADM2.zip
+sourceDataUpdateDate : Mar 18, 2021
+buildUpdateDate : Apr 07, 2021

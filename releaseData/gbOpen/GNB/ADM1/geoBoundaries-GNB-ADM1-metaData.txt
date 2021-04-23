@@ -1,0 +1,14 @@
+boundaryID : GNB-ADM1-76643164
+boundaryISO : GNB
+boundaryType : ADM1
+boundaryYear : 2017
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : Regiões
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GNB_ADM1.zip
+sourceDataUpdateDate : Jan 14, 2021
+buildUpdateDate : Apr 05, 2021

@@ -11,4 +11,4 @@ licenseSource : https//www.statcan.gc.ca/eng/reference/licence
 boundarySourceURL : http//www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2016-eng.cfm
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CAN_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 22, 2021
+buildUpdateDate : Apr 05, 2021

@@ -1,0 +1,14 @@
+boundaryID : SRB-ADM0-94879208
+boundaryISO : SRB
+boundaryType : ADM0
+boundaryYear : 2017
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : Republika Srbija
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : 
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SRB_ADM0.zip
+sourceDataUpdateDate : Dec 10, 2020
+buildUpdateDate : Apr 19, 2021

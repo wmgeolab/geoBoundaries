@@ -24,9 +24,20 @@ jobs:
            cd ..
            rm -r geoBoundaries
            git config --global pack.window "0"
-           GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 --single-branch --branch main --filter=blob:none https://github.com/wmgeolab/geoBoundaries
+           echo "=============="
+           add-apt-repository -y ppa:git-core/ppa
+           apt-get -y update
+           apt-get install -y git
+           git --version
+           git clone --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+           echo "=============="
            cd geoBoundaries
-           git lfs pull --include "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           echo "=============="
+           git sparse-checkout set "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
+           git sparse-checkout add ".gitattrbutes"
+           git sparse-checkout add ".gitignore"
+           git sparse-checkout add "releaseData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
+           git checkout
            git clone https://github.com/wmgeolab/geoBoundaryBot
            ls -l
     - name: Checking Files
@@ -39,13 +50,6 @@ jobs:
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     
-    #- name: Turnstyle
-    #  uses: softprops/turnstyle@v1
-    #  with:
-    ##        poll-interval-seconds: 240
-    # env:
-    #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            
     - name: Commit Files
       env:
             DRTOKEN: ${{secrets.DRTOKEN}}
@@ -53,28 +57,28 @@ jobs:
       run: |
            cd $GITHUB_WORKSPACE
            ls
-           git status
            echo "=============="
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git config --global http.postBuffer 500M
            git config --global http.maxRequestBuffer 100M
            git config --global core.compression 0
+           git reset
+           echo "================="
+           find * -type f -size +99M -exec git lfs track --filename '{}' +       
+           echo "================="
+           git add "releaseData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
+           echo "================="
+           git add .gitattributes
+           echo "================="
            git status
            echo "================="
-           git checkout .gitattributes
-           git status
-           echo "-----------------------"
-           find * -type f -size +99M -exec git lfs track --filename '{}' +
-           git status
-           git add -A .
-           git status
            git commit -m "gB Nightly `date`"
-           git status
-           git pull
-           git status
+           echo "================="
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
-           git push origin main
+           echo "================="
+           git pull
+           git push
         
     - name: Create Artifact
       uses: actions/upload-artifact@v2

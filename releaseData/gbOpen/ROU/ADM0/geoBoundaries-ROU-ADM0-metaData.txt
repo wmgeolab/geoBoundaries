@@ -1,0 +1,14 @@
+boundaryID : ROU-ADM0-42892465
+boundaryISO : ROU
+boundaryType : ADM0
+boundaryYear : 2016.0
+boundarySource-1 : AgenÃâºia NaÃâºionalÃÆ de Cadastru Ãâ¢i Publicitate ImobiliarÃÆ
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : License on source page. Additional information in linked PDF.
+licenseSource : http//data.gov.ro/dataset/unitati-administrative
+boundarySourceURL : http//data.gov.ro/dataset/unitati-administrative
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ROU_ADM0.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 19, 2021

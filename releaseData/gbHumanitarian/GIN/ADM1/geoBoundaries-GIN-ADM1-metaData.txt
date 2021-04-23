@@ -1,0 +1,14 @@
+boundaryID : GIN-ADM1-69089804
+boundaryISO : GIN
+boundaryType : ADM1
+boundaryYear : 2016
+boundarySource-1 : geoBoundaries
+boundarySource-2 : World Food Programme
+boundaryCanonical : Region
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only - Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/guinea-geodatabase
+boundarySourceURL : https//data.humdata.org/dataset/guinea-geodatabase
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/GIN_ADM1.zip
+sourceDataUpdateDate : Nov 02, 2020
+buildUpdateDate : Apr 05, 2021

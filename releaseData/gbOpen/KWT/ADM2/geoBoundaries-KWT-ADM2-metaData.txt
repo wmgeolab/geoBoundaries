@@ -1,0 +1,14 @@
+boundaryID : KWT-ADM2-36326507
+boundaryISO : KWT
+boundaryType : ADM2
+boundaryYear : 2011.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : Areas
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/relation/305099#map=9/29.3171/47.7787
+boundarySourceURL : https//www.openstreetmap.org/relation/305099#map=9/29.3171/47.7787
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KWT_ADM2.zip
+sourceDataUpdateDate : Nov 09, 2020
+buildUpdateDate : Apr 07, 2021

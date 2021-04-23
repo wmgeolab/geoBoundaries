@@ -1,0 +1,14 @@
+boundaryID : SYR-ADM0-95172353
+boundaryISO : SYR
+boundaryType : ADM0
+boundaryYear : 2017
+boundarySource-1 : geoBoundaries
+boundarySource-2 : HDX
+boundaryCanonical : Syrian Arab Republic
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : nan
+licenseSource : https//data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places
+boundarySourceURL : https//data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/SYR_ADM0.zip
+sourceDataUpdateDate : Feb 13, 2021
+buildUpdateDate : Apr 19, 2021

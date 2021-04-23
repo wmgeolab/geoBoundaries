@@ -1,0 +1,14 @@
+boundaryID : NER-ADM0-95565281
+boundaryISO : NER
+boundaryType : ADM0
+boundaryYear : 2014
+boundarySource-1 : IGNN
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs Niger
+boundaryCanonical : Niger
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only - Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/niger-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/niger-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/NER_ADM0.zip
+sourceDataUpdateDate : Oct 21, 2020
+buildUpdateDate : Apr 08, 2021

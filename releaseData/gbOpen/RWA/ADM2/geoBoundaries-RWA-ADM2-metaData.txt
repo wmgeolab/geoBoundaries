@@ -1,0 +1,14 @@
+boundaryID : RWA-ADM2-39286606
+boundaryISO : RWA
+boundaryType : ADM2
+boundaryYear : 2012.0
+boundarySource-1 : Open Data Rwanda
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : nan
+licenseSource : http//www.statistics.gov.rw/terms-use
+boundarySourceURL : http//geodata-nisr.opendata.arcgis.com/datasets/c0a3d1deab694f7998bc4b966be12cbb_0
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/RWA_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 19, 2021

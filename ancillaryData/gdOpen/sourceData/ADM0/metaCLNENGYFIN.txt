@@ -4,17 +4,17 @@ Metadata for: CLNENGYFIN
 Full Variable Name:  International financial flows to developing countries in support of clean energy research and development and renewable energy production, including in hybrid systems
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: International financial flows to developing countries in support of clean energy research and development and renewable energy production, including in hybrid systems
+Units: 2016 US Dollars
 Data Representative Of Year(s): 2016-2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://ourworldindata.org/grapher/international-finance-clean-energy
 Source 1: United Nations Statistics Division
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: CC BY 4.0
+License Source: https://creativecommons.org/licenses/by/4.0/
 Link to Source Data: https://ourworldindata.org/grapher/international-finance-clean-energy
 Tag(s): Environment
 Other Notes: 

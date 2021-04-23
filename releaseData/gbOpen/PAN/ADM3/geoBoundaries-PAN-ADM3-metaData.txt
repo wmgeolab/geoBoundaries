@@ -1,0 +1,14 @@
+boundaryID : PAN-ADM3-15828444
+boundaryISO : PAN
+boundaryType : ADM3
+boundaryYear : 2012.0
+boundarySource-1 : Milton Solano, of the Smithsonian Tropical Research Institute, on ArcGIS online
+boundarySource-2 : GIS Laboratory. Smithsonian Tropical Research Institute, Panama, 2013
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : need to update
+licenseSource : https//www.arcgis.com/home/item.html?id=339ba1515a264217805efc29ec9d144a
+boundarySourceURL : https//www.arcgis.com/home/item.html?id=339ba1515a264217805efc29ec9d144a
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PAN_ADM3.zip
+sourceDataUpdateDate : Sep 21, 2020
+buildUpdateDate : Apr 08, 2021

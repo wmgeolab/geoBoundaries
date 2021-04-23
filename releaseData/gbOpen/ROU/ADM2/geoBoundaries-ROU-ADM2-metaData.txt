@@ -1,0 +1,14 @@
+boundaryID : ROU-ADM2-2599482
+boundaryISO : ROU
+boundaryType : ADM2
+boundaryYear : 2016.0
+boundarySource-1 : Agentia Nationala de Cadastru si Publicitate Imobiliara
+boundarySource-2 : 
+boundaryCanonical : municipalities
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : License on source page. Additional information in linked PDF.
+licenseSource : https//data.gov.ro/pages/licence
+boundarySourceURL : http//data.gov.ro/dataset/unitati-administrative
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ROU_ADM2.zip
+sourceDataUpdateDate : Apr 12, 2021
+buildUpdateDate : Apr 19, 2021

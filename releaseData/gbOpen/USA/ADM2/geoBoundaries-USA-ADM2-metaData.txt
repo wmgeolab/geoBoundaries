@@ -1,0 +1,14 @@
+boundaryID : USA-ADM2-92793851
+boundaryISO : USA
+boundaryType : ADM2
+boundaryYear : 2016.0
+boundarySource-1 : US Census
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : nan
+licenseSource : https//www.census.gov/about/policies/open-gov/open-data.html
+boundarySourceURL : https//www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/USA_ADM2.zip
+sourceDataUpdateDate : Sep 21, 2020
+buildUpdateDate : Apr 19, 2021
