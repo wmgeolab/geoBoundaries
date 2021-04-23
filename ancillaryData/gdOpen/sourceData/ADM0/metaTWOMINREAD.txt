@@ -5,16 +5,16 @@ Full Variable Name: The proportion of students in grades 2/3 achieving at least 
 ==============================================================
 
 Data Definition: The proportion of students in grades 2/3 achieving at least a minimum proficiency level in reading
-Units: Percent of students in grades 2/3
-Data Representative Of Year(s): 2015
+Units: Percent
+Data Representative Of Year(s): 2015-2015
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
 Data Processing Methodology: N/A
-Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=0e23ab91a2844c94997cb25abb0d2af7
-Source 1: ArcGIS
+Data Collection Methodology (or link to documentation): Downloaded from source link (https://unstats.un.org/sdgs/indicators/database/)
+Source 1: United Nations
 Source 2: N/A
-License: Creative Commons
-License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-4-1-1-proportion-of-children-and-young-people-achieving-a-minimum-proficiency-level-in-reading-and-mathematics-percent-1?geometry=133.297%2C-39.570%2C-65.336%2C62.146
+License: No license specified
+License Source: https://www.un.org/en/sections/about-website/terms-use/index.html
+Link to Source Data: https://unstats.un.org/sdgs/indicators/database/
 Tag(s): Education
 Other Notes: N/A
