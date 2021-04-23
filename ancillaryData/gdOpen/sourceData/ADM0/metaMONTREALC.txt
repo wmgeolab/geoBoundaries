@@ -4,17 +4,17 @@ Metadata for: MONTREALC
 Full Variable Name: Compliance with the Montreal Convention on hazardous waste and other chemicals
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Compliance with the Montreal Convention on hazardous waste and other chemicals
+Units: Percentage
 Data Representative Of Year(s): 2015-2015
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://hub.arcgis.com/datasets/undesa::indicator-12-4-1-compliance-with-the-montreal-protocol-on-hazardous-waste-and-other-chemicals
 Source 1: Environment Live
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: no license specified
+License Source: N/A
 Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-12-4-1-compliance-with-the-montreal-protocol-on-hazardous-waste-and-other-chemicals
-Tag(s): nan
-Other Notes: 
+Tag(s): Pollution
+Other Notes: N/A
