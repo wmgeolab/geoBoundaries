@@ -3,7 +3,6 @@ geoDesc (www.geodesc.org) Ancillary Variables Metadata File
 Metadata for: UNSENDETAIN
 Full Variable Name: Unsentenced Detainees as a Proportion of Total Prison Population
 ==============================================================
-
 Data Definition: Unsentenced Detainees as a Proportion of Total Prison Population
 Units: Percent
 Data Representative Of Year(s): 2016-2016
