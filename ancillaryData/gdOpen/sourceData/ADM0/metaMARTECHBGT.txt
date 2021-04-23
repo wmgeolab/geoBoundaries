@@ -5,16 +5,16 @@ Full Variable Name: Proportion of total research budget allocated to research in
 ==============================================================
 
 Data Definition: Proportion of total research budget allocated to research in the field of marine technology
-Units: Percent
+Units: Percent of total research funding
 Data Representative Of Year(s): 2013-2013
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
 Data Processing Methodology: N/A
-Data Collection Methodology (or link to documentation): https://hub.arcgis.com/datasets/undesa::indicator-14-a-1-national-ocean-science-expenditure-as-a-share-of-total-research-and-development-funding-percent
+Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=a1014f965e8d4c659953f4b649ed7417
 Source 1: Country submission for Ocean Science data and UIS for R/D
 Source 2: N/A
-License: No license specified
-License Source: N/A
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-14-a-1-national-ocean-science-expenditure-as-a-share-of-total-research-and-development-funding-percent
-Tag(s): nan
+License: National
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-14-a-1-national-ocean-science-expenditure-as-a-share-of-total-research-and-development-funding-percent-5
+Tag(s): Sustainability
 Other Notes: N/A
