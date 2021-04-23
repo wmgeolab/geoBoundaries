@@ -17,6 +17,7 @@ sourceData/gbOpen/CHE_ADM3.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/COL_ADM2.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/CZE_ADM3.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/CZE_ADM4.zip filter=lfs diff=lfs merge=lfs -text
+sourceData/gbOpen/ECU_ADM2.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/ESP_ADM2.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/ESP_ADM3.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/ESP_ADM4.zip filter=lfs diff=lfs merge=lfs -text
@@ -25,7 +26,9 @@ sourceData/gbOpen/FRA_ADM4.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/GBR_ADM1.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/IDN_ADM2.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/IRL_ADM2.zip filter=lfs diff=lfs merge=lfs -text
+sourceData/gbOpen/IRL_ADM3.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/ITA_ADM3.zip filter=lfs diff=lfs merge=lfs -text
+sourceData/gbOpen/LKA_ADM4.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/MEX_ADM2.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/NOR_ADM2.zip filter=lfs diff=lfs merge=lfs -text
 sourceData/gbOpen/NZL_ADM0.zip filter=lfs diff=lfs merge=lfs -text

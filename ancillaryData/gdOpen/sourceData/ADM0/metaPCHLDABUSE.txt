@@ -4,17 +4,17 @@ Metadata for: PCHLDABUSE
 Full Variable Name: Proportion of children aged 1–17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Proportion of children aged 1–17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month
+Units: n/a
 Data Representative Of Year(s): 2016-2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: Multiple Indicator Cluster Surveys (MICS)
+Data Collection Methodology (or link to documentation): https://hub.arcgis.com/datasets/undesa::indicator-16-2-1-proportion-of-children-aged-1-14-years-who-experienced-physical-punishment-and-or-psychological-aggression-by-caregivers-in-last-month-percent-of-children-aged-1-14-years
 Source 1: ArcGIS
-Source 2: 
-License: 
-License Source: 
+Source 2: n/a
+License: no license specified 
+License Source: n/a
 Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-16-2-1-proportion-of-children-aged-1-14-years-who-experienced-physical-punishment-and-or-psychological-aggression-by-caregivers-in-last-month-percent-of-children-aged-1-14-years
 Tag(s): nan
-Other Notes: 
+Other Notes: n/a

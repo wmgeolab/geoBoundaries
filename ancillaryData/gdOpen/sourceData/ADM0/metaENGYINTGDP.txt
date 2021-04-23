@@ -3,7 +3,6 @@ geoDesc (www.geodesc.org) Ancillary Variables Metadata File
 Metadata for: ENGYINTGDP
 Full Variable Name: Energy Intensity measured in terms of primary energy and GDP
 ==============================================================
-
 Data Definition: Energy Intensity measured in terms of primary energy and GDP
 Units: GDP
 Data Representative Of Year(s): 2015-2015
