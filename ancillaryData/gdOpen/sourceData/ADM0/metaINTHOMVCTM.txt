@@ -4,17 +4,17 @@ Metadata for: INTHOMVCTM
 Full Variable Name: Victims of intentional homicide
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Victims of intentional homicide
+Units: population
 Data Representative Of Year(s): 2016-2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): Downloaded from source link (http://hdr.undp.org/en/data)
 Source 1: Human Development Data
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: CC by 3.0
+License Source: http://hdr.undp.org/en/content/copyright-and-terms-use
 Link to Source Data: http://hdr.undp.org/en/data
 Tag(s): Human Security
-Other Notes: 
+Other Notes: N/A

@@ -1,14 +1,14 @@
-boundaryID : CZE-ADM4-87026396
+boundaryID : CZE-ADM4-81737902
 boundaryISO : CZE
 boundaryType : ADM4
 boundaryYear : 2017.0
 boundarySource-1 : OpenStreetMap
 boundarySource-2 : Wambacher
 boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
+boundaryLicense : Creative Commons Attribution-ShareAlike 2.0
+licenseDetail : 
 licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CZE_ADM4.zip
-sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Mar 22, 2021
+sourceDataUpdateDate : Apr 06, 2021
+buildUpdateDate : Apr 16, 2021

@@ -1,0 +1,14 @@
+boundaryID : GBR-ADM0-89034811
+boundaryISO : GBR
+boundaryType : ADM0
+boundaryYear : 2018.0
+boundarySource-1 : Office of National Statistics Geography
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : http//www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+licenseSource : http//geoportal.statistics.gov.uk/datasets/local-administrative-units-level-1-january-2018-full-extent-boundaries-in-united-kingdom
+boundarySourceURL : http//geoportal.statistics.gov.uk/datasets/local-administrative-units-level-1-january-2018-full-extent-boundaries-in-united-kingdom
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GBR_ADM0.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 05, 2021

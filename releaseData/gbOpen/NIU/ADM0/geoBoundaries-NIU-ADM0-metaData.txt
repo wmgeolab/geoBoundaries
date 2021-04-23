@@ -1,0 +1,14 @@
+boundaryID : NIU-ADM0-53532363
+boundaryISO : NIU
+boundaryType : ADM0
+boundaryYear : 2020
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Pacific Data Hub
+boundaryCanonical : Niue
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : nan
+licenseSource : https//pacificdata.org/data/dataset/2011_niu_phc_admin_boundaries
+boundarySourceURL : https//pacificdata.org/data/dataset/2011_niu_phc_admin_boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NIU_ADM0.zip
+sourceDataUpdateDate : Dec 18, 2020
+buildUpdateDate : Apr 08, 2021

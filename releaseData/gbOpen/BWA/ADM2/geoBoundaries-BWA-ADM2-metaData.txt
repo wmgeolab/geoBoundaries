@@ -11,4 +11,4 @@ licenseSource : http//geoportal.rcmrd.org/layers/servir%3Abotswana_adm2#license-
 boundarySourceURL : http//geoportal.rcmrd.org/layers/servir%3Abotswana_adm2#more
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BWA_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Mar 26, 2021
+buildUpdateDate : Apr 05, 2021

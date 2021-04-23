@@ -1,4 +1,4 @@
-boundaryID : CIV-ADM3-76489257
+boundaryID : CIV-ADM3-97208781
 boundaryISO : CIV
 boundaryType : ADM3
 boundaryYear : 2021
@@ -7,8 +7,8 @@ boundarySource-2 : OCHA ROWCA
 boundaryCanonical : Departments
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
-licenseSource : https//data.humdata.org/dataset/cote-d-ivoire-administrative-level-0-3-boundaries-and-points
+licenseSource : Humdata
 boundarySourceURL : https//data.humdata.org/dataset/cote-d-ivoire-administrative-level-0-3-boundaries-and-points
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CIV_ADM3.zip
-sourceDataUpdateDate : Mar 05, 2021
-buildUpdateDate : Mar 26, 2021
+sourceDataUpdateDate : Apr 11, 2021
+buildUpdateDate : Apr 16, 2021

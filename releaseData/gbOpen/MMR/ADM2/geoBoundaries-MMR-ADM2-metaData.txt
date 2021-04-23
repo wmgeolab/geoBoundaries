@@ -1,0 +1,14 @@
+boundaryID : MMR-ADM2-55003777
+boundaryISO : MMR
+boundaryType : ADM2
+boundaryYear : 2014.0
+boundarySource-1 : Myanmar Information Management Unit (MIMU), United Nations Development Programme (UNDP)
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Granted in terms of use
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : http//geonode.themimu.info/layers/?limit=5&offset=10
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MMR_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 08, 2021

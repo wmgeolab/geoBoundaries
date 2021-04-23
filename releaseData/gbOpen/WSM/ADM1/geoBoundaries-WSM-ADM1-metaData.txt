@@ -1,0 +1,14 @@
+boundaryID : WSM-ADM1-40696546
+boundaryISO : WSM
+boundaryType : ADM1
+boundaryYear : 2018.0
+boundarySource-1 : Wikipedia
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
+licenseDetail : nan
+licenseSource : https//en.wikipedia.org/wiki/File
+boundarySourceURL : https//en.wikipedia.org/wiki/File
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/WSM_ADM1.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 19, 2021

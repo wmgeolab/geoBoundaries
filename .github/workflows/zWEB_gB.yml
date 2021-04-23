@@ -8,11 +8,20 @@ jobs:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
-        repository: wmgeolab/geoBoundaries
-        ref: main
+    - name: Download Changes
+      run: |
+           cd $GITHUB_WORKSPACE
+           cd ..
+           rm -r geoBoundaries
+           git clone --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+           echo "=============="
+           cd geoBoundaries
+           echo "=============="
+           git sparse-checkout set "website/"
+           git sparse-checkout add ".gitattrbutes"
+           git sparse-checkout add ".gitignore"
+           git checkout 
+             
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:

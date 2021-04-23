@@ -1,0 +1,14 @@
+boundaryID : CAF-ADM5-38076199
+boundaryISO : CAF
+boundaryType : ADM5
+boundaryYear : 2020
+boundarySource-1 : Humdata
+boundarySource-2 : OCHA
+boundaryCanonical : quartiers
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/central-african-republic-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/organization/eabb59ef-4082-4c7a-9c08-0f57eed970d8
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CAF_ADM5.zip
+sourceDataUpdateDate : Mar 15, 2021
+buildUpdateDate : Apr 05, 2021

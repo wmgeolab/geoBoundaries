@@ -1,0 +1,14 @@
+boundaryID : YEM-ADM1-17250208
+boundaryISO : YEM
+boundaryType : ADM1
+boundaryYear : 2020
+boundarySource-1 : Central Statistical Organization
+boundarySource-2 : OCHA Yemen
+boundaryCanonical : Mohafadha
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian Use Only
+licenseSource : https//data.humdata.org/dataset/yemen-admin-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/yemen-admin-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/YEM_ADM1.zip
+sourceDataUpdateDate : Oct 25, 2020
+buildUpdateDate : Apr 19, 2021

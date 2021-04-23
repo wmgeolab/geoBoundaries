@@ -1,0 +1,14 @@
+boundaryID : MOZ-ADM2-36505486
+boundaryISO : MOZ
+boundaryType : ADM2
+boundaryYear : 2019
+boundarySource-1 : World Food Programme, INE
+boundarySource-2 : Derived from ADM3 layer
+boundaryCanonical : district
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only - Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/mozambique-administrative-levels-0-3
+boundarySourceURL : https//data.humdata.org/dataset/mozambique-administrative-levels-0-3
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/MOZ_ADM2.zip
+sourceDataUpdateDate : Oct 28, 2020
+buildUpdateDate : Apr 08, 2021

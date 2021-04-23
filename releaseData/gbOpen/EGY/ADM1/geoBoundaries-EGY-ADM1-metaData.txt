@@ -1,14 +1,14 @@
-boundaryID : EGY-ADM1-27899542
+boundaryID : EGY-ADM1-46179711
 boundaryISO : EGY
 boundaryType : ADM1
-boundaryYear : 2017
-boundarySource-1 : Humdata
-boundarySource-2 : OCHA ROMENA
-boundaryCanonical : regions
-boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
-licenseDetail : 
-licenseSource : https//data.humdata.org/dataset/egypt-administrative-boundaries-levels-0-3
-boundarySourceURL : https//data.humdata.org/organization/ocha-romena?q=egypt&ext_page_size=25
-downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/EGY_ADM2.zip
-sourceDataUpdateDate : Mar 02, 2021
-buildUpdateDate : Mar 26, 2021
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : 
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/EGY_ADM1.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 05, 2021
