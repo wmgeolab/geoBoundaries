@@ -4,17 +4,17 @@ Metadata for: PROSSINDVA
 Full Variable Name: The proportion of small-scale industries in total industry value added
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: The proportion of small-scale industries in total industry value added
+Units: Percent
 Data Representative Of Year(s): 2016-2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): Downloaded from source link (https://www.sdg.org/datasets/indicator-9-3-1-proportion-of-small-scale-industries-in-total-industry-value-added-percent-5/data?geometry=125.253%2C-35.059%2C-88.497%2C64.684)
 Source 1: ArcGIS
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-9-3-1-proportion-of-small-scale-industries-in-total-industry-value-added-percent
+Source 2: N/A
+License: No license specified
+License Source: https://www.sdg.org/datasets/indicator-9-3-1-proportion-of-small-scale-industries-in-total-industry-value-added-percent-5/data?geometry=125.253%2C-35.059%2C-88.497%2C64.684
+Link to Source Data: https://www.sdg.org/datasets/indicator-9-3-1-proportion-of-small-scale-industries-in-total-industry-value-added-percent-5/data?geometry=125.253%2C-35.059%2C-88.497%2C64.684
 Tag(s): Development
-Other Notes: 
+Other Notes: N/A 
