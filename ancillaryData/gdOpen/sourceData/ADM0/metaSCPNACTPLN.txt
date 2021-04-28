@@ -4,17 +4,17 @@ Metadata for: SCPNACTPLN
 Full Variable Name: Does country have sustainable consumption and production (SCP) national action plan?
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Does country have sustainable consumption and production (SCP) national action plan?
+Units: 1 = YES; 0 = NO
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://ourworldindata.org/grapher/country-scp-plan
 Source 1: United Nations Statistics Division
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: CC by 4.0
+License Source: https://creativecommons.org/licenses/by/4.0/deed.en_US
 Link to Source Data: https://ourworldindata.org/grapher/country-scp-plan
 Tag(s): Sustainability
 Other Notes: 
