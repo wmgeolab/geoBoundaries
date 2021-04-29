@@ -1,0 +1,20 @@
+geoDesc (www.geodesc.org) Ancillary Variables Metadata File 
+==============================================================
+Metadata for: ISOcode_adm1_POP
+Full Variable Name:  Mean population by administrative level 1 
+==============================================================
+
+Data Definition: Total population base year and projection grids based on the Shared Socioeconomic Pathways (SSPs) data at a resolution of 1-km (about 30 arc-seconds)
+Units: Mean number of persons within administrative boundary
+Data Representative Of Year(s): 2010-2100
+geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?VER=3_0_0
+Each row ID is defined by: shapeID
+Data Processing Methodology: 
+Data Collection Methodology (or link to documentation): 
+Source 1: SSP2 (Middle of the road) Population Dynamics, SEDAC
+Source 2: 
+License: Attribution
+License Source: https://sedac.ciesin.columbia.edu/downloads/docs/popdynamics/popdynamics-1-km-downscaled-pop-base-year-projection-ssp-2000-2100-rev01-readme.txt
+Link to Source Data: https://sedac.ciesin.columbia.edu//data/set/popdynamics-1-km-downscaled-pop-base-year-projection-ssp-2000-2100-rev01/data-download
+Tag(s): population
+Other Notes: Users are free to use, copy, distribute, transmit, and adapt the work for commercial and non-commercial purposes, without restriction, as long as clear attribution of the source is provided.
