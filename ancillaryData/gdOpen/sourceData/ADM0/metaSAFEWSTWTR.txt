@@ -13,8 +13,8 @@ Data Processing Methodology: N/A
 Data Collection Methodology (or link to documentation): https://ourworldindata.org/grapher/wastewater-safely-treated
 Source 1: United Nations Statistics Division
 Source 2: 
-License: Creative Commons
-License Source:  N/A
+License: CC BY 4.0
+License Source:  https://creativecommons.org/licenses/by/4.0/deed.en_US
 Link to Source Data: https://ourworldindata.org/grapher/wastewater-safely-treated
 Tag(s): Environment
 Other Notes: 
