@@ -13,8 +13,8 @@ Data Processing Methodology: N/A
 Data Collection Methodology (or link to documentation): https://datacatalog.worldbank.org/dataset/world-development-indicators
 Source 1: The World Bank
 Source 2: 
-License: N/A
-License Source: 
+License: CC BY 4.0
+License Source: https://datacatalog.worldbank.org/public-licenses#cc-by
 Link to Source Data: https://datacatalog.worldbank.org/dataset/world-development-indicators
 Tag(s): Education
 Other Notes: 
