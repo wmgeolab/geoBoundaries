@@ -12,9 +12,9 @@ Each row ID is defined by: ISO 3166-1 alpha-3
 Data Processing Methodology: N/A
 Data Collection Methodology (or link to documentation): https://ourworldindata.org/grapher/country-scp-plan
 Source 1: United Nations Statistics Division
-Source 2: 
-License: creative commons
-License Source: N/A
+Source 2: N/A
+License: CC BY 4.0
+License Source: https://creativecommons.org/licenses/by/4.0/deed.en_US
 Link to Source Data: https://ourworldindata.org/grapher/country-scp-plan
 Tag(s): Sustainability
 Other Notes: 
