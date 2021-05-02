@@ -13,8 +13,8 @@ Data Processing Methodology: N/A
 Data Collection Methodology (or link to documentation): https://ourworldindata.org/grapher/intentional-homicides-per-100000-people
 Source 1: World Bank - World Development Indicators
 Source 2: UN Office on Drugs and Crime's International Homicide Statistics database.
-License: open with attribution 
-License Source: N/A
+License: CC BY 4.0
+License Source: https://creativecommons.org/licenses/by/4.0/deed.en_US
 Link to Source Data: https://ourworldindata.org/grapher/intentional-homicides-per-100000-people
 Tag(s): Crime
 Other Notes: N/A
