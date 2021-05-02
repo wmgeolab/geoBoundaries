@@ -14,7 +14,7 @@ Data Collection Methodology (or link to documentation): Downloaded from Source L
 Source 1: World Bank
 Source 2: N/A
 License: CC-BY 4.0
-License Source: https://datacatalog.worldbank.org/dataset/world-development-indicators
+License Source: https://creativecommons.org/licenses/by/4.0/deed.en_US
 Link to Source Data: https://ourworldindata.org/grapher/total-government-revenue-of-gdp
 Tag(s): Economics
 Other Notes: N/A
