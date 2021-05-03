@@ -13,7 +13,7 @@ Data Processing Methodology: N/A
 Data Collection Methodology (or link to documentation): Downloaded from source link (http://www.fao.org/sustainable-development-goals/indicators/2c1/en/)
 Source 1: FAO
 Source 2: N/A
-License: No license specified
+License: Open Data Licensing Policy
 License Source: http://www.fao.org/contact-us/terms/en/
 Link to Source Data: http://www.fao.org/sustainable-development-goals/indicators/2c1/en/
 Tag(s): Economics
