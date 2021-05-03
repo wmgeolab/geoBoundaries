@@ -13,7 +13,7 @@ Data Processing Methodology: N/A
 Data Collection Methodology (or link to documentation): Downloaded from source link(
 Source 1: PARIS21
 Source 2: N/A
-License: No liscence specified
+License: No license specified
 License Source: https://www.un.org/en/sections/about-website/terms-use/index.html
 Link to Source Data: https://www.sdg.org/datasets/70ef4e19371d48ffb79f7854d346d95f_0/data?geometry=-150.570%2C-13.818%2C102.555%2C42.891
 Tag(s): nan
