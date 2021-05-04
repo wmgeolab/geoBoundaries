@@ -4,17 +4,17 @@ Metadata for: HLTHEXPTFP
 Full Variable Name: Proportion of the population with household expenditures on health representing greater than 25% of total household expenditure or income 
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Proportion of the population with household expenditures on health representing greater than 25% of total household expenditure or income 
+Units: Percent of population with household expenditures
 Data Representative Of Year(s): 2015-2015
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=cd0f5a6e99b54f929a0447a8c9311383
 Source 1: ArcGIS
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: No License Specified
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
 Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-3-8-2-proportion-of-population-with-large-household-expenditures-on-health-greater-than-25percent-as-a-share-of-total-household-expenditure-or-income-percent
-Tag(s): nan
-Other Notes: 
+Tag(s): Economics
+Other Notes: N/A
