@@ -189,7 +189,6 @@ ul li{
   border-radius: 4px;
   width: 80vw;
   height: 90vh;
-  overflow: auto;
 }
 
 .popup-open { overflow: hidden; }
@@ -289,16 +288,22 @@ ul li{
 							<div id="toolbox" class="toolbox">
 								
 								<div id="tab-container" class="tab-container">
+								
+								
 									<ul class='etabs'>
-										<li class='tab'><a href="#compare">Compare & Contribute</a></li>
-										<li class='tab'><a href="#BYOB">Build Your Own</a></li>
+										<li class='tab'><a href="#compare">Compare</a></li>
 									</ul>
+									
+									
 
 									<div id="compare" class="box" style="font-size:14pt; height:575px">
-										<hr style="border-color:#319FD3; background-color:#319FD3; margin:3px; height:3px">
 									
+									
+									
+										<hr style="border-color:#319FD3; background-color:#319FD3; margin:3px; height:3px">
+											
 										Compare this geoBoundary:
-										
+											
 										<div style="display:block;">
 											<select id="country-select" style="width:55%;display:inline;font-size:10pt;" onchange="gbCountryChanged()">
 												<!--options should get dynamically populated here-->
@@ -310,35 +315,37 @@ ul li{
 										<select id="license-select" style="width:95%;display:inline;font-size:10pt;" onchange="gbLicenseChanged();">
 											<option value="Open" selected>Open (Fully Open Licenses)</option>
 											<option value="Humanitarian">Humanitarian (Most Up-To-Date)</option>
-											<option value="Authoritative">Authoritative (UN Recognized)</option>
+											<option value="Authoritative">Authoritative (Government Sources)</option>
 										</select>
-										<div id="gb-info-div">
+										
+										<div id="compare-gb" style="height:25%; overflow:auto">
+											<div id="gb-info-div">
+											</div>
 										</div>
 										
 										<br>
-										<br>
 										
-										<div>
-											<hr style="border-color:rgb(255,0,0); background-color:rgb(255,0,0); margin:3px; height:3px">
-										
-											<span>
+										<hr style="border-color:rgb(255,0,0); background-color:rgb(255,0,0); margin:3px; height:3px">
+									
+										<span>
 											<span style="display:inline-block">To:</span>
-											<select id="comparison-boundary-select" style="display:inline-block; width:90%" onchange="comparisonBoundaryChanged()">
+											<select id="comparison-boundary-select" style="display:inline; width:45%" onchange="comparisonBoundaryChanged()">
 												<!--options should get dynamically populated here-->
 											</select>
-											</span>
+											<select id="comparison-admin-level-select" style="display:inline; width:40%; font-size:10pt;" onchange="comparisonAdminLevelChanged()">
+												<!--options should get dynamically populated here-->
+											</select>
+										</span>
+										
+										<div id="compare-comparison" style="height:40%; overflow:auto">
 											
 											<div id="comparison-info-div" style="padding:5px">
 											</div>
 											
 										</div>
 										
-
 										
-									</div>
-
-									<div id="BYOB" class="box" style="height:575px">
-										Coming soon! 
+										
 									</div>
 
 
@@ -366,57 +373,62 @@ ul li{
 					<div id="contribute-popup" class="popup is-hidden is-visually-hidden">
 					  <!-- popup content -->
 					  <div class="popup-content">
+						
 						<div style="text-align:right">
 							<a id="close-contribute-popup" class="close-popup" onclick="closeContributePopup()">&times;</a>
 						</div>
+						
 						<h3>Contribute your boundary file:</h3>
+						
 						<form>
-							<table style="width:97%; margin:10px">
-								<tr>
-									<td>Source*:</td>
-									<td>
-										<input name="source" type="text">
-									</td>
-								</tr>
-								<tr>
-									<td>License*:</td>
-									<td>
-										<input name="license" type="text">
-									</td>
-								</tr>
-								<tr>
-									<td>Administrative level*:</td>
-									<td>
-										<input name="admin-level" type="text">
-									</td>
-								</tr>
-								<tr>
-									<td>Year of boundaries*:</td>
-									<td>
-										<input name="year" type="text">
-									</td>
-								</tr>
-								<tr>
-									<td>Organization*:</td>
-									<td>
-										<input name="organization" type="text">
-									</td>
-								</tr>
-								<tr>
-									<td>Contact email*:</td>
-									<td>
-										<input name="email" type="email">
-									</td>
-								</tr>
-								<tr>
-									<td>Notes/comment:</td>
-									<td>
-										<input name="notes" type="text">
-									</td>
-								</tr>
-							</table>
+							<div style="height:300px; overflow:auto">
+								<table style="width:97%; margin:10px;">
+									<tr>
+										<td>Source*:</td>
+										<td>
+											<input name="source" type="text">
+										</td>
+									</tr>
+									<tr>
+										<td>License*:</td>
+										<td>
+											<input name="license" type="text">
+										</td>
+									</tr>
+									<tr>
+										<td>Administrative level*:</td>
+										<td>
+											<input name="admin-level" type="text">
+										</td>
+									</tr>
+									<tr>
+										<td>Year of boundaries*:</td>
+										<td>
+											<input name="year" type="text">
+										</td>
+									</tr>
+									<tr>
+										<td>Organization*:</td>
+										<td>
+											<input name="organization" type="text">
+										</td>
+									</tr>
+									<tr>
+										<td>Contact email*:</td>
+										<td>
+											<input name="email" type="email">
+										</td>
+									</tr>
+									<tr>
+										<td>Notes/comment:</td>
+										<td>
+											<input name="notes" type="text">
+										</td>
+									</tr>
+								</table>
+							</div>
 							
-							<div style="text-align:right">
+							<div style="text-align:right; margin-top:10px">
 								<button type="submit">Submit!</button>
 							</div>
 							
@@ -595,7 +607,7 @@ ul li{
 						var uploadbut = document.createElement("button");
 						uploadbut.id = "open-contribute-popup";
 						uploadbut.style = "font-size:0.7em";
-						uploadbut.textContent = "My Boundary is Better!";
+						uploadbut.textContent = "Share My Data";
 						div.appendChild(uploadbut);
 						uploadbut.addEventListener('click', openContributePopup);
 						////////////////////
@@ -1078,10 +1090,9 @@ ul li{
 			select.innerHTML = '';
 			// get current country
 			var currentIso = document.getElementById('country-select').value;
-			var currentLevel = document.getElementById('admin-level-select').value;
 			// get geoContrast metadata
 			var metadata = geoContrastMetadata;
-			// get list of sources that match the specified country and admin-level
+			// get list of sources that match the specified country
 			var sources = [];
 			for (var i = 1; i < metadata.length; i++) {
 				var row = metadata[i];
@@ -1093,7 +1104,7 @@ ul li{
 				var source = row[6];
 				var iso = row[2];
 				var level = row[4];
-				if (iso==currentIso & level==currentLevel) {
+				if (iso==currentIso) {
 					sources.push(source);
 				};
 			};
@@ -1124,6 +1135,56 @@ ul li{
 			comparisonBoundaryChanged();
 		};
 		
+		function updateComparisonAdminLevelDropdown() {
+			// NOTE: requires that geoContrastMetadata has already been populated
+			// get admin-level dropdown
+			var select = document.getElementById('comparison-admin-level-select');
+			var selectVal = select.value;
+			// clear all existing dropdown options
+			select.innerHTML = '';
+			// get geoContrast metadata
+			var metadata = geoContrastMetadata;
+			// get current country and comparison source
+			var currentIso = document.getElementById('country-select').value;
+			var currentComparison = document.getElementById('comparison-boundary-select').value;
+			// find available admin-levels for country
+			var adminLevelsSeen = [];
+			var adminLevels = [];
+			for (var i = 1; i < metadata.length; i++) {
+				var row = metadata[i];
+				if (row.length <= 1) {
+					// ignore empty rows
+					i++;
+					continue;
+				};
+				var iso = row[2];
+				var lvl = row[4];
+				var source = row[6];
+				if ((iso == currentIso) & (source == currentComparison)) {
+					if (!(adminLevelsSeen.includes(lvl))) {
+						// only add if hasn't already been added
+						adminLevels.push(lvl);
+						adminLevelsSeen.push(lvl);
+					};
+				};
+			};
+			// sort
+			adminLevels.sort()
+			// add new options from geoContrastMetadata
+			for (lvl of adminLevels) {
+				var opt = document.createElement("option");
+				opt.value = lvl;
+				opt.textContent = lvl;
+				select.appendChild(opt);
+			};
+			// keep the select on the same value (if still available)
+			if (adminLevels.includes(selectVal)) {
+				select.value = selectVal; 
+			};
+			// force dropdown change
+			comparisonAdminLevelChanged();
+		};
+		
 		
 		// dropdown change behavior
 		
@@ -1149,9 +1210,6 @@ ul li{
 
 		function comparisonBoundaryChanged() {
 			//alert('comparison-boundary changed');
-			// get user-selected params
-			iso3 = document.getElementById('country-select').value;
-			level = document.getElementById('admin-level-select').value;
 			comparison = document.getElementById('comparison-boundary-select').value;
 			// check which comparison source was selected
 			if (comparison == 'none') {
@@ -1160,6 +1218,8 @@ ul li{
 				clearComparisonTable();
 				// clear comparison layer
 				clearComparisonLayer();
+				// update admin dropdown
+				updateComparisonAdminLevelDropdown();
 			} else if (comparison == 'upload') {
 				// clear previous elements
 				clearComparisonInfo();
@@ -1168,7 +1228,19 @@ ul li{
 				initFileUploadComparisonInfo();
 				// clear comparison layer
 				clearComparisonLayer();
+				// update admin dropdown
+				updateComparisonAdminLevelDropdown();
 			} else {
+				// update admin dropdown
+				updateComparisonAdminLevelDropdown();
+			};
+		};
+		
+		function comparisonAdminLevelChanged() {
+			//alert('admin-level changed');
+			// if a geoContrast source is selected
+			comparison = document.getElementById('comparison-boundary-select').value;
+			if ((comparison != 'none') & (comparison != 'upload')) {
 				// update comparison layer with external geoContrast topojson
 				updateComparisonLayerWithGeoContrast(zoomToExtent=true);
 			};
@@ -1225,7 +1297,10 @@ ul li{
 		};
 		
 		function updateComparisonLayerWithGeoContrast(zoomToExtent=false) {
-			// get selected source
+			// get gb params
+			iso3 = document.getElementById('country-select').value;
+			// get comparison params
+			level = document.getElementById('comparison-admin-level-select').value;
 			sourceName = document.getElementById('comparison-boundary-select').value;
 			if (sourceName == null) {
 				return
