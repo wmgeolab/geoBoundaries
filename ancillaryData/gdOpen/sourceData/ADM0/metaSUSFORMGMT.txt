@@ -10,11 +10,11 @@ Data Representative Of Year(s): 2015-2015
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
 Data Processing Methodology: N/A
-Data Collection Methodology (or link to documentation): https://ourworldindata.org/grapher/forest-area-net-change-rate?tab=chart
+Data Collection Methodology (or link to documentation): Downloaded from source link (https://ourworldindata.org/grapher/forest-area-net-change-rate?tab=chart)
 Source 1:UN Food and Agriculture Organization (FAO)
-Source 2: 
-License: Creative Commons
-License Source: 
+Source 2: N/A
+License: CC by 4.0
+License Source: https://creativecommons.org/licenses/by/4.0/
 Link to Source Data: https://ourworldindata.org/grapher/forest-area-net-change-rate?tab=chart
 Tag(s): Sustainability
-Other Notes: 
+Other Notes: N/A
