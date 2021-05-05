@@ -5,7 +5,7 @@ Full Variable Name: Neonatal Mortality Rate
 ==============================================================
 
 Data Definition: Neonatal Mortality Rate
-Units: Number
+Units: Percent
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
