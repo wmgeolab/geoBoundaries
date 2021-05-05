@@ -63,3 +63,4 @@ releaseData/gbAuthoritative/CHL/ADM1/geoBoundaries-CHL-ADM1.geojson filter=lfs d
 releaseData/gbOpen/FRA/ADM4/geoBoundaries-FRA-ADM4-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/FRA/ADM4/geoBoundaries-FRA-ADM4.geojson filter=lfs diff=lfs merge=lfs -text
 *.zip -delta
+sourceData/gbOpen/IND_ADM5.zip filter=lfs diff=lfs merge=lfs -text
