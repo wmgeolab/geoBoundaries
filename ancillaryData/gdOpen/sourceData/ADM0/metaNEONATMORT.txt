@@ -5,16 +5,16 @@ Full Variable Name: Neonatal Mortality Rate
 ==============================================================
 
 Data Definition: Neonatal Mortality Rate
-Units: Percent
+Units: Rate per 1,000 live births
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
 Data Processing Methodology: N/A
 Data Collection Methodology (or link to documentation): ttps://data.worldbank.org/indicator/SH.DYN.NMRT
 Source 1: World Development Indicators
-Source 2: N/A
-License: No license specified
-License Source: N/A
+Source 2: UN Inter-agency Group for Child Mortality Estimation ( UNICEF, WHO, World Bank, UN DESA Population Division ) at childmortality.org.
+License: CC BY-4.0
+License Source: https://datacatalog.worldbank.org/public-licenses#cc-by
 Link to Source Data: https://data.worldbank.org/indicator/SH.DYN.NMRT
 Tag(s): Health
 Other Notes: 
