@@ -4,17 +4,17 @@ Metadata for: PRPBDGTTAX
 Full Variable Name: Proportion of domestic budget funded by domestic taxes
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Proportion of domestic budget funded by domestic taxes
+Units: Tax Revenue as a Percent of GDP
 Data Representative Of Year(s): 2016-2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
-Source 1: World Bank 
-Source 2: 
-License: 
-License Source: 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://ourworldindata.org/grapher/proportion-of-domestic-budget-funded-by-domestic-taxes-of-gdp
+Source 1: World Bank – World Development Indicators
+Source 2: International Monetary Fund
+License: CC by 4.0
+License Source: https://creativecommons.org/licenses/by/4.0/
 Link to Source Data: https://ourworldindata.org/grapher/proportion-of-domestic-budget-funded-by-domestic-taxes-of-gdp
 Tag(s): Economics
 Other Notes: 
