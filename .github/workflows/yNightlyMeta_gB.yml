@@ -12,7 +12,7 @@ jobs:
            cd $GITHUB_WORKSPACE
            cd ..
            rm -r geoBoundaries
-           git clone --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+           git clone --no-checkout https://github.com/wmgeolab/geoBoundaries
            echo "=============="
            cd geoBoundaries
            echo "=============="
