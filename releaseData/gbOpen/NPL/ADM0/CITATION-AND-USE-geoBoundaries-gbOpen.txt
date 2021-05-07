@@ -56,6 +56,19 @@ We track issues associated with the geoBoundaries dataset publically,
 and any individual can contribute comments through our github repository:
 https://github.com/wmgeolab/geoBoundaries
  
+ 
+====================================================
+Disclaimer====================================================
+With respect to the works on or made available
+through download from www.geoboundaries.org,
+we make no representations or warranties—express, implied, or statutory—as
+to the validity, accuracy, completeness, or fitness for a particular purpose;
+nor represent that use of such works would not infringe privately owned rights;
+nor assume any liability resulting from use of such works; and shall in no way
+be liable for any costs, expenses, claims, or demands arising out of use of such works.
+====================================================
+ 
+ 
 Thank you for citing your use of geoBoundaries and reporting any issues you find -
 as a non-profit academic project, your citations are what keeps geoBoundaries alive.
 -Dan Runfola (github.com/DanRunfola ; danr@wm.edu)

@@ -4,17 +4,17 @@ Metadata for: ATMSPERPOP
 Full Variable Name: Number of ATMS per 100,000 adults
 ==============================================================
 
-Data Definition: 
-Units: 
-Data Representative Of Year(s): 2017-2017
+Data Definition: Number of ATMS per 100,000 adults
+Units: Per 100,000 adults
+Data Representative Of Year(s): 2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://databank.worldbank.org/reports.aspx?source=2&series=FB.ATM.TOTL.P5
 Source 1: World Development Indicators
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://datacatalog.worldbank.org/dataset/world-development-indicators
-Tag(s): Development?
-Other Notes: 
+Source 2: N/A
+License: Open with attribution
+License Source: https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets
+Link to Source Data: https://databank.worldbank.org/reports.aspx?source=2&series=FB.ATM.TOTL.P5
+Tag(s): Development
+Other Notes: N/A

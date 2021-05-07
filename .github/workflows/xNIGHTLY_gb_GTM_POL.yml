@@ -1,0 +1,183 @@
+on:
+  workflow_dispatch
+  
+name: xNightly_GTM_POL
+jobs:
+  gbBuild_GTM_ISL:
+    runs-on: ubuntu-latest
+    strategy:
+        fail-fast: false
+        max-parallel: 1
+        matrix:
+          ISO: ["GTM","GUY","HND","HRV","HTI","HUN","IDN","IND","IRL","IRN","IRQ","ISL"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
+        
+  gbBuild_ISR_KOR:
+    if: always()
+    needs: gbBuild_GTM_ISL
+    runs-on: ubuntu-latest
+    strategy:
+        max-parallel: 1
+        fail-fast: false
+        matrix:
+          ISO: ["ISR", "ITA", "JAM", "JOR", "JPN", "KAZ", "KEN", "KGZ", "KHM", "KIR", "KNA", "KOR"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
+        
+  gbBuild_KWT_LVA:
+    if: always()
+    needs: gbBuild_ISR_KOR
+    runs-on: ubuntu-latest
+    strategy:
+        max-parallel: 1
+        fail-fast: false
+        matrix:
+          ISO: ["KWT", "LAO", "LBN", "LBR", "LBY", "LCA", "LIE", "LKA", "LSO", "LTU", "LUX", "LVA"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
+    
+  gbBuild_MAR_MNE:
+    if: always()
+    needs: gbBuild_KWT_LVA
+    runs-on: ubuntu-latest
+    strategy:
+        max-parallel: 1
+        fail-fast: false
+        matrix:
+          ISO: ["MAR", "MCO", "MDA", "MDG", "MDV", "MEX", "MHL", "MKD", "MLI", "MLT", "MMR", "MNE"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+    
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
+
+  gbBuild_MNG_NLD:
+    if: always()
+    needs: gbBuild_MAR_MNE
+    runs-on: ubuntu-latest
+    strategy:
+        max-parallel: 1
+        fail-fast: false
+        matrix:
+          ISO: ["MNG", "MOZ", "MRT", "MUS", "MWI", "MYS", "NAM", "NER", "NGA", "NIC", "NIU", "NLD"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
+        
+  gbBuild_NOR_POL:
+    if: always()
+    needs: gbBuild_MNG_NLD
+    runs-on: ubuntu-latest
+    strategy:
+        max-parallel: 1
+        fail-fast: false
+        matrix:
+          ISO: ["NOR", "NPL", "NRU", "NZL", "OMN", "PAK", "PAN", "PER", "PHL", "PLW", "PNG", "POL"]
+          ADM: ["ADM0", "ADM1", "ADM2", "ADM3", "ADM4", "ADM5"]
+          TYPE: ["gbOpen", "gbAuthoritative", "gbHumanitarian"]
+    steps:
+    - name: Check if build needed
+      id: buildCheck
+      continue-on-error: true
+      run: |
+           git clone https://github.com/wmgeolab/geoBoundaryBot
+           python geoBoundaryBot/gbBuildCheck.py ${{secrets.DRTOKEN}} ${{matrix.ISO}} ${{matrix.ADM}} ${{matrix.TYPE}}
+
+    - name: Create Build Call
+      if: steps.buildCheck.outcome == 'success'
+      uses: aurelien-baudet/workflow-dispatch@v2.1.1
+      with:
+        workflow: yDISPATCH_gBLayer
+        repo: wmgeolab/geoBoundaries
+        token: ${{ secrets.DRTOKEN }}
+        inputs: '{ "bType": "${{matrix.TYPE}}", "ISO": "${{matrix.ISO}}", "ADM":"${{matrix.ADM}}"}'
+        wait-for-completion-timeout: 10m
+        wait-for-completion-interval: 20s
+        

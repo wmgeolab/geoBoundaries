@@ -4,17 +4,17 @@ Metadata for: AIRPOLDTHS
 Full Variable Name: Deaths due to air pollution
 ==============================================================
 
-Data Definition: 
-Units: 
-Data Representative Of Year(s): 2016-2016
+Data Definition: Mortality rate attributed to household and ambient air pollution, age-standardized
+Units: Per 100,000 people
+Data Representative Of Year(s): 2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://databank.worldbank.org/reports.aspx?source=2&type=metadata&series=SH.STA.AIRP.P5
 Source 1: The World Bank
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: Public Domain
+License Source: https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets
 Link to Source Data: https://data.worldbank.org/indicator/SH.STA.AIRP.P5
-Tag(s): Health
-Other Notes: 
+Tag(s): Health, Pollution
+Other Notes: N/A

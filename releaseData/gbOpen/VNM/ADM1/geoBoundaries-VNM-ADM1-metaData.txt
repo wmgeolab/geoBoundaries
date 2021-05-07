@@ -1,0 +1,14 @@
+boundaryID : VNM-ADM1-84948121
+boundaryISO : VNM
+boundaryType : ADM1
+boundaryYear : 2016
+boundarySource-1 : Open Development Mekong
+boundarySource-2 : Dept of Survey and Mapping
+boundaryCanonical : Province and Municipality
+boundaryLicense : Creative Commons Attribution-ShareAlike 4.0 International License
+licenseDetail : nan
+licenseSource : https//data.vietnam.opendevelopmentmekong.net/dataset/a-phn-tnh?type=dataset
+boundarySourceURL : https//data.vietnam.opendevelopmentmekong.net/dataset/a-phn-tnh?type=dataset
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VNM_ADM1.zip
+sourceDataUpdateDate : Mar 06, 2021
+buildUpdateDate : Apr 19, 2021

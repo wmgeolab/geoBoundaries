@@ -1,0 +1,14 @@
+boundaryID : NIC-ADM1-94367503
+boundaryISO : NIC
+boundaryType : ADM1
+boundaryYear : 2017
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : Departamentos
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//osm-boundaries.com/
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NIC_ADM1.zip
+sourceDataUpdateDate : Oct 28, 2020
+buildUpdateDate : Apr 08, 2021

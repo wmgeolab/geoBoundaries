@@ -1,0 +1,14 @@
+boundaryID : SYC-ADM1-4304713
+boundaryISO : SYC
+boundaryType : ADM1
+boundaryYear : 2018.0
+boundarySource-1 : Digitizedhttps
+boundarySource-2 : Digitizedhttps
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
+licenseDetail : Shapefile digitized from photo
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SYC_ADM1.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 19, 2021

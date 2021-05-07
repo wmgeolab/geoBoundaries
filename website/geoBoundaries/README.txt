@@ -1,4 +1,4 @@
-The geoBoundaries website is built on Editorial by HTML5 UP - html5up.net | @ajlkn, under the CCA 3.0 license (html5up.net/license).
+The geoBoundaries website is built on Editorial by HTML5 UP - html5up.net | @ajlkn, under the CCA 3.0 license (html5up.net/license). 
 
 Credits:
 	Template Design:

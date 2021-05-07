@@ -4,17 +4,17 @@ Metadata for: RTHOMOCIDE
 Full Variable Name: Homicide rate (per 100,000 people)
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Homicide rate (per 100,000 people)
+Units: Victims per 100,000 persons
 Data Representative Of Year(s): 2016-2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
-Source 1: World Bank
-Source 2: 
-License: 
-License Source: 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://ourworldindata.org/grapher/intentional-homicides-per-100000-people
+Source 1: World Bank - World Development Indicators
+Source 2: UN Office on Drugs and Crime's International Homicide Statistics database.
+License: CC BY 4.0
+License Source: https://creativecommons.org/licenses/by/4.0/deed.en_US
 Link to Source Data: https://ourworldindata.org/grapher/intentional-homicides-per-100000-people
 Tag(s): Crime
-Other Notes: 
+Other Notes: N/A

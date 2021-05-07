@@ -1,0 +1,14 @@
+boundaryID : TUV-ADM0-95523829
+boundaryISO : TUV
+boundaryType : ADM0
+boundaryYear : 2017
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : Tuvalu
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : 
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TUV_ADM0.zip
+sourceDataUpdateDate : Dec 10, 2020
+buildUpdateDate : Apr 19, 2021

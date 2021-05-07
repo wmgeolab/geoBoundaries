@@ -1,0 +1,14 @@
+boundaryID : SUR-ADM2-65869490
+boundaryISO : SUR
+boundaryType : ADM2
+boundaryYear : 2017.0
+boundarySource-1 : Humanitarian Data Exchange
+boundarySource-2 : nan
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : nan
+licenseSource : https//data.humdata.org/dataset/suriname-administrative-level-0-1-and-2-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/suriname-administrative-level-0-1-and-2-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SUR_ADM2.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 19, 2021

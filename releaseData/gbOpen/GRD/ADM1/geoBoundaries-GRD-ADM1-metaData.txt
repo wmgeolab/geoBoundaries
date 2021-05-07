@@ -1,0 +1,14 @@
+boundaryID : GRD-ADM1-57901789
+boundaryISO : GRD
+boundaryType : ADM1
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap, digitized from https//en.wikipedia.org/wiki/Parishes_of_Grenada#/media/File
+boundarySource-2 : Golbez
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
+licenseDetail : nan
+licenseSource : https//en.wikipedia.org/wiki/Parishes_of_Grenada
+boundarySourceURL : https//en.wikipedia.org/wiki/Parishes_of_Grenada#/media/File
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GRD_ADM1.zip
+sourceDataUpdateDate : Sep 25, 2020
+buildUpdateDate : Apr 05, 2021

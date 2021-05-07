@@ -1,0 +1,14 @@
+boundaryID : BWA-ADM1-57670837
+boundaryISO : BWA
+boundaryType : ADM1
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : districts
+boundaryLicense : Creative Commons Attribution-ShareAlike 2.0
+licenseDetail : 
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BWA_ADM1.zip
+sourceDataUpdateDate : Feb 14, 2021
+buildUpdateDate : Apr 05, 2021

@@ -1,0 +1,14 @@
+boundaryID : NLD-ADM2-24170827
+boundaryISO : NLD
+boundaryType : ADM2
+boundaryYear : 2017
+boundarySource-1 : Publieke Dienstverlening op de Kaart
+boundarySource-2 : 
+boundaryCanonical : gemeenten
+boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
+licenseDetail : 
+licenseSource : https//www.pdok.nl/nl/over-pdok/uw-speciale-aandacht/open-data
+boundarySourceURL : https//www.pdok.nl/nl/producten/pdok-downloads/basis-registratie-kadaster/bestuurlijke-grenzen-actueel
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NLD_ADM2.zip
+sourceDataUpdateDate : Dec 24, 2020
+buildUpdateDate : Apr 08, 2021

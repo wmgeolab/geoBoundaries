@@ -4,17 +4,17 @@ Metadata for: LBREEDRISK
 Full Variable Name: Proportion of local breeds that are classified as being at risk of extinction 
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Proportion of local breeds that are classified as being at risk of extinction 
+Units: Percent of breeds
 Data Representative Of Year(s): 2018-2018
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://www.arcgis.com/home/item.html?id=f575fc947b2046e29b3dc64686a69ee8
 Source 1: FAO
-Source 2: 
-License: 
-License Source: 
-Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-2-5-2-proportion-of-local-breeds-classified-as-being-at-risk-percent
+Source 2: N/A
+License: National
+License Source: https://doc.arcgis.com/en/arcgis-online/reference/terms-of-use.htm
+Link to Source Data: https://hub.arcgis.com/datasets/undesa::indicator-2-5-2-proportion-of-local-breeds-classified-as-being-at-risk-as-a-share-of-local-breeds-with-known-level-of-extinction-risk-percent-3?geometry=115.234%2C-35.059%2C-83.399%2C64.684
 Tag(s): Ecosystem
-Other Notes: 
+Other Notes: N/A

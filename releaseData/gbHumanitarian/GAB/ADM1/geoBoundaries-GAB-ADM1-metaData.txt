@@ -1,0 +1,14 @@
+boundaryID : GAB-ADM1-30586686
+boundaryISO : GAB
+boundaryType : ADM1
+boundaryYear : 2018
+boundarySource-1 : Second Administrative Level Boundaries (SALB)
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs Regional Office for West and Central Africa (ROWCA)
+boundaryCanonical : Provinces
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only
+licenseSource : https//data.humdata.org/dataset/gabon-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/gabon-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/GAB_ADM1.zip
+sourceDataUpdateDate : Oct 23, 2020
+buildUpdateDate : Apr 05, 2021

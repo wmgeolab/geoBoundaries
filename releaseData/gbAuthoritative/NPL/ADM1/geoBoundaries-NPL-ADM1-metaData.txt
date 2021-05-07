@@ -1,0 +1,14 @@
+boundaryID : NPL-ADM1-22785230
+boundaryISO : NPL
+boundaryType : ADM1
+boundaryYear : 2017
+boundarySource-1 : Nepal Survey Department
+boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs Regional Office for Asia and the Pacific (ROAP)
+boundaryCanonical : Province
+boundaryLicense : Other - Humanitarian
+licenseDetail : Humanitarian use only - Noted in metadata tab
+licenseSource : https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+boundarySourceURL : https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/NPL_ADM1.zip
+sourceDataUpdateDate : Nov 03, 2020
+buildUpdateDate : Apr 08, 2021

@@ -4,17 +4,17 @@ Metadata for: PROINTUSER
 Full Variable Name: Proportion of Individuals Using the Internet
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Proportion of Individuals Using the Internet
+Units: Percent of population
 Data Representative Of Year(s): 2017-2017
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology: N/A
+Data Collection Methodology (or link to documentation): https://databank.worldbank.org/reports.aspx?source=2&series=IT.NET.USER.ZS
 Source 1: World Development Indicators
-Source 2: 
-License: 
-License Source: 
+Source 2: N/A
+License: Public domain
+License Source: https://www.worldbank.org/en/about/legal/terms-and-conditions
 Link to Source Data: https://datacatalog.worldbank.org/dataset/world-development-indicators
 Tag(s): Partnership?
-Other Notes: 
+Other Notes: N/A
