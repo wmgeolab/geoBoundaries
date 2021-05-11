@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Demo page - shp2geojson.js </title>
+		<meta http-equiv="Content-Type" content="charset=UTF-8" />
+		<meta name="author" content="Gipong">
+		<meta name="keywords" content="shapefile,dbf,geojson,preview,shp2geojson">
+	</head>
+	<body>
+	<span id="forkongithub"><a href="https://github.com/gipong/shp2geojson.js">Fork me on GitHub</a></span>
+	<div id="wrap" class="wrap">
+	<div id="map" ></div>
+
+	<div id="info">
+		<img class="tips" style="width: auto; height: 100%;" src="demo/shp2geojsonC2.svg">
+	</div>
+
+	<div id="downloadLink"><div class="ui page grid">
+		<div class="sixteen wide column center aligned">
+		<a id="link" class="teal labeled icon large ui button" href="">
+		</a>
+		</div>
+	</div></div>
+	<div id="attr"><div class="tableDisplay"><table id="attribute" class="ui small celled unstackable table">
+		<thead id="attrHead"><tr class="center aligned"><th>Attribute</th><th>Value</th></tr></thead>
+		<tbody class="tbodyContent"></tbody>
+	</table></div><div class="ui red icon button" id="cancelAttr">Close</div></div>
+
+	<footer id="footer"><div class="ui page grid">
+
+		<div class="sixteen wide column center aligned">
+			<div class="large ui blue icon button" id="entireLayer">
+				<i class="maximize icon"></i>
+			</div>
+			<div id="addZipfile" class="tips large ui positive right labeled icon button">
+				<i class="file archive icon"></i>
+				Upload zip file
+			</div>
+			<div id="removeLayer" class="negative large ui button">Remove All Features</div>
+		</div>
+
+	</div></footer>
+	</div>
+
+	<div id="shp" class="shp-modal"><div class="ui page grid">
+
+		<div class="sixteen wide aligned column">
+
+			<div class="ui form segment">
+				<div class="field"><div class="ui teal fluid labeled icon button upload" id="zipfile" data-content="Mandatory files : SHP , DBF" data-variation="inverted large">
+						Upload zip file
+						<i class="file archive outline icon"></i>
+						<input type="file" id="file" accept=".zip">
+				</div></div>
+
+				<div class="field" id="dataInfo"></div>
+
+				<div id="option">
+					<div class="field ui labeled input" id="epsgField">
+						<div class="ui label">EPSG</div>
+						<input type="text" placeholder="Default : 4326" id="epsg" class="v" onfocus="this.value='';">
+					</div>
+					<div class="field ui labeled input" >
+						<div class="ui label">Encoding</div>
+						<input type="text" placeholder="Set your desired encoding UTF-8, Big5, Big5-HKSCS ... " id="encoding" class="v" onfocus="this.value='';">
+					</div>
+				</div>
+
+				<div class="two fields">
+
+				<div class="right field"><div class="ui blue fluid labeled icon button" data-content="Metadata : EPSG: 3826, Encoding: big5" data-variation="inverted large" id="downloadfile">
+					<i class="download icon"></i>Download TestData
+				</div></div>
+
+				<div class="field"><div class="ui teal fluid labeled icon disabled button" id="preview">Preview
+					<i class="add icon"></i>
+				</div></div>
+
+				<div class="ui feed">
+					<div class="content">
+						<div class="summary">
+						TestData Source <a href="http://data.tainan.gov.tw/dataset/tn-village" target="_blank">http://data.tainan.gov.tw/dataset/tn-village</a>.
+						</div>
+					</div>
+				</div>
+				<div id="cancel" class="negative right ui button">Cancel</div>
+
+				</div>
+			</div>
+			<div class="ui inverted dimmer">
+				<div class="ui large text loader">Loading</div>
+			</div>
+
+		</div>
+
+		<div class="ui small modal">
+			<i class="close icon"></i>
+			<div class="header">Error Messages</div>
+			<div class="content">
+				<div class="image"><i class="file archive outline icon"></i></div>
+				<div class="description">
+					<p>Sorry, this format are not supported.</p>
+				</div>
+			</div>
+			<div class="actions"><div class="ui red button">
+				<i class="remove icon"></i>Cancel
+			</div></div>
+		</div>
+
+ 	</div></div>
+
+	<div class="overlay"></div>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+	<link rel="stylesheet" href="demo/semantic.min.css"></link>
+	<link rel="stylesheet" href="demo/demo.css"></link>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+	<script src="lib/jszip.js"></script>
+	<script src="lib/jszip-utils.js"></script>
+	<!--[if IE]>
+	<script type="text/javascript" src="lib/jszip-utils-ie.js"></script>
+	<![endif]-->
+	<script src="demo/semantic.min.js"></script>
+	<script src="preprocess.js"></script>
+	<script src="preview.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+	$(document).ready(function() {
+
+		var map = L.map('map').setView([ 0, 0 ], 5),
+		file,
+		vector;
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png' , { maxZoom: 13}).addTo(map);
+
+		function initVector () {
+			vector = L.geoJson([], {
+				style: function (feature) {
+					return feature.properties.style;
+				},
+				onEachFeature: function (feature, layer) {
+
+					layer.on({click: function(e) {
+						vector.eachLayer(function(l) {
+							vector.resetStyle(l);
+						});
+
+						$('.tbodyContent').remove();
+						var tbody = '<tbody class="tbodyContent">';
+						for (var key in e.target.feature.properties) {
+							tbody +=
+								('<tr class="center aligned"><td>'+ key + '</td><td>' + e.target.feature.properties[key] + '</td></tr>');
+						}
+						$('#attribute').append(tbody + '</tbody>');
+						$('#attr').fadeIn(300);
+						map.panTo(e.latlng);
+
+						if('setStyle' in e.target) e.target.setStyle({
+							fillColor: '#FF0',
+							fillOpacity: 0.6
+						});
+					}});
+				}
+			}).addTo(map);
+		}
+
+		function loadShpZip() {
+			var epsg = ($('#epsg').val() == '') ? 4326 : $('#epsg').val(),
+			encoding = ($('#encoding').val() == '') ? 'UTF-8' : $('#encoding').val();
+			if(file.name.split('.')[1] == 'zip') {
+				if(file) $('.dimmer').addClass('active');
+				loadshp({
+					url: file,
+					encoding: encoding,
+					EPSG: epsg
+				}, function(data) {
+					var URL = window.URL || window.webkitURL || window.mozURL || window.msURL,
+					url = URL.createObjectURL(new Blob([JSON.stringify(data)], {type: "application/json"}));
+
+					$('#link').attr('href', url);
+					$('#link').html(file.name+'.geojson'+'<i class="download icon"></i>').attr('download', file.name+'.geojson');
+
+					$('#downloadLink').slideDown(400);
+
+					$('.shp-modal').toggleClass('effect');
+					$('.overlay').toggleClass('effect');
+					$('#wrap').toggleClass('blur');
+
+					vector.addData(data);
+					map.fitBounds([
+						[data.bbox[1], data.bbox[0]], [data.bbox[3], data.bbox[2]]
+					]);
+					$('.dimmer').removeClass('active');
+					$('#preview').addClass('disabled');
+					$('#epsg').val('');
+					$('#encoding').val('');
+					$('#info').addClass('picInfo');
+					$('#option').slideUp(500);
+				});
+			} else {
+				$('.modal').modal('show');
+			}
+		}
+		initVector();
+
+		$("#file").change(function(evt) {
+			file = evt.target.files[0];
+			if(file.size > 0) {
+				$('#dataInfo').text(' ').append(file.name+' , '+file.size+' kb');
+				$('#option').slideDown(500);
+				$('#preview').removeClass('disabled');
+			}
+		});
+
+		$('#preview').click(function() {
+			loadShpZip();
+		});
+
+		$('.button').popup({
+			inline: true,
+			position : 'bottom left'
+		});
+		$('.tips').popup({
+			target: '#addZipfile',
+			position: 'top center',
+			title: 'Getting started !',
+			variation: 'huge'
+		});
+		$('#entireLayer').click(function() {
+			map.fitBounds(vector.getBounds());
+		});
+		$('#downloadfile').click(function() {
+			window.location.href = 'demo/10tnvillage.zip';
+		});
+		$('#addZipfile').click(function() {
+			$('.shp-modal').toggleClass('effect');
+			$('.overlay').toggleClass('effect');
+			$('#wrap').toggleClass('blur');
+		});
+		$('#cancel').click(function() {
+			$('.shp-modal').toggleClass('effect');
+			$('.overlay').toggleClass('effect');
+			$('#wrap').toggleClass('blur');
+		});
+		$('#removeLayer').click(function() {
+			$('#attr').fadeOut(300);
+			window.location.reload();
+		});
+		$('#encoding').dropdown();
+		$('.v').change(function() {
+			var msg = '<div class="msg" id="msg" style="display: none;"><div class="ui primary inverted red segment">'+
+  			'<p>You can find the EPSG Code of your Shapefile on <strong>spatialreference.org</strong></p></div><br /></div>';
+			if($('#epsg').val().match(/^\d{4}$/) != null) {
+				$('#zipfile').removeClass('disabled');
+				$('.msg').slideUp(750);
+			} else {
+				if($('.msg')[0] == undefined) {
+					$('#epsgField').after(msg);
+					$('.msg').slideDown(1500);
+				}
+			}
+		});
+
+		$("#attr").draggable({ containment: $(this).parent().parent(), scroll: false, cursor: "move" });
+		$('#cancelAttr').click(function(){ $('#attr').slideUp(300); });
+
+	});
+	</script>
+	</body>
+</html>
