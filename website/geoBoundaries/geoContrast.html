@@ -140,6 +140,7 @@ ul li{
 }
 
 
+
 #gb-file-table {
   border-collapse: collapse;
   width: 100%;
@@ -162,6 +163,64 @@ ul li{
   text-align: left;
   background-color: #319FD3;
   color: white;
+}
+
+
+
+#gb-names-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#gb-names-table td, #gb-names-table th {
+  max-width: 150px;
+  word-wrap: break-word;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#gb-names-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#gb-names-table tr:hover {background-color: #ddd;}
+
+#gb-names-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #319FD3;
+  color: white;
+}
+
+
+
+#comparison-names-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#comparison-names-table td, #comparison-names-table th {
+  max-width: 150px;
+  word-wrap: break-word;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#comparison-names-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#comparison-names-table tr:hover {background-color: #ddd;}
+
+#comparison-names-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(255,0,0);
+  color: white;
+}
+
+
+
+.stats-number {
+	font-weight: bold;
 }
 
 
@@ -360,12 +419,91 @@ ul li{
 					<div id="table-comparison" class="row box" style="width:100%; margin:15px 0px">
 						<div id="left-table-div" style="width:49%">
 							<hr style="border-color:#319FD3; background-color:#319FD3; margin:3px; height:3px">
-							<h3>geoBoundaries:</h3>
+							<h3 id="stats-gb-name">geoBoundaries:</h3>
+							<div id="stats-gb-container">
+								<table>
+									<tr>
+										<td>Level:</td>
+										<td id="stats-gb-level" class="stats-number"></td>
+									</tr>
+									<tr>
+										<td>Administrative Units:</td>
+										<td id="stats-gb-admincount" class="stats-number"></td>
+									</tr>
+									<tr style="display:none">
+										<td>Area:</td>
+										<td id="stats-gb-area" class="stats-number"></td>
+									</tr>
+									<tr>
+										<td>Vertexes:</td>
+										<td id="stats-gb-vertexes" class="stats-number"></td>
+									</tr>
+									<tr>
+										<td>Line Resolution:</td>
+										<td id="stats-gb-avglineres" class="stats-number"></td>
+									</tr>
+								</table>
+							</div>
+
+							<div id="gb-names-table-div" style="max-height:500px; overflow:auto; margin-top:10px">
+								<table id="gb-names-table" style="margin-left:10px">
+									<thead>
+										<th></th>
+										<th style="height:62px">shapeName</th>
+										<th>Action</th>
+									</thhead>
+									<tbody id="gb-names-table-tbody">
+									</tbody>
+								</table>
+							</div>
+
 						</div>
 						
 						<div id="right-table-div" style="width:48%">
 							<hr style="border-color:rgb(255,0,0); background-color:rgb(255,0,0); margin:3px; height:3px">
-							<h3>Comparison Boundary:</h3>
+							<h3 id="stats-comp-name">Comparison Boundary:</h3>
+							<div id="stats-comp-container">
+								<table>
+									<tr>
+										<td>Level:</td>
+										<td id="stats-comp-level" class="stats-number"></td>
+									</tr>
+									<tr>
+										<td>Administrative Units:</td>
+										<td id="stats-comp-admincount" class="stats-number"></td>
+									</tr>
+									<tr style="display:none">
+										<td>Area:</td>
+										<td id="stats-comp-area" class="stats-number"></td>
+									</tr>
+									<tr>
+										<td>Vertexes:</td>
+										<td id="stats-comp-vertexes" class="stats-number"></td>
+									</tr>
+									<tr>
+										<td>Line Resolution:</td>
+										<td id="stats-comp-avglineres" class="stats-number"></td>
+									</tr>
+								</table>
+							</div>
+
+							<div id="comparison-names-table-div" style="max-height:500px; overflow:auto; margin-top:10px">
+								<table id="comparison-names-table" style="margin-left:10px">
+									<thead>
+										<th></th>
+										<th>
+											<select id="comparison-names-table-select" style="color:black" onchange="comparisonFieldsDropdownChanged()">
+												<option selected>(Select name field)</option>
+											</select>
+										</th>
+										<th>Action</th>
+									</thhead>
+									<tbody id="comparison-names-table-tbody">
+									</tbody>
+								</table>
+							</div>
+
+
 						</div>
 					</div>
 					
@@ -525,6 +663,19 @@ ul li{
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="assets/js/papaparse.min.js"></script>
 
+
+	<!--this is for shp2geojson-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.3/proj4.js"></script>
+	<script src="assets/js/shp2geojson/lib/jszip.js"></script>
+	<script src="assets/js/shp2geojson/lib/jszip-utils.js"></script>
+	<script type="text/javascript" src="assets/js/shp2geojson/lib/jszip-utils-ie.js"></script>
+	<script src="assets/js/shp2geojson/preprocess.js"></script>
+	<script src="assets/js/shp2geojson/preview.js"></script>
+
+	<!--this is for dynamic boundary stats-->
+	<script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+
+
 	<script type="text/javascript">
 		$(document).ready(function () { $('#tab-container').easytabs({animate:false}); });
 	</script>
@@ -562,7 +713,7 @@ ul li{
 			var files = evt.target.files; 
 			
 			// get file contents as a base64 encoded url string
-			file = files[0];
+			const file = files[0];
 			fileExtension = file.name.split('.').pop();
 			//alert('local file selected: '+file.name+' - '+fileExtension);
 			
@@ -580,10 +731,7 @@ ul li{
 					updateComparisonLayerFromGeoJSON(source, zoomToExtent=true);
 					// and also populate a table
 					source.on('change', function() {
-						<!--for details on local file reading, see https://www.html5rocks.com/en/tutorials/file/dndfiles//-->
-						var div = document.getElementById('comparison-info-div');
-						
-						//////////////
+						/////////////////
 						// make sure the source contains polygon types
 						var features = source.getFeatures();
 						var geotype = features[0].getGeometry().getType();
@@ -591,13 +739,16 @@ ul li{
 							alert('File must contain Polygon or MultiPolygon types, not "'+geotype+'" type');
 							return // exit early
 						};
+
 						//////////////
-						// info div
+						// custom upload info div
+						var div = document.getElementById('comparison-info-div');
+						// clear
+						div.innerHTML = '';
 						// create basic file info
 						var info = document.createElement("div");
 						info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 						info.innerHTML = '';
-						info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
 						info.innerHTML += '<b>File Name: </b>'+file.name+'<br>';
 						info.innerHTML += '<b>File Size: </b>'+(file.size/1000000.0).toFixed(1)+' MB<br>';
 						info.innerHTML += '<b>Last Modified: </b>'+file.lastModifiedDate.toISOString().substring(0,10);
@@ -610,66 +761,88 @@ ul li{
 						uploadbut.textContent = "Share My Data";
 						div.appendChild(uploadbut);
 						uploadbut.addEventListener('click', openContributePopup);
-						////////////////////
-						// table div
-						// remove old div if exists
-						var div = document.getElementById('comparison-file-preview');
-						if (div) {
-							div.remove();
-						};
-						// create table div
-						var div = document.createElement("div");
-						div.id = 'comparison-file-preview';
-						div.style = 'max-height:500px; overflow:scroll; margin-top:10px';
-						document.getElementById('right-table-div').appendChild(div);
-						// create table
-						var table = document.createElement("table");
-						table.id = 'comparison-file-table';
-						table.style = 'margin-left:10px';
-						div.appendChild(table);
-						// first headers
-						for (feature of features) {
-							var row = document.createElement("tr");
-							// empty header for feature number
-							var cell = document.createElement("th");
-							cell.style = 'width:20px';
-							row.appendChild(cell);
-							// field headers
-							var props = feature.getProperties();
-							for (key in props) {
-								if (key == 'geometry') {continue};
-								var cell = document.createElement("th");
-								cell.innerHTML = key;
-								row.appendChild(cell);
-							};
-							table.appendChild(row);
-							break;
-						};
-						// then rows
-						i = 1;
-						for (feature of features) {
-							var row = document.createElement("tr");
-							// feature number
-							var cell = document.createElement("td");
-							cell.style = 'width:20px';
-							cell.innerHTML = i;
-							row.appendChild(cell);
-							i++;
-							// feature properties
-							var props = feature.getProperties();
-							for (key in props) {
-								if (key == 'geometry') {continue};
-								var cell = document.createElement("td");
-								var val = props[key];
-								cell.innerHTML = val;
-								row.appendChild(cell);
-							};
-							table.appendChild(row);
-						};
+
+						// update other display stuff
+						//updateComparisonInfo(features);
+						updateComparisonStats(features);
+						updateComparisonFieldsDropdown(features);
+						updateComparisonNames(features);
+						//updateComparisonTable(features);
 					});
 				};
 				// read as data url
 				reader.readAsDataURL(file);
+			} else if (fileExtension == 'zip') {
+				loadshp({
+						url: file, // path or your upload file
+						encoding: 'utf-8', // default utf-8
+						EPSG: 4326, // default 4326
+						},
+						function(geojson) {
+							// geojson returned
+							var features = new ol.format.GeoJSON().readFeatures(geojson,
+																				{ featureProjection: map.getView().getProjection() }
+										 										);
+							source = new ol.source.Vector({
+								features: features,
+								format: new ol.format.GeoJSON({}),
+								overlaps: false,
+							});
+							// make sure the source contains polygon types
+							var features = source.getFeatures();
+							var geotype = features[0].getGeometry().getType();
+							if (!(['Polygon','MultiPolygon'].includes( geotype ))) {
+								alert('File must contain Polygon or MultiPolygon types, not "'+geotype+'" type');
+								return // exit early
+							};
+							
+							// update the comparisonLayer
+							// NOTE: doesn't zoom, because that's only onchange for url sources...
+							updateComparisonLayerFromGeoJSON(source, zoomToExtent=true);
+
+							// or manual version
+							//comparisonLayer.setSource(source);
+							// zoom to new source after source has finished loading
+							//alert('new bbox: '+source.getExtent());
+							// get combined extent of gb and uploaded file
+							//extent = ol.extent.createEmpty();
+							//ol.extent.extend(extent, source.getExtent());
+							//ol.extent.extend(extent, gbLayer.getSource().getExtent());
+							// zoom to extent
+							//map.getView().fit(extent);
+							// zoom out a little
+							//map.getView().setZoom(map.getView().getZoom()-1);
+
+							//////////////
+							// custom upload info div
+							var div = document.getElementById('comparison-info-div');
+							// clear
+							div.innerHTML = '';
+							// create basic file info
+							var info = document.createElement("div");
+							info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
+							info.innerHTML = '';
+							info.innerHTML += '<b>File Name: </b>'+file.name+'<br>';
+							info.innerHTML += '<b>File Size: </b>'+(file.size/1000000.0).toFixed(1)+' MB<br>';
+							info.innerHTML += '<b>Last Modified: </b>'+file.lastModifiedDate.toISOString().substring(0,10);
+							info.innerHTML += '<br><br>';
+							div.appendChild(info);
+							// and upload button
+							var uploadbut = document.createElement("button");
+							uploadbut.id = "open-contribute-popup";
+							uploadbut.style = "font-size:0.7em";
+							uploadbut.textContent = "Share My Data";
+							div.appendChild(uploadbut);
+							uploadbut.addEventListener('click', openContributePopup);
+
+							// update display stuff
+							//updateComparisonInfo(features);
+							updateComparisonStats(features);
+							updateComparisonFieldsDropdown(features);
+							updateComparisonNames(features);
+							//updateComparisonTable(features);
+						}
+				);
 			};
 		};
 		
@@ -679,7 +852,7 @@ ul li{
 			// set basic layout
 			div.innerHTML = '\
 				<span class="fas fa-file" style="padding:0px 3px important! width:auto"> \
-				<input class="fas" type="file" id="file-input" accept=".geojson"> \
+				<input class="fas" type="file" id="file-input" accept=".geojson,.zip"> \
 				</span> \
 				\
 				<span data-text="Upload a zipped shapefile, geoJSON or topoJSON.  Expects WGS84 (EPSG 4326)." class="tooltip"> \
@@ -714,7 +887,10 @@ ul li{
 				var rowIso = row[2];
 				var rowLevel = row[4];
 				if (rowIso == iso & rowLevel == level) {
-					var gbSource = row[6] + ', ' + row[7];
+					var gbSource = row[6];
+					if (row[7] != '') {
+						gbSource += ', ' + row[7];
+					};
 					var gbSourceUrl = row[11].replace('https//', 'https://'); // fix url typos
 					var gbLicense = row[8];
 					var gbLicenseUrl = row[10].replace('https//', 'https://'); // fix url typos
@@ -729,13 +905,63 @@ ul li{
 			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 			info.innerHTML = '';
 			info.innerHTML += '<div><b style="vertical-align:middle">Actions: </b><a href="'+gbDownloadUrl+'" download><img src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png" height="20px" style="vertical-align:middle"></a></div>';
-			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
 			info.innerHTML += '<b>Source: </b><a href="'+gbSourceUrl+'" target="_blank">'+gbSource+'</a><br>';
 			info.innerHTML += '<b>License: </b><a href="'+gbLicenseUrl+'" target="_blank">'+gbLicense+'</a><br>';
 			info.innerHTML += '<b>Year the Boundary Represents: </b>'+gbYear+'<br>';
 			info.innerHTML += '<b>Last Update: </b>'+gbUpdated;
 			
 			div.appendChild(info);
+		};
+
+		function updateGbStats(features) {
+			// calc stats
+			var stats = calcSpatialStats(features);
+			//alert(JSON.stringify(stats));
+			// show in display
+			var lvl = document.getElementById('admin-level-select').value;
+			document.getElementById('stats-gb-level').innerText = lvl;
+			document.getElementById('stats-gb-area').innerText = stats.area.toFixed(0).toLocaleString('en-US') + ' km2';
+			document.getElementById('stats-gb-vertexes').innerText = stats.vertexes.toLocaleString('en-US');
+			document.getElementById('stats-gb-avglineres').innerText = stats.avgLineResolution.toFixed(3) + ' km';
+			document.getElementById('stats-gb-admincount').innerText = stats.adminCount;
+		};
+
+		function updateGbNames(features) {
+			////////////////////
+			// table div
+			// clear old table rows if exists
+			var tbody = document.getElementById('gb-names-table-tbody');
+			tbody.innerHTML = "";
+			// sort by name
+			features.sort(function (a,b) {
+							if (a.getProperties()['shapeName'] < b.getProperties()['shapeName']) {
+								return -1;
+							} else {
+								return 1;
+							};
+						});
+			// add rows
+			i = 1;
+			for (feature of features) {
+				var row = document.createElement("tr");
+				// feature number
+				var cell = document.createElement("td");
+				cell.style = 'width:20px';
+				cell.innerText = i;
+				row.appendChild(cell);
+				i++;
+				// name
+				var cell = document.createElement("td");
+				var name = feature.getProperties()['shapeName'];
+				cell.innerText = name;
+				row.appendChild(cell);
+				// some button?
+				var cell = document.createElement("td");
+				cell.innerHTML = "<button>View</button>";
+				row.appendChild(cell);
+				// add row
+				tbody.appendChild(row);
+			};
 		};
 		
 		function updateGbTable(features) {
@@ -954,8 +1180,12 @@ ul li{
 			for (row of metadata) {
 				var rowIso = row[2];
 				var rowLevel = row[4];
-				if (rowIso == iso & rowLevel == level) {
-					var comparisonSource = row[6] + ', ' + row[7];
+				var rowSource = row[6];
+				if (rowSource == sourceName & rowIso == iso & rowLevel == level) {
+					var comparisonSource = row[6];
+					if (row[7] != '') {
+						comparisonSource += ', ' + row[7];
+					};
 					var comparisonSourceUrl = row[11];
 					var comparisonLicense = row[8];
 					var comparisonLicenseUrl = row[10];
@@ -970,7 +1200,6 @@ ul li{
 			info.style = "margin-left:20px; margin-top:15px; font-size:0.7em";
 			info.innerHTML = '';
 			info.innerHTML += '<div><b style="vertical-align:middle">Actions: </b><a href="'+comparisonDownloadUrl+'" download><img src="https://icons-for-free.com/iconfiles/png/512/file+download+24px-131985219323992544.png" height="20px" style="vertical-align:middle"></a></div>';
-			info.innerHTML += '<b>Features: </b>'+features.length+'<br>';
 			info.innerHTML += '<b>Source: </b><a href="'+comparisonSourceUrl+'" target="_blank">'+comparisonSource+'</a><br>';
 			info.innerHTML += '<b>License: </b><a href="'+comparisonLicenseUrl+'" target="_blank">'+comparisonLicense+'</a><br>';
 			info.innerHTML += '<b>Year the Boundary Represents: </b>'+comparisonYear+'<br>';
@@ -985,6 +1214,107 @@ ul li{
 			if (div) {
 				div.remove();
 			};
+		};
+
+		function updateComparisonStats(features) {
+			// calc stats
+			var stats = calcSpatialStats(features);
+			//alert(JSON.stringify(stats));
+			// show in display
+			var name = document.getElementById('comparison-boundary-select').value;
+			document.getElementById('stats-comp-name').innerText = name + ':';
+			var lvl = document.getElementById('comparison-admin-level-select').value;
+			document.getElementById('stats-comp-level').innerText = lvl;
+			document.getElementById('stats-comp-area').innerText = stats.area.toFixed(0).toLocaleString('en-US') + ' km2';
+			document.getElementById('stats-comp-vertexes').innerText = stats.vertexes.toLocaleString('en-US');
+			document.getElementById('stats-comp-avglineres').innerText = stats.avgLineResolution.toFixed(3) + ' km';
+			document.getElementById('stats-comp-admincount').innerText = stats.adminCount;
+		};
+
+		function updateComparisonFieldsDropdown(features) {
+			// get all text fieldnames
+			var feature = features[0];
+			var fields = [];
+			var props = feature.getProperties();
+			for (key in props) {
+				if (key == 'geometry') {continue};
+				val = props[key];
+				if (typeof val === 'string') {
+					fields.push(key);
+				};
+			};
+			// update the dropdown
+			var select = document.getElementById('comparison-names-table-select');
+			select.innerHTML = "";
+			for (field of fields) {
+				var opt = document.createElement('option');
+				opt.value = field;
+				opt.textContent = field;
+				select.appendChild(opt);
+			};
+			// auto set name field
+			fields.sort(function (a,b) {
+				if (a.toLowerCase().includes('name') & b.toLowerCase().includes('name')) {
+					if (a.length < b.length) {
+						return -1;
+					} else {
+						return 1;
+					}
+				} else if (a.toLowerCase().includes('name')) {
+					return -1;
+				} else if (b.toLowerCase().includes('name')) {
+					return 1;
+				} else {
+					return 0;
+				};
+			});
+			autofield = fields[0];
+			select.value = autofield;
+		};
+
+		function updateComparisonNames(features) {
+			////////////////////
+			// table div
+			// clear old table rows if exists
+			var tbody = document.getElementById('comparison-names-table-tbody');
+			tbody.innerHTML = "";
+			// get name from dropdown
+			var nameField = document.getElementById('comparison-names-table-select').value;
+			// sort by name
+			features.sort(function (a,b) {
+							if (a.getProperties()[nameField] < b.getProperties()[nameField]) {
+								return -1;
+							} else {
+								return 1;
+							};
+						});
+			// add rows
+			i = 1;
+			for (feature of features) {
+				var row = document.createElement("tr");
+				// feature number
+				var cell = document.createElement("td");
+				cell.style = 'width:20px';
+				cell.innerText = i;
+				row.appendChild(cell);
+				i++;
+				// name
+				var cell = document.createElement("td");
+				var name = feature.getProperties()[nameField];
+				cell.innerText = name;
+				row.appendChild(cell);
+				// some button?
+				var cell = document.createElement("td");
+				cell.innerHTML = "<button>View</button>";
+				row.appendChild(cell);
+				// add row
+				tbody.appendChild(row);
+			};
+		};
+
+		function comparisonFieldsDropdownChanged() {
+			var features = comparisonLayer.getSource().getFeatures();
+			updateComparisonNames(features);
 		};
 		
 		function updateComparisonTable(features) {
@@ -1094,6 +1424,7 @@ ul li{
 			var metadata = geoContrastMetadata;
 			// get list of sources that match the specified country
 			var sources = [];
+			var sourcesSeen = [];
 			for (var i = 1; i < metadata.length; i++) {
 				var row = metadata[i];
 				if (row.length <= 1) {
@@ -1105,7 +1436,11 @@ ul li{
 				var iso = row[2];
 				var level = row[4];
 				if (iso==currentIso) {
-					sources.push(source);
+					if (!(sourcesSeen.includes(source))) {
+						// only add if hasn't already been added
+						sourcesSeen.push(source);
+						sources.push(source);
+					};
 				};
 			};
 			// sort
@@ -1183,6 +1518,51 @@ ul li{
 			};
 			// force dropdown change
 			comparisonAdminLevelChanged();
+		};
+
+
+		// spatial stats stuff
+		function calcSpatialStats(features) {
+			var stats = {};
+			var circumf = 0;
+			var vertexes = 0;
+			var area = 0;
+			var segLengths = [];
+			for (feat of features) {
+				var geom = feat.getGeometry();
+				if (geom.getType() == 'Polygon') {
+					// wrap so can treat at multipolygon
+					var polys = [geom.getCoordinates()];
+				} else {
+					var polys = geom.getCoordinates();
+				};
+				for (poly of polys) {
+					// poly level aggregate stats
+					var ext = poly[0]; // polygon exterior
+					vertexes += ext.length;
+					var line = turf.lineString(ext);
+					circumf += turf.length(line);
+					var polygon = turf.polygon([ext]);
+					area += turf.area(polygon);
+					// calc detailed segment lengths
+					//for (var i = 1; i < (ext.length-1); i++) {
+					//	v1 = ext[i];
+					//	v2 = ext[i+1];
+					//	var len = turf.length(turf.lineString([v1,v2]));
+					//	segLengths.push(len);
+					//};
+				};
+			};
+			// store final stats
+			stats.adminCount = features.length;
+			stats.area = area / 1000000.0; // convert from m2 to km2
+			var circumf = circumf / 1000.0; // convert from m to km, even though supposed to be km
+			stats.circumf = circumf;
+			stats.vertexes = vertexes;
+			stats.avgLineResolution = circumf / (vertexes+1); // ie avg vertext-to-vertex segment length ie resolution
+			//segLengths.sort(function(a, b) {return a - b});
+			//stats.medLineResolution = segLengths[Math.round(segLengths.length/2)]  / 1000.0; // convert from m to km, even though supposed to be km
+			return stats;
 		};
 		
 		
@@ -1278,7 +1658,9 @@ ul li{
 			source.on('change', function() {
 				//alert('gb loaded, update info');
 				var features = source.getFeatures();
-				updateGbTable(features);
+				updateGbStats(features);
+				updateGbNames(features);
+				//updateGbTable(features);
 				updateGbInfo(features);
 			});
 			// notify if failed to load source
@@ -1298,15 +1680,32 @@ ul li{
 		
 		function updateComparisonLayerWithGeoContrast(zoomToExtent=false) {
 			// get gb params
-			iso3 = document.getElementById('country-select').value;
+			iso = document.getElementById('country-select').value;
 			// get comparison params
 			level = document.getElementById('comparison-admin-level-select').value;
 			sourceName = document.getElementById('comparison-boundary-select').value;
 			if (sourceName == null) {
 				return
 			};
-			// construct data url from params
-			url = 'https://raw.githubusercontent.com/wmgeolab/geoContrast/main/releaseData/'+sourceName+'/'+iso3+'/'+level+'/'+sourceName+'_'+iso3+'_'+level+'.topojson';
+			// get geoContrast metadata
+			var metadata = geoContrastMetadata;
+			// find the data url from the corresponding entry in the meta table
+			//url = 'https://raw.githubusercontent.com/wmgeolab/geoContrast/main/releaseData/'+sourceName+'/'+iso3+'/'+level+'/'+sourceName+'_'+iso3+'_'+level+'.topojson';
+			for (var i = 1; i < metadata.length; i++) {
+				var row = metadata[i];
+				if (row.length <= 1) {
+					// ignore empty rows
+					i++;
+					continue;
+				};
+				var currentIso = row[2];
+				var currentLevel = row[4];
+				var currentSource = row[6];
+				if ((sourceName == currentSource) & (iso == currentIso) & (level == currentLevel)) {
+					url = row[18];
+					break;
+				};
+			};
 			//alert(url);
 			// get the source
 			var source = new ol.source.Vector({
@@ -1329,7 +1728,10 @@ ul li{
 			source.on('change', function() {
 				//alert('comparison loaded, update info');
 				features = source.getFeatures();
-				updateComparisonTable(features);
+				updateComparisonStats(features);
+				updateComparisonFieldsDropdown(features);
+				updateComparisonNames(features);
+				//updateComparisonTable(features);
 				updateComparisonInfo(features);
 			});
 			// notify if failed to load source
@@ -1383,6 +1785,7 @@ ul li{
 			stroke: new ol.style.Stroke({
 				color: 'rgb(255, 0, 0)',
 				width: 1,
+				lineDash: [4,4]
 			}),
 		});
 		var comparisonLayer = new ol.layer.Vector({
@@ -1393,7 +1796,9 @@ ul li{
 	
 		var map = new ol.Map({
 			target: 'map',
-			controls: ol.control.defaults().extend([new ol.control.FullScreen()]),
+			controls: ol.control.defaults().extend([new ol.control.FullScreen(),
+													new ol.control.ScaleLine({units: 'metric'}),
+													]),
 			layers: [
 			new ol.layer.Tile({
 				source: new ol.source.XYZ({
