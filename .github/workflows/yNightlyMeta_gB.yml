@@ -43,6 +43,7 @@ jobs:
             DRTOKEN: ${{secrets.DRTOKEN}}
             REP: ${{env.GITHUB_REPOSITORY}}
       run: |
+           ls
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git fetch
