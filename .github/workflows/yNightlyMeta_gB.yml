@@ -45,6 +45,7 @@ jobs:
       run: |
            ls
            ls releaseData
+           pwd
            cat releaseData/geoBoundariesOpen-meta.csv
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
@@ -55,7 +56,6 @@ jobs:
            git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesAuthoritative-meta.csv
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git commit -m "geoBoundary Status and Build Script"
-           git pull --rebase -X theirs
            git status
            git push origin main 
         
