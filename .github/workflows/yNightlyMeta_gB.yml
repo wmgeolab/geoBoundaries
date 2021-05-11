@@ -20,7 +20,7 @@ jobs:
            git sparse-checkout add "*.geojson"
            git sparse-checkout add ".gitattrbutes"
            git sparse-checkout add ".gitignore"
-           git sparse-checkout add ".csv"
+           git sparse-checkout add "*.csv"
            git checkout 
    
     - name: Install CSV Build Script
@@ -55,7 +55,8 @@ jobs:
            git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesHumanitarian-meta.csv
            git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesAuthoritative-meta.csv
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
-           git commit -m "geoBoundary Status and Build Script"
+           git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
+           git pull --rebase -X theirs
            git status
            git push origin main 
         
