@@ -44,6 +44,8 @@ jobs:
             REP: ${{env.GITHUB_REPOSITORY}}
       run: |
            ls
+           ls releaseData
+           cat releaseData/geoBoundariesOpen-meta.csv
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git fetch
