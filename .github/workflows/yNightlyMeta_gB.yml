@@ -48,6 +48,9 @@ jobs:
            git config --local user.name "DanRunfola"
            git fetch
            git add -A .
+           git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesOpen-meta.csv
+           git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesHumanitarian-meta.csv
+           git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesAuthoritative-meta.csv
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
            git pull --rebase -X theirs
