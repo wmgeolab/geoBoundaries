@@ -4,17 +4,17 @@ Metadata for: POPDISTDAP
 Full Variable Name: Number of directly affected persons attributed to disasters per 100,000 population
 ==============================================================
 
-Data Definition: 
-Units: 
+Data Definition: Number of directly affected persons attributed to disasters per 100,000
+Units: Number of persons per 100,000 population
 Data Representative Of Year(s): 2018-2018
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
-Data Processing Methodology: 
-Data Collection Methodology (or link to documentation): 
+Data Processing Methodology:N/A 
+Data Collection Methodology (or link to documentation): Downloaded from source link
 Source 1: United Nations Office for Disaster Risk Reduction
 Source 2: 
-License: 
-License Source: 
+License: No license specified
+License Source: N/A
 Link to Source Data: http://www.sdg.org/datasets/indicator-13-1-1-number-of-directly-affected-persons-attributed-to-disasters-per-100000-population-number-2?geometry=-104.236%2C-88.553%2C106.701%2C88.313
-Tag(s): DIsaster
+Tag(s): disaster, preparedness and relief, disaster victims, disaster loss, disaster prevention
 Other Notes: 
