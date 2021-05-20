@@ -10,7 +10,7 @@ Data Representative Of Year(s): 2016-2016
 geoBoundary Shapefile Dataset API Link: https://www.geoboundaries.org/gbRequest.html?ISO=GLB&VER=3_0_0&ADM=ADM0
 Each row ID is defined by: ISO 3166-1 alpha-3
 Data Processing Methodology: Retrieved from World Bank World Development Indicators Website on October 14, 2020.
-Data Collection Methodology (or link to documentation): Compiled by the World Health Organization, the data in this dataset come from official death registration data where available (see notes).
+Data Collection Methodology (or link to documentation): Downloaded from source link (https://datacatalog.worldbank.org/dataset/world-development-indicators)
 Source 1: World Develpment Indicators, The World Bank
 Source 2: World Health Organization, Global Health Observatory Data Repository (http://apps.who.int/ghodata/)
 License: CC-BY 4.0
