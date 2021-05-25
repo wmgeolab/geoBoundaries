@@ -1,0 +1,14 @@
+boundaryID : SYR-ADM3-54000
+boundaryISO : SYR
+boundaryType : ADM3
+boundaryYear : 2017
+boundarySource-1 : HDX
+boundarySource-2 : United Nations Cartographic Section (UNCS) and United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA)
+boundaryCanonical : sub-district
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/about/license
+boundarySourceURL : https//data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SYR_ADM3.zip
+sourceDataUpdateDate : Apr 21, 2021
+buildUpdateDate : May 25, 2021
