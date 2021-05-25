@@ -1,4 +1,4 @@
-boundaryID : SLV-ADM0-43677889
+boundaryID : SLV-ADM0-99076482
 boundaryISO : SLV
 boundaryType : ADM0
 boundaryYear : 2021
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//osm-boundaries.com/
 boundarySourceURL : https//osm-boundaries.com/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SLV_ADM0.zip
-sourceDataUpdateDate : Mar 25, 2021
-buildUpdateDate : Apr 19, 2021
+sourceDataUpdateDate : May 09, 2021
+buildUpdateDate : May 25, 2021
