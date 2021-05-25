@@ -1,0 +1,14 @@
+boundaryID : XKX-ADM1-2360587
+boundaryISO : XKX
+boundaryType : ADM1
+boundaryYear : 2021
+boundarySource-1 : Open Street Map
+boundarySource-2 : 
+boundaryCanonical : Municipalities
+boundaryLicense : Creative Commons Attribution-ShareAlike 2.0
+licenseDetail : 
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//osm-boundaries.com/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/XKX_ADM1.zip
+sourceDataUpdateDate : Apr 26, 2021
+buildUpdateDate : May 25, 2021
