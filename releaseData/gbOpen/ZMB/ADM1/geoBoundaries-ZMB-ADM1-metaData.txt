@@ -1,0 +1,14 @@
+boundaryID : ZMB-ADM1-62077984
+boundaryISO : ZMB
+boundaryType : ADM1
+boundaryYear : 2020
+boundarySource-1 : Humdata
+boundarySource-2 : Disaster Management and Mitigation Unit (DMMU) Zambia
+boundaryCanonical : Province
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/zambia-administrative-boundaries-level-1-provinces-and-level-2-districts-with-census-2010-population
+boundarySourceURL : https//data.humdata.org/dataset/zambia-administrative-boundaries-level-1-provinces-and-level-2-districts-with-census-2010-population
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ZMB_ADM1.zip
+sourceDataUpdateDate : Apr 22, 2021
+buildUpdateDate : May 25, 2021
