@@ -1,14 +1,14 @@
-boundaryID : SYR-ADM1-98441862
+boundaryID : SYR-ADM1-95819600
 boundaryISO : SYR
 boundaryType : ADM1
 boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundarySource-1 : HDX
+boundarySource-2 : United Nations Cartographic Section (UNCS)
+boundaryCanonical : governorate
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/about/license
+boundarySourceURL : https//data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SYR_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+sourceDataUpdateDate : Apr 21, 2021
+buildUpdateDate : May 25, 2021
