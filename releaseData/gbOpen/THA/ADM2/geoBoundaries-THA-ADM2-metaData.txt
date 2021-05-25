@@ -1,0 +1,14 @@
+boundaryID : THA-ADM2-46861878
+boundaryISO : THA
+boundaryType : ADM2
+boundaryYear : 2019
+boundarySource-1 : HumData
+boundarySource-2 : Royal Thai Survey Department
+boundaryCanonical : districts
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/thailand-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/thailand-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/THA_ADM2.zip
+sourceDataUpdateDate : Apr 24, 2021
+buildUpdateDate : May 25, 2021
