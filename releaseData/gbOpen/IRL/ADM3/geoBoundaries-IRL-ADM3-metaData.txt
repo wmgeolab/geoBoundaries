@@ -1,0 +1,14 @@
+boundaryID : IRL-ADM3-65391444
+boundaryISO : IRL
+boundaryType : ADM3
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
+boundaryCanonical : townland
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IRL_ADM3.zip
+sourceDataUpdateDate : Apr 12, 2021
+buildUpdateDate : May 26, 2021
