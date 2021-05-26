@@ -1,0 +1,14 @@
+boundaryID : NPL-ADM1-38925275
+boundaryISO : NPL
+boundaryType : ADM1
+boundaryYear : 2020
+boundarySource-1 : Survey Department of Nepal
+boundarySource-2 : OCHA FISS
+boundaryCanonical : Provinces
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+boundarySourceURL : https//data.humdata.org/dataset/administrative-bounadries-of-nepal
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NPL_ADM1.zip
+sourceDataUpdateDate : Apr 03, 2021
+buildUpdateDate : May 26, 2021
