@@ -1,14 +1,14 @@
-boundaryID : NGA-ADM0-22971093
+boundaryID : NGA-ADM0-7101481
 boundaryISO : NGA
 boundaryType : ADM0
-boundaryYear : 2017
-boundarySource-1 : https//datacatalog.worldbank.org/dataset/nigeria-administrative-boundaries-2017
-boundarySource-2 : 
-boundaryCanonical : Country
-boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
+boundaryYear : 2020
+boundarySource-1 : Office for the Surveyor General of the Federation of Nigeria (OSGOF), Ehealth, United Nations Cartographic Section (UNCS)
+boundarySource-2 : OCHA Nigeria
+boundaryCanonical : Nigeria
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
-licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
-boundarySourceURL : https//datacatalog.worldbank.org/dataset/nigeria-administrative-boundaries-2017
+licenseSource : https//data.humdata.org/dataset/nga-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/nga-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NGA_ADM0.zip
-sourceDataUpdateDate : Oct 12, 2020
-buildUpdateDate : Apr 08, 2021
+sourceDataUpdateDate : Apr 12, 2021
+buildUpdateDate : May 26, 2021
