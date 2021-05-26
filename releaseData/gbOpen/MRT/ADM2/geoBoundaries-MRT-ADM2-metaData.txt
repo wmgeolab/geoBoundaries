@@ -1,14 +1,14 @@
-boundaryID : MRT-ADM2-65248537
+boundaryID : MRT-ADM2-44345069
 boundaryISO : MRT
 boundaryType : ADM2
-boundaryYear : 2015
-boundarySource-1 : Princeton University Library
-boundarySource-2 : 
-boundaryCanonical : Moughataa
-boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
+boundaryYear : 2020
+boundarySource-1 : HumData
+boundarySource-2 : World Food Programme and OCHA
+boundaryCanonical : Mauritania
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
-licenseSource : https//maps.princeton.edu/catalog/stanford-gp836bd8268/metadata
-boundarySourceURL : https//maps.princeton.edu/catalog/stanford-gp836bd8268
+licenseSource : https//data.humdata.org/dataset/mauritania-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/mauritania-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MRT_ADM2.zip
-sourceDataUpdateDate : Oct 12, 2020
-buildUpdateDate : Apr 08, 2021
+sourceDataUpdateDate : May 06, 2021
+buildUpdateDate : May 26, 2021
