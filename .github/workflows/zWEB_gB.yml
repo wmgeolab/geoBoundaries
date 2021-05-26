@@ -1,7 +1,8 @@
 on:
-  push:
-    paths:    
-    - 'website/geoBoundaries/**'
+  workflow_dispatch
+  #push:
+  #  paths:    
+  #  - 'website/geoBoundaries/**'
 name: zWEB_gB
 jobs:
   FTP-Deploy-Action:
