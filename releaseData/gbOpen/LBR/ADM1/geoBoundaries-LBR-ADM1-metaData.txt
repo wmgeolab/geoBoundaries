@@ -1,0 +1,14 @@
+boundaryID : LBR-ADM1-1627179
+boundaryISO : LBR
+boundaryType : ADM1
+boundaryYear : 2021
+boundarySource-1 : UNMIL
+boundarySource-2 : OCHA ROWCA
+boundaryCanonical : Counties
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/liberia-admin-level-2-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/liberia-admin-level-2-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LBR_ADM1.zip
+sourceDataUpdateDate : May 02, 2021
+buildUpdateDate : May 26, 2021
