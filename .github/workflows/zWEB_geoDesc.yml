@@ -1,7 +1,5 @@
 on:
-  push:
-    paths:    
-    - 'website/geoDesc/**'
+  workflow_dispatch
 name: zWEB_geoDesc
 
 jobs:
