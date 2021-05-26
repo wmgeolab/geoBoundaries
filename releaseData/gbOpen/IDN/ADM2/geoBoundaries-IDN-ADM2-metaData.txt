@@ -1,0 +1,14 @@
+boundaryID : IDN-ADM2-23123896
+boundaryISO : IDN
+boundaryType : ADM2
+boundaryYear : 2020
+boundarySource-1 : Badan Pusat Statistik (BPS - Statistics Indonesia)
+boundarySource-2 : OCHA ROAP
+boundaryCanonical : Regencies and Cities
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/indonesia-administrative-boundary-polygons-lines-and-places-levels-0-4b
+boundarySourceURL : https//data.humdata.org/dataset/indonesia-administrative-boundary-polygons-lines-and-places-levels-0-4b
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IDN_ADM2.zip
+sourceDataUpdateDate : Apr 12, 2021
+buildUpdateDate : May 26, 2021
