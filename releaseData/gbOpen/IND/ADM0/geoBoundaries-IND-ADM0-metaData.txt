@@ -1,14 +1,14 @@
-boundaryID : IND-ADM0-62764695
+boundaryID : IND-ADM0-73716709
 boundaryISO : IND
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
+boundaryYear : 2021
+boundarySource-1 : Pathways Data Pvt. Ltd.
+boundarySource-2 : lgdirectory.gov.in
+boundaryCanonical : Country
 boundaryLicense : Open Data Commons Open Database License 1.0
 licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+licenseSource : https//geonode.pathwaysdata.com/layers/geonode
+boundarySourceURL : https//geonode.pathwaysdata.com/layers/geonode
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IND_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 07, 2021
+sourceDataUpdateDate : Apr 17, 2021
+buildUpdateDate : May 26, 2021
