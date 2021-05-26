@@ -1,14 +1,14 @@
-boundaryID : KEN-ADM2-45228107
+boundaryID : KEN-ADM2-36194209
 boundaryISO : KEN
 boundaryType : ADM2
 boundaryYear : 2020
-boundarySource-1 : County Integrated Development Plans (CIDPS)
-boundarySource-2 : Figshare
-boundaryCanonical : Sub Counties
-boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+boundarySource-1 : Humdata
+boundarySource-2 : IEBC
+boundaryCanonical : Sub-Counties
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
-licenseSource : https//figshare.com/articles/dataset/Sub_counties_of_Kenya_based_on_County_Intergrated_Development_Plans_CIDPS_/12501455
-boundarySourceURL : https//figshare.com/articles/dataset/Sub_counties_of_Kenya_based_on_County_Intergrated_Development_Plans_CIDPS_/12501455
+licenseSource : https//data.humdata.org/dataset/ken-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/ken-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KEN_ADM2.zip
-sourceDataUpdateDate : Mar 05, 2021
-buildUpdateDate : Apr 07, 2021
+sourceDataUpdateDate : Apr 16, 2021
+buildUpdateDate : May 26, 2021
