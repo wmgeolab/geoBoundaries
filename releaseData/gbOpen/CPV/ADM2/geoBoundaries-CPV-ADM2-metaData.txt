@@ -1,14 +1,14 @@
-boundaryID : CPV-ADM2-72983108
+boundaryID : CPV-ADM2-85372179
 boundaryISO : CPV
 boundaryType : ADM2
 boundaryYear : 2020
-boundarySource-1 : Second Administrative Level Boundaries (SALB) Project
-boundarySource-2 : OCHA ROWCA
-boundaryCanonical : Parish
-boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+boundarySource-1 : Infraestrutura De Dados Espaciais IDECV
+boundarySource-2 : Instituto Nacional de Gestao do Territorio INGT
+boundaryCanonical : Freguesias
+boundaryLicense : Public Domain
 licenseDetail : 
-licenseSource : https//data.humdata.org/dataset/cape-verde-administrative-boundaries
-boundarySourceURL : https//data.humdata.org/dataset/cape-verde-administrative-boundaries
+licenseSource : https//ingt.gov.cv/site/Servi%C3%A7os/idecv/
+boundarySourceURL : https//idecv.gov.cv/datasets/limite-freguesias-cv?geometry=-27.467%2C15.079%2C-20.529%2C16.927
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CPV_ADM2.zip
-sourceDataUpdateDate : Mar 05, 2021
-buildUpdateDate : Apr 05, 2021
+sourceDataUpdateDate : Apr 22, 2021
+buildUpdateDate : May 27, 2021
