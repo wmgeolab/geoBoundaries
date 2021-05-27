@@ -1,0 +1,14 @@
+boundaryID : FRA-ADM5-35783486
+boundaryISO : FRA
+boundaryType : ADM5
+boundaryYear : 2020
+boundarySource-1 : Republic of France
+boundarySource-2 : Regulatory Authority for Electronic Communications, Posts and Press Distribution (ARCEP)
+boundaryCanonical : Arrondissement municipal, Commune simple, Préfecture, Préfecture de région,Sous-préfrecture
+boundaryLicense : Open Data Commons Attribution License 1.0
+licenseDetail : 
+licenseSource : https//www.etalab.gouv.fr/wp-content/uploads/2014/05/Licence_Ouverte.pdf
+boundarySourceURL : https//www.data.gouv.fr/fr/datasets/contours-communes-france-administrative-format-admin-express-avec-arrondissements/
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FRA_ADM5.zip
+sourceDataUpdateDate : May 10, 2021
+buildUpdateDate : May 27, 2021
