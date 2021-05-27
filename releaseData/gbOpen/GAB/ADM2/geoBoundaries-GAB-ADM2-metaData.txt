@@ -1,14 +1,14 @@
-boundaryID : GAB-ADM2-21018464
+boundaryID : GAB-ADM2-78101797
 boundaryISO : GAB
 boundaryType : ADM2
-boundaryYear : 2011
-boundarySource-1 : https//www.arcgis.com/home/item.html?id=1ac90d0c0c3544e494873fac984fb2b8
-boundarySource-2 : World Resources Institute
+boundaryYear : 2017
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikipedia
 boundaryCanonical : Departments
-boundaryLicense : Other - Direct Permission
-licenseDetail : email permission
-licenseSource : email
-boundarySourceURL : https//www.arcgis.com/home/item.html?id=1ac90d0c0c3544e494873fac984fb2b8
+boundaryLicense : Creative Commons Attribution-ShareAlike 4.0 International License
+licenseDetail : we also attribute to Wikipedia's creating user ChrL
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GAB_ADM2.zip
-sourceDataUpdateDate : Oct 18, 2020
-buildUpdateDate : Apr 05, 2021
+sourceDataUpdateDate : May 03, 2021
+buildUpdateDate : May 27, 2021
