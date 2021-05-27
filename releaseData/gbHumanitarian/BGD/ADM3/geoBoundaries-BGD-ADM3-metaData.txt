@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/administrative-boundaries-of-ban
 boundarySourceURL : https//data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/BGD_ADM3.zip
 sourceDataUpdateDate : Dec 17, 2020
-buildUpdateDate : Apr 16, 2021
+buildUpdateDate : May 27, 2021
