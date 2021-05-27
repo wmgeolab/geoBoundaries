@@ -1,0 +1,14 @@
+boundaryID : CHL-ADM3-31136180
+boundaryISO : CHL
+boundaryType : ADM3
+boundaryYear : 2020
+boundarySource-1 : HumData
+boundarySource-2 : La Biblioteca del Congreso Nacional de Chile (BCN)
+boundaryCanonical : Communes
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/chile-administrative-level-0-country-1-region-region
+boundarySourceURL : https//data.humdata.org/dataset/chile-administrative-level-0-country-1-region-region
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CHL_ADM3.zip
+sourceDataUpdateDate : Apr 24, 2021
+buildUpdateDate : May 27, 2021
