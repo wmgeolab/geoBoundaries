@@ -1,14 +1,14 @@
-boundaryID : CHN-ADM2-4373246
+boundaryID : CHN-ADM2-17275852
 boundaryISO : CHN
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2017
+boundarySource-1 : National Administration of Surveying, Mapping and Geoinformation of China
+boundarySource-2 : Revolutionary GIS
+boundaryCanonical : County Level
+boundaryLicense : Open Data Commons Public Domain Dedication and License (PDDL) v1.0
+licenseDetail : https//revolutionarygis.wordpress.com/2017/04/11/china-shapefile-data/
+licenseSource : https//revolutionarygis.wordpress.com/2014/01/18/china-prefecture-shapefile-and-china-province-shapefile/
+boundarySourceURL : https//github.com/justinelliotmeyers/-1_400-/blob/master/%E4%B8%AD%E5%9B%BD%E5%8E%BF%E7%95%8C.shp
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CHN_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 05, 2021
+sourceDataUpdateDate : May 13, 2021
+buildUpdateDate : May 27, 2021
