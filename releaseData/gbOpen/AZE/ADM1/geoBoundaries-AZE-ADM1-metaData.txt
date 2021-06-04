@@ -1,14 +1,14 @@
-boundaryID : AZE-ADM1-78911194
+boundaryID : AZE-ADM1-78488794
 boundaryISO : AZE
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
+boundaryYear : 2021.0
+boundarySource-1 : geoBoundaries
+boundarySource-2 : OpenStreetMap
+boundaryCanonical : Contiguous Regions
 boundaryLicense : Open Data Commons Open Database License 1.0
 licenseDetail : Open Data Commons Open Database License 1.0
 licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundarySourceURL : https//www.openstreetmap.org/search?query=azerbaijan#map=7/40.195/47.886
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AZE_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 02, 2021
+sourceDataUpdateDate : Jun 03, 2021
+buildUpdateDate : Jun 04, 2021
