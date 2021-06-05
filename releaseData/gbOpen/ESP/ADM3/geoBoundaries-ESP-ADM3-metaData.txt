@@ -11,4 +11,4 @@ licenseSource : https//www.ign.es/web/ign/portal/politica-datos
 boundarySourceURL : https//opendata.esri.es/datasets/53229f5912e04f1ba6dddb70a5abeb72_0?geometry=-66.506%2C25.274%2C52.058%2C49.347
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ESP_ADM3.zip
 sourceDataUpdateDate : Feb 17, 2021
-buildUpdateDate : May 27, 2021
+buildUpdateDate : Jun 05, 2021
