@@ -11,4 +11,4 @@ licenseSource : https//datacatalog.worldbank.org/public-licenses#cc-by
 boundarySourceURL : https//datacatalog.worldbank.org/dataset/mexico-municipalities-2012
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MEX_ADM2.zip
 sourceDataUpdateDate : May 04, 2021
-buildUpdateDate : May 26, 2021
+buildUpdateDate : Jun 07, 2021
