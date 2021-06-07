@@ -11,4 +11,4 @@ licenseSource : http//www.stats.govt.nz/about_us/about-this-site/copyright-terms
 boundarySourceURL : http//www.stats.govt.nz/browse_for_stats/Maps_and_geography/Geographic-areas/digital-boundary-files.aspx
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NZL_ADM0.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 07, 2021
