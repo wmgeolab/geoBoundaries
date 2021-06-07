@@ -1,14 +1,14 @@
-boundaryID : KEN-ADM1-30705640
+boundaryID : KEN-ADM1-53391780
 boundaryISO : KEN
 boundaryType : ADM1
-boundaryYear : 2017.0
+boundaryYear : 2017
 boundarySource-1 : OpenStreetMap
 boundarySource-2 : Wambacher
-boundaryCanonical : 
+boundaryCanonical : County
 boundaryLicense : Open Data Commons Open Database License 1.0
 licenseDetail : Open Data Commons Open Database License 1.0
 licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KEN_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 07, 2021
+sourceDataUpdateDate : Jun 03, 2021
+buildUpdateDate : Jun 07, 2021
