@@ -3,6 +3,13 @@
 ![](https://www.geoboundaries.org/images/pic11.jpg)
 Produced and maintained by the William & Mary [geoLab](http://geolab.wm.edu/) since 2017, the geoBoundaries Global Database of Political Administrative Boundaries Database is an online, open license resource of boundaries (i.e., state, county) for every country in the world. We currently track 199 total entities, including all 195 UN member states, Greenland, Taiwan, Niue, and Kosovo. All boundaries are available to view or download in common file formats, including shapefiles; the only requirement for use is [acknowledgement](https://www.geoboundaries.org/index.html#citation). The most up-to-date information about geoBoundaries can be found at www.geoboundaries.org.
 
+# Getting Involved
+We welcome contributions to the geoBoundaries dataset.  Involvement can take many forms: assistance identifying errata in the database, contributing boundary files, or even contributing code for our build or website scripts.  To get started, you could:
+- [Report Boundary Errors](https://github.com/wmgeolab/geoBoundaries/issues/new?assignees=&labels=&template=boundary-errata.md&title=%5BBOUNDARY+ERRATA%5D): While we try to ensure geoBoundaries is as error-free as possible, we are currently tracking trillions of vertices across hundreds-of-thousands of geometries - there are bound to be issues!  We very much welcome any reports of errors across the database.
+- [Contribute Boundaries](https://github.com/wmgeolab/geoBoundaries/blob/main/CONTRIBUTING.md): We carefully curate all boundaries that are submitted to the database, and have a very active community.  Join us in the fun!  We try to keep things simple for everyone, requiring only a zipfile upload.  Learn more [here](https://github.com/wmgeolab/geoBoundaries/blob/main/CONTRIBUTING.md).
+- [Fix Known Issues](https://github.com/wmgeolab/geoBoundaries/issues): We have a number of known issues with the database, and always welcome contributions that might fix any of these.  
+- [Help with the Python Code](https://github.com/wmgeolab/geoBoundaryBot): We always welcome contributions to our codebase that improve the effeciency of our processing, or introduce new types of checks to automatically prevent errors.  Our code includes a number of different pieces, such as the www.geoboundaries.org website, API, the geoBoundaryBot (responds to PRs), and our formal build scripts.
+
 
 # File Access
 
