@@ -1,0 +1,14 @@
+boundaryID : PRK-ADM2-80341285
+boundaryISO : PRK
+boundaryType : ADM2
+boundaryYear : 2019
+boundarySource-1 : HDX
+boundarySource-2 : World Food Programme
+boundaryCanonical : county, city, special city
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/dpr-korea-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/dpr-korea-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PRK_ADM2.zip
+sourceDataUpdateDate : May 30, 2021
+buildUpdateDate : Jun 07, 2021

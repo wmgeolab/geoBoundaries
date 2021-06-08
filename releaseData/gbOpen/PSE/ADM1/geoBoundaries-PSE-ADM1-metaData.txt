@@ -1,14 +1,14 @@
-boundaryID : PSE-ADM1-76447841
+boundaryID : PSE-ADM1-83478781
 boundaryISO : PSE
 boundaryType : ADM1
-boundaryYear : 2017
-boundarySource-1 : Open Data ESRI
+boundaryYear : 2021
+boundarySource-1 : geoBoundaries
 boundarySource-2 : Open Data Watch
-boundaryCanonical : governorate
+boundaryCanonical : territory
 boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
 licenseDetail : 
 licenseSource : https//opendatawatch.com/publications/open-data-to-support-sustainable-development-goals/
-boundarySourceURL : https//sdg-pcbs.opendata.arcgis.com/datasets/d1ea572ff1eb4c64b642388489df5b7c_1
+boundarySourceURL : https//opendatawatch.com/about/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PSE_ADM1.zip
-sourceDataUpdateDate : Feb 10, 2021
-buildUpdateDate : Apr 19, 2021
+sourceDataUpdateDate : May 28, 2021
+buildUpdateDate : Jun 07, 2021

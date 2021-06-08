@@ -1,0 +1,14 @@
+boundaryID : SEN-ADM0-49773715
+boundaryISO : SEN
+boundaryType : ADM0
+boundaryYear : 2019.0
+boundarySource-1 : HDX
+boundarySource-2 : Government of Senegal
+boundaryCanonical : Republic of Senegal
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/senegal-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/senegal-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SEN_ADM0.zip
+sourceDataUpdateDate : May 28, 2021
+buildUpdateDate : Jun 07, 2021

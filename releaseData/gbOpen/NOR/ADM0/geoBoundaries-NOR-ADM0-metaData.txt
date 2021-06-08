@@ -1,14 +1,14 @@
-boundaryID : NOR-ADM0-49961944
+boundaryID : NOR-ADM0-63113933
 boundaryISO : NOR
 boundaryType : ADM0
 boundaryYear : 2017.0
 boundarySource-1 : OpenStreetMap
 boundarySource-2 : Wambacher
-boundaryCanonical : 
+boundaryCanonical : Country
 boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
+licenseDetail : 
 licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NOR_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 08, 2021
+sourceDataUpdateDate : Jun 02, 2021
+buildUpdateDate : Jun 07, 2021

@@ -1,0 +1,14 @@
+boundaryID : TUR-ADM2-73659721
+boundaryISO : TUR
+boundaryType : ADM2
+boundaryYear : 2017
+boundarySource-1 : HDX, Regional IM Working Group
+boundarySource-2 : General Command of Mapping
+boundaryCanonical : Turkey
+boundaryLicense : Other - Humanitarian
+licenseDetail : 
+licenseSource : https//data.humdata.org/about/license
+boundarySourceURL : https//data.humdata.org/dataset/turkey-administrative-boundaries-levels-0-1-2
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/TUR_ADM2.zip
+sourceDataUpdateDate : Jun 02, 2021
+buildUpdateDate : Jun 07, 2021

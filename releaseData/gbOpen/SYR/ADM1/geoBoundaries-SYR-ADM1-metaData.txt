@@ -1,4 +1,4 @@
-boundaryID : SYR-ADM1-95819600
+boundaryID : SYR-ADM1-56403185
 boundaryISO : SYR
 boundaryType : ADM1
 boundaryYear : 2017.0
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//data.humdata.org/about/license
 boundarySourceURL : https//data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SYR_ADM1.zip
-sourceDataUpdateDate : Apr 21, 2021
-buildUpdateDate : May 25, 2021
+sourceDataUpdateDate : May 28, 2021
+buildUpdateDate : Jun 07, 2021
