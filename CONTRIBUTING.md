@@ -22,36 +22,19 @@ If you intend to submit a file for review, please follow our **standard conventi
 	3. Special Standards for Submitting ADM0 or ADM1 shapes - ISO_Code - Files representing ADM0-1 are also to include ‘ISO_Code’ field (spelled as shown here), containing each subunit’s ISO 3166 code (ISO 3166-1 Alpha-3 or ISO 3166-2 Alpha-3).
 
 3. Metadata Conventions
-    1. Metadata should be saved as “meta.txt”
-    2. Metadata is to include the following information for each boundary submission in a plaintext file, spelled as is -
-    3. Boundary Representative of Year: 
-            Year of last update to data
-	4. ISO-3166-1 (Alpha-3):
-            3 digit ISO-3166 of Country
-        3. Boundary Type:
-            ADM0-5
-        4. Canonical Boundary Name:
-            Name given to administrative level (district, arrondissement, province, etc.)
-        5. Source 1: 
-            A. Primary source, i.e. where did you get this data? 
-            B. If you modified the polygons in this data, please list your organization in this field.
-        6. Source 2:
-            Secondary source if applicable, i.e. where did source 1 get this data?
-        7. Release Type: 
-            gB OPEN, gBHumanitarian, gBAuthoritative
-                1. gB OPEN includes all licenses which are ‘open’
-                2. gBHumanitarian includes ‘for humanitarian use only’ licenses, often HUMDATA/OCHA
-                3. gBAuthoritative includes boundaries sourced from the governments themselves, i.e. Swiss Federal Office of Topology offering CHE_ADM0-2.
-                    A. These may overlap with gB OPEN
-        8. License: 
-            Exact license type- list of acceptable licenses found &lt;here>
-        9. License Notes: 
-            Oddities in license
-        10. License Source: 
-            Link to license
-        11. Link to Source Data: 
-        12. Other Notes: 
-            Any oddities or notes on data 
+    1. Metadata should be saved as “meta.txt”, and should include the following information for each boundary submission in a plaintext file, spelled as is -
+    2. Boundary Representative of Year: The year the geometry represents (NOT the year the data was produced!)
+    3. ISO-3166-1 (Alpha-3):  3 digit ISO-3166 of Country
+    4. Boundary Type: ADM0, ADM1, ADM2, ADM3, ADM4 or ADM5.
+    5. Canonical Boundary Name: Name given to administrative level (district, arrondissement, province, etc.)
+    6. Source 1: Primary source, i.e. where did you get this data? If you modified the polygons in this data, please list your organization in this field.
+    7. Source 2: Secondary source if applicable, i.e. where did source 1 get this data?
+    8. Release Type: One of gBOpen, gBHumanitarian, or gbAuthoritative.  We recommend most individuals submit to gbOpen and we can help sort into the appropriate class; if you are a power-user, the explicit licenses accepted by each release are noted [here](https://github.com/wmgeolab/geoBoundaryBot/blob/main/dta/gbLicenses.csv).
+    9. License: Exact license type- list of acceptable licenses can be found [here](https://github.com/wmgeolab/geoBoundaryBot/blob/main/dta/gbLicenses.csv).  If you do not see your license on this list, and believe it should be, please do not hesitate to submit and start a conversation.
+    10. License Notes: Any additional notes about the license that may be helpful.
+    11. License Source: URL Link to License
+    12. Link to Source Data: URL Link to Source Data
+    13. Other Notes: Any other notes that may be useful in assessing the data.
 
 4. License Screenshot - Each submission should include a license.png file, which is a screencapture of the source which provided the license for a given file.
 
