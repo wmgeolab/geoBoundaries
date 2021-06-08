@@ -15,7 +15,7 @@ If you intend to submit a file for review, please follow our **standard conventi
 
 
 1. Map Projection
-	A. Only files submitted in EPSG: 4326 (WGS84) will be accepted.
+	1. Only files submitted in EPSG: 4326 (WGS84) will be accepted.
 3. Attribute Conventions
     A. General
         1. All files are to contain a capitalized ‘Name’ field, i.e. name of each administrative subunit (e.g. USA_ADM1 would include Alabama, Arkansas, etc.).  In some cases, this field may be left blank if names are not known.
