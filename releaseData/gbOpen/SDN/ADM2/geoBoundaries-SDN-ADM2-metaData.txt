@@ -1,0 +1,14 @@
+boundaryID : SDN-ADM2-16777658
+boundaryISO : SDN
+boundaryType : ADM2
+boundaryYear : 2020
+boundarySource-1 : OCHA ROSEA
+boundarySource-2 : Information Management Working Group
+boundaryCanonical : District
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/sudan-administrative-boundaries-levels-0-2
+boundarySourceURL : https//data.humdata.org/dataset/sudan-administrative-boundaries-levels-0-2
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SDN_ADM2.zip
+sourceDataUpdateDate : Jun 02, 2021
+buildUpdateDate : Jun 07, 2021

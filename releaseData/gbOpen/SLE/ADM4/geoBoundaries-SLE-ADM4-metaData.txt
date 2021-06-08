@@ -1,14 +1,14 @@
-boundaryID : SLE-ADM4-43594015
+boundaryID : SLE-ADM4-70271414
 boundaryISO : SLE
 boundaryType : ADM4
-boundaryYear : 2016.0
-boundarySource-1 : Open Africa
-boundarySource-2 : Code for Sierra Leone
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
+boundaryYear : 2016
+boundarySource-1 : openAfrica
+boundarySource-2 : 
+boundaryCanonical : Counties
+boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
 licenseDetail : Open Data
 licenseSource : https//africaopendata.org/dataset/sierra-leone-admin-level-4-boundaries
 boundarySourceURL : https//africaopendata.org/dataset/sierra-leone-admin-level-4-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SLE_ADM4.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+sourceDataUpdateDate : Jun 02, 2021
+buildUpdateDate : Jun 07, 2021
