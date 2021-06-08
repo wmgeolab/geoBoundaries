@@ -16,17 +16,13 @@ If you intend to submit a file for review, please follow our **standard conventi
 
 1. Map Projection
 	1. Only files submitted in EPSG: 4326 (WGS84) will be accepted.
-3. Attribute Conventions
-	1. General
-        	1. All files are to contain a capitalized ‘Name’ field, i.e. name of each administrative subunit (e.g. USA_ADM1 would include Alabama, Arkansas, etc.).  In some cases, this field may be left blank if names are not known.
-        	2. All files are to contain a capitalized ‘Level’ field, i.e. level of administrative division (ADM0, ADM1, etc.).  
-    	1. Special Standards for Submitting ADM0 or ADM1 shapes
-        	1. ISO_Code - Files representing ADM0-1 are also to include ‘ISO_Code’ field (spelled as shown here), containing each subunit’s ISO 3166 code.
-           		1. ADM0: ISO 3166-1 Alpha-3
-           		2. ADM1: ISO 3166-2 Alpha-3 
+2. Attribute Conventions
+	1. All files are to contain a capitalized ‘Name’ field, i.e. name of each administrative subunit (e.g. USA_ADM1 would include Alabama, Arkansas, etc.).  In some cases, this field may be left blank if names are not known.
+        2. All files are to contain a capitalized ‘Level’ field, i.e. level of administrative division (ADM0, ADM1, etc.).  
+    	3. Special Standards for Submitting ADM0 or ADM1 shapes - ISO_Code - Files representing ADM0-1 are also to include ‘ISO_Code’ field (spelled as shown here), containing each subunit’s ISO 3166 code (ISO 3166-1 Alpha-3 or ISO 3166-2 Alpha-3).
 3. Metadata Conventions
-    A. Metadata should be saved as “meta.txt”
-    B. Metadata is to include the following information for each boundary submission in a plaintext file, spelled as is, separated by line:
+    1. Metadata should be saved as “meta.txt”
+    2. Metadata is to include the following information for each boundary submission in a plaintext file, spelled as is, separated by line:
         1. Boundary Representative of Year: 
             Year of last update to data
         2. ISO-3166-1 (Alpha-3):
