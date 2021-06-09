@@ -11,4 +11,4 @@ licenseSource : https//www.geo.be/catalog/details/0202b8dd-1c7e-4331-8ba7-35e1fe
 boundarySourceURL : https//data.gov.be/en/dataset/0202b8dd-1c7e-4331-8ba7-35e1fef4037a
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BEL_ADM3.zip
 sourceDataUpdateDate : Jun 02, 2021
-buildUpdateDate : Jun 04, 2021
+buildUpdateDate : Jun 09, 2021
