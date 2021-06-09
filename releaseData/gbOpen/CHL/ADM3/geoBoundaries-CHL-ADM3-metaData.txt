@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/chile-administrative-level-0-cou
 boundarySourceURL : https//data.humdata.org/dataset/chile-administrative-level-0-country-1-region-region
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CHL_ADM3.zip
 sourceDataUpdateDate : Apr 24, 2021
-buildUpdateDate : Jun 04, 2021
+buildUpdateDate : Jun 09, 2021
