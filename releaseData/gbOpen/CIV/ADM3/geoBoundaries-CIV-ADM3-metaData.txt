@@ -11,4 +11,4 @@ licenseSource : Humdata
 boundarySourceURL : https//data.humdata.org/dataset/cote-d-ivoire-administrative-level-0-3-boundaries-and-points
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CIV_ADM3.zip
 sourceDataUpdateDate : Apr 11, 2021
-buildUpdateDate : Apr 16, 2021
+buildUpdateDate : Jun 09, 2021
