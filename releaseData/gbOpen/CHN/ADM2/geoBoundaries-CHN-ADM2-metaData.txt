@@ -11,4 +11,4 @@ licenseSource : https//revolutionarygis.wordpress.com/2014/01/18/china-prefectur
 boundarySourceURL : https//github.com/justinelliotmeyers/-1_400-/blob/master/%E4%B8%AD%E5%9B%BD%E5%8E%BF%E7%95%8C.shp
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CHN_ADM2.zip
 sourceDataUpdateDate : May 13, 2021
-buildUpdateDate : May 27, 2021
+buildUpdateDate : Jun 09, 2021
