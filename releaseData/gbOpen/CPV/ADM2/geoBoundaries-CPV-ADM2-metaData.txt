@@ -11,4 +11,4 @@ licenseSource : https//ingt.gov.cv/site/Servi%C3%A7os/idecv/
 boundarySourceURL : https//idecv.gov.cv/datasets/limite-freguesias-cv?geometry=-27.467%2C15.079%2C-20.529%2C16.927
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CPV_ADM2.zip
 sourceDataUpdateDate : Apr 22, 2021
-buildUpdateDate : May 27, 2021
+buildUpdateDate : Jun 09, 2021
