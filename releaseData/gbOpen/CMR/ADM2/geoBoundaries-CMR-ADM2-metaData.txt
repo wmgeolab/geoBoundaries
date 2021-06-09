@@ -11,4 +11,4 @@ licenseSource : https//africaopendata.org/dataset/cameroon-maps
 boundarySourceURL : https//africaopendata.org/dataset/cameroon-maps
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CMR_ADM2.zip
 sourceDataUpdateDate : Dec 18, 2020
-buildUpdateDate : Apr 02, 2021
+buildUpdateDate : Jun 09, 2021
