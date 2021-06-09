@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//umap.openstreetmap.fr/ja/map/trouee-bassila_546586#8/9.112/3.379
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BEN_ADM3.zip
 sourceDataUpdateDate : Mar 25, 2021
-buildUpdateDate : Apr 16, 2021
+buildUpdateDate : Jun 09, 2021
