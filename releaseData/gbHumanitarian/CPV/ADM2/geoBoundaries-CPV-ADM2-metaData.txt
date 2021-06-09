@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/cape-verde-administrative-bounda
 boundarySourceURL : https//data.humdata.org/dataset/cape-verde-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/CPV_ADM2.zip
 sourceDataUpdateDate : Oct 28, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 09, 2021
