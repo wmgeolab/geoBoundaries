@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/car-administrative-boundaries-4-
 boundarySourceURL : https//data.humdata.org/dataset/car-administrative-boundaries-4-levels#
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/CAF_ADM1.zip
 sourceDataUpdateDate : Dec 14, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 09, 2021
