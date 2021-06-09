@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CZE_ADM4.zip
 sourceDataUpdateDate : Apr 06, 2021
-buildUpdateDate : Apr 16, 2021
+buildUpdateDate : Jun 09, 2021
