@@ -34,7 +34,7 @@ jobs:
            cd geoBoundaries
            echo "=============="
            git sparse-checkout set "sourceData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}_${{github.event.inputs.ADM}}.zip"
-           git sparse-checkout add ".gitattrbutes"
+           git sparse-checkout add ".gitattributes"
            git sparse-checkout add ".gitignore"
            git sparse-checkout add "releaseData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
            git checkout
@@ -57,20 +57,20 @@ jobs:
       run: |
            cd $GITHUB_WORKSPACE
            ls
-           echo "=============="
+           echo "=====CONFIG========="
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
            git config --global http.postBuffer 500M
            git config --global http.maxRequestBuffer 100M
            git config --global core.compression 0
            git reset
-           echo "================="
+           echo "======FIND==========="
            find * -type f -size +99M -exec git lfs track --filename '{}' +       
-           echo "================="
+           echo "=======ADD=========="
            git add "releaseData/${{github.event.inputs.bType}}/${{github.event.inputs.ISO}}/${{github.event.inputs.ADM}}/"
-           echo "================="
+           echo "=======ADD GITATTRIBUTES=========="
            git add .gitattributes
-           echo "================="
+           echo "========STATUS========="
            git status
            echo "================="
            git commit -m "gB Nightly `date`"
