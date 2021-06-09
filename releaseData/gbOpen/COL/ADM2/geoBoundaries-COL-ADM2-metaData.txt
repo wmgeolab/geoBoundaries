@@ -11,4 +11,4 @@ licenseSource : https//geoportal.dane.gov.co/?descarga-marco-geoestadistico-naci
 boundarySourceURL : https//geoportal.dane.gov.co/geonetwork/srv/spa/catalog.search;jsessionid=28C04991CAF95F58924321C7166FBFBE#/metadata/e22375e8-dcbf-4952-831c-261917cf0e52
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/COL_ADM2.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 09, 2021
