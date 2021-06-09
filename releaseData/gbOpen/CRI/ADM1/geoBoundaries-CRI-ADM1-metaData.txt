@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CRI_ADM1.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 09, 2021
