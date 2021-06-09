@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/djibouti-administrative-levels-0
 boundarySourceURL : https//data.humdata.org/dataset/djibouti-administrative-levels-0-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/DJI_ADM2.zip
 sourceDataUpdateDate : Apr 01, 2021
-buildUpdateDate : Apr 16, 2021
+buildUpdateDate : Jun 09, 2021
