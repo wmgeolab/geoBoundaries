@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/central-african-republic-adminis
 boundarySourceURL : https//data.humdata.org/organization/eabb59ef-4082-4c7a-9c08-0f57eed970d8
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CAF_ADM5.zip
 sourceDataUpdateDate : Mar 15, 2021
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 09, 2021
