@@ -11,4 +11,4 @@ licenseSource : https//www.rgc.cd/index.php?option=com_content&view=category&id=
 boundarySourceURL : http//www.rgc.cd/index.php?option=com_content&view=category&layout=blog&id=41&Itemid=183
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/COD_ADM3.zip
 sourceDataUpdateDate : Dec 19, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 09, 2021
