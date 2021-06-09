@@ -11,4 +11,4 @@ licenseSource : https//www.naturalearthdata.com/about/terms-of-use/
 boundarySourceURL : https//www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CIV_ADM0.zip
 sourceDataUpdateDate : Oct 07, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 09, 2021
