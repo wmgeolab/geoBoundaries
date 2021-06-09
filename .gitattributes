@@ -71,3 +71,6 @@ sourceData/gbOpen/IND_ADM5.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbHumanitarian/BGD/ADM3/geoBoundaries-BGD-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbHumanitarian/BGD/ADM3/geoBoundaries-BGD-ADM3_simplified.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/BRA/ADM2/geoBoundaries-BRA-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/CHL/ADM1/geoBoundaries-CHL-ADM1-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/CHL/ADM1/geoBoundaries-CHL-ADM1.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/CHL/ADM1/geoBoundaries-CHL-ADM1_simplified.geojson filter=lfs diff=lfs merge=lfs -text
