@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/brazil-administrative-level-0-bo
 boundarySourceURL : https//data.humdata.org/dataset/brazil-administrative-level-0-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BRA_ADM0.zip
 sourceDataUpdateDate : Mar 01, 2021
-buildUpdateDate : Apr 02, 2021
+buildUpdateDate : Jun 09, 2021
