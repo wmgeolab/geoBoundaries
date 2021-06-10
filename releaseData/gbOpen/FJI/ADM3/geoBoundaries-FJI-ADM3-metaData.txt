@@ -11,4 +11,4 @@ licenseSource : https//twitter.com/WMgeoLab/status/1195463723642585088/photo/1
 boundarySourceURL : http//prism.spc.int/regional-data-and-tools/popgis2
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FJI_ADM3.zip
 sourceDataUpdateDate : Nov 03, 2020
-buildUpdateDate : Apr 02, 2021
+buildUpdateDate : Jun 10, 2021
