@@ -11,4 +11,4 @@ licenseSource : https//en.wikipedia.org/wiki/Subdivisions_of_Gabon#/media/File
 boundarySourceURL : https//en.wikipedia.org/wiki/Subdivisions_of_Gabon#/media/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GAB_ADM0.zip
 sourceDataUpdateDate : May 03, 2021
-buildUpdateDate : May 27, 2021
+buildUpdateDate : Jun 10, 2021
