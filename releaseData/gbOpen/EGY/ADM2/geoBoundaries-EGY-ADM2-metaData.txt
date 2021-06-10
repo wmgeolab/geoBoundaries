@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/egypt-administrative-boundaries-
 boundarySourceURL : https//data.humdata.org/dataset/egypt-administrative-boundaries-levels-0-3
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/EGY_ADM2.zip
 sourceDataUpdateDate : Apr 04, 2021
-buildUpdateDate : Apr 16, 2021
+buildUpdateDate : Jun 10, 2021
