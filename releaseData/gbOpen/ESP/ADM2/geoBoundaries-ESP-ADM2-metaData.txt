@@ -11,4 +11,4 @@ licenseSource : https//www.ine.es/ss/Satellite?L=0&c=Page&cid=1254735849170&p=12
 boundarySourceURL : https//opendata.esri.es/datasets/inmigraci%C3%B3n-por-provincias-?geometry=-117.728%2C22.781%2C105.778%2C47.535
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ESP_ADM2.zip
 sourceDataUpdateDate : Oct 16, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 10, 2021
