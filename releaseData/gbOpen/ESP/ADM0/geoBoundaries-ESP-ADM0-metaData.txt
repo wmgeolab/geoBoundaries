@@ -11,4 +11,4 @@ licenseSource : http//centrodedescargas.cnig.es/CentroDescargas/index.jsp#
 boundarySourceURL : http//centrodedescargas.cnig.es/CentroDescargas/index.jsp
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ESP_ADM0.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 10, 2021
