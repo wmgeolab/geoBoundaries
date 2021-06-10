@@ -5,7 +5,7 @@ Expert and just want to get started?  Take a look at [this example PR containing
 
 ## We welcome new submissions to geoBoundaries, and will openly assess any submissions that would improve our data. Right now, we accept submissions that are:
 
-1. Compatible with the Open Data Commons Open Database License (or better). 
+1. [gB OPEN] Compatible with the Open Data Commons Open Database License (or better). 
 2. Of higher quality (either spatial or temporal) than our existing data. 
 3. Provisioned with clear and full metadata about the source of the file.
 
@@ -15,14 +15,14 @@ If you intend to submit a file for review, please follow our **standard conventi
 
 
 
-1. Map Projection
+1. **Map Projection**
 	1. Only files submitted in EPSG: 4326 (WGS84) will be accepted.
-2. Attribute Conventions
+2. **Attribute Conventions**
 	1. All files are to contain a capitalized ‘Name’ field, i.e. name of each administrative subunit (e.g. USA_ADM1 would include Alabama, Arkansas, etc.).  In some cases, this field may be left blank if names are not known.
 	2. All files are to contain a capitalized ‘Level’ field, i.e. level of administrative division (ADM0, ADM1, etc.).  
 	3. Special Standards for Submitting ADM0 or ADM1 shapes - ISO_Code - Files representing ADM0-1 are also to include ‘ISO_Code’ field (spelled as shown here), containing each subunit’s ISO 3166 code (ISO 3166-1 Alpha-3 or ISO 3166-2 Alpha-3).
 
-3. Metadata Conventions
+3. **Metadata Conventions**
     1. Metadata should be saved as “meta.txt”, and should include the following information for each boundary submission in a plaintext file, spelled as is -
     2. Boundary Representative of Year: The year the geometry represents (NOT the year the data was produced!)
     3. ISO-3166-1 (Alpha-3):  3 digit ISO-3166 of Country
@@ -37,6 +37,16 @@ If you intend to submit a file for review, please follow our **standard conventi
     12. Link to Source Data: URL Link to Source Data
     13. Other Notes: Any other notes that may be useful in assessing the data.
 
-4. License Screenshot - Each submission should include a license.png file, which is a screencapture of the source which provided the license for a given file.
+4. **License Screenshot** - Each submission should include a license.png file, which is a screencapture of the source which provided the license for a given file.
+
+**What’s a release type?**
+	
+	Currently, geoBoundaries offers three datasets; gB OPEN, gB Authoritative, and gB Humanitarian. These datasets differ in licensure and usage, but follow the same attributional and metadata conventions listed above. gB OPEN contains data which is suitable for open use; CC-BY, ODbL, Public Domain, etc. gB Authoritative offers data sourced directly from the state it represents, e.g. the Mexican government offering MEX_ADM0-2. gB Humanitarian covers data which is licensed ‘for humanitarian use only’. A full list of acceptable license types for gB OPEN can be found at https://github.com/wmgeolab/geoBoundaryBot/blob/main/dta/gbLicenses.csv . 
+
+	We anticipate that most submitted boundaries will be contiguous, however, if the file you are submitting is genuinely non contiguous (e.g. CHE_ADM3), we ask that you include relevant documentation for use in our wiki.
+
+Thank you!
+The geoBoundaries Team
+
 
 			
