@@ -11,4 +11,4 @@ licenseSource : https//geoportal.statistics.gov.uk/datasets/wards-december-2018-
 boundarySourceURL : https//geoportal.statistics.gov.uk/datasets/wards-december-2018-full-extent-boundaries-uk?geometry=-96.518%2C48.053%2C70.738%2C64.739
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GBR_ADM3.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 10, 2021
