@@ -11,4 +11,4 @@ licenseSource : https//pt.wikipedia.org/wiki/Ficheiro
 boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GMB_ADM2.zip
 sourceDataUpdateDate : May 02, 2021
-buildUpdateDate : May 27, 2021
+buildUpdateDate : Jun 10, 2021
