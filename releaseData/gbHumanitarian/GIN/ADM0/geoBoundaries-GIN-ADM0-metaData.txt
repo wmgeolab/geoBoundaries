@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/guinea-geodatabase
 boundarySourceURL : https//data.humdata.org/dataset/guinea-geodatabase
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/GIN_ADM0.zip
 sourceDataUpdateDate : Nov 11, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 10, 2021
