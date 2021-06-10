@@ -11,4 +11,4 @@ licenseSource : https//creativecommons.org/licenses/by-sa/3.0/de/legalcode
 boundarySourceURL : https//en.wikipedia.org/wiki/Qeqertalik#/media/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GRL_ADM1.zip
 sourceDataUpdateDate : Nov 03, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 10, 2021
