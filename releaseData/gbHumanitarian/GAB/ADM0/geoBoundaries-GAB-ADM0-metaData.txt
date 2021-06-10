@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/gabon-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/gabon-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/GAB_ADM0.zip
 sourceDataUpdateDate : Oct 23, 2020
-buildUpdateDate : Apr 02, 2021
+buildUpdateDate : Jun 10, 2021
