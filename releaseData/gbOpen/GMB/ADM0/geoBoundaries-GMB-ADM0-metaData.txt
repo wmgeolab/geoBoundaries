@@ -11,4 +11,4 @@ licenseSource : https//osm-boundaries.com/Download/Submit?apiKey=d55e80c6cd3bda9
 boundarySourceURL : https//opendatacommons.org/licenses/odbl/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GMB_ADM0.zip
 sourceDataUpdateDate : Mar 16, 2021
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 10, 2021
