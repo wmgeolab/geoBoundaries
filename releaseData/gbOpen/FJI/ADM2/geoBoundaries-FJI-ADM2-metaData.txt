@@ -11,4 +11,4 @@ licenseSource : https//pacificdata.org/data/geographic_data/2007_fji_phc_admin_b
 boundarySourceURL : https//pacificdata.org/data/geographic_data/2007_fji_phc_admin_boundaries/resource/5880cadb-2287-4eac-9f3d-8b321730e6cd
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FJI_ADM2.zip
 sourceDataUpdateDate : Jan 12, 2021
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 10, 2021
