@@ -11,4 +11,4 @@ licenseSource : https//www.etalab.gouv.fr/wp-content/uploads/2014/05/Licence_Ouv
 boundarySourceURL : https//www.data.gouv.fr/fr/datasets/contours-communes-france-administrative-format-admin-express-avec-arrondissements/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FRA_ADM5.zip
 sourceDataUpdateDate : May 10, 2021
-buildUpdateDate : May 27, 2021
+buildUpdateDate : Jun 10, 2021

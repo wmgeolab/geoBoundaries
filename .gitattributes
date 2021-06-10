@@ -87,3 +87,9 @@ releaseData/gbOpen/ESP/ADM3/geoBoundaries-ESP-ADM3_simplified.geojson filter=lfs
 releaseData/gbOpen/ESP/ADM3/geoBoundaries-ESP-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/FRA/ADM3/geoBoundaries-FRA-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/FRA/ADM4/geoBoundaries-FRA-ADM4_simplified.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/FRA/ADM5/geoBoundaries-FRA-ADM5_simplified.shp filter=lfs diff=lfs merge=lfs -text
+tmp/FRA_ADM5.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/FRA/ADM5/geoBoundaries-FRA-ADM5.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/FRA/ADM5/geoBoundaries-FRA-ADM5-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/FRA/ADM5/geoBoundaries-FRA-ADM5.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/FRA/ADM5/geoBoundaries-FRA-ADM5_simplified.geojson filter=lfs diff=lfs merge=lfs -text
