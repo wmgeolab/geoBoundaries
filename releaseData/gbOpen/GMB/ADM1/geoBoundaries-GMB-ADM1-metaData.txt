@@ -11,4 +11,4 @@ licenseSource : https//en.wikipedia.org/wiki/Subdivisions_of_the_Gambia#/media/F
 boundarySourceURL : https//en.wikipedia.org/wiki/Subdivisions_of_the_Gambia#/media/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GMB_ADM1.zip
 sourceDataUpdateDate : May 02, 2021
-buildUpdateDate : May 27, 2021
+buildUpdateDate : Jun 10, 2021
