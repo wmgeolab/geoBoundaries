@@ -11,4 +11,4 @@ licenseSource : http//geoportal.statistics.gov.uk/datasets/local-administrative-
 boundarySourceURL : http//geoportal.statistics.gov.uk/datasets/local-administrative-units-level-1-january-2018-full-extent-boundaries-in-united-kingdom
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GBR_ADM1.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Jun 05, 2021
+buildUpdateDate : Jun 10, 2021
