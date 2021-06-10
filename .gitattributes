@@ -86,3 +86,4 @@ releaseData/gbOpen/ESP/ADM3/geoBoundaries-ESP-ADM3.geojson filter=lfs diff=lfs m
 releaseData/gbOpen/ESP/ADM3/geoBoundaries-ESP-ADM3_simplified.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/ESP/ADM3/geoBoundaries-ESP-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/FRA/ADM3/geoBoundaries-FRA-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/FRA/ADM4/geoBoundaries-FRA-ADM4_simplified.geojson filter=lfs diff=lfs merge=lfs -text
