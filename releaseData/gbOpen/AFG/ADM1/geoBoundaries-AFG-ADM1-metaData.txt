@@ -1,14 +1,14 @@
-boundaryID : AFG-ADM1-69245605
+boundaryID : AFG-ADM1-24829092
 boundaryISO : AFG
 boundaryType : ADM1
-boundaryYear : 2021
-boundarySource-1 : Open Street Map
-boundarySource-2 : 
-boundaryCanonical : Province
-boundaryLicense : Creative Commons Attribution-ShareAlike 2.0
-licenseDetail : 
-licenseSource : https//osm-boundaries.com/
-boundarySourceURL : https//osm-boundaries.com/
+boundaryYear : 2014
+boundarySource-1 : https//hub.arcgis.com/datasets/2b63527870ef416bacf83bcaf388685f_0?geometry=53.805%2C30.812%2C81.556%2C37.181
+boundarySource-2 : GeoBoundaries
+boundaryCanonical : Wilayat
+boundaryLicense : Public Domain
+licenseDetail : license was officially a custom license simply described as "open" on ArcGIS Hub. No other restictions were included so collector decided on public domain as the official license.
+licenseSource : https//hub.arcgis.com/datasets/2b63527870ef416bacf83bcaf388685f_0?geometry=53.805%2C30.812%2C81.556%2C37.181
+boundarySourceURL : https//hub.arcgis.com/datasets/2b63527870ef416bacf83bcaf388685f_0?geometry=53.805%2C30.812%2C81.556%2C37.181
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AFG_ADM1.zip
-sourceDataUpdateDate : Mar 06, 2021
-buildUpdateDate : Apr 02, 2021
+sourceDataUpdateDate : Jun 10, 2021
+buildUpdateDate : Jun 10, 2021
