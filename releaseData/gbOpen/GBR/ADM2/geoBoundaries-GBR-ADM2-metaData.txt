@@ -1,14 +1,14 @@
-boundaryID : GBR-ADM2-36363860
+boundaryID : GBR-ADM2-9080712
 boundaryISO : GBR
 boundaryType : ADM2
-boundaryYear : 2019.0
+boundaryYear : 2019
 boundarySource-1 : Office for National Statistics Open Geography Portal
-boundarySource-2 : nan
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
+boundarySource-2 : 
+boundaryCanonical : Counties and Unitary Authorities
+boundaryLicense : Open Government Licence v3.0
 licenseDetail : http//www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
-licenseSource : https//geoportal.statistics.gov.uk/datasets/local-authority-districts-april-2019-boundaries-uk-bfc?geometry=-86.062%2C46.017%2C26.262%2C63.434
-boundarySourceURL : https//geoportal.statistics.gov.uk/datasets/local-authority-districts-april-2019-boundaries-uk-bfc?geometry=-86.062%2C46.017%2C26.262%2C63.434
+licenseSource : https//geoportal.statistics.gov.uk/datasets/b216b4c8a4e74f6fb692a1785255d777_0?geometry=-19.125%2C53.451%2C14.252%2C57.788
+boundarySourceURL : https//geoportal.statistics.gov.uk/datasets/b216b4c8a4e74f6fb692a1785255d777_0?geometry=-19.125%2C53.451%2C14.252%2C57.788
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GBR_ADM2.zip
-sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Apr 05, 2021
+sourceDataUpdateDate : Mar 29, 2021
+buildUpdateDate : Jun 10, 2021
