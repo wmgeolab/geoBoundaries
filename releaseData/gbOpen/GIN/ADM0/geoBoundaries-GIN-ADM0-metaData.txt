@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//osm-boundaries.com/Download/Submit?apiKey=112e2c3e43c0fc5af2ebcb4ebd154523&db=osm20200907&osmIds=-192778
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GIN_ADM0.zip
 sourceDataUpdateDate : Oct 28, 2020
-buildUpdateDate : Apr 05, 2021
+buildUpdateDate : Jun 10, 2021
