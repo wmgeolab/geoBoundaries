@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/guyana-administrative-level-0-1-
 boundarySourceURL : https//data.world/ocha-fiss/9647d5cc-9de9-4974-a8be-62fb12c19ffe
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/GUY_ADM2.zip
 sourceDataUpdateDate : Oct 28, 2020
-buildUpdateDate : Apr 07, 2021
+buildUpdateDate : Jun 11, 2021
