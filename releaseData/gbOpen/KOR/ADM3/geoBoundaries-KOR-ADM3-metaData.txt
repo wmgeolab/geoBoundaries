@@ -11,4 +11,4 @@ licenseSource : http//www.kogl.or.kr/info/license.do
 boundarySourceURL : https//github.com/southkorea/southkorea-maps/tree/master/kostat/2018/json
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KOR_ADM3.zip
 sourceDataUpdateDate : Jan 13, 2021
-buildUpdateDate : Apr 07, 2021
+buildUpdateDate : Jun 11, 2021
