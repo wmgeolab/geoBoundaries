@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/kyrgyzstan-administrative-bounda
 boundarySourceURL : https//data.humdata.org/dataset/kyrgyzstan-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/KGZ_ADM2.zip
 sourceDataUpdateDate : Apr 13, 2021
-buildUpdateDate : May 26, 2021
+buildUpdateDate : Jun 11, 2021
