@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/administrative-wards-in-kenya-14
 boundarySourceURL : https//data.humdata.org/dataset/administrative-wards-in-kenya-1450
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KEN_ADM3.zip
 sourceDataUpdateDate : Apr 05, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 11, 2021
