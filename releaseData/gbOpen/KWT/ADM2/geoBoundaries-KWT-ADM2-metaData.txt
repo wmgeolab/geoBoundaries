@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/relation/305099#map=9/29.3171/47.77
 boundarySourceURL : https//www.openstreetmap.org/relation/305099#map=9/29.3171/47.7787
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KWT_ADM2.zip
 sourceDataUpdateDate : Nov 09, 2020
-buildUpdateDate : Apr 07, 2021
+buildUpdateDate : Jun 11, 2021
