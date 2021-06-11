@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/sri-lanka-administrative-levels-
 boundarySourceURL : https//data.humdata.org/dataset/sri-lanka-administrative-levels-0-4-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LKA_ADM4.zip
 sourceDataUpdateDate : Jun 03, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 11, 2021

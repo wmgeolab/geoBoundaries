@@ -128,3 +128,9 @@ releaseData/gbOpen/ITA/ADM3/geoBoundaries-ITA-ADM3.geojson filter=lfs diff=lfs m
 releaseData/gbOpen/ITA/ADM3/geoBoundaries-ITA-ADM3_simplified.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/KEN/ADM3/geoBoundaries-KEN-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbHumanitarian/KEN/ADM3/geoBoundaries-KEN-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/LKA/ADM4/geoBoundaries-LKA-ADM4.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/LKA/ADM4/geoBoundaries-LKA-ADM4_simplified.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/LKA/ADM4/geoBoundaries-LKA-ADM4.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/LKA/ADM4/geoBoundaries-LKA-ADM4_simplified.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/LKA/ADM4/geoBoundaries-LKA-ADM4-all.zip filter=lfs diff=lfs merge=lfs -text
+tmp/LKA_ADM4.shp filter=lfs diff=lfs merge=lfs -text
