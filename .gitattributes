@@ -105,3 +105,4 @@ releaseData/gbAuthoritative/CHL/ADM0/geoBoundaries-CHL-ADM0_simplified.geojson f
 releaseData/gbAuthoritative/CHL/ADM0/geoBoundaries-CHL-ADM0-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbAuthoritative/CHL/ADM1/geoBoundaries-CHL-ADM1-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbAuthoritative/CHL/ADM1/geoBoundaries-CHL-ADM1_simplified.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/HND/ADM2/geoBoundaries-HND-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text

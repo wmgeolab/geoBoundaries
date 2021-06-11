@@ -11,4 +11,4 @@ licenseSource : https//creativecommons.org/licenses/by/4.0/
 boundarySourceURL : https//datos.gob.hn/en/dataset/limites-municipales/resource/0a086bb7-1e3e-4cb0-b7d8-e21a8417dc5f
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/HND_ADM2.zip
 sourceDataUpdateDate : Apr 08, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 11, 2021
