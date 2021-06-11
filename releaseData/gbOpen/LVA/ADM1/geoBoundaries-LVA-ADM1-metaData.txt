@@ -11,4 +11,4 @@ licenseSource : https//commons.wikimedia.org/wiki/File
 boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LVA_ADM1.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 07, 2021
+buildUpdateDate : Jun 11, 2021
