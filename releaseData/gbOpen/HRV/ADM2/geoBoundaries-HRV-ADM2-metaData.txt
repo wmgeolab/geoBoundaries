@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//osm-boundaries.com/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/HRV_ADM2.zip
 sourceDataUpdateDate : May 02, 2021
-buildUpdateDate : May 26, 2021
+buildUpdateDate : Jun 11, 2021
