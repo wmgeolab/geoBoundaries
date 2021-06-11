@@ -11,4 +11,4 @@ licenseSource : https//opendevelopmentcambodia.net/dataset/?id=administrative-bo
 boundarySourceURL : https//opendevelopmentcambodia.net/dataset/?id=administrative-boundaries-of-cambodia-2014
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KHM_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 07, 2021
+buildUpdateDate : Jun 11, 2021
