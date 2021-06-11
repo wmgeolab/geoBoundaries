@@ -1,14 +1,14 @@
-boundaryID : IRN-ADM3-57237088
+boundaryID : IRN-ADM3-9664099
 boundaryISO : IRN
 boundaryType : ADM3
-boundaryYear : 2021
-boundarySource-1 : Open Street Map
-boundarySource-2 : 
+boundaryYear : 2017.0
+boundarySource-1 : OpenStreetMap
+boundarySource-2 : Wambacher
 boundaryCanonical : Bakhsh
-boundaryLicense : Creative Commons Attribution-ShareAlike 2.0
-licenseDetail : 
-licenseSource : https//osm-boundaries.com/Documentation
-boundarySourceURL : https//osm-boundaries.com/
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : Open Data Commons Open Database License 1.0
+licenseSource : https//www.openstreetmap.org/copyright
+boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IRN_ADM3.zip
-sourceDataUpdateDate : Mar 01, 2021
-buildUpdateDate : Apr 07, 2021
+sourceDataUpdateDate : Apr 03, 2021
+buildUpdateDate : Jun 11, 2021
