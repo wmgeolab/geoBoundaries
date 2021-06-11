@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/liberia-admin-level-2-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/liberia-admin-level-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LBR_ADM2.zip
 sourceDataUpdateDate : Mar 18, 2021
-buildUpdateDate : May 26, 2021
+buildUpdateDate : Jun 11, 2021
