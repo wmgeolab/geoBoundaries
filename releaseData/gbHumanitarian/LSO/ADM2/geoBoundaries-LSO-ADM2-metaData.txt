@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/lesotho-administrative-level-0-2
 boundarySourceURL : https//data.humdata.org/dataset/lesotho-administrative-level-0-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/LSO_ADM2.zip
 sourceDataUpdateDate : Oct 29, 2020
-buildUpdateDate : Apr 07, 2021
+buildUpdateDate : Jun 11, 2021
