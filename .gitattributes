@@ -111,3 +111,9 @@ releaseData/gbOpen/IDN/ADM2/geoBoundaries-IDN-ADM2.geojson filter=lfs diff=lfs m
 releaseData/gbOpen/IDN/ADM2/geoBoundaries-IDN-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/IND/ADM3/geoBoundaries-IND-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/IND/ADM4/geoBoundaries-IND-ADM4-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IRL/ADM2/geoBoundaries-IRL-ADM2.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IRL/ADM2/geoBoundaries-IRL-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IRL/ADM2/geoBoundaries-IRL-ADM2_simplified.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IRL/ADM2/geoBoundaries-IRL-ADM2.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IRL/ADM2/geoBoundaries-IRL-ADM2_simplified.geojson filter=lfs diff=lfs merge=lfs -text
+tmp/IRL_ADM2.shp filter=lfs diff=lfs merge=lfs -text
