@@ -11,4 +11,4 @@ licenseSource : https//opendatanepal.com/dataset/new-political-and-administrativ
 boundarySourceURL : https//opendatanepal.com/dataset/new-political-and-administrative-boundaries-shapefile-of-nepal
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NPL_ADM2.zip
 sourceDataUpdateDate : Feb 14, 2021
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
