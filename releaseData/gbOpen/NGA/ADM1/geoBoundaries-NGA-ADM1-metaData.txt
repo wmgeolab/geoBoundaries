@@ -11,4 +11,4 @@ licenseSource : https//creativecommons.org/licenses/by/4.0/
 boundarySourceURL : https//data.grid3.org/datasets/grid3-nigeria-state-boundaries?geometry=-8.003%2C5.297%2C25.374%2C12.885
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NGA_ADM1.zip
 sourceDataUpdateDate : Apr 12, 2021
-buildUpdateDate : May 26, 2021
+buildUpdateDate : Jun 12, 2021
