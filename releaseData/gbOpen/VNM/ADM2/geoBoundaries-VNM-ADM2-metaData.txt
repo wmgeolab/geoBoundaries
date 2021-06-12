@@ -11,4 +11,4 @@ licenseSource : https//vietnam.opendevelopmentmekong.net/dataset?id=a-phn-huyn
 boundarySourceURL : https//vietnam.opendevelopmentmekong.net/dataset?id=a-phn-huyn
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VNM_ADM2.zip
 sourceDataUpdateDate : Mar 06, 2021
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
