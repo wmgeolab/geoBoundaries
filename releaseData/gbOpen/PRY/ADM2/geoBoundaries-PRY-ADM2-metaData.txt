@@ -11,4 +11,4 @@ licenseSource : https//twitter.com/WMgeoLab/status/1179001467669078017/photo/3
 boundarySourceURL : http//geo.stp.gov.py/user/dgeec/tables/paraguay_2012_barrrios_y_localidades/public
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PRY_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
