@@ -11,4 +11,4 @@ licenseSource : https//maps.princeton.edu/catalog/stanford-nw291zj7245/metadata
 boundarySourceURL : https//maps.princeton.edu/catalog/stanford-nw291zj7245
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MRT_ADM1.zip
 sourceDataUpdateDate : May 06, 2021
-buildUpdateDate : May 26, 2021
+buildUpdateDate : Jun 12, 2021
