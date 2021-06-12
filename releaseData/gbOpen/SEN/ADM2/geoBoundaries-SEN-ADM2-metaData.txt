@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/senegal-administrative-boundarie
 boundarySourceURL : https//data.humdata.org/dataset/senegal-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SEN_ADM2.zip
 sourceDataUpdateDate : May 28, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
