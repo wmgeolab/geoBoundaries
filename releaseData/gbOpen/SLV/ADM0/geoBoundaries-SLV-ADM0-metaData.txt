@@ -11,4 +11,4 @@ licenseSource : https//osm-boundaries.com/
 boundarySourceURL : https//osm-boundaries.com/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SLV_ADM0.zip
 sourceDataUpdateDate : May 09, 2021
-buildUpdateDate : May 25, 2021
+buildUpdateDate : Jun 12, 2021
