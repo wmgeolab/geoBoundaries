@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/suriname-administrative-level-0-
 boundarySourceURL : https//data.humdata.org/dataset/suriname-administrative-level-0-1-and-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SUR_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
