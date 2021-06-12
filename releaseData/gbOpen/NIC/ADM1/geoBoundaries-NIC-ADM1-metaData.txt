@@ -11,4 +11,4 @@ licenseSource : https//osm-boundaries.com/
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NIC_ADM1.zip
 sourceDataUpdateDate : Oct 28, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
