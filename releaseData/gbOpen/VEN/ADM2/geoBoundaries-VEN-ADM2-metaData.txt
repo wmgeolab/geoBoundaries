@@ -11,4 +11,4 @@ licenseSource : https//twitter.com/WMgeoLab/status/1251983690709827590
 boundarySourceURL : https//tapiquen-sig.jimdofree.com/descargas-gratuitas/venezuela/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VEN_ADM2.zip
 sourceDataUpdateDate : Jan 14, 2021
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
