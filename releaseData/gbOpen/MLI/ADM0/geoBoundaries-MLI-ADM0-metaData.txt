@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/mali-admin-boundaries-level-1-2-
 boundarySourceURL : https//data.humdata.org/dataset/mali-admin-boundaries-level-1-2-and-3-including-2017-population-desagregated-by-sexe
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MLI_ADM0.zip
 sourceDataUpdateDate : Jun 04, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
