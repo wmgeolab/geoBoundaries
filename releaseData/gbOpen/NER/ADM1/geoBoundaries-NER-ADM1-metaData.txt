@@ -11,4 +11,4 @@ licenseSource : https//spatialdata.dhsprogram.com/references/subnational_data_sc
 boundarySourceURL : https//www.idhsdata.org/idhs/gis.shtml
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NER_ADM1.zip
 sourceDataUpdateDate : May 25, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
