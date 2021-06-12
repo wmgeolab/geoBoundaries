@@ -11,4 +11,4 @@ licenseSource : https//vietnam.opendevelopmentmekong.net/terms-of-use/
 boundarySourceURL : https//vietnam.opendevelopmentmekong.net/dataset?id=a-phn-tnh
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/VNM_ADM1.zip
 sourceDataUpdateDate : Nov 02, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
