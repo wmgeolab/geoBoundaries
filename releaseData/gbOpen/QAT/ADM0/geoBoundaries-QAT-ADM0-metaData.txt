@@ -11,4 +11,4 @@ licenseSource : https//wiki.openstreetmap.org/wiki/Legal_FAQ#What_is_the_license
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/QAT_ADM0.zip
 sourceDataUpdateDate : Apr 12, 2021
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
