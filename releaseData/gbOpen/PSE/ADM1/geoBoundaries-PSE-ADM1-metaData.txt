@@ -11,4 +11,4 @@ licenseSource : https//opendatawatch.com/publications/open-data-to-support-susta
 boundarySourceURL : https//opendatawatch.com/about/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PSE_ADM1.zip
 sourceDataUpdateDate : May 28, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
