@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/sierra-leone-all-ad-min-level-bo
 boundarySourceURL : https//data.humdata.org/dataset/sierra-leone-all-ad-min-level-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SLE_ADM2.zip
 sourceDataUpdateDate : Jun 02, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
