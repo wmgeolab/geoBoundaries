@@ -11,4 +11,4 @@ licenseSource : https//snig.dgterritorio.gov.pt/rndg/srv/por/catalog.search#/met
 boundarySourceURL : https//snig.dgterritorio.gov.pt/rndg/srv/por/catalog.search#/metadata/5e3debf1-6cde-4ff2-8301-a86799231907
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PRT_ADM1.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
