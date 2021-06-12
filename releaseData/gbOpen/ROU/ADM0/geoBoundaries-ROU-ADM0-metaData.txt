@@ -11,4 +11,4 @@ licenseSource : http//data.gov.ro/dataset/unitati-administrative
 boundarySourceURL : http//data.gov.ro/dataset/unitati-administrative
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ROU_ADM0.zip
 sourceDataUpdateDate : Jun 04, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
