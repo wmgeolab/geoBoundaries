@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/uganda-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/uganda-administrative-boundaries-admin-1-admin-3
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/UGA_ADM2.zip
 sourceDataUpdateDate : Apr 24, 2021
-buildUpdateDate : May 25, 2021
+buildUpdateDate : Jun 12, 2021
