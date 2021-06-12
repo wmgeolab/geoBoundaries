@@ -11,4 +11,4 @@ licenseSource : https//twitter.com/WMgeoLab/status/1196561929726128128/photo/1
 boundarySourceURL : http//prism.spc.int/regional-data-and-tools/popgis2
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VUT_ADM2.zip
 sourceDataUpdateDate : Nov 08, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
