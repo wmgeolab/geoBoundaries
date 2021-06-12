@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/madagascar-administrative-level-
 boundarySourceURL : https//data.humdata.org/dataset/madagascar-administrative-level-0-4-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/MDG_ADM2.zip
 sourceDataUpdateDate : Nov 02, 2020
-buildUpdateDate : Apr 07, 2021
+buildUpdateDate : Jun 12, 2021
