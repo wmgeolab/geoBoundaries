@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/maldives-administrative-boundari
 boundarySourceURL : https//data.humdata.org/dataset/maldives-administrative-boundaries-polygon-polyline
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MDV_ADM2.zip
 sourceDataUpdateDate : Mar 18, 2021
-buildUpdateDate : Apr 07, 2021
+buildUpdateDate : Jun 12, 2021
