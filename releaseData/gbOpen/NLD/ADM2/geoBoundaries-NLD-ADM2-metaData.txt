@@ -11,4 +11,4 @@ licenseSource : https//www.pdok.nl/nl/over-pdok/uw-speciale-aandacht/open-data
 boundarySourceURL : https//www.pdok.nl/nl/producten/pdok-downloads/basis-registratie-kadaster/bestuurlijke-grenzen-actueel
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NLD_ADM2.zip
 sourceDataUpdateDate : Dec 24, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
