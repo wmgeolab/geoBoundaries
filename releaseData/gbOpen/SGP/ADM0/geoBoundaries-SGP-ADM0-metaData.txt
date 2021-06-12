@@ -11,4 +11,4 @@ licenseSource : https//data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-
 boundarySourceURL : https//data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SGP_ADM0.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
