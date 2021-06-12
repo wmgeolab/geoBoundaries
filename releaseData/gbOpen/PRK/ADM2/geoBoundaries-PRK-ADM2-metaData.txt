@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/dpr-korea-administrative-boundar
 boundarySourceURL : https//data.humdata.org/dataset/dpr-korea-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PRK_ADM2.zip
 sourceDataUpdateDate : May 30, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
