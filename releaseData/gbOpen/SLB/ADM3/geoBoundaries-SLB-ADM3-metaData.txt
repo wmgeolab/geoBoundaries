@@ -11,4 +11,4 @@ licenseSource : https//twitter.com/WMgeoLab/status/1196550630023651328/photo/2
 boundarySourceURL : http//prism.spc.int/regional-data-and-tools/popgis2
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SLB_ADM3.zip
 sourceDataUpdateDate : Nov 13, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
