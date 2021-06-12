@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/chad-admin-boundaries-admin-1-an
 boundarySourceURL : https//data.humdata.org/dataset/chad-admin-boundaries-admin-1-and-admin-2
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TCD_ADM2.zip
 sourceDataUpdateDate : Mar 20, 2021
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
