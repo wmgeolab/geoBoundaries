@@ -11,4 +11,4 @@ licenseSource : https//www.nbs.go.tz/nbs/takwimu/references/Licence-Agreement-NB
 boundarySourceURL : //www.nbs.go.tz/index.php/en/census-surveys/gis/385-2012-phc-shapefiles-level-one-and-two
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TZA_ADM2.zip
 sourceDataUpdateDate : May 27, 2021
-buildUpdateDate : Jun 08, 2021
+buildUpdateDate : Jun 12, 2021
