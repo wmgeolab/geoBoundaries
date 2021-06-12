@@ -11,4 +11,4 @@ licenseSource : https//www.lantmateriet.se/sv/Kartor-och-geografisk-information/
 boundarySourceURL : https//www.lantmateriet.se/sv/Kartor-och-geografisk-information/Kartor/distriktsindelning/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SWE_ADM3.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
