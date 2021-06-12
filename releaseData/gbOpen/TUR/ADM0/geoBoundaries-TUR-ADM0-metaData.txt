@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//osm-boundaries.com/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TUR_ADM0.zip
 sourceDataUpdateDate : May 30, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
