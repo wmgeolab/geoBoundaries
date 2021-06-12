@@ -11,4 +11,4 @@ licenseSource : http//www.statistics.gov.rw/terms-use
 boundarySourceURL : http//geodata-nisr.opendata.arcgis.com/datasets/7083c6f446ae41c1bc69649f577f8a68_0
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/RWA_ADM3.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
