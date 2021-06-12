@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/somalia-administrative-boundarie
 boundarySourceURL : https//data.humdata.org/dataset/somalia-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SOM_ADM0.zip
 sourceDataUpdateDate : Apr 24, 2021
-buildUpdateDate : May 25, 2021
+buildUpdateDate : Jun 12, 2021
