@@ -11,4 +11,4 @@ licenseSource : https//web.archive.org/web/20190717210922/http
 boundarySourceURL : https//twitter.com/WMgeoLab/status/1253049949132128257
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TZA_ADM3.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
