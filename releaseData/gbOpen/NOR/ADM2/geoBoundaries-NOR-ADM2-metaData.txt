@@ -11,4 +11,4 @@ licenseSource : https//kartkatalog.geonorge.no/metadata/kartverket/administrativ
 boundarySourceURL : https//kartkatalog.geonorge.no/metadata/kartverket/administrative-enheter/041f1e6e-bdbc-4091-b48f-8a5990f3cc5b
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NOR_ADM2.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
