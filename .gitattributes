@@ -176,3 +176,4 @@ releaseData/gbOpen/ROU/ADM2/geoBoundaries-ROU-ADM2_simplified.geojson filter=lfs
 releaseData/gbOpen/ROU/ADM2/geoBoundaries-ROU-ADM2.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/ROU/ADM2/geoBoundaries-ROU-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text
 tmp/ROU_ADM2.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/RUS/ADM2/geoBoundaries-RUS-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text
