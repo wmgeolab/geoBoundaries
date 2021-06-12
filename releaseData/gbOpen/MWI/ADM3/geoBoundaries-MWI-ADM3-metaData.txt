@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : http//www.masdap.mw/layers/docker-osm
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MWI_ADM3.zip
 sourceDataUpdateDate : May 18, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
