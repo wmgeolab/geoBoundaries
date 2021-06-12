@@ -168,3 +168,4 @@ releaseData/gbOpen/PHL/ADM3/geoBoundaries-PHL-ADM3_simplified.shp filter=lfs dif
 releaseData/gbOpen/PHL/ADM3/geoBoundaries-PHL-ADM3_simplified.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/PHL/ADM3/geoBoundaries-PHL-ADM3.shp filter=lfs diff=lfs merge=lfs -text
 tmp/PHL_ADM3.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/POL/ADM3/geoBoundaries-POL-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
