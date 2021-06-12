@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/mauritania-administrative-bounda
 boundarySourceURL : https//data.humdata.org/dataset/mauritania-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MRT_ADM2.zip
 sourceDataUpdateDate : May 06, 2021
-buildUpdateDate : May 26, 2021
+buildUpdateDate : Jun 12, 2021
