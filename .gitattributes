@@ -150,3 +150,9 @@ releaseData/gbOpen/NZL/ADM3/geoBoundaries-NZL-ADM3_simplified.geojson filter=lfs
 releaseData/gbOpen/PAN/ADM3/geoBoundaries-PAN-ADM3_simplified.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/PAN/ADM3/geoBoundaries-PAN-ADM3.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/PAN/ADM3/geoBoundaries-PAN-ADM3-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/PHL/ADM1/geoBoundaries-PHL-ADM1_simplified.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/PHL/ADM1/geoBoundaries-PHL-ADM1.geojson filter=lfs diff=lfs merge=lfs -text
+tmp/PHL_ADM1.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/PHL/ADM1/geoBoundaries-PHL-ADM1-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/PHL/ADM1/geoBoundaries-PHL-ADM1_simplified.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/PHL/ADM1/geoBoundaries-PHL-ADM1.shp filter=lfs diff=lfs merge=lfs -text
