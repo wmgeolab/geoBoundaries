@@ -11,4 +11,4 @@ licenseSource : Pathways Data Pvt. Ltd.
 boundarySourceURL : https//geonode.pathwaysdata.com/layers/geonode
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PAK_ADM3.zip
 sourceDataUpdateDate : May 06, 2021
-buildUpdateDate : May 26, 2021
+buildUpdateDate : Jun 12, 2021
