@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/yemen-admin-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/yemen-admin-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/YEM_ADM2.zip
 sourceDataUpdateDate : Mar 30, 2021
-buildUpdateDate : Apr 19, 2021
+buildUpdateDate : Jun 12, 2021
