@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/mozambique-administrative-levels
 boundarySourceURL : https//data.humdata.org/dataset/mozambique-administrative-levels-0-3
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/MOZ_ADM2.zip
 sourceDataUpdateDate : Oct 28, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
