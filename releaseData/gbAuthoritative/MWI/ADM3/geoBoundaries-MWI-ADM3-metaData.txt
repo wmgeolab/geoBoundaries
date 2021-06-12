@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/malawi-administrative-level-0-3-
 boundarySourceURL : https//data.humdata.org/dataset/malawi-administrative-level-0-3-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/MWI_ADM3.zip
 sourceDataUpdateDate : Nov 14, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
