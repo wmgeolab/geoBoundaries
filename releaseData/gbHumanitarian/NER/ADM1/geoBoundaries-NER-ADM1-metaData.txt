@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/niger-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/niger-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/NER_ADM1.zip
 sourceDataUpdateDate : Oct 21, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
