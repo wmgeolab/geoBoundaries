@@ -11,4 +11,4 @@ licenseSource : https//pacificdata.org/data/dataset/2011_niu_phc_admin_boundarie
 boundarySourceURL : https//pacificdata.org/data/dataset/2011_niu_phc_admin_boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NIU_ADM0.zip
 sourceDataUpdateDate : Dec 18, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
