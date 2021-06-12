@@ -1,14 +1,14 @@
-boundaryID : MLI-ADM1-61829018
+boundaryID : MLI-ADM1-92416918
 boundaryISO : MLI
 boundaryType : ADM1
-boundaryYear : 2015.0
-boundarySource-1 : DNCT - Direction Nationale des ColelctivitÃÂ©s Territorielles, DNP - Direction Nationale de la Population
+boundaryYear : 2021
+boundarySource-1 : DNCT - Direction Nationale des Collectivités Territoriales
 boundarySource-2 : United Nations Office for the Coordination of Humanitarian Affairs, Mali
-boundaryCanonical : 
+boundaryCanonical : Region or Capital District
 boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
-licenseDetail : Noted in metadata tab
-licenseSource : https//data.humdata.org/dataset/mali-admin-boundaries-level-1-2-and-3-including-2017-population-desagregated-by-sexe
-boundarySourceURL : https//data.humdata.org/dataset/mali-admin-boundaries-level-1-2-and-3-including-2017-population-desagregated-by-sexe
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/administrative-boundaries-cod-mli
+boundarySourceURL : https//data.humdata.org/dataset/administrative-boundaries-cod-mli
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MLI_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 08, 2021
+sourceDataUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
