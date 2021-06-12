@@ -1,14 +1,14 @@
-boundaryID : UZB-ADM2-58952164
+boundaryID : UZB-ADM2-79887680
 boundaryISO : UZB
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap, digitized from https//en.wikipedia.org/wiki/Districts_of_Uzbekistan#/media/File
-boundarySource-2 : Allison Bowers
-boundaryCanonical : 
-boundaryLicense : Public Domain
+boundaryYear : 2020
+boundarySource-1 : OCHA ROCCA
+boundarySource-2 : 
+boundaryCanonical : Tuman
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : nan
-licenseSource : https//commons.wikimedia.org/wiki/File
-boundarySourceURL : https//commons.wikimedia.org/wiki/File
+licenseSource : https//data.humdata.org/dataset/ubbekistan-update
+boundarySourceURL : https//data.humdata.org/dataset/ubbekistan-update
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/UZB_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+sourceDataUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
