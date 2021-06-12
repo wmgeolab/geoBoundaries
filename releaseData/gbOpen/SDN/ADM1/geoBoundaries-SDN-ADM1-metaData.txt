@@ -1,14 +1,14 @@
-boundaryID : SDN-ADM1-65411412
+boundaryID : SDN-ADM1-26471942
 boundaryISO : SDN
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap/Wikipedia digitized
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//en.wikipedia.org/wiki/Sudan
+boundaryYear : 2020
+boundarySource-1 : HDX
+boundarySource-2 : OCHA ROSEA
+boundaryCanonical : Wilayat/State
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/sudan-administrative-boundaries-levels-0-2
+boundarySourceURL : https//data.humdata.org/dataset/sudan-administrative-boundaries-levels-0-2
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SDN_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 19, 2021
+sourceDataUpdateDate : Jun 04, 2021
+buildUpdateDate : Jun 12, 2021
