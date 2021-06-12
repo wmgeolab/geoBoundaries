@@ -11,4 +11,4 @@ licenseSource : https//purl.stanford.edu/cs051py0596
 boundarySourceURL : http//purl.stanford.edu/cs051py0596
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NAM_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
