@@ -1,14 +1,14 @@
-boundaryID : MDV-ADM0-56317072
+boundaryID : MDV-ADM0-60632471
 boundaryISO : MDV
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2021
+boundarySource-1 : Government of the Republic of Maldives
+boundarySource-2 : OCHA ROAP
+boundaryCanonical : Maldives
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/maldives-administrative-boundaries-polygon-polyline
+boundarySourceURL : https//data.humdata.org/dataset/maldives-administrative-boundaries-polygon-polyline
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MDV_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 07, 2021
+sourceDataUpdateDate : Mar 31, 2021
+buildUpdateDate : Jun 12, 2021
