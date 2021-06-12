@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/zambia-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/zambia-administrative-boundaries-level-1-provinces-and-level-2-districts-with-census-2010-population
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ZMB_ADM2.zip
 sourceDataUpdateDate : Apr 22, 2021
-buildUpdateDate : May 25, 2021
+buildUpdateDate : Jun 12, 2021
