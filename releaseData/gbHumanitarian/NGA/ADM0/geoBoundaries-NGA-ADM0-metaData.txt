@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/nga-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/nga-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/NGA_ADM0.zip
 sourceDataUpdateDate : Oct 16, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
