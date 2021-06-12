@@ -11,4 +11,4 @@ licenseSource : https//www.arcgis.com/home/item.html?id=8f1c5499d3a8423888454cfe
 boundarySourceURL : https//www.arcgis.com/home/item.html?id=8f1c5499d3a8423888454cfee5b45586
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PAN_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Apr 08, 2021
+buildUpdateDate : Jun 12, 2021
