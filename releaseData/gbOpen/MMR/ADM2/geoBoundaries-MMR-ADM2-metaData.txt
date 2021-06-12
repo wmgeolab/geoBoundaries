@@ -11,4 +11,4 @@ licenseSource : https//data.mmanalytics.org/dataset/border-shapefiles
 boundarySourceURL : https//data.mmanalytics.org/dataset/border-shapefiles/resource/b641b45f-898d-483b-986d-f9763af4f6c6
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MMR_ADM2.zip
 sourceDataUpdateDate : Jun 04, 2021
-buildUpdateDate : Jun 07, 2021
+buildUpdateDate : Jun 12, 2021
