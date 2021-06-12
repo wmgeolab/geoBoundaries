@@ -134,3 +134,6 @@ releaseData/gbOpen/LKA/ADM4/geoBoundaries-LKA-ADM4.geojson filter=lfs diff=lfs m
 releaseData/gbOpen/LKA/ADM4/geoBoundaries-LKA-ADM4_simplified.shp filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/LKA/ADM4/geoBoundaries-LKA-ADM4-all.zip filter=lfs diff=lfs merge=lfs -text
 tmp/LKA_ADM4.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/MEX/ADM2/geoBoundaries-MEX-ADM2.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/MEX/ADM2/geoBoundaries-MEX-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/MEX/ADM2/geoBoundaries-MEX-ADM2_simplified.geojson filter=lfs diff=lfs merge=lfs -text
