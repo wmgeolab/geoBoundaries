@@ -192,3 +192,14 @@ releaseData/gbOpen/USA/ADM2/geoBoundaries-USA-ADM2.shp filter=lfs diff=lfs merge
 releaseData/gbOpen/ZAF/ADM4/geoBoundaries-ZAF-ADM4_simplified.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/ZAF/ADM4/geoBoundaries-ZAF-ADM4.geojson filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/ZAF/ADM4/geoBoundaries-ZAF-ADM4-all.zip filter=lfs diff=lfs merge=lfs -text
+tmp/IND_ADM5.dbf filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5.dbf filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5_simplified.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5.topojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5_simplified.dbf filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5_simplified.topojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/IND/ADM5/geoBoundaries-IND-ADM5_simplified.geojson filter=lfs diff=lfs merge=lfs -text
+tmp/IND_ADM5.shp filter=lfs diff=lfs merge=lfs -text
