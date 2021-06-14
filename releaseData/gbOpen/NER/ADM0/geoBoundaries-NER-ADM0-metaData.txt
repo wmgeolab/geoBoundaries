@@ -1,0 +1,14 @@
+boundaryID : NER-ADM0-22259449
+boundaryISO : NER
+boundaryType : ADM0
+boundaryYear : 2017
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Open Street Map
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution-ShareAlike 2.0
+licenseDetail : METADATA ERROR
+licenseSource : https//mapcruzin.com/free-niger-country-city-place-gis-shapefiles.htm
+boundarySourceURL : https//mapcruzin.com/free-niger-country-city-place-gis-shapefiles.htm
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NER_ADM0.zip
+sourceDataUpdateDate : Jun 14, 2021
+buildUpdateDate : Jun 14, 2021
