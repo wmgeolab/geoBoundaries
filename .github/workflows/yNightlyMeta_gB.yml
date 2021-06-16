@@ -33,6 +33,7 @@ jobs:
            echo "==============================================="
            mkdir ~/tmp 
            mkdir ~/artifacts
+           pip install psutil
            python geoBoundaryBot/gbBuildCSV.py
       env:
            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
