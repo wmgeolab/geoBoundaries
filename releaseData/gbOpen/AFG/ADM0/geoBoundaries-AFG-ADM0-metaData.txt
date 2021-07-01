@@ -11,4 +11,4 @@ licenseSource : https//hub.arcgis.com/datasets/2b63527870ef416bacf83bcaf388685f_
 boundarySourceURL : https//hub.arcgis.com/datasets/2b63527870ef416bacf83bcaf388685f_0?geometry=53.805%2C30.812%2C81.556%2C37.181
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AFG_ADM0.zip
 sourceDataUpdateDate : Jun 09, 2021
-buildUpdateDate : Jun 09, 2021
+buildUpdateDate : Jul 01, 2021
