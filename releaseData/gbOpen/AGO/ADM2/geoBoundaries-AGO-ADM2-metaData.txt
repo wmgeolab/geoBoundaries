@@ -11,4 +11,4 @@ licenseSource : https//www.census.gov/geographies/mapping-files/time-series/demo
 boundarySourceURL : https//www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AGO_ADM2.zip
 sourceDataUpdateDate : May 24, 2021
-buildUpdateDate : Jun 04, 2021
+buildUpdateDate : Jul 01, 2021
