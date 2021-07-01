@@ -1,0 +1,14 @@
+boundaryID : CIV-ADM2-28800309
+boundaryISO : CIV
+boundaryType : ADM2
+boundaryYear : 2012
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Centre d'Information Géographique et du Numérique (BNETD), Côte d'Ivoire
+boundaryCanonical : Regions
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/CIV
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/CIV_ADM2.zip
+sourceDataUpdateDate : Jun 10, 2021
+buildUpdateDate : Jul 01, 2021
