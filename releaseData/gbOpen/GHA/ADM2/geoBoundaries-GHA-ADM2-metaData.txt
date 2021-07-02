@@ -11,4 +11,4 @@ licenseSource : https//creativecommons.org/licenses/by/4.0/
 boundarySourceURL : https//hub.arcgis.com/datasets/USAID-Ghana-HPNO
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GHA_ADM2.zip
 sourceDataUpdateDate : Dec 14, 2020
-buildUpdateDate : Jun 10, 2021
+buildUpdateDate : Jul 02, 2021
