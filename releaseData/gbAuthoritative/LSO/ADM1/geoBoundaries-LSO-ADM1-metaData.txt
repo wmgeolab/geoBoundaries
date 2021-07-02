@@ -1,0 +1,14 @@
+boundaryID : LSO-ADM1-39459740
+boundaryISO : LSO
+boundaryType : ADM1
+boundaryYear : 2005
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Department of Lands, Surveys & Physical Planning, Lesotho
+boundaryCanonical : Districts
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/lso
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/LSO_ADM1.zip
+sourceDataUpdateDate : Jun 11, 2021
+buildUpdateDate : Jul 02, 2021
