@@ -1,0 +1,14 @@
+boundaryID : MLI-ADM2-85380100
+boundaryISO : MLI
+boundaryType : ADM2
+boundaryYear : 1993
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Institut Géographique du Mali
+boundaryCanonical : Cercles
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/mli
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/MLI_ADM2.zip
+sourceDataUpdateDate : Jun 11, 2021
+buildUpdateDate : Jul 02, 2021
