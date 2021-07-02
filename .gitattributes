@@ -213,3 +213,6 @@ releaseData/gbOpen/BGD/ADM4/geoBoundaries-BGD-ADM4_simplified.geojson filter=lfs
 releaseData/gbOpen/BGD/ADM4/geoBoundaries-BGD-ADM4_simplified.shp filter=lfs diff=lfs merge=lfs -text
 releaseData/gbOpen/BGD/ADM4/geoBoundaries-BGD-ADM4.geojson filter=lfs diff=lfs merge=lfs -text
 tmp/BGD_ADM4.shp filter=lfs diff=lfs merge=lfs -text
+releaseData/gbAuthoritative/ECU/ADM2/geoBoundaries-ECU-ADM2-all.zip filter=lfs diff=lfs merge=lfs -text
+releaseData/gbAuthoritative/ECU/ADM2/geoBoundaries-ECU-ADM2_simplified.geojson filter=lfs diff=lfs merge=lfs -text
+releaseData/gbAuthoritative/ECU/ADM2/geoBoundaries-ECU-ADM2.geojson filter=lfs diff=lfs merge=lfs -text
