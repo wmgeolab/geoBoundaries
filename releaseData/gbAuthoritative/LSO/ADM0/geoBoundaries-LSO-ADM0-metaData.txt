@@ -1,0 +1,14 @@
+boundaryID : LSO-ADM0-15420278
+boundaryISO : LSO
+boundaryType : ADM0
+boundaryYear : 2005
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Department of Lands, Surveys & Physical Planning, Lesotho
+boundaryCanonical : Naha ea Lesotho
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/lso
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/LSO_ADM0.zip
+sourceDataUpdateDate : Jun 11, 2021
+buildUpdateDate : Jul 02, 2021
