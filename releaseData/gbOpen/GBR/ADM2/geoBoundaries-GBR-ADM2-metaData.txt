@@ -11,4 +11,4 @@ licenseSource : https//geoportal.statistics.gov.uk/datasets/b216b4c8a4e74f6fb692
 boundarySourceURL : https//geoportal.statistics.gov.uk/datasets/b216b4c8a4e74f6fb692a1785255d777_0?geometry=-19.125%2C53.451%2C14.252%2C57.788
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GBR_ADM2.zip
 sourceDataUpdateDate : Mar 29, 2021
-buildUpdateDate : Jun 10, 2021
+buildUpdateDate : Jul 02, 2021
