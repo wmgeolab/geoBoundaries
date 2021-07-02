@@ -1,0 +1,14 @@
+boundaryID : MOZ-ADM2-84118015
+boundaryISO : MOZ
+boundaryType : ADM2
+boundaryYear : 2007.0
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : National Remote Sensing & Cartography Center
+boundaryCanonical : district
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/moz
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/MOZ_ADM2.zip
+sourceDataUpdateDate : Jun 14, 2021
+buildUpdateDate : Jul 02, 2021
