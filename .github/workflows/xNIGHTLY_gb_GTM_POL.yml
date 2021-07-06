@@ -1,5 +1,6 @@
 on:
-  workflow_dispatch
+  schedule:
+    - cron: '0 22 * * 1,4'
   
 name: xNightly_GTM_POL
 jobs:
