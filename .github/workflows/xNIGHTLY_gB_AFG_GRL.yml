@@ -1,5 +1,6 @@
 on:
-  workflow_dispatch
+  schedule:
+    - cron: '0 22 * * 0,3'
   
 name: xNightly_AFG_GRL
 jobs:
