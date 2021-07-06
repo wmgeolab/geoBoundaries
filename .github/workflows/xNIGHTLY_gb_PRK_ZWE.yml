@@ -1,5 +1,6 @@
 on:
-  workflow_dispatch
+  schedule:
+    - cron: '0 22 * * 2,5'
   
 name: xNightly_PRK_ZWE
 jobs:
