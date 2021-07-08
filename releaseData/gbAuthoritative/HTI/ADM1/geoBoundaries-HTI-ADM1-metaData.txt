@@ -11,4 +11,4 @@ licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_u
 boundarySourceURL : https//www.unsalb.org/data/hti
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/HTI_ADM1.zip
 sourceDataUpdateDate : Jun 11, 2021
-buildUpdateDate : Jul 02, 2021
+buildUpdateDate : Jul 08, 2021
