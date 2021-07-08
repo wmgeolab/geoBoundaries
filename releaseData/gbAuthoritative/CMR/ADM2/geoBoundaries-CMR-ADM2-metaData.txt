@@ -11,4 +11,4 @@ licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_u
 boundarySourceURL : https//www.unsalb.org/data/cmr
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/CMR_ADM2.zip
 sourceDataUpdateDate : Jun 10, 2021
-buildUpdateDate : Jul 01, 2021
+buildUpdateDate : Jul 08, 2021
