@@ -1,4 +1,4 @@
-# Contributor Covenant Code of Conduct
+# Contributor Covenant & Code of Conduct
 
 ## Our Pledge
 
@@ -42,6 +42,17 @@ reject comments, commits, code, wiki edits, issues, and other contributions
 that are not aligned to this Code of Conduct, or to ban temporarily or
 permanently any contributor for other behaviors that they deem inappropriate,
 threatening, offensive, or harmful.
+
+## Accurate Representations of Information in Contributed Content
+
+Contributors to the geoBoundaries project have the responsibility to ensure
+the accurate representation of information in any of their interactions with the project,
+including comments, commits, code, wiki edits, issues, and other contributions.
+This is inclusive of - for example - information pertaining to the source of
+boundaries submitted, or qualitative research on contested boundaries.  Project
+maintainers have the right and responsibility to ban temporarily or permanently 
+any contributor that provides - intentionally or otherwise - inaccurate representations 
+of information.
 
 ## Scope
 
