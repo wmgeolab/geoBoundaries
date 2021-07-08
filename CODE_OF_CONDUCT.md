@@ -49,8 +49,9 @@ Contributors to the geoBoundaries project have the responsibility to ensure
 the accurate representation of information in any of their interactions with the project,
 including comments, commits, code, wiki edits, issues, and other contributions.
 This is inclusive of - for example - information pertaining to the source of
-boundaries submitted, or qualitative research on contested boundaries.  Project
-maintainers have the right and responsibility to ban temporarily or permanently 
+boundaries submitted, or qualitative research on contested boundaries.  
+
+Project maintainers have the right and responsibility to ban temporarily or permanently 
 any contributor that provides - intentionally or otherwise - inaccurate representations 
 of information.
 
