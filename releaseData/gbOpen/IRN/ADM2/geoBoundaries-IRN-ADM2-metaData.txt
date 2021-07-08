@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IRN_ADM2.zip
 sourceDataUpdateDate : Apr 03, 2021
-buildUpdateDate : Jun 11, 2021
+buildUpdateDate : Jul 08, 2021
