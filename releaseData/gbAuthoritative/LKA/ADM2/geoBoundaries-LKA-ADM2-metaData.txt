@@ -11,4 +11,4 @@ licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_u
 boundarySourceURL : https//www.unsalb.org/data/lka
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/LKA_ADM2.zip
 sourceDataUpdateDate : Jun 11, 2021
-buildUpdateDate : Jul 02, 2021
+buildUpdateDate : Jul 09, 2021
