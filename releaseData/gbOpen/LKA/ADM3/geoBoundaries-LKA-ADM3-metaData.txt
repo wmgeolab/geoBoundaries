@@ -1,0 +1,14 @@
+boundaryID : LKA-ADM3-8540358
+boundaryISO : LKA
+boundaryType : ADM3
+boundaryYear : 2020
+boundarySource-1 : OCHA ROAP
+boundarySource-2 : Survey Department of Sri Lanka
+boundaryCanonical : Divisional Secretariat
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/sri-lanka-administrative-levels-0-4-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/sri-lanka-administrative-levels-0-4-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LKA_ADM3.zip
+sourceDataUpdateDate : Jul 05, 2021
+buildUpdateDate : Jul 09, 2021
