@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/administrative-bounadries-of-nep
 boundarySourceURL : https//data.humdata.org/dataset/administrative-bounadries-of-nepal
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/NPL_ADM2.zip
 sourceDataUpdateDate : Jun 24, 2021
-buildUpdateDate : Jul 02, 2021
+buildUpdateDate : Jul 09, 2021
