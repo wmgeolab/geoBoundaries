@@ -11,4 +11,4 @@ licenseSource : https//www.istat.it/it/note-legali
 boundarySourceURL : http//www.istat.it/it/archivio/124086
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ITA_ADM3.zip
 sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Jun 11, 2021
+buildUpdateDate : Jul 09, 2021
