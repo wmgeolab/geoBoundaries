@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/administrative-boundaries-cod-ml
 boundarySourceURL : https//data.humdata.org/dataset/administrative-boundaries-cod-mli
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MLI_ADM1.zip
 sourceDataUpdateDate : Jun 07, 2021
-buildUpdateDate : Jun 12, 2021
+buildUpdateDate : Jul 09, 2021
