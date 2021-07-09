@@ -11,4 +11,4 @@ licenseSource : https//mapcruzin.com/free-niger-country-city-place-gis-shapefile
 boundarySourceURL : https//mapcruzin.com/free-niger-country-city-place-gis-shapefiles.htm
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NER_ADM0.zip
 sourceDataUpdateDate : Jun 14, 2021
-buildUpdateDate : Jun 14, 2021
+buildUpdateDate : Jul 09, 2021
