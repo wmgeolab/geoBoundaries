@@ -1,0 +1,14 @@
+boundaryID : ZMB-ADM1-34847436
+boundaryISO : ZMB
+boundaryType : ADM1
+boundaryYear : 2017.0
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Zambia Survey Department
+boundaryCanonical : province
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/zmb
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/ZMB_ADM1.zip
+sourceDataUpdateDate : Jun 15, 2021
+buildUpdateDate : Jul 10, 2021
