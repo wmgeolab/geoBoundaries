@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/ubbekistan-update
 boundarySourceURL : https//data.humdata.org/dataset/ubbekistan-update
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/UZB_ADM2.zip
 sourceDataUpdateDate : Jun 07, 2021
-buildUpdateDate : Jun 12, 2021
+buildUpdateDate : Jul 10, 2021
