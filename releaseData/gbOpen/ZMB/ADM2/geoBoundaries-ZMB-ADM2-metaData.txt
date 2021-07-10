@@ -11,4 +11,4 @@ licenseSource : https//data.grid3.org/datasets/GRID3
 boundarySourceURL : https//data.grid3.org/datasets/GRID3
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ZMB_ADM2.zip
 sourceDataUpdateDate : Jun 21, 2021
-buildUpdateDate : Jul 03, 2021
+buildUpdateDate : Jul 10, 2021
