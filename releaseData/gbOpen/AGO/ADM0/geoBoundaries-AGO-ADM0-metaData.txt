@@ -11,4 +11,4 @@ licenseSource : https//osm-boundaries.com/Documentation
 boundarySourceURL : https//osm-boundaries.com/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AGO_ADM0.zip
 sourceDataUpdateDate : Mar 05, 2021
-buildUpdateDate : Jul 07, 2021
+buildUpdateDate : Jul 11, 2021
