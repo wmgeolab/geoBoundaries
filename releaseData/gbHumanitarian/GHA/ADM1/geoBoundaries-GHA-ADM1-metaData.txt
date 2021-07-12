@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/ghana-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/ghana-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/GHA_ADM1.zip
 sourceDataUpdateDate : Nov 16, 2020
-buildUpdateDate : Jul 08, 2021
+buildUpdateDate : Jul 12, 2021
