@@ -11,4 +11,4 @@ licenseSource : https//commons.wikimedia.org/wiki/File
 boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GAB_ADM2.zip
 sourceDataUpdateDate : May 03, 2021
-buildUpdateDate : Jul 08, 2021
+buildUpdateDate : Jul 12, 2021
