@@ -11,4 +11,4 @@ licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_u
 boundarySourceURL : https//www.unsalb.org/data/cub
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/CUB_ADM0.zip
 sourceDataUpdateDate : Jun 11, 2021
-buildUpdateDate : Jul 08, 2021
+buildUpdateDate : Jul 12, 2021
