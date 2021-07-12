@@ -11,4 +11,4 @@ licenseSource : http//gnq-data.forest-atlas.org/datasets/equatorial-guinea-gis-d
 boundarySourceURL : http//gnq-data.forest-atlas.org/datasets/equatorial-guinea-gis-data-2013
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GNQ_ADM2.zip
 sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Jul 08, 2021
+buildUpdateDate : Jul 12, 2021
