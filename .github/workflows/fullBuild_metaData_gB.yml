@@ -1,7 +1,7 @@
 on:
   workflow_dispatch
   
-name: yNightlyMeta_gB
+name: fullBuild_metaData
 jobs:
   csvBuild:
     runs-on: ubuntu-latest
