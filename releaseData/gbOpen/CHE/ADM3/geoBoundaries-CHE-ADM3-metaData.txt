@@ -11,4 +11,4 @@ licenseSource : https//opendata.swiss/en/dataset/swissboundaries3d-gemeindegrenz
 boundarySourceURL : https//opendata.swiss/en/dataset/swissboundaries3d-gemeindegrenzen/resource/c772d27f-6b5e-4dad-8067-f600f3d2f89e
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CHE_ADM3.zip
 sourceDataUpdateDate : Jun 10, 2021
-buildUpdateDate : Jul 08, 2021
+buildUpdateDate : Jul 12, 2021
