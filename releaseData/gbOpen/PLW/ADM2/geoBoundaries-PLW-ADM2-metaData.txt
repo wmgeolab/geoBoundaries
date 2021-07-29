@@ -1,0 +1,14 @@
+boundaryID : PLW-ADM2-81905179
+boundaryISO : PLW
+boundaryType : ADM2
+boundaryYear : 2015
+boundarySource-1 : Pacific Data Hub
+boundarySource-2 : SPC Statistics for Development Division (SDD)
+boundaryCanonical : Hamlets
+boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//pacificdata.org/data/dataset/2015_plw_phc_admin_boundaries
+boundarySourceURL : https//pacificdata.org/data/geographic_data/2015_plw_phc_admin_boundaries/resource/fe6dd29b-6ec5-4a06-9aac-e8d84d895b21
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PLW_ADM2.zip
+sourceDataUpdateDate : Jul 15, 2021
+buildUpdateDate : Jul 29, 2021
