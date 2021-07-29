@@ -53,7 +53,7 @@ geoBoundaries offers _terrestrial_ boundaries. Submissions of coastal or island 
 	
 **Bias and Representation of Disputed Territory**
 
-geoBoundaries is committed to offering accurate, nonbiased, properly licensed and clearly documented administrative boundary data. A primary goal of gB is to represent each state _as they  represent themselves_ for individual state boundaries. As such, territories disputed between two states are given to both states (e.g. both IND and PAK files contain the Kashmir region with respective canonical naming conventions). Submissions which do not contain disputed territory claimed by a state will not be accepted.
+geoBoundaries is committed to offering accurate, properly licensed and clearly documented administrative boundary data. A primary goal of geoBoundaries is to represent each state _as they represent themselves_ for individual state boundaries. As such, territories disputed between two states are given to both states (e.g. both IND and PAK files contain the Kashmir region with respective canonical naming conventions). Submissions which do not contain disputed territory claimed by a state will not be accepted.
 
 
 Thank you!
