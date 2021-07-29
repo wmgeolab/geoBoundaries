@@ -35,10 +35,13 @@ To find information on the most up-to-date boundaries available:
 https://www.geoboundaries.org/api/current/gbOpen/[3-LETTER-ISO-CODE]/[ADM-LEVEL]/
 ```
 
-Users can also enter the special phrase "ALL" for either "ADM" or "ISO" to get a multi-boundary return. Each requested boundary returns all metadata available for that boundary in the gBOpen release, including a link to both the full-resolution, large-file size and the minor simplification (~5%), small-file size versions. In cases where a gbHumanitarian or gbAuthoritative release is available for a boundary, that information is provided in sub-objects within the returned json. Users can additionally replace "gbOpen" with either "gbAuthoritative" or "gbHumanitarian" to filter results to only include boundaries from those two respective releases.
+Users can also enter the special phrase "ALL" for either "ADM" or "ISO" to get a multi-boundary return. Each requested boundary returns all metadata available for that boundary in the gBOpen release, including a link to both the full-resolution, large-file size and the simplified small-file size versions. Users can additionally replace "gbOpen" with either "gbAuthoritative" or "gbHumanitarian" to filter results to only include boundaries from those two respective releases.
+
 
 To find information on any geoBoundary, past or present, based on the geoBoundary ID:
+```
 https://www.geoboundaries.org/api/gbID/[geoBoundaryID]/
+```
 
 Starting with the geoBoundaries 4.0 release, all geoBoundaries can be referenced by ID using the above API. The returned elements are identical to those in the /current/ API endpoint.
 
