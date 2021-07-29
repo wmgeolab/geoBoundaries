@@ -21,26 +21,26 @@ _SSCU_  - Simplified Single Country Unstandardized. A simplified version of ever
 
 _CGAZ_  - Comprehensive Global Administrative Zones. A global composite of the SSCU ADM0, ADM1 and ADM2, clipped to international boundaries (US Department of State), with gaps filled between borders.  Also available at higher levels of simplification.
 
-## Manual Data Retrieval
+## Manual Data Retrieval & Archival Access
 
-There are two ways to manually download geoBoundaries.  Option 1 is to use the GUI available on our website, located [here (simplified)](https://www.geoboundaries.org/downloadSimple.html) and [here (full precision)](https://www.geoboundaries.org/downloadFull.html).  This provides access to all of our current data, and provides visualizations for quick assessment.  
+Since geoBoundaries 3.0, file access has been standardized on the github platform. To download a file from any release, you can navigate to our [releases page](https://github.com/wmgeolab/geoBoundaries/releases/), and choose the release you are interested in retrieving files from. Our first public release, geoBoundaries 2.0, is available online through the [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/PGAIQY).
 
-Additionally, you can access all geoBoundary files through the online HTML-based file browser, located at http://www.geoboundaries.org/data/ .  
 
 ## Programmatic / API Access
 Full details on our API are available [here](https://www.geoboundaries.org/api.html).  
 
-Information on every geoBoundary - current and past - can be retrieved through a simple query; a JSON object is returned:
+To find information on the most up-to-date boundaries available:
 
 ```
-https://www.geoboundaries.org/gbRequest.html?ISO=[3-LETTER-ISO-CODE]&ADM=[ADM-LEVEL]
+https://www.geoboundaries.org/api/current/gbOpen/[3-LETTER-ISO-CODE]/[ADM-LEVEL]/
 ```
 
-Users can also enter special phrases "ALL" for either "ADM" or "ISO" to get a multi-boundary return (within the element 'geoBoundaries'). A full list of parameters users can include are:
+Users can also enter the special phrase "ALL" for either "ADM" or "ISO" to get a multi-boundary return. Each requested boundary returns all metadata available for that boundary in the gBOpen release, including a link to both the full-resolution, large-file size and the minor simplification (~5%), small-file size versions. In cases where a gbHumanitarian or gbAuthoritative release is available for a boundary, that information is provided in sub-objects within the returned json. Users can additionally replace "gbOpen" with either "gbAuthoritative" or "gbHumanitarian" to filter results to only include boundaries from those two respective releases.
 
--   **ISO**  - Optional; defaults to 'ALL'. The three-letter ISO code representing the country of interest. The special phrase 'ALL' can be entered to return all ISO codes in the database.
--   **ADM**  - Optional; defaults to 'ALL'. One of ADM0, ADM1, ADM2, ADM3, ADM4 or ADM5, representing each level of administrative hierarchy. The special phrase 'ALL' can be entered to return all levels available.
--   **VER**  - Optional; defaults to the most recent version of geoBoundaries available. The geoboundaries version requested, with underscores. For example, 3_0_0 would return data from version 3.0.0 of geoBoundaries.
--   **TYP**  - Optional; defaults to HPSCU. One of HPSCU, HPSCGS, SSCGS, or SSCU. Determines the type of boundary link you receive.
+To find information on any geoBoundary, past or present, based on the geoBoundary ID:
+https://www.geoboundaries.org/api/gbID/[geoBoundaryID]/
 
+Starting with the geoBoundaries 4.0 release, all geoBoundaries can be referenced by ID using the above API. The returned elements are identical to those in the /current/ API endpoint.
+
+Of note, to facilitate speed of queries against the API, all JSONs are pre-cached and can be exported in bulk by cloning the [geoBoundaries Website repository](https://github.com/wmgeolab/gbWeb) for local use.
 
