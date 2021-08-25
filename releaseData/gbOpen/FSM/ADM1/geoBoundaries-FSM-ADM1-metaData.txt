@@ -1,14 +1,14 @@
-boundaryID : FSM-ADM1-12526186
+boundaryID : FSM-ADM1-64989084
 boundaryISO : FSM
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : States
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2019
+boundarySource-1 : OCHA ROP
+boundarySource-2 : Federated States of Micronesia Division of Statistics, 2010 Census of Population and Housing and Secretariat of the Pacific Community, Statistics for Development Division
+boundaryCanonical : State
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : Data https
+boundarySourceURL : https//data.humdata.org/dataset/fsm-2010-administrative-level-0-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FSM_ADM1.zip
-sourceDataUpdateDate : Dec 02, 2020
-buildUpdateDate : Jul 12, 2021
+sourceDataUpdateDate : Jul 15, 2021
+buildUpdateDate : Aug 25, 2021
