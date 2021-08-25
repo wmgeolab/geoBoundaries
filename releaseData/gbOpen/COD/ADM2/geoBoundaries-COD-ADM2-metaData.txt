@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/drc-administrative-boundaries-le
 boundarySourceURL : https//data.humdata.org/dataset/drc-administrative-boundaries-levels-0-2
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/COD_ADM2.zip
 sourceDataUpdateDate : Jun 23, 2021
-buildUpdateDate : Jul 12, 2021
+buildUpdateDate : Aug 25, 2021
