@@ -1,14 +1,14 @@
-boundaryID : FJI-ADM3-44075104
+boundaryID : FJI-ADM3-44548153
 boundaryISO : FJI
 boundaryType : ADM3
-boundaryYear : 2014.0
-boundarySource-1 : POPGIS
-boundarySource-2 : 
-boundaryCanonical : Provinces
-boundaryLicense : Other - Direct Permission
-licenseDetail : Granted to redistribute in email
-licenseSource : https//twitter.com/WMgeoLab/status/1195463723642585088/photo/1
-boundarySourceURL : http//prism.spc.int/regional-data-and-tools/popgis2
+boundaryYear : 2017
+boundarySource-1 : SOPAC, Fiji Islands Bureau of Statistics
+boundarySource-2 : PacGeo
+boundaryCanonical : Tikina
+boundaryLicense : Open Data Commons Open Database License 1.0
+licenseDetail : 
+licenseSource : http//www.pacgeo.org/about/
+boundarySourceURL : http//www.pacgeo.org/layers/geonode
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FJI_ADM3.zip
-sourceDataUpdateDate : Nov 03, 2020
-buildUpdateDate : Jul 12, 2021
+sourceDataUpdateDate : Jul 14, 2021
+buildUpdateDate : Aug 25, 2021
