@@ -11,4 +11,4 @@ licenseSource : https//opendata.swiss/en/dataset/swissboundaries3d
 boundarySourceURL : https//opendata.swiss/en/dataset/swissboundaries3d
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CHE_ADM2.zip
 sourceDataUpdateDate : Jun 01, 2021
-buildUpdateDate : Jul 12, 2021
+buildUpdateDate : Aug 25, 2021
