@@ -1,14 +1,14 @@
-boundaryID : ERI-ADM2-45066744
+boundaryID : ERI-ADM2-53471697
 boundaryISO : ERI
 boundaryType : ADM2
-boundaryYear : 2002
+boundaryYear : 2017
 boundarySource-1 : OCHA ROSEA
 boundarySource-2 : HDX
-boundaryCanonical : Districts
-boundaryLicense : Other - Humanitarian
-licenseDetail : Humanitarian use only - Noted in metadata tab
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/eritrea-admin-level-1-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/eritrea-admin-level-1-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/ERI_ADM2.zip
-sourceDataUpdateDate : Jan 05, 2021
-buildUpdateDate : Jul 12, 2021
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 25, 2021
