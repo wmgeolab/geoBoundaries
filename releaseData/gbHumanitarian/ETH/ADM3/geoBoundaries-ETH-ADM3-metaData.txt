@@ -1,0 +1,14 @@
+boundaryID : ETH-ADM3-74327352
+boundaryISO : ETH
+boundaryType : ADM3
+boundaryYear : 2019
+boundarySource-1 : CSA (Central Statistics Agency) + Regional Bureau of Finance and Economic Development (BoFED)
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/ethiopia-cod-ab
+boundarySourceURL : https//data.humdata.org/dataset/ethiopia-cod-ab
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/ETH_ADM3.zip
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 25, 2021
