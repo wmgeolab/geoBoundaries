@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/eritrea-admin-level-1-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/eritrea-admin-level-1-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ERI_ADM2.zip
 sourceDataUpdateDate : Mar 20, 2021
-buildUpdateDate : Jul 12, 2021
+buildUpdateDate : Aug 25, 2021
