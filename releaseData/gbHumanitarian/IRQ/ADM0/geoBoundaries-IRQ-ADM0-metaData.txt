@@ -1,0 +1,14 @@
+boundaryID : IRQ-ADM0-64860433
+boundaryISO : IRQ
+boundaryType : ADM0
+boundaryYear : 2019
+boundarySource-1 : Iraq Central Statistics Office
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/iraq-admin-level-1-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/iraq-admin-level-1-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/IRQ_ADM0.zip
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 26, 2021
