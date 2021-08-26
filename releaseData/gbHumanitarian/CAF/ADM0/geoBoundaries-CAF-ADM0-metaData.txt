@@ -1,14 +1,14 @@
-boundaryID : CAF-ADM0-5022529
+boundaryID : CAF-ADM0-57490281
 boundaryISO : CAF
 boundaryType : ADM0
-boundaryYear : 2017
-boundarySource-1 : geoBoundaries
+boundaryYear : 2015
+boundarySource-1 : Agency for Technical Cooperation and Development(ACTED)
 boundarySource-2 : HDX
-boundaryCanonical : Country
-boundaryLicense : Non-Commercial Use Only
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
-licenseSource : https//data.humdata.org/dataset/car-administrative-boundaries-4-levels#
-boundarySourceURL : https//data.humdata.org/dataset/car-administrative-boundaries-4-levels#
+licenseSource : https//data.humdata.org/dataset/central-african-republic-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/central-african-republic-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/CAF_ADM0.zip
-sourceDataUpdateDate : Nov 02, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 26, 2021
