@@ -1,0 +1,14 @@
+boundaryID : HND-ADM0-95436907
+boundaryISO : HND
+boundaryType : ADM0
+boundaryYear : 2015
+boundarySource-1 : Sistema Nacional de Información Territorial (SINIT), Secretaria Técnica de Planificación y Cooperación Externa (SEPLAN), 2010
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/honduras-admin-level-1-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/honduras-admin-level-1-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/HND_ADM0.zip
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 26, 2021
