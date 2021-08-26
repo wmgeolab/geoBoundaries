@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//osm-boundaries.com
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KOR_ADM2.zip
 sourceDataUpdateDate : Jan 03, 2021
-buildUpdateDate : Jul 09, 2021
+buildUpdateDate : Aug 26, 2021
