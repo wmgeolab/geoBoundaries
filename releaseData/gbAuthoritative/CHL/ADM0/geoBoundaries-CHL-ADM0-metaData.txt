@@ -1,4 +1,4 @@
-boundaryID : CHL-ADM0-1550535
+boundaryID : CHL-ADM0-6358836
 boundaryISO : CHL
 boundaryType : ADM0
 boundaryYear : 2020
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//data.humdata.org/dataset/chile-administrative-level-0-country-1-region-region
 boundarySourceURL : https//data.humdata.org/dataset/chile-administrative-level-0-country-1-region-region
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/CHL_ADM0.zip
-sourceDataUpdateDate : Apr 24, 2021
-buildUpdateDate : Jul 12, 2021
+sourceDataUpdateDate : Jul 12, 2021
+buildUpdateDate : Aug 26, 2021
