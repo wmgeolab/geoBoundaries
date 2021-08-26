@@ -11,4 +11,4 @@ licenseSource : https//geonode.pathwaysdata.com/layers/geonode
 boundarySourceURL : https//geonode.pathwaysdata.com/layers/geonode
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IND_ADM0.zip
 sourceDataUpdateDate : Apr 17, 2021
-buildUpdateDate : Jul 08, 2021
+buildUpdateDate : Aug 26, 2021
