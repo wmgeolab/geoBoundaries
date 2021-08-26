@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//osm-boundaries.com/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KNA_ADM1.zip
 sourceDataUpdateDate : Jun 14, 2021
-buildUpdateDate : Jul 09, 2021
+buildUpdateDate : Aug 26, 2021
