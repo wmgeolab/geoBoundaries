@@ -11,4 +11,4 @@ licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_u
 boundarySourceURL : https//www.unsalb.org/data/khm
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/KHM_ADM0.zip
 sourceDataUpdateDate : Jun 17, 2021
-buildUpdateDate : Jul 09, 2021
+buildUpdateDate : Aug 26, 2021
