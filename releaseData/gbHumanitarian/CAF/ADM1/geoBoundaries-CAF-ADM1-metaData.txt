@@ -1,14 +1,14 @@
-boundaryID : CAF-ADM1-8809619
+boundaryID : CAF-ADM1-60015635
 boundaryISO : CAF
 boundaryType : ADM1
-boundaryYear : 2017
-boundarySource-1 : geoBoundaries
-boundarySource-2 : HDX / International Organization for Migration (IOM), Displacement Tracking Matrix (DTM)
-boundaryCanonical : prefecture and autonomous commune
-boundaryLicense : Other - Humanitarian
-licenseDetail : The Materials may be viewed, downloaded, and printed for non-commercial use only, without, inter alia, any right to sell, resell, redistribute or create derivative works therefrom. At all times the User shall credit the DTM as the source, unless otherwise stated.
-licenseSource : https//data.humdata.org/dataset/car-administrative-boundaries-4-levels#
-boundarySourceURL : https//data.humdata.org/dataset/car-administrative-boundaries-4-levels#
+boundaryYear : 2015
+boundarySource-1 : Agency for Technical Cooperation and Development(ACTED)
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/central-african-republic-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/central-african-republic-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/CAF_ADM1.zip
-sourceDataUpdateDate : Dec 14, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 26, 2021
