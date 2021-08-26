@@ -1,0 +1,14 @@
+boundaryID : LBN-ADM1-55075291
+boundaryISO : LBN
+boundaryType : ADM1
+boundaryYear : 2015
+boundarySource-1 : Central Administration of Statistics Lebanon
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/lebanon-administrative-boundaries-levels-0-3
+boundarySourceURL : https//data.humdata.org/dataset/lebanon-administrative-boundaries-levels-0-3
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/LBN_ADM1.zip
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 26, 2021
