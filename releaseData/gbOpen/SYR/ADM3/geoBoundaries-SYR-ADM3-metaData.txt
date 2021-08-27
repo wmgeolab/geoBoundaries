@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/about/license
 boundarySourceURL : https//data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SYR_ADM3.zip
 sourceDataUpdateDate : Apr 21, 2021
-buildUpdateDate : Jul 10, 2021
+buildUpdateDate : Aug 27, 2021
