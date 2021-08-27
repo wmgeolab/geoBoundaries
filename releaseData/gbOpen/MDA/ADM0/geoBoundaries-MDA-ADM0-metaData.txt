@@ -1,4 +1,4 @@
-boundaryID : MDA-ADM0-86748812
+boundaryID : MDA-ADM0-36482656
 boundaryISO : MDA
 boundaryType : ADM0
 boundaryYear : 2017.0
@@ -10,5 +10,5 @@ licenseDetail : Open Data Commons Open Database License 1.0
 licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MDA_ADM0.zip
-sourceDataUpdateDate : Nov 08, 2020
-buildUpdateDate : Jul 09, 2021
+sourceDataUpdateDate : Aug 12, 2021
+buildUpdateDate : Aug 27, 2021
