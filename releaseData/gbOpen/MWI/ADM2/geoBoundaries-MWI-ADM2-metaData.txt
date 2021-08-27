@@ -1,14 +1,14 @@
-boundaryID : MWI-ADM2-58685613
+boundaryID : MWI-ADM2-40363185
 boundaryISO : MWI
 boundaryType : ADM2
-boundaryYear : 2002
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : Districts
-boundaryLicense : Open Data Commons Open Database License 1.0
+boundaryYear : 2020
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Humdata
+boundaryCanonical : district
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+licenseSource : https//data.humdata.org/dataset/malawi-administrative-level-0-3-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/malawi-administrative-level-0-3-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MWI_ADM2.zip
-sourceDataUpdateDate : Dec 18, 2020
-buildUpdateDate : Jul 09, 2021
+sourceDataUpdateDate : Aug 09, 2021
+buildUpdateDate : Aug 27, 2021
