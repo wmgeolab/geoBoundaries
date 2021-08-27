@@ -11,4 +11,4 @@ licenseSource : https//atu.decentralization.gov.ua/
 boundarySourceURL : https//atu.decentralization.gov.ua/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/UKR_ADM2.zip
 sourceDataUpdateDate : May 25, 2021
-buildUpdateDate : Jul 10, 2021
+buildUpdateDate : Aug 27, 2021
