@@ -1,0 +1,14 @@
+boundaryID : MLI-ADM3-70920280
+boundaryISO : MLI
+boundaryType : ADM3
+boundaryYear : 2013
+boundarySource-1 : DNCT - Direction Nationale des Collectivités Territoriales
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/administrative-boundaries-cod-mli
+boundarySourceURL : https//data.humdata.org/dataset/administrative-boundaries-cod-mli
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/MLI_ADM3.zip
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 27, 2021
