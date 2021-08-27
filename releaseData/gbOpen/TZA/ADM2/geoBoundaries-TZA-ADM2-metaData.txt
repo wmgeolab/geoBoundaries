@@ -1,14 +1,14 @@
-boundaryID : TZA-ADM2-60967920
+boundaryID : TZA-ADM2-31574325
 boundaryISO : TZA
 boundaryType : ADM2
-boundaryYear : 2013.0
-boundarySource-1 : Tanzania National Bureau of Statistics (NBS)
-boundarySource-2 : 
-boundaryCanonical : The United Republic of Tanzania
-boundaryLicense : Other - Direct Permission
-licenseDetail : "Royalty-free license to use the information on the open data portal for any lawful purposes."
-licenseSource : https//www.nbs.go.tz/nbs/takwimu/references/Licence-Agreement-NBS.pdf
-boundarySourceURL : //www.nbs.go.tz/index.php/en/census-surveys/gis/385-2012-phc-shapefiles-level-one-and-two
+boundaryYear : 2021
+boundarySource-1 : Humdata
+boundarySource-2 : Tanzania National Bureau of Statistics
+boundaryCanonical : Districts
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/about/license
+boundarySourceURL : https//data.humdata.org/dataset/tanzania-administrative-boundaries-level-1-to-3-regions-districts-and-wards-with-2012-population
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TZA_ADM2.zip
-sourceDataUpdateDate : May 27, 2021
-buildUpdateDate : Jul 10, 2021
+sourceDataUpdateDate : Jul 09, 2021
+buildUpdateDate : Aug 27, 2021
