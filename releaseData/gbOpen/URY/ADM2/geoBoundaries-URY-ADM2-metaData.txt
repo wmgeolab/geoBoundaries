@@ -1,0 +1,14 @@
+boundaryID : URY-ADM2-84410073
+boundaryISO : URY
+boundaryType : ADM2
+boundaryYear : 2013
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia Commons
+boundaryCanonical : Municipalities
+boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
+licenseDetail : Several images were used, all have either a Creative Commons Attribution-ShareAlike 3.0 Unported or Creative Commons Attribution-ShareAlike 4.0 International License. License for each image can be viewed by selecting a district from the license source link and then the image from the list.
+licenseSource : https//commons.wikimedia.org/wiki/Category
+boundarySourceURL : https//commons.wikimedia.org/wiki/Category
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/URY_ADM2.zip
+sourceDataUpdateDate : Jul 13, 2021
+buildUpdateDate : Aug 27, 2021
