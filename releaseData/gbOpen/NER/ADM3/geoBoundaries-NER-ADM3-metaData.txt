@@ -11,4 +11,4 @@ licenseSource : https//www.citypopulation.de/termsofuse.html
 boundarySourceURL : https//www.citypopulation.de/en/niger/admin/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NER_ADM3.zip
 sourceDataUpdateDate : Jul 22, 2021
-buildUpdateDate : Jul 28, 2021
+buildUpdateDate : Aug 27, 2021
