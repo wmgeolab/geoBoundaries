@@ -11,4 +11,4 @@ licenseSource : https//data.govt.lc/dataset/st-lucia-communities
 boundarySourceURL : https//data.govt.lc/dataset/st-lucia-communities
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LCA_ADM2.zip
 sourceDataUpdateDate : Jul 21, 2021
-buildUpdateDate : Jul 28, 2021
+buildUpdateDate : Aug 27, 2021
