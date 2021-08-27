@@ -1,0 +1,14 @@
+boundaryID : TCD-ADM1-31684927
+boundaryISO : TCD
+boundaryType : ADM1
+boundaryYear : 2016
+boundarySource-1 : OCHA Chad
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/chad-admin-boundaries-admin-1-and-admin-2
+boundarySourceURL : https//data.humdata.org/dataset/chad-admin-boundaries-admin-1-and-admin-2
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/TCD_ADM1.zip
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 27, 2021
