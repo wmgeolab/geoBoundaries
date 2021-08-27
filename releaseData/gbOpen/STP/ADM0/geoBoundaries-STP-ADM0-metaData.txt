@@ -11,4 +11,4 @@ licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/STP_ADM0.zip
 sourceDataUpdateDate : Dec 18, 2020
-buildUpdateDate : Jul 10, 2021
+buildUpdateDate : Aug 27, 2021
