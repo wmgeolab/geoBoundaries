@@ -11,4 +11,4 @@ licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_u
 boundarySourceURL : https//www.unsalb.org/data/nzl
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/NZL_ADM2.zip
 sourceDataUpdateDate : Jul 28, 2021
-buildUpdateDate : Jul 29, 2021
+buildUpdateDate : Aug 27, 2021
