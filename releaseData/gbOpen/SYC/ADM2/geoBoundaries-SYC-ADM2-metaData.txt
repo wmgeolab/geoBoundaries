@@ -1,0 +1,14 @@
+boundaryID : SYC-ADM2-1466638
+boundaryISO : SYC
+boundaryType : ADM2
+boundaryYear : 2020
+boundarySource-1 : Humdata
+boundarySource-2 : Seychelles National Bureau of Statistics
+boundaryCanonical : Regions
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/seychelles-subnational-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/seychelles-subnational-administrative-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SYC_ADM2.zip
+sourceDataUpdateDate : Jul 19, 2021
+buildUpdateDate : Aug 27, 2021

@@ -1,0 +1,74 @@
+====================================================
+Citation of the geoBoundaries Data Product
+====================================================
+www.geoboundaries.org 
+geolab.wm.edu 
+The geoBoundaries database is made available in a 
+variety of software formats to support GIS software programs.
+This file is a part of the geoBoundaries Open Database 
+(gbOpen).  All boundaries in this database are open and 
+redistributable, and are released alongside extensive metadata 
+and licence information to help inform end users. 
+We update geoBoundaries on a yearly cycle, 
+with new versions in or around August of each calendar 
+year; old versions remain accessible at www.geoboundaries.org. 
+The only requirement to use this data is to, with any use, provide
+information on the authors (us), a link to geoboundaries.org or 
+our academic citation, and the version of geoBoundaries used. 
+Example citations for GeoBoundaries are:  
+ 
++++++ General Use Citation +++++
+Please include the term 'geoBoundaries' with a link to 
+https://www.geoboundaries.org
+ 
++++++ Academic Use Citation +++++++++++
+Runfola D, Anderson A, Baier H, Crittenden M, Dowker E, Fuhrig S, et al. (2020) 
+geoBoundaries: A global database of political administrative boundaries. 
+PLoS ONE 15(4): e0231866. https://doi.org/10.1371/journal.pone.0231866. 
+
+Users using individual boundary files from geoBoundaries should additionally
+ensure that they are citing the sources provided in the metadata for each file.
+ 
+====================================================
+Column Definitions
+====================================================
+boundaryID - A unique ID created for every boundary in the geoBoundaries database by concatenating ISO 3166-1 3 letter country code, boundary level, geoBoundaries version, and an incrementing ID.
+boundaryISO -  The ISO 3166-1 3-letter country codes for each boundary.
+boundaryYear - The year for which a boundary is representative.
+boundaryType - The type of boundary defined (i.e., ADM0 is equivalent to a country border; ADM1 a state.  Levels below ADM1 can vary in definition by country.)
+boundarySource-K - The name of the Kth source for the boundary definition used (with most boundaries having two identified sources).
+boundaryLicense - The specific license the data is released under.
+licenseDetail - Any details necessary for the interpretation or use of the license noted.
+licenseSource - A resolvable URL (checked at the time of data release) declaring the license under which a data product is made available.
+boundarySourceURL -  A resolvable URL (checked at the time of data release) from which source data was retrieved.
+boundaryUpdate - A date encoded following ISO 8601 (Year-Month-Date) describing the last date this boundary was updated, for use in programmatic updating based on new releases.
+downloadURL - A URL from which the geoBoundary can be downloaded.
+shapeID - The boundary ID, followed by the letter `B' and a unique integer for each shape which is a member of that boundary.
+shapeName - The identified name for a given shape.  'None' if not identified.
+shapeGroup - The country or similar organizational group that a shape belongs to, in ISO 3166-1 where relevant.
+shapeType - The type of boundary represented by the shape.
+shapeISO - ISO codes for individual administrative districts, where available.  Where possible, these conform to ISO 3166-2, but this is not guaranteed in all cases. 'None' if not identified.
+boundaryCanonical - Canonical name(s) for the administrative hierarchy represented.  Present where available. 
+====================================================
+Reporting Issues or Errors
+====================================================
+We track issues associated with the geoBoundaries dataset publically,
+and any individual can contribute comments through our github repository:
+https://github.com/wmgeolab/geoBoundaries
+ 
+ 
+====================================================
+Disclaimer====================================================
+With respect to the works on or made available
+through download from www.geoboundaries.org,
+we make no representations or warranties—express, implied, or statutory—as
+to the validity, accuracy, completeness, or fitness for a particular purpose;
+nor represent that use of such works would not infringe privately owned rights;
+nor assume any liability resulting from use of such works; and shall in no way
+be liable for any costs, expenses, claims, or demands arising out of use of such works.
+====================================================
+ 
+ 
+Thank you for citing your use of geoBoundaries and reporting any issues you find -
+as a non-profit academic project, your citations are what keeps geoBoundaries alive.
+-Dan Runfola (github.com/DanRunfola ; danr@wm.edu)
