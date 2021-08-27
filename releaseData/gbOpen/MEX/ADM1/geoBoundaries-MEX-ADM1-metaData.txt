@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/mexican-administrative-level-0-c
 boundarySourceURL : https//data.humdata.org/dataset/mexican-administrative-level-0-country-1-estado-and-2-municipio-boundary-polygons
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MEX_ADM1.zip
 sourceDataUpdateDate : Apr 07, 2021
-buildUpdateDate : Jul 09, 2021
+buildUpdateDate : Aug 27, 2021
