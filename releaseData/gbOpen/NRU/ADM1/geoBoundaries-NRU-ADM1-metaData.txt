@@ -11,4 +11,4 @@ licenseSource : https//commons.wikimedia.org/wiki/File
 boundarySourceURL : https//upload.wikimedia.org/wikipedia/commons/2/22/Nauru-districts-fr.svg
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NRU_ADM1.zip
 sourceDataUpdateDate : Jun 30, 2021
-buildUpdateDate : Jul 09, 2021
+buildUpdateDate : Aug 27, 2021
