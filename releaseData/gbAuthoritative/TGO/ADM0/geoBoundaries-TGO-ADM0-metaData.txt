@@ -11,4 +11,4 @@ licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_u
 boundarySourceURL : https//www.unsalb.org/data/tgo
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/TGO_ADM0.zip
 sourceDataUpdateDate : Jul 07, 2021
-buildUpdateDate : Jul 10, 2021
+buildUpdateDate : Aug 27, 2021
