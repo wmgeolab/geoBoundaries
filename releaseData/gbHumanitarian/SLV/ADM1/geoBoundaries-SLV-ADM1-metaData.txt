@@ -1,0 +1,14 @@
+boundaryID : SLV-ADM1-41764984
+boundaryISO : SLV
+boundaryType : ADM1
+boundaryYear : 2020
+boundarySource-1 : www.gadm.org
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/el-salvador-administrative-level-0-1-and-2-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/el-salvador-administrative-level-0-1-and-2-boundaries
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/SLV_ADM1.zip
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 27, 2021
