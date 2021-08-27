@@ -1,14 +1,14 @@
-boundaryID : VUT-ADM2-96916474
+boundaryID : VUT-ADM2-77236927
 boundaryISO : VUT
 boundaryType : ADM2
-boundaryYear : 2014
-boundarySource-1 : POPGIS
-boundarySource-2 : nan
+boundaryYear : 2019
+boundarySource-1 : Secretarial of the Pacific Community (SPC), Statistics for Development Division
+boundarySource-2 : OCHA ROP
 boundaryCanonical : Municipalities
-boundaryLicense : Other - Direct Permission
-licenseDetail : Granted to redistribute in email
-licenseSource : https//twitter.com/WMgeoLab/status/1196561929726128128/photo/1
-boundarySourceURL : http//prism.spc.int/regional-data-and-tools/popgis2
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/vanuatu-administrative-level-0-1-and-2-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/vanuatu-administrative-level-0-1-and-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VUT_ADM2.zip
-sourceDataUpdateDate : Nov 08, 2020
-buildUpdateDate : Jul 10, 2021
+sourceDataUpdateDate : Jul 11, 2021
+buildUpdateDate : Aug 27, 2021
