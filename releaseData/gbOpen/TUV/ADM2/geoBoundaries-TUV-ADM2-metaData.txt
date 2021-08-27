@@ -1,14 +1,14 @@
-boundaryID : TUV-ADM2-6888515
+boundaryID : TUV-ADM2-33948139
 boundaryISO : TUV
 boundaryType : ADM2
-boundaryYear : 2014
-boundarySource-1 : POPGIS
+boundaryYear : 2017
+boundarySource-1 : Pacific Data Hub
 boundarySource-2 : 
-boundaryCanonical : Villages
-boundaryLicense : Other - Direct Permission
-licenseDetail : Granted to redistribute in email
-licenseSource : https//twitter.com/WMgeoLab/status/1196561929726128128/photo/1
-boundarySourceURL : http//prism.spc.int/regional-data-and-tools/popgis2
+boundaryCanonical : village
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//pacificdata.org/data/geographic_data/2017_tuv_phc_admin_boundaries/resource/9eefabe8-d129-44ee-a3a4-7f93a24b2349
+boundarySourceURL : https//pacificdata.org/data/geographic_data/2017_tuv_phc_admin_boundaries/resource/9eefabe8-d129-44ee-a3a4-7f93a24b2349
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TUV_ADM2.zip
-sourceDataUpdateDate : Dec 10, 2020
-buildUpdateDate : Jul 10, 2021
+sourceDataUpdateDate : Jul 09, 2021
+buildUpdateDate : Aug 27, 2021
