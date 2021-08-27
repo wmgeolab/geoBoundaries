@@ -1,0 +1,14 @@
+boundaryID : PHL-ADM0-24100683
+boundaryISO : PHL
+boundaryType : ADM0
+boundaryYear : 2020
+boundarySource-1 : OCHA Philippines
+boundarySource-2 : National Mapping and Resource Information Authority
+boundaryCanonical : The Philippines
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : Data https
+boundarySourceURL : https//data.humdata.org/dataset/philippines-administrative-levels-0-to-3
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PHL_ADM0.zip
+sourceDataUpdateDate : Aug 27, 2021
+buildUpdateDate : Aug 27, 2021
