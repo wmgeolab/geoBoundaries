@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/viet-nam-administrative-boundari
 boundarySourceURL : https//data.humdata.org/dataset/viet-nam-administrative-boundaries-polygon-polyline
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VNM_ADM2.zip
 sourceDataUpdateDate : Jun 29, 2021
-buildUpdateDate : Jul 10, 2021
+buildUpdateDate : Aug 27, 2021
