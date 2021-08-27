@@ -11,4 +11,4 @@ licenseSource : https//africaopendata.org/dataset/sierra-leone-admin-level-4-bou
 boundarySourceURL : https//africaopendata.org/dataset/sierra-leone-admin-level-4-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SLE_ADM4.zip
 sourceDataUpdateDate : Jun 02, 2021
-buildUpdateDate : Jul 10, 2021
+buildUpdateDate : Aug 27, 2021
