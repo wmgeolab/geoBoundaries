@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/moldova-administrative-level-0-1
 boundarySourceURL : https//data.humdata.org/dataset/moldova-administrative-level-0-1-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MDA_ADM1.zip
 sourceDataUpdateDate : Jun 06, 2021
-buildUpdateDate : Jul 09, 2021
+buildUpdateDate : Aug 27, 2021
