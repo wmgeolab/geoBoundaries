@@ -11,4 +11,4 @@ licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_u
 boundarySourceURL : https//www.unsalb.org/data/zmb
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/ZMB_ADM0.zip
 sourceDataUpdateDate : Jun 17, 2021
-buildUpdateDate : Jul 10, 2021
+buildUpdateDate : Aug 28, 2021
