@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/south-africa-admin-level-1-bound
 boundarySourceURL : https//data.humdata.org/dataset/south-africa-admin-level-1-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ZAF_ADM0.zip
 sourceDataUpdateDate : Jun 09, 2021
-buildUpdateDate : Jul 10, 2021
+buildUpdateDate : Aug 28, 2021
