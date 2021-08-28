@@ -1,14 +1,14 @@
-boundaryID : YEM-ADM0-11005641
+boundaryID : YEM-ADM0-24473449
 boundaryISO : YEM
 boundaryType : ADM0
-boundaryYear : 2020
-boundarySource-1 : OCHA Yemen
-boundarySource-2 : Central Statistical Organization
-boundaryCanonical : Republic of Yemen
-boundaryLicense : Other - Humanitarian
-licenseDetail : Humanitarian Use Only
+boundaryYear : 2019
+boundarySource-1 : Central Statistical Organization (CSO)
+boundarySource-2 : HDX
+boundaryCanonical : 
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/yemen-admin-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/yemen-admin-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbHumanitarian/YEM_ADM0.zip
-sourceDataUpdateDate : Oct 26, 2020
-buildUpdateDate : Jul 10, 2021
+sourceDataUpdateDate : Aug 25, 2021
+buildUpdateDate : Aug 28, 2021
