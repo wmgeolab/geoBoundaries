@@ -1,14 +1,14 @@
-boundaryID : ZMB-ADM2-82148316
+boundaryID : ZMB-ADM2-54858812
 boundaryISO : ZMB
 boundaryType : ADM2
 boundaryYear : 2020
 boundarySource-1 : GRID3
-boundarySource-2 : Office of the Surveyor General of Zambia, Local Government and Housing of Zambia, Electoral Commission of Zambia, Central Statistical Office and the University of Zambia - Geography and Environmental Studies Department
+boundarySource-2 : Office of the Surveyor General
 boundaryCanonical : Districts
-boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
 licenseDetail : 
 licenseSource : https//data.grid3.org/datasets/GRID3
 boundarySourceURL : https//data.grid3.org/datasets/GRID3
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ZMB_ADM2.zip
-sourceDataUpdateDate : Jun 21, 2021
-buildUpdateDate : Jul 10, 2021
+sourceDataUpdateDate : Jul 14, 2021
+buildUpdateDate : Aug 28, 2021
