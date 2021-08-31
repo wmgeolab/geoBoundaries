@@ -12,7 +12,7 @@ Take a look at [this example PR containing a boundary](https://github.com/wmgeol
 ## We welcome new submissions to geoBoundaries, and will openly assess any submissions that would improve our data. Right now, we accept submissions that are:
 
 1. Compatible with the Open Data Commons Open Database License (or better). 
-2. Of higher quality (either spatial or temporal) than our existing data. 
+2. Of higher quality (spatially more accurate, representing more accurate divisions, or more recent) than our existing data. 
 3. Provisioned with clear and full metadata about the source of the file.
 
 If you have a boundary (or set of boundaries) that you believe meets the above qualifications and you would like us to include, please either send us an email (team@geoboundaries.org) with the boundary data, or submit a new issue on our Github repository (https://github.com/wmgeolab/geoBoundaries/issues/) that contains the country, source, and license of the boundary (all information must be verifiable). We are also happy to accept Pull Requests with the same information. Once we receive your request a multiple-stage review will commence in which: A) Automated checks are conducted on the validity of the data, and recommended changes are commented on the pull request; B) A human review team will assess the data to ensure its validity and improvement over our existing capabilities; C) We will open the boundary for comment; and D) If A-C look good, we'll accept it!
