@@ -1,14 +1,14 @@
-boundaryID : COD-ADM2-86626825
+boundaryID : COD-ADM2-63176286
 boundaryISO : COD
 boundaryType : ADM2
-boundaryYear : 2019.0
-boundarySource-1 : HDX
-boundarySource-2 : Referenciel Géographique Commun
+boundaryYear : 2019
+boundarySource-1 : Referenciel Géographique Commun
+boundarySource-2 : OCHA DR Congo
 boundaryCanonical : territory, city
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/drc-administrative-boundaries-levels-0-2
 boundarySourceURL : https//data.humdata.org/dataset/drc-administrative-boundaries-levels-0-2
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/COD_ADM2.zip
-sourceDataUpdateDate : Jun 23, 2021
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 08, 2021
