@@ -1,14 +1,14 @@
-boundaryID : LSO-ADM2-51899208
+boundaryID : LSO-ADM2-5366337
 boundaryISO : LSO
 boundaryType : ADM2
 boundaryYear : 2020
-boundarySource-1 : HumData
-boundarySource-2 : 
+boundarySource-1 : FAO and the Ministry of Local Government
+boundarySource-2 : OCHA ROSEA
 boundaryCanonical : constituencies
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/lesotho-administrative-level-0-2-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/lesotho-administrative-level-0-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LSO_ADM2.zip
-sourceDataUpdateDate : Mar 26, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 09, 2021
