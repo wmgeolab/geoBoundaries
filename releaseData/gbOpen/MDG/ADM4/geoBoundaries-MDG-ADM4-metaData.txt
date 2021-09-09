@@ -1,14 +1,14 @@
-boundaryID : MDG-ADM4-96799852
+boundaryID : MDG-ADM4-51797805
 boundaryISO : MDG
 boundaryType : ADM4
 boundaryYear : 2020
-boundarySource-1 : HumData
-boundarySource-2 : Madagascar National Disaster Management Office (BNGRC)
-boundaryCanonical : gazetteer
+boundarySource-1 : Madagascar National Disaster Management Office (BNGRC)
+boundarySource-2 : OCHA ROSA
+boundaryCanonical : fokontany
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/madagascar-administrative-level-0-4-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/madagascar-administrative-level-0-4-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MDG_ADM4.zip
-sourceDataUpdateDate : Apr 01, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 09, 2021
