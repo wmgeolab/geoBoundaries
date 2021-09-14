@@ -1,8 +1,8 @@
-boundaryID : ZWE-ADM2-2438293
+boundaryID : ZWE-ADM2-62879985
 boundaryISO : ZWE
 boundaryType : ADM2
 boundaryYear : 2020
-boundarySource-1 : Humdata
+boundarySource-1 : Zimbabwe National Statistics Agency (ZIMSTAT www.zimstat.co.zw) Central Statistics Office
 boundarySource-2 : OCHA ROSEA
 boundaryCanonical : District
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//data.humdata.org/dataset/zimbabwe-administrative-levels-0-3-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/zimbabwe-administrative-levels-0-3-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ZWE_ADM2.zip
-sourceDataUpdateDate : Apr 20, 2021
-buildUpdateDate : Aug 28, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 14, 2021
