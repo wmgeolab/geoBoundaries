@@ -1,8 +1,8 @@
-boundaryID : SOM-ADM0-65421324
+boundaryID : SOM-ADM0-1309446
 boundaryISO : SOM
 boundaryType : ADM0
 boundaryYear : 2021
-boundarySource-1 : HumData
+boundarySource-1 : United National Development Programme (UNDP)
 boundarySource-2 : OCHA Somalia
 boundaryCanonical : Somalia
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//data.humdata.org/dataset/somalia-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/somalia-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SOM_ADM0.zip
-sourceDataUpdateDate : Apr 24, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 14, 2021
