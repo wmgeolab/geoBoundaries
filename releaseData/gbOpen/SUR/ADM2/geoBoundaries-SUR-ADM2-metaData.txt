@@ -1,14 +1,14 @@
-boundaryID : SUR-ADM2-65869490
+boundaryID : SUR-ADM2-48994447
 boundaryISO : SUR
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : Humanitarian Data Exchange
-boundarySource-2 : nan
+boundaryYear : 2017
+boundarySource-1 : OCHA FISS
+boundarySource-2 : OCHA FISS
 boundaryCanonical : 
 boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
-licenseDetail : nan
+licenseDetail : GADM license is poorly defined - it is recommended users avoid this source unless absolutely needed.
 licenseSource : https//data.humdata.org/dataset/suriname-administrative-level-0-1-and-2-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/suriname-administrative-level-0-1-and-2-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SUR_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 14, 2021
