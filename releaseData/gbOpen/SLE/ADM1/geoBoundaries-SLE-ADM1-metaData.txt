@@ -1,14 +1,14 @@
-boundaryID : SLE-ADM1-9960408
+boundaryID : SLE-ADM1-38320839
 boundaryISO : SLE
 boundaryType : ADM1
 boundaryYear : 2014
-boundarySource-1 : HDX, government
-boundarySource-2 : OCHA, ROWCA
+boundarySource-1 : Government of Sierra Leone
+boundarySource-2 : OCHA ROWCA
 boundaryCanonical : Province
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
-licenseSource : https//data.humdata.org/about/license
+licenseSource : https//data.humdata.org/dataset/sierra-leone-all-ad-min-level-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/sierra-leone-all-ad-min-level-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SLE_ADM1.zip
-sourceDataUpdateDate : Jun 02, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 14, 2021
