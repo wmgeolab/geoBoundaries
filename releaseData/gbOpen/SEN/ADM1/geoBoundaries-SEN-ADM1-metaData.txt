@@ -1,14 +1,14 @@
-boundaryID : SEN-ADM1-17790640
+boundaryID : SEN-ADM1-71046170
 boundaryISO : SEN
 boundaryType : ADM1
-boundaryYear : 2019.0
-boundarySource-1 : HDX
-boundarySource-2 : Government of Senegal
+boundaryYear : 2019
+boundarySource-1 : Government of Senegal
+boundarySource-2 : OCHA ROWCA
 boundaryCanonical : region
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/senegal-administrative-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/senegal-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SEN_ADM1.zip
-sourceDataUpdateDate : May 29, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 14, 2021
