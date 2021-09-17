@@ -1,14 +1,14 @@
-boundaryID : COM-ADM2-16584661
+boundaryID : COM-ADM2-10938185
 boundaryISO : COM
 boundaryType : ADM2
 boundaryYear : 2019
 boundarySource-1 : Comoros National Disaster Management Agency (COSEP-Centre des secours et de la protection civil)
-boundarySource-2 : Humdata
+boundarySource-2 : OCHA ROSEA
 boundaryCanonical : Prefecture
 boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
 licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/comoros-administrative-level-0-3-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/comoros-administrative-level-0-3-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/COM_ADM2.zip
-sourceDataUpdateDate : Jul 16, 2021
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Sep 17, 2021
+buildUpdateDate : Sep 17, 2021
