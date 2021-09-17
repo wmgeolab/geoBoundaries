@@ -1,14 +1,14 @@
-boundaryID : TZA-ADM2-31574325
+boundaryID : TZA-ADM2-72390352
 boundaryISO : TZA
 boundaryType : ADM2
 boundaryYear : 2021
-boundarySource-1 : Humdata
-boundarySource-2 : Tanzania National Bureau of Statistics
+boundarySource-1 : Tanzania National Bureau of Statistics / UN OCHA ROSA
+boundarySource-2 : OCHA ROSA
 boundaryCanonical : Districts
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
-licenseSource : https//data.humdata.org/about/license
+licenseSource : https//data.humdata.org/dataset/tanzania-administrative-boundaries-level-1-to-3-regions-districts-and-wards-with-2012-population
 boundarySourceURL : https//data.humdata.org/dataset/tanzania-administrative-boundaries-level-1-to-3-regions-districts-and-wards-with-2012-population
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TZA_ADM2.zip
-sourceDataUpdateDate : Jul 09, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 08, 2021
+buildUpdateDate : Sep 14, 2021

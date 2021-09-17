@@ -1,14 +1,14 @@
-boundaryID : BRA-ADM2-85850572
+boundaryID : BRA-ADM2-56859067
 boundaryISO : BRA
 boundaryType : ADM2
 boundaryYear : 2020
-boundarySource-1 : geoBoundaries
-boundarySource-2 : Humdata
+boundarySource-1 : Instituto Brasileiro de Geografia e Estatística (IBGE)
+boundarySource-2 : OCHA ROLAC
 boundaryCanonical : municipality
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/brazil-administrative-level-0-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/brazil-administrative-level-0-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BRA_ADM2.zip
-sourceDataUpdateDate : Aug 02, 2021
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Sep 17, 2021
+buildUpdateDate : Sep 17, 2021

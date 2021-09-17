@@ -1,14 +1,14 @@
-boundaryID : MWI-ADM2-40363185
+boundaryID : MWI-ADM2-42251766
 boundaryISO : MWI
 boundaryType : ADM2
 boundaryYear : 2020
-boundarySource-1 : geoBoundaries
-boundarySource-2 : Humdata
+boundarySource-1 : National Statistics Office of Malawi
+boundarySource-2 : OCHA ROSEA
 boundaryCanonical : district
 boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
 licenseDetail : 
 licenseSource : https//data.humdata.org/dataset/malawi-administrative-level-0-3-boundaries
 boundarySourceURL : https//data.humdata.org/dataset/malawi-administrative-level-0-3-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MWI_ADM2.zip
-sourceDataUpdateDate : Aug 09, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 17, 2021
+buildUpdateDate : Sep 17, 2021
