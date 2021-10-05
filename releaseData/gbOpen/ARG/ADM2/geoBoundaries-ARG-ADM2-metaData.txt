@@ -11,4 +11,4 @@ licenseSource : https//data.humdata.org/dataset/argentina-administrative-level-0
 boundarySourceURL : https//data.humdata.org/dataset/argentina-administrative-level-0-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ARG_ADM2.zip
 sourceDataUpdateDate : Sep 08, 2021
-buildUpdateDate : Sep 08, 2021
+buildUpdateDate : Oct 05, 2021
