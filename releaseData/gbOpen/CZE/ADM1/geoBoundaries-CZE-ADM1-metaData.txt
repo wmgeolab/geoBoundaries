@@ -1,14 +1,14 @@
-boundaryID : CZE-ADM1-49308772
+boundaryID : CZE-ADM1-73172107
 boundaryISO : CZE
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2021
+boundarySource-1 : Czech Office for Surveying
+boundarySource-2 : 
+boundaryCanonical : regions
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//creativecommons.org/licenses/by/4.0/
+boundarySourceURL : https//geoportal.cuzk.cz/(S(0jvahy1mipdkur5tenlb1uhp))/Default.aspx?lng=EN&mode=TextMeta&side=dsady_RUIAN&metadataID=CZ-CUZK-SH-V&mapid=5&menu=252
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CZE_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Sep 22, 2021
+buildUpdateDate : Oct 05, 2021
