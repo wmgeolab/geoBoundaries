@@ -1,0 +1,14 @@
+boundaryID : CRI-ADM1-42682993
+boundaryISO : CRI
+boundaryType : ADM1
+boundaryYear : 2015
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : National Geographic Institute
+boundaryCanonical : Provinces
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
+boundarySourceURL : https//www.unsalb.org/data/cri
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/CRI_ADM1.zip
+sourceDataUpdateDate : Sep 11, 2021
+buildUpdateDate : Oct 05, 2021
