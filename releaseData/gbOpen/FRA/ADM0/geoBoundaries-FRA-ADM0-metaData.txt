@@ -1,14 +1,14 @@
-boundaryID : FRA-ADM0-87110541
+boundaryID : FRA-ADM0-40433807
 boundaryISO : FRA
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : nan
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2016
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikipedia
+boundaryCanonical : Country
+boundaryLicense : CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+licenseDetail : 
+licenseSource : https//creativecommons.org/publicdomain/zero/1.0/deed.en
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FRA_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Oct 01, 2021
+buildUpdateDate : Oct 05, 2021
