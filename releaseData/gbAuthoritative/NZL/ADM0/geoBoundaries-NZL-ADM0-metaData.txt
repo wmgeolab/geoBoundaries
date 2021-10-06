@@ -1,0 +1,14 @@
+boundaryID : NZL-ADM0-92936887
+boundaryISO : NZL
+boundaryType : ADM0
+boundaryYear : 2015
+boundarySource-1 : SALB Data, United Nations
+boundarySource-2 : Land Information New Zealand & Stats NZ Geographic Data Service
+boundaryCanonical : New Zealand
+boundaryLicense : UN SALB Data License
+licenseDetail : notes on the license (if applicable)
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/nzl
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/NZL_ADM0.zip
+sourceDataUpdateDate : Sep 11, 2021
+buildUpdateDate : Oct 06, 2021
