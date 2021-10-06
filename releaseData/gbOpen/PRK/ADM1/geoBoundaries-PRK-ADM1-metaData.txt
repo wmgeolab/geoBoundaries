@@ -1,14 +1,14 @@
-boundaryID : PRK-ADM1-15765917
+boundaryID : PRK-ADM1-3916807
 boundaryISO : PRK
 boundaryType : ADM1
-boundaryYear : 2010.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2018
+boundarySource-1 : World Food Programme
+boundarySource-2 : OCHA ROAP
+boundaryCanonical : Provinces
+boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+licenseDetail : 
+licenseSource : https//data.humdata.org/dataset/dpr-korea-administrative-boundaries
+boundarySourceURL : https//data.humdata.org/dataset/dpr-korea-administrative-boundaries
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/PRK_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 13, 2021
+buildUpdateDate : Oct 06, 2021
