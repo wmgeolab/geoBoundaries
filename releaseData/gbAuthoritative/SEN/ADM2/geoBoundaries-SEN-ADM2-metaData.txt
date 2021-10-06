@@ -1,14 +1,14 @@
-boundaryID : SEN-ADM2-30494079
+boundaryID : SEN-ADM2-49102865
 boundaryISO : SEN
 boundaryType : ADM2
-boundaryYear : 2015.0
+boundaryYear : 2008
 boundarySource-1 : From SALB Data, United Nations
-boundarySource-2 : National Geospatial Authority
-boundaryCanonical : Départements
+boundarySource-2 : Agence Nationale de l'Aménagement du Territoire
+boundaryCanonical : department
 boundaryLicense : UN SALB Data License
 licenseDetail : 
 licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
 boundarySourceURL : https//www.unsalb.org/data/sen
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/SEN_ADM2.zip
-sourceDataUpdateDate : Jul 23, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 12, 2021
+buildUpdateDate : Oct 06, 2021
