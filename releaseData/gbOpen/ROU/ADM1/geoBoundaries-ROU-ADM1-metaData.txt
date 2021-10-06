@@ -1,14 +1,14 @@
-boundaryID : ROU-ADM1-40362267
+boundaryID : ROU-ADM1-36066543
 boundaryISO : ROU
 boundaryType : ADM1
-boundaryYear : 2016
-boundarySource-1 : Agenția Națională de Cadastru și Publicitate Imobiliară
+boundaryYear : 2017
+boundarySource-1 : World Bank
 boundarySource-2 : 
-boundaryCanonical : County
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : License on source page. Additional information in linked PDF.
-licenseSource : http//data.gov.ro/dataset/unitati-administrative
-boundarySourceURL : http//data.gov.ro/dataset/unitati-administrative
+boundaryCanonical : Counties
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//data.worldbank.org/summary-terms-of-use
+boundarySourceURL : https//www.arcgis.com/home/item.html?id=361134ff4ff44e78a9aeec01af9a5175
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ROU_ADM1.zip
-sourceDataUpdateDate : Jun 04, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Oct 03, 2021
+buildUpdateDate : Oct 06, 2021
