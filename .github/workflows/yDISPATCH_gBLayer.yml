@@ -77,6 +77,7 @@ jobs:
            echo "================="
            git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
            echo "================="
+           git config pull.rebase false
            git pull
            git push
         
