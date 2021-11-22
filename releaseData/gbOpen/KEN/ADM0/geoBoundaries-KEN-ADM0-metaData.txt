@@ -1,14 +1,14 @@
-boundaryID : KEN-ADM0-76399291
+boundaryID : KEN-ADM0-21065076
 boundaryISO : KEN
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
+boundaryYear : 2020
+boundarySource-1 : RCMRD GeoPortal
+boundarySource-2 : geoBoundaries
 boundaryCanonical : Republic of Kenya
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//rcmrd.africageoportal.com/datasets/africageoportal
+boundarySourceURL : https//rcmrd.africageoportal.com/datasets/africageoportal
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KEN_ADM0.zip
-sourceDataUpdateDate : Dec 02, 2020
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Nov 08, 2021
+buildUpdateDate : Nov 22, 2021
