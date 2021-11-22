@@ -1,14 +1,14 @@
-boundaryID : KOR-ADM1-9861187
+boundaryID : KOR-ADM1-68945753
 boundaryISO : KOR
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : geoBoundaries
-boundarySource-2 : Wambacher
-boundaryCanonical : provinces
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2021
+boundarySource-1 : Natural Earth
+boundarySource-2 : 
+boundaryCanonical : Province
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//www.naturalearthdata.com/about/terms-of-use/
+boundarySourceURL : https//www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/KOR_ADM1.zip
-sourceDataUpdateDate : Jan 11, 2021
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Oct 11, 2021
+buildUpdateDate : Nov 22, 2021
