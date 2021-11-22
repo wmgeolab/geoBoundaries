@@ -1,4 +1,4 @@
-boundaryID : ZMB-ADM2-54858812
+boundaryID : ZMB-ADM2-96606910
 boundaryISO : ZMB
 boundaryType : ADM2
 boundaryYear : 2020
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//data.grid3.org/datasets/GRID3
 boundarySourceURL : https//data.grid3.org/datasets/GRID3
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ZMB_ADM2.zip
-sourceDataUpdateDate : Jul 14, 2021
-buildUpdateDate : Aug 28, 2021
+sourceDataUpdateDate : Nov 16, 2021
+buildUpdateDate : Nov 22, 2021
