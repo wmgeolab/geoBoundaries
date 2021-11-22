@@ -1,14 +1,14 @@
-boundaryID : IRQ-ADM0-51199789
+boundaryID : IRQ-ADM0-29142881
 boundaryISO : IRQ
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2021
+boundarySource-1 : Natural Earth
+boundarySource-2 : 
+boundaryCanonical : Republic of Iraq
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//www.naturalearthdata.com/about/terms-of-use/
+boundarySourceURL : https//www.naturalearthdata.com/downloads/10m-cultural-vectors/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IRQ_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Nov 08, 2021
+buildUpdateDate : Nov 22, 2021
