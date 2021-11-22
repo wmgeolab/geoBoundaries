@@ -1,14 +1,14 @@
-boundaryID : VNM-ADM0-38149051
+boundaryID : VNM-ADM0-46766057
 boundaryISO : VNM
 boundaryType : ADM0
 boundaryYear : 2016
 boundarySource-1 : geoBoundaries
-boundarySource-2 : Open Development Mekong
-boundaryCanonical : Socialist Republic of Vietnam
-boundaryLicense : Creative Commons Attribution-ShareAlike 4.0 International License
-licenseDetail : nan
-licenseSource : https//data.vietnam.opendevelopmentmekong.net/dataset/a-phn-tnh?type=dataset
-boundarySourceURL : https//data.vietnam.opendevelopmentmekong.net/dataset/a-phn-tnh?type=dataset
+boundarySource-2 : Wikipedia
+boundaryCanonical : Việt Nam
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : N/A
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//en.wikipedia.org/wiki/Vietnam#/media/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/VNM_ADM0.zip
-sourceDataUpdateDate : Mar 06, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Nov 16, 2021
+buildUpdateDate : Nov 22, 2021
