@@ -1,14 +1,14 @@
-boundaryID : MDA-ADM0-36482656
+boundaryID : MDA-ADM0-4708702
 boundaryISO : MDA
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : Moldova
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2014
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikipedia
+boundaryCanonical : Republica Moldova
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : N/A
+licenseSource : https//commons.wikimedia.org/wiki/Category
+boundarySourceURL : https//commons.wikimedia.org/wiki/Category
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MDA_ADM0.zip
-sourceDataUpdateDate : Aug 12, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Oct 29, 2021
+buildUpdateDate : Nov 22, 2021
