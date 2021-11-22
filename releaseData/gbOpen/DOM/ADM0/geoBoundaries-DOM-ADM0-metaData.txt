@@ -1,14 +1,14 @@
-boundaryID : DOM-ADM0-9449228
+boundaryID : DOM-ADM0-20870125
 boundaryISO : DOM
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2020
+boundarySource-1 : Caribbean GeoPortal
+boundarySource-2 : N/A
+boundaryCanonical : Municipalities
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
+licenseDetail : N/A
+licenseSource : https//creativecommons.org/licenses/by/4.0/
+boundarySourceURL : https//haiti.caribbeangeoportal.com/datasets/caribgeoportal
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/DOM_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Nov 22, 2021
+buildUpdateDate : Nov 22, 2021
