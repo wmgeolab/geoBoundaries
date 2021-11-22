@@ -1,14 +1,14 @@
-boundaryID : SWE-ADM0-69131758
+boundaryID : SWE-ADM0-32631220
 boundaryISO : SWE
 boundaryType : ADM0
-boundaryYear : 2017
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : Kingdom of Sweden
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2019
+boundarySource-1 : Open Data Soft
+boundarySource-2 : World Food Programme
+boundaryCanonical : Sverige
+boundaryLicense : Open Government Licence v3.0
+licenseDetail : N/A
+licenseSource : https//www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+boundarySourceURL : https//public.opendatasoft.com/explore/dataset/world-administrative-boundaries/information/?q=SWE&refine.color_code=SWE&location=6,50.66687,15.23804&basemap=jawg.streets
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SWE_ADM0.zip
-sourceDataUpdateDate : Apr 08, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Oct 15, 2021
+buildUpdateDate : Nov 22, 2021
