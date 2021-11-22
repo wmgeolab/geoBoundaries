@@ -1,14 +1,14 @@
-boundaryID : LBY-ADM0-97403749
+boundaryID : LBY-ADM0-86523102
 boundaryISO : LBY
 boundaryType : ADM0
-boundaryYear : 2007
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
+boundaryYear : 2021
+boundarySource-1 : Natural Earth
+boundarySource-2 : 
 boundaryCanonical : State of Libya
-boundaryLicense : Open Data Commons Open Database License 1.0
+boundaryLicense : Public Domain
 licenseDetail : 
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+licenseSource : https//www.naturalearthdata.com/about/terms-of-use/
+boundarySourceURL : https//www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/LBY_ADM0.zip
-sourceDataUpdateDate : Nov 08, 2020
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Nov 14, 2021
+buildUpdateDate : Nov 22, 2021
