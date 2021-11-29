@@ -73,10 +73,9 @@ jobs:
            cd ${GITHUB_WORKSPACE}
            git config --global user.email "dummy@gmail.com"
            git config --global user.name "DummyUser"
-           git config advice.updateSparsePath false
            git config --global commit.verbose true
            echo ==ADD==
-           git add -A .
+           git add --sparse -A .
            echo ==COMMIT==
            git commit -m "Artifact commit"
            echo ==DONE==
