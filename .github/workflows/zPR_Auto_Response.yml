@@ -152,7 +152,7 @@ jobs:
              cd ${GITHUB_WORKSPACE}
              git config --global user.email "dummy@gmail.com"
              git config --global user.name "DummyUser"
-             git add -A .
+             git add --sparse -A .
              git commit -m "Artifact commit"
       
       - name: Upload Artifacts
@@ -227,7 +227,7 @@ jobs:
              cd ${GITHUB_WORKSPACE}
              git config --global user.email "dummy@gmail.com"
              git config --global user.name "DummyUser"
-             git add -A .
+             git add --sparse -A .
              git commit -m "Artifact commit"
       
       - name: Upload Artifacts
