@@ -258,6 +258,7 @@ jobs:
               curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
               apt-get install -y git-lfs
               apt-get install -y python3-pip
+              apt-get install wget
               pip3 install geopandas
               pip3 install matplotlib
               pip3 install PyGithub
