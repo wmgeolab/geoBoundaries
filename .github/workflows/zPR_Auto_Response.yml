@@ -244,6 +244,7 @@ jobs:
           
   prResponse:
       runs-on: ubuntu-latest
+      container: osgeo/gdal:ubuntu-small-latest
       needs: [geoBoundaryDataCheck, geoBoundaryMetaDataCheck, geoBoundaryZipfileChecks]
       if: always()
       steps:
