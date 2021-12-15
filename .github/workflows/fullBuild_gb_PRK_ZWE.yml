@@ -1,6 +1,8 @@
 on:
-  workflow_dispatch
-  
+  workflow_run:
+    workflows: ["fullBuild_GTM_POL"]
+    types: [completed]
+
 name: fullBuild_PRK_ZWE
 jobs:
   gbBuild_PRK_SGP:
