@@ -1,5 +1,7 @@
 on:
-  workflow_dispatch
+  workflow_run:
+    workflows: ["fullBuild_AFG_GRL"]
+    types: [completed]
   
 name: fullBuild_GTM_POL
 jobs:
