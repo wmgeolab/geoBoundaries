@@ -1,14 +1,14 @@
-boundaryID : BLR-ADM2-27455278
+boundaryID : BLR-ADM2-67162791
 boundaryISO : BLR
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2005
+boundarySource-1 : geoBoundaries
+boundarySource-2 : CIESIN
+boundaryCanonical : Raion
+boundaryLicense : Creative Commons Attribution 3.0 License
+licenseDetail : 
+licenseSource : https//creativecommons.org/licenses/by/3.0/
+boundarySourceURL : https//sedac.ciesin.columbia.edu/data/collection/gpw-v3/maps/gallery/search?facets=region
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BLR_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Nov 30, 2021
+buildUpdateDate : Dec 15, 2021
