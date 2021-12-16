@@ -1,14 +1,14 @@
-boundaryID : ROU-ADM0-97275
+boundaryID : ROU-ADM0-16175383
 boundaryISO : ROU
 boundaryType : ADM0
-boundaryYear : 2016
-boundarySource-1 : Agenția Națională de Cadastru și Publicitate Imobiliară
-boundarySource-2 : 
-boundaryCanonical : România
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : License on source page. Additional information in linked PDF.
-licenseSource : http//data.gov.ro/dataset/unitati-administrative
-boundarySourceURL : http//data.gov.ro/dataset/unitati-administrative
+boundaryYear : 2018
+boundarySource-1 : StatSilk
+boundarySource-2 : geoBoundaries
+boundaryCanonical : Romania
+boundaryLicense : Creative Commons Attribution 3.0 License
+licenseDetail : 
+licenseSource : https//www.statsilk.com/license
+boundarySourceURL : https//www.statsilk.com/maps/download-free-shapefile-maps
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ROU_ADM0.zip
-sourceDataUpdateDate : Jun 04, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Dec 05, 2021
+buildUpdateDate : Dec 16, 2021
