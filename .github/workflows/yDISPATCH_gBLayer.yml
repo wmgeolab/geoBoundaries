@@ -60,8 +60,10 @@ jobs:
            echo "=====CONFIG========="
            git config --local user.email "danr@wm.edu"
            git config --local user.name "DanRunfola"
-           git config --global http.postBuffer 500M
+           git config --global http.postBuffer 1000M
            git config --global http.maxRequestBuffer 100M
+           git config --global http.lowSpeedLimit 0
+           git config --global http.lowSpeedTime 999999
            git config --global core.compression 0
            git reset
            echo "======FIND==========="
