@@ -1,14 +1,14 @@
-boundaryID : FRA-ADM1-75996138
+boundaryID : FRA-ADM1-90488762
 boundaryISO : FRA
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : nan
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2015
+boundarySource-1 : France Open Data Portal
+boundarySource-2 : 
+boundaryCanonical : Region
+boundaryLicense : Open Government Licence v1.0
+licenseDetail : 
+licenseSource : https//www.etalab.gouv.fr/wp-content/uploads/2014/05/Licence_Ouverte.pdf
+boundarySourceURL : https//www.data.gouv.fr/fr/datasets/contours-geographiques-des-nouvelles-regions-metropole/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FRA_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Dec 11, 2021
+buildUpdateDate : Dec 16, 2021
