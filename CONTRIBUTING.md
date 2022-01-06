@@ -3,10 +3,10 @@
 ## Quick Start
 Expert and just want to get started?  
 **If you haven't used github in the past:**
-Coming soon: You can use our [submission tool](https://www.geoboundaries.org/geoContrast.html).  This tool will walk you through all of the data we need, and allow you to submit your file via email.  Someone from our team will create a github pull request on your behalf.
+You can use our [submission tool](https://www.geoboundaries.org/gbContribute.html) (**NEW!**). This tool will walk you through all of the data we need, and automatically generate the github pull request on your behalf.  Someone from our team will then review your submission.
 
 **If you have used gitHub in the past:**
-Take a look at [this example PR containing a boundary](https://github.com/wmgeolab/geoBoundaries/pull/1447) - the submission zip file has the exact formats you will need, including the meta.txt and license.png files.
+Take a look at [this example PR containing a boundary](https://github.com/wmgeolab/geoBoundaries/pull/1447) - the submission zip file has the exact formats you will need, including the meta.txt and license.png files. A more detailed explanation of the requirements are listed below.
 
 
 ## We welcome new submissions to geoBoundaries, and will openly assess any submissions that would improve our data. Right now, we accept submissions that are:
