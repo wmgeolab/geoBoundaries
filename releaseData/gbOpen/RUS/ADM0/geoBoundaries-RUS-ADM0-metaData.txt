@@ -1,4 +1,4 @@
-boundaryID : RUS-ADM0-88447439
+boundaryID : RUS-ADM0-89588193
 boundaryISO : RUS
 boundaryType : ADM0
 boundaryYear : 2017
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.openstreetmap.org/copyright
 boundarySourceURL : https//wambachers-osm.website/boundaries/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/RUS_ADM0.zip
-sourceDataUpdateDate : Jun 02, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Jan 31, 2022
+buildUpdateDate : Jan 31, 2022
