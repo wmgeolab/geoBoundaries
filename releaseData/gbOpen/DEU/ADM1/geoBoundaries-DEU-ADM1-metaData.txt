@@ -1,14 +1,14 @@
-boundaryID : DEU-ADM1-62839536
+boundaryID : DEU-ADM1-1421511
 boundaryISO : DEU
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2021
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Pixaby
+boundaryCanonical : Bundesländer
+boundaryLicense : Pixabay License for Content
+licenseDetail : This is the website or creator version of a free for commercial use license
+licenseSource : https//pixabay.com/service/license/
+boundarySourceURL : https//pixabay.com/vectors/map-germany-federal-states-606538/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/DEU_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Dec 15, 2021
+buildUpdateDate : Mar 10, 2022
