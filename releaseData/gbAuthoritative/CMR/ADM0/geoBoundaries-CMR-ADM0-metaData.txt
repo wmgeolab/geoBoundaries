@@ -1,7 +1,7 @@
-boundaryID : CMR-ADM0-99281120
+boundaryID : CMR-ADM0-8102639
 boundaryISO : CMR
 boundaryType : ADM0
-boundaryYear : 2000
+boundaryYear : 01-01-2000 to 22-02-2021
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : Institut National de Cartographie, Cameroon
 boundaryCanonical : République du Cameroun
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
 boundarySourceURL : https//www.unsalb.org/data/cmr
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/CMR_ADM0.zip
-sourceDataUpdateDate : Jun 10, 2021
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Feb 20, 2022
+buildUpdateDate : Mar 10, 2022
