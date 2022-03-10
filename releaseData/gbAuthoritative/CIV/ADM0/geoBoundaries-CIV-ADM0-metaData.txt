@@ -1,7 +1,7 @@
-boundaryID : CIV-ADM0-82383527
+boundaryID : CIV-ADM0-93575233
 boundaryISO : CIV
 boundaryType : ADM0
-boundaryYear : 2012
+boundaryYear : 04-07-2012 to 27-09-2021
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : Centre d'Information Géographique et du Numérique (BNETD), Côte d'Ivoire
 boundaryCanonical : République de Côte d'Ivoire
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
 boundarySourceURL : https//www.unsalb.org/data/CIV
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/CIV_ADM0.zip
-sourceDataUpdateDate : Jun 10, 2021
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Feb 07, 2022
+buildUpdateDate : Mar 10, 2022
