@@ -1,7 +1,7 @@
-boundaryID : CMR-ADM1-74438841
+boundaryID : CMR-ADM1-94711617
 boundaryISO : CMR
 boundaryType : ADM1
-boundaryYear : 2000
+boundaryYear : 01-01-2000 to 22-02-2021
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : Institut National de Cartographie, Cameroon
 boundaryCanonical : Regions
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
 boundarySourceURL : https//www.unsalb.org/data/cmr
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/CMR_ADM1.zip
-sourceDataUpdateDate : Jun 10, 2021
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Feb 27, 2022
+buildUpdateDate : Mar 10, 2022
