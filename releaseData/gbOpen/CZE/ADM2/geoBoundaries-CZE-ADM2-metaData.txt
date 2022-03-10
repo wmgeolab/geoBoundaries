@@ -1,14 +1,14 @@
-boundaryID : CZE-ADM2-42966731
+boundaryID : CZE-ADM2-57006924
 boundaryISO : CZE
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2010
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia Commons
+boundaryCanonical : District
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//creativecommons.org/share-your-work/public-domain
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CZE_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Mar 06, 2022
+buildUpdateDate : Mar 10, 2022
