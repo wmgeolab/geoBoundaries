@@ -1,7 +1,7 @@
-boundaryID : HTI-ADM1-45910310
+boundaryID : HTI-ADM1-42963842
 boundaryISO : HTI
 boundaryType : ADM1
-boundaryYear : 2014
+boundaryYear : 30-09-2014 to 01-01-2015
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : Centre National de l'information Geo-Spatiale, Haiti
 boundaryCanonical : Departments
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
 boundarySourceURL : https//www.unsalb.org/data/hti
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/HTI_ADM1.zip
-sourceDataUpdateDate : Jun 11, 2021
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Mar 07, 2022
+buildUpdateDate : Mar 11, 2022
