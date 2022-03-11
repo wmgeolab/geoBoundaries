@@ -1,7 +1,7 @@
-boundaryID : MOZ-ADM2-84118015
+boundaryID : MOZ-ADM2-64836732
 boundaryISO : MOZ
 boundaryType : ADM2
-boundaryYear : 2007.0
+boundaryYear : 06-05-2016 to 06-01-2022
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : National Remote Sensing & Cartography Center
 boundaryCanonical : district
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
 boundarySourceURL : https//www.unsalb.org/data/moz
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/MOZ_ADM2.zip
-sourceDataUpdateDate : Jun 14, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Feb 25, 2022
+buildUpdateDate : Mar 11, 2022
