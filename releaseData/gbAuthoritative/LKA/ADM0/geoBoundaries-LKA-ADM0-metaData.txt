@@ -1,7 +1,7 @@
-boundaryID : LKA-ADM0-43222587
+boundaryID : LKA-ADM0-82763103
 boundaryISO : LKA
 boundaryType : ADM0
-boundaryYear : 2005
+boundaryYear : 01-01-2005 to 22-08-2019
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : Survey Department of Sri Lanka
 boundaryCanonical : Country
@@ -10,5 +10,5 @@ licenseDetail : METADATA ERROR
 licenseSource : METADATA ERROR
 boundarySourceURL : https//www.unsalb.org/data/lka
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/LKA_ADM0.zip
-sourceDataUpdateDate : Sep 16, 2021
-buildUpdateDate : Oct 06, 2021
+sourceDataUpdateDate : Feb 08, 2022
+buildUpdateDate : Mar 11, 2022
