@@ -1,0 +1,14 @@
+boundaryID : GHA-ADM0-73211575
+boundaryISO : GHA
+boundaryType : ADM0
+boundaryYear : 28-06-2012 to 24-01-2020
+boundarySource-1 : UN SALB
+boundarySource-2 : Ghana Lands Commission
+boundaryCanonical : Ghana
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
+boundarySourceURL : https//www.unsalb.org/data/gha
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/GHA_ADM0.zip
+sourceDataUpdateDate : Feb 23, 2022
+buildUpdateDate : Mar 11, 2022
