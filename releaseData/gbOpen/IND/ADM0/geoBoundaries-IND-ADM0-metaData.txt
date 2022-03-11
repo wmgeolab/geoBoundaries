@@ -1,14 +1,14 @@
-boundaryID : IND-ADM0-73716709
+boundaryID : IND-ADM0-92124544
 boundaryISO : IND
 boundaryType : ADM0
-boundaryYear : 2021
-boundarySource-1 : Pathways Data Pvt. Ltd.
-boundarySource-2 : lgdirectory.gov.in
-boundaryCanonical : Country
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//geonode.pathwaysdata.com/layers/geonode
-boundarySourceURL : https//geonode.pathwaysdata.com/layers/geonode
+boundaryYear : 2014
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia Commons
+boundaryCanonical : India
+boundaryLicense : CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+licenseDetail : 
+licenseSource : https//commons.wikimedia.org/wiki/Category
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IND_ADM0.zip
-sourceDataUpdateDate : Apr 17, 2021
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Feb 18, 2022
+buildUpdateDate : Mar 11, 2022
