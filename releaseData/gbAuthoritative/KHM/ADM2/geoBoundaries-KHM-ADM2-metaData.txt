@@ -1,7 +1,7 @@
-boundaryID : KHM-ADM2-8361595
+boundaryID : KHM-ADM2-5017001
 boundaryISO : KHM
 boundaryType : ADM2
-boundaryYear : 1998.0
+boundaryYear : 01-01-1998 to 01-01-2006
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : Geographic Department, Ministry of Land Management, Urban Planning and Construction
 boundaryCanonical : district
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
 boundarySourceURL : https//www.unsalb.org/data/khm
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/KHM_ADM2.zip
-sourceDataUpdateDate : Jun 14, 2021
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Feb 17, 2022
+buildUpdateDate : Mar 11, 2022
