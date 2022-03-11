@@ -1,0 +1,14 @@
+boundaryID : MNG-ADM0-72412811
+boundaryISO : MNG
+boundaryType : ADM0
+boundaryYear : 01-01-2002 to 03-11-2019
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Agency of Land Affairs, Geodesy and Cartography of Mongolia
+boundaryCanonical : Mongolia
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
+boundarySourceURL : https//www.unsalb.org/data/mng
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/MNG_ADM0.zip
+sourceDataUpdateDate : Feb 15, 2022
+buildUpdateDate : Mar 11, 2022
