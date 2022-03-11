@@ -1,7 +1,7 @@
-boundaryID : PHL-ADM1-47084873
+boundaryID : PHL-ADM1-7486458
 boundaryISO : PHL
 boundaryType : ADM1
-boundaryYear : 2013.0
+boundaryYear : 13-10-2013 to 13-10-2017
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : National Mapping & Resource Information Agency
 boundaryCanonical : region
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
 boundarySourceURL : https//www.unsalb.org/data/phl
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/PHL_ADM1.zip
-sourceDataUpdateDate : Jun 22, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Feb 08, 2022
+buildUpdateDate : Mar 11, 2022
