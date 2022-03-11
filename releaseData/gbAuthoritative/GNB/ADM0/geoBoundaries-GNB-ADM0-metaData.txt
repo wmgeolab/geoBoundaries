@@ -1,0 +1,14 @@
+boundaryID : GNB-ADM0-14497451
+boundaryISO : GNB
+boundaryType : ADM0
+boundaryYear : 01-01-2000 to 17-05-2021
+boundarySource-1 : UN SALB
+boundarySource-2 : Direccao Geral de Geografia e Cadastro
+boundaryCanonical : Republica da Guine-Bissau
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
+boundarySourceURL : https//www.unsalb.org/data/gnb
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/GNB_ADM0.zip
+sourceDataUpdateDate : Feb 24, 2022
+buildUpdateDate : Mar 11, 2022
