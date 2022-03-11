@@ -1,0 +1,14 @@
+boundaryID : ZWE-ADM1-48678293
+boundaryISO : ZWE
+boundaryType : ADM1
+boundaryYear : 01-01-2000 to 01-01-2004
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Department of the Surveyor General
+boundaryCanonical : Provinces
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/zwe
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/ZWE_ADM1.zip
+sourceDataUpdateDate : Mar 06, 2022
+buildUpdateDate : Mar 11, 2022
