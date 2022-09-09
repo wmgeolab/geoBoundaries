@@ -229,3 +229,4 @@ releaseData/gbAuthoritative/ESP/ADM3/geoBoundaries-ESP-ADM3.geojson filter=lfs d
 releaseData/CGAZ/** filter=lfs diff=lfs merge=lfs -text
 geoBoundaryBot/.git/lfs/objects/d3/1b/d31b1d0f09c4ec493057e8159aad6360423b049d4626fe7b60348789015e0764 filter=lfs diff=lfs merge=lfs -text
 geoBoundaryBot/dta/usDoSLSIB_Mar2020.geojson filter=lfs diff=lfs merge=lfs -text
+sourceData/gbOpen/CAN_ADM3.zip filter=lfs diff=lfs merge=lfs -text
