@@ -1,14 +1,14 @@
-boundaryID : ARG-ADM0-5342964
+boundaryID : ARG-ADM0-23045417
 boundaryISO : ARG
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2006
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia
+boundaryCanonical : the Argentine Republic
+boundaryLicense : Creative Commons Attribution 2.5 Generic
+licenseDetail : 
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ARG_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Sep 21, 2022
+buildUpdateDate : Oct 27, 2022
