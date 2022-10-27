@@ -1,14 +1,14 @@
-boundaryID : GEO-ADM1-41946311
+boundaryID : GEO-ADM1-13066534
 boundaryISO : GEO
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2015
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia
+boundaryCanonical : Autonomous Republic, Region, City
+boundaryLicense : Creative Commons Attribution 3.0 License
+licenseDetail : 
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/GEO_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Sep 28, 2022
+buildUpdateDate : Oct 27, 2022
