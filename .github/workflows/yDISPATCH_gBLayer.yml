@@ -12,6 +12,7 @@ on:
                 required: true
                 
 name: yDISPATCH_gBLayer
+run-name: ${{ inputs.ISO }} | ${{ inputs.ADM }} | ${{ inputs.bType }} 
 jobs:
   gbBuild:
     runs-on: ubuntu-latest
