@@ -1,5 +1,7 @@
 on:
-  workflow_dispatch
+  workflow_run:
+    workflows: ["fullBuild_gb_PRK_ZWE"]
+    types: [completed]
   
 name: fullBuild_metaData
 jobs:
