@@ -1,0 +1,14 @@
+boundaryID : BDI-ADM2-91688708
+boundaryISO : BDI
+boundaryType : ADM2
+boundaryYear : 26-03-2015 to 01-05-2015
+boundarySource-1 : UN SALB
+boundarySource-2 : Institut Geographique de Burundi
+boundaryCanonical : Communes
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
+boundarySourceURL : https//www.unsalb.org/data/bdi
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/BDI_ADM2.zip
+sourceDataUpdateDate : Feb 24, 2022
+buildUpdateDate : Oct 27, 2022
