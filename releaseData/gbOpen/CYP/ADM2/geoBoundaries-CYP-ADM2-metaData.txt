@@ -1,4 +1,4 @@
-boundaryID : CYP-ADM2-72923802
+boundaryID : CYP-ADM2-46923920
 boundaryISO : CYP
 boundaryType : ADM2
 boundaryYear : 2009.0
@@ -10,5 +10,5 @@ licenseDetail : nan
 licenseSource : https//commons.wikimedia.org/wiki/File
 boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/CYP_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Apr 04, 2022
+buildUpdateDate : Oct 27, 2022
