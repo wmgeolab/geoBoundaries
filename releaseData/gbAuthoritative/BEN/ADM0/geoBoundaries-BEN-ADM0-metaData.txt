@@ -1,0 +1,14 @@
+boundaryID : BEN-ADM0-26503623
+boundaryISO : BEN
+boundaryType : ADM0
+boundaryYear : 01-01-2000 to 17-12-2015
+boundarySource-1 : UN SALB
+boundarySource-2 : Institut Géographique National du Bénin
+boundaryCanonical : Benin
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
+boundarySourceURL : https//www.unsalb.org/data/ben
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/BEN_ADM0.zip
+sourceDataUpdateDate : Feb 22, 2022
+buildUpdateDate : Oct 27, 2022
