@@ -1,4 +1,4 @@
-boundaryID : AGO-ADM3-71343872
+boundaryID : AGO-ADM3-77060369
 boundaryISO : AGO
 boundaryType : ADM3
 boundaryYear : 2014
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//www.citypopulation.de/termsofuse.html
 boundarySourceURL : https//www.citypopulation.de/en/angola/communes/admin/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/AGO_ADM3.zip
-sourceDataUpdateDate : Jun 11, 2021
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Oct 02, 2022
+buildUpdateDate : Oct 27, 2022
