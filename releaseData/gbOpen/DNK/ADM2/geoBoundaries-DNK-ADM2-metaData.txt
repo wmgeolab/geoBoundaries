@@ -1,14 +1,14 @@
-boundaryID : DNK-ADM2-31452977
+boundaryID : DNK-ADM2-50338540
 boundaryISO : DNK
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2007
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia Commons
+boundaryCanonical : Municipality
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//en.wikipedia.org/wiki/Municipalities_of_Denmark#/media/File
+boundarySourceURL : https//en.wikipedia.org/wiki/Municipalities_of_Denmark#/media/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/DNK_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Sep 23, 2022
+buildUpdateDate : Oct 27, 2022
