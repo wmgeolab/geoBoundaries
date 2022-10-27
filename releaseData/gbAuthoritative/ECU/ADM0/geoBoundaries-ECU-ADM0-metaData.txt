@@ -1,14 +1,14 @@
-boundaryID : ECU-ADM0-49354544
+boundaryID : ECU-ADM0-1484411
 boundaryISO : ECU
 boundaryType : ADM0
-boundaryYear : 2013
+boundaryYear : 31-05-2013 to 20-02-2020
 boundarySource-1 : From SALB Data, United Nations
-boundarySource-2 : Military Geographic Institute of Ecuador
-boundaryCanonical : Republic of Ecuador
+boundarySource-2 : Instituto Geográfico Militar de Ecuador
+boundaryCanonical : Ecuador
 boundaryLicense : UN SALB Data License
 licenseDetail : 
-licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
-boundarySourceURL : https//www.unsalb.org/data/cri
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/ecu
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/ECU_ADM0.zip
-sourceDataUpdateDate : Sep 11, 2021
-buildUpdateDate : Oct 05, 2021
+sourceDataUpdateDate : Mar 30, 2022
+buildUpdateDate : Oct 27, 2022
