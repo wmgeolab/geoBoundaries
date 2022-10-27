@@ -11,4 +11,4 @@ licenseSource : https//www.census.gov/programs-surveys/geography/technical-docum
 boundarySourceURL : https//www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/USA_ADM1.zip
 sourceDataUpdateDate : Nov 20, 2021
-buildUpdateDate : Dec 16, 2021
+buildUpdateDate : Oct 27, 2022
