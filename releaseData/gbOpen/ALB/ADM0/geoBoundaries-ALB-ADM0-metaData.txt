@@ -1,14 +1,14 @@
-boundaryID : ALB-ADM0-26141361
+boundaryID : ALB-ADM0-44221866
 boundaryISO : ALB
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2003
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikipedia
+boundaryCanonical : Shqipëria
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//en.wikipedia.org/wiki/Outline_of_Albania#/media/File
+boundarySourceURL : https//en.wikipedia.org/wiki/Outline_of_Albania#/media
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ALB_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : May 12, 2022
+buildUpdateDate : Oct 27, 2022
