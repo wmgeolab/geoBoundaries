@@ -1,14 +1,14 @@
-boundaryID : NER-ADM2-64933359
+boundaryID : NER-ADM2-49374352
 boundaryISO : NER
 boundaryType : ADM2
 boundaryYear : 08-08-2011 to 07-01-2022
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : Ministère de l'Urbanisme et du Logement Institut Géographique National du Niger
-boundaryCanonical : Départements
+boundaryCanonical : department
 boundaryLicense : UN SALB Data License
 licenseDetail : 
-licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
 boundarySourceURL : https//www.unsalb.org/data/ner
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/NER_ADM2.zip
-sourceDataUpdateDate : Feb 18, 2022
-buildUpdateDate : Mar 11, 2022
+sourceDataUpdateDate : May 04, 2022
+buildUpdateDate : Oct 28, 2022
