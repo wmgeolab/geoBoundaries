@@ -1,0 +1,14 @@
+boundaryID : ZAF-ADM1-6127900
+boundaryISO : ZAF
+boundaryType : ADM1
+boundaryYear : 24-08-2018 to 25-06-2019
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Surveys and Mapping of South Africa
+boundaryCanonical : Province
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/SALB_DataSpecifications_v2.0_20210601.pdf
+boundarySourceURL : https//www.unsalb.org/data/zaf
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/ZAF_ADM1.zip
+sourceDataUpdateDate : Sep 04, 2022
+buildUpdateDate : Oct 28, 2022
