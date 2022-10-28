@@ -1,14 +1,14 @@
-boundaryID : MMR-ADM1-10911493
+boundaryID : MMR-ADM1-20573499
 boundaryISO : MMR
 boundaryType : ADM1
-boundaryYear : 2014.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : nan
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : nan
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : http//geonode.themimu.info/layers/?limit=5&offset=10
+boundaryYear : 2019
+boundarySource-1 : Myanmar Analytics Project
+boundarySource-2 : geoBoundaries
+boundaryCanonical : State
+boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//data.mmanalytics.org/dataset/border-shapefiles
+boundarySourceURL : https//data.mmanalytics.org/dataset/border-shapefiles/resource/b641b45f-898d-483b-986d-f9763af4f6c6
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MMR_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Oct 09, 2022
+buildUpdateDate : Oct 28, 2022
