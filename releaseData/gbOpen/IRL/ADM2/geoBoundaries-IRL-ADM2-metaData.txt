@@ -1,14 +1,14 @@
-boundaryID : IRL-ADM2-31018268
+boundaryID : IRL-ADM2-5873133
 boundaryISO : IRL
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2015
+boundarySource-1 : Ordnance Survey Ireland
+boundarySource-2 : 
+boundaryCanonical : Local Electoral Areas
+boundaryLicense : Creative Commons Attribution 4.0 (CC BY 4.0)
+licenseDetail : 
+licenseSource : https//data-osi.opendata.arcgis.com/datasets/OSi
+boundarySourceURL : https//data.gov.ie/dataset/local-electoral-areas-boundaries-generalised-20m-osi-national-administrative-boundaries-20152?package_type=dataset
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/IRL_ADM2.zip
-sourceDataUpdateDate : Sep 21, 2020
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Mar 31, 2022
+buildUpdateDate : Oct 28, 2022
