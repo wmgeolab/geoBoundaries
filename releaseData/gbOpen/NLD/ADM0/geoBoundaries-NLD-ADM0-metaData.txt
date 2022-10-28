@@ -1,14 +1,14 @@
-boundaryID : NLD-ADM0-33466516
+boundaryID : NLD-ADM0-46637630
 boundaryISO : NLD
 boundaryType : ADM0
-boundaryYear : 2017
-boundarySource-1 : Publieke Dienstverlening op de Kaart
-boundarySource-2 : nan
-boundaryCanonical : Nederland
-boundaryLicense : Creative Commons Attribution-ShareAlike 3.0 Unported
-licenseDetail : nan
-licenseSource : https//www.pdok.nl/nl/over-pdok/uw-speciale-aandacht/open-data
-boundarySourceURL : https//www.pdok.nl/nl/producten/pdok-downloads/basis-registratie-kadaster/bestuurlijke-grenzen-actueel
+boundaryYear : 2022
+boundarySource-1 : National Georegister
+boundarySource-2 : 
+boundaryCanonical : Kingdom of the Netherlands
+boundaryLicense : CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+licenseDetail : 
+licenseSource : https//nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/208bc283-7c66-4ce7-8ad3-1cf3e8933fb5?tab=general
+boundarySourceURL : https//nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/208bc283-7c66-4ce7-8ad3-1cf3e8933fb5?tab=relations
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/NLD_ADM0.zip
-sourceDataUpdateDate : Nov 12, 2020
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Sep 21, 2022
+buildUpdateDate : Oct 28, 2022
