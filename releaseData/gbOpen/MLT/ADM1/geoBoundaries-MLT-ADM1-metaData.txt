@@ -1,14 +1,14 @@
-boundaryID : MLT-ADM1-35302533
+boundaryID : MLT-ADM1-83640313
 boundaryISO : MLT
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2022
+boundarySource-1 : geoBoundaries
+boundarySource-2 : d-maps.com
+boundaryCanonical : Local Council
+boundaryLicense : Public Domain
+licenseDetail : Obtained email clarification for public domain license (see License PNG).
+licenseSource : https//d-maps.com/conditions.php?lang=en
+boundarySourceURL : https//d-maps.com/carte.php?num_car=60336&lang=en
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/MLT_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Apr 20, 2022
+buildUpdateDate : Oct 28, 2022
