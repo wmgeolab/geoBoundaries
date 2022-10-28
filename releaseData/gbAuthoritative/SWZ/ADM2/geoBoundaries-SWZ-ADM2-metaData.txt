@@ -1,0 +1,14 @@
+boundaryID : SWZ-ADM2-17697081
+boundaryISO : SWZ
+boundaryType : ADM2
+boundaryYear : 01-06-2017 to 13-09-2019
+boundarySource-1 : From SALB Data, United Nations
+boundarySource-2 : Surveyor General's Department, Ministry of Natural Resources and Environment
+boundaryCanonical : inkhundla
+boundaryLicense : UN SALB Data License
+licenseDetail : 
+licenseSource : https//www.unsalb.org/sites/default/files/wysiwyg_uploads/docs_uploads/TermsOfUseSALB2021.pdf
+boundarySourceURL : https//www.unsalb.org/data/swz
+downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/SWZ_ADM2.zip
+sourceDataUpdateDate : May 02, 2022
+buildUpdateDate : Oct 28, 2022
