@@ -1,14 +1,14 @@
-boundaryID : TWN-ADM0-62883749
+boundaryID : TWN-ADM0-7377636
 boundaryISO : TWN
 boundaryType : ADM0
-boundaryYear : 2017
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : Chinese Taipei
-boundaryLicense : Open Data Commons Open Database License 1.0
+boundaryYear : 2012
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Pixabay
+boundaryCanonical : Republic of China
+boundaryLicense : Pixabay License for Content
 licenseDetail : 
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+licenseSource : https//pixabay.com/vectors/taiwan-map-roc-republic-of-china-33713/
+boundarySourceURL : https//pixabay.com/vectors/taiwan-map-roc-republic-of-china-33713/
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/TWN_ADM0.zip
-sourceDataUpdateDate : May 02, 2021
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : May 13, 2022
+buildUpdateDate : Oct 28, 2022
