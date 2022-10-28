@@ -1,7 +1,7 @@
-boundaryID : MEX-ADM0-10028578
+boundaryID : MEX-ADM0-12026599
 boundaryISO : MEX
 boundaryType : ADM0
-boundaryYear : 2018
+boundaryYear : 29-06-2017 to 01-02-2018
 boundarySource-1 : From SALB Data, United Nations
 boundarySource-2 : INEGI
 boundaryCanonical : Mexico
@@ -10,5 +10,5 @@ licenseDetail :
 licenseSource : https//github.com/wmgeolab/geoBoundaryBot/blob/main/dta/licenseText/SALB_DataSpecifications_v2.0.pdf
 boundarySourceURL : https//www.unsalb.org/data/mex
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbAuthoritative/MEX_ADM0.zip
-sourceDataUpdateDate : Sep 21, 2021
-buildUpdateDate : Oct 06, 2021
+sourceDataUpdateDate : Mar 31, 2022
+buildUpdateDate : Oct 28, 2022
