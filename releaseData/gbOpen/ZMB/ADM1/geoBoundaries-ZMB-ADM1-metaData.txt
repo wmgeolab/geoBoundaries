@@ -1,14 +1,14 @@
-boundaryID : ZMB-ADM1-23658776
+boundaryID : ZMB-ADM1-6923714
 boundaryISO : ZMB
 boundaryType : ADM1
 boundaryYear : 2020
-boundarySource-1 : Disaster Management and Mitigation Unit (DMMU) Zambia
-boundarySource-2 : OCHA ROSEA
+boundarySource-1 : Zambia Data Hub
+boundarySource-2 : 
 boundaryCanonical : Province
-boundaryLicense : Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)
+boundaryLicense : Creative Commons Attribution 4.0 International (CC BY 4.0)
 licenseDetail : 
-licenseSource : https//data.grid3.org/datasets/GRID3
-boundarySourceURL : https//data.grid3.org/datasets/GRID3
+licenseSource : https//zambia-nsdi-mlnr.hub.arcgis.com/datasets/6fe71ff483ab491782c8524ec3d1a3b8_0/about
+boundarySourceURL : https//zambia-nsdi-mlnr.hub.arcgis.com/datasets/6fe71ff483ab491782c8524ec3d1a3b8_0/about
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ZMB_ADM1.zip
-sourceDataUpdateDate : Nov 16, 2021
-buildUpdateDate : Nov 22, 2021
+sourceDataUpdateDate : Apr 22, 2022
+buildUpdateDate : Oct 28, 2022
