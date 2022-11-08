@@ -1,5 +1,6 @@
 on:
-  workflow_dispatch
+  schedule:
+    - cron: "25 5 15 * *"
   
 name: fullBuild_AFG_GRL
 jobs:
