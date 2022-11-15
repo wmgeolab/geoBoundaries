@@ -1,14 +1,14 @@
-boundaryID : SWE-ADM2-17776427
+boundaryID : SWE-ADM2-70781695
 boundaryISO : SWE
 boundaryType : ADM2
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2017
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia Commons
+boundaryCanonical : Municipality
+boundaryLicense : CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+licenseDetail : license of second source is Public Domain
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/SWE_ADM2.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 27, 2021
+sourceDataUpdateDate : Oct 18, 2022
+buildUpdateDate : Nov 15, 2022
