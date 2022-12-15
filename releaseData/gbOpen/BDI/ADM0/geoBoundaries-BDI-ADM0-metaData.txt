@@ -1,14 +1,14 @@
-boundaryID : BDI-ADM0-82213894
+boundaryID : BDI-ADM0-31105016
 boundaryISO : BDI
 boundaryType : ADM0
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2006
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia Commons
+boundaryCanonical : The Republic of Burundi
+boundaryLicense : Public Domain
+licenseDetail : 
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/BDI_ADM0.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Dec 06, 2022
+buildUpdateDate : Dec 15, 2022
