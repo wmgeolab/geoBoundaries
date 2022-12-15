@@ -1,14 +1,14 @@
-boundaryID : ECU-ADM1-39612948
+boundaryID : ECU-ADM1-780006
 boundaryISO : ECU
 boundaryType : ADM1
-boundaryYear : 2017.0
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : Wambacher
-boundaryCanonical : 
-boundaryLicense : Open Data Commons Open Database License 1.0
-licenseDetail : Open Data Commons Open Database License 1.0
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//wambachers-osm.website/boundaries/
+boundaryYear : 2011
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia Commons
+boundaryCanonical : Province
+boundaryLicense : CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+licenseDetail : 
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ECU_ADM1.zip
-sourceDataUpdateDate : Sep 25, 2020
-buildUpdateDate : Aug 25, 2021
+sourceDataUpdateDate : Dec 06, 2022
+buildUpdateDate : Dec 15, 2022
