@@ -1,14 +1,14 @@
-boundaryID : ARM-ADM1-38011284
+boundaryID : ARM-ADM1-6114869
 boundaryISO : ARM
 boundaryType : ADM1
-boundaryYear : 2020
-boundarySource-1 : OpenStreetMap
-boundarySource-2 : OSM Boundaries
-boundaryCanonical : Districts
-boundaryLicense : Open Data Commons Open Database License 1.0
+boundaryYear : 2005
+boundarySource-1 : geoBoundaries
+boundarySource-2 : Wikimedia
+boundaryCanonical : Province and City
+boundaryLicense : Creative Commons Attribution 2.5 Generic
 licenseDetail : 
-licenseSource : https//www.openstreetmap.org/copyright
-boundarySourceURL : https//osm-boundaries.com
+licenseSource : https//commons.wikimedia.org/wiki/File
+boundarySourceURL : https//commons.wikimedia.org/wiki/File
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/ARM_ADM1.zip
-sourceDataUpdateDate : Dec 10, 2020
-buildUpdateDate : Aug 26, 2021
+sourceDataUpdateDate : Nov 11, 2022
+buildUpdateDate : Dec 15, 2022
