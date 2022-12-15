@@ -11,4 +11,4 @@ licenseSource : https//geoservices.ign.fr/sites/default/files/2021-11/IGNF_ADMIN
 boundarySourceURL : https//geoservices.ign.fr/adminexpress
 downloadURL : https://github.com/wmgeolab/geoBoundaries/raw/main/releaseData/gbOpen/FRA_ADM2.zip
 sourceDataUpdateDate : Sep 09, 2022
-buildUpdateDate : Nov 15, 2022
+buildUpdateDate : Dec 15, 2022
