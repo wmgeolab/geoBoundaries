@@ -1,0 +1,63 @@
+on:
+  workflow_run:
+    workflows: ["fullBuild_gb_PRK_ZWE"]
+    types: [completed]
+  
+name: fullBuild_metaData
+jobs:
+  csvBuild:
+    runs-on: ubuntu-latest
+    container: docker://geogdan/geoboundaries:A
+    steps:        
+    - name: Download Metadata
+      run: |
+           cd $GITHUB_WORKSPACE
+           cd ..
+           rm -r geoBoundaries
+           git clone --filter=blob:none --no-checkout https://github.com/wmgeolab/geoBoundaries
+           echo "=============="
+           cd geoBoundaries
+           echo "=============="
+           git sparse-checkout set "*.json"
+           git sparse-checkout add ".gitattrbutes"
+           git sparse-checkout add ".gitignore"
+           git sparse-checkout add "*.csv"
+           git checkout --progress 
+   
+    - name: Install CSV Build Script
+      run: |
+            git fetch
+            git clone https://github.com/wmgeolab/geoBoundaryBot
+   
+    - name: Build CSV
+      id: checks
+      run: |
+           echo "==============================================="
+           mkdir ~/tmp 
+           mkdir ~/artifacts
+           python geoBoundaryBot/gbBuildCSV.py
+      env:
+           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+           
+    - name: Commit Files
+      env:
+            DRTOKEN: ${{secrets.DRTOKEN}}
+            REP: ${{env.GITHUB_REPOSITORY}}
+      run: |
+           ls
+           ls releaseData
+           pwd
+           cat releaseData/geoBoundariesOpen-meta.csv
+           git config --local user.email "danr@wm.edu"
+           git config --local user.name "DanRunfola"
+           git fetch
+           git add -A .
+           git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesOpen-meta.csv
+           git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesHumanitarian-meta.csv
+           git add /__w/geoBoundaries/geoBoundaries/releaseData/geoBoundariesAuthoritative-meta.csv
+           git remote set-url origin https://x-access-token:${{ secrets.DRTOKEN }}@github.com/$GITHUB_REPOSITORY
+           git diff-index --quiet HEAD || git commit -m "geoBoundary Status and Build Script"
+           git pull --rebase -X theirs
+           git status
+           git push origin main 
+        
