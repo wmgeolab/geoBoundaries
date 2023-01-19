@@ -1,0 +1,5 @@
+releaseData/CGAZ/** filter=lfs diff=lfs merge=lfs -text
+releaseData/gbAuthoritative/** filter=lfs diff=lfs merge=lfs -text
+releaseData/gbHumanitarian/** filter=lfs diff=lfs merge=lfs -text
+releaseData/gbOpen/** filter=lfs diff=lfs merge=lfs -text
+sourceData/** filter=lfs diff=lfs merge=lfs -text
