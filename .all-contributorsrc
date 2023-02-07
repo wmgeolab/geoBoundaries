@@ -182,6 +182,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "MichaelR-geoLab",
+      "name": "Michael Roth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70650770?v=4",
+      "profile": "https://github.com/MichaelR-geoLab",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
