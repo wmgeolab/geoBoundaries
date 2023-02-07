@@ -440,15 +440,23 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/24350810?v=4",
       "profile": "https://github.com/Portur",
       "contributions": [
-       "ideas"
+        "ideas"
       ]
     },
-      
-      {
+    {
       "login": "nickbearman",
       "name": "Nick Bearman",
       "avatar_url": "https://avatars.githubusercontent.com/u/6410645?v=4",
       "profile": "http://www.geospatialtrainingsolutions.co.uk",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "BrentWHR",
+      "name": "BrentWHR",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72964508?v=4",
+      "profile": "https://github.com/BrentWHR",
       "contributions": [
         "ideas"
       ]
