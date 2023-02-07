@@ -310,6 +310,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "leeberryman",
+      "name": "Lee Berryman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23552439?v=4",
+      "profile": "http://www.pathwaysdata.com",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
