@@ -1,6 +1,6 @@
 # geoBoundaries
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![image](https://user-images.githubusercontent.com/7882645/216724015-071055db-e635-418b-83a6-acbdde726c6c.png)
 Built by the [community](https://github.com/wmgeolab/geoBoundaries/) and [William & Mary geoLab](https://geolab.wm.edu/), the geoBoundaries Global Database of Political Administrative Boundaries Database is an online, open license (CC BY 4.0) resource of information on administrative boundaries (i.e., state, county) for every country in the world. Since 2016, we have tracked approximately 1 million boundaries within over 200 entities, including all UN member states. All boundaries are available to view or download in common file formats; the only requirement for use is acknowledgement.
@@ -81,6 +81,9 @@ Key to contributions: \
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/helenabuckman"><img src="https://avatars.githubusercontent.com/u/70856803?v=4?s=100" width="100px;" alt="helenabuckman"/><br /><sub><b>helenabuckman</b></sub></a><br /><a href="[:cd:](https://github.com/wmgeolab/geoBoundaries/ "Data")," title="Data">:cd:</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/larogersWM"><img src="https://avatars.githubusercontent.com/u/70722024?v=4?s=100" width="100px;" alt="Lindsey Rogers"/><br /><sub><b>Lindsey Rogers</b></sub></a><br /><a href="[:cd:](https://github.com/wmgeolab/geoBoundaries/ "Data")," title="Data">:cd:</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kpupkiewicz"><img src="https://avatars.githubusercontent.com/u/70856698?v=4?s=100" width="100px;" alt="kpupkiewicz"/><br /><sub><b>kpupkiewicz</b></sub></a><br /><a href="[:cd:](https://github.com/wmgeolab/geoBoundaries/ "Data")," title="Data">:cd:</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/memulder"><img src="https://avatars.githubusercontent.com/u/67922294?v=4?s=100" width="100px;" alt="Maddy Mulder"/><br /><sub><b>Maddy Mulder</b></sub></a><br /><a href="[:cd:](https://github.com/wmgeolab/geoBoundaries/ "Data")," title="Data">:cd:</a></td>
     </tr>
   </tbody>
   <tfoot>
