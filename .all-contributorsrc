@@ -60,6 +60,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "kpupkiewicz",
+      "name": "kpupkiewicz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70856698?v=4",
+      "profile": "https://github.com/kpupkiewicz",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -75,7 +84,7 @@
       "description": "Code",
       "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
     },
-     "data": {
+    "data": {
       "symbol": ":cd:",
       "description": "Data",
       "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
