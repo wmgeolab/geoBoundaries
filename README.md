@@ -1,6 +1,6 @@
 # geoBoundaries
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-31-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-32-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![image](https://user-images.githubusercontent.com/7882645/216724015-071055db-e635-418b-83a6-acbdde726c6c.png)
 Built by the [community](https://github.com/wmgeolab/geoBoundaries/) and [William & Mary geoLab](https://geolab.wm.edu/), the geoBoundaries Global Database of Political Administrative Boundaries Database is an online, open license (CC BY 4.0) resource of information on administrative boundaries (i.e., state, county) for every country in the world. Since 2016, we have tracked approximately 1 million boundaries within over 200 entities, including all UN member states. All boundaries are available to view or download in common file formats; the only requirement for use is acknowledgement.
@@ -114,6 +114,7 @@ Key to contributions: \
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ceedwards1"><img src="https://avatars.githubusercontent.com/u/74315012?v=4?s=100" width="100px;" alt="Caroline Edwards"/><br /><sub><b>Caroline Edwards</b></sub></a><br /><a href="[:cd:](https://github.com/wmgeolab/geoBoundaries/ "Data")," title="Data">:cd:</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nirajpatel10122"><img src="https://avatars.githubusercontent.com/u/59022421?v=4?s=100" width="100px;" alt="nirajpatel10122"/><br /><sub><b>nirajpatel10122</b></sub></a><br /><a href="[:cd:](https://github.com/wmgeolab/geoBoundaries/ "Data")," title="Data">:cd:</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jcsiwek"><img src="https://avatars.githubusercontent.com/u/74273985?v=4?s=100" width="100px;" alt="Jane Siwek"/><br /><sub><b>Jane Siwek</b></sub></a><br /><a href="[:technologist:](https://github.com/wmgeolab/geoBoundaries/ "Data")," title="Data">:technologist:</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/owachob"><img src="https://avatars.githubusercontent.com/u/75225935?v=4?s=100" width="100px;" alt="Olivia Wachob"/><br /><sub><b>Olivia Wachob</b></sub></a><br /><a href="[:cd:](https://github.com/wmgeolab/geoBoundaries/ "Data")," title="Data">:cd:</a></td>
     </tr>
   </tbody>
   <tfoot>
