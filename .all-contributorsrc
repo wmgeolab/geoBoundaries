@@ -220,6 +220,11 @@
       "symbol": ":technologist:",
       "description": "Data",
       "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
+    },
+    "issue": {
+      "symbol": ":bug:",
+      "description": "Issue",
+      "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
     }
   }
 }
