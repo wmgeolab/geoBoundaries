@@ -427,7 +427,7 @@
       "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
     },
     "ideas": {
-      "symbol": ":hammer_and_pick:",
+      "symbol": ":gear:",
       "description": "Issues & Ideas",
       "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
     }
