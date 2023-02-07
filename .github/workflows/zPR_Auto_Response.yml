@@ -157,6 +157,9 @@ jobs:
              git config --global user.name "DummyUser"
              git add --sparse -A .
              git commit -m "Artifact commit"
+             git status
+             cd ${GITHUB_WORKSPACE}/fileChecks
+             git status
       
       - name: Upload Artifacts
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
@@ -232,6 +235,9 @@ jobs:
              git config --global user.name "DummyUser"
              git add --sparse -A .
              git commit -m "Artifact commit"
+             git status
+             cd ${GITHUB_WORKSPACE}/fileChecks
+             git status
       
       - name: Upload Artifacts
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
