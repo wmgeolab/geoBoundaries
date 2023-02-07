@@ -6,20 +6,20 @@
   "commit": false,
   "commitConvention": "angular",
   "contributors": [
-    {
-      "login": "kovaca",
-      "name": "Alex Kovac",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5686693?v=4",
-      "profile": "https://github.com/kovaca",
+     {
+      "login": "DanRunfola",
+      "name": "Dan Runfola",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7882645?v=4",
+      "profile": "https://geolab.wm.edu",
       "contributions": [
         "code"
       ]
     },
     {
-      "login": "DanRunfola",
-      "name": "Dan Runfola",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7882645?v=4",
-      "profile": "https://geolab.wm.edu",
+      "login": "kovaca",
+      "name": "Alex Kovac",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5686693?v=4",
+      "profile": "https://github.com/kovaca",
       "contributions": [
         "code"
       ]
@@ -49,5 +49,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "geoBoundaries",
-  "projectOwner": "wmgeolab"
+  "projectOwner": "wmgeolab",
+  "linkToUsage": false
 }
