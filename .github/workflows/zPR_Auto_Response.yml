@@ -158,7 +158,7 @@ jobs:
              git add --sparse -A .
              git commit -m "Artifact commit"
              git status
-             cd ${GITHUB_WORKSPACE}/fileChecks
+             cd ${GITHUB_WORKSPACE}/metaChecks
              git status
       
       - name: Upload Artifacts
@@ -236,7 +236,7 @@ jobs:
              git add --sparse -A .
              git commit -m "Artifact commit"
              git status
-             cd ${GITHUB_WORKSPACE}/fileChecks
+             cd ${GITHUB_WORKSPACE}/geometryDataChecks
              git status
       
       - name: Upload Artifacts
