@@ -56,3 +56,15 @@ Of note, to facilitate speed of queries against the API, all JSONs are pre-cache
 
 As of geoBoundaries 5.0.0, all files in geoBoundaries are stored using Git's Large File Storage (LFS).  Because this entails such a large volume of files, a bug in the current GitHub API results in a rate limiting error if you attempt to clone using https methods (i.e., ``git clone https://github.com/wmgeolab/geoBoundaries.git`` will fail with a rate limiting error).  Cloning with SSH (``git clone git@github.com:wmgeolab/geoBoundaries.git``) and the GitHub CLI (``gh repo clone wmgeolab/geoBoundaries``) work without issue. 
 
+## Contributors
+
+geoBoundaries is a product of the hard work of dozens of individuals, and wouldn't be possible without our community.  Many thanks to everyone who has lent their time so far. 
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
