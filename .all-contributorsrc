@@ -20,7 +20,7 @@
       "name": "Dan Runfola",
       "avatar_url": "https://avatars.githubusercontent.com/u/7882645?v=4",
       "profile": "https://geolab.wm.edu",
-       "contributions": [
+      "contributions": [
         "code"
       ]
     },
@@ -30,7 +30,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/49990394?v=4",
       "profile": "https://github.com/slfuhrig",
       "contributions": [
-        "code"
+        "code",
+        "doc"
       ]
     }
   ],
