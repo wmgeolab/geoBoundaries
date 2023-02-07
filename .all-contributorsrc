@@ -478,6 +478,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "jacobwhall",
+      "name": "Jacob Hall",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55111303?v=4",
+      "profile": "https://jacobhall.net",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
