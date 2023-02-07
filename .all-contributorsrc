@@ -227,6 +227,17 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "lydia",
+      "name": "Lydia Fernandez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3578722?v=4",
+      "profile": "https://github.com/lydia",
+      "contributions": [
+        "data",
+        "doc",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
