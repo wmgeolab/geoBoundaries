@@ -6,7 +6,7 @@
   "commit": false,
   "commitConvention": "angular",
   "contributors": [
-     {
+    {
       "login": "DanRunfola",
       "name": "Dan Runfola",
       "avatar_url": "https://avatars.githubusercontent.com/u/7882645?v=4",
@@ -41,6 +41,15 @@
       "profile": "https://github.com/sylviashea1",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "helenabuckman",
+      "name": "helenabuckman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70856803?v=4",
+      "profile": "https://github.com/helenabuckman",
+      "contributions": [
+        "data"
       ]
     }
   ],
