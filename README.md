@@ -61,7 +61,13 @@ As of geoBoundaries 5.0.0, all files in geoBoundaries are stored using Git's Lar
 
 ## Contributors
 
-geoBoundaries wouldn't be possible without our community ❤️❤️.
+geoBoundaries wouldn't be possible without our community ❤️❤️. \
+Key to contributions: \
+:computer: - Contributed code to the project.\
+:cd: - Contributed data to the project.\
+:blue_book: - Helped with documentation or other training materials.\
+:technologist: - Helped with QA/QC and accepting data into the repository.
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
