@@ -66,7 +66,8 @@ Key to contributions: \
 :computer: - Contributed code to the project.\
 :cd: - Contributed data to the project.\
 :blue_book: - Helped with documentation or other training materials.\
-:technologist: - Helped with QA/QC and accepting data into the repository.
+:technologist: - Helped with QA/QC and accepting data into the repository.\
+:bug: - Flagged/Identified an issue in the database.
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
