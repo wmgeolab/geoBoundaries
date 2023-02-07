@@ -73,12 +73,12 @@
     "code": {
       "symbol": ":computer:",
       "description": "Code",
-      "link": "[<%= symbol %>](<%= # %> \"<%= description %>\"),"
+      "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
     },
      "data": {
       "symbol": ":cd:",
       "description": "Data",
-      "link": "[<%= symbol %>](<%= # %> \"<%= description %>\"),"
+      "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
     }
   }
 }
