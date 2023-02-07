@@ -70,6 +70,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "memulder",
+      "name": "Maddy Mulder",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67922294?v=4",
+      "profile": "https://github.com/memulder",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
