@@ -238,6 +238,15 @@
         "doc",
         "review"
       ]
+    },
+    {
+      "login": "rmbiddle",
+      "name": "rmbiddle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78105842?v=4",
+      "profile": "https://github.com/rmbiddle",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
