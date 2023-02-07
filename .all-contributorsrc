@@ -172,6 +172,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "nmspage",
+      "name": "nmspage",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68017504?v=4",
+      "profile": "https://github.com/nmspage",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
