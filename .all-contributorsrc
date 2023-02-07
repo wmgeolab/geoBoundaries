@@ -385,6 +385,17 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "maxmalynowsky",
+      "name": "Max Malynowsky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4202166?v=4",
+      "profile": "https://github.com/maxmalynowsky",
+      "contributions": [
+        "data",
+        "code",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
