@@ -522,7 +522,8 @@
   "repoHost": "https://github.com",
   "projectName": "geoBoundaries",
   "projectOwner": "wmgeolab",
-  "linkToUsage": true,
+  "linkToUsage": false,
+  "contributorsSortAlphabetically": true,
   "types": {
     "code": {
       "symbol": ":computer:",
