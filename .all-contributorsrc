@@ -397,6 +397,15 @@
         "code",
         "review"
       ]
+    },
+    {
+      "login": "jcourson",
+      "name": "Jim Courson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13521890?v=4",
+      "profile": "https://github.com/jcourson",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
