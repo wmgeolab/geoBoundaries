@@ -292,6 +292,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "owachob",
+      "name": "Olivia Wachob",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75225935?v=4",
+      "profile": "https://github.com/owachob",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
