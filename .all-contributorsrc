@@ -319,6 +319,17 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "sgmurphy216",
+      "name": "Sean Murphy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68017245?v=4",
+      "profile": "https://github.com/sgmurphy216",
+      "contributions": [
+        "data",
+        "review",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
