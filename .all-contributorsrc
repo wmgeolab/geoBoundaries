@@ -433,6 +433,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "Portur",
+      "name": "Kevin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24350810?v=4",
+      "profile": "https://github.com/Portur",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
