@@ -69,7 +69,10 @@ geoBoundaries wouldn't be possible without our community ❤️❤️.
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kovaca"><img src="https://avatars.githubusercontent.com/u/5686693?v=4?s=100" width="100px;" alt="Alex Kovac"/><br /><sub><b>Alex Kovac</b></sub></a><br /><a href="https://github.com/wmgeolab/geoBoundaries/commits?author=kovaca" title="Code">💻</a></td>
+
       <td align="center" valign="top" width="14.28%"><a href="https://geolab.wm.edu"><img src="https://avatars.githubusercontent.com/u/7882645?v=4?s=100" width="100px;" alt="Dan Runfola"/><br /><sub><b>Dan Runfola</b></sub></a><br /><a href="https://github.com/wmgeolab/geoBoundaries/commits?author=DanRunfola" title="Code">💻</a></td>
+
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/slfuhrig"><img src="https://avatars.githubusercontent.com/u/49990394?v=4?s=100" width="100px;" alt="slfuhrig"/><br /><sub><b>slfuhrig</b></sub></a><br /><a href="https://github.com/wmgeolab/geoBoundaries/commits?author=slfuhrig" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
