@@ -154,6 +154,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "neelsimpson",
+      "name": "Neel Simpson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70907487?v=4",
+      "profile": "https://github.com/neelsimpson",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
