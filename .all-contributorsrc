@@ -72,8 +72,13 @@
   "types": {
     "code": {
       "symbol": ":computer:",
-      "description": "Contributed code to the project.",
-      "link": "[<%= symbol %>](#),"
+      "description": "Code",
+      "link": "[<%= symbol %>](<%= # %> \"<%= description %>\"),"
+    },
+     "data": {
+      "symbol": ":cd:",
+      "description": "Data",
+      "link": "[<%= symbol %>](<%= # %> \"<%= description %>\"),"
     }
   }
 }
