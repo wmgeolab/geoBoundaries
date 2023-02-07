@@ -227,6 +227,17 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "lydiatroup",
+      "name": "Lydia Troup",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60264585?v=4",
+      "profile": "https://github.com/lydiatroup",
+      "contributions": [
+        "data",
+        "doc",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
