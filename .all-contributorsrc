@@ -88,6 +88,16 @@
       "symbol": ":cd:",
       "description": "Data",
       "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
+    },
+    "doc": {
+      "symbol": ":blue_book:",
+      "description": "Data",
+      "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
+    },
+    "review": {
+      "symbol": ":technologist:",
+      "description": "Data",
+      "link": "[<%= symbol %>](https://github.com/wmgeolab/geoBoundaries/ \"<%= description %>\"),"
     }
   }
 }
