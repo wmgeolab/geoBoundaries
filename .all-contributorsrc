@@ -487,6 +487,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "cclarkson",
+      "name": "Chris Clarkson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13287471?v=4",
+      "profile": "https://github.com/cclarkson",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
