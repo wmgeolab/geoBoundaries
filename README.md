@@ -45,7 +45,7 @@ geoBoundaries 1.3.4 | November 11, 2018 | [d3f7490](https://github.com/wmgeolab/
 ## Programmatic / API Access
 Full details on our API are available [here](https://www.geoboundaries.org/api.html).  
 
-To find information on the most up-to-date boundaries available:
+To find information on the most up-to-date boundaries available-
 
 ```
 https://www.geoboundaries.org/api/current/gbOpen/[3-LETTER-ISO-CODE]/[ADM-LEVEL]/
