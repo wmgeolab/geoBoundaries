@@ -38,8 +38,8 @@ Release | Date | Link
 geoBoundaries 5.0.0 | December 19, 2022 | [997c6a8](https://github.com/wmgeolab/geoBoundaries/tree/b7dd6a55701c76a330500ad9d9240f2b9997c6a8)
 geoBoundaries 4.0.0 | August 31, 2021 | [299e006](https://github.com/wmgeolab/geoBoundariesArchive_4_0_0/tree/299e00623ece6c03bcb9a751eda6094b1eac85a6)
 geoBoundaries 3.0.0 | June 5, 2020 | [7c8dbc5](https://github.com/wmgeolab/geoBoundariesArchive_3_0_0/tree/7c8dbc599e312d9204e450aecfa66c204b8cf9b8)
-geoBoundaries 2.0.1 | December 7, 2019 | [375ea48](https://github.com/wmgeolab/geoBoundariesArchive_2_0_1/commit/375ea48193eda78f74b964f1c898a04bd4cb465d)
-geoBoundaries 1.3.4 | November 11, 2018 | [d3f7490](https://github.com/wmgeolab/geoBoundariesArchive_1_3_3/tree/d3f7490211be2971214f355055629b0c2dedeef6)
+geoBoundaries 2.0.1 | December 7, 2019 | [375ea48](https://github.com/wmgeolab/geoBoundariesArchive_2_0_1)
+geoBoundaries 1.3.4 | November 11, 2018 | [d3f7490](https://github.com/wmgeolab/geoBoundariesArchive_1_3_3/)
 
 
 ## Programmatic / API Access
