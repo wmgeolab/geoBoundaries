@@ -24,11 +24,11 @@ We welcome contributions to the geoBoundaries dataset.  Involvement can take man
 
 We provide three different mechanisms to download geoBoundaries data: a web-based GUI, HTML file access on GitHub (for archival versions), and an API. Releases come in both unsimplified and simplified types, and include a global composite of ADM0, ADM1, and ADM2 with gaps filled between borders ("CGAZ").  Acronyms describing these datasets you may encounter include:
 
-_HPSCU_  - High Precision Single Country Unstandardized. The premier geoBoundaries release, representing the highest precision files available for every country in the world. Every country is represented as that country represents itself, so (for example) two countries may overlap in the case of contested boundaries.
+_HPSC_  - High Precision Single Country. The premier geoBoundaries release, representing the highest precision files available for every country in the world. Every country is represented as that country represents itself, so (for example) two countries may overlap in the case of contested boundaries.
 
-_SSCU_  - Simplified Single Country Unstandardized. A simplified version of every file available for every country in the world, using the HPSCU product as a base. 
+_SSC_  - Simplified Single Country. A simplified version of every file available for every country in the world, using the HPSCU product as a base. 
 
-_CGAZ_  - Comprehensive Global Administrative Zones. A global composite of the SSCU ADM0, ADM1 and ADM2, clipped to international boundaries (US Department of State), with gaps filled between borders.  Also available at higher levels of simplification.
+_CGAZ_  - Comprehensive Global Administrative Zones. A global composite of the SSC ADM0, ADM1 and ADM2, clipped to international boundaries (US Department of State), with gaps filled between borders.  Also available at higher levels of simplification.
 
 ## Versioned Releases for Research Replication
 
