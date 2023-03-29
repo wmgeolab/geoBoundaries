@@ -10,7 +10,7 @@ The geoBoundaries project is made up of a number of different repositories; you 
 - [geoBoundaryBot](https://github.com/wmgeolab/geoBoundaryBot): where our build scripts live, as well as the various QA/QC algorithms applied to pull requests in this repository.  If you're interested in the specifics of our topology checks or simplification strategies, this is where to look.
 - [gbWeb](https://github.com/wmgeolab/gbWeb): where the website itself lives, as well as the API.  Various scripts that aid in building the API and other things related to the website can be found here as well.
 - [rgeoboundaries](https://github.com/wmgeolab/rgeoboundaries): built by community member @dickoa, this library allows you to retrieve and manipulate geoBoundaries data within the R programming environment.
-- [pygeoboundaries](https://github.com/ibhalin/pygeoboundaries) built by community member @ibhalin, this package allows you to retrieve and manipulate geoBoundires data within the python programming environmennt.
+- [pygeoboundaries](https://github.com/ibhalin/pygeoboundaries) built by community member @ibhalin, this package allows you to retrieve and manipulate geoBoundaries data within the python programming environmennt.
 
 # Getting Involved
 We welcome contributions to the geoBoundaries dataset.  Involvement can take many forms: assistance identifying errors in the database, contributing boundary files, or even contributing code for our build or website scripts.  To get started, you could:
