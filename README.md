@@ -41,6 +41,7 @@ geoBoundaries 3.0.0 | June 5, 2020 | [7c8dbc5](https://github.com/wmgeolab/geoBo
 geoBoundaries 2.0.1 | December 7, 2019 | [375ea48](https://github.com/wmgeolab/geoBoundariesArchive_2_0_1)
 geoBoundaries 1.3.4 | November 11, 2018 | [d3f7490](https://github.com/wmgeolab/geoBoundariesArchive_1_3_3/)
 
+If you are interested in releases prior to 1.3.4, please [contact us](mailto:team@geoboundaries.org).
 
 ## Programmatic / API Access
 Full details on our API are available [here](https://www.geoboundaries.org/api.html).  
