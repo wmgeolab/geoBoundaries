@@ -51,7 +51,7 @@ Currently, geoBoundaries offers three datasets; gB OPEN, gB Authoritative, and g
 
 **Contiguity**
 
-We anticipate that most submitted boundaries will be contiguous, however, if the file you are submitting is genuinely non contiguous by nature (e.g. each canton (ADM2) of CHE has adminstrative agency to subdivide into districts (ADM3); some do not subdivide into districts, leading to a non contiguous CHE_ADM3 layer), we ask that you include relevant documentation for use in our wiki. Non contiguous files submitted without documentation will not be considered.
+We anticipate that most submitted boundaries will be contiguous, however, if the file you are submitting is genuinely non contiguous by nature (e.g. each canton (ADM2) of CHE has administrative agency to subdivide into districts (ADM3); some do not subdivide into districts, leading to a non contiguous CHE_ADM3 layer), we ask that you include relevant documentation for use in our wiki. Non contiguous files submitted without documentation will not be considered.
 
 **Treatment of Water Boundaries**
 
