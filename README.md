@@ -25,7 +25,7 @@ _HPSC_  - High Precision Single Country. The premier geoBoundaries release, repr
 
 _SSC_  - Simplified Single Country. A simplified version of every file available for every country in the world, using the HPSCU product as a base. 
 
-_CGAZ_  - Comprehensive Global Administrative Zones. A global composite of the SSC ADM0, ADM1 and ADM2, clipped to international boundaries (US Department of State), with gaps filled between borders.  Also available at higher levels of simplification.
+_CGAZ_  - Comprehensive Global Administrative Zones. A global composite of the SSC ADM0, ADM1, and ADM2, clipped to international boundaries (US Department of State), with gaps filled between borders.  Also available at higher levels of simplification.
 
 ## Versioned Releases for Research Replication
 
