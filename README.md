@@ -7,7 +7,7 @@ The geoBoundaries project is made up of a number of different repositories; you 
 - [geoBoundaryBot](https://github.com/wmgeolab/geoBoundaryBot): where our build scripts live, as well as the various QA/QC algorithms applied to pull requests in this repository.  If you're interested in the specifics of our topology checks or simplification strategies, this is where to look.
 - [gbWeb](https://github.com/wmgeolab/gbWeb): where the website itself lives, as well as the API.  Various scripts that aid in building the API and other things related to the website can be found here as well.
 - [rgeoboundaries](https://github.com/wmgeolab/rgeoboundaries): built by community member @dickoa, this library allows you to retrieve and manipulate geoBoundaries data within the R programming environment.
-- [pygeoboundaries](https://github.com/ibhalin/pygeoboundaries) built by community member @ibhalin, this package allows you to retrieve and manipulate geoBoundaries data within the python programming environment.
+- [pygeoboundaries](https://github.com/ibhalin/pygeoboundaries): built by community member @ibhalin, this package allows you to retrieve and manipulate geoBoundaries data within the python programming environment.
 
 # Getting Involved
 We welcome contributions to the geoBoundaries dataset.  Involvement can take many forms: assistance identifying errors in the database, contributing boundary files, or even contributing code for our build or website scripts.  To get started, you could:
@@ -21,7 +21,7 @@ We welcome contributions to the geoBoundaries dataset.  Involvement can take man
 
 We provide three different mechanisms to download geoBoundaries data: a web-based GUI, HTML file access on GitHub (for archival versions), and an API. Releases come in both unsimplified and simplified types, and include a global composite of ADM0, ADM1, and ADM2 with gaps filled between borders ("CGAZ").  Acronyms describing these datasets you may encounter include:
 
-_HPSC_  - High Precision Single Country. The premier geoBoundaries release, representing the highest precision files available for every country in the world. Every country is represented as that country represents itself, so (for example) two countries may overlap in the case of contested boundaries.
+_HPSC_  - High Precision Single Country. The premier geoBoundaries release, representing the highest precision files available for every country in the world. Every country is represented as that country represents itself, so, (for example) two countries may overlap in the case of contested boundaries.
 
 _SSC_  - Simplified Single Country. A simplified version of every file available for every country in the world, using the HPSCU product as a base. 
 
@@ -52,7 +52,7 @@ https://www.geoboundaries.org/api/current/gbOpen/[3-LETTER-ISO-CODE]/[ADM-LEVEL]
 
 Users can also enter the special phrase "ALL" for either "ADM" or "ISO" to get a multi-boundary return. Each requested boundary returns all metadata available for that boundary in the gBOpen release, including a link to both the full-resolution, large-file size and the simplified small-file size versions. Users can additionally replace "gbOpen" with either "gbAuthoritative" or "gbHumanitarian" to filter results to only include boundaries from those two respective releases.
 
-Of note, to facilitate speed of queries against the API all JSONs are pre-cached and can be exported in bulk by cloning the [geoBoundaries Website repository](https://github.com/wmgeolab/gbWeb) for local use.
+Of note, to facilitate speed of queries against the API, all JSONs are pre-cached and can be exported in bulk by cloning the [geoBoundaries Website repository](https://github.com/wmgeolab/gbWeb) for local use.
 
 ## Note on Cloning
 
