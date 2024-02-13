@@ -8,7 +8,7 @@ name: zPR AUTO RESPONSE
 jobs:
   geoBoundaryZipfileChecks:
     runs-on: ubuntu-latest
-    container: osgeo/gdal:ubuntu-small-latest
+    container: osgeo/gdal:ubuntu-small-3.6.3
     steps:
     - name: Initialize Linux Environment
       run: |
@@ -97,7 +97,7 @@ jobs:
   
   geoBoundaryMetaDataCheck:
       runs-on: ubuntu-latest
-      container: osgeo/gdal:ubuntu-small-latest
+      container: osgeo/gdal:ubuntu-small-3.6.3
       steps:
       - name: Initialize Linux Environment
         run: |
@@ -175,7 +175,7 @@ jobs:
     
   geoBoundaryDataCheck:
       runs-on: ubuntu-latest
-      container: osgeo/gdal:ubuntu-small-latest
+      container: osgeo/gdal:ubuntu-small-3.6.3
       steps:
       - name: Initialize Linux Environment
         run: |
@@ -253,7 +253,7 @@ jobs:
           
   prResponse:
       runs-on: ubuntu-latest
-      container: osgeo/gdal:ubuntu-small-latest
+      container: osgeo/gdal:ubuntu-small-3.6.3
       needs: [geoBoundaryDataCheck, geoBoundaryMetaDataCheck, geoBoundaryZipfileChecks]
       if: always()
       steps:
