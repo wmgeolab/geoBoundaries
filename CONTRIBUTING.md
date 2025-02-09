@@ -11,7 +11,7 @@ Take a look at [this example PR containing a boundary](https://github.com/wmgeol
 
 ## We welcome new submissions to geoBoundaries, and will openly assess any submissions that would improve our data. Right now, we accept submissions that are:
 
-1. Compatible with the Open Data Commons Open Database License (or better). 
+1. Compatible with the Creative Commons By Attribution License (or better). 
 2. Of higher quality (spatially more accurate, representing more accurate divisions, or more recent) than our existing data. 
 3. Provisioned with clear and full metadata about the source of the file.
 
