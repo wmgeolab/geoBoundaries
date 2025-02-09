@@ -2,23 +2,10 @@
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, sex characteristics, gender identity and expression,
-level of experience, education, socio-economic status, nationality, personal
-appearance, race, religion, or sexual identity and orientation.
+We as contributors and maintainers pledge to making participation in our project and
+our community a harassment-free experience for everyone.  
 
 ## Our Standards
-
-Examples of behavior that contributes to creating a positive environment
-include:
-
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
 
 Examples of unacceptable behavior by participants include:
 
@@ -28,8 +15,6 @@ Examples of unacceptable behavior by participants include:
 * Public or private harassment
 * Publishing others' private information, such as a physical or electronic
  address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
- professional setting
 
 ## Our Responsibilities
 
@@ -48,7 +33,7 @@ threatening, offensive, or harmful.
 Contributors to the geoBoundaries project have the responsibility to ensure
 the accurate representation of information in any of their interactions with the project,
 including comments, commits, code, wiki edits, issues, and other contributions.
-This is inclusive of - for example - information pertaining to the source of
+This includes - for example - information pertaining to the source of
 boundaries submitted, or qualitative research on contested boundaries.  
 
 Project maintainers have the right and responsibility to ban temporarily or permanently 
