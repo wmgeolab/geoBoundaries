@@ -29,7 +29,7 @@ _CGAZ_  - Comprehensive Global Administrative Zones. A global composite of the S
 
 ## Versioned Releases for Research Replication
 
-While geoBoundaries is always updating, we provide annual releases to facilitate future research replication. To download a file from any release, you can navigate to our [releases page](https://github.com/wmgeolab/geoBoundaries/releases/), and choose the release you are interested in retrieving files from, or you can navigate to the appropriate location using this table:
+While geoBoundaries is always updating, we provide regular releases to facilitate future research replication. To download a file from any release, you can navigate to our [releases page](https://github.com/wmgeolab/geoBoundaries/releases/), and choose the release you are interested in retrieving files from, or you can navigate to the appropriate location using this table:
 Release | Date | Link
 -- | -- | --
 geoBoundaries 6.0.0 | September 14, 2023 | [2d572d4](https://github.com/wmgeolab/geoBoundaries/tree/1289e40e366c7b320550be1ee0614a9472d572d4)
